@@ -11,10 +11,14 @@ sections:
           validate:
             - required
       -
-        handle: content
+        handle: subheader
         field:
-          type: markdown
-          localizable: true
+          input_type: text
+          antlers: false
+          display: Subheader
+          type: text
+          icon: text
+          listable: hidden
       -
         handle: template
         field:

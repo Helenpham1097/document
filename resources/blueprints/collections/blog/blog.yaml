@@ -4,6 +4,17 @@ sections:
     display: Main
     fields:
       -
+        handle: cover_image
+        field:
+          mode: grid
+          restrict: false
+          allow_uploads: true
+          max_files: 1
+          display: 'Cover Image'
+          type: assets
+          icon: assets
+          listable: hidden
+      -
         handle: title
         field:
           type: text
@@ -11,11 +22,11 @@ sections:
           validate:
             - required
       -
-        handle: description
+        handle: subheader
         field:
           input_type: text
           antlers: false
-          display: Description
+          display: Subheader
           type: text
           icon: text
           listable: hidden
@@ -27,6 +38,34 @@ sections:
           default: current
           localizable: true
           max_items: 1
+      -
+        handle: bard
+        field:
+          always_show_set_button: false
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+            - image
+            - table
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          display: Bard
+          type: bard
+          icon: bard
+          listable: hidden
       -
         handle: template
         field:
