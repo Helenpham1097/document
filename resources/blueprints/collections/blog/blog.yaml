@@ -75,12 +75,6 @@ sections:
           type: bard
           icon: bard
           listable: hidden
-      -
-        handle: template
-        field:
-          type: template
-          display: Template
-          localizable: true
   sidebar:
     display: Sidebar
     fields:
