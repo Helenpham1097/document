@@ -1,366 +1,147 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-		<title>Webslice – The Serverless Hosting Platform</title>
-		<!-- Meta Description 168/150 characters -->
-		<meta name="description" content="Deploy existing websites in seconds - Move your existing websites onto Webslice and experience serverless hosting that is faster, more reliable and cheaper than before." />
-		<link rel="stylesheet" href="css/main.css" />
-		<!-- Recommended favicon format -->
-		<link rel="icon" type="image/png" href="../img/wsico/favicon.png" />
-		<link rel="apple-touch-icon" sizes="57x57" href="../img/wsico/apple-icon-57x57.png" />
-		<link rel="apple-touch-icon" sizes="60x60" href="../img/wsico/apple-icon-60x60.png" />
-		<link rel="apple-touch-icon" sizes="72x72" href="../img/wsico/apple-icon-72x72.png" />
-		<link rel="apple-touch-icon" sizes="76x76" href="../img/wsico/apple-icon-76x76.png" />
-		<link rel="apple-touch-icon" sizes="114x114" href="../img/wsico/apple-icon-114x114.png" />
-		<link rel="apple-touch-icon" sizes="120x120" href="../img/wsico/apple-icon-120x120.png" />
-		<link rel="apple-touch-icon" sizes="144x144" href="../img/wsico/apple-icon-144x144.png" />
-		<link rel="apple-touch-icon" sizes="152x152" href="../img/wsico/apple-icon-152x152.png" />
-		<link rel="apple-touch-icon" sizes="180x180" href="../img/wsico/apple-icon-180x180.png" />
-		<link rel="icon" type="image/png" sizes="192x192" href="../img/wsico/android-icon-192x192.png" />
-		<link rel="icon" type="image/png" sizes="32x32" href="../img/wsico/favicon-32x32.png" />
-		<link rel="icon" type="image/png" sizes="96x96" href="../img/wsico/favicon-96x96.png" />
-		<link rel="icon" type="image/png" sizes="16x16" href="../img/wsico/favicon-16x16.png" />
-		<link rel="manifest" href="../img/wsico/manifest.json" />
-		<meta name="msapplication-TileColor" content="#ffffff" />
-		<meta name="msapplication-TileImage" content="../img/wsico/ms-icon-144x144.png" />
-		<meta name="theme-color" content="#ffffff" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-		<!-- Open Graph / Facebook -->
-		<meta property="og:url" content="https://www.webslice.com/" />
-		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Webslice – The Serverless Hosting Platform" />
-		<meta property="og:description" content="Deploy existing websites in seconds - Move your existing websites onto Webslice and experience serverless hosting that is faster, more reliable and cheaper than before." />
-		<meta
-			property="og:image"
-			content="../img/Open-Graph.jpg
-        "
-		/>
-		<!-- Twitter -->
-		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:url" content="https://www.webslice.com/" />
-		<meta property="twitter:title" content="Webslice – The Serverless Hosting Platform" />
-		<meta property="twitter:description" content="Deploy existing websites in seconds - Move your existing websites onto Webslice and experience serverless hosting that is faster, more reliable and cheaper than before." />
-		<meta property="twitter:image" content="../img/Open-Graph.jpg" />
-	</head>
+<body>
+    <div class="hidden sm:block cover">
+        <!-- <img src="https://source.unsplash.com/user/freeche/1600x480"> -->
+    </div>
 
-	<body>
-		<!-- <nav class="sticky top-0 z-10 bg-white shadow-lg">
-			<div class="container flex flex-col items-center sm:flex-row sm:justify-between">
-				<div class="flex flex-row items-center justify-between w-full sm:w-auto responsive">
-					<a id="logo" class="flex-grow-0 w-36 sm:w-48 logo md:p-0" href="#"></a>
+    <section class="w-full mx-auto max-w-screen-2xl">
+        <article class="flex flex-col items-center mx-auto sm:px-8 sm:py-24 sm:container md:flex-row">
+            <a href="#" class="flex flex-col items-center p-10 mb-16 text-center bg-white chevron-path lg:flex-grow lg:pr-24 md:items-start md:mb-0 md:pr-16 md:text-left md:w-1/2">
+                <h1 class="leading-none gradient-bg">Customer Profile: Sunny Side Up</h1>
+                <p class="leading-relxaxed">Brendan and Ben spoke with Nicolaas from Sunny Side Up - a successful web development agency in Wellington.</p>
+                <span class="inline-flex items-center cta"> Learn More </span>
+            </a>
 
-					<label for="menu-toggle" class="block lg:hidden pointer-cursor">
-						<svg class="text-gray-900 fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20">
-							<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-						</svg>
-					</label>
-				</div> -->
+            <div class="order-first w-full sm:-m-20 sm:mb-0 md:w-4/6">
+                <img src="https://source.unsplash.com/1600x900/?portrait&auto=format&fit=facearea&facepad=4&w=600&" alt="" />
+            </div>
+        </article>
+    </section>
 
-				<!-- toggle to open the menu on mobile by ID -->
-				<!-- <input class="hidden" type="checkbox" id="menu-toggle" />
+    <!-- Content -->
 
-				<div class="hidden lg:flex" id="menu">
-					<ul class="p-0 py-5 uppercase hiddens lg:flex lg:items-center sm:p-0">
-						<li><a href="#">Features</a></li>
-						<li><a href="#">Pricing</a></li>
-						<li><a href="#">Blog</a></li>
-						<li class="relative inline-block text-center dropdown">
-							<a class="inline-flex items-center px-4 py-2">
-								<span class="mr-1">Dropdown</span>
-								<svg class="w-4 h-4 transform fill-current sm:rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-								</svg>
-							</a>
-							<ul class="hidden pt-0 pl-0 text-xs text-gray-600 transform bg-white sm:absolute sm:shadow-lg -inset-x-1/4 dropdown-menu w-max">
-								<li><a class="px-4 py-4" href="#">One</a></li>
-								<li><a class="px-4 py-4" href="#">Two</a></li>
-								<li><a class="px-4 py-4" href="#">Three is the magic number</a></li>
-							</ul>
-						</li>
-						<li><button class="w-full secondary-btn" href="#">Sign In</button></li>
-					</ul>
-				</div>
-			</div>
-		</nav> -->
+    <section class="container w-full px-5 mx-auto">
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-3">
+            <article>
+                <a href="#">
+                    <figure>
+                        <img src="https://source.unsplash.com/1600x900/?cat&auto=format&fit=facearea&facepad=4&w=605&q=300" alt="" />
+                    </figure>
+                    <div class="flex items-start px-5 py-5">
+                        <div class="relative overflow-hidden rounded-lg">
+                            <h3>Now You Can Have The TECH Of Your Dreams</h3>
+                            <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                            <span href="#" class="inline-flex items-center cta"> Learn More </span>
+                        </div>
+                    </div>
+                </a>
+            </article>
 
-		<div class="hidden sm:block cover">
-			<!-- <img src="https://source.unsplash.com/user/freeche/1600x480"> -->
-		</div>
+            <article>
+                <a href="#">
+                    <figure>
+                        <img src="https://source.unsplash.com/1600x900/?dog&auto=format&fit=facearea&facepad=4&w=604&q=301" alt="" />
+                    </figure>
+                    <div class="flex items-start px-5 py-5">
+                        <div class="relative overflow-hidden rounded-lg">
+                            <h3>Now You Can Have The TECH Of Your Dreams</h3>
+                            <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                            <span href="#" class="inline-flex items-center cta"> Learn More </span>
+                        </div>
+                    </div>
+                </a>
+            </article>
 
-		<section class="w-full mx-auto max-w-screen-2xl">
-			<article class="flex flex-col items-center mx-auto sm:px-8 sm:py-24 sm:container md:flex-row">
-				<a href="#" class="flex flex-col items-center p-10 mb-16 text-center bg-white chevron-path lg:flex-grow lg:pr-24 md:items-start md:mb-0 md:pr-16 md:text-left md:w-1/2">
-					<h1 class="leading-none gradient-bg">Customer Profile: Sunny Side Up</h1>
-					<p class="leading-relxaxed">Brendan and Ben spoke with Nicolaas from Sunny Side Up - a successful web development agency in Wellington.</p>
-					<span class="inline-flex items-center cta"> Learn More </span>
-				</a>
+            <article>
+                <a href="#">
+                    <figure>
+                        <img src="https://source.unsplash.com/1600x900/?puppy&auto=format&fit=facearea&facepad=4&w=603&q=302" alt="" />
+                    </figure>
+                    <div class="flex items-start px-5 py-5">
+                        <div class="relative overflow-hidden rounded-lg">
+                            <h3>Now You Can Have The TECH Of Your Dreams</h3>
+                            <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                            <span href="#" class="inline-flex items-center cta"> Learn More </span>
+                        </div>
+                    </div>
+                </a>
+            </article>
 
-				<div class="order-first w-full sm:-m-20 sm:mb-0 md:w-4/6">
-					<img src="https://source.unsplash.com/1600x900/?portrait&auto=format&fit=facearea&facepad=4&w=600&" alt="" />
-				</div>
-			</article>
-		</section>
+            <article>
+                <a href="#">
+                    <figure>
+                        <img src="https://source.unsplash.com/1600x900/?minimal&auto=format&fit=facearea&facepad=4&w=602&q=303" alt="" />
+                    </figure>
+                    <div class="flex items-start px-5 py-5">
+                        <div class="relative overflow-hidden rounded-lg">
+                            <h3>Now You Can Have The TECH Of Your Dreams</h3>
+                            <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                            <span href="#" class="inline-flex items-center cta"> Learn More </span>
+                        </div>
+                    </div>
+                </a>
+            </article>
 
-		<!-- Content -->
+            <article>
+                <a href="#">
+                    <figure>
+                        <img src="https://source.unsplash.com/1600x900/?animal&auto=format&fit=facearea&facepad=4&w=601&q=304" alt="" />
+                    </figure>
+                    <div class="flex items-start px-5 py-5">
+                        <div class="relative overflow-hidden rounded-lg">
+                            <h3>Now You Can Have The TECH Of Your Dreams</h3>
+                            <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                            <span href="#" class="inline-flex items-center cta"> Learn More </span>
+                        </div>
+                    </div>
+                </a>
+            </article>
 
-		<section class="container w-full px-5 mx-auto">
-			<div class="grid grid-cols-1 gap-8 sm:grid-cols-3">
-				<article>
-					<a href="#">
-						<figure>
-							<img src="https://source.unsplash.com/1600x900/?cat&auto=format&fit=facearea&facepad=4&w=605&q=300" alt="" />
-						</figure>
-						<div class="flex items-start px-5 py-5">
-							<div class="relative overflow-hidden rounded-lg">
-								<h3>Now You Can Have The TECH Of Your Dreams</h3>
-								<p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-								<span href="#" class="inline-flex items-center cta"> Learn More </span>
-							</div>
-						</div>
-					</a>
-				</article>
+            <article>
+                <a href="#">
+                    <figure>
+                        <img src="https://source.unsplash.com/1600x900/?tech&auto=format&fit=facearea&facepad=4&w=600&q=305" alt="" />
+                    </figure>
+                    <div class="flex items-start px-5 py-5">
+                        <div class="relative overflow-hidden rounded-lg">
+                            <h3>Now You Can Have The TECH Of Your Dreams</h3>
+                            <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                            <span href="#" class="inline-flex items-center cta"> Learn More </span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        </div>
+    </section>
 
-				<article>
-					<a href="#">
-						<figure>
-							<img src="https://source.unsplash.com/1600x900/?dog&auto=format&fit=facearea&facepad=4&w=604&q=301" alt="" />
-						</figure>
-						<div class="flex items-start px-5 py-5">
-							<div class="relative overflow-hidden rounded-lg">
-								<h3>Now You Can Have The TECH Of Your Dreams</h3>
-								<p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-								<span href="#" class="inline-flex items-center cta"> Learn More </span>
-							</div>
-						</div>
-					</a>
-				</article>
+    <!-- Paginator -->
 
-				<article>
-					<a href="#">
-						<figure>
-							<img src="https://source.unsplash.com/1600x900/?puppy&auto=format&fit=facearea&facepad=4&w=603&q=302" alt="" />
-						</figure>
-						<div class="flex items-start px-5 py-5">
-							<div class="relative overflow-hidden rounded-lg">
-								<h3>Now You Can Have The TECH Of Your Dreams</h3>
-								<p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-								<span href="#" class="inline-flex items-center cta"> Learn More </span>
-							</div>
-						</div>
-					</a>
-				</article>
+    <div class="container flex items-center w-full px-5 py-6 mx-auto mt-24 border-gray-200 paginator sm:border-t sm:px-6">
+        <div class="container flex flex-row justify-center">
+            <a href="#" class="px-2 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-l-md hover:bg-purple-500 hover:text-white">
+                <span class="sr-only">Previous</span>
+                <!-- Heroicon name: chevron-left -->
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+            </a>
+            <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border-t border-b border-r border-gray-300 hover:bg-purple-500 hover:text-white"> 1 </a>
+            <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border-t border-b border-r border-gray-300 hover:bg-purple-500 hover:text-white"> 2 </a>
+            <a href="#" class="relative items-center hidden px-4 py-2 text-sm font-medium text-gray-700 bg-white border-t border-b border-r border-gray-300 md:inline-flex hover:bg-purple-500 hover:text-white"> 3 </a>
+            <span class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border-t border-b border-r border-gray-300"> ... </span>
+            <a href="#" class="relative items-center hidden px-4 py-2 text-sm font-medium text-gray-700 bg-white border-t border-b border-r border-gray-300 md:inline-flex hover:bg-purple-500 hover:text-white"> 8 </a>
+            <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border-t border-b border-r border-gray-300 hover:bg-purple-500 hover:text-white"> 9 </a>
+            <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border-t border-b border-r border-gray-300 hover:bg-purple-500 hover:text-white"> 10 </a>
+            <a href="#" class="relative inline-flex items-center px-2 py-2 text-sm font-medium text-gray-500 bg-white border-t border-b border-r border-gray-300 rounded-r-md hover:bg-purple-500 hover:text-white">
+                <span class="sr-only">Next</span>
+                <!-- Heroicon name: chevron-right -->
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                </svg>
+            </a>
+        </div>
+    </div>
 
-				<article>
-					<a href="#">
-						<figure>
-							<img src="https://source.unsplash.com/1600x900/?minimal&auto=format&fit=facearea&facepad=4&w=602&q=303" alt="" />
-						</figure>
-						<div class="flex items-start px-5 py-5">
-							<div class="relative overflow-hidden rounded-lg">
-								<h3>Now You Can Have The TECH Of Your Dreams</h3>
-								<p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-								<span href="#" class="inline-flex items-center cta"> Learn More </span>
-							</div>
-						</div>
-					</a>
-				</article>
+    {{ partial:blogfooter }}
 
-				<article>
-					<a href="#">
-						<figure>
-							<img src="https://source.unsplash.com/1600x900/?animal&auto=format&fit=facearea&facepad=4&w=601&q=304" alt="" />
-						</figure>
-						<div class="flex items-start px-5 py-5">
-							<div class="relative overflow-hidden rounded-lg">
-								<h3>Now You Can Have The TECH Of Your Dreams</h3>
-								<p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-								<span href="#" class="inline-flex items-center cta"> Learn More </span>
-							</div>
-						</div>
-					</a>
-				</article>
+</body>
 
-				<article>
-					<a href="#">
-						<figure>
-							<img src="https://source.unsplash.com/1600x900/?tech&auto=format&fit=facearea&facepad=4&w=600&q=305" alt="" />
-						</figure>
-						<div class="flex items-start px-5 py-5">
-							<div class="relative overflow-hidden rounded-lg">
-								<h3>Now You Can Have The TECH Of Your Dreams</h3>
-								<p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-								<span href="#" class="inline-flex items-center cta"> Learn More </span>
-							</div>
-						</div>
-					</a>
-				</article>
-			</div>
-		</section>
-
-		<!-- Paginator -->
-
-		<div class="container flex items-center w-full px-5 py-6 mx-auto mt-24 border-gray-200 paginator sm:border-t sm:px-6">
-			<div class="container flex flex-row justify-center">
-				<a href="#" class="px-2 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-l-md hover:bg-purple-500 hover:text-white">
-					<span class="sr-only">Previous</span>
-					<!-- Heroicon name: chevron-left -->
-					<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-						<path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
-					</svg>
-				</a>
-				<a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border-t border-b border-r border-gray-300 hover:bg-purple-500 hover:text-white"> 1 </a>
-				<a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border-t border-b border-r border-gray-300 hover:bg-purple-500 hover:text-white"> 2 </a>
-				<a href="#" class="relative items-center hidden px-4 py-2 text-sm font-medium text-gray-700 bg-white border-t border-b border-r border-gray-300 md:inline-flex hover:bg-purple-500 hover:text-white"> 3 </a>
-				<span class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border-t border-b border-r border-gray-300"> ... </span>
-				<a href="#" class="relative items-center hidden px-4 py-2 text-sm font-medium text-gray-700 bg-white border-t border-b border-r border-gray-300 md:inline-flex hover:bg-purple-500 hover:text-white"> 8 </a>
-				<a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border-t border-b border-r border-gray-300 hover:bg-purple-500 hover:text-white"> 9 </a>
-				<a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border-t border-b border-r border-gray-300 hover:bg-purple-500 hover:text-white"> 10 </a>
-				<a href="#" class="relative inline-flex items-center px-2 py-2 text-sm font-medium text-gray-500 bg-white border-t border-b border-r border-gray-300 rounded-r-md hover:bg-purple-500 hover:text-white">
-					<span class="sr-only">Next</span>
-					<!-- Heroicon name: chevron-right -->
-					<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-						<path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-					</svg>
-				</a>
-			</div>
-		</div>
-
-		<!-- FOOTER -->
-		<footer>
-			<svg class="prefooter" viewbox="0 0 1440 394" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path fill-rule="evenodd" clip-rule="evenodd" d="M0 386.35V393.503H1440V132.438L0 386.35Z" fill="#4d1d95" />
-				<path fill-rule="evenodd" clip-rule="evenodd" d="M1440 100.783V134.378L0 388.289V354.694L1440 100.783Z" fill="#4d1d95" />
-				<path opacity="0.6" fill-rule="evenodd" clip-rule="evenodd" d="M1440 67.1895V100.784L0 354.695V321.1L1440 67.1895Z" fill="#4d1d95" />
-				<path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M1440 33.5938V67.1884L0 321.099V287.505L1440 33.5938Z" fill="#4d1d95" />
-				<path opacity="0.2" fill-rule="evenodd" clip-rule="evenodd" d="M1440 33.5947L0 287.506V253.911L1440 0V33.5947Z" fill="#4d1d95" />
-			</svg>
-			<div class="bg-purple-900">
-				<div class="container flex flex-wrap">
-					<div class="w-full px-4 py-12 md:w-1/5 sm:py-1">
-						<svg class="w-40 fill-current" viewBox="0 0 149 32" xmlns="http://www.w3.org/2000/svg">
-							<path d="M11.0273 12.2713V27.5241L39.3248 0H23.591L11.0273 12.2713Z" fill="#fff" />
-							<path d="M0 0V23.0504L11.0371 12.2713V0H0Z" fill="#fff" />
-							<path d="M139.153 15.2776C139.237 14.7465 139.379 14.4453 139.527 14.1524V14.1578C139.962 13.268 140.9 12.5042 142.309 12.5042C144.199 12.5042 145.108 13.55 145.315 14.7218C145.32 14.7465 145.326 14.7739 145.329 14.7985C145.348 14.8971 145.357 15.0121 145.359 15.1052C145.359 15.1134 145.362 15.1216 145.362 15.1325C145.365 15.2147 145.365 15.2749 145.365 15.2749H139.153V15.2776ZM146.702 17.6049H148.943C148.943 17.5501 148.999 17.008 148.999 16.4933C148.999 12.2112 146.473 9.58008 142.256 9.58008C138.76 9.58008 135.539 12.3454 135.539 16.6C135.539 21.1012 138.84 23.7295 142.591 23.7295C145.951 23.7295 148.114 21.8048 148.809 19.4995L145.728 18.6042C145.284 19.7979 144.341 20.6384 142.619 20.6384C141.38 20.6384 140.283 20.0553 139.678 19.1326V19.1381C139.669 19.1299 139.666 19.1189 139.661 19.1107C139.647 19.0861 139.63 19.0642 139.619 19.0395C139.583 18.9793 139.549 18.919 139.516 18.8561C139.502 18.8287 139.488 18.7986 139.474 18.7712C139.301 18.418 139.2 18.0484 139.147 17.6021H146.702V17.6049Z" fill="#fff" />
-							<path d="M87.1028 12.8599C85.2442 12.8599 83.6898 14.1877 83.6898 16.6272C83.6898 19.0393 85.2442 20.4219 87.1028 20.4219C88.9921 20.4219 90.4879 19.0667 90.4879 16.6272C90.4879 14.1877 88.9893 12.8599 87.1028 12.8599ZM80.1094 23.3241V4.20264H83.7456V11.4499C84.3568 10.4998 85.8554 9.63462 87.8814 9.63462C91.8777 9.63462 94.1828 12.6436 94.1828 16.6026C94.1828 20.641 91.6293 23.6499 87.7447 23.6499C85.8554 23.6499 84.4154 22.8368 83.6926 21.6978V23.3241H80.1094Z" fill="#fff" />
-							<path d="M98.6518 18.9327C98.7355 19.9896 99.5392 20.967 101.149 20.967C102.372 20.967 102.955 20.3428 102.955 19.6391C102.955 19.0423 102.539 18.5549 101.482 18.3359L99.6788 17.9279C97.0416 17.3584 95.8472 15.8143 95.8472 13.9443C95.8472 11.5596 98.0127 9.58008 100.954 9.58008C104.842 9.58008 106.145 11.9922 106.312 13.4296L103.231 14.1058C103.12 13.32 102.536 12.318 100.982 12.318C100.011 12.318 99.235 12.8875 99.235 13.6459C99.235 14.2947 99.7346 14.7027 100.482 14.8396L102.425 15.2448C105.118 15.7869 106.477 17.3858 106.477 19.3379C106.477 21.5064 104.755 23.7295 101.175 23.7295C97.0667 23.7295 95.6518 21.1285 95.4844 19.609L98.6518 18.9327Z" fill="#fff" />
-							<path d="M118.774 9.98486H115.082V23.3239H118.774V9.98486Z" fill="#fff" />
-							<path d="M124.578 16.6541C124.578 19.0662 126.188 20.4215 128.074 20.4215C129.961 20.4215 130.904 19.2004 131.208 18.1709L134.457 19.2277C133.846 21.4509 131.708 23.7261 128.074 23.7261C124.047 23.7261 120.883 20.7445 120.883 16.6514C120.883 12.5309 123.994 9.57666 127.96 9.57666C131.68 9.57666 133.79 11.8272 134.373 14.0778L131.069 15.162C130.737 14.0504 129.874 12.9114 128.044 12.9114C126.157 12.9142 124.578 14.242 124.578 16.6541Z" fill="#fff" />
-							<path d="M119.191 6.16556C119.191 7.39213 118.173 8.38873 116.914 8.38873C115.655 8.38873 114.637 7.39487 114.637 6.16556C114.637 4.93898 115.655 3.94238 116.914 3.94238C118.173 3.94512 119.191 4.93898 119.191 6.16556Z" fill="#fff" />
-							<path d="M108.449 7.80845V23.3214H112.139V4.20264L108.449 7.80845Z" fill="#fff" />
-							<path d="M68.182 15.2772C68.2629 14.746 68.4053 14.4448 68.5532 14.1519V14.1574C68.9885 13.2675 69.9262 12.5037 71.3355 12.5037C73.2248 12.5037 74.1345 13.5495 74.341 14.7214C74.3466 14.746 74.3522 14.7734 74.355 14.798C74.3745 14.8966 74.3801 15.0116 74.3857 15.1047C74.3857 15.1129 74.3885 15.1211 74.3885 15.132C74.3913 15.2142 74.3913 15.2744 74.3913 15.2744H68.182V15.2772ZM75.728 17.6044H77.9689C77.9689 17.5496 78.0247 17.0075 78.0247 16.4928C78.0247 12.2107 75.4992 9.57959 71.2797 9.57959C67.7829 9.57959 64.5625 12.3449 64.5625 16.5996C64.5625 21.1007 67.8667 23.729 71.6118 23.729C74.9689 23.729 77.1345 21.8043 77.8294 19.499L74.7485 18.6037C74.3048 19.7974 73.3615 20.638 71.6397 20.638C70.4006 20.638 69.3067 20.0548 68.6983 19.1321V19.1376C68.6927 19.1294 68.6871 19.1184 68.6815 19.1102C68.6676 19.0856 68.6508 19.0637 68.6397 19.039C68.6034 18.9788 68.5671 18.9186 68.5364 18.8556C68.5225 18.8282 68.5085 18.7981 68.4946 18.7707C68.3243 18.4175 68.2239 18.0479 68.1681 17.6016H75.728V17.6044Z" fill="#fff" />
-							<path d="M54.5805 9.94971L57.5386 18.5905L60.0782 9.94971H63.7619L59.4642 23.3599H55.7526L52.5433 14.2017L49.3871 23.3599H45.6196L41.2383 9.94971H45.1452L47.6875 18.5631L50.6736 9.94971H54.5805Z" fill="#fff" />
-						</svg>
-
-						<div class="flex mt-4">
-							<a href="#" class="mr-4">
-								<svg class="w-5 h-5 fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-									<title>Twitter icon</title>
-									<path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"></path>
-								</svg>
-							</a>
-
-							<a href="#" class="mr-4">
-								<svg class="w-5 h-5 fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-									<title>Facebook icon</title>
-									<path d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z"></path>
-								</svg>
-							</a>
-							<a href="#" class="mr-4">
-								<svg class="w-5 h-5 fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-									<title>RSS icon</title>
-									<path d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z"></path>
-								</svg>
-							</a>
-							<a href="#" class="mr-4">
-								<svg class="w-5 h-5 fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-									<title>LinkedIn icon</title>
-									<path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
-								</svg>
-							</a>
-						</div>
-					</div>
-
-					<div class="w-full px-4 pb-4 md:w-1/5">
-						<h6>Who’s it for</h6>
-						<ul class="my-5 mt-4 text-sm tracking-wide sm:mt-2">
-							<li>
-								<a href="#">Developers</a>
-							</li>
-							<li>
-								<a href="#">Designers</a>
-							</li>
-							<li>
-								<a href="#">Decision markes</a>
-							</li>
-						</ul>
-					</div>
-
-					<div class="w-full px-4 pb-4 md:w-1/5">
-						<h6>Support</h6>
-						<ul class="my-5 text-sm tracking-wide sm:mt-2">
-							<li>
-								<a href="#">About Us</a>
-							</li>
-							<li>
-								<a href="#">Blog</a>
-							</li>
-						</ul>
-					</div>
-
-					<div class="w-full px-4 pb-4 md:w-1/5">
-						<h6>Policies</h6>
-						<ul class="my-5 text-sm tracking-wide sm:mt-2">
-							<li>
-								<a href="#">FAQ</a>
-							</li>
-							<li>
-								<a href="#">Documentation</a>
-							</li>
-							<li>
-								<a href="#">Status</a>
-							</li>
-							<li>
-								<a href="#">Contact Us</a>
-							</li>
-						</ul>
-					</div>
-
-					<div class="w-full px-4 pb-4 md:w-1/5">
-						<h6>Policies</h6>
-						<ul class="h-auto my-5 text-sm tracking-wide">
-							<li>
-								<a href="#">FAQ</a>
-							</li>
-							<li>
-								<a href="#">Documentation</a>
-							</li>
-							<li>
-								<a href="#">Status</a>
-							</li>
-							<li>
-								<a href="#">Contact Us</a>
-							</li>
-						</ul>
-					</div>
-					<div class="flex flex-col w-full p-4 text-sm text-purple-500 border-purple-800 md:flex-row md:justify-between md:border-solid md:border-t">
-						<span class="tracking-wide">&copy; 44 Olive Road, Penrose, Auckland 1061</span>
-						<span class="tracking-wide"> © 2021 Webslice Inc. </span>
-					</div>
-				</div>
-			</div>
-		</footer>
-	</body>
-	<!-- Lottie -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.8/lottie.js"></script>
-	<script>
-		var animation = bodymovin.loadAnimation({
-			container: document.getElementById("logo"),
-			renderer: "svg",
-			loop: false,
-			autoplay: true,
-			path: "img/lottie/ws-logo.json",
-		});
-	</script>
-</html>
