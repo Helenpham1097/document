@@ -3,3 +3,4 @@ data:
   header: Latest News
   subheader: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil facere quod adipisci alias illum repellat numquam iste vero magni possimus sit dicta, error eius dolores, eum dolor blanditiis obcaecati consequatur.
   link_text: Learn More
+  entries_limit: 3
