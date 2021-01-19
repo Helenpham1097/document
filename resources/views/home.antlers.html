@@ -1,109 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-		<title>Webslice – The Serverless Hosting Platform</title>
-		<!-- Meta Description 168/150 characters -->
-		<meta name="description" content="Deploy existing websites in seconds - Move your existing websites onto Webslice and experience serverless hosting that is faster, more reliable and cheaper than before." />
-		<link rel="stylesheet" href="css/main.css" />
-		<!-- Recommended favicon format -->
-		<link rel="icon" type="image/png" href="../img/wsico/favicon.png" />
-		<link rel="apple-touch-icon" sizes="57x57" href="../img/wsico/apple-icon-57x57.png" />
-		<link rel="apple-touch-icon" sizes="60x60" href="../img/wsico/apple-icon-60x60.png" />
-		<link rel="apple-touch-icon" sizes="72x72" href="../img/wsico/apple-icon-72x72.png" />
-		<link rel="apple-touch-icon" sizes="76x76" href="../img/wsico/apple-icon-76x76.png" />
-		<link rel="apple-touch-icon" sizes="114x114" href="../img/wsico/apple-icon-114x114.png" />
-		<link rel="apple-touch-icon" sizes="120x120" href="../img/wsico/apple-icon-120x120.png" />
-		<link rel="apple-touch-icon" sizes="144x144" href="../img/wsico/apple-icon-144x144.png" />
-		<link rel="apple-touch-icon" sizes="152x152" href="../img/wsico/apple-icon-152x152.png" />
-		<link rel="apple-touch-icon" sizes="180x180" href="../img/wsico/apple-icon-180x180.png" />
-		<link rel="icon" type="image/png" sizes="192x192" href="../img/wsico/android-icon-192x192.png" />
-		<link rel="icon" type="image/png" sizes="32x32" href="../img/wsico/favicon-32x32.png" />
-		<link rel="icon" type="image/png" sizes="96x96" href="../img/wsico/favicon-96x96.png" />
-		<link rel="icon" type="image/png" sizes="16x16" href="../img/wsico/favicon-16x16.png" />
-		<link rel="manifest" href="../img/wsico/manifest.json" />
-		<meta name="msapplication-TileColor" content="#ffffff" />
-		<meta name="msapplication-TileImage" content="../img/wsico/ms-icon-144x144.png" />
-		<meta name="theme-color" content="#ffffff" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-		<!-- Open Graph / Facebook -->
-		<meta property="og:url" content="https://www.webslice.com/" />
-		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Webslice – The Serverless Hosting Platform" />
-		<meta property="og:description" content="Deploy existing websites in seconds - Move your existing websites onto Webslice and experience serverless hosting that is faster, more reliable and cheaper than before." />
-		<meta
-			property="og:image"
-			content="../img/Open-Graph.jpg
-        "
-		/>
-		<!-- Twitter -->
-		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:url" content="https://www.webslice.com/" />
-		<meta property="twitter:title" content="Webslice – The Serverless Hosting Platform" />
-		<meta property="twitter:description" content="Deploy existing websites in seconds - Move your existing websites onto Webslice and experience serverless hosting that is faster, more reliable and cheaper than before." />
-		<meta property="twitter:image" content="../img/Open-Graph.jpg" />
-	</head>
+<body class="flex flex-col justify-between md:h-screen">
+    <!-- NAV -->
+    <!-- <nav class="top-0 z-20 bg-white shadow-lg">
+        <div class="container flex flex-row items-center justify-between w-full p-4">
+            <a id="logo" class="flex-grow-0 w-36 sm:w-48 logo md:p-0" href="/blog"></a>
+            <button class="px-12 secondary-btn" href="/blog">Blog</button>
+        </div>
+    </nav> -->
 
-	<body class="flex flex-col justify-between md:h-screen">
-		<!-- NAV -->
-		<!-- <nav class="top-0 z-20 bg-white shadow-lg">
-			<div class="container flex flex-row items-center justify-between w-full p-4">
-				<a id="logo" class="flex-grow-0 w-36 sm:w-48 logo md:p-0" href="/blog"></a>
-				<button class="px-12 secondary-btn" href="/blog">Blog</button>
-			</div>
-		</nav> -->
+    <!-- HERO -->
+    <div class="relative flex items-center justify-center">
+        <div class="absolute w-full my-auto h-4/6 light-purple"></div>
+        <section class="container flex items-center flex-auto mx-auto align-middle justify-items-center">
+            <div class="m-auto lg:w-7/12">
+                <h1 class="mt-10 text-3xl lg:leading-tight md:mt-2 lg:text-5xl">Webslice is the serverless hosting platform of tomorrow, for the websites of today.</h1>
+                <h2 class="text-lg font-normal text-gray-500 md:mb-5 md:text-2xl">Serverless is the future of hosting. We’re building a brand new serverless platform from the ground up for your existing websites and applications so you get all the serverless benefits without the pain.</h2>
+                <p class="mb-10 text-gray-600 sm:text-lg">🤔 Interested? Put your name down for beta and launch:</p>
 
-		<!-- HERO -->
-		<div class="relative flex items-center justify-center">
-			<div class="absolute w-full my-auto h-4/6 light-purple"></div>
-			<section class="container flex items-center flex-auto mx-auto align-middle justify-items-center">
-				<div class="m-auto lg:w-7/12">
-					<h1 class="mt-10 text-3xl lg:leading-tight md:mt-2 lg:text-5xl">Webslice is the serverless hosting platform of tomorrow, for the websites of today.</h1>
-					<h2 class="text-lg font-normal text-gray-500 md:mb-5 md:text-2xl">Serverless is the future of hosting. We’re building a brand new serverless platform from the ground up for your existing websites and applications so you get all the serverless benefits without the pain.</h2>
-					<p class="mb-10 text-gray-600 sm:text-lg">🤔 Interested? Put your name down for beta and launch:</p>
+                <div class="flex flex-wrap mt-4 space-y-4 text-center sm:space-y-0 sm:space-x-4">
+                    <div class="flex-none w-full md:w-2/4 sm:w-auto">
+                        <div class="relative">
+                            <input type="text" placeholder="your@email.com" id="hero-field" name="hero-field" class="w-full text-primary" />
+                            <span class="absolute top-0 right-0 flex items-center justify-center w-10 h-full text-center text-gray-600 pointer-events-none">
+                                <svg fill="currentColor" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd" d="M14.243 5.757a6 6 0 10-.986 9.284 1 1 0 111.087 1.678A8 8 0 1118 10a3 3 0 01-4.8 2.401A4 4 0 1114 10a1 1 0 102 0c0-1.537-.586-3.07-1.757-4.243zM12 10a2 2 0 10-4 0 2 2 0 004 0z" clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <button class="flex items-center justify-center flex-none w-full sm:w-auto primary-btn">
+                        <svg class="w-4 h-4 mr-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                        </svg>
+                        Notify Me
+                    </button>
+                </div>
+                <div class="mt-4 text-red-500">Invalid email address</div>
+            </div>
+        </section>
+    </div>
 
-					<div class="flex flex-wrap mt-4 space-y-4 text-center sm:space-y-0 sm:space-x-4">
-						<div class="flex-none w-full md:w-2/4 sm:w-auto">
-							<div class="relative">
-								<input type="text" placeholder="your@email.com" id="hero-field" name="hero-field" class="w-full text-primary" />
-								<span class="absolute top-0 right-0 flex items-center justify-center w-10 h-full text-center text-gray-600 pointer-events-none">
-									<svg fill="currentColor" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4" viewBox="0 0 24 24">
-										<path fill-rule="evenodd" d="M14.243 5.757a6 6 0 10-.986 9.284 1 1 0 111.087 1.678A8 8 0 1118 10a3 3 0 01-4.8 2.401A4 4 0 1114 10a1 1 0 102 0c0-1.537-.586-3.07-1.757-4.243zM12 10a2 2 0 10-4 0 2 2 0 004 0z" clip-rule="evenodd" />
-									</svg>
-								</span>
-							</div>
-						</div>
-						<button class="flex items-center justify-center flex-none w-full sm:w-auto primary-btn">
-							<svg class="w-4 h-4 mr-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
-								<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-								<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-							</svg>
-							Notify Me
-						</button>
-					</div>
-					<div class="mt-4 text-red-500">Invalid email address</div>
-				</div>
-			</section>
-		</div>
-
-		<!-- FOOTER -->
-		<div class="w-full p-4 bg-white">
-			<div class="container flex flex-col w-full p-4 text-sm border-t border-gray-300 border-solid text-5-300 md:flex-row md:justify-between">
-				<span class="tracking-wide">&copy; 44 Olive Road, Penrose, Auckland 1061</span>
-				<span class="tracking-wide"> © 2021 Webslice Inc. </span>
-			</div>
-		</div>
-	</body>
-	<!-- Lottie -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.8/lottie.js"></script>
-	<script>
-		var animation = bodymovin.loadAnimation({
-			container: document.getElementById("logo"),
-			renderer: "svg",
-			loop: false,
-			autoplay: true,
-			path: "img/lottie/ws-logo.json",
-		});
-	</script>
-</html>
+    <!-- FOOTER -->
+    <div class="w-full p-4 bg-white">
+        <div class="container flex flex-col w-full p-4 text-sm border-t border-gray-300 border-solid text-5-300 md:flex-row md:justify-between">
+            <span class="tracking-wide">&copy; 44 Olive Road, Penrose, Auckland 1061</span>
+            <span class="tracking-wide"> © 2021 Webslice Inc. </span>
+        </div>
+    </div>
+</body>
