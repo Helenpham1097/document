@@ -3,119 +3,40 @@
     <main class="relative content">
         <!-- Cover image -->
         <figure class="cover blog">
-            <!-- <img src="https://source.unsplash.com/user/freeche/1600x480" /> -->
-            <img src="https://source.unsplash.com/1600x900/?tech&auto=format&fit=facearea&facepad=4&w=600&" />
+            <img src="{{ cover_image }}", alt="{{ cover_image:alt }}" />
         </figure>
         <!-- Blog content -->
         <article class="container items-start w-full px-5 py-8 mx-auto border-b border-gray-300 md:py-24 md:flex">
             <div class="w-full mx-auto text-xl md:px-6">
                 <!--Title-->
-                <h1>New in Cloud Containers: Simple Cache & Port Management</h1>
-                <p class="excerpt">Why do they matter and why you should choose Webslice instead. Learn more by reading.</p>
+                <h1>{{ header }}</h1>
+                <p class="excerpt">{{ subheader }}</p>
 
                 <!--Post Content-->
-                <p>
-                    👋 Welcome
-                    <a href="#"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </a>
-
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore earum obcaecati voluptatibus alias perferendis quo itaque deserunt atque repellat? Impedit natus, in tempora delectus a magnam voluptatem aliquid labore quidem.
-                </p>
-
-                <p>The basic blog page layout is available and all using the default Tailwind CSS classes (although there are a few hardcoded style tags). If you are going to use this in your project, you will want to convert the classes into components.</p>
-
-                <h1>Heading 1</h1>
-                <h2>Heading 2</h2>
-                <h3>Heading 3</h3>
-                <h4>Heading 4</h4>
-                <h5>Heading 5</h5>
-                <h6>Heading 6</h6>
-
-                <p>Sed dignissim lectus ut tincidunt vulputate. Fusce tincidunt lacus purus, in mattis tortor sollicitudin pretium. Phasellus at diam posuere, scelerisque nisl sit amet, tincidunt urna. Cras nisi diam, pulvinar ut molestie eget, eleifend ac magna. Sed at lorem condimentum, dignissim lorem eu, blandit massa. Phasellus eleifend turpis vel erat bibendum scelerisque. Maecenas id risus dictum, rhoncus odio vitae, maximus purus. Etiam efficitur dolor in dolor molestie ornare. Aenean pulvinar diam nec neque tincidunt, vitae molestie quam fermentum. Donec ac pretium diam. Suspendisse sed odio risus. Nunc nec luctus nisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis nec nulla eget sem dictum elementum.</p>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Role</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Sigourney Weaver</td>
-                            <td>Ripley</td>
-                        </tr>
-                        <tr>
-                            <td>Carrie Henn</td>
-                            <td>Newt</td>
-                        </tr>
-                        <tr>
-                            <td>Michael Biehn</td>
-                            <td>Corporal Hicks</td>
-                        </tr>
-                        <tr>
-                            <td>Paul Reiser</td>
-                            <td>Burke</td>
-                        </tr>
-                        <tr>
-                            <td>Lance Henriksen</td>
-                            <td>Bishop</td>
-                        </tr>
-                        <tr>
-                            <td>Bill Paxton</td>
-                            <td>Private Hudson</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <ol>
-                    <li>Maecenas accumsan lacus sit amet elementum porta. Aliquam eu libero lectus. Fusce vehicula dictum mi. In non dolor at sem ullamcorper venenatis ut sed dui. Ut ut est quam. Suspendisse quam quam, commodo sit amet placerat in, interdum a ipsum. Morbi sit amet tellus scelerisque tortor semper posuere.</li>
-                    <li>Morbi varius posuere blandit. Praesent gravida bibendum neque eget commodo. Duis auctor ornare mauris, eu accumsan odio viverra in. Proin sagittis maximus pharetra. Nullam lorem mauris, faucibus ut odio tempus, ultrices aliquet ex. Nam id quam eget ipsum luctus hendrerit. Ut eros magna, eleifend ac ornare vulputate, pretium nec felis.</li>
-                    <li>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc vitae pretium elit. Cras leo mauris, tristique in risus ac, tristique rutrum velit. Mauris accumsan tempor felis vitae gravida. Cras egestas convallis malesuada. Etiam ac ante id tortor vulputate pretium. Maecenas vel sapien suscipit, elementum odio et, consequat tellus.</li>
-                </ol>
-
-                <ul>
-                    <li>Maecenas accumsan lacus sit amet elementum porta. Aliquam eu libero lectus. Fusce vehicula dictum mi. In non dulor at sem ullamcorper venenatis ut sed dui. Ut ut est quam. Suspendisse quam quam, commodo sit amet placerat in, interdum a ipsum. Morbi sit amet tellus scelerisque tortor semper posuere.</li>
-                    <li>Morbi varius posuere blandit. Praesent gravida bibendum neque eget commodo. Duis auctor ornare mauris, eu accumsan odio viverra in. Proin sagittis maximus pharetra. Nullam lorem mauris, faucibus ut odio tempus, ultrices aliquet ex. Nam id quam eget ipsum luctus hendrerit. Ut eros magna, eleifend ac ornare vulputate, pretium nec felis.</li>
-                    <li>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc vitae pretium elit. Cras leo mauris, tristique in risus ac, tristique rutrum velit. Mauris accumsan tempor felis vitae gravida. Cras egestas convallis malesuada. Etiam ac ante id tortor vulputate pretium. Maecenas vel sapien suscipit, elementum odio et, consequat tellus.</li>
-                </ul>
-
-                <blockquote>
-                    Morbi placerat imperdiet risus quis blandit. Ut lobortis elit luctus, feugiat erat vitae, interdum diam. Nam sit amet arcu vitae justo lacinia ultricies nec eget tellus. Curabitur id sapien massa. In hac
-                    <a href="#">habitasse</a> platea dictumst. Integer tristique leo consectetur libero pretium pretium. Nunc sed mauris magna. Praesent varius purus id turpis iaculis iaculis. Nulla <em>convallis magna nunc</em>, id rhoncus massa ornare in. Donec et feugiat sem, ac rhoncus mauris. Quisque eget tempor massa.
-                </blockquote>
-                <img class="mb-8" src="https://source.unsplash.com/1600x900/?tech&auto=format&fit=facearea&facepad=4&w=600&" />
-                <p>Example code block:</p>
-                <pre>
-                <code>
-                    &lt;ul&gt;
-                        &lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
-                        &lt;li&gt;Aliquam tincidunt mauris eu risus.&lt;/li&gt;
-                        &lt;li&gt;Vestibulum auctor dapibus neque.&lt;/li&gt;
-                    &lt;/ul&gt;
-                </code>
-            </pre>
+                {{ content }}
 
                 <!--/ Post Content-->
             </div>
             <!--Author-->
             <div class="flex items-start w-full px-4 mx-auto mt-20 md:w-2/5 md:order-first sm:mt-0">
-                <img class="w-20 h-20 mr-4 rounded-full" src="https://images.unsplash.com/photo-1528914457842-1af67b57139d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=300&h=300" alt="Avatar of Author" />
+                <img class="w-20 h-20 mr-4 rounded-full" src="{{ author:avatar }}" alt="Avatar of {{ author:name }}" />
 
                 <span>
-                    <span class="mb-2 text-xl font-bold leading-none md:text-2xl"> Ravshana Kurkova </span>
+                    <span class="mb-2 text-xl font-bold leading-none md:text-2xl"> {{ author:name }} </span>
                     <span class="flex items-center mt-2">
                         <svg class="w-5 h-5 mr-2 icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                         </svg>
-                        <span class="block"> Nov 09, 2020 </span>
+                        <span class="block"> {{ date }} </span>
                     </span>
                     <div class="flex mt-2">
-                        <a href="#" class="mr-2 cursor-pointer icon">
+                        <a href='https://twitter.com/intent/tweet?text={{ title replace=" |+"" }}:+ {{ description replace=" |+"" }}&url={{ current_url }}' class="mr-2 cursor-pointer icon">
                             <svg class="w-5 h-5 fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <title>Twitter icon</title>
                                 <path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"></path>
                             </svg>
                         </a>
-                        <a href="#" class="mr-2 cursor-pointer icon">
+                        <a href='https://www.facebook.com/sharer/sharer.php?t={{ title replace=" |+"" }}:+ {{ description replace=" |+"" }}&u={{ current_url }}' class="mr-2 cursor-pointer icon">
                             <svg class="w-5 h-5 fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <title>Facebook icon</title>
                                 <path d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z"></path>
@@ -127,7 +48,7 @@
                                 <path d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z"></path>
                             </svg>
                         </a>
-                        <a href="#" class="mr-2 cursor-pointer icon">
+                        <a href='https://www.linkedin.com/sharing/share-offsite/?url={{ current_url }}' class="mr-2 cursor-pointer icon">
                             <svg class="w-5 h-5 fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <title>LinkedIn icon</title>
                                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>

@@ -13,6 +13,13 @@ sections:
           icon: text
           listable: hidden
       -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
         handle: cover_image
         field:
           mode: grid
@@ -24,12 +31,14 @@ sections:
           icon: assets
           listable: hidden
       -
-        handle: title
+        handle: header
         field:
+          input_type: text
+          antlers: false
+          display: Header
           type: text
-          required: true
-          validate:
-            - required
+          icon: text
+          listable: hidden
       -
         handle: subheader
         field:
@@ -48,20 +57,22 @@ sections:
           localizable: true
           max_items: 1
       -
-        handle: bard
+        handle: content
         field:
           always_show_set_button: false
           buttons:
+            - h1
             - h2
             - h3
             - bold
             - italic
+            - underline
             - unorderedlist
             - orderedlist
             - removeformat
             - quote
-            - anchor
             - image
+            - anchor
             - table
           save_html: false
           toolbar_mode: fixed
@@ -71,10 +82,11 @@ sections:
           reading_time: false
           fullscreen: true
           allow_source: true
-          display: Bard
+          display: Content
           type: bard
           icon: bard
           listable: hidden
+          container: assets
   sidebar:
     display: Sidebar
     fields:
@@ -84,5 +96,12 @@ sections:
           type: slug
           required: true
           localizable: true
+          validate:
+            - required
+      -
+        handle: date
+        field:
+          type: date
+          required: true
           validate:
             - required
