@@ -8,6 +8,7 @@ const newer = require("gulp-newer");
 const plumber = require("gulp-plumber");
 const postcss = require("gulp-postcss");
 const purgecss = require('gulp-purgecss');
+const cleancss = require('gulp-clean-css');
 const rename = require("gulp-rename");
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
@@ -35,6 +36,7 @@ function styles() {
         .pipe(plumber())
         .pipe(postcss())
         .pipe(purgecss({ content: ['./resources/**/*.antlers.html', './resources/**/*.blade.php', './content/**/*.md'], defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [] }))
+        .pipe(cleancss({ level: 2 }))
         .pipe(gulp.dest("./public/css/"))
         .pipe(browsersync.stream());
 }
@@ -84,9 +86,9 @@ function clean() {
 
 // Watch files
 function watchFiles() {
-    gulp.watch("./assets/styles/**/*", styles);
-    gulp.watch("./assets/scripts/**/*", scripts);
-    gulp.watch("./assets/img/**/*", images);
+    gulp.watch("./resources/css/**/*", styles);
+    gulp.watch("./resources/js/**/*", scripts);
+    gulp.watch("./resources/img/**/*", images);
     gulp.watch("./public/**/*.html", html);
     gulp.series(browserSyncReload);
 }
