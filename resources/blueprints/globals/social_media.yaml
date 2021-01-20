@@ -1,0 +1,36 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: links
+        field:
+          collapse: false
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: social_media
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Social Media'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    validate:
+                      - required
+                -
+                  handle: url
+                  field:
+                    input_type: url
+                    antlers: false
+                    display: url
+                    type: text
+                    icon: text
+                    listable: hidden
+          display: Links
+          type: replicator
+          icon: replicator
+          listable: hidden
