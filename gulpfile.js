@@ -84,9 +84,9 @@ function clean() {
 
 // Watch files
 function watchFiles() {
-    gulp.watch("./assets/styles/**/*", styles);
-    gulp.watch("./assets/scripts/**/*", scripts);
-    gulp.watch("./assets/img/**/*", images);
+    gulp.watch("./resources/css/**/*", styles);
+    gulp.watch("./resources/js/**/*", scripts);
+    gulp.watch("./resources/img/**/*", images);
     gulp.watch("./public/**/*.html", html);
     gulp.series(browserSyncReload);
 }
