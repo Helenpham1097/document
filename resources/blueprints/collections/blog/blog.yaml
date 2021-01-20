@@ -13,6 +13,13 @@ sections:
           icon: text
           listable: hidden
       -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
         handle: cover_image
         field:
           mode: grid
@@ -24,12 +31,14 @@ sections:
           icon: assets
           listable: hidden
       -
-        handle: title
+        handle: header
         field:
+          input_type: text
+          antlers: false
+          display: Header
           type: text
-          required: true
-          validate:
-            - required
+          icon: text
+          listable: hidden
       -
         handle: subheader
         field:
