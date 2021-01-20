@@ -11,6 +11,15 @@ sections:
           validate:
             - required
       -
+        handle: description
+        field:
+          input_type: text
+          antlers: false
+          display: Description
+          type: text
+          icon: text
+          listable: hidden
+      -
         handle: subheader
         field:
           input_type: text

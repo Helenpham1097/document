@@ -4,6 +4,15 @@ sections:
     display: Main
     fields:
       -
+        handle: description
+        field:
+          input_type: text
+          antlers: false
+          display: Description
+          type: text
+          icon: text
+          listable: hidden
+      -
         handle: cover_image
         field:
           mode: grid
@@ -66,12 +75,6 @@ sections:
           type: bard
           icon: bard
           listable: hidden
-      -
-        handle: template
-        field:
-          type: template
-          display: Template
-          localizable: true
   sidebar:
     display: Sidebar
     fields:

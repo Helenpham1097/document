@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>Webslice – The Serverless Hosting Platform</title>
+    <title>{{ title }}</title>
     <!-- Meta Description 168/150 characters -->
-    <meta name="description" content="Deploy existing websites in seconds - Move your existing websites onto Webslice and experience serverless hosting that is faster, more reliable and cheaper than before." />
+    <meta name="description" content="{{ description }}" />
     <link rel="stylesheet" href="/css/main.css" />
     <!-- Recommended favicon format -->
     <link rel="icon" type="image/png" href="../img/wsico/favicon.png" />
@@ -28,10 +28,10 @@
     <meta name="theme-color" content="#ffffff" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <!-- Open Graph / Facebook -->
-    <meta property="og:url" content="https://www.webslice.com/" />
+    <meta property="og:url" content="https://www.webslice.com{{ url }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Webslice – The Serverless Hosting Platform" />
-    <meta property="og:description" content="Deploy existing websites in seconds - Move your existing websites onto Webslice and experience serverless hosting that is faster, more reliable and cheaper than before." />
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:description" content="{{ description }}" />
     <meta
         property="og:image"
         content="../img/Open-Graph.jpg
@@ -39,13 +39,13 @@
     />
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://www.webslice.com/" />
-    <meta property="twitter:title" content="Webslice – The Serverless Hosting Platform" />
-    <meta property="twitter:description" content="Deploy existing websites in seconds - Move your existing websites onto Webslice and experience serverless hosting that is faster, more reliable and cheaper than before." />
+    <meta property="twitter:url" content="https://www.webslice.com{{ url }}" />
+    <meta property="twitter:title" content="{{ title }}" />
+    <meta property="twitter:description" content="{{ description }}" />
     <meta property="twitter:image" content="../img/Open-Graph.jpg" />
 </head>
 
-    {{ partial:blognav }}
+    {{ partial:blog/blognav }}
     {{ template_content }}
 
 <!-- Lottie -->
