@@ -1,0 +1,44 @@
+<section class="container pt-24">
+    <div class="max-w-2xl px-8 mx-auto text-center">
+        <h2 class="tracking-wider uppercase">{{ latest_news:header }}</h2>
+        <hr />
+        <p class="mt-4">{{ latest_news:subheader }}</p>
+    </div>
+
+    <aside class="w-full mx-auto">
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-3 related-post">
+
+            {{ 
+                collection:blog 
+                :id:isnt="id"
+                :limit="latest_news:entries_limit"
+                sort="date:desc"
+            }}
+
+            <article>
+                <a href="{{ url }}">
+                    <figure>
+                        <img src="{{ cover_image:url }}" alt="{{ cover_image:alt }}" />
+                    </figure>
+                    <div class="flex items-start px-5 py-5">
+                        <div class="relative overflow-hidden rounded-lg">
+                            <h3>{{ title }}</h3>
+                            <div class="mb-4 leading-relaxed">
+                                {{ subheader }}
+                            </div>
+                            <span
+                                href="{{ url }}"
+                                class="inline-flex items-center cta"
+                            >
+                                {{ latest_news:link_text }}
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            {{ /collection:blog }}
+            
+        </div>
+    </aside>
+</section>
