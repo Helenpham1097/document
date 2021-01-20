@@ -8,6 +8,7 @@ const newer = require("gulp-newer");
 const plumber = require("gulp-plumber");
 const postcss = require("gulp-postcss");
 const purgecss = require('gulp-purgecss');
+const cleancss = require('gulp-clean-css');
 const rename = require("gulp-rename");
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
@@ -35,6 +36,7 @@ function styles() {
         .pipe(plumber())
         .pipe(postcss())
         .pipe(purgecss({ content: ['./resources/**/*.antlers.html', './resources/**/*.blade.php', './content/**/*.md'], defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [] }))
+        .pipe(cleancss({ level: 2 }))
         .pipe(gulp.dest("./public/css/"))
         .pipe(browsersync.stream());
 }
