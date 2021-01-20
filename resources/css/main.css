@@ -1,0 +1,26 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+
+/* Basic styles */
+@import "./base/global.css";
+@import "./utilities/animation.css";
+@import "./base/typography.css";
+@import "./utilities/button.css";
+@import "./utilities/inputs.css";
+
+/* Components */
+@import "./components/header.css";
+@import "./components/footer.css";
+@import "./components/cover.css";
+
+@import "tailwindcss/utilities";
+
+/* * {
+	border: 1px solid rgba(100, 0, 0, 0.5);
+} */
+
+/* Browser-Sync notification */
+#__bs_notify__ {
+	display: none;
+	opacity: 0;
+}
