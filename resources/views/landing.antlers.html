@@ -5,9 +5,9 @@
         <div class="absolute w-full my-auto h-4/6 light-purple"></div>
         <section class="container flex items-center flex-auto mx-auto align-middle justify-items-center">
             <div class="m-auto lg:w-7/12">
-                <h1 class="mt-10 text-3xl lg:leading-tight md:mt-2 lg:text-5xl">Webslice is the serverless hosting platform of tomorrow, for the websites of today.</h1>
-                <h2 class="text-lg font-normal text-gray-500 md:mb-5 md:text-2xl">Serverless is the future of hosting. We’re building a brand new serverless platform from the ground up for your existing websites and applications so you get all the serverless benefits without the pain.</h2>
-                <p class="mb-10 text-gray-600 sm:text-lg">🤔 Interested? Put your name down for beta and launch:</p>
+                <h1 class="mt-10 text-3xl lg:leading-tight md:mt-2 lg:text-5xl">{{ header }}</h1>
+                <h2 class="text-lg font-normal text-gray-500 md:mb-5 md:text-2xl">{{ content }}</h2>
+                <p class="mb-10 text-gray-600 sm:text-lg">{{ sign_up_prompt }}</p>
 
                 <div class="flex flex-wrap mt-4 space-y-4 text-center sm:space-y-0 sm:space-x-4">
                     <div class="flex-none w-full md:w-2/4 sm:w-auto">
@@ -36,8 +36,8 @@
     <!-- FOOTER -->
     <div class="w-full p-4 bg-white">
         <div class="container flex flex-col w-full p-4 text-sm border-t border-gray-300 border-solid text-5-300 md:flex-row md:justify-between">
-            <span class="tracking-wide">&copy; 44 Olive Road, Penrose, Auckland 1061</span>
-            <span class="tracking-wide"> © 2021 Webslice Inc. </span>
+            <span class="tracking-wide">&copy; {{ company_information:address }}</span>
+            <span class="tracking-wide"> {{ company:information:copyright }} </span>
         </div>
     </div>
 </body>
