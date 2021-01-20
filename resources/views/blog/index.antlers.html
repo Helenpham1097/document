@@ -2,11 +2,8 @@
     <div class="hidden sm:block cover">
         <!-- <img src="https://source.unsplash.com/user/freeche/1600x480"> -->
     </div>
-
-    {{ collection:blog limit="7" paginate="true" as="posts" sort="date:dsc|title:asc" }}
-    {{ posts }}
+    {{ collection:blog sort="date:dsc|title:asc" }}
         {{ if first && (get:page == "1" || !get:page) }}
-
             <section class="w-full mx-auto max-w-screen-2xl">
                 <article class="flex flex-col items-center mx-auto sm:px-8 sm:py-24 sm:container md:flex-row">
                     <a href="{{ url }}" class="flex flex-col items-center p-10 mb-16 text-center bg-white chevron-path lg:flex-grow lg:pr-24 md:items-start md:mb-0 md:pr-16 md:text-left md:w-1/2">
@@ -20,31 +17,28 @@
                     </div>
                 </article>
             </section>
-            <section class="container w-full px-5 mx-auto">
-                <div class="grid grid-cols-1 gap-8 sm:grid-cols-3">
-    {{ else }}
-    <!-- Content -->
-        {{ if first }}
-            <section class="container w-full px-5 mx-auto">
-                <div class="grid grid-cols-1 gap-8 sm:grid-cols-3">
         {{ /if }}
-            <article>
-                <a href="{{ url }}">
-                    <figure>
-                        <img src="{{ cover_image }}" alt="{{ cover_image:alt }}" />
-                    </figure>
-                    <div class="flex items-start px-5 py-5">
-                        <div class="relative overflow-hidden rounded-lg">
-                            <h3>{{ title }}</h3>
-                            <p class="leading-relaxed">{{ subheader }}</p>
-                            <span href="{{ url }}" class="inline-flex items-center cta"> Learn More </span>
-                        </div>
-                    </div>
-                </a>
-            </article>
+    {{ /collection:blog }}
 
-    {{ /if }}
-    {{ /posts }}
+    {{ collection:blog limit="6" paginate="true" as="posts" sort="date:dsc|title:asc" offset="1" }}
+    <section class="container w-full px-5 mx-auto">
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-3">
+            {{ posts }}
+                <article>
+                    <a href="{{ url }}">
+                        <figure>
+                            <img src="{{ cover_image }}" alt="{{ cover_image:alt }}" />
+                        </figure>
+                        <div class="flex items-start px-5 py-5">
+                            <div class="relative overflow-hidden rounded-lg">
+                                <h3>{{ title }}</h3>
+                                <p class="leading-relaxed">{{ subheader }}</p>
+                                <span href="{{ url }}" class="inline-flex items-center cta"> Learn More </span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            {{ /posts }}
         </div>
     </section>
     <!-- Paginator -->
