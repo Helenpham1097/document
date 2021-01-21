@@ -20,7 +20,7 @@
         {{ /if }}
     {{ /collection:blog }}
 
-    {{ collection:blog limit="6" paginate="true" as="posts" sort="date:dsc|title:asc" offset="1" }}
+    {{ collection:blog limit="0" paginate="false" as="posts" sort="date:dsc|title:asc" offset="1" }}
     <section class="container w-full px-5 mx-auto">
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-3">
             {{ posts }}
