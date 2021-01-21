@@ -61,7 +61,6 @@ return [
     */
 
     'urls' => [
-        `/blog/page/2`,
     ],
 
     /*
