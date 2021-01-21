@@ -1,5 +1,5 @@
-order: 1
-title: Pages
+order: 2
+title: Landing
 sections:
   main:
     display: Main
@@ -21,21 +21,30 @@ sections:
           icon: text
           listable: hidden
       -
-        handle: subheader
+        handle: header
         field:
           input_type: text
           antlers: false
-          display: Subheader
+          display: Header
           type: text
           icon: text
           listable: hidden
       -
-        handle: template
+        handle: content
         field:
-          hide_partials: true
-          display: Template
-          type: template
-          icon: template
+          antlers: false
+          display: Content
+          type: textarea
+          icon: textarea
+          listable: hidden
+      -
+        handle: sign_up_prompt
+        field:
+          input_type: text
+          antlers: false
+          display: 'Sign Up Prompt'
+          type: text
+          icon: text
           listable: hidden
   sidebar:
     display: Sidebar
@@ -57,3 +66,11 @@ sections:
           max_items: 1
           listable: false
           localizable: true
+      -
+        handle: template
+        field:
+          hide_partials: true
+          display: Template
+          type: template
+          icon: template
+          listable: hidden
