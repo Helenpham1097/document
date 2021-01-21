@@ -66,6 +66,10 @@
         </a>
     </div>
 
-    {{ partial:blog/latest_news }}
+    {{ if {collection:count in="blog"} > 1 }}
+
+        {{ partial:blog/latest_news }}
+
+    {{ /if }}
 
 </main>
