@@ -1,61 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
     <title>{{ title }}</title>
     <!-- Meta Description 168/150 characters -->
-    <meta name="description" content="{{ description }}" />
-    <link rel="stylesheet" href="/css/main.css" />
+    <meta name="description" content="{{ description }}"/>
+    <link rel="stylesheet" href="/css/main.css"/>
     <!-- Recommended favicon format -->
-    <link rel="icon" type="image/png" href="/img/wsico/favicon.png" />
-    <link rel="apple-touch-icon" sizes="57x57" href="/img/wsico/apple-icon-57x57.png" />
-    <link rel="apple-touch-icon" sizes="60x60" href="/img/wsico/apple-icon-60x60.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="/img/wsico/apple-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="/img/wsico/apple-icon-76x76.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="/img/wsico/apple-icon-114x114.png" />
-    <link rel="apple-touch-icon" sizes="120x120" href="/img/wsico/apple-icon-120x120.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="/img/wsico/apple-icon-144x144.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="/img/wsico/apple-icon-152x152.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/wsico/apple-icon-180x180.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="/img/wsico/android-icon-192x192.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/wsico/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="/img/wsico/favicon-96x96.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/wsico/favicon-16x16.png" />
-    <link rel="manifest" href="/img/wsico/manifest.json" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" content="/img/wsico/ms-icon-144x144.png" />
-    <meta name="theme-color" content="#ffffff" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="icon" type="image/png" href="/img/wsico/favicon.png"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/wsico/apple-icon-57x57.png"/>
+    <link rel="apple-touch-icon" sizes="60x60" href="/img/wsico/apple-icon-60x60.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/wsico/apple-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/wsico/apple-icon-76x76.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/wsico/apple-icon-114x114.png"/>
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/wsico/apple-icon-120x120.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/wsico/apple-icon-144x144.png"/>
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/wsico/apple-icon-152x152.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/wsico/apple-icon-180x180.png"/>
+    <link rel="icon" type="image/png" sizes="192x192" href="/img/wsico/android-icon-192x192.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/wsico/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="96x96" href="/img/wsico/favicon-96x96.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/wsico/favicon-16x16.png"/>
+    <link rel="manifest" href="/img/wsico/manifest.json"/>
+    <meta name="msapplication-TileColor" content="#ffffff"/>
+    <meta name="msapplication-TileImage" content="/img/wsico/ms-icon-144x144.png"/>
+    <meta name="theme-color" content="#ffffff"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
     <!-- Open Graph / Facebook -->
-    <meta property="og:url" content="https://www.webslice.com{{ url }}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="{{ title }}" />
-    <meta property="og:description" content="{{ description }}" />
+    <meta property="og:url" content="https://www.webslice.com{{ url }}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="{{ title }}"/>
+    <meta property="og:description" content="{{ description }}"/>
     <meta
         property="og:image"
         content="/img/Open-Graph.jpg
         "
     />
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://www.webslice.com{{ url }}" />
-    <meta property="twitter:title" content="{{ title }}" />
-    <meta property="twitter:description" content="{{ description }}" />
-    <meta property="twitter:image" content="/img/Open-Graph.jpg" />
+    <meta property="twitter:card" content="summary_large_image"/>
+    <meta property="twitter:url" content="https://www.webslice.com{{ url }}"/>
+    <meta property="twitter:title" content="{{ title }}"/>
+    <meta property="twitter:description" content="{{ description }}"/>
+    <meta property="twitter:image" content="/img/Open-Graph.jpg"/>
 </head>
 
+    {{ partial:blog/blognav }}
     {{ template_content }}
 
 <!-- Lottie -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.8/lottie.min.js"></script>
 <script>
     var animation = bodymovin.loadAnimation({
-        container: document.getElementById("logo"),
-        renderer: "svg",
+        container: document.getElementById('logo'),
+        renderer: 'svg',
         loop: false,
         autoplay: true,
-        path: "/img/lottie/ws-logo.json",
+        path: '/img/lottie/ws-logo.json',
     });
 </script>
 
