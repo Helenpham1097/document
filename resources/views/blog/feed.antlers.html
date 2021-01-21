@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+     xmlns:admin="http://webns.net/mvcb/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/">
+
+    <channel>
+        <link href="http://webslice.com/blog/feed" rel="self" type="application/rss+xml" xmlns="http://www.w3.org/2005/Atom"/>
+        <title>Webslice Blog</title>
+        <link>https://webslice.com/blog/feed</link>
+        <dc:creator>Webslice</dc:creator>
+        <admin:generatorAgent rdf:resource="https://webslice.com" />
+        <description>Webslice Serverless Hosting</description>
+        <lastBuildDate>{{ collection:blog limit="1" }}{{ date format="r" }}{{ /collection:blog }}</lastBuildDate>
+        <language>en-us</language>
+        <copyright>© 2021 Webslice Inc.</copyright>
+        <ttl>3600</ttl>
+
+        {{ collection:blog limit="1" sort="date:asc"}}
+        <item>
+            <title>{{ header }}</title>
+            <dc:creator>{{ author:name }}</dc:creator>
+            <link>https://webslice.com{{ url }}</link>
+            <guid>https://webslice.com{{ url }}</guid>
+            <category>post</category>
+            <pubDate>{{ date format="r" }}</pubDate>
+            <description>{{ description }}</description>
+        </item>
+        {{ /collection:blog }}
+    </channel>
+</rss>
