@@ -11,11 +11,11 @@
                 <h2 class="text-lg font-normal text-gray-500 md:mb-5 md:text-2xl">{{ content }}</h2>
                 <p class="mb-10 text-gray-600 sm:text-lg">{{ sign_up_prompt }}</p>
 
-                <form id="subForm" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="2BE4EF332AA2E32596E38B640E9056191E5F40F1FB285C0CD21B6B146E520F1531993D0F1174162641D0BA4283C4FEFB1ECF1874B92EE30E3662BA692DB1B874">
+                <form id="subForm" class="js-cm-form" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="2BE4EF332AA2E32596E38B640E9056191E5F40F1FB285C0CD21B6B146E520F1531993D0F1174162641D0BA4283C4FEFB1ECF1874B92EE30E3662BA692DB1B874">
                     <div class="flex flex-wrap mt-4 space-y-4 text-center sm:space-y-0 sm:space-x-4">
                         <div class="flex-none w-full md:w-2/4 sm:w-auto">
                             <div class="relative">
-                                <input type="text" placeholder="your@email.com" id="fieldEmail" name="hero-field" class="w-full text-primary" required/>
+                                <input id="fieldEmail" name="cm-sidkdy-sidkdy" type="email" class="w-full text-primary js-cm-email-input" placeholder="your@email.com" required />
                                 <span class="absolute top-0 right-0 flex items-center justify-center w-10 h-full text-center text-gray-600 pointer-events-none">
                                 <svg fill="currentColor" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4" viewBox="0 0 24 24">
                                     <path fill-rule="evenodd" d="M14.243 5.757a6 6 0 10-.986 9.284 1 1 0 111.087 1.678A8 8 0 1118 10a3 3 0 01-4.8 2.401A4 4 0 1114 10a1 1 0 102 0c0-1.537-.586-3.07-1.757-4.243zM12 10a2 2 0 10-4 0 2 2 0 004 0z" clip-rule="evenodd"/>
@@ -23,7 +23,7 @@
                             </span>
                             </div>
                         </div>
-                        <button class="flex items-center justify-center flex-none w-full sm:w-auto primary-btn">
+                            <button class="flex items-center justify-center flex-none w-full sm:w-auto primary-btn" type="submit">
                             <svg class="w-4 h-4 mr-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
                                 <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
                                 <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
@@ -32,12 +32,13 @@
                         </button>
                     </div>
                 </form>
-                <!--                <div class="mt-4 text-red-500">Invalid email address</div>-->
+                <script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
+                <div class="mt-4 text-red-500" style="display: none">Invalid email address</div>
             </div>
         </section>
     </div>
 
-    <script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
+
     <!-- FOOTER -->
     <div class="w-full p-4 bg-white">
         <div class="container flex flex-col w-full p-4 text-sm border-t border-gray-300 border-solid text-5-300 md:flex-row md:justify-between">
