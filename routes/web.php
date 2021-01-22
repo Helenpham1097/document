@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 //    'title' => 'Example'
 // ]);
 
- Route::view('/blog/feed', 'blog/feed', [
-     'content_type' => 'xml'
- ]);
+Route::statamic('/blog/feed', 'blog.feed', [
+    'content_type' => 'xml',
+    'layout' => null
+]);
