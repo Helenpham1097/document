@@ -3,8 +3,8 @@
     <div class="hidden sm:block cover">
         <!-- <img src="https://source.unsplash.com/user/freeche/1600x480"> -->
     </div>
-    {{ collection:blog sort="date:dsc|title:asc" }}
-        {{ if first && (get:page == "1" || !get:page) }}
+    {{ collection:blog sort="date:desc" limit="1" }}
+        {{ if get:page == "1" || !get:page }}
             <section class="w-full mx-auto max-w-screen-2xl">
                 <article class="flex flex-col items-center mx-auto sm:px-8 sm:py-24 sm:container md:flex-row">
                     <a href="{{ url }}" class="flex flex-col items-center p-10 mb-16 text-center bg-white chevron-path lg:flex-grow lg:pr-24 md:items-start md:mb-0 md:pr-16 md:text-left md:w-1/2">
@@ -21,7 +21,7 @@
         {{ /if }}
     {{ /collection:blog }}
 
-    {{ collection:blog limit="0" paginate="false" as="posts" sort="date:dsc|title:asc" offset="1" }}
+    {{ collection:blog limit="0" paginate="false" as="posts" sort="date:desc" offset="1" }}
     <section class="container w-full px-5 mx-auto">
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-3">
             {{ posts }}
