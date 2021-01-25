@@ -14,7 +14,11 @@
                     </a>
 
                     <div class="order-first w-full sm:-m-20 sm:mb-0 md:w-4/6">
-                        <img src="{{ cover_image }}" alt="{{ cover_image:alt }}" />
+                        {{ if !cover_image }}
+                            <img src="{{ default_cover_image:image }}", alt="{{ default_cover_image:alt }}" />
+                        {{ else }}
+                            <img src="{{ cover_image }}", alt="{{ cover_image:alt }}" />
+                        {{ /if }}
                     </div>
                 </article>
             </section>
@@ -28,7 +32,11 @@
                 <article>
                     <a href="{{ url }}">
                         <figure>
-                            <img src="{{ cover_image }}" alt="{{ cover_image:alt }}" />
+                            {{ if !cover_image }}
+                                <img src="{{ default_cover_image:image }}", alt="{{ default_cover_image:alt }}" />
+                            {{ else }}
+                                <img src="{{ cover_image }}", alt="{{ cover_image:alt }}" />
+                            {{ /if }}
                         </figure>
                         <div class="flex items-start px-5 py-5">
                             <div class="relative overflow-hidden rounded-lg">
