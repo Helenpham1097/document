@@ -1,1 +1,4 @@
 title: 'Default Image'
+data:
+  cover_photo: default-optimized.jpg
+  avatar: default-avatar.png
