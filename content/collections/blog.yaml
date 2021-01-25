@@ -4,10 +4,11 @@ layout: blog/layout
 mount: fee1a2b1-971c-4c72-9517-d2e6c989f49e
 taxonomies:
   - categories
-revisions: false
+revisions: true
 route: '{{ mount }}/{{ slug }}'
 date: true
 sort_dir: asc
+default_status: draft
 date_behavior:
   past: public
   future: private
