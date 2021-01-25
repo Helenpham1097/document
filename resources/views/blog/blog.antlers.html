@@ -3,7 +3,7 @@
     <!-- Cover image -->
     <figure class="cover blog">
         {{ if !cover_image }}
-            <img src="{{ default_cover_image:image }}", alt="{{ default_cover_image:alt }}" />=
+            <img src="{{ default_cover_image:image }}", alt="{{ default_cover_image:alt }}" />
         {{ else }}
             <img src="{{ cover_image }}", alt="{{ cover_image:alt }}" />
         {{ /if }}
