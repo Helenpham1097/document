@@ -42,11 +42,10 @@ sections:
       -
         handle: subheader
         field:
-          input_type: text
           antlers: false
           display: Subheader
-          type: text
-          icon: text
+          type: textarea
+          icon: textarea
           listable: hidden
       -
         handle: author
