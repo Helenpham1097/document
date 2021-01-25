@@ -2,11 +2,7 @@
 <main class="relative content">
     <!-- Cover image -->
     <figure class="cover blog">
-        {{ if !cover_image }}
-            <img src="{{ default_cover_image:image }}", alt="{{ default_cover_image:alt }}" />
-        {{ else }}
-            <img src="{{ cover_image }}", alt="{{ cover_image:alt }}" />
-        {{ /if }}
+        {{ partial:blog/default_image }}
     </figure>
     <!-- Blog content -->
     <article class="container items-start w-full px-5 py-8 mx-auto border-b border-gray-300 md:py-24 md:flex">
