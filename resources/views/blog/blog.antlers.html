@@ -18,8 +18,11 @@
         </div>
         <!--Author-->
         <div class="flex items-start w-full px-4 mx-auto mt-20 md:w-2/5 md:order-first sm:mt-0">
+            {{ if author:avatar }}
             <img class="w-20 h-20 mr-4 rounded-full" src="{{ author:avatar }}" alt="Avatar of {{ author:name }}" />
-
+            {{ else }}
+            <img class="w-20 h-20 mr-4 rounded-full" src="{{ default_image:avatar }}" alt="Avatar of {{ author:name }}" />
+            {{ /if }}
             <span>
                 <span class="mb-2 text-xl font-bold leading-none md:text-2xl"> {{ author:name }} </span>
                 <span class="flex items-center mt-2">
