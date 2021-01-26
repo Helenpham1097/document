@@ -3,7 +3,9 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Ramsey\Collection\GenericArray;
 use Statamic\Statamic;
+use Statamic\StaticSite\Generator;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -22,9 +24,10 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(Generator $ssg)
     {
-        // Statamic::script('app', 'cp');
-        // Statamic::style('app', 'cp');
+        $ssg->after(function () {
+            rename(storage_path('app/static/blog/feed/index.html'),storage_path('app/static/blog/feed/index.xml'));
+        });
     }
 }
