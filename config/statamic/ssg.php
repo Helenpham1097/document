@@ -74,7 +74,20 @@ return [
     */
 
     'exclude' => [
-        //
+        '/blog/categories/case-studies',
+        '/blog/categories/culture',
+        '/blog/categories/news',
+        '/blog/categories/opinion',
+        '/blog/categories/products',
+        '/blog/categories/technical',
+        '/blog/categories/testimonials',
+        '/categories/case-studies',
+        '/categories/culture',
+        '/categories/news',
+        '/categories/opinion',
+        '/categories/products',
+        '/categories/technical',
+        '/categories/testimonials',
     ],
 
     /*
