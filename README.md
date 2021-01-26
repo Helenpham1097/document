@@ -1,4 +1,7 @@
 # Config & Workarounds
+
+This [project ticket](https://gitlab.wsihq.net/serverless/serverless/-/issues/163) might contain useful information, discussions and decisions we made.
+
 ### SSG Config
 - XML for the RSS feed was not generating properly due to the content-header being set to html rather than xml. 
   Since the production site is going to live in S3 initially, we had to change the file extension from .html to .xml. 
@@ -29,8 +32,15 @@ php artisan view:clear
 php artisan cache:clear
 ```
 
-<p align="center"><img src="https://statamic.com/assets/branding/Statamic-Logo+Wordmark-Rad.svg" width="400" alt="Statamic Logo" /></p>
+### Staging and Git Integration
 
+- Make sure there is a `.env` file in the project root and configured properly, refer to `.env.example` . To generate `APP_KEY`, run the following command:
+    ```
+    php artisan key:generate
+    ```
+- To use the Git integration, we have to add the SSH key to the repository as a [deploy key](https://docs.github.com/en/developers/overview/managing-deploy-keys). Refer to [this comment](https://gitlab.wsihq.net/serverless/serverless/-/issues/163#note_20979) on the project ticket to learn more about setting this up in  SiteHost Cloud Containers using Apache+PHP image.
+
+<p align="center"><img src="https://statamic.com/assets/branding/Statamic-Logo+Wordmark-Rad.svg" width="400" alt="Statamic Logo" /></p>
 
 ## About Statamic 3
 
