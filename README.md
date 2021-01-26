@@ -15,7 +15,22 @@ We used a post generation call back to rename blog/feed/index.html to blog/feed/
 ### Pagination
 - Pagination is currently disabled in blog/index.antlers.html while it's not supported by SSG https://github.com/statamic/ssg/issues/10. 
 
+### Helpful commands
+- Have found these useful when encountering a variety of different errors:
+```
+  php artisan optimize                                            
+  php artisan config:cache   
+  php artisan route:cache
+```
+- May need to clear routes, views and cache if making changes to them:
+```
+php artisan route:clear                                         
+php artisan view:clear     
+php artisan cache:clear
+```
+
 <p align="center"><img src="https://statamic.com/assets/branding/Statamic-Logo+Wordmark-Rad.svg" width="400" alt="Statamic Logo" /></p>
+
 
 ## About Statamic 3
 
