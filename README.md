@@ -20,17 +20,17 @@ We used a post generation call back to rename blog/feed/index.html to blog/feed/
 
 ### Helpful commands
 - Have found these useful when encountering a variety of different errors:
-```
-  php artisan optimize                                            
-  php artisan config:cache   
-  php artisan route:cache
-```
+    ```
+    php artisan optimize                                            
+    php artisan config:cache   
+    php artisan route:cache
+    ```
 - May need to clear routes, views and cache if making changes to them:
-```
-php artisan route:clear                                         
-php artisan view:clear     
-php artisan cache:clear
-```
+    ```
+    php artisan route:clear                                         
+    php artisan view:clear     
+    php artisan cache:clear
+    ```
 
 ### Staging and Git Integration
 
