@@ -40,6 +40,8 @@ We used a post generation call back to rename blog/feed/index.html to blog/feed/
     ```
 - To use the Git integration, we have to add the SSH key to the repository as a [deploy key](https://docs.github.com/en/developers/overview/managing-deploy-keys). Refer to [this comment](https://gitlab.wsihq.net/serverless/serverless/-/issues/163#note_20979) on the project ticket to learn more about setting this up in  SiteHost Cloud Containers using Apache+PHP image.
 
+<hr/>
+
 <p align="center"><img src="https://statamic.com/assets/branding/Statamic-Logo+Wordmark-Rad.svg" width="400" alt="Statamic Logo" /></p>
 
 ## About Statamic 3
