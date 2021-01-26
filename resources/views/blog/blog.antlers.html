@@ -1,3 +1,5 @@
+{{# Template for a blog entry #}}
+
 <!-- Content -->
 <main class="relative content">
     <!-- Cover image -->
@@ -31,6 +33,7 @@
                     </svg>
                     <span class="block"> {{ date }} </span>
                 </span>
+                {{# Social media share links #}}
                 <div class="flex mt-2">
                     <a href='https://twitter.com/intent/tweet?text={{ title replace=" |+"" }}%0A{{ subheader replace=" |+"" }}&url={{ current_url }}' target="_blank" class="mr-2 cursor-pointer icon">
                         <svg class="w-5 h-5 fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

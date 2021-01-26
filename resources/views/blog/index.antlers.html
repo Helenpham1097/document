@@ -1,22 +1,28 @@
+{{# Template for blog index page #}}
+
 <body>
     {{ partial:blog/nav }}
     <div class="hidden sm:block cover">
         <!-- <img src="https://source.unsplash.com/user/freeche/1600x480"> -->
     </div>
 
+    {{# Check for Stickied post  #}}
     {{ if stickied_blog_post && (get:page == "1" || !get:page) }}
+
         {{ stickied_blog_post:post }}
             {{ partial:blog/featured_post }}
         {{ /stickied_blog_post:post }}
 
+        {{# Non-featured posts. To enable pagination set true and change limit to 6 #}}
         {{ collection:blog limit="0" paginate="false" as="posts" sort="date:desc" id:isnt=stickied_blog_post:post:id }}
             {{ partial:blog/post }}
             <!-- Paginator -->
-            {{ partial:paginate }}
+            {{ partial:blog/paginate }}
         {{ /collection:blog }}
 
         {{ partial:blog/footer}}
 
+    {{# If no stickied post use most recent post  #}}
     {{ else }}
 
         {{ collection:blog sort="date:desc" limit="1" }}
@@ -25,12 +31,15 @@
             {{ /if }}
         {{ /collection:blog }}
 
+        {{# Non-featured posts. To enable pagination set true and change limit to 6 #}}
         {{ collection:blog limit="0" paginate="false" as="posts" sort="date:desc" offset="1" }}
             {{ partial:blog/post }}
             <!-- Paginator -->
-            {{ partial:paginate }}
+            {{ partial:blog/paginate }}
         {{ /collection:blog }}
+
         {{ partial:blog/footer}}
+
     {{ /if }}
 
 </body>
