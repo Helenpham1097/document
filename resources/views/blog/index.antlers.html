@@ -4,13 +4,12 @@
         <!-- <img src="https://source.unsplash.com/user/freeche/1600x480"> -->
     </div>
 
-    {{ if stickied_blog_post }}
-
+    {{ if stickied_blog_post && (get:page == "1" || !get:page) }}
         {{ stickied_blog_post:post }}
             {{ partial:blog/featured_post }}
         {{ /stickied_blog_post:post }}
 
-        {{ collection:blog limit="0" paginate="false" as="posts" sort="date:desc"}}
+        {{ collection:blog limit="0" paginate="false" as="posts" sort="date:desc" id:isnt=stickied_blog_post:post:id }}
             {{ partial:blog/post }}
             <!-- Paginator -->
             {{ partial:paginate }}
@@ -28,7 +27,6 @@
 
         {{ collection:blog limit="0" paginate="false" as="posts" sort="date:desc" offset="1" }}
             {{ partial:blog/post }}
-
             <!-- Paginator -->
             {{ partial:paginate }}
         {{ /collection:blog }}
