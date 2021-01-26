@@ -7,14 +7,14 @@
     </div>
 
     {{# Check for Stickied post  #}}
-    {{ if stickied_blog_post && (get:page == "1" || !get:page) }}
+    {{ if stickied_post && (get:page == "1" || !get:page) }}
 
-        {{ stickied_blog_post:post }}
+        {{ stickied_post }}
             {{ partial:blog/featured_post }}
-        {{ /stickied_blog_post:post }}
+        {{ /stickied_post }}
 
         {{# Non-featured posts. To enable pagination set true and change limit to 6 #}}
-        {{ collection:blog limit="0" paginate="false" as="posts" sort="date:desc" id:isnt=stickied_blog_post:post:id }}
+        {{ collection:blog limit="0" paginate="false" as="posts" sort="date:desc" id:isnt=stickied_post:id }}
             {{ partial:blog/post }}
             <!-- Paginator -->
             {{ partial:blog/paginate }}
