@@ -1,0 +1,13 @@
+<section class="w-full mx-auto max-w-screen-2xl">
+    <article class="flex flex-col items-center mx-auto sm:px-8 sm:py-24 sm:container md:flex-row">
+        <a href="{{ url }}" class="flex flex-col items-center p-10 mb-16 text-center bg-white chevron-path lg:flex-grow lg:pr-24 md:items-start md:mb-0 md:pr-16 md:text-left md:w-1/2">
+            <h1 class="leading-none gradient-bg">{{ header }}</h1>
+            <p class="leading-relxaxed"> {{ subheader }}</p>
+            <span class="inline-flex items-center cta"> Learn More </span>
+        </a>
+
+        <div class="order-first w-full sm:-m-20 sm:mb-0 md:w-4/6">
+            {{ partial:blog/default_image }}
+        </div>
+    </article>
+</section>
