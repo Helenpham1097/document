@@ -7,6 +7,7 @@ on:
 
 jobs:
   deploy:
+    timeout-minutes: 20
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
@@ -34,6 +35,11 @@ jobs:
         env:
           APP_KEY: ${{ secrets.APP_KEY }}
         run: php please ssg:generate
+
+      - name: Wait for previous workflows to complete (prevent race condition)
+        uses: softprops/turnstyle@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       #      - name: Deploy to Webslice
       #        uses: peaceiris/actions-gh-pages@v3
