@@ -21,3 +21,8 @@ Route::statamic('/blog/feed', 'blog.feed', [
     'content_type' => 'xml',
     'layout' => null
 ]);
+
+Route::statamic('/blog/feed/index.xml', 'blog.feed', [
+    'content_type' => 'xml',
+    'layout' => null
+]);
