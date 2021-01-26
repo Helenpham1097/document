@@ -1,17 +1,19 @@
 title: Blog
 sections:
-  main:
-    display: Main
+  'Blog Content':
+    display: 'Blog Content'
     fields:
       -
         handle: description
         field:
           input_type: text
           antlers: false
-          display: Description
+          display: 'Description (For SEO and sharing on social media)'
           type: text
           icon: text
           listable: hidden
+          validate:
+            - required
       -
         handle: title
         field:
@@ -19,6 +21,10 @@ sections:
           required: true
           validate:
             - required
+          display: 'Title (Displayed in the browser tab)'
+          listable: hidden
+          input_type: text
+          antlers: false
       -
         handle: cover_image
         field:
@@ -30,6 +36,14 @@ sections:
           type: assets
           icon: assets
           listable: hidden
+      -
+        handle: author
+        field:
+          type: users
+          display: Author
+          default: current
+          localizable: true
+          max_items: 1
       -
         handle: header
         field:
@@ -47,14 +61,6 @@ sections:
           type: textarea
           icon: textarea
           listable: hidden
-      -
-        handle: author
-        field:
-          type: users
-          display: Author
-          default: current
-          localizable: true
-          max_items: 1
       -
         handle: content
         field:

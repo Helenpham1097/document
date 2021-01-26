@@ -8,6 +8,6 @@ data:
       enabled: true
     -
       social_media: RSS
-      url: /blog/feed
+      url: /blog/feed/index.xml
       type: new_set
       enabled: true

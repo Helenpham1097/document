@@ -3,48 +3,35 @@
     <div class="hidden sm:block cover">
         <!-- <img src="https://source.unsplash.com/user/freeche/1600x480"> -->
     </div>
-    {{ collection:blog sort="date:desc" limit="1" }}
-        {{ if get:page == "1" || !get:page }}
-            <section class="w-full mx-auto max-w-screen-2xl">
-                <article class="flex flex-col items-center mx-auto sm:px-8 sm:py-24 sm:container md:flex-row">
-                    <a href="{{ url }}" class="flex flex-col items-center p-10 mb-16 text-center bg-white chevron-path lg:flex-grow lg:pr-24 md:items-start md:mb-0 md:pr-16 md:text-left md:w-1/2">
-                        <h1 class="leading-none gradient-bg">{{ header }}</h1>
-                        <p class="leading-relxaxed"> {{ subheader }}</p>
-                        <span class="inline-flex items-center cta"> Learn More </span>
-                    </a>
 
-                    <div class="order-first w-full sm:-m-20 sm:mb-0 md:w-4/6">
-                        <img src="{{ cover_image }}" alt="{{ cover_image:alt }}" />
-                    </div>
-                </article>
-            </section>
-        {{ /if }}
-    {{ /collection:blog }}
+    {{ if stickied_blog_post && (get:page == "1" || !get:page) }}
+        {{ stickied_blog_post:post }}
+            {{ partial:blog/featured_post }}
+        {{ /stickied_blog_post:post }}
 
-    {{ collection:blog limit="0" paginate="false" as="posts" sort="date:desc" offset="1" }}
-    <section class="container w-full px-5 mx-auto">
-        <div class="grid grid-cols-1 gap-8 sm:grid-cols-3">
-            {{ posts }}
-                <article>
-                    <a href="{{ url }}">
-                        <figure>
-                            <img src="{{ cover_image }}" alt="{{ cover_image:alt }}" />
-                        </figure>
-                        <div class="flex items-start px-5 py-5">
-                            <div class="relative overflow-hidden rounded-lg">
-                                <h3>{{ title }}</h3>
-                                <p class="leading-relaxed">{{ subheader }}</p>
-                                <span href="{{ url }}" class="inline-flex items-center cta"> Learn More </span>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-            {{ /posts }}
-        </div>
-    </section>
-    <!-- Paginator -->
-    {{ partial:paginate }}
-    {{ /collection:blog }}
-    {{ partial:blog/footer}}
+        {{ collection:blog limit="0" paginate="false" as="posts" sort="date:desc" id:isnt=stickied_blog_post:post:id }}
+            {{ partial:blog/post }}
+            <!-- Paginator -->
+            {{ partial:paginate }}
+        {{ /collection:blog }}
+
+        {{ partial:blog/footer}}
+
+    {{ else }}
+
+        {{ collection:blog sort="date:desc" limit="1" }}
+            {{ if get:page == "1" || !get:page }}
+                {{ partial:blog/featured_post}}
+            {{ /if }}
+        {{ /collection:blog }}
+
+        {{ collection:blog limit="0" paginate="false" as="posts" sort="date:desc" offset="1" }}
+            {{ partial:blog/post }}
+            <!-- Paginator -->
+            {{ partial:paginate }}
+        {{ /collection:blog }}
+        {{ partial:blog/footer}}
+    {{ /if }}
+
 </body>
 

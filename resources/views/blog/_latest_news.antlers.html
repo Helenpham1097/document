@@ -8,8 +8,8 @@
     <aside class="w-full mx-auto">
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-3 related-post">
 
-            {{ 
-                collection:blog 
+            {{
+                collection:blog
                 :id:isnt="id"
                 :limit="latest_news:entries_limit"
                 sort="date:desc"
@@ -18,7 +18,7 @@
             <article>
                 <a href="{{ url }}">
                     <figure>
-                        <img src="{{ cover_image:url }}" alt="{{ cover_image:alt }}" />
+                        {{ partial:blog/default_image }}
                     </figure>
                     <div class="flex items-start px-5 py-5">
                         <div class="relative overflow-hidden rounded-lg">
@@ -38,7 +38,7 @@
             </article>
 
             {{ /collection:blog }}
-            
+
         </div>
     </aside>
 </section>
