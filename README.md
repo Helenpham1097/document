@@ -34,7 +34,7 @@ php artisan cache:clear
 
 ### Staging and Git Integration
 
-- Make sure there is a `.env` file in the project root and configured properly, refer to `.env.example` . To generate `APP_KEY`, run the following command:
+- Make sure there is a `.env` file in the project root and configured properly, `.env.example` is a good starting point. To generate `APP_KEY`, run the following command:
     ```
     php artisan key:generate
     ```
