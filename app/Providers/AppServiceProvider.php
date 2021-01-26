@@ -3,7 +3,6 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Ramsey\Collection\GenericArray;
 use Statamic\Statamic;
 use Statamic\StaticSite\Generator;
 
