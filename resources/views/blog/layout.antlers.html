@@ -3,13 +3,13 @@
 <head>
     {{ partial:page_head }}
     <!-- Open Graph / Facebook -->
-    <meta property="og:url" content="{{ current_url }}"/>
+    <meta property="og:url" content="{{ current_url | sanitize }}"/>
     <meta property="og:type" content="Blog"/>
-    <meta property="og:title" content="{{ title }} - {{ site_information:name }}"/>
+    <meta property="og:title" content="{{ title | sanitize }} - {{ site_information:name | sanitize }}"/>
     {{ if !description }}
-        <meta property="og:description" content="{{ subheader }}"/>
+        <meta property="og:description" content="{{ subheader | sanitize }}"/>
     {{ else }}
-        <meta property="og:description" content="{{ description }}"/>
+        <meta property="og:description" content="{{ description | sanitize }}"/>
     {{ /if }}
     <meta
         property="og:image"
@@ -18,12 +18,12 @@
     />
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image"/>
-    <meta property="twitter:url" content="{{ current_url }}"/>
-    <meta property="twitter:title" content="{{ title }}"/>
+    <meta property="twitter:url" content="{{ current_url | sanitize }}"/>
+    <meta property="twitter:title" content="{{ title | sanitize }}"/>
     {{ if !description }}
-    <meta property="twitter:description" content="{{ subheader }}"/>
+    <meta property="twitter:description" content="{{ subheader | sanitize }}"/>
     {{ else }}
-    <meta property="twitter:description" content="{{ description }}"/>
+    <meta property="twitter:description" content="{{ description | sanitize }}"/>
     {{ /if }}
     <meta property="twitter:image" content="/img/Open-Graph.jpg"/>
 </head>
