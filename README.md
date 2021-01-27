@@ -33,7 +33,7 @@ We used a post generation call back to rename blog/feed/index.html to blog/feed/
 
 ### Templates
 - We had to create separate partial templates to use while the main website pages are not included. 
-  When the rest of the pages are added _main_nav and _main_footer will need to be implemented into the layout.
+  When the rest of the pages are added, _main_nav and _main_footer will need to be implemented into the layout.
   
 ### Pagination
 - Pagination is currently disabled in blog/index.antlers.html while it's not supported by SSG https://github.com/statamic/ssg/issues/10. 
