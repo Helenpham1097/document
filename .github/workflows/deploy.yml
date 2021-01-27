@@ -12,16 +12,18 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Setup Node
-        uses: actions/setup-node@v2
-        with:
-          node-version: '12'
-
-      - name: Install NPM dependencies
-        run: npm install
-
-      - name: Generate optimized assets
-        run: gulp
+# Commented out to speed up the build pipeline as the gulp image optimization is taking too long.
+# We will just commit the optimized assets to the repository.
+#      - name: Setup Node
+#        uses: actions/setup-node@v2
+#        with:
+#          node-version: '12'
+#
+#      - name: Install NPM dependencies
+#        run: npm install
+#
+#      - name: Generate optimized assets
+#        run: gulp
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -41,12 +43,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      #      - name: Deploy to Webslice
-      #        uses: peaceiris/actions-gh-pages@v3
-      #        with:
-      #          github_token: ${{ secrets.GITHUB_TOKEN }}
-      #          publish_dir: ./storage/app/static
-      #          destination_dir: public
+#      - name: Deploy to Webslice
+#        uses: peaceiris/actions-gh-pages@v3
+#        with:
+#          github_token: ${{ secrets.GITHUB_TOKEN }}
+#          publish_dir: ./storage/app/static
+#          destination_dir: public
 
       - name: Deploy to S3
         uses: jakejarvis/s3-sync-action@master
