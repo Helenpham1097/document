@@ -12,7 +12,7 @@
         <link>{{ current_url | sanitize }}</link>
         <dc:creator>{{ site_information:name | sanitize }}</dc:creator>
         <admin:generatorAgent rdf:resource="{{ site_information:url | sanitize }}" />
-        <description>Occasionally we find time to write about what we've been working on, lessons we've learnt or just something interesting we have found.</description>
+        <description>{{ latest_news:subheader | sanitize }}</description>
         <lastBuildDate>{{ collection:blog limit="1" }}{{ date format="r" }}{{ /collection:blog }}</lastBuildDate>
         <language>en-us</language>
         <copyright>{{ company_information:copyright | sanitize }}</copyright>
