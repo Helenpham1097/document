@@ -7,7 +7,7 @@ npm install
 gulp
 cp .env.example .env && php artisan key:generate
 ```
-If you have not created a user: `php please make:user`. You will need to commit your user to git.
+If you have not created a user: `php please make:user`.
 
 
 To conviently run locally use [Valet][valet] or [Homestead][homestead] and use [webslice-website.test][siteurl] for the website and [webslice-website.test/cp][cpurl] for the Statamic Control Panel.
