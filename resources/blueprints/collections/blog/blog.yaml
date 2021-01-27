@@ -12,19 +12,6 @@ sections:
           type: text
           icon: text
           listable: hidden
-          validate:
-            - required
-      -
-        handle: title
-        field:
-          type: text
-          required: true
-          validate:
-            - required
-          display: 'Title (Displayed in the browser tab)'
-          listable: hidden
-          input_type: text
-          antlers: false
       -
         handle: cover_image
         field:
@@ -44,15 +31,19 @@ sections:
           default: current
           localizable: true
           max_items: 1
+          listable: true
+          mode: select
       -
-        handle: header
+        handle: title
         field:
+          type: text
+          required: true
+          validate:
+            - required
+          display: Title
+          listable: true
           input_type: text
           antlers: false
-          display: Header
-          type: text
-          icon: text
-          listable: hidden
       -
         handle: subheader
         field:
@@ -103,6 +94,8 @@ sections:
           localizable: true
           validate:
             - required
+          listable: true
+          generate: true
       -
         handle: date
         field:
@@ -110,3 +103,20 @@ sections:
           required: true
           validate:
             - required
+          listable: true
+          mode: single
+          time_enabled: false
+          time_required: false
+          earliest_date: '1900-01-01'
+          full_width: false
+          inline: false
+          columns: 1
+          rows: 1
+      -
+        handle: categories
+        field:
+          type: terms
+          taxonomies:
+            - categories
+          display: Categories
+          mode: select
