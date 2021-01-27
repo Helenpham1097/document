@@ -1,3 +1,23 @@
+# Installation
+```
+git clone git@github.com:webslicehq/webslice-website.git
+cd webslice-website
+composer install
+npm install
+gulp
+cp .env.example .env && php artisan key:generate
+```
+If you have not created a user: `php please make:user`. You will need to commit your user to git.
+
+
+To conviently run locally use [Valet][valet] or [Homestead][homestead] and use [webslice-website.test][siteurl] for the website and [webslice-website.test/cp][cpurl] for the Statamic Control Panel.
+
+[valet]: https://laravel.com/docs/8.x/valet
+[Homestead]: https://laravel.com/docs/8.x/homestead
+[siteurl]: http://webslice-website.test
+[cpurl]: http://webslice-website.test/cp
+
+
 # Config & Workarounds
 
 This [project ticket](https://gitlab.wsihq.net/serverless/serverless/-/issues/163) might contain useful information, discussions and decisions we made.
