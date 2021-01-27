@@ -7,26 +7,26 @@
      xmlns:content="http://purl.org/rss/1.0/modules/content/">
 
     <channel>
-        <link href="http://webslice.com/blog/feed" rel="self" type="application/rss+xml" xmlns="http://www.w3.org/2005/Atom"/>
-        <title>Webslice Blog</title>
-        <link>https://webslice.com/blog/feed</link>
-        <dc:creator>Webslice</dc:creator>
-        <admin:generatorAgent rdf:resource="https://webslice.com" />
-        <description>Webslice Serverless Hosting</description>
+        <link href="{{ current_url | sanitize }}" rel="self" type="application/rss+xml" xmlns="http://www.w3.org/2005/Atom"/>
+        <title>{{ site_information:name | sanitize }} Blog</title>
+        <link>{{ current_url | sanitize }}</link>
+        <dc:creator>{{ site_information:name | sanitize }}</dc:creator>
+        <admin:generatorAgent rdf:resource="{{ site_information:url | sanitize }}" />
+        <description>Occasionally we find time to write about what we've been working on, lessons we've learnt or just something interesting we have found.</description>
         <lastBuildDate>{{ collection:blog limit="1" }}{{ date format="r" }}{{ /collection:blog }}</lastBuildDate>
         <language>en-us</language>
-        <copyright>© 2021 Webslice Inc.</copyright>
+        <copyright>{{ company_information:copyright | sanitize }}</copyright>
         <ttl>3600</ttl>
 
         {{ collection:blog sort="date:asc"}}
         <item>
-            <title>{{ title }}</title>
-            <dc:creator>{{ author:name }}</dc:creator>
-            <link>https://webslice.com{{ url }}</link>
-            <guid>https://webslice.com{{ url }}</guid>
+            <title>{{ title | sanitize }}</title>
+            <dc:creator>{{ author:name | sanitize }}</dc:creator>
+            <link>{{ site_information:url | sanitize }}{{ url | sanitize }}</link>
+            <guid>{{ site_information:url | sanitize }}{{ url | sanitize }}</guid>
             <category>post</category>
             <pubDate>{{ date format="r" }}</pubDate>
-            <description>{{ description }}</description>
+            <description>{{ description | sanitize }}</description>
         </item>
         {{ /collection:blog }}
     </channel>
