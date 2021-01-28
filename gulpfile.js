@@ -35,7 +35,7 @@ function styles() {
         .src("./resources/css/main.css")
         .pipe(plumber())
         .pipe(postcss())
-        .pipe(purgecss({ content: ['./resources/**/*.antlers.html', './resources/**/*.blade.php', './content/**/*.md'], defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [] }))
+        .pipe(purgecss({ content: ['./resources/**/*.antlers.html', './content/**/*.md', './resources/utilities/markdown-elements.html'], defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [] }))
         .pipe(cleancss({ level: 2 }))
         .pipe(gulp.dest("./public/css/"))
         .pipe(browsersync.stream());
