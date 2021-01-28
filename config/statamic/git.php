@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'enabled' => env('STATAMIC_GIT_ENABLED', false),
+    'enabled' => env('STATAMIC_GIT_ENABLED', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -28,7 +28,7 @@ return [
     |
     */
 
-    'automatic' => env('STATAMIC_GIT_AUTOMATIC', true),
+    'automatic' => env('STATAMIC_GIT_AUTOMATIC', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -60,8 +60,8 @@ return [
     'use_authenticated' => true,
 
     'user' => [
-        'name' => env('STATAMIC_GIT_USER_NAME', 'Spock'),
-        'email' => env('STATAMIC_GIT_USER_EMAIL', 'spock@example.com'),
+        'name' => env('STATAMIC_GIT_USER_NAME', 'Webslice Developers'),
+        'email' => env('STATAMIC_GIT_USER_EMAIL', 'developers@webslice.com'),
     ],
 
     /*
@@ -114,7 +114,7 @@ return [
     |
     */
 
-    'push' => env('STATAMIC_GIT_PUSH', false),
+    'push' => env('STATAMIC_GIT_PUSH', true),
 
     /*
     |--------------------------------------------------------------------------

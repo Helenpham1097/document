@@ -1,0 +1,48 @@
+footer {
+	@apply -mt-8;
+}
+@screen sm {
+	footer {
+		@apply -mt-24;
+	}
+}
+
+footer a {
+	@apply text-white;
+}
+footer h6 {
+	color: var(--secondary);
+	@apply text-xs font-bold tracking-wider uppercase md:block;
+}
+
+footer a:hover {
+	color: var(--secondary);
+}
+
+footer {
+	ul,
+	ol {
+		@apply p-0;
+	}
+}
+
+footer li {
+	@apply pb-1 my-1;
+}
+
+.prefooter {
+	@apply relative;
+	bottom: calc(-21px + 1.5vh);
+	z-index: -1;
+}
+
+/* Landing page footer */
+
+footer.lp {
+	@apply -mt-24;
+}
+@screen sm {
+	footer.lp {
+		@apply -mt-64;
+	}
+}

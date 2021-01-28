@@ -1,0 +1,13 @@
+title: 'Social Media'
+data:
+  links:
+    -
+      social_media: Twitter
+      url: 'https://twitter.com/webslice'
+      type: new_set
+      enabled: true
+    -
+      social_media: RSS
+      url: /blog/feed/index.xml
+      type: new_set
+      enabled: true

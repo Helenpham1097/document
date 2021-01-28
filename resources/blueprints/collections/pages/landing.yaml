@@ -1,0 +1,76 @@
+order: 2
+title: Landing
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: description
+        field:
+          input_type: text
+          antlers: false
+          display: Description
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: header
+        field:
+          input_type: text
+          antlers: false
+          display: Header
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: content
+        field:
+          antlers: false
+          display: Content
+          type: textarea
+          icon: textarea
+          listable: hidden
+      -
+        handle: sign_up_prompt
+        field:
+          input_type: text
+          antlers: false
+          display: 'Sign Up Prompt'
+          type: text
+          icon: text
+          listable: hidden
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - pages
+          max_items: 1
+          listable: false
+          localizable: true
+      -
+        handle: template
+        field:
+          hide_partials: true
+          display: Template
+          type: template
+          icon: template
+          listable: hidden

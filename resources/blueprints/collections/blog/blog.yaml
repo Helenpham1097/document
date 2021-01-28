@@ -1,8 +1,17 @@
 title: Blog
 sections:
-  main:
-    display: Main
+  'Blog Content':
+    display: 'Blog Content'
     fields:
+      -
+        handle: description
+        field:
+          input_type: text
+          antlers: false
+          display: 'Description (For SEO and sharing on social media)'
+          type: text
+          icon: text
+          listable: hidden
       -
         handle: cover_image
         field:
@@ -15,22 +24,6 @@ sections:
           icon: assets
           listable: hidden
       -
-        handle: title
-        field:
-          type: text
-          required: true
-          validate:
-            - required
-      -
-        handle: subheader
-        field:
-          input_type: text
-          antlers: false
-          display: Subheader
-          type: text
-          icon: text
-          listable: hidden
-      -
         handle: author
         field:
           type: users
@@ -38,40 +31,41 @@ sections:
           default: current
           localizable: true
           max_items: 1
+          listable: true
+          mode: select
       -
-        handle: bard
+        handle: title
         field:
-          always_show_set_button: false
-          buttons:
-            - h2
-            - h3
-            - bold
-            - italic
-            - unorderedlist
-            - orderedlist
-            - removeformat
-            - quote
-            - anchor
-            - image
-            - table
-          save_html: false
-          toolbar_mode: fixed
-          link_noopener: false
-          link_noreferrer: false
-          target_blank: false
-          reading_time: false
-          fullscreen: true
-          allow_source: true
-          display: Bard
-          type: bard
-          icon: bard
+          type: text
+          required: true
+          validate:
+            - required
+          display: Title
+          listable: true
+          input_type: text
+          antlers: false
+      -
+        handle: subheader
+        field:
+          antlers: false
+          display: Subheader
+          type: textarea
+          icon: textarea
           listable: hidden
       -
-        handle: template
+        handle: content
         field:
-          type: template
-          display: Template
-          localizable: true
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          antlers: false
+          display: content
+          type: markdown
+          icon: markdown
+          listable: hidden
+          container: assets
   sidebar:
     display: Sidebar
     fields:
@@ -83,3 +77,29 @@ sections:
           localizable: true
           validate:
             - required
+          listable: true
+          generate: true
+      -
+        handle: date
+        field:
+          type: date
+          required: true
+          validate:
+            - required
+          listable: true
+          mode: single
+          time_enabled: false
+          time_required: false
+          earliest_date: '1900-01-01'
+          full_width: false
+          inline: false
+          columns: 1
+          rows: 1
+      -
+        handle: categories
+        field:
+          type: terms
+          taxonomies:
+            - categories
+          display: Categories
+          mode: select

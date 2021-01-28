@@ -1,0 +1,22 @@
+{{# Partial template for non-featured blog posts #}}
+
+<section class="container w-full px-5 mx-auto">
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-3">
+        {{ posts }}
+        <article>
+            <a href="{{ url }}">
+                <figure>
+                    {{ partial:blog/default_image }}
+                </figure>
+                <div class="flex items-start px-5 py-5">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <h3>{{ title }}</h3>
+                        <p class="leading-relaxed">{{ subheader }}</p>
+                        <span href="{{ url }}" class="inline-flex items-center cta"> Learn More </span>
+                    </div>
+                </div>
+            </a>
+        </article>
+        {{ /posts }}
+    </div>
+</section>

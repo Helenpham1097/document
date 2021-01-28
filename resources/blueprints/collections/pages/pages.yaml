@@ -1,3 +1,4 @@
+order: 1
 title: Pages
 sections:
   main:
@@ -10,6 +11,15 @@ sections:
           required: true
           validate:
             - required
+      -
+        handle: description
+        field:
+          input_type: text
+          antlers: false
+          display: Description
+          type: text
+          icon: text
+          listable: hidden
       -
         handle: subheader
         field:
@@ -47,3 +57,14 @@ sections:
           max_items: 1
           listable: false
           localizable: true
+      -
+        handle: stickied_post
+        field:
+          max_items: 1
+          mode: default
+          collections:
+            - blog
+          display: 'Stickied Post'
+          type: entries
+          icon: entries
+          listable: hidden

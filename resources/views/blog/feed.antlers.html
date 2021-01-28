@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+     xmlns:admin="http://webns.net/mvcb/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/">
+
+    <channel>
+        <link href="{{ site_information:url | sanitize }}{{ url }}" rel="self" type="application/rss+xml" xmlns="http://www.w3.org/2005/Atom"/>
+        <title>{{ site_information:name | sanitize }} Blog</title>
+        <link>{{ site_information:url | sanitize }}{{ url }}</link>
+        <dc:creator>{{ site_information:name | sanitize }}</dc:creator>
+        <admin:generatorAgent rdf:resource="{{ site_information:url | sanitize }}" />
+        <description>{{ latest_news:subheader | sanitize }}</description>
+        <lastBuildDate>{{ now format="r" }}</lastBuildDate>
+        <language>en-us</language>
+        <copyright>{{ company_information:copyright | sanitize }}</copyright>
+        <ttl>3600</ttl>
+
+        {{ collection:blog sort="date:asc"}}
+        <item>
+            <title>{{ title | sanitize }}</title>
+            <dc:creator>{{ author:name | sanitize }}</dc:creator>
+            <link>{{ site_information:url | sanitize }}{{ url | sanitize }}</link>
+            <guid>{{ site_information:url | sanitize }}{{ url | sanitize }}</guid>
+            <category>post</category>
+            <pubDate>{{ date format="r" }}</pubDate>
+            <description>{{ description | sanitize }}</description>
+        </item>
+        {{ /collection:blog }}
+    </channel>
+</rss>

@@ -1,0 +1,40 @@
+{{# Nav bar template to be used when the main website pages are added #}}
+
+<nav class="sticky top-0 z-10 bg-white shadow-lg">
+    <div class="container flex flex-col items-center sm:flex-row sm:justify-between">
+        <div class="flex flex-row items-center justify-between w-full sm:w-auto responsive">
+            <a id="logo" class="flex-grow-0 w-36 sm:w-48 logo md:p-0" href="#"></a>
+
+            <label for="menu-toggle" class="block lg:hidden pointer-cursor">
+                <svg class="text-gray-900 fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20">
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                </svg>
+            </label>
+        </div>
+
+        <!-- toggle to open the menu on mobile by ID -->
+        <input class="hidden" type="checkbox" id="menu-toggle" />
+
+        <div class="hidden lg:flex" id="menu">
+            <ul class="p-0 py-5 uppercase hiddens lg:flex lg:items-center sm:p-0">
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Blog</a></li>
+                <li class="relative inline-block text-center dropdown">
+                    <a class="inline-flex items-center px-4 py-2">
+                        <span class="mr-1">Dropdown</span>
+                        <svg class="w-4 h-4 transform fill-current sm:rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <ul class="hidden pt-0 pl-0 text-xs text-gray-600 transform bg-white sm:absolute sm:shadow-lg -inset-x-1/4 dropdown-menu w-max">
+                        <li><a class="px-4 py-4" href="#">One</a></li>
+                        <li><a class="px-4 py-4" href="#">Two</a></li>
+                        <li><a class="px-4 py-4" href="#">Three is the magic number</a></li>
+                    </ul>
+                </li>
+                <li><button class="w-full secondary-btn" href="#">Sign In</button></li>
+            </ul>
+        </div>
+    </div>
+</nav>
