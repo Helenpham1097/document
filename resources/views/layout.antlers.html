@@ -3,10 +3,10 @@
 <head>
     {{ partial:page_head}}
     <!-- Open Graph / Facebook -->
-    <meta property="og:url" content="{{ current_url }}"/>
+    <meta property="og:url" content="{{ site_information:url }}{{ url }}"/>
     <meta property="og:type" content="Website"/>
-    <meta property="og:title" content="{{ title }}"/>
-    <meta property="og:description" content="{{ description }}"/>
+    <meta property="og:title" content="{{ title | sanitize }}"/>
+    <meta property="og:description" content="{{ description | sanitize }}"/>
     <meta
         property="og:image"
         content="/img/Open-Graph.jpg
@@ -14,9 +14,9 @@
     />
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image"/>
-    <meta property="twitter:url" content="{{ current_url }}"/>
-    <meta property="twitter:title" content="{{ title }}"/>
-    <meta property="twitter:description" content="{{ description }}"/>
+    <meta property="twitter:url" content="{{ site_information:url }}{{ url }}"/>
+    <meta property="twitter:title" content="{{ title | sanitize }}"/>
+    <meta property="twitter:description" content="{{ description | sanitize }}"/>
     <meta property="twitter:image" content="/img/Open-Graph.jpg"/>
 </head>
     {{ template_content }}
