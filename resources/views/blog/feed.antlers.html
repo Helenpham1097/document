@@ -13,7 +13,7 @@
         <dc:creator>{{ site_information:name | sanitize }}</dc:creator>
         <admin:generatorAgent rdf:resource="{{ site_information:url | sanitize }}" />
         <description>{{ latest_news:subheader | sanitize }}</description>
-        <lastBuildDate>{{ collection:blog limit="1" }}{{ date format="r" }}{{ /collection:blog }}</lastBuildDate>
+        <lastBuildDate>{{ now format="r" }}</lastBuildDate>
         <language>en-us</language>
         <copyright>{{ company_information:copyright | sanitize }}</copyright>
         <ttl>3600</ttl>
