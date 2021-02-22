@@ -26,7 +26,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(Generator $ssg)
     {
         $ssg->after(function () {
-            rename(storage_path('app/static/blog/feed/index.html'),storage_path('app/static/blog/feed/index.xml'));
+//            rename(storage_path('app/static/blog/feed/index.html'),storage_path('app/static/blog/feed/index.xml'));
         });
     }
 }

@@ -60,9 +60,9 @@ return [
     |
     */
 
-    'urls' => [
-        'blog/feed',
-    ],
+//    'urls' => [
+//        'blog/feed',
+//    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -74,6 +74,8 @@ return [
     */
 
     'exclude' => [
+        '/blog',
+        '/blog/*',
         '/blog/categories/case-studies',
         '/blog/categories/culture',
         '/blog/categories/news',
