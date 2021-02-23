@@ -74,8 +74,6 @@ return [
     */
 
     'exclude' => [
-        '/blog',
-        '/blog/*',
         '/blog/categories/case-studies',
         '/blog/categories/culture',
         '/blog/categories/news',
