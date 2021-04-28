@@ -7,8 +7,8 @@
         {{ partial:blog/default_image }}
     </figure>
     <!-- Blog content -->
-    <article class="container items-start w-full px-5 py-8 mx-auto border-b border-gray-300 md:py-24 md:flex">
-        <div class="w-full mx-auto text-xl md:px-6">
+    <article class="container grid grid-cols-1 gap-4 max-w-screen-2xl lg:grid-cols-3 sm:py-24">
+        <div class="col-span-2 py-12 text-xl">
             <!--Title-->
             <h1>{{ title }}</h1>
             <p class="excerpt">{{ subheader }}</p>
@@ -19,7 +19,7 @@
             <!--/ Post Content-->
         </div>
         <!--Author-->
-        <div class="flex items-start w-full px-4 mx-auto mt-20 md:w-2/5 md:order-first sm:mt-0">
+        <div class="px-4 lg:flex lg:order-first sm:mt-0">
             {{ if author:avatar }}
             <img class="w-20 h-20 mr-4 rounded-full" src="{{ author:avatar }}" alt="Avatar of {{ author:name }}" />
             {{ else }}
