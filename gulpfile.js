@@ -16,10 +16,8 @@ const concat = require('gulp-concat');
 // BrowserSync
 function browserSync(done) {
     browsersync.init({
-        server: {
-            baseDir: "./public/"
-        },
-        port: 3000
+        port: 3000,
+        proxy: "webslice-website.test"
     });
     done();
 }
@@ -35,9 +33,9 @@ function styles() {
         .src("./resources/css/main.css")
         .pipe(plumber())
         .pipe(postcss())
-        .pipe(purgecss({ content: ['./resources/**/*.antlers.html', './content/**/*.md', './resources/utilities/markdown-elements.html'], defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [] }))
+        // .pipe(purgecss({ content: ['./resources/**/*.antlers.html', './content/**/*.md', './resources/utilities/markdown-elements.html'], defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [] }))
         .pipe(cleancss({ level: 2 }))
-        .pipe(gulp.dest("./public/css/"))
+        .pipe(gulp.dest("public/css"))
         .pipe(browsersync.stream());
 }
 
@@ -59,13 +57,13 @@ function images() {
         .pipe(newer("./public/img"))
         .pipe(
             imagemin([
-                imagemin.gifsicle({interlaced: true}),
-                imagemin.mozjpeg({quality: 75, progressive: true}),
-                imagemin.optipng({optimizationLevel: 5}),
+                imagemin.gifsicle({ interlaced: true }),
+                imagemin.mozjpeg({ quality: 75, progressive: true }),
+                imagemin.optipng({ optimizationLevel: 5 }),
                 imagemin.svgo({
                     plugins: [
-                        {removeViewBox: true},
-                        {cleanupIDs: false}
+                        { removeViewBox: true },
+                        { cleanupIDs: false }
                     ]
                 })
             ])
@@ -75,7 +73,7 @@ function images() {
 
 function html() {
     return gulp
-        .src("./public/**/*.html")
+        .src("./resources/views/**/*")
         .pipe(plumber())
         .pipe(browsersync.stream());
 }
@@ -86,10 +84,10 @@ function clean() {
 
 // Watch files
 function watchFiles() {
+    gulp.watch("./resources/views/**/*", html);
     gulp.watch("./resources/css/**/*", styles);
     gulp.watch("./resources/js/**/*", scripts);
     gulp.watch("./resources/img/**/*", images);
-    gulp.watch("./public/**/*.html", html);
     gulp.series(browserSyncReload);
 }
 
