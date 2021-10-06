@@ -9,15 +9,15 @@
 @import "./utilities/inputs.css";
 
 /* Components */
-@import "./components/header.css";
+/* @import "./components/header.css"; */
 @import "./components/footer.css";
 @import "./components/cover.css";
 
 @import "tailwindcss/utilities";
 
-/* * {
+* {
 	border: 1px solid rgba(100, 0, 0, 0.5);
-} */
+}
 
 /* Browser-Sync notification */
 #__bs_notify__ {

@@ -33,7 +33,7 @@ ol {
 	text-rendering: optimizeLegibility;
 }
 h1 {
-	@apply pb-4 text-4xl font-black leading-none text-purple-500 md:pb-8 md:text-6xl gradient-purple-to-teal;
+	@apply text-4xl font-black leading-none text-purple-500 md:text-6xl gradient-purple-to-teal;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-color: red;

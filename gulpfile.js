@@ -34,7 +34,7 @@ function styles() {
         .pipe(plumber())
         .pipe(postcss())
         // .pipe(purgecss({ content: ['./resources/**/*.antlers.html', './content/**/*.md', './resources/utilities/markdown-elements.html'], defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [] }))
-        .pipe(cleancss({ level: 2 }))
+        // .pipe(cleancss({ level: 2 }))
         .pipe(gulp.dest("public/css"))
         .pipe(browsersync.stream());
 }
