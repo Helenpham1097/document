@@ -1,0 +1,33 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: cover_photo
+        field:
+          mode: grid
+          restrict: false
+          allow_uploads: true
+          max_files: 1
+          display: 'Cover photo'
+          type: assets
+          icon: assets
+          listable: hidden
+          validate:
+            - image
+            - 'dimensions:max_width=2000,max_height=2000'
+      -
+        handle: avatar
+        field:
+          mode: grid
+          restrict: false
+          allow_uploads: true
+          max_files: 1
+          display: Avatar
+          type: assets
+          icon: assets
+          listable: hidden
+          validate:
+            - image
+            - 'dimensions:max_width=2000,max_height=2000'
+          

@@ -1,0 +1,34 @@
+{{# Price-related feature template #}}
+<section class="container px-4 mx-auto space-y-8 sm:px-8 lg:px-16 xl:px-20 md:space-y-16 max-w-7xl">
+	{{ if items | count >= 4 }}
+		<div class="grid max-w-5xl gap-8 mx-auto md:grid-cols-2">
+	{{ elseif items | count >= 3 }}
+		<div class="grid justify-between gap-8 md:grid-cols-3 md:flex-row ">
+	{{ elseif items | count >= 2 }}
+		<div class="grid max-w-5xl gap-8 mx-auto md:grid-cols-2 md:flex-row ">
+	{{ /if }}
+	{{ if items | count === 1 }} 
+		<div class="grid items-center grid-cols-1 gap-8 md:flex-row ">
+	{{ /if }}
+	{{ items }}
+		<div class="w-full max-w-lg mx-auto space-y-4">
+			<img class="inset-0 flex items-center justify-center bg-white border border-purple-300" src="https://myhost.nz/img/containers/assets/domain-search@2x-1631243817.png/db2573e08c18a0095fcda629a0993229.webp" alt="">
+			<div class="flex space-x-4">
+				<svg class="flex-none w-4 h-4 mt-2 text-purple-500" viewBox="0 0 32 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M26.7463 25.8H0L5.25373 0.200048H32L26.7463 25.8Z" fill="currentColor"></path></svg>
+				<div class="flex flex-col">
+					{{ if features_columns_title }}
+						<h3 class="text-3xl font-black leading-tight tracking-wide text-black sm:text-3xl josefin">
+							{{ features_columns_title | strip_tags:p }}
+						</h3>
+					{{ /if }}
+					{{ if features_columns_list }}
+						<p>
+							{{ features_columns_list | strip_tags:p }}
+						</p>
+					{{ /if }}
+					<span href="#" class="inline-flex items-center cta"> Learn More </span>
+				</div>
+			</div>
+		</div>
+	{{ /items}}
+</section>

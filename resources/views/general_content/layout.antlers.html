@@ -2,8 +2,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js" integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <body class="">
     {{ partial:global/nav }}
-    {{ partial:home/hero_home }}
-    {{ partial:global/section-title }}
-    <div class="h-96"></div>
+
+    {{ top_section }} {{ partial:{{ template }} }} {{ /top_section }}
+    <div class="general-content">
+    {{ sections }} {{ partial:{{ template }} }} {{ /sections }}
+    </div>
+    {{ button_section }} {{ partial:{{ template }} }} {{ /button_section }}
+    
     {{ partial:global/footer }}
 </body>

@@ -1,42 +1,67 @@
-order: 1
-title: General content
+order: 2
+title: 'General Content'
 sections:
   main:
     display: Main
     fields:
       -
-        handle: title
-        field:
-          type: text
-          required: true
-          validate:
-            - required
-      -
-        handle: description
-        field:
-          input_type: text
-          antlers: false
-          display: Description
-          type: text
-          icon: text
-          listable: hidden
-      -
-        handle: subheader
-        field:
-          input_type: text
-          antlers: false
-          display: Subheader
-          type: text
-          icon: text
-          listable: hidden
-      -
         handle: template
         field:
-          hide_partials: true
-          display: Template
-          type: template
-          icon: template
+          display: template
+          type: hidden
+          icon: hidden
           listable: hidden
+          default: general_content/index
+      -
+        handle: top_section
+        field:
+          collapse: true
+          sets:
+            hero_general_content:
+              display: 'Hero content'
+              fields:
+                -
+                  import: hero_home
+          display: 'Top section'
+          type: replicator
+          icon: replicator
+          listable: hidden
+          max_sets: 2
+          default:
+            -
+              type: hero_general_content
+              enabled: true
+              hero_general_content_title: 'General Content Title'
+              hero_general_content_textarea: 'Serverless is the future of hosting. We’re building a brand new serverless platform from the ground up for your existing websites and applications so you get all the serverless benefits without the pain.'
+              hero_general_content_image: placeholder-image.jpg
+      -
+        handle: sections
+        field:
+          collapse: true
+          sets:
+            center_title:
+              display: 'Center title'
+              fields:
+                -
+                  import: center_title
+            features_columns_item:
+              display: 'Pricing Features'
+              fields:
+                -
+                  import: features_columns_section
+          display: Sections
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions: 'Customisable sections, you can reorder them and add new sections from the + symbol.'
+          default:
+            -
+              text_content:
+                -
+                  type: markdown
+                  enabled: true
+              type: text_content
+              enabled: true
   sidebar:
     display: Sidebar
     fields:
@@ -49,6 +74,28 @@ sections:
           validate:
             - required
       -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+          display: 'Page title'
+          default: 'General Content Title'
+          instructions: 'This is the title that will be displayed in the browser bar and will help you to identify it.'
+          listable: hidden
+          input_type: text
+          antlers: false
+      -
+        handle: page_description
+        field:
+          antlers: false
+          display: 'Page Description'
+          type: textarea
+          icon: textarea
+          instructions: 'Description shown in the main navigation'
+          listable: hidden
+      -
         handle: parent
         field:
           type: entries
@@ -57,14 +104,25 @@ sections:
           max_items: 1
           listable: false
           localizable: true
+  meta:
+    display: Meta
+    fields:
       -
-        handle: stickied_post
+        handle: meta_title
         field:
-          max_items: 1
-          mode: default
-          collections:
-            - blog
-          display: 'Stickied Post'
-          type: entries
-          icon: entries
+          input_type: text
+          character_limit: 60
+          antlers: false
+          display: 'Meta title'
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: meta_description
+        field:
+          character_limit: '160'
+          antlers: false
+          display: 'Meta description'
+          type: textarea
+          icon: textarea
           listable: hidden

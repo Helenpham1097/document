@@ -15,9 +15,9 @@
 
 @import "tailwindcss/utilities";
 
-* {
+/* * {
 	border: 1px solid rgba(100, 0, 0, 0.5);
-}
+} */
 
 /* Browser-Sync notification */
 #__bs_notify__ {

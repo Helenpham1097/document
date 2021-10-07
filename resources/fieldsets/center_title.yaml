@@ -1,0 +1,57 @@
+title: 'Title centred'
+fields:
+  -
+    handle: template
+    field:
+      display: template
+      type: hidden
+      icon: hidden
+      listable: hidden
+      default: /global/section_title
+  -
+    handle: center_title_pre_title
+    field:
+      input_type: text
+      antlers: false
+      display: 'Pre Title'
+      type: text
+      icon: text
+      listable: hidden
+      instructions: 'Smaller title that appears above this section title'
+  -
+    handle: center_title_title
+    field:
+      input_type: text
+      character_limit: 200
+      antlers: false
+      display: 'Section title'
+      type: text
+      icon: text
+      listable: hidden
+      instructions: 'Secondary title centred'
+  -
+    handle: center_title_textarea
+    field:
+      character_limit: '400'
+      antlers: false
+      display: 'Text area'
+      always_show_set_button: false
+      buttons:
+        - bold
+        - italic
+        - removeformat
+        - anchor
+      save_html: false
+      toolbar_mode: fixed
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      reading_time: false
+      fullscreen: false
+      allow_source: true
+      enable_input_rules: false
+      enable_paste_rules: true
+      type: bard
+      icon: textarea
+      listable: hidden
+      instructions: 'Text area to complement the secondary title'

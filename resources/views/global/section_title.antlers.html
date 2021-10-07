@@ -1,0 +1,28 @@
+{{# Title centred to start a section #}}
+<div class="container title-section primary">   
+    {{ if center_title_pre_title }}
+        <h3>{{center_title_pre_title}}</h3>
+    {{ /if }}
+    {{ if center_title_title }}
+        <h2>{{center_title_title}}</h2>
+    {{ /if }}
+    {{ if center_title_textarea }}
+        <p>
+            {{center_title_textarea | strip_tags:p }}
+        </p>
+    {{ /if }}
+</div>
+
+<div class="container title-section secondary">   
+    {{ if center_title_pre_title }}
+        <h3>{{center_title_pre_title}}</h3>
+    {{ /if }}
+    {{ if center_title_title }}
+        <h2>{{center_title_title}}</h2>
+    {{ /if }}
+    {{ if center_title_textarea }}
+        <p>
+            {{center_title_textarea | strip_tags:p }}
+        </p>
+    {{ /if }}
+</div>
