@@ -48,7 +48,12 @@ sections:
               display: 'Pricing Features'
               fields:
                 -
-                  import: features_columns_section
+                  import: features_columns
+            highlight:
+              display: 'Feature highlight'
+              fields:
+                -
+                  import: feature_highlight
           display: Sections
           type: replicator
           icon: replicator

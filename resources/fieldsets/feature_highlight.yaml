@@ -1,0 +1,130 @@
+title: 'Feature Highlight'
+fields:
+  -
+    handle: template
+    field:
+      display: template
+      type: hidden
+      icon: hidden
+      listable: hidden
+      default: /general_content/feature_highlight
+  -
+    handle: rows
+    field:
+      collapse: false
+      sets:
+        feature_highlight-item:
+          display: Feature
+          fields:
+            -
+              handle: feature_highlight_title
+              field:
+                input_type: text
+                antlers: false
+                display: Title
+                type: text
+                icon: text
+                listable: hidden
+            -
+              handle: feature_highlight_textarea
+              field:
+                antlers: false
+                display: Textarea
+                always_show_set_button: false
+                buttons:
+                  - bold
+                  - italic
+                  - removeformat
+                  - anchor
+                  - table
+                save_html: false
+                toolbar_mode: fixed
+                link_noopener: false
+                link_noreferrer: false
+                target_blank: false
+                reading_time: false
+                fullscreen: false
+                allow_source: true
+                enable_input_rules: false
+                enable_paste_rules: true
+                type: bard
+                icon: textarea
+                listable: hidden
+            -
+              handle: feature_highlight_link
+              field:
+                display: Link
+                type: link
+                icon: link
+                width: 50
+                listable: hidden
+            -
+              handle: feature_highlight_text_link
+              field:
+                input_type: text
+                antlers: false
+                display: 'Text link'
+                type: text
+                icon: text
+                listable: hidden
+                width: 50
+            -
+              handle: feature_highlight_image
+              field:
+                mode: grid
+                restrict: false
+                allow_uploads: true
+                display: Image
+                type: assets
+                icon: assets
+                listable: hidden
+                max_files: 1
+                # validate:
+                #   - image
+                #   - 'dimensions:max_width=2000,max_height=2000'
+            -
+              handle: feature_highlight_textcaption
+              field:
+                input_type: text
+                antlers: false
+                display: TextCaption
+                always_show_set_button: false
+                buttons:
+                  - bold
+                  - italic
+                  - removeformat
+                  - anchor
+                save_html: false
+                toolbar_mode: fixed
+                link_noopener: false
+                link_noreferrer: false
+                target_blank: false
+                reading_time: false
+                fullscreen: false
+                allow_source: true
+                enable_input_rules: false
+                enable_paste_rules: true
+                type: bard
+                icon: text
+                listable: hidden
+                character_limit: 100
+      display: Rows
+      type: replicator
+      icon: replicator
+      listable: hidden
+  -
+    handle: reverse_alignment
+    field:
+      display: 'Reverse Alignment'
+      type: toggle
+      icon: toggle
+      listable: hidden
+      width: 25
+  -
+    handle: toggle_alignment
+    field:
+      display: 'Toggle alignment'
+      type: toggle
+      icon: toggle
+      listable: hidden
+      width: 25
