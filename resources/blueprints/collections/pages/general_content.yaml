@@ -39,11 +39,11 @@ sections:
         field:
           collapse: true
           sets:
-            center_title:
+            section_title:
               display: 'Center title'
               fields:
                 -
-                  import: center_title
+                  import: section_title
             features_columns_item:
               display: 'Pricing Features'
               fields:

@@ -55,3 +55,11 @@ fields:
       icon: textarea
       listable: hidden
       instructions: 'Text area to complement the secondary title'
+  -
+    handle: toggle_color
+    field:
+      display: 'Toggle Color'
+      type: toggle
+      icon: toggle
+      listable: hidden
+      width: 25

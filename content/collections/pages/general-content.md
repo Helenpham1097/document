@@ -1,7 +1,7 @@
 ---
 title: 'General content'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1633647212
+updated_at: 1633663160
 blueprint: general_content
 description: Lorem
 template: general_content/layout
@@ -18,8 +18,10 @@ sections:
           -
             type: text
             text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit optio molestias expedita laboriosam inventore illo amet velit ipsa ducimus blanditiis deleniti distinctio, consequatur maxime tenetur nemo delectus nulla. Aliquid, nisi'
-    type: center_title
+    type: section_title
     enabled: false
+    toggle_alignment: true
+    toggle_color: true
   -
     template: /general_content/features_columns
     items:
@@ -140,7 +142,7 @@ sections:
     reverse_alignment: false
     toggle_alignment: false
     type: highlight
-    enabled: true
+    enabled: false
   -
     template: /general_content/feature_highlight
     rows:
@@ -193,7 +195,7 @@ sections:
 top_section:
   -
     type: hero_general_content
-    enabled: false
+    enabled: true
     hero_general_content_title: 'General Content Title'
     hero_general_content_textarea: 'Serverless is the future of hosting. We’re building a brand new serverless platform from the ground up for your existing websites and applications so you get all the serverless benefits without the pain.'
     hero_general_content_image: placeholder-image.jpg
@@ -220,9 +222,9 @@ top_section:
             type: text
             text: ', more reliable and cheaper than before.'
     hero_home_image: default-optimized.jpg
-    hero_home_primary_text: null
-    hero_home_primary: null
-    hero_home_secondary_text: null
-    hero_home_secondary: null
+    hero_home_primary_text: cta
+    hero_home_primary: '#'
+    hero_home_secondary_text: cta
+    hero_home_secondary: '#'
 id: 26513dc7-59f7-4673-815e-7d9ace16248b
 ---
