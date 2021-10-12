@@ -1,7 +1,7 @@
 ---
 title: 'General content'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1633663160
+updated_at: 1634000270
 blueprint: general_content
 description: Lorem
 template: general_content/layout
@@ -19,7 +19,7 @@ sections:
             type: text
             text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit optio molestias expedita laboriosam inventore illo amet velit ipsa ducimus blanditiis deleniti distinctio, consequatur maxime tenetur nemo delectus nulla. Aliquid, nisi'
     type: section_title
-    enabled: false
+    enabled: true
     toggle_alignment: true
     toggle_color: true
   -
@@ -39,7 +39,7 @@ sections:
         type: column
         enabled: true
     type: features_columns_item
-    enabled: false
+    enabled: true
   -
     template: /general_content/feature_highlight
     rows:
@@ -142,7 +142,7 @@ sections:
     reverse_alignment: false
     toggle_alignment: false
     type: highlight
-    enabled: false
+    enabled: true
   -
     template: /general_content/feature_highlight
     rows:
@@ -221,7 +221,15 @@ top_section:
           -
             type: text
             text: ', more reliable and cheaper than before.'
-    hero_home_image: default-optimized.jpg
+      -
+        type: paragraph
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: '⚡Get your free $5 credit upon signing up today!'
+    hero_home_image: cube.png
     hero_home_primary_text: cta
     hero_home_primary: '#'
     hero_home_secondary_text: cta

@@ -2,7 +2,7 @@
 
 <section class="container pt-24">
     <div class="max-w-2xl px-8 mx-auto text-center">
-        <h2 class="tracking-wider uppercase">{{ latest_news:header }}</h2>
+        <h2 class="tracking-wider">{{ latest_news:header }}</h2>
         <hr />
         <p class="mt-4">{{ latest_news:subheader }}</p>
     </div>
@@ -17,7 +17,7 @@
                 sort="date:desc"
             }}
 
-            <article>
+            <div class="related-post">
                 <a href="{{ url }}">
                     <figure>
                         {{ partial:blog/default_image }}
@@ -37,7 +37,7 @@
                         </div>
                     </div>
                 </a>
-            </article>
+            </div>
 
             {{ /collection:blog }}
 

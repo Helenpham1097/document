@@ -5,42 +5,25 @@
 	background: var(--primary);
 }
 
-article p a {
-	color: var(--primary);
-	&:hover {
-		@apply underline;
-		/* text-decoration: underline solid; */
-	}
-}
-
-article p img {
-	@apply mx-auto text-center justify-self-center;
-}
-
 h2,
 h3,
 h4,
 h5,
 h6 {
-	@apply mb-2 text-black md:mb-4;
-	text-rendering: optimizeLegibility;
+	@apply text-black ;
+	/* text-rendering: optimizeLegibility; */
 }
 
 p,
 ul,
 ol {
-	@apply text-base antialiased md:text-lg;
+	@apply text-base antialiased md:text-xl;
 	text-rendering: optimizeLegibility;
 }
 h1 {
-	@apply text-4xl font-black leading-none text-purple-500 md:text-6xl gradient-purple-to-teal;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-color: red;
-	&::selection {
-		-webkit-background-clip: initial;
-		-webkit-text-fill-color: initial;
-	}
+	@apply py-1 text-4xl font-black leading-none text-transparent bg-clip-text md:text-6xl gradient-purple-to-teal;
+	/* -webkit-background-clip: text; */
+	/* -webkit-text-fill-color: transparent; */
 }
 h2 {
 	@apply text-4xl font-black md:text-5xl;
@@ -57,14 +40,6 @@ h5 {
 
 h6 {
 	@apply text-lg;
-}
-.excerpt {
-	@apply mb-8 text-2xl;
-}
-@screen sm {
-	.excerpt {
-		@apply text-3xl leading-10;
-	}
 }
 p {
 	@apply mb-4 leading-relaxed md:mb-8;
@@ -103,23 +78,6 @@ ul li::before {
 }
 ol li::before {
 	@apply font-bold text-primary;
-}
-
-/* Need review - Not written in TW */
-
-blockquote {
-	@apply relative block p-12 pl-12 my-12 italic bg-white shadow-lg;
-	border: 1px solid var(--secondary);
-	border-width: 1px 1px 1px 8px;
-}
-blockquote::before {
-	@apply absolute text-4xl font-black text-gray-400 top-2 left-2;
-	content: "\201C"; /*Unicode for Left Double Quote*/
-	font-family: Georgia, serif;
-}
-blockquote p {
-    @apply text-xl font-medium;
-    margin: 0;
 }
 
 pre {
@@ -224,7 +182,7 @@ figcaption {
 			}
 		}
 		p {
-			@apply relative mx-auto text-base sm:text-xl md:max-w-xl;
+			@apply relative mx-auto md:max-w-3xl;
 		}
 	}
 	&.primary {

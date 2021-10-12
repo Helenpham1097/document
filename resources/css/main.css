@@ -5,6 +5,7 @@
 @import "./base/global.css";
 @import "./utilities/animation.css";
 @import "./base/typography.css";
+@import "./base/article.css";
 @import "./utilities/button.css";
 @import "./utilities/inputs.css";
 
