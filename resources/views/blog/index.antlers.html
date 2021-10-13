@@ -2,7 +2,7 @@
 
 <body>
     {{ partial:blog/nav }}
-    <div class="absolute top-0 w-full lines"></div>
+    <div class="absolute w-full my-12 sm:my-0 h-1/2 sm:h-2/3 light-purple"></div>
     {{# Check for Stickied post  #}}
     {{ if stickied_post && (get:page == "1" || !get:page) }}
 
@@ -29,11 +29,17 @@
         {{ /collection:blog }}
 
         {{# Non-featured posts. To enable pagination set true and change limit to 6 #}}
-        {{ collection:blog limit="0" paginate="false" as="posts" sort="date:desc" offset="1" }}
-            {{ partial:blog/post }}
-            <!-- Paginator -->
-            {{ partial:blog/paginate }}
-        {{ /collection:blog }}
+        <section class="container pt-24">
+            <div class="w-full mx-auto">
+                <div class="grid grid-cols-1 gap-8 sm:grid-cols-3 related-post">
+                    {{ collection:blog limit="0" paginate="false" sort="date:desc" offset="1" }}
+                    {{ partial:blog/post }}
+                    <!-- Paginator -->
+                    {{ /collection:blog }}
+                </div>
+                {{ partial:blog/paginate }}
+            </div>
+        </section>
 
         {{ partial:blog/footer}}
 

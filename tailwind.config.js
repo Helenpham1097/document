@@ -55,7 +55,7 @@ module.exports = {
                 DEFAULT: {
                     css: {
                         h2: {
-                            fontWeight: '900',
+                            fontWeight: '700',
                             color: theme('colors.gray.900'),
                         },
                         a: {
