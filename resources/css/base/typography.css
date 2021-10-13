@@ -44,45 +44,29 @@ h6 {
 p {
 	@apply mb-4 leading-relaxed md:mb-8;
 }
-ul,
-ol {
-	@apply pb-6 pl-6;
-	li:last-child {
-		@apply pb-0;
-	}
-	li {
-		@apply pb-0;
-		p {
-			@apply mb-0;
-		}
-		ul, ol {
-			@apply pb-0;
-		}
-	}
-}
-ol {
+/* ol {
 	@apply list-decimal;
-}
+} */
 /* ul,
 ol {
 	@apply pt-4;
 } */
-ul li::before {
+/* ul li::before {
 	@apply my-0 mr-2 -ml-6 text-sm text-primary;
 	content: "■";
-}
-@screen md {
+} */
+/* @screen md {
 	ul li::before {
 		@apply text-2xl;
 	}
-}
-ol li::before {
+} */
+/* ol li::before {
 	@apply font-bold text-primary;
 }
 
 pre {
 	@apply overflow-x-auto text-sm leading-snug text-white bg-black bg-opacity-75;
-}
+} */
 
 @screen md {
 	pre {
