@@ -1,10 +1,16 @@
 
-article p a {
-	color: var(--primary);
-	&:hover {
-		@apply underline;
-		/* text-decoration: underline solid; */
-	}
+.prose ol > li::before {
+	@apply text-purple-500;
+}
+.prose ul > li::before {
+	@apply bg-purple-500 rounded-none;
+	
+}
+::marker {
+	@apply hidden;
+}
+.prose ul > li::marker, .prose ol > li::marker {
+	@apply hidden
 }
 
 article p img {
@@ -21,144 +27,27 @@ article p img {
 }
 
 
-article, .markdown {
-	h1, h2, h3, h4, h5, h6 {
-		@apply mx-auto my-12;
-		/* font-family: "Inter", sans-serif; */
-	}
-	p, li, ol {
-		@apply text-xl leading-normal; 
-	}
+.prose {
 
-	p, ul, ol, dl, td {
-		@apply mb-6;
+	ul > li {
+		@apply pl-0;
 	}
-
-	ol, ul {
-		@apply pl-6;
-	}
-
-	ol li {
-		@apply list-decimal;
-	}
-
-	ol ol, ul ul, ul ol, ol ul {
-		@apply pl-6 mb-2;
-	}
-
-	dl dt {
-		@apply float-left mt-2 overflow-hidden text-right clear-left overflow-ellipsis whitespace-nowrap;
-	}
-
-	dl dd {
-		margin-left: 200px;
-		margin-bottom: 1em
-	}
-
-	li {
-		@apply mb-4 list-none ;
-	}
-
-	li li, li > p {
-		@apply m-0 ;
-	}
-
-	hr {
-		@apply block p-0 my-12 border-t border-purple-600 border-solid;
-	}
-
-	strong {
-		@apply relative font-bold
-	}
-
-	em {
-		@apply italic;
-	} 
 
 	blockquote {
-		@apply px-6 py-6 text-lg bg-purple-200 bg-opacity-50 border-l-4 border-purple-400 sm:px-12;
-		margin: 0 0 20px;
-		p:last-child, ul:last-child, ol:last-child {
+		@apply relative p-8 text-sm not-italic bg-purple-100 bg-opacity-50 border-2 border-l-8 border-purple-400 shadow-lg;
+		*:last-child {
 			margin-bottom: 0;
 		}
 	}
 
-	blockquote {
-		@apply relative block p-12 pl-12 my-12 italic bg-white shadow-lg;
-		border: 1px solid var(--secondary);
-		border-width: 1px 1px 1px 8px;
-	}
 	blockquote::before {
-		@apply absolute text-4xl font-black text-gray-400 top-2 left-2;
+		@apply absolute inset-0 block text-6xl font-black text-purple-300 top-2 left-2;
 		content: "\201C"; /*Unicode for Left Double Quote*/
 		font-family: Georgia, serif;
 	}
-	blockquote p {
-		@apply text-xl font-medium;
-		margin: 0;
-	}
 
-	mark {
-		@apply bg-purple-500;
-	}
-
-	code, tt {
-		@apply px-1 py-2 text-sm whitespace-pre-wrap bg-purple-100 border-2 border-purple-200 rounded-md;
-	}
-
-	pre {
-		@apply box-border w-full p-6 m-0 mb-6 overflow-auto text-base text-red-500 whitespace-pre bg-purple-100 border-2 border-purple-300 rounded-md;
-	}
-
-	pre code, tt {
-		font-size: inherit;
-		white-space: -moz-pre-wrap;
-		white-space: pre-wrap;
-		background: transparent;
-		border: none;
-		padding: 0;
-	}
-
-	kbd {
-		@apply inline-block text-base bg-gray-200 rounded-md shadow ;
-		/* display: inline-block; */
-		margin-bottom: 0.4em;
-		padding: 1px 8px;
-		border: #CCC 1px solid;
-		color: #666;
-		text-shadow: #FFF 0 1px 0;
-		font-size: 0.9em;
-		font-weight: 700;
-		background: red;
-		border-radius: 4px;
-		box-shadow:
-			0 1px 0 rgba(0, 0, 0, 0.2),
-			0 1px 0 0 #fff inset;
-	}
-
-	table {
-		@apply box-border w-full my-8 bg-transparent max-w-max;
-	}
-
-	table th, table td {
-		@apply p-4 font-light border-t-2 border-purple-300;
-	}
-
-	table th { 
-		@apply text-gray-900
-	 }
-
-	table caption + thead tr:first-child th,
-	table caption + thead tr:first-child td,
-	table colgroup + thead tr:first-child th,
-	table colgroup + thead tr:first-child td,
-	table thead:first-child tr:first-child th,
-	table thead:first-child tr:first-child td {
-		border-top: 0;
-	}
-
-	table tbody + tbody {
-		border-top: #EFEFEF 2px solid;
+	table th {
+		@apply text-purple-500;
 	}
 
 	table table table {
@@ -169,61 +58,19 @@ article, .markdown {
 	table tbody > tr:nth-child(odd) > th {
 		@apply bg-purple-100;
 	}
-
-	figure {
-		position: relative;
-		width: 100%;
-		/* padding: 10px; */
-		/* background: #eee; */
-		/* margin-bottom: 3em; */
+	tbody td:first-child {
+		@apply pl-4;
 	}
-
-	figure.highlight{
-		padding: 0;
+	tbody td:last-child {
+		@apply pr-4;
 	}
-
-	figure img{
-		width: 100% ;
-		padding: 0px;
-	}
-
-	figcaption {
-		position: absolute;
-		top: 10px;
-		left: -110px;
-		font-size: 1.2rem;
-		font-style: italic;
-		color: #666;
-		width: 100px;
-		border-right: 1px solid #bbb;
-		padding-bottom: 50px;
-		line-height: 1.4rem;
-		padding-right: 2px;
-		text-align: right;
-	}
-
-	img, img:not(* < aside) {
-		@apply w-full py-6;
-	}
-
-	video{
-		width: 100%;
-		margin-bottom: 40px;
+	pre {
+		@apply bg-purple-900;
 	}
 }
-
-/* Temporary style */
-article section, article div, article section:not(:first-child) {
-	@apply py-0;
-	h2 {
-		@apply my-8;
-	}
-}
-
-
 
 /* Article hover animation */
-article, .related-post {
+.related-post {
 	@apply transition duration-500 ease-in-out transform scale-100 translate-x-0;
 	figure > img {
 		@apply transition duration-500 ease-in-out transform shadow-lg;
