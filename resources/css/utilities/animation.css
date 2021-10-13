@@ -16,7 +16,7 @@
 	}
 }
 /* Link underline animation */
-article p a,
+article p a, .prose p a,
 .cta {
 	@apply inline-flex items-center;
 	text-decoration: underline solid transparent;
@@ -97,8 +97,6 @@ article p a,
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
-
-/* @import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"; */
 
 /* ani 1 */
 @-webkit-keyframes anim-1 {
