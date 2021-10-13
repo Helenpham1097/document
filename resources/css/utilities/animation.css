@@ -16,8 +16,7 @@
 	}
 }
 /* Link underline animation */
-article p a, .prose p a,
-.cta {
+.prose p a, .prose a, .cta {
 	@apply inline-flex items-center;
 	text-decoration: underline solid transparent;
 	transition: text-decoration 1s ease;
