@@ -1,56 +1,58 @@
 {{# Partial to show the hero section of the homepage #}}
-<div class="absolute top-0 w-full lines"></div>
-<section class="relative">
-    <!-- container -->
-    <div class="container relative px-4 mx-auto sm:px-8 lg:px-16 xl:px-20">
-        <!-- hero wrapper -->
-        <div class="grid grid-cols-1 pt-10 space-y-6 md:space-y-0 md:gap-48 md:grid-cols-2">
+<!-- <div class="absolute top-0 w-full lines"></div> -->
+<!-- <div class="absolute w-full my-12 sm:my-0 h-1/2 sm:h-2/3 light-purple"></div> -->
+<div class="slice-bg"></div>
 
-            <!-- hero text -->
-            <div class="hero-text ">
-                <div class="space-y-2 lg:space-y-4">
-                    <h1 class="leading-tight tracking-wide sm:text-7xl ">
-                            {{ hero_home_title }}
-                    </h1>
-                    <div class="font-normal text-gray-800">
-                        {{ hero_home_description }}
-                    </div>
-                    <!-- Form -->
-                    <div class="flex flex-col justify-between mt-8 space-y-4 text-center md:flex-row md:space-y-0 md:space-x-4 reveal-4">
-                        <input type="text" placeholder="your@email.com" id="email_address" class="" />
-                        <button class="flex items-center justify-center flex-none ml-0 space-x-2 primary-btn">
-                            <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
-                                <path d="M2.003 5.884 10 9.882l7.997-3.998A2 2 0 0 0 16 4H4a2 2 0 0 0-1.997 1.884z"/>
-                                <path d="m18 8.118-8 4-8-4V14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8.118z"/>
-                            </svg>
-                            <span>Sign up</span>
-                        </button>                    
-                    </div>
-                    <!-- /Form -->
-                    {{ if hero_home_primary or hero_home_secondary }}
-                        <div class="flex flex-col space-y-5 md:space-y-0 md:space-x-5 md:flex-row md:justify-start">
+{{# Partial template for the featured blog post on blog index page #}}
 
-                                {{ if hero_home_primary }}
-                                <a href="{{ hero_home_primary }}" class="flex items-center justify-center w-full md:mt-0 md:w-auto primary-btn">
-                                    <span>{{ hero_home_primary_text }}</span>
-                                </a>       
-                                {{ /if }}
-                                {{ if hero_home_secondary }}
-                                <a href="{{ hero_home_secondary }}" class="flex items-center justify-center w-full md:mt-0 md:w-auto secondary-btn">
-                                    <span>{{ hero_home_secondary_text }}</span>
-                                </a>       
-                                {{ /if }}
-
-                        </div>
-                    {{ /if }}
-
+<section class="container mx-auto my-6 sm:my-24">
+    <div class="flex flex-col items-center justify-center py-4 space-x-0 space-y-8 space-y-reverse sm:space-y-0 sm:space-x-8 md:flex-row md:py-10">
+        <div class="w-full pr-4 space-y-6 md:w-1/2">
+            {{ if categories }}
+                <div class="flex-row items-center hidden space-x-2 sm:flex ">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-500 " fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5a1.99 1.99 0 011.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
+                    <div class="text-purple-500">{{ categories  limit="1" }}  {{ title }} {{ /categories }}</div>
                 </div>
-            </div>
+            {{ /if }}
+            <div class="flex flex-col items-center space-y-6 lg:flex-grow md:items-start">
+                <h1 class="">{{ hero_home_title }}</h1>
+                <div class="excerpt"> {{ hero_home_description }}</div>
+                <!-- Form -->
+                <div class="flex flex-col justify-between w-full max-w-lg space-y-4 text-center md:flex-row md:space-y-0 md:space-x-4 reveal-4">
+                    <input type="text" placeholder="your@email.com" id="email_address" class="" />
+                    <button class="flex items-center justify-center flex-none ml-0 space-x-2 primary-btn">
+                        <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M2.003 5.884 10 9.882l7.997-3.998A2 2 0 0 0 16 4H4a2 2 0 0 0-1.997 1.884z"/>
+                            <path d="m18 8.118-8 4-8-4V14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8.118z"/>
+                        </svg>
+                        <span>Sign up</span>
+                    </button>                    
+                </div>
+                <!-- /Form -->
+                {{ if hero_home_primary or hero_home_secondary }}
+                    <div class="flex flex-col space-y-5 md:space-y-0 md:space-x-5 md:flex-row md:justify-start">
 
-            <!-- hero image -->
-            <div class="flex items-center order-first sm:order-last ">
-                <img class="object-cover w-full bg-cover" src="{{ glide:hero_home_image dpr='2' fm='webp' }}" alt="" />
+                            {{ if hero_home_primary }}
+                            <a href="{{ hero_home_primary }}" class="flex items-center justify-center w-full md:mt-0 md:w-auto primary-btn">
+                                <span>{{ hero_home_primary_text }}</span>
+                            </a>       
+                            {{ /if }}
+                            {{ if hero_home_secondary }}
+                            <a href="{{ hero_home_secondary }}" class="flex items-center justify-center w-full md:mt-0 md:w-auto secondary-btn">
+                                <span>{{ hero_home_secondary_text }}</span>
+                            </a>       
+                            {{ /if }}
+
+                    </div>
+                {{ /if }}
             </div>
         </div>
-    </div> 
+        <div class="order-first md:w-1/2 sm:order-last ">
+            <div class="relative illustration-element">
+
+                <img class="object-cover w-full bg-cover rounded-lg left" src="{{ glide:hero_home_image dpr='2' fm='webp' }}" alt="" />
+
+            </div>
+        </div>
+    </div>
 </section>

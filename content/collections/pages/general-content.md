@@ -1,7 +1,7 @@
 ---
 title: 'General content'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1634000270
+updated_at: 1634175989
 blueprint: general_content
 description: Lorem
 template: general_content/layout
@@ -9,33 +9,60 @@ subheader: sdasda
 sections:
   -
     template: /global/section_title
-    center_title_pre_title: lreom
-    center_title_title: asdasda
+    center_title_pre_title: null
+    center_title_title: 'Web Hosting plans'
     center_title_textarea:
       -
         type: paragraph
         content:
           -
             type: text
-            text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit optio molestias expedita laboriosam inventore illo amet velit ipsa ducimus blanditiis deleniti distinctio, consequatur maxime tenetur nemo delectus nulla. Aliquid, nisi'
+            text: 'Get your website up and running quickly with our tailored Web Hosting plans'
     type: section_title
     enabled: true
     toggle_alignment: true
-    toggle_color: true
+    toggle_color: false
   -
     template: /general_content/features_columns
     items:
       -
         template: null
-        features_columns_title: 'Upload your zip file into the cloud'
-        features_columns_subtitle: null
+        features_columns_title: 'Response time'
+        features_columns_subtitle: 'Response time'
         features_columns_list:
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'Phasellus feugiat nibh aenean viverra ante. Tellus viverra mauris odio sit.'
+                marks:
+                  -
+                    type: bold
+                text: '161 '
+              -
+                type: text
+                text: min
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'We measure support response time in minutes not hours. '
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Average response time to support tickets during business hours this week.'
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: italic
+                text: 'Last updated: Monday 11/10/21'
         type: column
         enabled: true
     type: features_columns_item
@@ -223,16 +250,14 @@ top_section:
             text: ', more reliable and cheaper than before.'
       -
         type: paragraph
-      -
-        type: paragraph
         content:
           -
             type: text
-            text: '⚡Get your free $5 credit upon signing up today!'
-    hero_home_image: cube.png
+            text: '⚡ Get your free $5 credit upon signing up today!'
+    hero_home_image: bb28417eb2b2507580ab0f08bf09ea69.webp
     hero_home_primary_text: cta
-    hero_home_primary: '#'
+    hero_home_primary: null
     hero_home_secondary_text: cta
-    hero_home_secondary: '#'
+    hero_home_secondary: null
 id: 26513dc7-59f7-4673-815e-7d9ace16248b
 ---

@@ -17,17 +17,25 @@ article p img {
 	@apply mx-auto text-center justify-self-center;
 }
 
-.excerpt {
+.excerpt, .excerpt p {
 	@apply mb-8 text-2xl;
 }
 @screen sm {
-	.excerpt {
+	.excerpt, .excerpt p {
 		@apply text-3xl leading-10;
+	}
+	* > p:last-child {
+		margin-bottom: 1rem;
+
 	}
 }
 
 
 .prose {
+	p {
+		color: #425466;
+		widows: 3;
+	}
 
 	ul > li {
 		@apply pl-0;
