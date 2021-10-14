@@ -15,19 +15,31 @@
               <span class="inline-flex items-center cta"> Learn More </span>
           </a>
     </div>
-    <div class="order-first md:w-1/2 md:pl-4">
+    <!-- <div class="md:w-1/2 md:pl-4">
         <div class="relative content">
-          <div class="shadow-3d"> </div>
+            <div class="shadow-3d"> </div>
 
             <a href="{{ url }}">
-              {{ if !cover_image }}
-                  <img class="parallelogram" src="{{ default_image:cover_photo }}" alt="{{ default_image:cover_photo:alt }}" />
-              {{ else }}
-                  <img class="parallelogram" src="{{ cover_image }}" alt="{{ cover_image:alt }}" />
-              {{ /if }}
+                {{ if !cover_image }}
+                    <img class="parallelogram" src="{{ default_image:cover_photo }}" alt="{{ default_image:cover_photo:alt }}" />
+                {{ else }}
+                    <img class="parallelogram" src="{{ cover_image }}" alt="{{ cover_image:alt }}" />
+                {{ /if }}
             </a>
 
         </div>
-    </div>
+    </div> -->
+        
+        <div class="order-first md:w-1/2 md:pl-4">
+            <div class="relative illustration-element">
+                <a href="{{ url }}">
+                {{ if !cover_image }}
+                    <img class="object-cover w-full bg-cover rounded-lg right" src="{{ default_image:cover_photo }}" alt="{{ default_image:cover_photo:alt }}" />
+                {{ else }}
+                    <img class="object-cover w-full bg-cover rounded-lg right" src="{{ cover_image }}" alt="{{ cover_image:alt }}" />
+                {{ /if }}
+                </a>
+            </div>
+        </div>
 </div>
 </section>
