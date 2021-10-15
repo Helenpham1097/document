@@ -50,15 +50,20 @@ sections:
                 -
                   import: features_columns
             highlight:
-              display: 'Feature highlight'
+              display: Highlight
               fields:
                 -
-                  import: feature_highlight
+                  import: highlight
             icon_features:
               display: 'Icon Features'
               fields:
                 -
                   import: features_icon
+            feature_highlight:
+              display: 'Feature  Highlight'
+              fields:
+                -
+                  import: feature_highlight
           display: Sections
           type: replicator
           icon: replicator
