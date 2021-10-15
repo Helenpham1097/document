@@ -1,7 +1,7 @@
 ---
 title: 'General content'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1634270620
+updated_at: 1634275687
 blueprint: general_content
 description: Lorem
 template: general_content/layout
@@ -22,6 +22,77 @@ sections:
     enabled: false
     toggle_alignment: true
     toggle_color: true
+  -
+    template: /general_content/features_icons
+    display_title_section:
+      -
+        template: /global/section_title
+        center_title_pre_title: null
+        center_title_title: 'Icon Features'
+        center_title_textarea: null
+        toggle_color: true
+        type: section_title
+        enabled: true
+    items:
+      -
+        template: null
+        feature_image: 05.svg
+        features_columns_title: 'This is a Feature Icon item'
+        features_columns_subtitle: null
+        features_columns_list:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'This is a Feature Icon item'
+              -
+                type: hard_break
+              -
+                type: text
+                text: 'Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
+          -
+            type: paragraph
+        type: column
+        enabled: true
+      -
+        template: null
+        feature_image: 05.svg
+        features_columns_title: 'This is a Feature Icon item'
+        features_columns_list:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'This is a Feature Icon item'
+              -
+                type: hard_break
+              -
+                type: text
+                text: 'Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
+        type: column
+        enabled: true
+      -
+        template: null
+        feature_image: 05.svg
+        features_columns_title: 'This is a Feature Icon item'
+        features_columns_list:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'This is a Feature Icon item'
+              -
+                type: hard_break
+              -
+                type: text
+                text: 'Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
+        type: column
+        enabled: true
+    type: icon_features
+    enabled: true
   -
     template: /general_content/features_columns
     items:
@@ -68,7 +139,7 @@ sections:
         type: column
         enabled: true
     type: features_columns_item
-    enabled: false
+    enabled: true
     display_title: true
     center_title_pre_title: 'Pre Title'
     center_title_title: 'Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
@@ -246,26 +317,6 @@ sections:
     reverse_alignment: true
     toggle_alignment: true
     type: highlight
-    enabled: true
-  -
-    template: /general_content/features_columns
-    display_title_section: {  }
-    items:
-      -
-        template: null
-        feature_image: null
-        features_columns_title: 'Column Features title'
-        features_columns_subtitle: 'Column Features subtitle'
-        features_columns_list:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Aliquam rhoncus ultrices euismod. Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam. Fusce maximus non metus ac facilisis. Sed id nunc a ante interdum efficitur. '
-        type: column
-        enabled: true
-    type: features_columns_item
     enabled: true
 top_section:
   -
