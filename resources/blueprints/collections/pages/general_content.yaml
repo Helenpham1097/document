@@ -54,6 +54,11 @@ sections:
               fields:
                 -
                   import: feature_highlight
+            icon_features:
+              display: 'Icon Features'
+              fields:
+                -
+                  import: features_icon
           display: Sections
           type: replicator
           icon: replicator
