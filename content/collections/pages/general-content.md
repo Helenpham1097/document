@@ -1,7 +1,7 @@
 ---
 title: 'General content'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1634175989
+updated_at: 1634270620
 blueprint: general_content
 description: Lorem
 template: general_content/layout
@@ -9,7 +9,7 @@ subheader: sdasda
 sections:
   -
     template: /global/section_title
-    center_title_pre_title: null
+    center_title_pre_title: 'Running quickly'
     center_title_title: 'Web Hosting plans'
     center_title_textarea:
       -
@@ -19,9 +19,9 @@ sections:
             type: text
             text: 'Get your website up and running quickly with our tailored Web Hosting plans'
     type: section_title
-    enabled: true
+    enabled: false
     toggle_alignment: true
-    toggle_color: false
+    toggle_color: true
   -
     template: /general_content/features_columns
     items:
@@ -35,38 +35,66 @@ sections:
             content:
               -
                 type: text
-                marks:
-                  -
-                    type: bold
-                text: '161 '
-              -
-                type: text
-                text: min
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam. '
+        type: column
+        enabled: true
+        feature_image: bb28417eb2b2507580ab0f08bf09ea69.webp
+      -
+        template: null
+        feature_image: b8f5db7682a5fb3fa938f2e26c0e855c.webp
+        features_columns_title: 'Response time'
+        features_columns_subtitle: 'Response time'
+        features_columns_list:
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'We measure support response time in minutes not hours. '
+                text: 'Ut ornare enim at elit molestie congue. Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. Phasellus molestie blandit erat, vitae ullamcorper ante viverra et. '
+        type: column
+        enabled: true
+      -
+        template: null
+        feature_image: 09054a5f40e858381279a62e2ee534a7.webp
+        features_columns_title: 'Response time'
+        features_columns_subtitle: 'Response time'
+        features_columns_list:
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'Average response time to support tickets during business hours this week.'
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                marks:
-                  -
-                    type: italic
-                text: 'Last updated: Monday 11/10/21'
+                text: 'Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
         type: column
         enabled: true
     type: features_columns_item
-    enabled: true
+    enabled: false
+    display_title: true
+    center_title_pre_title: 'Pre Title'
+    center_title_title: 'Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
+    center_title_textarea:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. \'
+    toggle_color: true
+    display_title_section:
+      -
+        template: /global/section_title
+        center_title_pre_title: 'Pre Title'
+        center_title_title: 'Section title'
+        center_title_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam. '
+        toggle_color: false
+        type: section_title
+        enabled: true
   -
     template: /general_content/feature_highlight
     rows:
@@ -219,6 +247,26 @@ sections:
     toggle_alignment: true
     type: highlight
     enabled: true
+  -
+    template: /general_content/features_columns
+    display_title_section: {  }
+    items:
+      -
+        template: null
+        feature_image: null
+        features_columns_title: 'Column Features title'
+        features_columns_subtitle: 'Column Features subtitle'
+        features_columns_list:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Aliquam rhoncus ultrices euismod. Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam. Fusce maximus non metus ac facilisis. Sed id nunc a ante interdum efficitur. '
+        type: column
+        enabled: true
+    type: features_columns_item
+    enabled: true
 top_section:
   -
     type: hero_general_content
@@ -259,5 +307,6 @@ top_section:
     hero_home_primary: null
     hero_home_secondary_text: cta
     hero_home_secondary: null
+meta_title: ariel@sitehost.nz
 id: 26513dc7-59f7-4673-815e-7d9ace16248b
 ---

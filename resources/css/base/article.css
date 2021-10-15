@@ -111,29 +111,10 @@ article p img {
 		.parallelogram {
 			z-index: 10;
 			clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-			/* clip-path: polygon(
-					100% 0%,
-					100% 100%,
-					2% 100%,
-					2% 90%,
-					0% 86%,
-					2% 82%,
-					2% 0%
-				); */
-
 			@apply transition-all duration-700 ease-in-out;
 		}
 		&:hover {
 			.parallelogram {
-				/* clip-path: polygon(
-					100% 0%,
-					100% 100%,
-					2% 100%,
-					2% 90%,
-					2% 86%,
-					2% 82%,
-					2% 0%
-				);				 */
 				clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
 				@apply transition-all duration-700 ease-in-out;
 			}
