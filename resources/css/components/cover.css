@@ -116,34 +116,7 @@
 	transform: translate(-50%);
 	z-index: -3;
 }
-
-/* .slice-bg::before {
-	@apply gradient-purple-to-teal-light gradient-animation;
-	content: '';
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	left: 0;
-	top: 0;
-	-webkit-clip-path: polygon(0 0, 5760px 0, 5760px calc(100% - 352px), 0 100%);
-	clip-path: polygon(0 0, 5760px 0, 5760px calc(100% - 352px), 0 100%);
-	z-index: -3;
-} */
-
-
-/* .illustration-element::after {
-	@apply absolute bg-center bg-no-repeat bg-contain ;
-    content: '';
-    width: 250%;
-    max-width: 250%;
-    height: 250%;
-    background-image: url("data:image/svg+xml,%0A%3Csvg width='1056' height='792' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath fill='%23BFFDF1' d='M480.47 543.404l-6.108 87.358 187.937-68.404L668.41 475z'/%3E%3Cpath fill='%2332FFDC' d='M251.47 235.404l-6.108 87.358 187.937-68.404L439.41 167z'/%3E%3C/g%3E%3C/svg%3E");
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-	z-index: -1;
-} */
-
+/* Effect and animation in hero images */
 @screen sm {
 	.illustration-element img {
 		@apply overflow-visible transform;
@@ -151,10 +124,13 @@
 		transition: all 0.45s cubic-bezier(0.215, 0.61, 0.355, 1);
 		&:hover {
 			box-shadow: 0 48px 88px rgb(24 35 52 / 32%) !important;
-			transform: perspective(1000px) rotateY(
-			0deg) rotateX(
-			0deg) rotateZ(
-			0deg) scale(1) translateX(0) translateY(0) !important;
+			transform: perspective(1000px)
+			rotateY(0deg)
+			rotateX(0deg)
+			rotateZ(0deg)
+			scale(1)
+			translateX(0)
+			translateY(0) !important;
 		}
 		&.left {
 			transform:

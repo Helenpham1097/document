@@ -79,9 +79,6 @@ fields:
                 icon: assets
                 listable: hidden
                 max_files: 1
-                # validate:
-                #   - image
-                #   - 'dimensions:max_width=2000,max_height=2000'
             -
               handle: feature_highlight_textcaption
               field:

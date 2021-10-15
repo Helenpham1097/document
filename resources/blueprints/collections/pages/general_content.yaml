@@ -45,7 +45,7 @@ sections:
                 -
                   import: section_title
             features_columns_item:
-              display: 'Pricing Features'
+              display: 'Column Features'
               fields:
                 -
                   import: features_columns

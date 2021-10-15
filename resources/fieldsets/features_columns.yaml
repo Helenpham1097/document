@@ -1,4 +1,4 @@
-title: 'Pricing Features'
+title: 'Column Features'
 fields:
   -
     handle: template
@@ -8,6 +8,21 @@ fields:
       icon: hidden
       listable: hidden
       default: /general_content/features_columns
+  -
+    handle: display_title_section
+    field:
+      collapse: false
+      max_sets: 1
+      sets:
+        section_title:
+          display: 'Section title'
+          fields:
+            -
+              import: section_title
+      display: 'Add Title Section'
+      type: replicator
+      icon: replicator
+      listable: hidden
   -
     handle: items
     field:
@@ -24,11 +39,22 @@ fields:
                 icon: hidden
                 listable: hidden
             -
+              handle: feature_image
+              field:
+                mode: grid
+                restrict: false
+                allow_uploads: true
+                max_files: 1
+                display: 'Feature image'
+                type: assets
+                icon: assets
+                listable: hidden
+            -
               handle: features_columns_title
               field:
                 input_type: text
                 antlers: false
-                display: 'Pricing features title'
+                display: 'Column features title'
                 type: text
                 icon: text
                 listable: hidden
@@ -37,14 +63,14 @@ fields:
               field:
                 input_type: text
                 antlers: false
-                display: 'Pricing features subtitle'
+                display: 'Column features subtitle'
                 type: text
                 icon: text
                 listable: hidden
             -
               handle: features_columns_list
               field:
-                display: 'Pricing features list'
+                display: 'Column features list'
                 always_show_set_button: false
                 buttons:
                   - bold
