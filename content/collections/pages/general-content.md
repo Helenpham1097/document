@@ -1,12 +1,231 @@
 ---
 title: 'General content'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1634275687
+updated_at: 1634533660
 blueprint: general_content
 description: Lorem
 template: general_content/layout
 subheader: sdasda
 sections:
+  -
+    template: /general_content/steps
+    testimonial_section_title: null
+    testimonial_text_area: null
+    Items:
+      -
+        step_image: 4.png
+        step_title: 'First Step'
+        step_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue.'
+        step_link: '#'
+        step_text_link: Link
+        type: Step-item
+        enabled: true
+      -
+        step_image: 4.png
+        step_title: 'First Step'
+        step_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue.'
+        step_link: '#'
+        step_text_link: Link
+        type: Step-item
+        enabled: true
+      -
+        step_image: 4.png
+        step_title: 'First Step'
+        step_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue.'
+        step_link: '#'
+        step_text_link: Link
+        type: Step-item
+        enabled: true
+      -
+        step_image: 4.png
+        step_title: 'First Step'
+        step_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue.'
+        step_link: '#'
+        step_text_link: Link
+        type: Step-item
+        enabled: true
+    type: steps
+    enabled: false
+  -
+    template: /general_content/testimonial
+    rows:
+      -
+        testimonial_title: 'Leroy Jenkins'
+        testimonial_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'An audire commodo habemus cum. Ne sed corrumpit'
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: repudiandae
+              -
+                type: text
+                text: '. Tota aliquip democritum pro in, nec democritum intellegam ne. Propriae volutpat dissentiet ea sit, nec at lorem inani tritani, an ius populo perfecto'
+              -
+                type: text
+                marks:
+                  -
+                    type: link
+                    attrs:
+                      href: '#'
+                      target: null
+                      rel: null
+                text: vituperatoribus
+              -
+                type: text
+                text: '. Eu cum case modus salutandi, ut eum vocent sensibus reprehendunt.'
+        testimonial_link: '#'
+        testimonial_text_link: Link
+        testimonial_image: profile.png
+        testimonial_textcaption: null
+        type: Testimonial-item
+        enabled: true
+    reverse_alignment: false
+    toggle_alignment: false
+    type: testimonial
+    enabled: false
+    testimonial_section_title: 'Duo assum utroque appetere an'
+    testimonial_text_area:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Pri ex magna scaevola moderatius. Nullam '
+          -
+            type: text
+            marks:
+              -
+                type: link
+                attrs:
+                  href: '#'
+                  target: null
+                  rel: null
+            text: accommodare
+          -
+            type: text
+            text: ' no vix, est ei diceret alienum, et sit cetero malorum. Et sea iudico consequat, est sanctus adipisci ex.'
+    Items:
+      -
+        testimonial_image: profile.png
+        testimonial_name: 'Lena Oxton'
+        testimonial_position: 'Blizzard Entertainment'
+        testimonial_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: '01 An audire commodo habemus cum. Ne sed corrumpit repudiandae. Tota aliquip democritum pro in, nec democritum intellegam ne. Propriae volutpat dissentiet ea sit, nec at lorem inani tritani, an ius populo perfecto vituperatoribus. Eu cum case modus salutandi, ut eum vocent sensibus reprehendunt.'
+        testimonial_link: '#'
+        testimonial_text_link: Link
+        type: Testimonial-item
+        enabled: true
+      -
+        testimonial_image: profile.png
+        testimonial_name: 'Lena Oxton'
+        testimonial_position: 'Blizzard Entertainment'
+        testimonial_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: '02 An audire commodo habemus cum. Ne sed corrumpit repudiandae. Tota aliquip democritum pro in, nec democritum intellegam ne. Propriae volutpat dissentiet ea sit, nec at lorem inani tritani, an ius populo perfecto vituperatoribus. Eu cum case modus salutandi, ut eum vocent sensibus reprehendunt.'
+        testimonial_link: '#'
+        testimonial_text_link: Link
+        type: Testimonial-item
+        enabled: true
+      -
+        testimonial_image: profile.png
+        testimonial_name: 'Lena Oxton'
+        testimonial_position: 'Blizzard Entertainment'
+        testimonial_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: '03 An audire commodo habemus cum. Ne sed corrumpit repudiandae. Tota aliquip democritum pro in, nec democritum intellegam ne. Propriae volutpat dissentiet ea sit, nec at lorem inani tritani, an ius populo perfecto vituperatoribus. Eu cum case modus salutandi, ut eum vocent sensibus reprehendunt.'
+        testimonial_link: '#'
+        testimonial_text_link: Link
+        type: Testimonial-item
+        enabled: true
+      -
+        testimonial_image: profile.png
+        testimonial_name: 'Lena Oxton'
+        testimonial_position: 'Blizzard Entertainment'
+        testimonial_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: '04 An audire commodo habemus cum. Ne sed corrumpit repudiandae. Tota aliquip democritum pro in, nec democritum intellegam ne. Propriae volutpat dissentiet ea sit, nec at lorem inani tritani, an ius populo perfecto vituperatoribus. Eu cum case modus salutandi, ut eum vocent sensibus reprehendunt.'
+        testimonial_link: '#'
+        testimonial_text_link: Link
+        type: Testimonial-item
+        enabled: true
+      -
+        testimonial_image: profile.png
+        testimonial_name: 'Lena Oxton'
+        testimonial_position: 'Blizzard Entertainment'
+        testimonial_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: '05 An audire commodo habemus cum. Ne sed corrumpit repudiandae. Tota aliquip democritum pro in, nec democritum intellegam ne. Propriae volutpat dissentiet ea sit, nec at lorem inani tritani, an ius populo perfecto vituperatoribus. Eu cum case modus salutandi, ut eum vocent sensibus reprehendunt.'
+        testimonial_link: '#'
+        testimonial_text_link: Link
+        type: Testimonial-item
+        enabled: true
+      -
+        testimonial_image: profile.png
+        testimonial_name: 'Lena Oxton'
+        testimonial_position: 'Blizzard Entertainment'
+        testimonial_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: '06 An audire commodo habemus cum. Ne sed corrumpit repudiandae. Tota aliquip democritum pro in, nec democritum intellegam ne. Propriae volutpat dissentiet ea sit, nec at lorem inani tritani, an ius populo perfecto vituperatoribus. Eu cum case modus salutandi, ut eum vocent sensibus reprehendunt.'
+        testimonial_link: '#'
+        testimonial_text_link: Link
+        type: Testimonial-item
+        enabled: true
   -
     template: /global/section_title
     center_title_pre_title: 'Running quickly'
@@ -92,7 +311,7 @@ sections:
         type: column
         enabled: true
     type: icon_features
-    enabled: true
+    enabled: false
   -
     template: /general_content/features_columns
     items:
@@ -139,7 +358,7 @@ sections:
         type: column
         enabled: true
     type: features_columns_item
-    enabled: true
+    enabled: false
     display_title: true
     center_title_pre_title: 'Pre Title'
     center_title_title: 'Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
@@ -167,105 +386,100 @@ sections:
         type: section_title
         enabled: true
   -
-    template: /general_content/feature_highlight
+    template: /general_content/highlight
     rows:
       -
-        feature_highlight_title: 'Customisable sections, you can reorder them and add new sections from the + symbol.'
-        feature_highlight_textarea:
+        highlight_title: 'Highlight 1 Toggle alignment'
+        highlight_textarea:
           -
             type: paragraph
             content:
               -
                 type: text
-                marks:
-                  -
-                    type: italic
-                text: 'lottie.antlers.html, '
-              -
-                type: text
-                text: main
-              -
-                type: text
-                marks:
-                  -
-                    type: italic
-                text: 'footer.antlers.html, '
-              -
-                type: text
-                text: main
-              -
-                type: text
-                marks:
-                  -
-                    type: italic
-                text: 'nav.antlers.html, '
-              -
-                type: text
-                text: page
-              -
-                type: text
-                marks:
-                  -
-                    type: italic
-                text: 'head.antlers.html, blog, default.antlers.html, errors, general'
-              -
-                type: text
-                text: 'content, global, home, landing.antlers.html, layout.antlers.html, 404.antlers.html, '
-              -
-                type: text
-                marks:
-                  -
-                    type: italic
-                text: default
-              -
-                type: text
-                text: 'image.antlers.html,'
-        feature_highlight_link: null
-        feature_highlight_text_link: 'Click here'
-        feature_highlight_image: default-optimized.jpg
-        feature_highlight_textcaption:
+                text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue. Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. Phasellus molestie blandit erat, vitae ullamcorper ante viverra et. Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
+        highlight_link: '#'
+        highlight_text_link: 'Highlight Link'
+        highlight_image: 09054a5f40e858381279a62e2ee534a7.webp
+        highlight_textcaption:
           -
             type: paragraph
             content:
               -
                 type: text
-                marks:
-                  -
-                    type: italic
-                text: 'lottie.antlers.html, '
-              -
-                type: text
-                text: main
-              -
-                type: text
-                marks:
-                  -
-                    type: italic
-                text: footer.antlers.html
-        type: feature_highlight-item
+                text: 'Caption this'
+        type: highlight-item
         enabled: true
       -
-        feature_highlight_title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        feature_highlight_textarea:
+        highlight_title: 'Highlight 2'
+        highlight_textarea:
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam. Fusce maximus non metus ac facilisis. Sed id nunc a ante interdum efficitur. Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu.'
-        feature_highlight_link: null
-        feature_highlight_text_link: 'Click here'
-        feature_highlight_image: default-optimized.jpg
-        feature_highlight_textcaption:
+                text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue. Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. Phasellus molestie blandit erat, vitae ullamcorper ante viverra et. Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
+        highlight_link: '#'
+        highlight_text_link: Link
+        highlight_image: b8f5db7682a5fb3fa938f2e26c0e855c.webp
+        highlight_textcaption:
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
-        type: feature_highlight-item
+                text: TextCaption
+        type: highlight-item
         enabled: true
     reverse_alignment: false
+    toggle_alignment: true
+    type: highlight
+    enabled: true
+  -
+    template: /general_content/highlight
+    rows:
+      -
+        highlight_title: 'Highlight Reverse Alignment'
+        highlight_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue. Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. Phasellus molestie blandit erat, vitae ullamcorper ante viverra et. Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
+        highlight_link: '#'
+        highlight_text_link: 'Highlight Link'
+        highlight_image: 09054a5f40e858381279a62e2ee534a7.webp
+        highlight_textcaption:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Caption this'
+        type: highlight-item
+        enabled: true
+      -
+        highlight_title: 'Highlight 2'
+        highlight_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue. Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. Phasellus molestie blandit erat, vitae ullamcorper ante viverra et. Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
+        highlight_link: '#'
+        highlight_text_link: Link
+        highlight_image: b8f5db7682a5fb3fa938f2e26c0e855c.webp
+        highlight_textcaption:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: TextCaption
+        type: highlight-item
+        enabled: true
+    reverse_alignment: true
     toggle_alignment: false
     type: highlight
     enabled: true
@@ -273,51 +487,30 @@ sections:
     template: /general_content/feature_highlight
     rows:
       -
-        feature_highlight_title: 'Lorem ipsum dolor sit amet'
+        feature_highlight_title: 'Feature Highlight'
         feature_highlight_textarea:
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam. Fusce maximus non metus ac facilisis. Sed id nunc a ante interdum efficitur.'
-        feature_highlight_link: null
-        feature_highlight_text_link: 'Click here'
-        feature_highlight_image: default-optimized.jpg
+                text: 'Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. Phasellus molestie blandit erat, vitae ullamcorper ante viverra et. Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
+        feature_highlight_link: '#'
+        feature_highlight_text_link: 'Feature Highlight'
+        feature_highlight_image: bb28417eb2b2507580ab0f08bf09ea69.webp
         feature_highlight_textcaption:
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod.'
+                text: asdasdas
         type: feature_highlight-item
         enabled: true
-      -
-        feature_highlight_title: 'Morbi vulputate ultricies'
-        feature_highlight_textarea:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam. Fusce maximus non metus ac facilisis. Sed id nunc a ante interdum efficitur.'
-        feature_highlight_link: null
-        feature_highlight_text_link: 'Click here'
-        feature_highlight_image: default-optimized.jpg
-        feature_highlight_textcaption:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. '
-        type: feature_highlight-item
-        enabled: true
-    reverse_alignment: true
-    toggle_alignment: true
-    type: highlight
-    enabled: true
+    reverse_alignment: false
+    toggle_alignment: false
+    type: feature_highlight
+    enabled: false
 top_section:
   -
     type: hero_general_content
