@@ -1,12 +1,231 @@
 ---
 title: 'General content'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1634278672
+updated_at: 1634533660
 blueprint: general_content
 description: Lorem
 template: general_content/layout
 subheader: sdasda
 sections:
+  -
+    template: /general_content/steps
+    testimonial_section_title: null
+    testimonial_text_area: null
+    Items:
+      -
+        step_image: 4.png
+        step_title: 'First Step'
+        step_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue.'
+        step_link: '#'
+        step_text_link: Link
+        type: Step-item
+        enabled: true
+      -
+        step_image: 4.png
+        step_title: 'First Step'
+        step_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue.'
+        step_link: '#'
+        step_text_link: Link
+        type: Step-item
+        enabled: true
+      -
+        step_image: 4.png
+        step_title: 'First Step'
+        step_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue.'
+        step_link: '#'
+        step_text_link: Link
+        type: Step-item
+        enabled: true
+      -
+        step_image: 4.png
+        step_title: 'First Step'
+        step_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue.'
+        step_link: '#'
+        step_text_link: Link
+        type: Step-item
+        enabled: true
+    type: steps
+    enabled: false
+  -
+    template: /general_content/testimonial
+    rows:
+      -
+        testimonial_title: 'Leroy Jenkins'
+        testimonial_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'An audire commodo habemus cum. Ne sed corrumpit'
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: repudiandae
+              -
+                type: text
+                text: '. Tota aliquip democritum pro in, nec democritum intellegam ne. Propriae volutpat dissentiet ea sit, nec at lorem inani tritani, an ius populo perfecto'
+              -
+                type: text
+                marks:
+                  -
+                    type: link
+                    attrs:
+                      href: '#'
+                      target: null
+                      rel: null
+                text: vituperatoribus
+              -
+                type: text
+                text: '. Eu cum case modus salutandi, ut eum vocent sensibus reprehendunt.'
+        testimonial_link: '#'
+        testimonial_text_link: Link
+        testimonial_image: profile.png
+        testimonial_textcaption: null
+        type: Testimonial-item
+        enabled: true
+    reverse_alignment: false
+    toggle_alignment: false
+    type: testimonial
+    enabled: false
+    testimonial_section_title: 'Duo assum utroque appetere an'
+    testimonial_text_area:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Pri ex magna scaevola moderatius. Nullam '
+          -
+            type: text
+            marks:
+              -
+                type: link
+                attrs:
+                  href: '#'
+                  target: null
+                  rel: null
+            text: accommodare
+          -
+            type: text
+            text: ' no vix, est ei diceret alienum, et sit cetero malorum. Et sea iudico consequat, est sanctus adipisci ex.'
+    Items:
+      -
+        testimonial_image: profile.png
+        testimonial_name: 'Lena Oxton'
+        testimonial_position: 'Blizzard Entertainment'
+        testimonial_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: '01 An audire commodo habemus cum. Ne sed corrumpit repudiandae. Tota aliquip democritum pro in, nec democritum intellegam ne. Propriae volutpat dissentiet ea sit, nec at lorem inani tritani, an ius populo perfecto vituperatoribus. Eu cum case modus salutandi, ut eum vocent sensibus reprehendunt.'
+        testimonial_link: '#'
+        testimonial_text_link: Link
+        type: Testimonial-item
+        enabled: true
+      -
+        testimonial_image: profile.png
+        testimonial_name: 'Lena Oxton'
+        testimonial_position: 'Blizzard Entertainment'
+        testimonial_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: '02 An audire commodo habemus cum. Ne sed corrumpit repudiandae. Tota aliquip democritum pro in, nec democritum intellegam ne. Propriae volutpat dissentiet ea sit, nec at lorem inani tritani, an ius populo perfecto vituperatoribus. Eu cum case modus salutandi, ut eum vocent sensibus reprehendunt.'
+        testimonial_link: '#'
+        testimonial_text_link: Link
+        type: Testimonial-item
+        enabled: true
+      -
+        testimonial_image: profile.png
+        testimonial_name: 'Lena Oxton'
+        testimonial_position: 'Blizzard Entertainment'
+        testimonial_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: '03 An audire commodo habemus cum. Ne sed corrumpit repudiandae. Tota aliquip democritum pro in, nec democritum intellegam ne. Propriae volutpat dissentiet ea sit, nec at lorem inani tritani, an ius populo perfecto vituperatoribus. Eu cum case modus salutandi, ut eum vocent sensibus reprehendunt.'
+        testimonial_link: '#'
+        testimonial_text_link: Link
+        type: Testimonial-item
+        enabled: true
+      -
+        testimonial_image: profile.png
+        testimonial_name: 'Lena Oxton'
+        testimonial_position: 'Blizzard Entertainment'
+        testimonial_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: '04 An audire commodo habemus cum. Ne sed corrumpit repudiandae. Tota aliquip democritum pro in, nec democritum intellegam ne. Propriae volutpat dissentiet ea sit, nec at lorem inani tritani, an ius populo perfecto vituperatoribus. Eu cum case modus salutandi, ut eum vocent sensibus reprehendunt.'
+        testimonial_link: '#'
+        testimonial_text_link: Link
+        type: Testimonial-item
+        enabled: true
+      -
+        testimonial_image: profile.png
+        testimonial_name: 'Lena Oxton'
+        testimonial_position: 'Blizzard Entertainment'
+        testimonial_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: '05 An audire commodo habemus cum. Ne sed corrumpit repudiandae. Tota aliquip democritum pro in, nec democritum intellegam ne. Propriae volutpat dissentiet ea sit, nec at lorem inani tritani, an ius populo perfecto vituperatoribus. Eu cum case modus salutandi, ut eum vocent sensibus reprehendunt.'
+        testimonial_link: '#'
+        testimonial_text_link: Link
+        type: Testimonial-item
+        enabled: true
+      -
+        testimonial_image: profile.png
+        testimonial_name: 'Lena Oxton'
+        testimonial_position: 'Blizzard Entertainment'
+        testimonial_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: '06 An audire commodo habemus cum. Ne sed corrumpit repudiandae. Tota aliquip democritum pro in, nec democritum intellegam ne. Propriae volutpat dissentiet ea sit, nec at lorem inani tritani, an ius populo perfecto vituperatoribus. Eu cum case modus salutandi, ut eum vocent sensibus reprehendunt.'
+        testimonial_link: '#'
+        testimonial_text_link: Link
+        type: Testimonial-item
+        enabled: true
   -
     template: /global/section_title
     center_title_pre_title: 'Running quickly'
@@ -92,7 +311,7 @@ sections:
         type: column
         enabled: true
     type: icon_features
-    enabled: true
+    enabled: false
   -
     template: /general_content/features_columns
     items:
@@ -139,7 +358,7 @@ sections:
         type: column
         enabled: true
     type: features_columns_item
-    enabled: true
+    enabled: false
     display_title: true
     center_title_pre_title: 'Pre Title'
     center_title_title: 'Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
@@ -170,7 +389,7 @@ sections:
     template: /general_content/highlight
     rows:
       -
-        highlight_title: 'Highlight 2'
+        highlight_title: 'Highlight 1 Toggle alignment'
         highlight_textarea:
           -
             type: paragraph
@@ -219,7 +438,7 @@ sections:
     template: /general_content/highlight
     rows:
       -
-        highlight_title: 'Highlight 2'
+        highlight_title: 'Highlight Reverse Alignment'
         highlight_textarea:
           -
             type: paragraph
@@ -261,7 +480,7 @@ sections:
         type: highlight-item
         enabled: true
     reverse_alignment: true
-    toggle_alignment: true
+    toggle_alignment: false
     type: highlight
     enabled: true
   -
@@ -291,7 +510,7 @@ sections:
     reverse_alignment: false
     toggle_alignment: false
     type: feature_highlight
-    enabled: true
+    enabled: false
 top_section:
   -
     type: hero_general_content

@@ -54,6 +54,16 @@ sections:
               fields:
                 -
                   import: highlight
+            testimonial:
+              display: Testimonial
+              fields:
+                -
+                  import: testimonial
+            steps:
+              display: Steps
+              fields:
+                -
+                  import: steps
             icon_features:
               display: 'Icon Features'
               fields:
