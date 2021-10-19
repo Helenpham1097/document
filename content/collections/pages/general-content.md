@@ -1,7 +1,7 @@
 ---
 title: 'General content'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1634533660
+updated_at: 1634610602
 blueprint: general_content
 description: Lorem
 template: general_content/layout
@@ -358,7 +358,7 @@ sections:
         type: column
         enabled: true
     type: features_columns_item
-    enabled: false
+    enabled: true
     display_title: true
     center_title_pre_title: 'Pre Title'
     center_title_title: 'Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
@@ -431,9 +431,38 @@ sections:
         type: highlight-item
         enabled: true
     reverse_alignment: false
-    toggle_alignment: true
+    toggle_alignment: false
     type: highlight
-    enabled: true
+    enabled: false
+    toggle_background: false
+  -
+    template: /general_content/feature_highlight
+    rows:
+      -
+        feature_highlight_title: 'Feature Highlight'
+        feature_highlight_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. Phasellus molestie blandit erat, vitae ullamcorper ante viverra et. Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
+        feature_highlight_link: null
+        feature_highlight_text_link: 'Feature Highlight'
+        feature_highlight_image: bb28417eb2b2507580ab0f08bf09ea69.webp
+        feature_highlight_textcaption:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: asdasdas
+        type: feature_highlight-item
+        enabled: true
+    reverse_alignment: false
+    toggle_alignment: false
+    type: feature_highlight
+    enabled: false
   -
     template: /general_content/highlight
     rows:
@@ -479,38 +508,11 @@ sections:
                 text: TextCaption
         type: highlight-item
         enabled: true
-    reverse_alignment: true
-    toggle_alignment: false
-    type: highlight
-    enabled: true
-  -
-    template: /general_content/feature_highlight
-    rows:
-      -
-        feature_highlight_title: 'Feature Highlight'
-        feature_highlight_textarea:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. Phasellus molestie blandit erat, vitae ullamcorper ante viverra et. Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
-        feature_highlight_link: '#'
-        feature_highlight_text_link: 'Feature Highlight'
-        feature_highlight_image: bb28417eb2b2507580ab0f08bf09ea69.webp
-        feature_highlight_textcaption:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: asdasdas
-        type: feature_highlight-item
-        enabled: true
     reverse_alignment: false
-    toggle_alignment: false
-    type: feature_highlight
+    toggle_alignment: true
+    type: highlight
     enabled: false
+    toggle_background: true
 top_section:
   -
     type: hero_general_content
@@ -551,6 +553,5 @@ top_section:
     hero_home_primary: null
     hero_home_secondary_text: cta
     hero_home_secondary: null
-meta_title: ariel@sitehost.nz
 id: 26513dc7-59f7-4673-815e-7d9ace16248b
 ---
