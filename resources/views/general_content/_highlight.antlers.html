@@ -28,10 +28,10 @@
 								</a>
 
 								</div>
-							</div>
+							</div>`
 						</div>
 						<div class="relative sm:max-w-2xl sm:mx-auto sm:w-1/2">
-							<div class="mx-auto illustration-element">
+							<div class="mx-auto {{ if  toggle_background }} illustration-bg {{ else}} illustration-element {{ /if}}">
 								{{ assets:highlight_image }}
 									{{ unless extension === "gif" }}
 										<img class="w-auto rounded-lg left" src="{{ glide:highlight_image width='600' height='337.5' dpr='2' quality='70' fm='webp' }}" width="600" height="337.5" alt="{{ highlight_image:cover_photo:alt }}" />
@@ -77,7 +77,7 @@
 						</div>
 						<p>toggle_alignment else</p>
 						<div class="relative sm:max-w-2xl sm:mx-auto sm:w-1/2">
-							<div class="mx-auto illustration-element">
+							<div class="mx-auto {{ if  toggle_background }} illustration-bg {{ else}} illustration-element {{ /if}}">
 								{{ assets:highlight_image }}
 									{{ unless extension === "gif" }}
 										<img class="w-auto rounded-lg right" src="{{ glide:highlight_image width='600' height='337.5' dpr='2' quality='70' fm='webp' }}" width="600" height="337.5" alt="{{ highlight_image:cover_photo:alt }}" />
@@ -126,7 +126,7 @@
 							</div>
 						</div>
 						<div class="relative sm:max-w-2xl sm:mx-auto sm:w-1/2">
-							<div class="mx-auto illustration-element">
+							<div class="mx-auto {{ if  toggle_background }} illustration-bg-left {{ else}} illustration-element {{ /if}}">
 								{{ assets:highlight_image }}
 									{{ unless extension === "gif" }}
 										<img class="w-auto rounded-lg left" src="{{ glide:highlight_image width='600' height='337.5' dpr='2' quality='70' fm='webp' }}" width="600" height="337.5" alt="{{ highlight_image:cover_photo:alt }}" />
@@ -172,7 +172,7 @@
 						</div>
 
 						<div class="relative sm:max-w-2xl sm:mx-auto sm:w-1/2">
-							<div class="mx-auto illustration-element">
+							<div class="mx-auto {{ if  toggle_background }} illustration-bg {{ else}} illustration-element {{ /if}}">
 								{{ assets:highlight_image }}
 									{{ unless extension === "gif" }}
 										<img class="w-auto rounded-lg right" src="{{ glide:highlight_image width='600' height='337.5' dpr='2' quality='70' fm='webp' }}" width="600" height="337.5" alt="{{ highlight_image:cover_photo:alt }}" />
@@ -225,7 +225,7 @@
 					</div>
 
 					<div class="relative sm:max-w-2xl sm:mx-auto sm:w-1/2">
-						<div class="mx-auto illustration-element illustration-bg">
+						<div class="mx-auto {{ if  toggle_background }} illustration-bg {{ else}} illustration-element {{ /if}} ">
 								{{ assets:highlight_image }}
 									{{ unless extension === "gif" }}
 										<img class="w-auto rounded-lg left" src="{{ glide:highlight_image width='600' height='337.5' dpr='2' quality='70' fm='webp' }}" width="600" height="337.5" alt="{{ highlight_image:cover_photo:alt }}" />
@@ -256,7 +256,7 @@
 					<div class="space-y-6 sm:w-1/2">
 						<span class="space-y-6">
 							<h2 class="">{{ highlight_title }}</h2>
-							<p class=""><strong>{{ highlight_textarea | strip_tags:p }} </strong></p>
+							<p class="">{{ highlight_textarea | strip_tags:p }} </p>
 						</span>
 						<div class="flex mt-8 lg:mt-0 lg:flex-shrink-0">
 							<div class="inline-flex rounded-full">
@@ -275,7 +275,7 @@
 						</div>
 					</div>
 					<div class="relative sm:max-w-2xl sm:mx-auto sm:w-1/2">
-						<div class="mx-auto illustration-element">
+						<div class="mx-auto {{ if  toggle_background }} illustration-bg-left {{ else}} illustration-element {{ /if}}">
 								{{ assets:highlight_image }}
 									{{ unless extension === "gif" }}
 										<img class="w-auto rounded-lg right" src="{{ glide:highlight_image width='600' height='337.5' dpr='2' quality='70' fm='webp' }}" width="600" height="337.5" alt="{{ highlight_image:cover_photo:alt }}" />

@@ -125,3 +125,11 @@ fields:
       icon: toggle
       listable: hidden
       width: 25
+  -
+    handle: toggle_background
+    field:
+      display: 'Toggle Background'
+      type: toggle
+      icon: toggle
+      listable: hidden
+      width: 25

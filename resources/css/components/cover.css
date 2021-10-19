@@ -67,8 +67,8 @@
 } */
 
 .gradient-purple-to-teal-light {
-	@apply gradient-animation;
-	background: linear-gradient(to right, rgba(135, 30, 255, 0.1), rgba(50, 255, 220, 0.1));
+	@apply gradient-animation bg-gradient-to-r from-green-100 to-purple-100;
+	/* background: linear-gradient(to right, rgba(135, 30, 255, 0.1), rgba(50, 255, 220, 0.1)); */
 	/* background: linear-gradient(to right, var(--primary) 0%, var(--secondary) 100%); */
 	z-index: -1;
 }
@@ -156,20 +156,22 @@
 		}
 	}
 	.illustration-bg {
-		&::after {
-			/* background-image: url("data:image/svg+xml,%3Csvg width='1056' height='792' viewBox='0 0 1056 792' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M686.47 348.404L680.362 435.762L868.299 367.358L874.41 280L686.47 348.404Z' fill='%2332FFDC'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M846.47 406.404L840.362 493.762L1028.3 425.358L1034.41 338L846.47 406.404Z' fill='%23871EFF'/%3E%3C/svg%3E%0A"); */
-			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1056' height='792' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='m369.53 348.404 6.108 87.358-187.937-68.404L181.59 280l187.94 68.404Z' fill='%2332FFDC'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='m209.53 406.404 6.108 87.358-187.937-68.404L21.591 338l187.939 68.404Z' fill='%23871EFF'/%3E%3C/svg%3E");
-			content: '';
-			position: absolute;
-			width: 200%;
+		&::before {
+			@apply absolute transform -translate-x-1/2 -translate-y-1/2 skew-x-12 bg-center bg-no-repeat bg-contain -left-1/4 top-1/2 bg-gradient-to-r from-green-100 to-purple-100;
+			content:'';
+			width: 150%;
+			height: 150%;
 			max-width: 200%;
-			height: 200%;
-			background-repeat: no-repeat;
-			background-size: contain;
-			left: 50%;
-			background-position: center;
-			top: 50%;
-			transform: translate(-50%, -50%);
+			z-index: -3;
+		}
+	}
+	.illustration-bg-left {
+		&::before {
+			@apply absolute transform -translate-y-1/2 -skew-x-12 bg-center bg-no-repeat bg-contain -translate-x-1/4 left-3/4 top-1/2 bg-gradient-to-r from-red-100 to-blue-100;
+			content:'';
+			width: 150%;
+			height: 150%;
+			max-width: 200%;
 			z-index: -3;
 		}
 	}
