@@ -44,6 +44,11 @@ sections:
               fields:
                 -
                   import: section_title
+            call_to_action:
+              display: 'Call To Action'
+              fields:
+                -
+                  import: call_to_action
             features_columns_item:
               display: 'Column Features'
               fields:
@@ -54,6 +59,11 @@ sections:
               fields:
                 -
                   import: highlight
+            companies_logo:
+              display: 'Companies logo'
+              fields:
+                -
+                  import: companies_logo
             testimonial:
               display: Testimonial
               fields:

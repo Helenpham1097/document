@@ -1,12 +1,34 @@
 ---
 title: 'General content'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1634610602
+updated_at: 1634773835
 blueprint: general_content
 description: Lorem
 template: general_content/layout
 subheader: sdasda
 sections:
+  -
+    template: /global/companies_logo
+    companies_title: 'We’re proud to have played a part in these amazing journeys.'
+    company:
+      -
+        company_logo: algolia.svg
+        type: companies
+        enabled: true
+      -
+        company_logo: algolia.svg
+        type: companies
+        enabled: true
+      -
+        company_logo: algolia.svg
+        type: companies
+        enabled: true
+      -
+        company_logo: algolia.svg
+        type: companies
+        enabled: true
+    type: companies_logo
+    enabled: true
   -
     template: /general_content/steps
     testimonial_section_title: null
@@ -358,7 +380,7 @@ sections:
         type: column
         enabled: true
     type: features_columns_item
-    enabled: true
+    enabled: false
     display_title: true
     center_title_pre_title: 'Pre Title'
     center_title_title: 'Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
@@ -513,6 +535,22 @@ sections:
     type: highlight
     enabled: false
     toggle_background: true
+  -
+    template: /global/call_to_action
+    center_title_pre_title: null
+    center_title_title: null
+    center_title_textarea: null
+    type: call_to_action
+    enabled: true
+    call_to_action_pre_title: 'Pre Title'
+    call_to_action_title: 'Section title'
+    call_to_action_textarea:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Text area to complement the secondary title'
 top_section:
   -
     type: hero_general_content

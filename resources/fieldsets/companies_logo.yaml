@@ -1,0 +1,42 @@
+title: 'Companies Logo'
+fields:
+  -
+    handle: template
+    field:
+      display: template
+      type: hidden
+      icon: hidden
+      listable: hidden
+      default: /global/companies_logo
+  -
+    handle: companies_title
+    field:
+      input_type: text
+      antlers: false
+      display: 'Companies title'
+      type: text
+      icon: text
+      listable: hidden
+  -
+    handle: company
+    field:
+      collapse: false
+      sets:
+        companies:
+          display: 'New Set'
+          fields:
+            -
+              handle: company_logo
+              field:
+                mode: grid
+                restrict: false
+                allow_uploads: true
+                max_files: 1
+                display: 'company logo'
+                type: assets
+                icon: assets
+                listable: hidden
+      display: company
+      type: replicator
+      icon: replicator
+      listable: hidden
