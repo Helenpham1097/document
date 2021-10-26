@@ -1,4 +1,4 @@
-title: 'Title centred'
+title: 'Section Title'
 fields:
   -
     handle: template
@@ -24,7 +24,7 @@ fields:
       input_type: text
       character_limit: 200
       antlers: false
-      display: 'Section title'
+      display: 'Title Section'
       type: text
       icon: text
       listable: hidden

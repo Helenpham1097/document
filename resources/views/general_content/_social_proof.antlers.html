@@ -1,0 +1,41 @@
+<section class="container flex flex-col items-center justify-center gap-16 mx-auto lg:flex-row lg:flex-wrap">
+	{{ display_title_section }}
+		{{ partial:global/section_title }}
+	{{ /display_title_section}}
+	{{ Items }}
+    <div class="relative flex flex-col max-w-sm">
+        <div class="absolute opacity-20 -inset-1 bg-gradient-to-r from-purple-500 to-green-500 rounded-xl filter blur-xl"></div>
+        <div class="relative p-8 space-y-6 bg-white rounded-xl">
+            <div class="relative px-6">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="absolute left-0 w-4 h-4 text-purple-500 transform -translate-x-2 ">
+                    <path d="M232,246.857V16H16V416H54.4ZM48,48H200V233.143L48,377.905Z"></path>
+                    <path d="M280,416h38.4L496,246.857V16H280ZM312,48H464V233.143L312,377.905Z"></path>
+                </svg>
+                <p class="mb-0 italic text-center">{{ social_proof_textarea }}</p>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="absolute bottom-0 right-0 w-4 h-4 text-purple-500 transform translate-x-2 ">
+                    <path d="M280,185.143V416H496V16H457.6ZM464,384H312V198.857L464,54.1Z"></path>
+                    <path d="M232,16H193.6L16,185.143V416H232ZM200,384H48V198.857L200,54.1Z"></path>
+                </svg>
+            </div>
+ 
+            <div class="flex flex-col items-center justify-center space-y-2 ">
+				<div class="object-center w-12 h-12 overflow-hidden bg-gray-500 bg-center bg-cover rounded-full">
+					<img src="{{ glide:social_proof_image dpr='2' fm='webp' }}" alt="" class="object-cover h-12 bg-gray-500 bg-center rounded-full">
+				</div>
+                <h5 class="text-xl">{{ social_proof_name }}</h5>
+                <p class="text-sm">{{ social_proof_position }}</p>
+				<a href="{{ social_proof_link }}" class="relative inline-flex items-center text-lg font-medium text-purple-500 hover:text-purple-700 group">
+					{{ if social_proof_link}}
+					<span class="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-12 ease">
+					<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+						<path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+					</svg>
+					</span>
+					<span class="relative">{{ social_proof_text_link }}</span>
+					{{ /if }}
+				</a>
+            </div>
+        </div>
+    </div>
+	{{ /Items }}
+</section>

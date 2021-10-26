@@ -167,7 +167,7 @@
 	}
 	.illustration-bg-left {
 		&::before {
-			@apply absolute transform -translate-y-1/2 -skew-x-12 bg-center bg-no-repeat bg-contain -translate-x-1/4 left-3/4 top-1/2 bg-gradient-to-r from-red-100 to-blue-100;
+			@apply absolute transform -translate-y-1/2 -skew-x-12 bg-center bg-no-repeat bg-contain -translate-x-1/4 left-3/4 top-1/2 bg-gradient-to-r from-purple-100 to-green-100;
 			content:'';
 			width: 150%;
 			height: 150%;

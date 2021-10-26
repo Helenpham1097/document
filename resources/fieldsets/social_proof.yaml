@@ -1,0 +1,109 @@
+title: 'Social proof'
+fields:
+  -
+    handle: template
+    field:
+      display: template
+      type: hidden
+      icon: hidden
+      listable: hidden
+      default: /general_content/social_proof
+  -
+    handle: display_title_section
+    field:
+      collapse: false
+      sets:
+        section_title:
+          display: 'Title Section'
+          fields:
+            -
+              import: section_title
+      display: 'Add Title Section'
+      type: replicator
+      icon: replicator
+      listable: hidden
+      max_sets: 1
+  -
+    handle: Items
+    field:
+      collapse: false
+      sets:
+        Social-Proof-item:
+          display: Social-Proof-item
+          fields:
+            -
+              handle: social_proof_image
+              field:
+                mode: grid
+                restrict: false
+                allow_uploads: true
+                display: Image
+                type: assets
+                icon: assets
+                listable: hidden
+                max_files: 1
+            -
+              handle: social_proof_name
+              field:
+                input_type: text
+                antlers: false
+                display: Name
+                type: text
+                icon: text
+                listable: hidden
+            -
+              handle: social_proof_position
+              field:
+                input_type: text
+                antlers: false
+                display: 'Position / Company'
+                type: text
+                icon: text
+                listable: hidden
+            -
+              handle: social_proof_textarea
+              field:
+                antlers: false
+                display: Social-Proof
+                always_show_set_button: false
+                buttons:
+                  - bold
+                  - italic
+                  - removeformat
+                  - anchor
+                  - table
+                save_html: false
+                toolbar_mode: fixed
+                link_noopener: false
+                link_noreferrer: false
+                target_blank: false
+                reading_time: false
+                fullscreen: false
+                allow_source: true
+                enable_input_rules: false
+                enable_paste_rules: true
+                type: bard
+                icon: textarea
+                listable: hidden
+            -
+              handle: social_proof_link
+              field:
+                display: Link
+                type: link
+                icon: link
+                width: 50
+                listable: hidden
+            -
+              handle: social_proof_text_link
+              field:
+                input_type: text
+                antlers: false
+                display: 'Text link'
+                type: text
+                icon: text
+                listable: hidden
+                width: 50
+      display: 'Social-Proof Item'
+      type: replicator
+      icon: replicator
+      listable: hidden

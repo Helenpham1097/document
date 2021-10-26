@@ -84,6 +84,16 @@ sections:
               fields:
                 -
                   import: feature_highlight
+            social_proof:
+              display: 'Social Proof'
+              fields:
+                -
+                  import: social_proof
+            pricing_table:
+              display: 'Pricing Table'
+              fields:
+                -
+                  import: pricing_table
           display: Sections
           type: replicator
           icon: replicator

@@ -15,7 +15,7 @@ fields:
       max_sets: 1
       sets:
         section_title:
-          display: 'Section title'
+          display: 'Title Section'
           fields:
             -
               import: section_title
