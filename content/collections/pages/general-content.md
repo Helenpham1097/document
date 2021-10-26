@@ -1,12 +1,34 @@
 ---
-title: 'General content'
+title: 'General Content'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1634610602
+updated_at: 1635289154
 blueprint: general_content
 description: Lorem
 template: general_content/layout
 subheader: sdasda
 sections:
+  -
+    template: /global/companies_logo
+    companies_title: 'We’re proud to have played a part in these amazing journeys.'
+    company:
+      -
+        company_logo: algolia.svg
+        type: companies
+        enabled: true
+      -
+        company_logo: algolia.svg
+        type: companies
+        enabled: true
+      -
+        company_logo: algolia.svg
+        type: companies
+        enabled: true
+      -
+        company_logo: algolia.svg
+        type: companies
+        enabled: true
+    type: companies_logo
+    enabled: false
   -
     template: /general_content/steps
     testimonial_section_title: null
@@ -358,7 +380,7 @@ sections:
         type: column
         enabled: true
     type: features_columns_item
-    enabled: true
+    enabled: false
     display_title: true
     center_title_pre_title: 'Pre Title'
     center_title_title: 'Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
@@ -513,6 +535,225 @@ sections:
     type: highlight
     enabled: false
     toggle_background: true
+  -
+    template: /global/call_to_action
+    center_title_pre_title: null
+    center_title_title: null
+    center_title_textarea: null
+    type: call_to_action
+    enabled: false
+    call_to_action_pre_title: 'Pre Title'
+    call_to_action_title: Suscribe
+    call_to_action_textarea:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Text area to complement the secondary title'
+    call_to_action_terms:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'By subscribing, you agree with Webslice '
+          -
+            type: text
+            marks:
+              -
+                type: link
+                attrs:
+                  href: '#'
+                  target: null
+                  rel: null
+            text: Terms
+          -
+            type: text
+            text: ' of Service and '
+          -
+            type: text
+            marks:
+              -
+                type: link
+                attrs:
+                  href: '#'
+                  target: null
+                  rel: null
+            text: 'Privacy Policy'
+          -
+            type: text
+            text: .
+  -
+    template: /general_content/social_proof
+    social_proof_section_title: null
+    social_proof_text_area: null
+    Items:
+      -
+        social_proof_image: profile.png
+        social_proof_name: Ariel
+        social_proof_position: Designer
+        social_proof_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue. Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque.'
+        social_proof_link: '#'
+        social_proof_text_link: Link
+        type: Social-Proof-item
+        enabled: true
+      -
+        social_proof_image: 09054a5f40e858381279a62e2ee534a7.webp
+        social_proof_name: Name
+        social_proof_position: 'Position / Company'
+        social_proof_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. '
+        social_proof_link: null
+        social_proof_text_link: null
+        type: Social-Proof-item
+        enabled: true
+    type: social_proof
+    enabled: false
+    call_to_action_pre_title: 'Pre Title'
+    call_to_action_title: 'Section title'
+    call_to_action_textarea:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
+      -
+        type: paragraph
+    center_title_pre_title: 'Pre Title'
+    center_title_title: 'Pre Title'
+    center_title_textarea:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Text area to complement the secondary title'
+      -
+        type: paragraph
+        content:
+          -
+            type: hard_break
+    toggle_color: true
+    add_title_section:
+      -
+        template: /global/section_title
+        center_title_pre_title: 'Pre Title'
+        center_title_title: 'Section title'
+        center_title_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Text area to complement the secondary title'
+          -
+            type: paragraph
+            content:
+              -
+                type: hard_break
+        toggle_color: false
+        type: section_title
+        enabled: true
+    display_title_section:
+      -
+        template: /global/section_title
+        center_title_pre_title: 'Pre Title'
+        center_title_title: 'Pre Title'
+        center_title_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Text area to complement the secondary title'
+        toggle_color: false
+        type: section_title
+        enabled: true
+  -
+    template: /general_content/pricing_table
+    Items:
+      -
+        template: null
+        pricing_features_title: asdasd
+        pricing_features_subtitle: asda
+        pricing_features_list:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: sdasdasd
+        type: column
+        enabled: true
+      -
+        template: null
+        pricing_features_title: null
+        pricing_features_subtitle: null
+        pricing_features_list: null
+        type: column
+        enabled: true
+      -
+        template: null
+        pricing_features_title: null
+        pricing_features_subtitle: null
+        pricing_features_list: null
+        type: column
+        enabled: true
+    type: pricing_table
+    enabled: true
+    items:
+      -
+        template: null
+        pricing_features_title: asda
+        pricing_features_subtitle: adsdas
+        pricing_features_list:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: asdasdasda
+        type: column
+        enabled: true
+    center_title_pre_title: 'Pre Title'
+    center_title_title: 'Section title'
+    center_title_textarea:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Text area to complement the secondary title'
+    toggle_color: false
+    display_title_section:
+      -
+        template: /global/section_title
+        center_title_pre_title: 'Pre Title'
+        center_title_title: 'Section title'
+        center_title_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Text area to complement the secondary title'
+        toggle_color: true
+        type: section_title
+        enabled: true
+    pricing_toggle: false
 top_section:
   -
     type: hero_general_content
