@@ -79,7 +79,8 @@ fields:
                 icon: text
                 listable: hidden
                 width: 50
-      display: 'Step Item'
+      display: 'Add steps'
       type: replicator
       icon: replicator
       listable: hidden
+      instructions: 'Add steps horizontally, alternating the colour and position and adding the number in ascending order.'

@@ -1,12 +1,231 @@
 ---
 title: 'General Content'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1635289154
+updated_at: 1635462812
 blueprint: general_content
 description: Lorem
 template: general_content/layout
 subheader: sdasda
 sections:
+  -
+    template: /global/section_title
+    center_title_pre_title: 'Running quickly'
+    center_title_title: 'Web Hosting plans'
+    center_title_textarea:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Get your website up and running quickly with our tailored Web Hosting plans'
+    type: section_title
+    enabled: true
+    toggle_alignment: true
+    toggle_color: true
+  -
+    template: /general_content/comparison_table
+    header_table:
+      -
+        brand_left: 05.svg
+        brand_right: null
+        text: Title
+        table_icon: default-avatar.png
+        header_column_1:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Header column 1'
+        header_column_2:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Header column 2'
+        header_column_3:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Header column 2'
+    grid:
+      -
+        text: Bandwidth
+        comparison_1:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: '100 GB-hours'
+        comparison_2:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: '1,000 GB-hours'
+        comparison_3:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: Custom
+      -
+        text: Team
+        comparison_1:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: '5 seconds'
+        comparison_2:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: '15 seconds'
+        comparison_3:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: '30 seconds'
+      -
+        text: 'Serverless Function Execution Timeout'
+        comparison_1:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: '5 seconds'
+        comparison_2:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: '15 seconds'
+        comparison_3:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: Custom
+      -
+        text: text
+        comparison_1:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: comparison_1
+        comparison_2: null
+        comparison_3:
+          -
+            type: bullet_list
+            content:
+              -
+                type: list_item
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'item 1'
+              -
+                type: list_item
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'item 2'
+              -
+                type: list_item
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'item 3'
+              -
+                type: list_item
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'item 4'
+      -
+        text: null
+        comparison_1:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: asda
+        comparison_2:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: asdas
+        comparison_3:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: dasda
+      -
+        text: null
+        comparison_1:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: ' '
+        comparison_2:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam. Fusce maximus non metus ac facilisis. Sed id nunc a ante interdum efficitur. Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue. Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. Phasellus molestie blandit erat, vitae ullamcorper ante viverra et. Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
+        comparison_3:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: ' '
+    table_caption:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. '
+    type: comparison_table
+    enabled: true
   -
     template: /global/companies_logo
     companies_title: 'We’re proud to have played a part in these amazing journeys.'
@@ -28,7 +247,7 @@ sections:
         type: companies
         enabled: true
     type: companies_logo
-    enabled: false
+    enabled: true
   -
     template: /general_content/steps
     testimonial_section_title: null
@@ -91,7 +310,7 @@ sections:
         type: Step-item
         enabled: true
     type: steps
-    enabled: false
+    enabled: true
   -
     template: /general_content/testimonial
     rows:
@@ -135,7 +354,7 @@ sections:
     reverse_alignment: false
     toggle_alignment: false
     type: testimonial
-    enabled: false
+    enabled: true
     testimonial_section_title: 'Duo assum utroque appetere an'
     testimonial_text_area:
       -
@@ -249,21 +468,6 @@ sections:
         type: Testimonial-item
         enabled: true
   -
-    template: /global/section_title
-    center_title_pre_title: 'Running quickly'
-    center_title_title: 'Web Hosting plans'
-    center_title_textarea:
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: 'Get your website up and running quickly with our tailored Web Hosting plans'
-    type: section_title
-    enabled: false
-    toggle_alignment: true
-    toggle_color: true
-  -
     template: /general_content/features_icons
     display_title_section:
       -
@@ -332,8 +536,21 @@ sections:
                 text: 'Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
         type: column
         enabled: true
+      -
+        template: null
+        feature_image: 05.svg
+        features_columns_title: Feature
+        features_columns_list:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam. Fusce maximus non metus ac facilisis. Sed id nunc a ante interdum efficitu.'
+        type: column
+        enabled: true
     type: icon_features
-    enabled: false
+    enabled: true
   -
     template: /general_content/features_columns
     items:
@@ -380,7 +597,7 @@ sections:
         type: column
         enabled: true
     type: features_columns_item
-    enabled: false
+    enabled: true
     display_title: true
     center_title_pre_title: 'Pre Title'
     center_title_title: 'Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
@@ -453,38 +670,10 @@ sections:
         type: highlight-item
         enabled: true
     reverse_alignment: false
-    toggle_alignment: false
+    toggle_alignment: true
     type: highlight
-    enabled: false
-    toggle_background: false
-  -
-    template: /general_content/feature_highlight
-    rows:
-      -
-        feature_highlight_title: 'Feature Highlight'
-        feature_highlight_textarea:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. Phasellus molestie blandit erat, vitae ullamcorper ante viverra et. Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
-        feature_highlight_link: null
-        feature_highlight_text_link: 'Feature Highlight'
-        feature_highlight_image: bb28417eb2b2507580ab0f08bf09ea69.webp
-        feature_highlight_textcaption:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: asdasdas
-        type: feature_highlight-item
-        enabled: true
-    reverse_alignment: false
-    toggle_alignment: false
-    type: feature_highlight
-    enabled: false
+    enabled: true
+    toggle_background: true
   -
     template: /general_content/highlight
     rows:
@@ -533,7 +722,7 @@ sections:
     reverse_alignment: false
     toggle_alignment: true
     type: highlight
-    enabled: false
+    enabled: true
     toggle_background: true
   -
     template: /global/call_to_action
@@ -541,7 +730,7 @@ sections:
     center_title_title: null
     center_title_textarea: null
     type: call_to_action
-    enabled: false
+    enabled: true
     call_to_action_pre_title: 'Pre Title'
     call_to_action_title: Suscribe
     call_to_action_textarea:
@@ -620,7 +809,7 @@ sections:
         type: Social-Proof-item
         enabled: true
     type: social_proof
-    enabled: false
+    enabled: true
     call_to_action_pre_title: 'Pre Title'
     call_to_action_title: 'Section title'
     call_to_action_textarea:
@@ -753,7 +942,7 @@ sections:
         toggle_color: true
         type: section_title
         enabled: true
-    pricing_toggle: false
+    pricing_toggle: true
 top_section:
   -
     type: hero_general_content

@@ -34,7 +34,7 @@ fields:
     field:
       character_limit: '400'
       antlers: false
-      display: 'Text area'
+      display: 'Text Area'
       always_show_set_button: false
       buttons:
         - bold
@@ -63,3 +63,4 @@ fields:
       icon: toggle
       listable: hidden
       width: 25
+      instructions: 'Alternate the colour of the highlighted title between purple and green.'

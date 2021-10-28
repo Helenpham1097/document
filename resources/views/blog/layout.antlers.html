@@ -30,7 +30,8 @@
 <body>
     {{ partial:global/nav }}
         {{ template_content }}
-    {{ partial:blog/footer }}
+    {{# {{ partial:blog/footer }} #}}
+    {{ partial:global/footer }}
 
 </body>
 {{ partial:lottie }}

@@ -1,4 +1,4 @@
-title: 'Highlight'
+title: Highlight
 fields:
   -
     handle: template
@@ -110,13 +110,23 @@ fields:
       icon: replicator
       listable: hidden
   -
+    handle: toggle_background
+    field:
+      display: 'Toggle Background'
+      type: toggle
+      icon: toggle
+      listable: hidden
+      width: 33
+      instructions: 'Add a coloured background to the feature, the image will look flat.'
+  -
     handle: reverse_alignment
     field:
       display: 'Reverse Alignment'
       type: toggle
       icon: toggle
       listable: hidden
-      width: 25
+      width: 33
+      instructions: 'Alternate the order of the features, from right to left or vice versa.'
   -
     handle: toggle_alignment
     field:
@@ -124,12 +134,5 @@ fields:
       type: toggle
       icon: toggle
       listable: hidden
-      width: 25
-  -
-    handle: toggle_background
-    field:
-      display: 'Toggle Background'
-      type: toggle
-      icon: toggle
-      listable: hidden
-      width: 25
+      width: 33
+      instructions: 'Align all features to the left or right.'

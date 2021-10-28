@@ -18,11 +18,11 @@ sections:
           collapse: true
           sets:
             hero_general_content:
-              display: 'Hero content'
+              display: 'Hero Content'
               fields:
                 -
                   import: hero_home
-          display: 'Top section'
+          display: 'Top Section'
           type: replicator
           icon: replicator
           listable: hidden
@@ -40,7 +40,7 @@ sections:
           collapse: true
           sets:
             section_title:
-              display: 'Center title'
+              display: 'Section Title'
               fields:
                 -
                   import: section_title
@@ -50,22 +50,22 @@ sections:
                 -
                   import: call_to_action
             features_columns_item:
-              display: 'Column Features'
+              display: 'Column Features With Image'
               fields:
                 -
                   import: features_columns
             highlight:
-              display: Highlight
+              display: 'Highlight Features'
               fields:
                 -
                   import: highlight
             companies_logo:
-              display: 'Companies logo'
+              display: 'Companies Logo'
               fields:
                 -
                   import: companies_logo
             testimonial:
-              display: Testimonial
+              display: 'Testimonial Section'
               fields:
                 -
                   import: testimonial
@@ -75,15 +75,10 @@ sections:
                 -
                   import: steps
             icon_features:
-              display: 'Icon Features'
+              display: 'Features With Icon'
               fields:
                 -
                   import: features_icon
-            feature_highlight:
-              display: 'Feature  Highlight'
-              fields:
-                -
-                  import: feature_highlight
             social_proof:
               display: 'Social Proof'
               fields:
@@ -94,6 +89,11 @@ sections:
               fields:
                 -
                   import: pricing_table
+            comparison_table:
+              display: 'Comparison Table'
+              fields:
+                -
+                  import: comparison_table
           display: Sections
           type: replicator
           icon: replicator
@@ -125,7 +125,7 @@ sections:
           required: true
           validate:
             - required
-          display: 'Page title'
+          display: 'Page Title'
           default: 'General Content Title'
           instructions: 'This is the title that will be displayed in the browser bar and will help you to identify it.'
           listable: hidden
@@ -167,7 +167,7 @@ sections:
         field:
           character_limit: '160'
           antlers: false
-          display: 'Meta description'
+          display: 'Meta Description'
           type: textarea
           icon: textarea
           listable: hidden

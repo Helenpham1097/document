@@ -1,0 +1,57 @@
+<section class="container mx-auto sm:px-8 max-w-7xl">
+	{{ header_table }}
+
+		<div class="grid grid-flow-row grid-cols-8 mx-auto border border-gray-100 divide-x-2 divide-gray-100 auto-rows-fr divide-solid">
+			<div class="flex flex-row items-center col-span-2 p-4 space-x-4 ">
+				{{ table_icon }}
+				<div class="relative flex items-center p-1">
+					<div class="absolute inset-0 transform -skew-x-6 bg-purple-500"></div>
+					<img class="relative w-6 h-6 " src="{{ glide:url width='200' dpr='2' }}" alt="{{ alt }}" />
+				</div>
+				{{ /table_icon }}
+				<div class="text-2xl font-medium text-gray-800 ">{{ text }}</div>
+			</div>
+			<div class="flex flex-row items-center col-span-2 p-4 space-x-4 bg-gray-50 ">
+				{{ if header_column_1 }}
+				<div class="text-lg font-medium text-gray-600 ">{{ header_column_1 |strip_tags:p }}</div>
+				{{ /if }}
+			</div>
+			<div class="flex flex-row items-center col-span-2 p-4 space-x-4 bg-gray-50 ">
+				{{ if header_column_2 }}
+				<div class="text-lg font-medium text-gray-600 ">{{ header_column_2 |strip_tags:p }}</div>
+				{{ /if }}
+			</div>
+			<div class="flex flex-row items-center col-span-2 p-4 space-x-4 bg-gray-50 ">
+				{{ if header_column_3 }}
+				<div class="text-lg font-medium text-gray-600 ">{{ header_column_3 |strip_tags:p }}</div>
+				{{ /if }}
+			</div>	
+		</div>
+
+	{{ /header_table }}
+
+	{{ grid }}
+		<div class="grid grid-flow-row grid-cols-8 mx-auto prose border border-gray-100 divide-x-2 divide-gray-100 max-w-none md:prose-xl lg:prose-2xl prose-purple auto-rows-fr divide-solid">
+			<div class="col-span-2 p-4 text-sm text-gray-800">
+				{{ text }}
+			</div>
+			{{ if comparison_1 }}
+			<div class="col-span-2 p-4 text-sm font-light text-gray-500">
+				{{ comparison_1 | strip_tags:p }}
+			</div>
+			{{ /if }}
+			{{ if comparison_2 }}
+			<div class="col-span-2 p-4 -my-px text-sm font-light text-gray-500">
+				{{ comparison_2 | strip_tags:p }}
+			</div>
+			{{ /if }}
+			{{ if comparison_3 }}
+			<div class="col-span-2 p-4 text-sm font-light text-gray-500">
+				{{ comparison_3 | strip_tags:p }}
+			</div>
+			{{ /if }}
+		</div>		
+	{{ /grid }}
+
+	<div class="w-full mt-4 text-sm tracking-wide text-center text-gray-400">{{ table_caption |strip_tags:p }}</div>
+</section>

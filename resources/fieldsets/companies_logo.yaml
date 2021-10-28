@@ -23,7 +23,7 @@ fields:
       collapse: false
       sets:
         companies:
-          display: 'New Set'
+          display: 'Company logo'
           fields:
             -
               handle: company_logo
@@ -32,11 +32,13 @@ fields:
                 restrict: false
                 allow_uploads: true
                 max_files: 1
-                display: 'company logo'
+                display: Image
                 type: assets
                 icon: assets
                 listable: hidden
-      display: company
+      display: 'Row of logos'
       type: replicator
       icon: replicator
       listable: hidden
+      instructions: 'Add horizontal images to the row with a maximum of 6 images.'
+      max_sets: 6

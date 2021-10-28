@@ -1,4 +1,4 @@
-title: 'Icon Features'
+title: 'Features With Icon'
 fields:
   -
     handle: template
@@ -29,7 +29,7 @@ fields:
       collapse: false
       sets:
         column:
-          display: Icon Feature
+          display: 'Icon Feature'
           fields:
             -
               handle: template
@@ -54,7 +54,7 @@ fields:
               field:
                 input_type: text
                 antlers: false
-                display: 'Title'
+                display: Title
                 type: text
                 icon: text
                 listable: hidden

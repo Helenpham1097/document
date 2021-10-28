@@ -78,7 +78,7 @@ fields:
               field:
                 input_type: text
                 antlers: false
-                display: Position / Company
+                display: 'Position / Company'
                 type: text
                 icon: text
                 listable: hidden
@@ -129,3 +129,4 @@ fields:
       type: replicator
       icon: replicator
       listable: hidden
+      instructions: 'Add testimonials to the section, ideally 5 items'
