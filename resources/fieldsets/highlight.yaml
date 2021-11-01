@@ -51,24 +51,6 @@ fields:
                 icon: textarea
                 listable: hidden
             -
-              handle: highlight_link
-              field:
-                display: Link
-                type: link
-                icon: link
-                width: 50
-                listable: hidden
-            -
-              handle: highlight_text_link
-              field:
-                input_type: text
-                antlers: false
-                display: 'Text link'
-                type: text
-                icon: text
-                listable: hidden
-                width: 50
-            -
               handle: highlight_image
               field:
                 mode: grid
@@ -105,6 +87,8 @@ fields:
                 icon: text
                 listable: hidden
                 character_limit: 100
+            -
+              import: buttons
       display: Rows
       type: replicator
       icon: replicator

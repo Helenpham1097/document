@@ -89,6 +89,11 @@ sections:
               fields:
                 -
                   import: pricing_table
+            buttons:
+              display: 'Buttons'
+              fields:
+                -
+                  import: buttons
             comparison_table:
               display: 'Comparison Table'
               fields:

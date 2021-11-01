@@ -1,0 +1,75 @@
+title: Buttons
+fields:
+  -
+    handle: template
+    field:
+      display: template
+      type: hidden
+      icon: hidden
+      listable: hidden
+      default: /global/buttons
+  -
+    handle: link
+    field:
+      display: Link
+      type: link
+      icon: link
+      listable: hidden
+  -
+    handle: select
+    field:
+      options:
+        background: background
+        info: info
+      placeholder: 'Choose your button type'
+      multiple: false
+      clearable: false
+      searchable: false
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      display: 'Select type'
+      type: select
+      icon: select
+      listable: hidden
+      width: 50
+      validate:
+        - required
+      if:
+        link: 'not empty'
+  -
+    handle: select_icon
+    field:
+      options:
+        none: null
+        chevron-left: null
+        chevron-right: null
+        mail: null
+      multiple: false
+      clearable: false
+      searchable: true
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      display: 'Select Icon'
+      type: select
+      icon: select
+      listable: hidden
+      width: 50
+      if:
+        select: 'equals background'
+        link: 'not empty'
+  -
+    handle: text
+    field:
+      input_type: text
+      character_limit: 100
+      antlers: false
+      display: Text
+      type: text
+      icon: text
+      listable: hidden
+      validate:
+        - required
+      if:
+        link: 'not empty'
