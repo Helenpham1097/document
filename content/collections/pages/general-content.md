@@ -1,7 +1,7 @@
 ---
-title: 'General Content'
+title: ariel@sitehost.nz
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1635741909
+updated_at: 1635801038
 blueprint: general_content
 description: Lorem
 template: general_content/layout
@@ -478,7 +478,7 @@ sections:
     reverse_alignment: false
     toggle_alignment: true
     type: highlight
-    enabled: true
+    enabled: false
     toggle_background: true
   -
     template: /general_content/highlight
@@ -538,7 +538,7 @@ sections:
     reverse_alignment: false
     toggle_alignment: true
     type: highlight
-    enabled: true
+    enabled: false
     toggle_background: false
   -
     template: /global/call_to_action
@@ -546,7 +546,7 @@ sections:
     center_title_title: null
     center_title_textarea: null
     type: call_to_action
-    enabled: false
+    enabled: true
     call_to_action_pre_title: 'Pre Title'
     call_to_action_title: Suscribe
     call_to_action_textarea:
