@@ -55,3 +55,14 @@ label {
 		/* background-position: 98% 50%; */
 	}
 }
+
+[type='checkbox'] {
+	&.toggle {
+		@apply transition duration-200 ease-in-out bg-gray-100 rounded-full bg-none;
+	}
+}
+[type='checkbox']:checked {
+	&.toggle {
+		@apply transition duration-200 ease-in-out bg-purple-500 rounded-full bg-none;
+	}
+}

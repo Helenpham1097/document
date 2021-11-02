@@ -84,6 +84,8 @@ fields:
                 type: bard
                 icon: list
                 listable: hidden
+            -
+              import: buttons
       display: Items
       type: replicator
       icon: replicator

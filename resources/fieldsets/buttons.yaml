@@ -19,8 +19,9 @@ fields:
     handle: select
     field:
       options:
-        background: background
-        info: info
+        background: 'Background Primary'
+        info: Link
+        background-secondary: 'Background Secondary'
       placeholder: 'Choose your button type'
       multiple: false
       clearable: false
@@ -33,8 +34,6 @@ fields:
       icon: select
       listable: hidden
       width: 50
-      validate:
-        - required
       if:
         link: 'not empty'
   -
@@ -57,7 +56,7 @@ fields:
       listable: hidden
       width: 50
       if:
-        select: 'equals background'
+        select: '!== info'
         link: 'not empty'
   -
     handle: text
@@ -69,7 +68,5 @@ fields:
       type: text
       icon: text
       listable: hidden
-      validate:
-        - required
       if:
         link: 'not empty'

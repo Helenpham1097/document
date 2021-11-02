@@ -46,6 +46,10 @@ fields:
       listable: hidden
       instructions: 'Text area to complement the secondary title'
   -
+    import: section_title
+  -
+    import: buttons
+  -
     handle: call_to_action_terms
     field:
       character_limit: '400'

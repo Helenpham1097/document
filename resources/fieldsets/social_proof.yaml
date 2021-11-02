@@ -86,23 +86,7 @@ fields:
                 icon: textarea
                 listable: hidden
             -
-              handle: social_proof_link
-              field:
-                display: Link
-                type: link
-                icon: link
-                width: 50
-                listable: hidden
-            -
-              handle: social_proof_text_link
-              field:
-                input_type: text
-                antlers: false
-                display: 'Text link'
-                type: text
-                icon: text
-                listable: hidden
-                width: 50
+              import: buttons
       display: 'Social-Proof Item'
       type: replicator
       icon: replicator

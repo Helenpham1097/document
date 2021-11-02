@@ -62,23 +62,7 @@ fields:
                 icon: textarea
                 listable: hidden
             -
-              handle: step_link
-              field:
-                display: Link
-                type: link
-                icon: link
-                width: 50
-                listable: hidden
-            -
-              handle: step_text_link
-              field:
-                input_type: text
-                antlers: false
-                display: 'Text link'
-                type: text
-                icon: text
-                listable: hidden
-                width: 50
+              import: buttons
       display: 'Add steps'
       type: replicator
       icon: replicator

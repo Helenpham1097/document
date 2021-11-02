@@ -31,7 +31,11 @@
 							{{ features_columns_list | strip_tags:p }}
 						</p>
 					{{ /if }}
-					<span href="#" class="inline-flex items-center cta"> Learn More </span>
+					<div>
+					{{ if link  }}
+						{{ partial:global/buttons }}
+					{{ /if }}
+					</div>
 				</div>
 			</div>
 		</div>
