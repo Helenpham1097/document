@@ -1,12 +1,224 @@
 ---
 title: 'General content'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1635819716
+updated_at: 1635913288
 blueprint: general_content
 description: Lorem
 template: general_content/layout
 subheader: sdasda
 sections:
+  -
+    template: /general_content/highlight
+    rows:
+      -
+        highlight_title: 'Highlight 1 Toggle alignment'
+        highlight_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue. Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. Phasellus molestie blandit erat, vitae ullamcorper ante viverra et. Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
+        highlight_link: '#'
+        highlight_text_link: 'Highlight Link'
+        highlight_image: 09054a5f40e858381279a62e2ee534a7.webp
+        highlight_textcaption:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Caption this'
+        type: highlight-item
+        enabled: true
+        template: /global/buttons
+        select: info
+        select_icon: null
+        text: 'Read more'
+        link: '#'
+        default_image: 09054a5f40e858381279a62e2ee534a7.webp
+      -
+        highlight_title: 'Highlight 2'
+        highlight_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue. Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. Phasellus molestie blandit erat, vitae ullamcorper ante viverra et. Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
+        highlight_link: '#'
+        highlight_text_link: Link
+        highlight_image: b8f5db7682a5fb3fa938f2e26c0e855c.webp
+        highlight_textcaption:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: TextCaption
+        type: highlight-item
+        enabled: true
+        template: /global/buttons
+        select: info
+        select_icon: null
+        text: 'Read mores'
+        link: '#'
+        default_image: b8f5db7682a5fb3fa938f2e26c0e855c.webp
+    reverse_alignment: false
+    toggle_alignment: true
+    type: highlight
+    enabled: true
+    toggle_background: true
+  -
+    template: /general_content/highlight
+    rows:
+      -
+        highlight_title: 'Highlight Reverse Alignment'
+        highlight_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue. Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. Phasellus molestie blandit erat, vitae ullamcorper ante viverra et. Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
+        highlight_link: '#'
+        highlight_text_link: 'Highlight Link'
+        highlight_image: 09054a5f40e858381279a62e2ee534a7.webp
+        highlight_textcaption:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Caption this'
+        type: highlight-item
+        enabled: true
+        template: /global/buttons
+        select: info
+        select_icon: null
+        text: 'Learn more'
+        link: '#'
+        default_image: 09054a5f40e858381279a62e2ee534a7.webp
+      -
+        highlight_title: 'Highlight 2'
+        highlight_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue. Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. Phasellus molestie blandit erat, vitae ullamcorper ante viverra et. Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
+        highlight_link: '#'
+        highlight_text_link: Link
+        highlight_image: b8f5db7682a5fb3fa938f2e26c0e855c.webp
+        highlight_textcaption:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: TextCaption
+        type: highlight-item
+        enabled: true
+        template: /global/buttons
+        select: background
+        select_icon: mail
+        text: 'Contact Us'
+        link: '#'
+        default_image: b8f5db7682a5fb3fa938f2e26c0e855c.webp
+    reverse_alignment: false
+    toggle_alignment: true
+    type: highlight
+    enabled: true
+    toggle_background: false
+  -
+    template: /general_content/features_columns
+    items:
+      -
+        template: /global/buttons
+        features_columns_title: 'Response time'
+        features_columns_subtitle: 'Response time'
+        features_columns_list:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam. '
+        type: column
+        enabled: true
+        feature_image: bb28417eb2b2507580ab0f08bf09ea69.webp
+        link: '#'
+        select: info
+        select_icon: null
+        text: 'Learn more'
+        default_image: 09054a5f40e858381279a62e2ee534a7.webp
+      -
+        template: /global/buttons
+        feature_image: b8f5db7682a5fb3fa938f2e26c0e855c.webp
+        features_columns_title: 'Response time'
+        features_columns_subtitle: 'Response time'
+        features_columns_list:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Ut ornare enim at elit molestie congue. Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. Phasellus molestie blandit erat, vitae ullamcorper ante viverra et. '
+        type: column
+        enabled: true
+        link: '#'
+        select: background
+        select_icon: chevron-right
+        text: 'Learn More'
+        default_image: 02.svg
+      -
+        template: /global/buttons
+        feature_image: 09054a5f40e858381279a62e2ee534a7.webp
+        features_columns_title: 'Response time'
+        features_columns_subtitle: 'Response time'
+        features_columns_list:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
+        type: column
+        enabled: true
+        link: '#'
+        select: background-secondary
+        select_icon: chevron-right
+        text: 'Learn More'
+        default_image: 2.png
+    type: features_columns_item
+    enabled: false
+    display_title: true
+    center_title_pre_title: 'Pre Title'
+    center_title_title: 'Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
+    center_title_textarea:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. \'
+    toggle_color: true
+    display_title_section:
+      -
+        template: /global/section_title
+        center_title_pre_title: 'Pre Title'
+        center_title_title: 'Section title'
+        center_title_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam. '
+        toggle_color: false
+        type: section_title
+        enabled: true
   -
     template: /global/section_title
     center_title_pre_title: 'Running quickly'
@@ -27,21 +239,23 @@ sections:
     companies_title: 'We’re proud to have played a part in these amazing journeys.'
     company:
       -
-        company_logo: algolia.svg
+        company_logo: null
         type: companies
         enabled: true
+        template: /global/default_image
+        default_image: algolia.svg
       -
         company_logo: algolia.svg
         type: companies
         enabled: true
+        template: /global/default_image
+        default_image: algolia.svg
       -
         company_logo: algolia.svg
         type: companies
         enabled: true
-      -
-        company_logo: algolia.svg
-        type: companies
-        enabled: true
+        template: /global/default_image
+        default_image: algolia.svg
     type: companies_logo
     enabled: false
   -
@@ -50,7 +264,7 @@ sections:
     testimonial_text_area: null
     Items:
       -
-        step_image: 4.png
+        step_image: null
         step_title: 'First Step'
         step_textarea:
           -
@@ -68,6 +282,7 @@ sections:
         select: info
         select_icon: chevron-right
         text: Link
+        default_image: 1.png
       -
         step_image: 4.png
         step_title: 'First Step'
@@ -87,6 +302,7 @@ sections:
         select: null
         select_icon: null
         text: null
+        default_image: 1.png
       -
         step_image: 4.png
         step_title: 'First Step'
@@ -106,6 +322,7 @@ sections:
         select: null
         select_icon: null
         text: null
+        default_image: 2.png
       -
         step_image: 4.png
         step_title: 'First Step'
@@ -125,8 +342,9 @@ sections:
         select: null
         select_icon: null
         text: null
+        default_image: 4.png
     type: steps
-    enabled: true
+    enabled: false
   -
     template: /general_content/testimonial
     rows:
@@ -170,7 +388,7 @@ sections:
     reverse_alignment: false
     toggle_alignment: false
     type: testimonial
-    enabled: true
+    enabled: false
     testimonial_section_title: 'Duo assum utroque appetere an'
     testimonial_text_area:
       -
@@ -366,212 +584,7 @@ sections:
         type: column
         enabled: true
     type: icon_features
-    enabled: true
-  -
-    template: /general_content/features_columns
-    items:
-      -
-        template: /global/buttons
-        features_columns_title: 'Response time'
-        features_columns_subtitle: 'Response time'
-        features_columns_list:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam. '
-        type: column
-        enabled: true
-        feature_image: bb28417eb2b2507580ab0f08bf09ea69.webp
-        link: '#'
-        select: info
-        select_icon: null
-        text: 'Learn more'
-      -
-        template: /global/buttons
-        feature_image: b8f5db7682a5fb3fa938f2e26c0e855c.webp
-        features_columns_title: 'Response time'
-        features_columns_subtitle: 'Response time'
-        features_columns_list:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Ut ornare enim at elit molestie congue. Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. Phasellus molestie blandit erat, vitae ullamcorper ante viverra et. '
-        type: column
-        enabled: true
-        link: '#'
-        select: background
-        select_icon: chevron-right
-        text: 'Learn More'
-      -
-        template: /global/buttons
-        feature_image: 09054a5f40e858381279a62e2ee534a7.webp
-        features_columns_title: 'Response time'
-        features_columns_subtitle: 'Response time'
-        features_columns_list:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
-        type: column
-        enabled: true
-        link: '#'
-        select: background-secondary
-        select_icon: chevron-right
-        text: 'Learn More'
-    type: features_columns_item
-    enabled: true
-    display_title: true
-    center_title_pre_title: 'Pre Title'
-    center_title_title: 'Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
-    center_title_textarea:
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. \'
-    toggle_color: true
-    display_title_section:
-      -
-        template: /global/section_title
-        center_title_pre_title: 'Pre Title'
-        center_title_title: 'Section title'
-        center_title_textarea:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam. '
-        toggle_color: false
-        type: section_title
-        enabled: true
-  -
-    template: /general_content/highlight
-    rows:
-      -
-        highlight_title: 'Highlight 1 Toggle alignment'
-        highlight_textarea:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue. Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. Phasellus molestie blandit erat, vitae ullamcorper ante viverra et. Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
-        highlight_link: '#'
-        highlight_text_link: 'Highlight Link'
-        highlight_image: 09054a5f40e858381279a62e2ee534a7.webp
-        highlight_textcaption:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Caption this'
-        type: highlight-item
-        enabled: true
-        template: /global/buttons
-        select: info
-        select_icon: null
-        text: 'Read more'
-        link: '#'
-      -
-        highlight_title: 'Highlight 2'
-        highlight_textarea:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue. Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. Phasellus molestie blandit erat, vitae ullamcorper ante viverra et. Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
-        highlight_link: '#'
-        highlight_text_link: Link
-        highlight_image: b8f5db7682a5fb3fa938f2e26c0e855c.webp
-        highlight_textcaption:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: TextCaption
-        type: highlight-item
-        enabled: true
-        template: /global/buttons
-        select: info
-        select_icon: null
-        text: 'Read mores'
-        link: '#'
-    reverse_alignment: false
-    toggle_alignment: true
-    type: highlight
-    enabled: true
-    toggle_background: true
-  -
-    template: /general_content/highlight
-    rows:
-      -
-        highlight_title: 'Highlight Reverse Alignment'
-        highlight_textarea:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue. Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. Phasellus molestie blandit erat, vitae ullamcorper ante viverra et. Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
-        highlight_link: '#'
-        highlight_text_link: 'Highlight Link'
-        highlight_image: 09054a5f40e858381279a62e2ee534a7.webp
-        highlight_textcaption:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Caption this'
-        type: highlight-item
-        enabled: true
-        template: /global/buttons
-        select: info
-        select_icon: null
-        text: 'Learn more'
-        link: '#'
-      -
-        highlight_title: 'Highlight 2'
-        highlight_textarea:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue. Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. Phasellus molestie blandit erat, vitae ullamcorper ante viverra et. Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
-        highlight_link: '#'
-        highlight_text_link: Link
-        highlight_image: b8f5db7682a5fb3fa938f2e26c0e855c.webp
-        highlight_textcaption:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: TextCaption
-        type: highlight-item
-        enabled: true
-        template: /global/buttons
-        select: background
-        select_icon: mail
-        text: 'Contact Us'
-        link: '#'
-    reverse_alignment: false
-    toggle_alignment: true
-    type: highlight
-    enabled: true
-    toggle_background: false
+    enabled: false
   -
     template: /global/call_to_action
     center_title_pre_title: Suscribe
@@ -584,7 +597,7 @@ sections:
             type: text
             text: 'Text area to complement the secondary title'
     type: call_to_action
-    enabled: true
+    enabled: false
     call_to_action_pre_title: 'Pre Title'
     call_to_action_title: Suscribe
     call_to_action_textarea:
@@ -676,7 +689,7 @@ sections:
         type: Social-Proof-item
         enabled: true
     type: social_proof
-    enabled: true
+    enabled: false
     call_to_action_pre_title: 'Pre Title'
     call_to_action_title: 'Section title'
     call_to_action_textarea:
@@ -785,7 +798,7 @@ sections:
         select_icon: chevron-right
         text: 'Choose Plan'
     type: pricing_table
-    enabled: true
+    enabled: false
     items:
       -
         template: null
@@ -1029,7 +1042,7 @@ sections:
             type: text
             text: 'Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. '
     type: comparison_table
-    enabled: true
+    enabled: false
 top_section:
   -
     type: hero_general_content
@@ -1074,5 +1087,6 @@ top_section:
     select: background
     select_icon: chevron-right
     text: 'Sign Up'
+    default_image: bb28417eb2b2507580ab0f08bf09ea69.webp
 id: 26513dc7-59f7-4673-815e-7d9ace16248b
 ---

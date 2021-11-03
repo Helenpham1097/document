@@ -1,21 +1,21 @@
 {{# Partial to display images and if not found display the default image. #}}
 {{ if !cover_image }}
-
     {{ assets:default_image }}
         {{ unless extension === "gif" }}
-            <img class="border border-gray-800" src="{{ glide:default_image width='400' height='225' dpr='2' quality='70' fm='webp' }}" width="400" height="225" alt="{{ default_image:cover_photo:alt }}" />
+            <img class="object-cover object-center w-full h-full lg:w-full lg:h-full" src="{{ glide:default_image width='400' height='225' dpr='2' quality='70' fm='webp' }}" {{ if default_image | get:alt }} alt="{{ default_image | get:alt }}" {{ else }} alt="{{ title }}"{{ /if }} />
         {{ else }}
-            <img class="border border-gray-800" src="{{ default_image }}" alt="{{ default_image }}" />
+            <img class="object-cover object-center w-full h-full lg:w-full lg:h-full" src="{{ default_image }}" {{ if default_image | get:alt }} alt="{{ default_image | get:alt }}" {{ else }} alt="{{ title }}" {{ /if }} />
         {{ /if }}
     {{ /assets:default_image }}
+    
 {{ else }}
-
-
     {{ assets:cover_image }}
         {{ unless extension === "gif" }}
-            <img class="border border-gray-800" src="{{ glide:cover_image width='400' height='225' dpr='2' quality='70' fm='webp' }}" width="400" height="225" alt="{{ cover_image:cover_photo:alt }}" />
+            <img class="object-cover object-center w-full h-full lg:w-full lg:h-full" src="{{ glide:cover_image width='400' height='225' dpr='2' quality='70' fm='webp' }}"  {{ if default_image | get:alt }} alt="{{ default_image | get:alt }}" {{ else }} alt="{{ title }}" {{ /if }} />
         {{ else }}
-            <img class="border border-gray-800" src="{{ cover_image }}" alt="{{ cover_image }}" />
+            <img class="object-cover object-center w-full h-full lg:w-full lg:h-full" src="{{ cover_image }}" {{ if default_image | get:alt }} alt="{{ default_image | get:alt }}" {{ else }} alt="{{ title }}" {{ /if }} />
         {{ /if }}
     {{ /assets:cover_image }}
 {{ /if }}
+
+

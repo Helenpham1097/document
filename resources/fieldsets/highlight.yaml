@@ -51,16 +51,7 @@ fields:
                 icon: textarea
                 listable: hidden
             -
-              handle: highlight_image
-              field:
-                mode: grid
-                restrict: false
-                allow_uploads: true
-                display: Image
-                type: assets
-                icon: assets
-                listable: hidden
-                max_files: 1
+              import: default_image
             -
               handle: highlight_textcaption
               field:

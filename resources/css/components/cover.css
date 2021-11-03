@@ -118,12 +118,12 @@
 }
 /* Effect and animation in hero images */
 @screen sm {
-	.illustration-element img {
-		@apply overflow-visible transform;
-		box-shadow: 24px 48px 88px rgb(24 35 52 / 32%);
+	.illustration-element div {
+		@apply transform;
+		/* box-shadow: 24px 48px 88px rgb(24 35 52 / 32%); */
 		transition: all 0.45s cubic-bezier(0.215, 0.61, 0.355, 1);
 		&:hover {
-			box-shadow: 0 48px 88px rgb(24 35 52 / 32%) !important;
+			/* box-shadow: 0 48px 88px rgb(24 35 52 / 32%) !important; */
 			transform: perspective(1000px)
 			rotateY(0deg)
 			rotateX(0deg)
@@ -155,6 +155,11 @@
 				translateY(-3%);
 		}
 	}
+	.illustration-element {
+		.left, .right {
+			box-shadow: 24px 48px 88px rgb(24 35 52 / 32%);
+		}
+	} 
 	.illustration-bg {
 		&::before {
 			@apply absolute transform -translate-x-1/2 -translate-y-1/2 skew-x-12 bg-center bg-no-repeat bg-contain -left-1/4 top-1/2 bg-gradient-to-r from-green-100 to-purple-100;

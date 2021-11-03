@@ -54,3 +54,5 @@ fields:
       listable: hidden
   -
     import: buttons
+  -
+    import: default_image

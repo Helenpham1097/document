@@ -1,17 +1,20 @@
 {{# Grid logo gallery #}}
-<div class="container py-8 mx-auto space-y-6 lg:py-16">
+<div class="container mx-auto space-y-6">
 
-    <div class="flex flex-col items-center space-y-10 text-center text-gray-900">
-        <p class="text-2xl font-medium text-center text-gray-600">{{ companies_title }}</p>
+    <div class="flex flex-col items-center space-y-10 text-center">
+        <p class="text-2xl font-medium text-center text-gray-500">{{ companies_title }}</p>
     </div>
 
     <div class="grid justify-center grid-cols-2 gap-6 text-gray-400 sm:grid-cols-3 lg:grid-cols-none lg:grid-flow-col auto-cols-max justify-items-center">
         {{ if company }}
             {{ company }}
-            {{# <img class="w-1/8" src="{{ glide:company_logo width='250' dpr='2' fm='webp' }}" alt="{{ alt }}"> #}}
-            <div class="flex items-center justify-center p-6 bg-gray-200 bg-opacity-25 rounded-lg filter grayscale">
-                <img src="{{ glide:company_logo width='250' dpr='2' fm='webp' }}" class="block object-contain h-8" />
-            </div>
+
+            {{ default_image }}
+            
+            <img class="object-cover max-w-xs p-2 filter grayscale" width="200" src="{{ default_image }}" {{ if default_image | get:alt }} alt="{{ default_image | get:alt }}" {{ else }} alt="{{ title }}" {{ /if }} />
+
+            {{ /default_image }}
+            
             {{ /company }}
         {{ /if }}
     </div>

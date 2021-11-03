@@ -1,4 +1,5 @@
-data: {  }
+data:
+  alt: 'Image of a person'
 size: 124412
 last_modified: 1633998102
 width: 1200

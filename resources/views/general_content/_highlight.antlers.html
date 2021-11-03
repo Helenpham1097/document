@@ -22,13 +22,14 @@
 						</div>
 						<div class="relative sm:max-w-2xl sm:mx-auto sm:w-1/2">
 							<div class="mx-auto {{ if  toggle_background }} illustration-bg {{ else}} illustration-element {{ /if}}">
-								{{ assets:highlight_image }}
-									{{ unless extension === "gif" }}
-										<img class="w-auto rounded-lg left" src="{{ glide:highlight_image width='600' height='337.5' dpr='2' quality='70' fm='webp' }}" width="600" height="337.5" alt="{{ highlight_image:cover_photo:alt }}" />
-									{{ else }}
-										<img class="w-auto rounded-lg left" src="{{ highlight_image }}" alt="{{ highlight_image }}" />
-									{{ /if }}
-								{{ /assets:highlight_image }}
+
+
+								{{ if default_image }}
+								<div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg left aspect-w-6 aspect-h-4 group-hover:shadow-2xl">
+									{{ partial:global/default_image }}
+								</div>
+								{{ /if }}
+								
 								<div class="absolute right-0 max-w-md sm:left-5 sm:right-5 -bottom-10">
 									{{ if highlight_textcaption  | strip_tags:p }}
 										<div class="relative text-gray-400">{{ highlight_textcaption  | strip_tags:p }}</div>
@@ -57,13 +58,14 @@
 						<p>toggle_alignment else</p>
 						<div class="relative sm:max-w-2xl sm:mx-auto sm:w-1/2">
 							<div class="mx-auto {{ if  toggle_background }} illustration-bg {{ else}} illustration-element {{ /if}}">
-								{{ assets:highlight_image }}
-									{{ unless extension === "gif" }}
-										<img class="w-auto rounded-lg right" src="{{ glide:highlight_image width='600' height='337.5' dpr='2' quality='70' fm='webp' }}" width="600" height="337.5" alt="{{ highlight_image:cover_photo:alt }}" />
-									{{ else }}
-										<img class="w-auto rounded-lg right" src="{{ highlight_image }}" alt="{{ highlight_image }}" />
-									{{ /if }}
-								{{ /assets:highlight_image }}
+
+
+								{{ if default_image }}
+								<div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg right aspect-w-6 aspect-h-4 group-hover:shadow-2xl">
+									{{ partial:global/default_image }}
+								</div>
+								{{ /if }}
+								
 								<div class="absolute right-0 max-w-md sm:left-5 sm:right-5 -bottom-10">
 									{{ if highlight_textcaption  | strip_tags:p }}
 									<div class="relative text-gray-400">{{ highlight_textcaption  | strip_tags:p }}</div>
@@ -91,13 +93,13 @@
 							</div>
 						<div class="relative sm:max-w-2xl sm:mx-auto sm:w-1/2">
 							<div class="mx-auto {{ if  toggle_background }} illustration-bg-left {{ else}} illustration-element {{ /if}}">
-								{{ assets:highlight_image }}
-									{{ unless extension === "gif" }}
-										<img class="w-auto rounded-lg left" src="{{ glide:highlight_image width='600' height='337.5' dpr='2' quality='70' fm='webp' }}" width="600" height="337.5" alt="{{ highlight_image:cover_photo:alt }}" />
-									{{ else }}
-										<img class="w-auto rounded-lg left" src="{{ highlight_image }}" alt="{{ highlight_image }}" />
-									{{ /if }}
-								{{ /assets:highlight_image }}
+
+								{{ if default_image }}
+								<div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg left aspect-w-6 aspect-h-4 group-hover:shadow-2xl">
+									{{ partial:global/default_image }}
+								</div>
+								{{ /if }}
+								
 								<div class="absolute right-0 max-w-md sm:left-5 sm:right-5 -bottom-10">
 									{{ if highlight_textcaption  | strip_tags:p }}
 									<div class="relative text-gray-400">{{ highlight_textcaption  | strip_tags:p }}</div>
@@ -125,13 +127,14 @@
 
 						<div class="relative sm:max-w-2xl sm:mx-auto sm:w-1/2">
 							<div class="mx-auto {{ if  toggle_background }} illustration-bg {{ else}} illustration-element {{ /if}}">
-								{{ assets:highlight_image }}
-									{{ unless extension === "gif" }}
-										<img class="w-auto rounded-lg right" src="{{ glide:highlight_image width='600' height='337.5' dpr='2' quality='70' fm='webp' }}" width="600" height="337.5" alt="{{ highlight_image:cover_photo:alt }}" />
-									{{ else }}
-										<img class="w-auto rounded-lg right" src="{{ highlight_image }}" alt="{{ highlight_image }}" />
-									{{ /if }}
-								{{ /assets:highlight_image }}
+
+
+								{{ if default_image }}
+								<div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg right aspect-w-6 aspect-h-4 group-hover:shadow-2xl">
+									{{ partial:global/default_image }}
+								</div>
+								{{ /if }}
+								
 								<div class="absolute right-0 max-w-md sm:left-5 sm:right-5 -bottom-10">
 									{{ if highlight_textcaption  | strip_tags:p }}
 									<div class="relative text-gray-400">{{ highlight_textcaption  | strip_tags:p }}</div>
@@ -166,13 +169,13 @@
 
 					<div class="relative sm:max-w-2xl sm:mx-auto sm:w-1/2">
 						<div class="mx-auto {{ if  toggle_background }} illustration-bg {{ else}} illustration-element {{ /if}} ">
-								{{ assets:highlight_image }}
-									{{ unless extension === "gif" }}
-										<img class="w-auto rounded-lg left" src="{{ glide:highlight_image width='600' height='337.5' dpr='2' quality='70' fm='webp' }}" width="600" height="337.5" alt="{{ highlight_image:cover_photo:alt }}" />
-									{{ else }}
-										<img class="w-auto rounded-lg left" src="{{ highlight_image }}" alt="{{ highlight_image }}" />
-									{{ /if }}
-								{{ /assets:highlight_image }}
+
+								{{ if default_image }}
+								<div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg left aspect-w-6 aspect-h-4 group-hover:shadow-2xl">
+									{{ partial:global/default_image }}
+								</div>
+								{{ /if }}
+								
 							<div class="absolute right-0 max-w-md sm:left-5 sm:right-5 -bottom-10">
 								{{ if highlight_textcaption  | strip_tags:p }}
 								<div class="relative text-gray-400">{{ highlight_textcaption  | strip_tags:p }}</div>
@@ -198,13 +201,14 @@
 					</div>
 					<div class="relative sm:max-w-2xl sm:mx-auto sm:w-1/2">
 						<div class="mx-auto {{ if  toggle_background }} illustration-bg-left {{ else}} illustration-element {{ /if}}">
-								{{ assets:highlight_image }}
-									{{ unless extension === "gif" }}
-										<img class="w-auto rounded-lg right" src="{{ glide:highlight_image width='600' height='337.5' dpr='2' quality='70' fm='webp' }}" width="600" height="337.5" alt="{{ highlight_image:cover_photo:alt }}" />
-									{{ else }}
-										<img class="w-auto rounded-lg right" src="{{ highlight_image }}" alt="{{ highlight_image }}" />
-									{{ /if }}
-								{{ /assets:highlight_image }}
+
+
+								{{ if default_image }}
+								<div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg right aspect-w-6 aspect-h-4 group-hover:shadow-2xl">
+									{{ partial:global/default_image }}
+								</div>
+								{{ /if }}
+								
 							<div class="absolute right-0 max-w-md sm:left-5 sm:right-5 -bottom-10">
 								{{ if highlight_textcaption  | strip_tags:p }}
 								<div class="relative text-gray-400">{{ highlight_textcaption  | strip_tags:p }}</div>

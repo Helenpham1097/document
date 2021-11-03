@@ -69,6 +69,8 @@ fields:
                 listable: hidden
                 width: 50
             -
+              import: default_image
+            -
               handle: feature_highlight_image
               field:
                 mode: grid
