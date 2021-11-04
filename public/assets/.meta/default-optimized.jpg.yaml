@@ -1,5 +1,6 @@
-data: {  }
+data:
+  alt: 'Cover image'
 size: 231435
-last_modified: 1611616599
+last_modified: 1619579150
 width: 1125
 height: 751

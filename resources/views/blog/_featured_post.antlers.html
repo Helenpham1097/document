@@ -1,34 +1,20 @@
 {{# Partial template for the featured blog post on blog index page #}}
 
-<section class="container mx-auto my-6 featured-blog sm:my-24">
+<section class="container mx-auto featured-blog">
 <div class="flex flex-col items-center justify-center py-4 space-x-0 sm:space-x-reverse sm:space-x-8 md:flex-row md:py-10">
     <div class="w-full pr-4 space-y-6 md:w-1/2">
-          {{ if categories }}
-              <div class="flex-row items-center hidden space-x-2 sm:flex ">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-500 " fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5a1.99 1.99 0 011.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
-                  <div class="text-purple-500">{{ categories  limit="1" }}  {{ title }} {{ /categories }}</div>
-              </div>
-          {{ /if }}
-          <a href="{{ url }}" class="flex flex-col items-center space-y-6 lg:flex-grow md:items-start">
-              <h1 class="">{{ title }}</h1>
-              <p class="excerpt"> {{ subheader }}</p>
-              <span class="inline-flex items-center cta"> Learn More </span>
-          </a>
+        {{ if categories }}
+            <div class="flex-row items-center hidden space-x-2 sm:flex ">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-500 " fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5a1.99 1.99 0 011.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
+                <div class="text-purple-500">{{ categories  limit="1" }}  {{ title }} {{ /categories }}</div>
+            </div>
+        {{ /if }}
+        <a href="{{ url }}" class="flex flex-col items-center space-y-6 lg:flex-grow md:items-start">
+            <h1 class="">{{ title }}</h1>
+            <p class="excerpt"> {{ subheader }}</p>
+            <span class="inline-flex items-center cta"> Learn More </span>
+        </a>
     </div>
-    <!-- <div class="md:w-1/2 md:pl-4">
-        <div class="relative content">
-            <div class="shadow-3d"> </div>
-
-            <a href="{{ url }}">
-                {{ if !cover_image }}
-                    <img class="parallelogram" src="{{ default_image:cover_photo }}" alt="{{ default_image:cover_photo:alt }}" />
-                {{ else }}
-                    <img class="parallelogram" src="{{ cover_image }}" alt="{{ cover_image:alt }}" />
-                {{ /if }}
-            </a>
-
-        </div>
-    </div> -->
         
         <div class="order-first md:w-1/2 md:pl-4">
             <div class="relative illustration-element">
@@ -39,6 +25,11 @@
                     <img class="object-cover w-full bg-cover rounded-lg right" src="{{ cover_image }}" alt="{{ cover_image:alt }}" />
                 {{ /if }}
                 </a>
+			{{# {{ if default_image }}
+                <div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg shadow-lg left aspect-w-6 aspect-h-4 group-hover:shadow-2xl">
+                    {{ partial:global/default_image }}
+                </div>
+			{{ /if }} #}}
             </div>
         </div>
 </div>

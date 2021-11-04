@@ -5,7 +5,7 @@ mount: fee1a2b1-971c-4c72-9517-d2e6c989f49e
 taxonomies:
   - categories
 revisions: true
-route: '{{ mount }}/{{ slug }}'
+route: '/blog/{slug}'
 date: true
 sort_dir: asc
 default_status: draft
