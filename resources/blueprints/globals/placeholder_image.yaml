@@ -1,0 +1,28 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: placeholder_image
+        field:
+          mode: grid
+          restrict: false
+          allow_uploads: true
+          max_files: 1
+          display: 'Placeholder Image'
+          type: assets
+          icon: assets
+          instructions: 'In case the link image is broken'
+          listable: hidden
+      -
+        handle: placeholder_avatar
+        field:
+          mode: grid
+          restrict: false
+          allow_uploads: true
+          display: 'Placeholder avatar'
+          type: assets
+          icon: assets
+          instructions: 'In case the link image is broken'
+          listable: hidden
+          max_files: 1

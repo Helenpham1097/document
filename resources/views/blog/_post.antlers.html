@@ -15,7 +15,7 @@
                 {{ if author:avatar }}
                 <img class="w-8 h-8 rounded-full" src="{{ author:avatar }}" alt="Avatar of {{ author:name }}" />
                 {{ else }}
-                <img class="w-8 h-8 rounded-full " src="{{ default_image:avatar }}" alt="Avatar of {{ author:name }}" />
+                <img class="w-8 h-8 rounded-full " src="{{ placeholder_image:placeholder_avatar }}" alt="Avatar of {{ author:name }}" />
                 <div> {{ author:name }} </div>
                 {{ /if }}
             </div>
