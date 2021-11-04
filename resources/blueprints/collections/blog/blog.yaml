@@ -47,6 +47,8 @@ sections:
           icon: markdown
           listable: hidden
           container: assets
+      -
+        import: default_image
   sidebar:
     display: Sidebar
     fields:

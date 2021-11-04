@@ -4,9 +4,10 @@
     <div class="flex flex-col space-y-4 group ">
         <div class="relative w-full">
             <div class="relative flex flex-col items-center">
-                <figure class="relative w-full">
-                    {{ partial:blog/default_image }}
-                </figure>
+                
+                <div class="relative inset-0 w-full overflow-hidden rounded-lg">
+                    {{ partial:global/default_image }}
+                </div>
             </div>
         </div>
         <h3> {{ title }} </h3>

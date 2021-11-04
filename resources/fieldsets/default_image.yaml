@@ -1,9 +1,9 @@
 title: 'Default Image'
 fields:
   -
-    handle: template
+    handle: template_global
     field:
-      display: template
+      display: template_global
       type: hidden
       icon: hidden
       listable: hidden

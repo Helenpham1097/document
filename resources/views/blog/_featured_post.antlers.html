@@ -18,18 +18,11 @@
         
         <div class="order-first md:w-1/2 md:pl-4">
             <div class="relative illustration-element">
-                <a href="{{ url }}">
-                {{ if !cover_image }}
-                    <img class="object-cover w-full bg-cover rounded-lg right" src="{{ default_image:cover_photo }}" alt="{{ default_image:cover_photo:alt }}" />
-                {{ else }}
-                    <img class="object-cover w-full bg-cover rounded-lg right" src="{{ cover_image }}" alt="{{ cover_image:alt }}" />
-                {{ /if }}
-                </a>
-			{{# {{ if default_image }}
-                <div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg shadow-lg left aspect-w-6 aspect-h-4 group-hover:shadow-2xl">
-                    {{ partial:global/default_image }}
+                <div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg shadow-lg right aspect-w-6 aspect-h-4 group-hover:shadow-2xl">
+                    <a href="{{ url }}">
+                        {{ partial:global/default_image }}
+                    </a>
                 </div>
-			{{ /if }} #}}
             </div>
         </div>
 </div>
