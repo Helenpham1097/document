@@ -3,7 +3,7 @@
     {{ assets:default_image }}
         {{# Display this if the file extension is jpg,jpeg, svg #}}
         {{ unless extension === "gif" }}
-            <img class="object-cover object-center w-full h-full lg:w-full lg:h-full" src="{{ glide:default_image width='400' height='225' dpr='1' quality='70' fm='webp' }}" {{ if default_image | get:alt }} alt="{{ default_image | get:alt }}" {{ else }} alt="{{ title }}"{{ /if }} />
+            <img class="object-cover object-center w-full h-full lg:w-full lg:h-full" src="{{ glide:default_image width='400' height='225' dpr='2' quality='70' fm='webp' }}" {{ if default_image | get:alt }} alt="{{ default_image | get:alt }}" {{ else }} alt="{{ title }}"{{ /if }} />
         {{ else }}
             {{# Display this if the file extension is gif #}}
             <img class="object-cover object-center w-full h-full lg:w-full lg:h-full" src="{{ default_image }}" {{ if default_image | get:alt }} alt="{{ default_image | get:alt }}" {{ else }} alt="{{ title }}" {{ /if }} />
@@ -12,5 +12,5 @@
     
     {{ else }}
         {{# If the image is broken use this image #}}
-        <img class="object-cover object-center w-full h-full lg:w-full lg:h-full" src="{{ glide:placeholder_image:placeholder_image width='400' height='225' dpr='2' quality='50' fm='webp'  }}"  {{ if placeholder_image:placeholder_image | get:alt }} alt="{{ placeholder_image:cover_image | get:alt }}" {{ else }} alt="{{ title }}" {{ /if }} />
+        <img class="object-cover object-center w-full h-full lg:w-full lg:h-full" src="{{ glide:placeholder_image:placeholder_image width='400' height='225' dpr='2' quality='70' fm='webp'  }}"  {{ if placeholder_image:placeholder_image | get:alt }} alt="{{ placeholder_image:cover_image | get:alt }}" {{ else }} alt="{{ title }}" {{ /if }} />
 {{ /if }}
