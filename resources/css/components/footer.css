@@ -11,17 +11,17 @@
 		/* clip-path: polygon(0 0, 5760px 0, 5760px calc(100% - 352px), 0 100%); */
 	}
 }
-
+/* 
 footer a {
-	@apply text-white;
+	@apply text-black;
 }
 footer h6 {
-	color: var(--secondary);
+	
 	@apply text-xs font-bold tracking-wider uppercase md:block;
 }
 
 footer a:hover {
-	color: var(--secondary);
+	@apply text-purple-700;
 }
 
 footer {
@@ -35,14 +35,6 @@ footer li {
 	@apply pb-1 my-1;
 }
 
-.prefooter {
-	@apply relative;
-	bottom: calc(-21px + 1.5vh);
-	z-index: -1;
-}
-
-/* Landing page footer */
-
 footer.lp {
 	@apply -mt-24;
 }
@@ -50,4 +42,4 @@ footer.lp {
 	footer.lp {
 		@apply -mt-64;
 	}
-}
+} */

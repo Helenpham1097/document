@@ -1,9 +1,9 @@
-button {
-	@apply inline-flex items-center justify-center px-8 py-4 text-sm font-bold uppercase focus:outline-none focus:ring focus:border-purple-500;
+/* button {
+	@apply inline-flex items-center justify-center px-8 py-4 text-sm font-bold focus:outline-none focus:ring focus:border-purple-500;
 	svg {
 		@apply transition duration-75;
 	}
-}
+} */
 
 a.primary-btn, a.secondary-btn {
 	@apply inline-flex items-center justify-center px-8 py-4 text-sm font-bold uppercase focus:outline-none focus:ring focus:border-purple-500;

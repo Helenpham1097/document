@@ -26,9 +26,6 @@
 	opacity: 0;
 }
 
-.dev {
+.dev * {
 	@apply border border-red-500;
-	& > * {
-		@apply border border-red-500;
-	} 
 }
