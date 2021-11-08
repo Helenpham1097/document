@@ -1,7 +1,7 @@
 ---
 title: 'General content'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1635913288
+updated_at: 1636320759
 blueprint: general_content
 description: Lorem
 template: general_content/layout
@@ -37,6 +37,7 @@ sections:
         text: 'Read more'
         link: '#'
         default_image: 09054a5f40e858381279a62e2ee534a7.webp
+        template_global: /global/default_image
       -
         highlight_title: 'Highlight 2'
         highlight_textarea:
@@ -64,6 +65,7 @@ sections:
         text: 'Read mores'
         link: '#'
         default_image: b8f5db7682a5fb3fa938f2e26c0e855c.webp
+        template_global: /global/default_image
     reverse_alignment: false
     toggle_alignment: true
     type: highlight
@@ -99,6 +101,7 @@ sections:
         text: 'Learn more'
         link: '#'
         default_image: 09054a5f40e858381279a62e2ee534a7.webp
+        template_global: /global/default_image
       -
         highlight_title: 'Highlight 2'
         highlight_textarea:
@@ -126,6 +129,7 @@ sections:
         text: 'Contact Us'
         link: '#'
         default_image: b8f5db7682a5fb3fa938f2e26c0e855c.webp
+        template_global: /global/default_image
     reverse_alignment: false
     toggle_alignment: true
     type: highlight
@@ -153,6 +157,7 @@ sections:
         select_icon: null
         text: 'Learn more'
         default_image: 09054a5f40e858381279a62e2ee534a7.webp
+        template_global: /global/default_image
       -
         template: /global/buttons
         feature_image: b8f5db7682a5fb3fa938f2e26c0e855c.webp
@@ -172,6 +177,7 @@ sections:
         select_icon: chevron-right
         text: 'Learn More'
         default_image: 02.svg
+        template_global: /global/default_image
       -
         template: /global/buttons
         feature_image: 09054a5f40e858381279a62e2ee534a7.webp
@@ -191,8 +197,9 @@ sections:
         select_icon: chevron-right
         text: 'Learn More'
         default_image: 2.png
+        template_global: /global/default_image
     type: features_columns_item
-    enabled: false
+    enabled: true
     display_title: true
     center_title_pre_title: 'Pre Title'
     center_title_title: 'Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
@@ -231,7 +238,7 @@ sections:
             type: text
             text: 'Get your website up and running quickly with our tailored Web Hosting plans'
     type: section_title
-    enabled: false
+    enabled: true
     toggle_alignment: true
     toggle_color: false
   -
@@ -244,20 +251,23 @@ sections:
         enabled: true
         template: /global/default_image
         default_image: algolia.svg
+        template_global: /global/default_image
       -
         company_logo: algolia.svg
         type: companies
         enabled: true
         template: /global/default_image
         default_image: algolia.svg
+        template_global: /global/default_image
       -
         company_logo: algolia.svg
         type: companies
         enabled: true
         template: /global/default_image
         default_image: algolia.svg
+        template_global: /global/default_image
     type: companies_logo
-    enabled: false
+    enabled: true
   -
     template: /general_content/steps
     testimonial_section_title: null
@@ -283,6 +293,7 @@ sections:
         select_icon: chevron-right
         text: Link
         default_image: 1.png
+        template_global: /global/default_image
       -
         step_image: 4.png
         step_title: 'First Step'
@@ -303,6 +314,7 @@ sections:
         select_icon: null
         text: null
         default_image: 1.png
+        template_global: /global/default_image
       -
         step_image: 4.png
         step_title: 'First Step'
@@ -323,6 +335,7 @@ sections:
         select_icon: null
         text: null
         default_image: 2.png
+        template_global: /global/default_image
       -
         step_image: 4.png
         step_title: 'First Step'
@@ -343,8 +356,9 @@ sections:
         select_icon: null
         text: null
         default_image: 4.png
+        template_global: /global/default_image
     type: steps
-    enabled: false
+    enabled: true
   -
     template: /general_content/testimonial
     rows:
@@ -388,7 +402,7 @@ sections:
     reverse_alignment: false
     toggle_alignment: false
     type: testimonial
-    enabled: false
+    enabled: true
     testimonial_section_title: 'Duo assum utroque appetere an'
     testimonial_text_area:
       -
@@ -584,7 +598,7 @@ sections:
         type: column
         enabled: true
     type: icon_features
-    enabled: false
+    enabled: true
   -
     template: /global/call_to_action
     center_title_pre_title: Suscribe
@@ -597,7 +611,7 @@ sections:
             type: text
             text: 'Text area to complement the secondary title'
     type: call_to_action
-    enabled: false
+    enabled: true
     call_to_action_pre_title: 'Pre Title'
     call_to_action_title: Suscribe
     call_to_action_textarea:
@@ -689,7 +703,7 @@ sections:
         type: Social-Proof-item
         enabled: true
     type: social_proof
-    enabled: false
+    enabled: true
     call_to_action_pre_title: 'Pre Title'
     call_to_action_title: 'Section title'
     call_to_action_textarea:
@@ -798,7 +812,7 @@ sections:
         select_icon: chevron-right
         text: 'Choose Plan'
     type: pricing_table
-    enabled: false
+    enabled: true
     items:
       -
         template: null
@@ -1042,7 +1056,7 @@ sections:
             type: text
             text: 'Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. '
     type: comparison_table
-    enabled: false
+    enabled: true
 top_section:
   -
     type: hero_general_content
@@ -1088,5 +1102,6 @@ top_section:
     select_icon: chevron-right
     text: 'Sign Up'
     default_image: bb28417eb2b2507580ab0f08bf09ea69.webp
+    template_global: /global/default_image
 id: 26513dc7-59f7-4673-815e-7d9ace16248b
 ---

@@ -29,23 +29,26 @@
             {{ /if }}
         {{ /collection:blog }}
 
-        {{# Non-featured posts. To enable pagination set true and change limit to 6 #}}
-        <section class="container pt-24">
-            <div class="w-full mx-auto">
-                <div class="grid grid-cols-1 gap-8 sm:grid-cols-3 related-post">
-                    {{ collection:blog limit="0" paginate="false" sort="date:desc" offset="1" }}
+        {{ collection:blog limit="6" paginate="true" as='posts' sort="date:desc" offset="1" }}
+            {{ if posts && (get:page == "1" || !get:page) }}
+                <div class="py-8 space-y-8">
+            {{ else }}
+                <div class="py-8 space-y-8 lg:pb-8 sm:space-y-16">
+            {{ /if }}
+            <div class="container grid gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-3 place-items-startgrid">
+                {{ posts }}
                     {{ partial:blog/post }}
-                    <!-- Paginator -->
-                    {{ /collection:blog }}
-                </div>
-                {{ partial:blog/paginate }}
+                {{ /posts }}	
             </div>
-        </section>
-
-        {{# {{ partial:blog/footer}} #}}
-        {{ partial:global/footer }}
-
+            <!-- Paginator -->
+            {{ if {collection:count in="blog"} > 6 }}
+                {{ partial:blog/paginate }}
+            {{ /if }}
+        {{ /collection:blog }}
+        
     {{ /if }}
+    {{# {{ partial:blog/footer}} #}}
+    {{ partial:global/footer }}
 
 </body>
 
