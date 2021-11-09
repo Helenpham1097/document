@@ -32,5 +32,3 @@ editor:
     - 'rename assets assets'
     - 'delete assets assets'
     - 'view users'
-    - 'access phpinfo utility'
-    - 'access licensing utility'
