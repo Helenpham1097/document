@@ -1,7 +1,8 @@
 {{# Template for blog index page #}}
 
 <body>
-    {{ partial:global/nav }}
+    {{ partial:blog/nav }}
+    {{# {{ partial:global/nav }} #}}
     {{# <div class="absolute w-full my-12 sm:my-0 h-1/2 sm:h-2/3 light-purple"></div> #}}
     <div class="slice-bg"></div>
     {{# Check for Stickied post  #}}
@@ -35,6 +36,7 @@
             {{ else }}
                 <div class="py-8 space-y-8 lg:pb-8 sm:space-y-16">
             {{ /if }}
+                </div>
             <div class="container grid gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-3 place-items-startgrid">
                 {{ posts }}
                     {{ partial:blog/post }}
@@ -47,8 +49,8 @@
         {{ /collection:blog }}
         
     {{ /if }}
-    {{# {{ partial:blog/footer}} #}}
-    {{ partial:global/footer }}
-
+    
+{{ partial:blog/footer }}
+{{# {{ partial:global/footer }} #}}
 </body>
 

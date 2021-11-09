@@ -28,10 +28,11 @@
     <meta property="twitter:image" content="/img/Open-Graph.jpg"/>
 </head>
 <body>
-    {{ partial:global/nav }}
+    {{ partial:blog/nav }}
+    {{# {{ partial:global/nav }} #}}
         {{ template_content }}
-    {{# {{ partial:blog/footer }} #}}
-    {{ partial:global/footer }}
+    {{ partial:blog/footer }}
+    {{# {{ partial:global/footer }} #}}
 
 </body>
 {{ partial:lottie }}
