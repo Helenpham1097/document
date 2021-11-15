@@ -1,12 +1,44 @@
 ---
 title: 'General content'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1636320759
+updated_at: 1636951429
 blueprint: general_content
 description: Lorem
 template: general_content/layout
 subheader: sdasda
 sections:
+  -
+    template: /general_content/image_gallery
+    display_title_section:
+      -
+        template: /global/section_title
+        center_title_pre_title: null
+        center_title_title: 'List of images'
+        center_title_textarea: null
+        toggle_color: false
+        type: section_title
+        enabled: true
+    items:
+      -
+        template: null
+        template_global: /global/default_image
+        default_image: serverless-nights-php-quinitin.png
+        type: image
+        enabled: true
+      -
+        template: null
+        template_global: /global/default_image
+        default_image: bb28417eb2b2507580ab0f08bf09ea69.webp
+        type: image
+        enabled: true
+      -
+        template: null
+        template_global: /global/default_image
+        default_image: ice-cream-cones.jpeg
+        type: image
+        enabled: true
+    type: iimage_gallery
+    enabled: true
   -
     template: /general_content/highlight
     rows:
@@ -69,7 +101,7 @@ sections:
     reverse_alignment: false
     toggle_alignment: true
     type: highlight
-    enabled: true
+    enabled: false
     toggle_background: true
   -
     template: /general_content/highlight
@@ -133,7 +165,7 @@ sections:
     reverse_alignment: false
     toggle_alignment: true
     type: highlight
-    enabled: true
+    enabled: false
     toggle_background: false
   -
     template: /general_content/features_columns
@@ -199,7 +231,7 @@ sections:
         default_image: 2.png
         template_global: /global/default_image
     type: features_columns_item
-    enabled: true
+    enabled: false
     display_title: true
     center_title_pre_title: 'Pre Title'
     center_title_title: 'Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
@@ -238,7 +270,7 @@ sections:
             type: text
             text: 'Get your website up and running quickly with our tailored Web Hosting plans'
     type: section_title
-    enabled: true
+    enabled: false
     toggle_alignment: true
     toggle_color: false
   -
@@ -267,7 +299,7 @@ sections:
         default_image: algolia.svg
         template_global: /global/default_image
     type: companies_logo
-    enabled: true
+    enabled: false
   -
     template: /general_content/steps
     testimonial_section_title: null
@@ -358,7 +390,7 @@ sections:
         default_image: 4.png
         template_global: /global/default_image
     type: steps
-    enabled: true
+    enabled: false
   -
     template: /general_content/testimonial
     rows:
@@ -402,7 +434,7 @@ sections:
     reverse_alignment: false
     toggle_alignment: false
     type: testimonial
-    enabled: true
+    enabled: false
     testimonial_section_title: 'Duo assum utroque appetere an'
     testimonial_text_area:
       -
@@ -598,7 +630,7 @@ sections:
         type: column
         enabled: true
     type: icon_features
-    enabled: true
+    enabled: false
   -
     template: /global/call_to_action
     center_title_pre_title: Suscribe
@@ -611,7 +643,7 @@ sections:
             type: text
             text: 'Text area to complement the secondary title'
     type: call_to_action
-    enabled: true
+    enabled: false
     call_to_action_pre_title: 'Pre Title'
     call_to_action_title: Suscribe
     call_to_action_textarea:
@@ -659,6 +691,7 @@ sections:
     select: background-secondary
     select_icon: mail
     text: 'Contact Us'
+    template_global: /global/buttons
   -
     template: /general_content/social_proof
     social_proof_section_title: null
@@ -684,6 +717,7 @@ sections:
         select: info
         select_icon: null
         text: 'Learn more'
+        template_global: /global/buttons
       -
         social_proof_image: 09054a5f40e858381279a62e2ee534a7.webp
         social_proof_name: 'Katie F. Sullivan'
@@ -702,8 +736,9 @@ sections:
         text: null
         type: Social-Proof-item
         enabled: true
+        template_global: /global/buttons
     type: social_proof
-    enabled: true
+    enabled: false
     call_to_action_pre_title: 'Pre Title'
     call_to_action_title: 'Section title'
     call_to_action_textarea:
@@ -789,6 +824,7 @@ sections:
         select: background
         select_icon: chevron-right
         text: 'Choose Plan'
+        template_global: /global/buttons
       -
         template: /global/buttons
         pricing_features_title: null
@@ -800,6 +836,7 @@ sections:
         select: background-secondary
         select_icon: chevron-right
         text: 'Most popular'
+        template_global: /global/buttons
       -
         template: /global/buttons
         pricing_features_title: null
@@ -811,8 +848,9 @@ sections:
         select: background
         select_icon: chevron-right
         text: 'Choose Plan'
+        template_global: /global/buttons
     type: pricing_table
-    enabled: true
+    enabled: false
     items:
       -
         template: null
@@ -1056,7 +1094,7 @@ sections:
             type: text
             text: 'Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. '
     type: comparison_table
-    enabled: true
+    enabled: false
 top_section:
   -
     type: hero_general_content
