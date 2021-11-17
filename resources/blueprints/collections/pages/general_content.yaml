@@ -104,11 +104,16 @@ sections:
               fields:
                 -
                   import: image_gallery
-            markdown_text:
-              display: 'Markdown text'
+            horizontal_cta:
+              display: 'Horizontal CTA'
               fields:
                 -
-                  import: text_content
+                  import: _horizontal_cta
+            contact_us:
+              display: 'Contact Us'
+              fields:
+                -
+                  import: contact_us_form
           display: Sections
           type: replicator
           icon: replicator
