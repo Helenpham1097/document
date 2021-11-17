@@ -1,0 +1,38 @@
+<div class="space-y-12 ">
+    <div class="relative sm:max-w-7xl sm:mx-auto">
+        <div class="relative p-6">
+            {{ if toggle }}
+            <div class="absolute inset-0 p-8 px-4 mx-auto transform shadow-xl md:-skew-x-6 bg-gradient-to-r from-purple-500 to-purple-700 "></div>
+            {{ /if }}
+            <div class="relative grid space-y-6 {{ if toggle }}text-white{{ /if }} md:p-12 md:grid-cols-2 md:space-x-6 md:space-y-0">
+
+                <div class="flex flex-col space-y-4 text-center lg:text-left">
+
+                    {{ if toggle }}
+                    <img class="relative w-12 h-12" src="{{ default_image }}">
+                    {{ else }}
+                    <div class="relative flex items-center">
+                        <div class="absolute inset-y-0 p-4 px-6 mx-auto transform shadow-xl md:-skew-x-6 bg-gradient-to-r from-purple-500 to-purple-700 "></div>
+                        <img class="relative w-12 h-12" src="{{ default_image }}">
+                    </div>
+                    {{ /if }}
+                    
+                    <h2 class="font-bold leading-none {{ if toggle }}text-white{{ /if }}" data-unsp-sanitized="clean">{{ title }}</h2>
+                    <p class="text-xl">{{ bard | strip_tags }}</p>
+                </div>
+
+                <div class="flex flex-row items-center ">
+                    <div class="flex flex-col w-full space-y-6 text-center md:space-y-0 md:space-x-6 md:flex-row">
+                        <input type="text" placeholder="example@email.com" class="">
+                        <div class="flex-none">
+                            {{ if link }} {{ partial:global/buttons }} {{ /if }}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>

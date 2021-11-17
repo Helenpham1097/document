@@ -1,0 +1,59 @@
+title: 'Horizontal CTA'
+fields:
+  -
+    handle: template
+    field:
+      display: template
+      type: hidden
+      icon: hidden
+      listable: hidden
+      default: /general_content/_horizontal_cta
+  -
+    import: default_image
+  -
+    handle: title
+    field:
+      input_type: text
+      antlers: false
+      display: Title
+      type: text
+      icon: text
+      listable: hidden
+  -
+    handle: bard
+    field:
+      always_show_set_button: false
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - quote
+        - anchor
+        - image
+        - table
+      save_html: false
+      toolbar_mode: fixed
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      reading_time: false
+      fullscreen: true
+      allow_source: true
+      display: Bard
+      type: bard
+      icon: bard
+      listable: hidden
+  -
+    import: buttons
+  -
+    handle: toggle
+    field:
+      display: 'Toggle Background'
+      type: toggle
+      icon: toggle
+      instructions: 'Toggle between default transparent background or purple background.'
+      listable: hidden

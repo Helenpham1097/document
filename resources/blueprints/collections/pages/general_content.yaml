@@ -104,11 +104,16 @@ sections:
               fields:
                 -
                   import: image_gallery
-            embed_video:
-              display: 'Embed video'
+            horizontal_cta:
+              display: 'Horizontal CTA'
               fields:
                 -
-                  import: embed_video
+                  import: _horizontal_cta
+            contact_us:
+              display: 'Contact Us'
+              fields:
+                -
+                  import: contact_us_form
           display: Sections
           type: replicator
           icon: replicator
