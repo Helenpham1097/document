@@ -104,6 +104,11 @@ sections:
               fields:
                 -
                   import: image_gallery
+            markdown_text:
+              display: 'Markdown text'
+              fields:
+                -
+                  import: text_content
           display: Sections
           type: replicator
           icon: replicator
