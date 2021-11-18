@@ -1,0 +1,46 @@
+title: 'Image Gallery'
+fields:
+  -
+    handle: template
+    field:
+      display: template
+      type: hidden
+      icon: hidden
+      listable: hidden
+      default: /general_content/image_gallery
+  -
+    handle: display_title_section
+    field:
+      collapse: false
+      max_sets: 1
+      sets:
+        section_title:
+          display: 'Title Section'
+          fields:
+            -
+              import: section_title
+      display: 'Add Title Section'
+      type: replicator
+      icon: replicator
+      listable: hidden
+  -
+    handle: items
+    field:
+      collapse: false
+      sets:
+        image:
+          display: Image
+          fields:
+            -
+              handle: template
+              field:
+                display: template
+                type: hidden
+                icon: hidden
+                listable: hidden
+            -
+              import: default_image
+      display: Items
+      type: replicator
+      icon: replicator
+      listable: hidden

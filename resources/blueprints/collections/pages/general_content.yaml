@@ -90,7 +90,7 @@ sections:
                 -
                   import: pricing_table
             buttons:
-              display: 'Buttons'
+              display: Buttons
               fields:
                 -
                   import: buttons
@@ -99,6 +99,11 @@ sections:
               fields:
                 -
                   import: comparison_table
+            iimage_gallery:
+              display: 'iImage Gallery'
+              fields:
+                -
+                  import: image_gallery
           display: Sections
           type: replicator
           icon: replicator
