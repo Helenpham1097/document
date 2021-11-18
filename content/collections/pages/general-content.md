@@ -1,12 +1,172 @@
 ---
 title: 'General content'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1637187417
+updated_at: 1637273789
 blueprint: general_content
 description: Lorem
 template: general_content/layout
 subheader: sdasda
 sections:
+  -
+    template: /general_content/image_gallery
+    display_title_section:
+      -
+        template: /global/section_title
+        center_title_pre_title: null
+        center_title_title: 'List of images'
+        center_title_textarea: null
+        toggle_color: false
+        type: section_title
+        enabled: true
+    items:
+      -
+        template: null
+        template_global: /global/default_image
+        default_image: serverless-nights-php-quinitin.png
+        type: image
+        enabled: true
+      -
+        template: null
+        template_global: /global/default_image
+        default_image: bb28417eb2b2507580ab0f08bf09ea69.webp
+        type: image
+        enabled: true
+      -
+        template: null
+        template_global: /global/default_image
+        default_image: ice-cream-cones.jpeg
+        type: image
+        enabled: true
+    type: iimage_gallery
+    enabled: true
+  -
+    template: /general_content/text_content
+    markdown: |
+      ## h2 Heading
+      ### h3 Heading
+      #### h4 Heading
+      ##### h5 Heading
+      ###### h6 Heading
+      
+      
+      ## Horizontal Rules
+      
+      ___
+      
+      ---
+      
+      ***
+      
+      
+      ## Emphasis
+      
+      **This is bold text**
+      
+      __This is bold text__
+      
+      *This is italic text*
+      
+      _This is italic text_
+      
+      ~~Strikethrough~~
+      
+      
+      ## Blockquotes
+      
+      
+      > Blockquotes can also be nested...
+      >> ...by using additional greater-than signs right next to each other...
+      > > > ...or with spaces between arrows.
+      
+      
+      ## Lists
+      
+      Unordered
+      
+      + Create a list by starting a line with `+`, `-`, or `*`
+      + Sub-lists are made by indenting 2 spaces:
+        - Marker character change forces new list start:
+          * Ac tristique libero volutpat at
+          + Facilisis in pretium nisl aliquet
+          - Nulla volutpat aliquam velit
+      + Very easy!
+      
+      Ordered
+      
+      1. Lorem ipsum dolor sit amet
+      2. Consectetur adipiscing elit
+      3. Integer molestie lorem at massa
+      
+      
+      1. You can use sequential numbers...
+      1. ...or keep all the numbers as `1.`
+      
+      Start numbering with offset:
+      
+      57. foo
+      1. bar
+      
+      
+      ## Code
+      
+      Inline `code`
+      
+      Indented code
+      
+          // Some comments
+          line 1 of code
+          line 2 of code
+          line 3 of code
+      
+      
+      Block code "fences"
+      
+      ```
+      Sample text here...
+      ```
+      
+      Syntax highlighting
+      
+      ``` js
+      var foo = function (bar) {
+        return bar++;
+      };
+      
+      console.log(foo(5));
+      ```
+      
+      Some basic Git commands are:
+      ```
+      git status
+      git add
+      git commit
+      ```
+      
+      
+      ## Tables
+      
+      Right aligned columns
+      
+      | Option | Description |
+      | ------:| -----------:|
+      | data   | path to data files to supply the data that will be passed into templates. |
+      | engine | engine to be used for processing templates. Handlebars is the default. |
+      | ext    | extension to be used for dest files. |
+      
+      
+      ## Links
+      
+      [link text](http://dev.nodeca.com)
+      
+      [link with title](http://nodeca.github.io/pica/demo/ "title text!")
+      
+      
+      ## Images
+      
+      ![Nature or water](https://source.unsplash.com/1600x900/?water)
+      ![Nature or water](https://source.unsplash.com/1600x900/?nature "Nature or water")
+    type: markdown_text
+    enabled: true
   -
     template: /general_content/highlight
     rows:
@@ -71,20 +231,6 @@ sections:
     type: highlight
     enabled: false
     toggle_background: true
-  -
-    template: /home/latest_post
-    type: latest_post
-    enabled: true
-    center_title_pre_title: Blog
-    center_title_title: 'The latest'
-    center_title_textarea:
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. '
-    toggle_color: true
   -
     template: /general_content/highlight
     rows:
