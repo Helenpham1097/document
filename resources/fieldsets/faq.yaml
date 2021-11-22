@@ -1,0 +1,22 @@
+title: Faq
+fields:
+  -
+    handle: template
+    field:
+      display: template
+      type: hidden
+      icon: hidden
+      listable: hidden
+      default: /general_content/faq
+  -
+    import: section_title
+  -
+    handle: faq_entries
+    field:
+      mode: default
+      collections:
+        - faq
+      display: 'Faq entries'
+      type: entries
+      icon: entries
+      listable: hidden
