@@ -1,7 +1,7 @@
 ---
 title: 'General content'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1637639139
+updated_at: 1637702309
 blueprint: general_content
 description: Lorem
 template: general_content/layout
@@ -600,67 +600,6 @@ sections:
     type: icon_features
     enabled: true
   -
-    template: /global/call_to_action
-    center_title_pre_title: Suscribe
-    center_title_title: 'Title Section'
-    center_title_textarea:
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: 'Text area to complement the secondary title'
-    type: call_to_action
-    enabled: true
-    call_to_action_pre_title: 'Pre Title'
-    call_to_action_title: Suscribe
-    call_to_action_textarea:
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: 'Text area to complement the secondary title'
-    call_to_action_terms:
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: 'By subscribing, you agree with Webslice '
-          -
-            type: text
-            marks:
-              -
-                type: link
-                attrs:
-                  href: '#'
-                  target: null
-                  rel: null
-            text: Terms
-          -
-            type: text
-            text: ' of Service and '
-          -
-            type: text
-            marks:
-              -
-                type: link
-                attrs:
-                  href: '#'
-                  target: null
-                  rel: null
-            text: 'Privacy Policy'
-          -
-            type: text
-            text: .
-    toggle_color: true
-    link: '@'
-    select: background-secondary
-    select_icon: mail
-    text: 'Contact Us'
-    template_global: /global/buttons
-  -
     template: /general_content/social_proof
     social_proof_section_title: null
     social_proof_text_area: null
@@ -1171,6 +1110,86 @@ sections:
             type: text
             text: ' Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. '
     toggle_color: false
+  -
+    template: /global/call_to_action
+    center_title_pre_title: Suscribe
+    center_title_title: Newsletter
+    center_title_textarea:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Subscribe to receive our newsletter'
+    type: call_to_action
+    enabled: true
+    call_to_action_pre_title: 'Pre Title'
+    call_to_action_title: Suscribe
+    call_to_action_textarea:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Subscribe to receive our newsletter'
+    call_to_action_terms:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'By subscribing, you agree with Webslice '
+          -
+            type: text
+            marks:
+              -
+                type: link
+                attrs:
+                  href: '#'
+                  target: null
+                  rel: null
+            text: Terms
+          -
+            type: text
+            text: ' of Service and '
+          -
+            type: text
+            marks:
+              -
+                type: link
+                attrs:
+                  href: '#'
+                  target: null
+                  rel: null
+            text: 'Privacy Policy'
+          -
+            type: text
+            text: .
+    toggle_color: true
+    link: '@'
+    select: background-secondary
+    select_icon: mail
+    text: 'Contact Us'
+    template_global: /global/buttons
+  -
+    template: /general_content/_horizontal_cta
+    template_global: /global/buttons
+    default_image: icons/9.svg
+    title: 'Call to action'
+    bard:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam. '
+    link: '#'
+    select: background-secondary
+    select_icon: mail
+    text: 'Contact Us'
+    toggle: true
+    type: horizontal_cta
+    enabled: true
 top_section:
   -
     type: hero_general_content
