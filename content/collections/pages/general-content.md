@@ -1,7 +1,7 @@
 ---
 title: 'General content'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1637638097
+updated_at: 1637639139
 blueprint: general_content
 description: Lorem
 template: general_content/layout
@@ -1076,7 +1076,15 @@ sections:
     enabled: true
   -
     template: /general_content/image_gallery
-    display_title_section: {  }
+    display_title_section:
+      -
+        template: /global/section_title
+        center_title_pre_title: Lightbox
+        center_title_title: 'Image gallery'
+        center_title_textarea: null
+        toggle_color: false
+        type: section_title
+        enabled: true
     items:
       -
         template: null
@@ -1090,6 +1098,30 @@ sections:
         default_image: 2f72e4702fbbfad307de663bcf1218c0.webp
         type: image
         enabled: true
+      -
+        template: null
+        template_global: /global/default_image
+        default_image: aditya-das-Myu7dSCwhSI-unsplash.jpg
+        type: image
+        enabled: true
+      -
+        template: null
+        template_global: /global/default_image
+        default_image: b8f5db7682a5fb3fa938f2e26c0e855c.webp
+        type: image
+        enabled: false
+      -
+        template: null
+        template_global: /global/default_image
+        default_image: ice-cream-cones.jpeg
+        type: image
+        enabled: false
+      -
+        template: null
+        template_global: /global/default_image
+        default_image: serverless-nights-php-quinitin.png
+        type: image
+        enabled: false
     type: image_gallery
     enabled: true
   -
