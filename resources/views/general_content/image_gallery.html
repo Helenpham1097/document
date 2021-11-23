@@ -35,8 +35,8 @@
 
 
 <div class="text-gray-600 body-font">
-	<div class="container px-5 mx-auto">
-		<div x-data="{}" class="container grid gap-8 mx-auto md:grid-cols-2 lg:grid-cols-3">
+	<div class="mx-auto">
+		<div x-data="{}" class="grid gap-8 mx-auto md:grid-cols-2 lg:grid-cols-3">
 			{{ items }}
 			<a @click="$dispatch('img-modal', {  imgModalSrc: '{{ default_image }}', imgModalDesc: '{{ default_image | get:alt }}' })"
 				class="w-full overflow-hidden transition duration-500 bg-purple-500 rounded-lg shadow-2xl cursor-pointer aspect-w-4 aspect-h-3 hover:opacity-50 hover:shadow-xl">
