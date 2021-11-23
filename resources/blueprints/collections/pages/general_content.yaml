@@ -144,6 +144,11 @@ sections:
               fields:
                 -
                   import: text_content
+            faq:
+              display: FAQ
+              fields:
+                -
+                  import: faq
           display: Sections
           type: replicator
           icon: replicator
