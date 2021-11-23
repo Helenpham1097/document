@@ -1,7 +1,7 @@
 ---
 title: 'General content'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1637702309
+updated_at: 1637703212
 blueprint: general_content
 description: Lorem
 template: general_content/layout
@@ -1009,8 +1009,16 @@ sections:
     enabled: true
   -
     template: /general_content/two_text_columns
-    markdown_a: 'Curabitur mattis dapibus tellus. Cras luctus lobortis nisi, nec tempus ex imperdiet in. Suspendisse ac ullamcorper dolor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis commodo vestibulum elit vitae congue. Suspendisse potenti. Donec gravida eros non posuere condimentum. Pellentesque vitae posuere libero. Morbi tincidunt sed elit in gravida. Donec varius eget tellus quis feugiat. Praesent maximus aliquet efficitur. Suspendisse quis odio quam. Aenean libero nisi, viverra in lacinia quis, luctus sit amet dolor.'
-    markdown_b: 'Phasellus dictum tortor augue, et laoreet purus dictum at. Praesent condimentum, neque in iaculis consequat, augue lacus tincidunt ante, vel sollicitudin mi libero eu lorem. Sed quis ante molestie, vulputate mi et, feugiat tellus. Curabitur volutpat tortor sit amet odio tincidunt facilisis. Praesent volutpat a augue eget lobortis. Nulla facilisi. Donec fringilla gravida sem, vel bibendum urna molestie ac. Etiam bibendum nibh nec ante varius iaculis. Praesent fermentum tellus feugiat, laoreet lorem a, cursus ex.'
+    markdown_a: |
+      ## Getting Started with Webslice
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer iaculis ex a turpis vestibulum, at facilisis sem ullamcorper. **Proin ut mauris purus.** Cras vitae eleifend eros, vel posuere nisi. Nulla quis libero sit amet mauris consectetur blandit eget eu ligula. Aliquam pulvinar feugiat placerat. Nullam ac justo eu sapien viverra scelerisque. Vestibulum ante ipsum primis in faucibus orci _luctus et ultrices posuere_ cubilia curae; Cras a purus est. Praesent tristique, felis id accumsan pharetra, mauris felis venenatis eros, sed sagittis est risus eu leo. Vivamus laoreet lectus sed mi facilisis, vel pellentesque felis ultricies. Maecenas ut nibh condimentum tellus dictum tincidunt. Donec ac ante diam. Donec hendrerit tincidunt [tincidunt](#).
+    markdown_b: |
+      ### Basics of web development
+      
+      Donec eu lectus in dui rhoncus iaculis. Etiam vel nisl mi. Phasellus a enim id diam tincidunt condimentum. Donec tristique vel ipsum nec suscipit. Vestibulum laoreet ullamcorper lacinia. Donec pretium mattis accumsan. Maecenas eget erat aliquam, condimentum turpis tincidunt, tempus orci.
+      Vestibulum ante ipsum primis in faucibus orci.
+      
+      Luctus et ultrices posuere cubilia curae; Cras a purus est. Praesent tristique, felis id accumsan pharetra, mauris felis venenatis eros, sed sagittis est risus eu leo. Vivamus laoreet lectus sed mi facilisis, vel
     type: two_text_columns
     enabled: true
   -
@@ -1021,7 +1029,7 @@ sections:
         center_title_pre_title: Lightbox
         center_title_title: 'Image gallery'
         center_title_textarea: null
-        toggle_color: false
+        toggle_color: true
         type: section_title
         enabled: true
     items:
@@ -1070,7 +1078,12 @@ sections:
   -
     template: /general_content/text_content
     markdown: |
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer iaculis ex a turpis vestibulum, at facilisis sem ullamcorper. Proin ut mauris purus. Cras vitae eleifend eros, vel posuere nisi. Nulla quis libero sit amet mauris consectetur blandit eget eu ligula. Aliquam pulvinar feugiat placerat. Nullam ac justo eu sapien viverra scelerisque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras a purus est. Praesent tristique, felis id accumsan pharetra, mauris felis venenatis eros, sed sagittis est risus eu leo. Vivamus laoreet lectus sed mi facilisis, vel pellentesque felis ultricies. Maecenas ut nibh condimentum tellus dictum tincidunt. Donec ac ante diam. Donec hendrerit tincidunt tincidunt.
+      ## Getting Started with Webslice
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer iaculis ex a turpis vestibulum, at facilisis sem ullamcorper. **Proin ut mauris purus.** Cras vitae eleifend eros, vel posuere nisi. Nulla quis libero sit amet mauris consectetur blandit eget eu ligula. Aliquam pulvinar feugiat placerat. Nullam ac justo eu sapien viverra scelerisque. Vestibulum ante ipsum primis in faucibus orci _luctus et ultrices posuere_ cubilia curae; Cras a purus est. Praesent tristique, felis id accumsan pharetra, mauris felis venenatis eros, sed sagittis est risus eu leo. Vivamus laoreet lectus sed mi facilisis, vel pellentesque felis ultricies. Maecenas ut nibh condimentum tellus dictum tincidunt. Donec ac ante diam. Donec hendrerit tincidunt [tincidunt](#).
+      
+      ![alt text](https://cdn.dribbble.com/users/1787323/screenshots/14750853/media/856e01d496f23c383d0913eaaaecd1c9.png?compress=1&resize=1200x900)
+      
+      ### Basics of web development
       
       Donec eu lectus in dui rhoncus iaculis. Etiam vel nisl mi. Phasellus a enim id diam tincidunt condimentum. Donec tristique vel ipsum nec suscipit. Vestibulum laoreet ullamcorper lacinia. Donec pretium mattis accumsan. Maecenas eget erat aliquam, condimentum turpis tincidunt, tempus orci.
     type: text_content
@@ -1079,16 +1092,10 @@ sections:
     template: /home/latest_post
     type: latest_post
     enabled: true
-    center_title_pre_title: 'Pre Title'
-    center_title_title: 'Pre Title'
-    center_title_textarea:
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: 'Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
-    toggle_color: false
+    center_title_pre_title: 'Last articles'
+    center_title_title: 'From our blog'
+    center_title_textarea: null
+    toggle_color: true
   -
     template: /general_content/faq
     faq_entries:
@@ -1109,7 +1116,7 @@ sections:
           -
             type: text
             text: ' Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. '
-    toggle_color: false
+    toggle_color: true
   -
     template: /global/call_to_action
     center_title_pre_title: Suscribe
@@ -1175,7 +1182,7 @@ sections:
     template: /general_content/_horizontal_cta
     template_global: /global/buttons
     default_image: icons/9.svg
-    title: 'Call to action'
+    title: 'Talk to us'
     bard:
       -
         type: paragraph
