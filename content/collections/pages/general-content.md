@@ -1,7 +1,7 @@
 ---
 title: 'General content'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1637187417
+updated_at: 1637634620
 blueprint: general_content
 description: Lorem
 template: general_content/layout
@@ -69,22 +69,8 @@ sections:
     reverse_alignment: false
     toggle_alignment: true
     type: highlight
-    enabled: false
-    toggle_background: true
-  -
-    template: /home/latest_post
-    type: latest_post
     enabled: true
-    center_title_pre_title: Blog
-    center_title_title: 'The latest'
-    center_title_textarea:
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. '
-    toggle_color: true
+    toggle_background: true
   -
     template: /general_content/highlight
     rows:
@@ -147,7 +133,7 @@ sections:
     reverse_alignment: false
     toggle_alignment: true
     type: highlight
-    enabled: false
+    enabled: true
     toggle_background: false
   -
     template: /general_content/features_columns
@@ -213,7 +199,7 @@ sections:
         default_image: 2.png
         template_global: /global/default_image
     type: features_columns_item
-    enabled: false
+    enabled: true
     display_title: true
     center_title_pre_title: 'Pre Title'
     center_title_title: 'Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
@@ -252,7 +238,7 @@ sections:
             type: text
             text: 'Get your website up and running quickly with our tailored Web Hosting plans'
     type: section_title
-    enabled: false
+    enabled: true
     toggle_alignment: true
     toggle_color: false
   -
@@ -281,7 +267,7 @@ sections:
         default_image: algolia.svg
         template_global: /global/default_image
     type: companies_logo
-    enabled: false
+    enabled: true
   -
     template: /general_content/steps
     testimonial_section_title: null
@@ -372,7 +358,7 @@ sections:
         default_image: 4.png
         template_global: /global/default_image
     type: steps
-    enabled: false
+    enabled: true
   -
     template: /general_content/testimonial
     rows:
@@ -416,7 +402,7 @@ sections:
     reverse_alignment: false
     toggle_alignment: false
     type: testimonial
-    enabled: false
+    enabled: true
     testimonial_section_title: 'Duo assum utroque appetere an'
     testimonial_text_area:
       -
@@ -612,7 +598,7 @@ sections:
         type: column
         enabled: true
     type: icon_features
-    enabled: false
+    enabled: true
   -
     template: /global/call_to_action
     center_title_pre_title: Suscribe
@@ -625,7 +611,7 @@ sections:
             type: text
             text: 'Text area to complement the secondary title'
     type: call_to_action
-    enabled: false
+    enabled: true
     call_to_action_pre_title: 'Pre Title'
     call_to_action_title: Suscribe
     call_to_action_textarea:
@@ -720,7 +706,7 @@ sections:
         enabled: true
         template_global: /global/buttons
     type: social_proof
-    enabled: false
+    enabled: true
     call_to_action_pre_title: 'Pre Title'
     call_to_action_title: 'Section title'
     call_to_action_textarea:
@@ -832,7 +818,7 @@ sections:
         text: 'Choose Plan'
         template_global: /global/buttons
     type: pricing_table
-    enabled: false
+    enabled: true
     items:
       -
         template: null
@@ -1076,7 +1062,62 @@ sections:
             type: text
             text: 'Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. '
     type: comparison_table
-    enabled: false
+    enabled: true
+  -
+    template: /global/embed_video
+    video: 'https://youtu.be/pONeWAzDsQg'
+    type: embed_video
+    enabled: true
+  -
+    template: /general_content/two_text_columns
+    markdown_a: 'Curabitur mattis dapibus tellus. Cras luctus lobortis nisi, nec tempus ex imperdiet in. Suspendisse ac ullamcorper dolor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis commodo vestibulum elit vitae congue. Suspendisse potenti. Donec gravida eros non posuere condimentum. Pellentesque vitae posuere libero. Morbi tincidunt sed elit in gravida. Donec varius eget tellus quis feugiat. Praesent maximus aliquet efficitur. Suspendisse quis odio quam. Aenean libero nisi, viverra in lacinia quis, luctus sit amet dolor.'
+    markdown_b: 'Phasellus dictum tortor augue, et laoreet purus dictum at. Praesent condimentum, neque in iaculis consequat, augue lacus tincidunt ante, vel sollicitudin mi libero eu lorem. Sed quis ante molestie, vulputate mi et, feugiat tellus. Curabitur volutpat tortor sit amet odio tincidunt facilisis. Praesent volutpat a augue eget lobortis. Nulla facilisi. Donec fringilla gravida sem, vel bibendum urna molestie ac. Etiam bibendum nibh nec ante varius iaculis. Praesent fermentum tellus feugiat, laoreet lorem a, cursus ex.'
+    type: two_text_columns
+    enabled: true
+  -
+    template: /global/section_title
+    center_title_pre_title: Blog
+    center_title_title: 'The latest news'
+    center_title_textarea:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
+    toggle_color: false
+    type: latest_post
+    enabled: true
+  -
+    template: /general_content/image_gallery
+    display_title_section: {  }
+    items:
+      -
+        template: null
+        template_global: /global/default_image
+        default_image: 09054a5f40e858381279a62e2ee534a7.webp
+        type: image
+        enabled: true
+      -
+        template: null
+        template_global: /global/default_image
+        default_image: 2f72e4702fbbfad307de663bcf1218c0.webp
+        type: image
+        enabled: true
+    type: image_gallery
+    enabled: true
+  -
+    template: /forms/contact_us
+    type: contact_us_form
+    enabled: true
+  -
+    template: /general_content/text_content
+    markdown: |
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer iaculis ex a turpis vestibulum, at facilisis sem ullamcorper. Proin ut mauris purus. Cras vitae eleifend eros, vel posuere nisi. Nulla quis libero sit amet mauris consectetur blandit eget eu ligula. Aliquam pulvinar feugiat placerat. Nullam ac justo eu sapien viverra scelerisque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras a purus est. Praesent tristique, felis id accumsan pharetra, mauris felis venenatis eros, sed sagittis est risus eu leo. Vivamus laoreet lectus sed mi facilisis, vel pellentesque felis ultricies. Maecenas ut nibh condimentum tellus dictum tincidunt. Donec ac ante diam. Donec hendrerit tincidunt tincidunt.
+      
+      Donec eu lectus in dui rhoncus iaculis. Etiam vel nisl mi. Phasellus a enim id diam tincidunt condimentum. Donec tristique vel ipsum nec suscipit. Vestibulum laoreet ullamcorper lacinia. Donec pretium mattis accumsan. Maecenas eget erat aliquam, condimentum turpis tincidunt, tempus orci.
+    type: text_content
+    enabled: true
 top_section:
   -
     type: hero_general_content

@@ -114,6 +114,36 @@ sections:
               fields:
                 -
                   import: contact_us_form
+            embed_video:
+              display: 'Embed Video'
+              fields:
+                -
+                  import: embed_video
+            two_text_columns:
+              display: 'Two text columns'
+              fields:
+                -
+                  import: two_text_column
+            latest_post:
+              display: 'Latest Post'
+              fields:
+                -
+                  import: latest_post
+            image_gallery:
+              display: 'Image Gallery'
+              fields:
+                -
+                  import: image_gallery
+            contact_us_form:
+              display: 'Contact Us form'
+              fields:
+                -
+                  import: contact_us_form
+            text_content:
+              display: 'Text Content'
+              fields:
+                -
+                  import: text_content
           display: Sections
           type: replicator
           icon: replicator
