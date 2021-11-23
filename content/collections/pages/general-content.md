@@ -1,7 +1,7 @@
 ---
 title: 'General content'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1637636869
+updated_at: 1637638097
 blueprint: general_content
 description: Lorem
 template: general_content/layout
@@ -1117,6 +1117,27 @@ sections:
           -
             type: text
             text: 'Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
+    toggle_color: false
+  -
+    template: /general_content/faq
+    faq_entries:
+      - 57c83bb4-e74d-47f9-924b-1f6ddf8c854a
+      - 236c12aa-a0ec-4e7e-8f4e-e67f29243f62
+      - ec1dbb6f-3d34-49e2-a387-c28342c8ab42
+      - a1c95fbe-5b46-427a-ab56-764bc1fa0e4d
+      - a9f9ef1a-f20a-4e06-9353-98d810fa2fe7
+      - ff4f50d5-1343-4f9f-bfd2-ded4d205c19a
+    type: faq
+    enabled: true
+    center_title_pre_title: FAQ
+    center_title_title: 'Frequently asked questions'
+    center_title_textarea:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: ' Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. '
     toggle_color: false
 top_section:
   -
