@@ -1,38 +1,45 @@
-<div class="space-y-12 ">
-    <div class="relative sm:max-w-7xl sm:mx-auto">
-        <div class="relative p-6">
+
+<div class="relative sm:max-w-7xl sm:mx-auto">
+    
+    {{ if toggle }}
+    <div class="absolute inset-0 mx-auto transform md:shadow-xl md:-skew-x-6 bg-gradient-to-r from-purple-500 to-purple-700 "></div>
+    {{ /if }}
+    <div class="relative grid space-y-6 {{ if toggle }}text-white{{ /if }} p-6 md:p-12 md:grid-cols-3 md:space-x-6 md:space-y-0">
+
+        <div class="flex flex-col items-center justify-center space-y-4 text-center md:col-span-2 md:space-y-0 md:space-x-16 md:flex-row lg:text-left">
+
             {{ if toggle }}
-            <div class="absolute inset-0 p-8 px-4 mx-auto transform shadow-xl md:-skew-x-6 bg-gradient-to-r from-purple-500 to-purple-700 "></div>
+            <div class="relative flex items-center justify-center">
+                <div class="absolute inset-y-0 p-4 px-12 mx-auto transform -skew-x-6 bg-purple-700 shadow-xl bg-gradient-to-r "></div>
+                <img class="relative w-24 h-24" src="{{ default_image }}">
+            </div>
+            {{ else }}
+            <div>
+            <div class="relative flex items-center justify-center">
+                <div class="absolute inset-y-0 p-4 px-12 mx-auto transform -skew-x-6 shadow-xl bg-gradient-to-r from-purple-500 to-purple-700 "></div>
+                <img class="relative w-24 h-24" src="{{ default_image }}">
+            </div>
+            </div>
             {{ /if }}
-            <div class="relative grid space-y-6 {{ if toggle }}text-white{{ /if }} md:p-12 md:grid-cols-2 md:space-x-6 md:space-y-0">
 
-                <div class="flex flex-col space-y-4 text-center lg:text-left">
 
-                    {{ if toggle }}
-                    <img class="relative w-12 h-12" src="{{ default_image }}">
-                    {{ else }}
-                    <div class="relative flex items-center">
-                        <div class="absolute inset-y-0 p-4 px-6 mx-auto transform shadow-xl md:-skew-x-6 bg-gradient-to-r from-purple-500 to-purple-700 "></div>
-                        <img class="relative w-12 h-12" src="{{ default_image }}">
-                    </div>
-                    {{ /if }}
-                    
-                    <h2 class="font-bold leading-none {{ if toggle }}text-white{{ /if }}" data-unsp-sanitized="clean">{{ title }}</h2>
-                    <p class="text-xl">{{ bard | strip_tags }}</p>
+            <div class="space-y-4">
+                <h2 class="{{ if toggle }}text-white{{ /if }}" data-unsp-sanitized="clean">{{ title }}</h2>
+                <p class="text-xl">{{ bard | strip_tags }}</p>
+            </div>
+
+        </div>
+
+        <div class="flex flex-row items-center justify-center w-full ">
+            <div class="flex flex-col justify-center w-full space-y-6 text-center md:space-y-0 md:space-x-6 md:flex-row">
+                {{# <input type="text" placeholder="example@email.com" class=""> #}}
+                <div class="flex-none">
+                    {{ if link }} {{ partial:global/buttons }} {{ /if }}
                 </div>
-
-                <div class="flex flex-row items-center ">
-                    <div class="flex flex-col w-full space-y-6 text-center md:space-y-0 md:space-x-6 md:flex-row">
-                        <input type="text" placeholder="example@email.com" class="">
-                        <div class="flex-none">
-                            {{ if link }} {{ partial:global/buttons }} {{ /if }}
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
 
     </div>
+
 
 </div>
