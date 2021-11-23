@@ -104,6 +104,11 @@ sections:
               fields:
                 -
                   import: image_gallery
+            embed_video:
+              display: 'Embed video'
+              fields:
+                -
+                  import: embed_video
           display: Sections
           type: replicator
           icon: replicator
