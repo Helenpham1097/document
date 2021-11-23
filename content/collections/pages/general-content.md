@@ -1,7 +1,7 @@
 ---
 title: 'General content'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1637634620
+updated_at: 1637636869
 blueprint: general_content
 description: Lorem
 template: general_content/layout
@@ -1075,20 +1075,6 @@ sections:
     type: two_text_columns
     enabled: true
   -
-    template: /global/section_title
-    center_title_pre_title: Blog
-    center_title_title: 'The latest news'
-    center_title_textarea:
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: 'Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
-    toggle_color: false
-    type: latest_post
-    enabled: true
-  -
     template: /general_content/image_gallery
     display_title_section: {  }
     items:
@@ -1118,6 +1104,20 @@ sections:
       Donec eu lectus in dui rhoncus iaculis. Etiam vel nisl mi. Phasellus a enim id diam tincidunt condimentum. Donec tristique vel ipsum nec suscipit. Vestibulum laoreet ullamcorper lacinia. Donec pretium mattis accumsan. Maecenas eget erat aliquam, condimentum turpis tincidunt, tempus orci.
     type: text_content
     enabled: true
+  -
+    template: /home/latest_post
+    type: latest_post
+    enabled: true
+    center_title_pre_title: 'Pre Title'
+    center_title_title: 'Pre Title'
+    center_title_textarea:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
+    toggle_color: false
 top_section:
   -
     type: hero_general_content
