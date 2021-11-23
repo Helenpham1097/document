@@ -1,0 +1,12 @@
+title: 'Latest Post'
+fields:
+  -
+    handle: template
+    field:
+      display: template
+      type: hidden
+      icon: hidden
+      listable: hidden
+      default: /home/latest_post
+  -
+    import: section_title

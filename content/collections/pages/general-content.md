@@ -1,44 +1,12 @@
 ---
 title: 'General content'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1636951429
+updated_at: 1637187417
 blueprint: general_content
 description: Lorem
 template: general_content/layout
 subheader: sdasda
 sections:
-  -
-    template: /general_content/image_gallery
-    display_title_section:
-      -
-        template: /global/section_title
-        center_title_pre_title: null
-        center_title_title: 'List of images'
-        center_title_textarea: null
-        toggle_color: false
-        type: section_title
-        enabled: true
-    items:
-      -
-        template: null
-        template_global: /global/default_image
-        default_image: serverless-nights-php-quinitin.png
-        type: image
-        enabled: true
-      -
-        template: null
-        template_global: /global/default_image
-        default_image: bb28417eb2b2507580ab0f08bf09ea69.webp
-        type: image
-        enabled: true
-      -
-        template: null
-        template_global: /global/default_image
-        default_image: ice-cream-cones.jpeg
-        type: image
-        enabled: true
-    type: iimage_gallery
-    enabled: true
   -
     template: /general_content/highlight
     rows:
@@ -103,6 +71,20 @@ sections:
     type: highlight
     enabled: false
     toggle_background: true
+  -
+    template: /home/latest_post
+    type: latest_post
+    enabled: true
+    center_title_pre_title: Blog
+    center_title_title: 'The latest'
+    center_title_textarea:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. '
+    toggle_color: true
   -
     template: /general_content/highlight
     rows:

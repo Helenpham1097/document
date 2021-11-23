@@ -18,7 +18,7 @@ article p img {
 }
 
 .excerpt, .excerpt p {
-	@apply mb-8 text-xl md:text-2xl;
+	@apply mb-8 text-2xl;
 }
 @screen sm {
 	.excerpt, .excerpt p {
@@ -42,7 +42,7 @@ article p img {
 	}
 
 	blockquote {
-		@apply relative p-8 text-sm not-italic border-l-8 border-purple-400 shadow-lg md:pl-24 bg-purple-50;
+		@apply relative p-8 pl-24 text-sm not-italic border-l-8 border-purple-400 shadow-lg bg-purple-50;
 		*:last-child {
 			margin-bottom: 0;
 		}
