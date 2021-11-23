@@ -36,8 +36,17 @@
 
 <div class="text-gray-600 body-font">
 	<div class="mx-auto">
-		<div x-data="{}" class="grid gap-8 mx-auto md:grid-cols-2 lg:grid-cols-3">
-			{{ items }}
+{{ if items | count >= 4 }}
+    <div x-data="{}" class="grid max-w-5xl gap-8 mx-auto md:grid-cols-2">
+{{ elseif items | count >= 3 }}
+    <div x-data="{}" class="grid justify-between gap-8 md:grid-cols-3 md:flex-row ">
+{{ elseif items | count >= 2 }}
+    <div x-data="{}" class="grid max-w-5xl gap-8 mx-auto md:grid-cols-2 md:flex-row ">
+{{ /if }}
+{{ if items | count === 1 }} 
+    <div x-data="{}" class="grid items-center grid-cols-1 gap-8 md:flex-row ">
+{{ /if }}
+{{ items }}
 			<a @click="$dispatch('img-modal', {  imgModalSrc: '{{ default_image }}', imgModalDesc: '{{ default_image | get:alt }}' })"
 				class="w-full overflow-hidden transition duration-500 bg-purple-500 rounded-lg shadow-2xl cursor-pointer aspect-w-4 aspect-h-3 hover:opacity-50 hover:shadow-xl">
 				{{ partial:global/default_image }}
@@ -50,3 +59,5 @@
 
 
 <p class="hidden">https://play.tailwindcss.com/Nuy95cQh5X</p>
+
+

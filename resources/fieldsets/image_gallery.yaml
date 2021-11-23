@@ -44,3 +44,5 @@ fields:
       type: replicator
       icon: replicator
       listable: hidden
+      instructions: 'Gallery supports up to 6 images. A single image will take the full width of the column. 2 and 3 images will divide their width in equal parts of the column width more than 4 will be displayed in rows of 2'
+      max_sets: 6
