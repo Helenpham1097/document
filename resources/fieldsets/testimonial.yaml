@@ -1,0 +1,132 @@
+title: Testimonial
+fields:
+  -
+    handle: template
+    field:
+      display: template
+      type: hidden
+      icon: hidden
+      listable: hidden
+      default: /general_content/testimonial
+  -
+    handle: testimonial_section_title
+    field:
+      input_type: text
+      antlers: false
+      display: 'Testimonial Title Section'
+      type: text
+      icon: text
+      listable: hidden
+  -
+    handle: testimonial_text_area
+    field:
+      always_show_set_button: false
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - quote
+        - anchor
+        - image
+        - table
+      save_html: false
+      toolbar_mode: fixed
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      reading_time: false
+      fullscreen: true
+      allow_source: true
+      display: 'Testimonial Text Area'
+      type: bard
+      icon: bard
+      listable: hidden
+  -
+    handle: Items
+    field:
+      collapse: false
+      sets:
+        Testimonial-item:
+          display: Testimonial-item
+          fields:
+            -
+              handle: testimonial_image
+              field:
+                mode: grid
+                restrict: false
+                allow_uploads: true
+                display: Image
+                type: assets
+                icon: assets
+                listable: hidden
+                max_files: 1
+            -
+              handle: testimonial_name
+              field:
+                input_type: text
+                antlers: false
+                display: Name
+                type: text
+                icon: text
+                listable: hidden
+            -
+              handle: testimonial_position
+              field:
+                input_type: text
+                antlers: false
+                display: 'Position / Company'
+                type: text
+                icon: text
+                listable: hidden
+            -
+              handle: testimonial_textarea
+              field:
+                antlers: false
+                display: Testimonial
+                always_show_set_button: false
+                buttons:
+                  - bold
+                  - italic
+                  - removeformat
+                  - anchor
+                  - table
+                save_html: false
+                toolbar_mode: fixed
+                link_noopener: false
+                link_noreferrer: false
+                target_blank: false
+                reading_time: false
+                fullscreen: false
+                allow_source: true
+                enable_input_rules: false
+                enable_paste_rules: true
+                type: bard
+                icon: textarea
+                listable: hidden
+            -
+              handle: testimonial_link
+              field:
+                display: Link
+                type: link
+                icon: link
+                width: 50
+                listable: hidden
+            -
+              handle: testimonial_text_link
+              field:
+                input_type: text
+                antlers: false
+                display: 'Text link'
+                type: text
+                icon: text
+                listable: hidden
+                width: 50
+      display: 'Testimonial  Item'
+      type: replicator
+      icon: replicator
+      listable: hidden
+      instructions: 'Add testimonials to the section, ideally 5 items'

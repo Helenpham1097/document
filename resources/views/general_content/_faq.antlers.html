@@ -1,0 +1,32 @@
+{{# Single Faq template, brings Faqs from the Faq collection, more can be added from the replicator. #}}
+{{ partial:global/section_title }}
+
+<section class="container max-w-4xl mx-auto">
+    {{ faq_entries }}
+    <div x-data="{ isOpen: false }" class="border-l-2 border-transparent faq">
+        <div @click="isOpen = !isOpen" class="flex flex-col w-full pb-2 pr-2 cursor-pointer focus:outline-none">
+            <div class="flex flex-row items-center justify-between w-full p-6 space-x-6 bg-white border border-gray-200 hover:bg-gray-50">
+                <h3>{{ title }}</h3>
+                <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="flex-none w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                </svg>
+                <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="flex-none w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="display: none;">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                </svg>
+            </div>
+        </div>
+        <div
+            x-show.transition.origin.top="isOpen"
+            x-transition:enter="transition-all duration-500 transform ease-in-out"
+            x-transition:enter-start="scale-75"
+            x-transition:leave="transition-all duration-500 transform ease-in-out"
+            x-transition:leave-end="opacity-0 scale-75 "
+            style="display: none;"
+        >
+            <div class="p-4 space-y-5 text-lg font-light leading-loose prose max-w-none md:prose-lg lg:prose-xl prose-purple">
+                {{ answer }}
+            </div>
+        </div>
+    </div>
+    {{ /faq_entries }}
+</section>

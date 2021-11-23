@@ -1,0 +1,21 @@
+title: 'Default Image'
+fields:
+  -
+    handle: template_global
+    field:
+      display: template_global
+      type: hidden
+      icon: hidden
+      listable: hidden
+      default: /global/default_image
+  -
+    handle: default_image
+    field:
+      mode: grid
+      restrict: false
+      allow_uploads: true
+      max_files: 1
+      display: 'Default Image'
+      type: assets
+      icon: assets
+      listable: hidden

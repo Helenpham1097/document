@@ -1,0 +1,92 @@
+title: 'Column Features'
+fields:
+  -
+    handle: template
+    field:
+      display: template
+      type: hidden
+      icon: hidden
+      listable: hidden
+      default: /general_content/features_columns
+  -
+    handle: display_title_section
+    field:
+      collapse: false
+      max_sets: 1
+      sets:
+        section_title:
+          display: 'Title Section'
+          fields:
+            -
+              import: section_title
+      display: 'Add Title Section'
+      type: replicator
+      icon: replicator
+      listable: hidden
+  -
+    handle: items
+    field:
+      collapse: false
+      sets:
+        column:
+          display: Column
+          fields:
+            -
+              handle: template
+              field:
+                display: template
+                type: hidden
+                icon: hidden
+                listable: hidden
+            -
+              import: default_image
+            -
+              handle: features_columns_title
+              field:
+                input_type: text
+                antlers: false
+                display: 'Column features title'
+                type: text
+                icon: text
+                listable: hidden
+            -
+              handle: features_columns_subtitle
+              field:
+                input_type: text
+                antlers: false
+                display: 'Column features subtitle'
+                type: text
+                icon: text
+                listable: hidden
+            -
+              handle: features_columns_list
+              field:
+                display: 'Column features list'
+                always_show_set_button: false
+                buttons:
+                  - bold
+                  - italic
+                  - unorderedlist
+                  - orderedlist
+                  - removeformat
+                  - anchor
+                  - table
+                save_html: false
+                toolbar_mode: fixed
+                link_noopener: false
+                link_noreferrer: false
+                target_blank: false
+                reading_time: false
+                fullscreen: false
+                allow_source: true
+                enable_input_rules: false
+                enable_paste_rules: true
+                type: bard
+                icon: list
+                listable: hidden
+            -
+              import: buttons
+      display: Items
+      type: replicator
+      icon: replicator
+      listable: hidden

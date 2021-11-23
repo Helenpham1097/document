@@ -1,0 +1,336 @@
+{{# Feature template in a horizontal row, as more are added from the replicator they will alternate their order, they can all line up on either side. #}}
+<section class="mx-auto space-y-12 lg:space-y-16 ">
+	{{ rows }}
+		{{ if  toggle_alignment }}
+
+			{{ if reverse_alignment }}
+
+				{{ if { switch between="odd|even" for="Image Right First"} == "odd" }}
+					<div class="max-w-full ">
+						<div class="grid grid-cols-6 gap-12" style="height: 750px;">
+							<div class="relative col-span-6 overflow-hidden transform sm:-skew-x-12 sm:col-span-3 sm:-right-32 gradient-purple-to-teal-light">
+
+								<div class="absolute w-3/4 m-auto transform sm:skew-x-12 -bottom-8 right-8 md:w-full md:-bottom-32 md:-right-24">
+									{{ assets:feature_highlight_image }}
+										{{ unless extension === "gif" }}
+											<img class="w-auto rounded-lg shadow-lg md:shadow-2xl" src="{{ glide:feature_highlight_image width='600' height='337.5' dpr='2' quality='70' fm='webp' }}" width="600" height="337.5" alt="{{ feature_highlight_image:cover_photo:alt }}" />
+										{{ else }}
+											<img class="w-auto rounded-lg shadow-lg md:shadow-2xl" src="{{ feature_highlight_image }}" alt="{{ feature_highlight_image }}" />
+										{{ /if }}
+									{{ /assets:feature_highlight_image }}
+								</div>
+
+								<div class="absolute w-3/4 m-auto transform sm:skew-x-12 -bottom-16 right-16 md:w-full md:-bottom-48 md:-right-48">
+									{{ assets:feature_highlight_image }}
+										{{ unless extension === "gif" }}
+											<img class="w-auto rounded-lg shadow-lg md:shadow-2xl" src="{{ glide:feature_highlight_image width='600' height='337.5' dpr='2' quality='70' fm='webp' }}" width="600" height="337.5" alt="{{ feature_highlight_image:cover_photo:alt }}" />
+										{{ else }}
+											<img class="w-auto rounded-lg shadow-lg md:shadow-2xl" src="{{ feature_highlight_image }}" alt="{{ feature_highlight_image }}" />
+										{{ /if }}
+									{{ /assets:feature_highlight_image }}
+								</div>
+
+							</div>
+
+							<div class="flex flex-col justify-center col-span-6 space-y-6 sm:order-first sm:col-start-2 sm:col-span-2">
+								<h2>{{ feature_highlight_title }}</h2>
+								<p>{{ feature_highlight_textarea | strip_tags:p }}</p>
+								<div class="flex flex-col space-y-6 sm:space-x-6 sm:space-y-0 sm:flex-row">
+									{{ if feature_highlight_text_link}}
+									<a class="flex items-center justify-center flex-none w-full mr-0 md:mt-0 md:w-auto primary-btn">
+										<svg class="w-4 h-4 mr-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+											<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+											<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+										</svg>
+										{{ feature_highlight_text_link }}
+									</a>
+									{{ /if }}
+									{{ if feature_highlight_text_link}}
+									<a class="flex items-center justify-center flex-none w-full md:mt-0 md:w-auto secondary-btn">
+										<svg class="w-4 h-4 mr-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+											<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+											<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+										</svg>
+										{{ feature_highlight_text_link }}
+									</a>
+									{{ /if }}
+								</div>
+							</div>
+						</div>
+					</div>
+				{{ else }}
+					<div class="max-w-full ">
+						<div class="grid grid-cols-6 gap-12" style="height: 750px;">
+							<div class="relative col-span-6 overflow-hidden transform sm:-skew-x-12 sm:col-span-3 sm:-left-28 gradient-purple-to-teal-light">
+
+								<div class="absolute w-3/4 m-auto transform sm:skew-x-12 -bottom-8 right-8 md:w-full md:-bottom-32 md:right-24">
+									{{ assets:feature_highlight_image }}
+										{{ unless extension === "gif" }}
+											<img class="w-auto rounded-lg shadow-lg md:shadow-2xl" src="{{ glide:feature_highlight_image width='600' height='337.5' dpr='2' quality='70' fm='webp' }}" width="600" height="337.5" alt="{{ feature_highlight_image:cover_photo:alt }}" />
+										{{ else }}
+											<img class="w-auto rounded-lg shadow-lg md:shadow-2xl" src="{{ feature_highlight_image }}" alt="{{ feature_highlight_image }}" />
+										{{ /if }}
+									{{ /assets:feature_highlight_image }}
+								</div>
+
+								<div class="absolute w-3/4 m-auto transform sm:skew-x-12 -bottom-16 right-16 md:w-full md:-bottom-48 md:right-48">
+									{{ assets:feature_highlight_image }}
+										{{ unless extension === "gif" }}
+											<img class="w-auto rounded-lg shadow-lg md:shadow-2xl" src="{{ glide:feature_highlight_image width='600' height='337.5' dpr='2' quality='70' fm='webp' }}" width="600" height="337.5" alt="{{ feature_highlight_image:cover_photo:alt }}" />
+										{{ else }}
+											<img class="w-auto rounded-lg shadow-lg md:shadow-2xl" src="{{ feature_highlight_image }}" alt="{{ feature_highlight_image }}" />
+										{{ /if }}
+									{{ /assets:feature_highlight_image }}
+								</div>
+								
+							</div>
+
+							<div class="flex flex-col justify-center col-span-6 space-y-6 sm:col-span-2">
+								<h2>{{ feature_highlight_title }} </h2>
+								<p>{{ feature_highlight_textarea | strip_tags:p }}</p>
+								<div class="flex flex-col space-y-6 sm:space-x-6 sm:space-y-0 sm:flex-row">
+									{{ if feature_highlight_text_link}}
+									<a class="flex items-center justify-center flex-none w-full mr-0 md:mt-0 md:w-auto primary-btn">
+										<svg class="w-4 h-4 mr-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+											<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+											<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+										</svg>
+										{{ feature_highlight_text_link }}
+									</a>
+									{{ /if }}
+									{{ if feature_highlight_text_link}}
+									<a class="flex items-center justify-center flex-none w-full md:mt-0 md:w-auto secondary-btn">
+										<svg class="w-4 h-4 mr-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+											<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+											<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+										</svg>
+										{{ feature_highlight_text_link }}
+									</a>
+									{{ /if }}
+								</div>
+							</div>
+						</div>
+					</div>
+				{{ endif }}
+			
+			{{ else }}
+
+				{{ if { switch between="odd|even" for="Image Left First"} == "even" }}
+					<div class="max-w-full ">
+						<div class="grid grid-cols-6 gap-12" style="height: 750px;">
+							<div class="relative col-span-6 overflow-hidden transform sm:-skew-x-12 sm:col-span-3 sm:-right-32 gradient-purple-to-teal-light">
+
+								<div class="absolute w-3/4 m-auto transform sm:skew-x-12 -bottom-8 right-8 md:w-full md:-bottom-32 md:-right-24">
+									{{ assets:feature_highlight_image }}
+										{{ unless extension === "gif" }}
+											<img class="w-auto rounded-lg shadow-lg md:shadow-2xl" src="{{ glide:feature_highlight_image width='600' height='337.5' dpr='2' quality='70' fm='webp' }}" width="600" height="337.5" alt="{{ feature_highlight_image:cover_photo:alt }}" />
+										{{ else }}
+											<img class="w-auto rounded-lg shadow-lg md:shadow-2xl" src="{{ feature_highlight_image }}" alt="{{ feature_highlight_image }}" />
+										{{ /if }}
+									{{ /assets:feature_highlight_image }}
+								</div>
+
+								<div class="absolute w-3/4 m-auto transform sm:skew-x-12 -bottom-16 right-16 md:w-full md:-bottom-48 md:-right-48">
+									{{ assets:feature_highlight_image }}
+										{{ unless extension === "gif" }}
+											<img class="w-auto rounded-lg shadow-lg md:shadow-2xl" src="{{ glide:feature_highlight_image width='600' height='337.5' dpr='2' quality='70' fm='webp' }}" width="600" height="337.5" alt="{{ feature_highlight_image:cover_photo:alt }}" />
+										{{ else }}
+											<img class="w-auto rounded-lg shadow-lg md:shadow-2xl" src="{{ feature_highlight_image }}" alt="{{ feature_highlight_image }}" />
+										{{ /if }}
+									{{ /assets:feature_highlight_image }}
+								</div>
+
+							</div>
+
+							<div class="flex flex-col justify-center col-span-6 space-y-6 sm:order-first sm:col-start-2 sm:col-span-2">
+								<h2>{{ feature_highlight_title }}</h2>
+								<p>{{ feature_highlight_textarea | strip_tags:p }}</p>
+								<div class="flex flex-col space-y-6 sm:space-x-6 sm:space-y-0 sm:flex-row">
+									{{ if feature_highlight_text_link}}
+									<a class="flex items-center justify-center flex-none w-full mr-0 md:mt-0 md:w-auto primary-btn">
+										<svg class="w-4 h-4 mr-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+											<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+											<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+										</svg>
+										{{ feature_highlight_text_link }}
+									</a>
+									{{ /if }}
+									{{ if feature_highlight_text_link}}
+									<a class="flex items-center justify-center flex-none w-full md:mt-0 md:w-auto secondary-btn">
+										<svg class="w-4 h-4 mr-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+											<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+											<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+										</svg>
+										{{ feature_highlight_text_link }}
+									</a>
+									{{ /if }}
+								</div>
+							</div>
+						</div>
+					</div>
+				{{ else }}
+					<div class="max-w-full ">
+						<div class="grid grid-cols-6 gap-12" style="height: 750px;">
+							<div class="relative col-span-6 overflow-hidden transform sm:-skew-x-12 sm:col-span-3 sm:-left-28 gradient-purple-to-teal-light">
+
+								<div class="absolute w-3/4 m-auto transform sm:skew-x-12 -bottom-8 right-8 md:w-full md:-bottom-32 md:right-24">
+									{{ assets:feature_highlight_image }}
+										{{ unless extension === "gif" }}
+											<img class="w-auto rounded-lg shadow-lg md:shadow-2xl" src="{{ glide:feature_highlight_image width='600' height='337.5' dpr='2' quality='70' fm='webp' }}" width="600" height="337.5" alt="{{ feature_highlight_image:cover_photo:alt }}" />
+										{{ else }}
+											<img class="w-auto rounded-lg shadow-lg md:shadow-2xl" src="{{ feature_highlight_image }}" alt="{{ feature_highlight_image }}" />
+										{{ /if }}
+									{{ /assets:feature_highlight_image }}
+								</div>
+
+								<div class="absolute w-3/4 m-auto transform sm:skew-x-12 -bottom-16 right-16 md:w-full md:-bottom-48 md:right-48">
+									{{ assets:feature_highlight_image }}
+										{{ unless extension === "gif" }}
+											<img class="w-auto rounded-lg shadow-lg md:shadow-2xl" src="{{ glide:feature_highlight_image width='600' height='337.5' dpr='2' quality='70' fm='webp' }}" width="600" height="337.5" alt="{{ feature_highlight_image:cover_photo:alt }}" />
+										{{ else }}
+											<img class="w-auto rounded-lg shadow-lg md:shadow-2xl" src="{{ feature_highlight_image }}" alt="{{ feature_highlight_image }}" />
+										{{ /if }}
+									{{ /assets:feature_highlight_image }}
+								</div>
+								
+							</div>
+
+							<div class="flex flex-col justify-center col-span-6 space-y-6 sm:col-span-2">
+								<h2>{{ feature_highlight_title }} </h2>
+								<p>{{ feature_highlight_textarea | strip_tags:p }}</p>
+								<div class="flex flex-col space-y-6 sm:space-x-6 sm:space-y-0 sm:flex-row">
+									{{ if feature_highlight_text_link}}
+									<a class="flex items-center justify-center flex-none w-full mr-0 md:mt-0 md:w-auto primary-btn">
+										<svg class="w-4 h-4 mr-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+											<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+											<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+										</svg>
+										{{ feature_highlight_text_link }}
+									</a>
+									{{ /if }}
+									{{ if feature_highlight_text_link}}
+									<a class="flex items-center justify-center flex-none w-full md:mt-0 md:w-auto secondary-btn">
+										<svg class="w-4 h-4 mr-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+											<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+											<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+										</svg>
+										{{ feature_highlight_text_link }}
+									</a>
+									{{ /if }}
+								</div>
+							</div>
+						</div>
+					</div>
+				{{ endif }}
+			{{ endif }}	
+		{{ else }}
+			{{ if reverse_alignment }}
+					<div class="max-w-full ">
+						<div class="grid grid-cols-6 gap-12" style="height: 750px;">
+							<div class="relative col-span-6 overflow-hidden transform sm:-skew-x-12 sm:col-span-3 sm:-left-28 gradient-purple-to-teal-light">
+
+								<div class="absolute w-3/4 m-auto transform sm:skew-x-12 -bottom-8 right-8 md:w-full md:-bottom-32 md:right-24">
+									{{ assets:feature_highlight_image }}
+										{{ unless extension === "gif" }}
+											<img class="w-auto rounded-lg shadow-lg md:shadow-2xl" src="{{ glide:feature_highlight_image width='600' height='337.5' dpr='2' quality='70' fm='webp' }}" width="600" height="337.5" alt="{{ feature_highlight_image:cover_photo:alt }}" />
+										{{ else }}
+											<img class="w-auto rounded-lg shadow-lg md:shadow-2xl" src="{{ feature_highlight_image }}" alt="{{ feature_highlight_image }}" />
+										{{ /if }}
+									{{ /assets:feature_highlight_image }}
+								</div>
+
+								<div class="absolute w-3/4 m-auto transform sm:skew-x-12 -bottom-16 right-16 md:w-full md:-bottom-48 md:right-48">
+									{{ assets:feature_highlight_image }}
+										{{ unless extension === "gif" }}
+											<img class="w-auto rounded-lg shadow-lg md:shadow-2xl" src="{{ glide:feature_highlight_image width='600' height='337.5' dpr='2' quality='70' fm='webp' }}" width="600" height="337.5" alt="{{ feature_highlight_image:cover_photo:alt }}" />
+										{{ else }}
+											<img class="w-auto rounded-lg shadow-lg md:shadow-2xl" src="{{ feature_highlight_image }}" alt="{{ feature_highlight_image }}" />
+										{{ /if }}
+									{{ /assets:feature_highlight_image }}
+								</div>
+								
+							</div>
+
+							<div class="flex flex-col justify-center col-span-6 space-y-6 sm:col-span-2">
+								<h2>{{ feature_highlight_title }} </h2>
+								<p>{{ feature_highlight_textarea | strip_tags:p }}</p>
+								<div class="flex flex-col space-y-6 sm:space-x-6 sm:space-y-0 sm:flex-row">
+									{{ if feature_highlight_text_link}}
+									<a class="flex items-center justify-center flex-none w-full mr-0 md:mt-0 md:w-auto primary-btn">
+										<svg class="w-4 h-4 mr-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+											<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+											<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+										</svg>
+										{{ feature_highlight_text_link }}
+									</a>
+									{{ /if }}
+									{{ if feature_highlight_text_link}}
+									<a class="flex items-center justify-center flex-none w-full md:mt-0 md:w-auto secondary-btn">
+										<svg class="w-4 h-4 mr-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+											<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+											<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+										</svg>
+										{{ feature_highlight_text_link }}
+									</a>
+									{{ /if }}
+								</div>
+							</div>
+						</div>
+					</div>
+			{{ else }}
+				<div class="max-w-full ">
+						<div class="grid grid-cols-6 gap-12" style="height: 750px;">
+							<div class="relative col-span-6 overflow-hidden transform sm:-skew-x-12 sm:col-span-3 sm:-right-32 gradient-purple-to-teal-light">
+
+								<div class="absolute w-3/4 m-auto transform sm:skew-x-12 -bottom-8 right-8 md:w-full md:-bottom-32 md:-right-24">
+									{{ assets:feature_highlight_image }}
+										{{ unless extension === "gif" }}
+											<img class="w-auto rounded-lg shadow-lg md:shadow-2xl" src="{{ glide:feature_highlight_image width='600' height='337.5' dpr='2' quality='70' fm='webp' }}" width="600" height="337.5" alt="{{ feature_highlight_image:cover_photo:alt }}" />
+										{{ else }}
+											<img class="w-auto rounded-lg shadow-lg md:shadow-2xl" src="{{ feature_highlight_image }}" alt="{{ feature_highlight_image }}" />
+										{{ /if }}
+									{{ /assets:feature_highlight_image }}
+								</div>
+
+								<div class="absolute w-3/4 m-auto transform sm:skew-x-12 -bottom-16 right-16 md:w-full md:-bottom-48 md:-right-48">
+									{{ assets:feature_highlight_image }}
+										{{ unless extension === "gif" }}
+											<img class="w-auto rounded-lg shadow-lg md:shadow-2xl" src="{{ glide:feature_highlight_image width='600' height='337.5' dpr='2' quality='70' fm='webp' }}" width="600" height="337.5" alt="{{ feature_highlight_image:cover_photo:alt }}" />
+										{{ else }}
+											<img class="w-auto rounded-lg shadow-lg md:shadow-2xl" src="{{ feature_highlight_image }}" alt="{{ feature_highlight_image }}" />
+										{{ /if }}
+									{{ /assets:feature_highlight_image }}
+								</div>
+
+							</div>
+
+							<div class="flex flex-col justify-center col-span-6 space-y-6 sm:order-first sm:col-start-2 sm:col-span-2">
+								<h2>{{ feature_highlight_title }}</h2>
+								<p>{{ feature_highlight_textarea | strip_tags:p }}</p>
+								<div class="flex flex-col space-y-6 sm:space-x-6 sm:space-y-0 sm:flex-row">
+									{{ if feature_highlight_text_link}}
+									<a class="flex items-center justify-center flex-none w-full mr-0 md:mt-0 md:w-auto primary-btn">
+										<svg class="w-4 h-4 mr-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+											<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+											<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+										</svg>
+										{{ feature_highlight_text_link }}
+									</a>
+									{{ /if }}
+									{{ if feature_highlight_text_link}}
+									<a class="flex items-center justify-center flex-none w-full md:mt-0 md:w-auto secondary-btn">
+										<svg class="w-4 h-4 mr-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+											<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+											<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+										</svg>
+										{{ feature_highlight_text_link }}
+									</a>
+									{{ /if }}
+								</div>
+							</div>
+						</div>
+					</div>
+			{{ endif }}
+		{{ endif }}
+	{{ /rows}}
+</section>

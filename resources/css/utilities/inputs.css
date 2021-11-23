@@ -1,4 +1,4 @@
-input,
+/* input,
 textarea,
 select {
 	@apply block w-full px-4 py-4 leading-tight text-gray-700 transition duration-500 ease-in-out border-2 border-solid rounded-none shadow focus:ring-purple-500 focus:border-purple-500 sm:text-sm;
@@ -16,4 +16,53 @@ select {
 
 label {
 	@apply block text-sm font-medium text-gray-700;
+} */
+
+@layer base {
+	input[type='text'],
+	input[type='password'],
+	input[type='email'],
+	input[type='number'],
+	input[type='url'],
+	input[type='date'],
+	input[type='datetime-local'],
+	input[type='month'],
+	input[type='week'],
+	input[type='time'],
+	input[type='search'],
+	input[type='tel'],
+	select,
+	select[multiple],
+	textarea {
+		@apply w-full placeholder-purple-300 transition duration-500 ease-in-out transform bg-white border border-purple-200 shadow-sm focus:border-purple-300 focus:bg-purple-50 focus:ring focus:ring-purple-200 focus:ring-opacity-50;
+	}
+	input[type='checkbox'],
+	input[type='radio'] {
+		@apply text-purple-500 rounded-sm;
+	}
+	label {
+		@apply text-purple-500;
+	}
+	::-webkit-calendar-picker-indicator {
+		@apply text-purple-500;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5 bg-purple-500 text-purple-500' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' /%3E%3C/svg%3E");
+		background-position: 96% 50%;
+	}
+	
+	/* class applies to select element itself, not a wrapper element */
+	select {
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-3 w-3 bg-purple-500 text-purple-500' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E");
+		/* background-position: 98% 50%; */
+	}
+}
+
+[type='checkbox'] {
+	&.toggle {
+		@apply transition duration-200 ease-in-out bg-gray-100 rounded-full bg-none;
+	}
+}
+[type='checkbox']:checked {
+	&.toggle {
+		@apply transition duration-200 ease-in-out bg-purple-500 rounded-full bg-none;
+	}
 }

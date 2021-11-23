@@ -16,8 +16,8 @@ module.exports = {
             padding: '2rem'
         },
         fontFamily: {
-            'body': ['Arial', 'sans-serif'],
-            'display': ['Arial', 'sans-serif'],
+            'body': ['Inter', 'sans-serif'],
+            'display': ['Inter', 'sans-serif'],
         },
         extend: {
             colors: {
@@ -51,8 +51,39 @@ module.exports = {
                     dark: '#aa8c2c'
                 },
             },
+            typography: (theme) => ({
+                DEFAULT: {
+                    css: {
+                        h2: {
+                            fontWeight: '700',
+                            color: theme('colors.gray.900'),
+                        },
+                        a: {
+                            'text-decoration': 'none',
+                            '&:hover': {
+                                'text-decoration': 'underline',
+                            }
+                        },
+
+                        ul: {
+                            li: {
+                                'padding-left': '96',
+                            }
+                        },
+                    },
+                },
+            }),
         },
     },
-    variants: {},
-    plugins: [],
+    variants: {
+        extend: {
+            // ...
+            translate: ['active', 'group-hover'],
+        },
+    },
+    plugins: [
+        require('@tailwindcss/typography'),
+        require('@tailwindcss/forms'),
+        require('@tailwindcss/aspect-ratio'),
+    ],
 }

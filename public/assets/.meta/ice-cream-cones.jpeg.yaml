@@ -1,4 +1,5 @@
-data: {  }
+data:
+  alt: 'Ice cream cones'
 size: 119588
 last_modified: 1623213244
 width: 2200

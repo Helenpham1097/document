@@ -1,22 +1,45 @@
-{{# Partial template for non-featured blog posts #}}
+{{# Partial template for non-featured blog posts, used in the blog index grid and related blog entries #}}
 
-<section class="container w-full px-5 mx-auto">
-    <div class="grid grid-cols-1 gap-8 sm:grid-cols-3">
-        {{ posts }}
-        <article>
-            <a href="{{ url }}">
-                <figure>
-                    {{ partial:blog/default_image }}
-                </figure>
-                <div class="flex items-start px-5 py-5">
-                    <div class="relative overflow-hidden rounded-lg">
-                        <h3>{{ title }}</h3>
-                        <p class="leading-relaxed">{{ subheader }}</p>
-                        <span href="{{ url }}" class="inline-flex items-center cta"> Learn More </span>
-                    </div>
+<a class="post" href="{{ url }}">
+    <div class="flex flex-col space-y-6 group ">
+        <div class="relative w-full">
+            <div class="relative flex flex-col items-center">
+                <div class="inset-0 w-full overflow-hidden transition duration-500 ease-in-out transform rounded-lg shadow-lg group-hover:shadow-2xl aspect-w-8 aspect-h-5">
+                    {{ partial:global/default_image }}
                 </div>
-            </a>
-        </article>
-        {{ /posts }}
+            </div>
+        </div>
+        <h3> {{ title }} </h3>
+        <div class="flex flex-row sm:space-x-4 ">
+            <div class="flex items-center space-x-2">
+                {{ if author:avatar }}
+                <img class="w-8 h-8 rounded-full" src="{{ author:avatar }}" alt="Avatar of {{ author:name }}" />
+                {{ else }}
+                <img class="w-8 h-8 rounded-full " src="{{ placeholder_image:placeholder_avatar }}" alt="Avatar of {{ author:name }}" />
+                <div> {{ author:name }} </div>
+                {{ /if }}
+            </div>
+            <div class="flex items-center space-x-2 ">
+                <svg class="hidden w-5 h-5 sm:block " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <span class="block"> {{ date iso_format="DD-MM-YYYY" }} </span>
+            </div>
+            <div>
+            </div>
+        </div>
+
+        {{ if subheader }}
+            <p>{{ subheader | truncate:140 }}</p>
+        {{ /if }}
+
+        <div class="inline-flex ">
+            <div class="relative inline-flex items-center group">
+                <span href="{{ url }}" class="inline-flex items-center cta">
+                    {{ latest_news:link_text }}
+                </span>
+            </div>
+        </div>
+
     </div>
-</section>
+</a>

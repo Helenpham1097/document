@@ -1,0 +1,18 @@
+title: Toggle
+fields:
+  -
+    handle: template
+    field:
+      display: template
+      type: hidden
+      icon: hidden
+      listable: hidden
+      default: /general_content/toggle
+  -
+    handle: pricing_toggle
+    field:
+      display: 'Pricing Toggle'
+      type: toggle
+      icon: toggle
+      listable: hidden
+      width: 50

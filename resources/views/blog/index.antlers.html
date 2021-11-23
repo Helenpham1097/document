@@ -2,10 +2,9 @@
 
 <body>
     {{ partial:blog/nav }}
-    <div class="hidden sm:block cover">
-        <!-- <img src="https://source.unsplash.com/user/freeche/1600x480"> -->
-    </div>
-
+    {{# {{ partial:global/nav }} #}}
+    {{# <div class="absolute w-full my-12 sm:my-0 h-1/2 sm:h-2/3 light-purple"></div> #}}
+    <div class="slice-bg"></div>
     {{# Check for Stickied post  #}}
     {{ if stickied_post && (get:page == "1" || !get:page) }}
 
@@ -31,16 +30,27 @@
             {{ /if }}
         {{ /collection:blog }}
 
-        {{# Non-featured posts. To enable pagination set true and change limit to 6 #}}
-        {{ collection:blog limit="0" paginate="false" as="posts" sort="date:desc" offset="1" }}
-            {{ partial:blog/post }}
+        {{ collection:blog limit="6" paginate="true" as='posts' sort="date:desc" offset="1" }}
+            {{ if posts && (get:page == "1" || !get:page) }}
+                <div class="py-8 space-y-8">
+            {{ else }}
+                <div class="py-8 space-y-8 lg:pb-8 sm:space-y-16">
+            {{ /if }}
+                </div>
+            <div class="container grid gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-3 place-items-startgrid">
+                {{ posts }}
+                    {{ partial:blog/post }}
+                {{ /posts }}	
+            </div>
             <!-- Paginator -->
-            {{ partial:blog/paginate }}
+            {{ if {collection:count in="blog"} > 6 }}
+                {{ partial:blog/paginate }}
+            {{ /if }}
         {{ /collection:blog }}
-
-        {{ partial:blog/footer}}
-
+        
     {{ /if }}
-
+    
+{{ partial:blog/footer }}
+{{# {{ partial:global/footer }} #}}
 </body>
 

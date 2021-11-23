@@ -1,17 +1,29 @@
 {{# Partial template for the featured blog post on blog index page #}}
 
-<section class="w-full mx-auto max-w-screen-2xl">
-    <article class="flex flex-col items-center mx-auto sm:px-8 sm:py-24 sm:container md:flex-row">
-        <a href="{{ url }}" class="flex flex-col items-center p-10 mb-16 text-center bg-white chevron-path lg:flex-grow lg:pr-24 md:items-start md:mb-0 md:pr-16 md:text-left md:w-1/2">
-            <h1 class="leading-none gradient-bg">{{ title }}</h1>
-            <p class="leading-relxaxed"> {{ subheader }}</p>
+<section class="container mx-auto mt-6 sm:mt-18 featured-blog">
+<div class="flex flex-col items-center justify-center py-4 space-x-0 sm:space-x-reverse sm:space-x-8 md:flex-row md:py-10">
+    <div class="w-full pr-4 space-y-6 md:w-1/2">
+        {{ if categories }}
+            <div class="flex-row items-center hidden space-x-2 sm:flex ">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-500 " fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5a1.99 1.99 0 011.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
+                <div class="text-purple-500">{{ categories  limit="1" }}  {{ title }} {{ /categories }}</div>
+            </div>
+        {{ /if }}
+        <a href="{{ url }}" class="flex flex-col items-center space-y-6 lg:flex-grow md:items-start">
+            <h1 class="">{{ title }}</h1>
+            <p class="excerpt"> {{ subheader }}</p>
             <span class="inline-flex items-center cta"> Learn More </span>
         </a>
-
-        <div class="order-first w-full sm:-m-20 sm:mb-0 md:w-4/6">
-            <a href="{{ url }}">
-            {{ partial:blog/default_image }}
-            </a>
+    </div>
+        
+        <div class="order-first md:w-1/2 md:pl-4">
+            <div class="relative illustration-element">
+                <div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg shadow-lg right aspect-w-6 aspect-h-4 group-hover:shadow-2xl">
+                    <a href="{{ url }}">
+                        {{ partial:global/default_image }}
+                    </a>
+                </div>
+            </div>
         </div>
-    </article>
+</div>
 </section>

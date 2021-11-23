@@ -1,0 +1,58 @@
+title: 'Hero Home'
+fields:
+  -
+    handle: template
+    field:
+      display: template
+      type: hidden
+      icon: hidden
+      listable: hidden
+      default: /home/hero_home
+  -
+    handle: hero_home_title
+    field:
+      input_type: text
+      antlers: false
+      display: 'Hero home title'
+      type: text
+      icon: text
+      listable: hidden
+  -
+    handle: hero_home_description
+    field:
+      antlers: false
+      display: hero_home_description
+      always_show_set_button: false
+      buttons:
+        - bold
+        - italic
+        - removeformat
+        - anchor
+      save_html: false
+      toolbar_mode: fixed
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      reading_time: false
+      fullscreen: false
+      allow_source: true
+      enable_input_rules: false
+      enable_paste_rules: true
+      type: bard
+      icon: textarea
+      listable: hidden
+  -
+    handle: hero_home_image
+    field:
+      mode: grid
+      restrict: false
+      allow_uploads: true
+      max_files: 1
+      display: hero_home_image
+      type: assets
+      icon: assets
+      listable: hidden
+  -
+    import: buttons
+  -
+    import: default_image

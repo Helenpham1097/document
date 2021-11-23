@@ -1,0 +1,12 @@
+{{# Template for the landing page while the main website pages haven't been added #}}
+<body class="">
+    {{ partial:global/nav }}
+
+    {{ top_section }} {{ partial:{{ template }} }} {{ /top_section }}
+    <div class="space-y-24 general-content ">
+    {{ sections }} {{ partial:{{ template }} }} {{ /sections }}
+    </div>
+    {{ button_section }} {{ partial:{{ template }} }} {{ /button_section }}
+    
+    {{ partial:global/footer }}
+</body>

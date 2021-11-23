@@ -1,0 +1,49 @@
+<section class="container mx-auto space-y-8 md:space-y-8">
+	{{ display_title_section }}
+		{{ partial:global/section_title }}
+	{{ /display_title_section}}
+
+<div x-data="{ imgModal : false, imgModalSrc : '', imgModalDesc : '' }">
+    <template @img-modal.window="imgModal = true; imgModalSrc = $event.detail.imgModalSrc; imgModalDesc = $event.detail.imgModalDesc;" x-if="imgModal">
+        <div
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 transform scale-100"
+            x-transition:enter-end="opacity-100 transform scale-100"
+            x-transition:leave="transition ease-in duration-300"
+            x-transition:leave-start="opacity-100 transform scale-100"
+            x-transition:leave-end="opacity-0 transform scale-90"
+            x-on:click.away="imgModalSrc = ''"
+            class="fixed inset-0 z-50 flex items-center justify-center w-full p-2 overflow-hidden bg-black bg-opacity-75 h-100"
+        >
+            <div @click.away="imgModal = ''" class="flex flex-col max-w-5xl max-h-full overflow-auto">
+                <div class="z-50">
+                    <button @click="imgModal = ''" class="float-right pt-2 pr-2 text-white outline-none focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-white" viewBox="0 0 20 20" fill="currentColor">
+							<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="p-2">
+                    <img :alt="imgModalSrc" class="object-contain rounded-lg h-1/2-screen" :src="imgModalSrc" />
+                    <p x-text="imgModalDesc" class="py-2 text-center text-white"></p>
+                </div>
+            </div>
+        </div>
+    </template>
+</div>
+
+
+
+<div class="text-gray-600 body-font">
+	<div class="container px-5 mx-auto">
+		<div x-data="{}" class="container grid gap-8 mx-auto md:grid-cols-2 lg:grid-cols-3">
+			{{ items }}
+			<a @click="$dispatch('img-modal', {  imgModalSrc: '{{ default_image }}', imgModalDesc: '{{ default_image | get:alt }}' })"
+				class="w-full overflow-hidden transition duration-500 bg-purple-500 rounded-lg shadow-2xl cursor-pointer aspect-w-4 aspect-h-3 hover:opacity-50 hover:shadow-xl">
+				{{ partial:global/default_image }}
+			</a>
+			{{ /items }}
+		</div>
+	</div>
+</div>
+</section>

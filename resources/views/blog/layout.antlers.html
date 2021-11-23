@@ -29,8 +29,10 @@
 </head>
 <body>
     {{ partial:blog/nav }}
-    {{ template_content }}
+    {{# {{ partial:global/nav }} #}}
+        {{ template_content }}
     {{ partial:blog/footer }}
+    {{# {{ partial:global/footer }} #}}
 
 </body>
 {{ partial:lottie }}

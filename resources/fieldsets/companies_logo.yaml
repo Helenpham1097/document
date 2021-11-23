@@ -1,0 +1,35 @@
+title: 'Companies Logo'
+fields:
+  -
+    handle: template
+    field:
+      display: template
+      type: hidden
+      icon: hidden
+      listable: hidden
+      default: /global/companies_logo
+  -
+    handle: companies_title
+    field:
+      input_type: text
+      antlers: false
+      display: 'Companies title'
+      type: text
+      icon: text
+      listable: hidden
+  -
+    handle: company
+    field:
+      collapse: false
+      sets:
+        companies:
+          display: 'Company logo'
+          fields:
+            -
+              import: default_image
+      display: 'Row of logos'
+      type: replicator
+      icon: replicator
+      listable: hidden
+      instructions: 'Add horizontal images to the row with a maximum of 6 images.'
+      max_sets: 6

@@ -2,16 +2,16 @@
   @apply flex flex-wrap items-center;
 } */
 
-nav a {
+/* nav a {
 	@apply block px-0 py-3 font-extrabold text-center text-black;
-}
+} */
 
 /* nav {
   ul {
     @apply items-center justify-between p-0 mx-auto text-sm text-gray-700 uppercase;
   }
 } */
-
+/* 
 @screen lg {
 	nav {
 		ul {
@@ -40,7 +40,7 @@ nav {
 	nav li {
 		@apply px-4 py-0;
 	}
-}
+} */
 
 #menu-toggle:checked + #menu {
 	display: block;

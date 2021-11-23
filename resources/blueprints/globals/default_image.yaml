@@ -3,13 +3,13 @@ sections:
     display: Main
     fields:
       -
-        handle: cover_photo
+        handle: cover_image
         field:
           mode: grid
           restrict: false
           allow_uploads: true
           max_files: 1
-          display: 'Cover Photo'
+          display: 'Cover Image'
           type: assets
           icon: assets
           listable: hidden
