@@ -1,0 +1,48 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: name
+        field:
+          display: Name
+          type: text
+          validate: required
+      -
+        handle: email
+        field:
+          display: Email
+          type: text
+          validate:
+            - required
+            - email
+          listable: hidden
+          placeholder: name@example.com
+          input_type: email
+          antlers: false
+      -
+        handle: phone
+        field:
+          display: Phone
+          type: text
+          listable: hidden
+          placeholder: Phone
+          input_type: tel
+          antlers: false
+          validate:
+            - 'digits_between:8,12'
+      -
+        handle: subject
+        field:
+          input_type: text
+          antlers: false
+          display: Subject
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: comment
+        field:
+          display: Comment
+          type: textarea
+          validate: required
