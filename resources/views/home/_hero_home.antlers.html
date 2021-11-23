@@ -18,39 +18,21 @@
                 <h1 class="">{{ hero_home_title }}</h1>
                 <div class="excerpt"> {{ hero_home_description }}</div>
                 <!-- Form -->
-                <div class="flex flex-col justify-between w-full max-w-lg space-y-4 text-center md:flex-row md:space-y-0 md:space-x-4 reveal-4">
-                    <input type="text" placeholder="your@email.com" id="email_address" class="" />
-                    <button class="flex items-center justify-center flex-none ml-0 space-x-2 primary-btn">
-                        <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M2.003 5.884 10 9.882l7.997-3.998A2 2 0 0 0 16 4H4a2 2 0 0 0-1.997 1.884z"/>
-                            <path d="m18 8.118-8 4-8-4V14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8.118z"/>
-                        </svg>
-                        <span>Sign up</span>
-                    </button>                    
-                </div>
-                <!-- /Form -->
-                {{ if hero_home_primary or hero_home_secondary }}
-                    <div class="flex flex-col space-y-5 md:space-y-0 md:space-x-5 md:flex-row md:justify-start">
-
-                            {{ if hero_home_primary }}
-                            <a href="{{ hero_home_primary }}" class="flex items-center justify-center w-full md:mt-0 md:w-auto primary-btn">
-                                <span>{{ hero_home_primary_text }}</span>
-                            </a>       
-                            {{ /if }}
-                            {{ if hero_home_secondary }}
-                            <a href="{{ hero_home_secondary }}" class="flex items-center justify-center w-full md:mt-0 md:w-auto secondary-btn">
-                                <span>{{ hero_home_secondary_text }}</span>
-                            </a>       
-                            {{ /if }}
-
+                <form action="" method="post" id="revue-form" name="revue-form" target="_blank" class="flex flex-col justify-between w-full max-w-xl space-y-4 text-center md:flex-row md:space-y-0 md:space-x-4">
+                    <input type="email" class="flex-1" placeholder="john@example.com" />
+                    <div class="flex-none">
+                        {{ partial:global/buttons }}
                     </div>
-                {{ /if }}
+                </form>
             </div>
         </div>
         <div class="order-first md:w-1/2 sm:order-last ">
-            <div class="relative illustration-element">
-
-                <img class="object-cover w-full bg-cover rounded-lg left" src="{{ glide:hero_home_image dpr='2' fm='webp' }}" alt="" />
+            <div class="illustration-element">
+			{{ if default_image }}
+                <div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg shadow-lg left aspect-w-6 aspect-h-4 group-hover:shadow-2xl">
+                    {{ partial:global/default_image }}
+                </div>
+			{{ /if }}
 
             </div>
         </div>
