@@ -1,11 +1,5 @@
 {{# Template for blog index page #}}
-
-<body>
-    {{ partial:blog/nav }}
-    {{# {{ partial:global/nav }} #}}
-    {{# <div class="absolute w-full my-12 sm:my-0 h-1/2 sm:h-2/3 light-purple"></div> #}}
-    <div class="slice-bg"></div>
-    {{# Check for Stickied post  #}}
+{{# Check for Stickied post  #}}
     {{ if stickied_post && (get:page == "1" || !get:page) }}
 
         {{ stickied_post }}
@@ -49,7 +43,3 @@
         {{ /collection:blog }}
         
     {{ /if }}
-    
-{{ partial:blog/footer }}
-{{# {{ partial:global/footer }} #}}
-</body>
