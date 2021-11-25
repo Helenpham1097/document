@@ -20,3 +20,12 @@ sections:
           type: text
           icon: text
           listable: hidden
+      -
+        handle: keywords
+        field:
+          input_type: text
+          antlers: false
+          display: keywords
+          type: text
+          icon: text
+          listable: hidden

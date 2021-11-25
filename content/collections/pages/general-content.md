@@ -1,7 +1,7 @@
 ---
 title: 'General content'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1637703212
+updated_at: 1637804586
 blueprint: general_content
 description: Lorem
 template: general_content/layout
@@ -1243,5 +1243,7 @@ top_section:
     text: 'Sign Up'
     default_image: bb28417eb2b2507580ab0f08bf09ea69.webp
     template_global: /global/default_image
+meta_title: 'Meta title'
+meta_description: 'Meta Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod.'
 id: 26513dc7-59f7-4673-815e-7d9ace16248b
 ---

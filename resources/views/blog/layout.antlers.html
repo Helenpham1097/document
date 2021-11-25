@@ -1,33 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {{ partial:page_head }}
-    <!-- Open Graph / Facebook -->
-    <meta property="og:url" content="{{ current_url | sanitize }}"/>
-    <meta property="og:type" content="Blog"/>
-    <meta property="og:title" content="{{ title | sanitize }} - {{ site_information:name | sanitize }}"/>
-    {{ if !description }}
-        <meta property="og:description" content="{{ subheader | sanitize }}"/>
-    {{ else }}
-        <meta property="og:description" content="{{ description | sanitize }}"/>
-    {{ /if }}
-    <meta
-        property="og:image"
-        content="/img/Open-Graph.jpg
-        "
-    />
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image"/>
-    <meta property="twitter:url" content="{{ current_url | sanitize }}"/>
-    <meta property="twitter:title" content="{{ title | sanitize }}"/>
-    {{ if !description }}
-    <meta property="twitter:description" content="{{ subheader | sanitize }}"/>
-    {{ else }}
-    <meta property="twitter:description" content="{{ description | sanitize }}"/>
-    {{ /if }}
-    <meta property="twitter:image" content="/img/Open-Graph.jpg"/>
+{{ partial:global/page_head }}
+{{ partial:global/meta }}
+
+<link rel="stylesheet" href="/css/main.css"/>
 </head>
-<body>
+<body class="">
     {{ partial:blog/nav }}
     {{# {{ partial:global/nav }} #}}
         {{ template_content }}
