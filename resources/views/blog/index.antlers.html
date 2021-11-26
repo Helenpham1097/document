@@ -18,9 +18,11 @@
     {{# If no stickied post use most recent post  #}}
     {{ else }}
 
-        {{ collection:blog sort="date:desc" limit="1" }}
-            {{ if get:page == "1" || !get:page }}
-                {{ partial:blog/featured_post}}
+        {{ collection:blog limit="1" paginate="false" as='posts' sort="date:desc" }}
+            {{ if posts && (get:page == "1" || !get:page) }}
+                {{ posts }}
+                    {{ partial:blog/featured_post }}
+                {{ /posts }}
             {{ /if }}
         {{ /collection:blog }}
 

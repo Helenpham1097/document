@@ -1,8 +1,10 @@
 {{# Template for blog post pagination #}}
 
 {{ paginate }}
+{{ if prev_page || next_page }}
 <div class="container flex items-center w-full px-5 py-6 mx-auto mt-24 border-gray-200 paginator sm:border-t sm:px-6">
     <div class="container flex flex-row justify-center">
+        {{ if prev_page }}
         <a href="{{ prev_page }}" class="px-2 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-l-md hover:bg-purple-500 hover:text-white">
             <span class="sr-only">Previous</span>
             <!-- Heroicon name: chevron-left -->
@@ -10,6 +12,7 @@
                 <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
             </svg>
         </a>
+        {{ /if }}
         {{ links:segments }}
             {{ first }}
                 {{ if page == current_page }}
@@ -43,6 +46,7 @@
                 {{ /if }}
             {{ /last }}
         {{ /links:segments }}
+        {{ if next_page }}
         <a href="{{ next_page }}" class="relative inline-flex items-center px-2 py-2 text-sm font-medium text-gray-500 bg-white border-t border-b border-r border-gray-300 rounded-r-md hover:bg-purple-500 hover:text-white">
             <span class="sr-only">Next</span>
             <!-- Heroicon name: chevron-right -->
@@ -50,6 +54,8 @@
                 <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
             </svg>
         </a>
+        {{ /if }}
     </div>
 </div>
+{{ /if }}
 {{ /paginate }}
