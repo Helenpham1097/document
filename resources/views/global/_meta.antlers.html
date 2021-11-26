@@ -20,26 +20,28 @@
 <meta name="theme-color" content="#ffffff"/>
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 
-{{# Open Graph / Facebook #}}
+{{#  Open Graph / Facebook #}}
 <meta property="og:url" content="{{ permalink }}" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="{{ meta_title ?? title }}" />
 <meta property="og:description" content="{{ meta_description ?? Webslice – The Serverless Hosting Platform.}}" />
 
+{{# Twitter #}}
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="{{ permalink }}" />
+<meta property="twitter:title" content="{{ meta_title ?? title }}" />
+<meta property="twitter:description" content="{{ meta_description ?? Webslice – The Serverless Hosting Platform.}}" />
+
 {{# shows the cover image of the articles #}}
 {{ if default_image }}
 <meta property="og:image" content="{{ default_image:permalink }}" />
-{{# if is a page it shows the image of the hero #}}
+<meta property="twitter:image" content="{{ default_image:permalink }}" />
+{{# if is a page it shows the image of the hero WIP #}}
 {{ elseif {{ top_section }}{{ hero_image }}{{ /top_section }} }}
 <meta property="og:image" content="{{ top_section }}{{ hero_image:permalink }}{{ /top_section }}" />
+<meta property="twitter:image" content="{{ top_section }}{{ hero_image:permalink }}{{ /top_section }}" />
 {{# if no image is found, the default image is displayed. #}}
 {{ else }} 
-<meta property="og:image" content="{{ default_image }} {{ cover_photo:permalink }} {{ /default_image }}" />
+<meta property="og:image" content="{{ placeholder_image }}{{ placeholder_image:permalink }}{{ /placeholder_image }}" />
+<meta property="twitter:image" content="{{ placeholder_image }}{{ placeholder_image:permalink }}{{ /placeholder_image }}" />
 {{ /if }}
-
-{{# Twitter #}}
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content="https://https://webslice.co.nz/" />
-<meta property="twitter:title" content="Webslice" />
-<meta property="twitter:description" content="Webslice" />
-<meta property="twitter:image" content="/img/Open-Graph.jpg" />
