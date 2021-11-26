@@ -1,7 +1,7 @@
 ---
 title: 'General content'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1637808409
+updated_at: 1637887055
 blueprint: general_content
 description: Lorem
 template: general_content/layout
@@ -69,7 +69,7 @@ sections:
     reverse_alignment: false
     toggle_alignment: true
     type: highlight
-    enabled: false
+    enabled: true
     toggle_background: true
   -
     template: /general_content/highlight
@@ -133,7 +133,7 @@ sections:
     reverse_alignment: false
     toggle_alignment: true
     type: highlight
-    enabled: false
+    enabled: true
     toggle_background: false
   -
     template: /general_content/features_columns
@@ -199,7 +199,7 @@ sections:
         default_image: 2.png
         template_global: /global/default_image
     type: features_columns_item
-    enabled: false
+    enabled: true
     display_title: true
     center_title_pre_title: 'Pre Title'
     center_title_title: 'Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
@@ -238,7 +238,7 @@ sections:
             type: text
             text: 'Get your website up and running quickly with our tailored Web Hosting plans'
     type: section_title
-    enabled: false
+    enabled: true
     toggle_alignment: true
     toggle_color: false
   -
@@ -267,7 +267,7 @@ sections:
         default_image: algolia.svg
         template_global: /global/default_image
     type: companies_logo
-    enabled: false
+    enabled: true
   -
     template: /general_content/steps
     testimonial_section_title: null
@@ -358,7 +358,7 @@ sections:
         default_image: 4.png
         template_global: /global/default_image
     type: steps
-    enabled: false
+    enabled: true
   -
     template: /general_content/testimonial
     rows:
@@ -402,7 +402,7 @@ sections:
     reverse_alignment: false
     toggle_alignment: false
     type: testimonial
-    enabled: false
+    enabled: true
     testimonial_section_title: 'Duo assum utroque appetere an'
     testimonial_text_area:
       -
@@ -598,7 +598,7 @@ sections:
         type: column
         enabled: true
     type: icon_features
-    enabled: false
+    enabled: true
   -
     template: /general_content/social_proof
     social_proof_section_title: null
@@ -645,7 +645,7 @@ sections:
         enabled: true
         template_global: /global/buttons
     type: social_proof
-    enabled: false
+    enabled: true
     call_to_action_pre_title: 'Pre Title'
     call_to_action_title: 'Section title'
     call_to_action_textarea:
@@ -757,7 +757,7 @@ sections:
         text: 'Choose Plan'
         template_global: /global/buttons
     type: pricing_table
-    enabled: false
+    enabled: true
     items:
       -
         template: null
@@ -1001,12 +1001,12 @@ sections:
             type: text
             text: 'Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. '
     type: comparison_table
-    enabled: false
+    enabled: true
   -
     template: /global/embed_video
     video: 'https://youtu.be/pONeWAzDsQg'
     type: embed_video
-    enabled: false
+    enabled: true
   -
     template: /general_content/two_text_columns
     markdown_a: |
@@ -1020,7 +1020,7 @@ sections:
       
       Luctus et ultrices posuere cubilia curae; Cras a purus est. Praesent tristique, felis id accumsan pharetra, mauris felis venenatis eros, sed sagittis est risus eu leo. Vivamus laoreet lectus sed mi facilisis, vel
     type: two_text_columns
-    enabled: false
+    enabled: true
   -
     template: /general_content/image_gallery
     display_title_section:
@@ -1070,11 +1070,11 @@ sections:
         type: image
         enabled: false
     type: image_gallery
-    enabled: false
+    enabled: true
   -
     template: /forms/contact_us
     type: contact_us_form
-    enabled: false
+    enabled: true
   -
     template: /general_content/text_content
     markdown: |
@@ -1087,7 +1087,7 @@ sections:
       
       Donec eu lectus in dui rhoncus iaculis. Etiam vel nisl mi. Phasellus a enim id diam tincidunt condimentum. Donec tristique vel ipsum nec suscipit. Vestibulum laoreet ullamcorper lacinia. Donec pretium mattis accumsan. Maecenas eget erat aliquam, condimentum turpis tincidunt, tempus orci.
     type: text_content
-    enabled: false
+    enabled: true
   -
     template: /home/latest_post
     type: latest_post
@@ -1106,7 +1106,7 @@ sections:
       - a9f9ef1a-f20a-4e06-9353-98d810fa2fe7
       - ff4f50d5-1343-4f9f-bfd2-ded4d205c19a
     type: faq
-    enabled: false
+    enabled: true
     center_title_pre_title: FAQ
     center_title_title: 'Frequently asked questions'
     center_title_textarea:
@@ -1129,7 +1129,7 @@ sections:
             type: text
             text: 'Subscribe to receive our newsletter'
     type: call_to_action
-    enabled: false
+    enabled: true
     call_to_action_pre_title: 'Pre Title'
     call_to_action_title: Suscribe
     call_to_action_textarea:
@@ -1196,7 +1196,7 @@ sections:
     text: 'Contact Us'
     toggle: true
     type: horizontal_cta
-    enabled: false
+    enabled: true
 top_section:
   -
     type: hero_general_content

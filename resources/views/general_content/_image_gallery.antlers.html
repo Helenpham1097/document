@@ -1,8 +1,9 @@
-<section class="container mx-auto space-y-8 md:space-y-8">
+<section class="mx-auto space-y-8 md:space-y-8">
 	{{ display_title_section }}
 		{{ partial:global/section_title }}
 	{{ /display_title_section}}
 
+{{# Template lightbox fullscreen #}}
 <div x-data="{ imgModal : false, imgModalSrc : '', imgModalDesc : '' }">
     <template @img-modal.window="imgModal = true; imgModalSrc = $event.detail.imgModalSrc; imgModalDesc = $event.detail.imgModalDesc;" x-if="imgModal">
         <div
@@ -18,7 +19,7 @@
             <div @click.away="imgModal = ''" class="flex flex-col max-w-5xl max-h-full overflow-auto">
                 <div class="z-50">
                     <button @click="imgModal = ''" class="float-right pt-2 pr-2 text-white outline-none focus:outline-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-white" viewBox="0 0 20 20" fill="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" viewBox="0 0 20 20" fill="currentColor">
 							<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
                         </svg>
                     </button>
@@ -32,23 +33,21 @@
     </template>
 </div>
 
-
-
 <div class="text-gray-600 body-font">
 	<div class="mx-auto">
 {{ if items | count >= 4 }}
-    <div x-data="{}" class="grid max-w-5xl gap-8 mx-auto md:grid-cols-2">
+    <div x-data="{}" class="container grid max-w-5xl gap-8 mx-auto md:grid-cols-2">
 {{ elseif items | count >= 3 }}
-    <div x-data="{}" class="grid justify-between gap-8 md:grid-cols-3 md:flex-row ">
+    <div x-data="{}" class="container grid justify-between gap-8 md:grid-cols-3 md:flex-row ">
 {{ elseif items | count >= 2 }}
-    <div x-data="{}" class="grid max-w-5xl gap-8 mx-auto md:grid-cols-2 md:flex-row ">
+    <div x-data="{}" class="container grid max-w-5xl gap-8 mx-auto md:grid-cols-2 md:flex-row ">
 {{ /if }}
 {{ if items | count === 1 }} 
-    <div x-data="{}" class="grid items-center grid-cols-1 gap-8 md:flex-row ">
+    <div x-data="{}" class="container grid items-center grid-cols-1 gap-8 md:flex-row ">
 {{ /if }}
 {{ items }}
 			<a @click="$dispatch('img-modal', {  imgModalSrc: '{{ default_image }}', imgModalDesc: '{{ default_image | get:alt }}' })"
-				class="w-full overflow-hidden transition duration-500 bg-purple-500 rounded-lg shadow-2xl cursor-pointer aspect-w-4 aspect-h-3 hover:opacity-50 hover:shadow-xl">
+				class="w-full overflow-hidden transition duration-500 bg-purple-500 rounded-lg shadow-2xl cursor-pointer md:aspect-w-4 md:aspect-h-3 hover:opacity-50 hover:shadow-xl">
 				{{ partial:global/default_image }}
 			</a>
 			{{ /items }}

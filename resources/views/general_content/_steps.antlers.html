@@ -14,7 +14,7 @@
 		{{ Items }}
 			{{ if { switch between="odd|even" for="Image Left First"} == "odd" }}
 				<div>
-					<div class="flex flex-col flex-wrap flex-1 max-w-sm p-12 mx-auto space-y-8 duration-500 transform bg-purple-100 shadow-xl group rounded-xl hover:-translate-y-4">
+					<div class="flex flex-col flex-wrap flex-1 max-w-sm p-6 mx-auto space-y-8 duration-500 transform bg-purple-100 shadow-xl md:p-12 group rounded-xl hover:-translate-y-4">
 						{{ default_image }}
 						<img class="object-cover w-auto " width="200" src="{{ default_image }}" {{ if default_image | get:alt }} alt="{{ default_image | get:alt }}" {{ else }} alt="{{ title }}" {{ /if }} />
 						{{ /default_image }}
@@ -34,7 +34,7 @@
 				</div>
 			{{ else }}
 			<div>
-				<div class="flex flex-col flex-wrap flex-1 max-w-sm p-12 mx-auto mt-0 space-y-8 duration-500 transform bg-green-100 shadow-xl group rounded-xl hover:-translate-y-4 md:mt-20">
+				<div class="flex flex-col flex-wrap flex-1 max-w-sm p-6 mx-auto mt-0 space-y-8 duration-500 transform bg-green-100 shadow-xl md:p-12 group rounded-xl hover:-translate-y-4 md:mt-20">
 					<div class="min-h-62s">
 						{{ default_image }}
 						<img class="object-cover w-auto " width="200" src="{{ default_image }}" {{ if default_image | get:alt }} alt="{{ default_image | get:alt }}" {{ else }} alt="{{ title }}" {{ /if }} />
