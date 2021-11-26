@@ -2300,6 +2300,8 @@ footer.lp {
   height: 0.125rem;
 }.h-0{
   height: 0px;
+}.h-24{
+  height: 6rem;
 }.max-h-full{
   max-height: 100%;
 }.w-full{
@@ -2653,6 +2655,9 @@ footer.lp {
 }.bg-purple-300{
   --tw-bg-opacity: 1;
   background-color: rgb(207 165 255 / var(--tw-bg-opacity));
+}.bg-purple-700{
+  --tw-bg-opacity: 1;
+  background-color: rgb(101 23 191 / var(--tw-bg-opacity));
 }.bg-opacity-75{
   --tw-bg-opacity: 0.75;
 }.bg-gradient-to-r{
@@ -2762,6 +2767,9 @@ footer.lp {
 }.py-0{
   padding-top: 0px;
   padding-bottom: 0px;
+}.px-12{
+  padding-left: 3rem;
+  padding-right: 3rem;
 }.pb-4{
   padding-bottom: 1rem;
 }.pt-0{
@@ -3114,6 +3122,8 @@ footer.lp {
     margin-top: 0.5rem;
   }.sm\:mt-24{
     margin-top: 6rem;
+  }.sm\:mt-16{
+    margin-top: 4rem;
   }.sm\:block{
     display: block;
   }.sm\:flex{
@@ -3511,6 +3521,8 @@ footer.lp {
     right: 6rem;
   }.md\:right-48{
     right: 12rem;
+  }.md\:col-span-2{
+    grid-column: span 2 / span 2;
   }.md\:mx-auto{
     margin-left: auto;
     margin-right: auto;
@@ -3579,6 +3591,10 @@ footer.lp {
     --tw-space-x-reverse: 0;
     margin-right: calc(1.25rem * var(--tw-space-x-reverse));
     margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
+  }.md\:space-x-16 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-x-reverse: 0;
+    margin-right: calc(4rem * var(--tw-space-x-reverse));
+    margin-left: calc(4rem * calc(1 - var(--tw-space-x-reverse)));
   }.md\:border-t{
     border-top-width: 1px;
   }.md\:border-solid{
@@ -3612,6 +3628,9 @@ footer.lp {
   }.md\:px-12{
     padding-left: 3rem;
     padding-right: 3rem;
+  }.md\:px-8{
+    padding-left: 2rem;
+    padding-right: 2rem;
   }.md\:pl-4{
     padding-left: 1rem;
   }.md\:pb-8{
@@ -3622,6 +3641,10 @@ footer.lp {
   }.md\:shadow-2xl{
     --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
     --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }.md\:shadow-xl{
+    --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 }@media (min-width: 1024px){.lg\:prose-xl{
