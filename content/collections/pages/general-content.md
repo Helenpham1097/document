@@ -1,76 +1,54 @@
 ---
 title: 'General content'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1637703212
+updated_at: 1638148462
 blueprint: general_content
 description: Lorem
 template: general_content/layout
 subheader: sdasda
 sections:
   -
-    template: /general_content/highlight
-    rows:
+    template: /global/section_title
+    center_title_pre_title: 'Running quickly'
+    center_title_title: 'Web Hosting plans'
+    center_title_textarea:
       -
-        highlight_title: 'Highlight 1 Toggle alignment'
-        highlight_textarea:
+        type: paragraph
+        content:
           -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue. Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. Phasellus molestie blandit erat, vitae ullamcorper ante viverra et. Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
-        highlight_link: '#'
-        highlight_text_link: 'Highlight Link'
-        highlight_image: 09054a5f40e858381279a62e2ee534a7.webp
-        highlight_textcaption:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Caption this'
-        type: highlight-item
-        enabled: true
-        template: /global/buttons
-        select: info
-        select_icon: null
-        text: 'Read more'
-        link: '#'
-        default_image: 09054a5f40e858381279a62e2ee534a7.webp
-        template_global: /global/default_image
-      -
-        highlight_title: 'Highlight 2'
-        highlight_textarea:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue. Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. Phasellus molestie blandit erat, vitae ullamcorper ante viverra et. Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
-        highlight_link: '#'
-        highlight_text_link: Link
-        highlight_image: b8f5db7682a5fb3fa938f2e26c0e855c.webp
-        highlight_textcaption:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: TextCaption
-        type: highlight-item
-        enabled: true
-        template: /global/buttons
-        select: info
-        select_icon: null
-        text: 'Read mores'
-        link: '#'
-        default_image: b8f5db7682a5fb3fa938f2e26c0e855c.webp
-        template_global: /global/default_image
-    reverse_alignment: false
-    toggle_alignment: true
-    type: highlight
+            type: text
+            text: 'Get your website up and running quickly with our tailored Web Hosting plans'
+    type: section_title
     enabled: true
-    toggle_background: true
+    toggle_alignment: true
+    toggle_color: false
+  -
+    template: /global/companies_logo
+    companies_title: 'We’re proud to have played a part in these amazing journeys.'
+    company:
+      -
+        company_logo: null
+        type: companies
+        enabled: true
+        template: /global/default_image
+        default_image: algolia.svg
+        template_global: /global/default_image
+      -
+        company_logo: algolia.svg
+        type: companies
+        enabled: true
+        template: /global/default_image
+        default_image: algolia.svg
+        template_global: /global/default_image
+      -
+        company_logo: algolia.svg
+        type: companies
+        enabled: true
+        template: /global/default_image
+        default_image: algolia.svg
+        template_global: /global/default_image
+    type: companies_logo
+    enabled: true
   -
     template: /general_content/highlight
     rows:
@@ -135,6 +113,70 @@ sections:
     type: highlight
     enabled: true
     toggle_background: false
+  -
+    template: /general_content/highlight
+    rows:
+      -
+        highlight_title: 'Highlight 1 Toggle alignment'
+        highlight_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue. Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. Phasellus molestie blandit erat, vitae ullamcorper ante viverra et. Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
+        highlight_link: '#'
+        highlight_text_link: 'Highlight Link'
+        highlight_image: 09054a5f40e858381279a62e2ee534a7.webp
+        highlight_textcaption:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Caption this'
+        type: highlight-item
+        enabled: true
+        template: /global/buttons
+        select: info
+        select_icon: null
+        text: 'Read more'
+        link: '#'
+        default_image: 09054a5f40e858381279a62e2ee534a7.webp
+        template_global: /global/default_image
+      -
+        highlight_title: 'Highlight 2'
+        highlight_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue. Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. Phasellus molestie blandit erat, vitae ullamcorper ante viverra et. Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
+        highlight_link: '#'
+        highlight_text_link: Link
+        highlight_image: b8f5db7682a5fb3fa938f2e26c0e855c.webp
+        highlight_textcaption:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: TextCaption
+        type: highlight-item
+        enabled: true
+        template: /global/buttons
+        select: info
+        select_icon: null
+        text: 'Read mores'
+        link: '#'
+        default_image: b8f5db7682a5fb3fa938f2e26c0e855c.webp
+        template_global: /global/default_image
+    reverse_alignment: false
+    toggle_alignment: true
+    type: highlight
+    enabled: true
+    toggle_background: true
   -
     template: /general_content/features_columns
     items:
@@ -226,48 +268,6 @@ sections:
         toggle_color: false
         type: section_title
         enabled: true
-  -
-    template: /global/section_title
-    center_title_pre_title: 'Running quickly'
-    center_title_title: 'Web Hosting plans'
-    center_title_textarea:
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: 'Get your website up and running quickly with our tailored Web Hosting plans'
-    type: section_title
-    enabled: true
-    toggle_alignment: true
-    toggle_color: false
-  -
-    template: /global/companies_logo
-    companies_title: 'We’re proud to have played a part in these amazing journeys.'
-    company:
-      -
-        company_logo: null
-        type: companies
-        enabled: true
-        template: /global/default_image
-        default_image: algolia.svg
-        template_global: /global/default_image
-      -
-        company_logo: algolia.svg
-        type: companies
-        enabled: true
-        template: /global/default_image
-        default_image: algolia.svg
-        template_global: /global/default_image
-      -
-        company_logo: algolia.svg
-        type: companies
-        enabled: true
-        template: /global/default_image
-        default_image: algolia.svg
-        template_global: /global/default_image
-    type: companies_logo
-    enabled: true
   -
     template: /general_content/steps
     testimonial_section_title: null
@@ -1243,5 +1243,7 @@ top_section:
     text: 'Sign Up'
     default_image: bb28417eb2b2507580ab0f08bf09ea69.webp
     template_global: /global/default_image
+meta_title: 'Meta title'
+meta_description: 'Meta Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod.'
 id: 26513dc7-59f7-4673-815e-7d9ace16248b
 ---

@@ -38,7 +38,7 @@ article p img {
 	}
 
 	ul > li {
-		@apply pl-0;
+		/* @apply pl-0; */
 	}
 
 	blockquote {

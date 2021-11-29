@@ -1,8 +1,8 @@
 {{# Single Faq template, brings Faqs from the Faq collection, more can be added from the replicator. #}}
-<section class="container mx-auto space-y-8 md:space-y-8 ">
+<section class="mx-auto space-y-8 md:space-y-8">
 {{ partial:global/section_title }}
 
-    <div class="max-w-4xl mx-auto ">
+    <div class="mx-auto md:max-w-4xl md:container ">
         {{ faq_entries }}
         <div x-data="{ isOpen: false }" class="border-l-2 border-transparent faq">
             <div @click="isOpen = !isOpen" class="flex flex-col w-full pb-2 pr-2 cursor-pointer focus:outline-none">
@@ -31,4 +31,5 @@
         </div>
         {{ /faq_entries }}
     </div>
+
 </section>

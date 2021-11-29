@@ -33,6 +33,8 @@ sections:
           icon: textarea
           listable: hidden
       -
+        import: default_image
+      -
         handle: content
         field:
           restrict: false
@@ -47,8 +49,6 @@ sections:
           icon: markdown
           listable: hidden
           container: assets
-      -
-        import: default_image
   sidebar:
     display: Sidebar
     fields:
