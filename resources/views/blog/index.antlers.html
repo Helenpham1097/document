@@ -3,17 +3,34 @@
     {{ if stickied_post && (get:page == "1" || !get:page) }}
 
         {{ stickied_post }}
-            {{ partial:blog/featured_post }}
+        {{ partial:blog/featured_post }}
+        <div class="slice-blur"></div>
+        <div class=" slice-blog"></div>
         {{ /stickied_post }}
 
         {{# Non-featured posts. To enable pagination set true and change limit to 6 #}}
-        {{ collection:blog limit="0" paginate="false" as="posts" sort="date:desc" id:isnt=stickied_post:id }}
-            {{ partial:blog/post }}
+        {{ collection:blog limit="6" paginate="false" as="posts" sort="date:desc" id:isnt=stickied_post:id }}
+            {{ if posts && (get:page == "1" || !get:page) }}
+                <div class="py-8 space-y-8">
+            {{ else }}
+                <div class="py-8 space-y-8 lg:pb-8 sm:space-y-16">
+            {{ /if }}
+                </div>
+            <div class="container grid gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-3 place-items-startgrid">
+                {{ posts }}
+                    {{ partial:blog/post }}
+                {{ /posts }}	
+            </div>
             <!-- Paginator -->
-            {{ partial:blog/paginate }}
+            {{ if {collection:count in="blog"} > 6 }}
+                {{ partial:blog/paginate }}
+            {{ /if }}
+            <!-- Paginator -->
+            {{ if {collection:count in="blog"} > 6 }}
+                {{ partial:blog/paginate }}
+            {{ /if }}
         {{ /collection:blog }}
 
-        {{ partial:blog/footer}}
 
     {{# If no stickied post use most recent post  #}}
     {{ else }}
@@ -22,6 +39,8 @@
             {{ if posts && (get:page == "1" || !get:page) }}
                 {{ posts }}
                     {{ partial:blog/featured_post }}
+                    <div class="slice-blur"></div>
+                    <div class=" slice-blog"></div>
                 {{ /posts }}
             {{ /if }}
         {{ /collection:blog }}
