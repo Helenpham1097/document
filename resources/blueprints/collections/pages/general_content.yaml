@@ -22,6 +22,11 @@ sections:
               fields:
                 -
                   import: hero_home
+            hero:
+              display: Hero
+              fields:
+                -
+                  import: hero
           display: 'Top Section'
           type: replicator
           icon: replicator
@@ -204,6 +209,16 @@ sections:
           max_items: 1
           listable: false
           localizable: true
+      -
+        handle: categories
+        field:
+          mode: select
+          taxonomies:
+            - categories
+          display: Categories
+          type: terms
+          icon: taxonomy
+          listable: hidden
   meta:
     display: Meta
     fields:

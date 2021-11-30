@@ -37,9 +37,9 @@
 <meta property="og:image" content="{{ default_image:permalink }}" />
 <meta property="twitter:image" content="{{ default_image:permalink }}" />
 {{# if is a page it shows the image of the hero WIP #}}
-{{ elseif {{ top_section }}{{ hero_image }}{{ /top_section }} }}
-<meta property="og:image" content="{{ top_section }}{{ hero_image:permalink }}{{ /top_section }}" />
-<meta property="twitter:image" content="{{ top_section }}{{ hero_image:permalink }}{{ /top_section }}" />
+{{ elseif {{ top_section }}{{ default_image }}{{ /top_section }} }}
+<meta property="og:image" content="{{ top_section }}{{ default_image:permalink }}{{ /top_section }}" />
+<meta property="twitter:image" content="{{ top_section }}{{ default_image:permalink }}{{ /top_section }}" />
 {{# if no image is found, the default image is displayed. #}}
 {{ else }} 
 <meta property="og:image" content="{{ placeholder_image }}{{ placeholder_image:permalink }}{{ /placeholder_image }}" />
