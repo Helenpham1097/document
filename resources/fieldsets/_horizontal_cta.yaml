@@ -9,6 +9,14 @@ fields:
       listable: hidden
       default: /general_content/_horizontal_cta
   -
+    handle: toggle
+    field:
+      display: 'Toggle Background'
+      type: toggle
+      icon: toggle
+      instructions: 'Toggle between default transparent background or purple background.'
+      listable: hidden
+  -
     import: default_image
   -
     handle: title
@@ -24,8 +32,6 @@ fields:
     field:
       always_show_set_button: false
       buttons:
-        - h2
-        - h3
         - bold
         - italic
         - unorderedlist
@@ -50,10 +56,13 @@ fields:
   -
     import: buttons
   -
-    handle: toggle
+    handle: section_id
     field:
-      display: 'Toggle Background'
-      type: toggle
-      icon: toggle
-      instructions: 'Toggle between default transparent background or purple background.'
+      input_type: text
+      prepend: '#'
+      antlers: false
+      display: 'Section ID'
+      type: text
+      icon: text
+      instructions: 'Used as anchor link'
       listable: hidden

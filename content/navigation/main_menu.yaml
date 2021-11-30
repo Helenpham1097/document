@@ -18,8 +18,6 @@ tree:
         title: 'GitHub Repo'
         url: 'https://github.com/example/repo'
   -
-    entry: f1bdf2c9-3872-40fc-a409-e2265a284d11
-  -
     title: Servers
     children:
       -
@@ -68,5 +66,13 @@ tree:
         title: 'GitHub Repo'
         url: 'https://github.com/example/repo'
   -
-    title: 'GitHub Repo'
-    url: 'https://github.com/example/repo'
+    title: Demo
+    children:
+      -
+        entry: b2eda7c6-73c8-4eb5-ad8c-baf81496fb81
+      -
+        entry: bcfcdde9-26bc-4990-8ec0-4c6f968a9010
+      -
+        entry: 2d2f5dab-a564-484a-8d9b-2eda5d5e3817
+      -
+        entry: 76152d5c-e7fb-4325-b625-36cb887d952b
