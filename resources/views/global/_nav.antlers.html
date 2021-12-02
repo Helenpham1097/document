@@ -23,7 +23,7 @@
 		</div>
 		
 		{{# menu #}}
-		<div :class="{'flex mt-1': open, 'hidden invisible lg:visible': !open}" class="flex-col flex-grow divide-y divide-gray-100 md:divide-none divide-solid lg:pb-0 lg:flex lg:justify-center lg:flex-row">
+		<div :class="{'flex mt-1': open, 'hidden invisible lg:visible': !open}" class="flex-col flex-grow space-x-2 divide-y divide-gray-100 md:divide-none divide-solid lg:pb-0 lg:flex lg:justify-center lg:flex-row">
 			<div class="h-0.5 opacity-50 bg-gray-100 "></div>
 			{{ nav:main_menu show_unpublished="true" }}
             {{ if children }}
@@ -49,25 +49,13 @@
 				</div>
 			</div>
 			{{ else }}
-			<a class="flex flex-row items-center w-full p-2 mt-2 text-lg font-normal text-left bg-transparent lg:w-auto lg:inline lg:mt-0 xl:ml-4 hover:text-purple-600 focus:text-purple-800 focus:outline-none focus:shadow-outline lg:text-center xl:text-left" href="{{ url }}">{{ title }}</a>
+			<a class="flex flex-row items-center w-full p-2 mt-2 text-lg font-normal text-left bg-transparent lg:w-auto lg:inline lg:mt-0 hover:text-purple-600 focus:text-purple-800 focus:outline-none focus:shadow-outline lg:text-center xl:text-left" href="{{ url }}">{{ title }}</a>
             {{ /if }}
             {{ /nav:main_menu }}
 		</div>
 		
 		{{# Login #}}
 		<div :class="{'block pb-8 lg:pb-0': open, 'hidden': !open}" class="flex items-center justify-center lg:block">
-			<div class="flex flex-col md:space-x-4 md:flex-row">
-
-				<a href="/blog" class="items-center hidden space-x-4 text-lg font-semibold text-purple-500 md:inline-flex group hover:text-purple-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-purple-900">
-					<span>Blog</span>
-					<div class="transition duration-500 ease-in-out transform group-hover:translate-x-2">
-						<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 transition duration-500 ease-in-out transform translate-x-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-						</svg>
-					</div>
-				</a>
-
-				<div class="w-0.5 bg-purple-300"></div>
 
 				<a href="@" class="inline-flex items-center flex-none px-8 py-4 font-semibold text-white bg-purple-500 hover:bg-purple-800 hover:text-purple-100 focus-visible:ring-offset-purple-900 group text-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2">
 					Sign In
@@ -78,7 +66,7 @@
 					</div>
 				</a>
 
-            </div>
+
 		</div>
 	</div>
 	</div>
