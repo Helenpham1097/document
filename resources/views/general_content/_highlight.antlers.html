@@ -7,7 +7,7 @@
             {{# The styling of the paragraphs inside the Bard is defined in the css since a p tag is added as a container. #}}
             <span class="space-y-6">
                 {{ if highlight_title }}<h2 class="">{{ highlight_title }}</h2>{{ /if }}
-                {{ if highlight_textarea }}<p class="">{{ highlight_textarea | strip_tags:p }}</p>{{ /if }}
+                {{ if highlight_textarea }}<div class="prose">{{ highlight_textarea }}</div>{{ /if }}
             </span>
 			{{ if link }}
             <div class="flex mt-8 lg:mt-0 lg:flex-shrink-0">
@@ -39,7 +39,7 @@
             {{# The styling of the paragraphs inside the Bard is defined in the css since a p tag is added as a container. #}}
             <span class="space-y-6">
                 {{ if highlight_title }}<h2 class="">{{ highlight_title }}</h2>{{ /if }}
-                {{ if highlight_textarea }}<p class="">{{ highlight_textarea | strip_tags:p }}</p>{{ /if }}
+                {{ if highlight_textarea }}<div class="prose">{{ highlight_textarea }}</div>{{ /if }}
             </span>
 			{{ if link }}
             <div class="flex mt-8 lg:mt-0 lg:flex-shrink-0">
@@ -72,7 +72,7 @@
             {{# The styling of the paragraphs inside the Bard is defined in the css since a p tag is added as a container. #}}
             <span class="space-y-6">
                 {{ if highlight_title }}<h2 class="">{{ highlight_title }}</h2>{{ /if }}
-                {{ if highlight_textarea }}<p class="">{{ highlight_textarea | strip_tags:p }}</p>{{ /if }}
+                {{ if highlight_textarea }}<div class="prose">{{ highlight_textarea }}</div>{{ /if }}
             </span>
 			{{ if link }}
             <div class="flex mt-8 lg:mt-0 lg:flex-shrink-0">
@@ -104,7 +104,7 @@
             {{# The styling of the paragraphs inside the Bard is defined in the css since a p tag is added as a container. #}}
             <span class="space-y-6">
                 {{ if highlight_title }}<h2 class="">{{ highlight_title }}</h2>{{ /if }}
-                {{ if highlight_textarea }}<p class="">{{ highlight_textarea | strip_tags:p }}</p>{{ /if }}
+                {{ if highlight_textarea }}<div class="prose">{{ highlight_textarea }}</div>{{ /if }}
             </span>
 			{{ if link }}
             <div class="flex mt-8 lg:mt-0 lg:flex-shrink-0">
@@ -137,7 +137,7 @@
         <div class="space-y-6 sm:w-1/2">
             <span class="space-y-6">
                 {{ if highlight_title }}<h2 class="">{{ highlight_title }}</h2>{{ /if }}
-                {{ if highlight_textarea }}<p class="">{{ highlight_textarea | strip_tags:p }}</p>{{ /if }}
+                {{ if highlight_textarea }}<div class="prose">{{ highlight_textarea }}</div>{{ /if }}
             </span>
 			{{ if link }}
             <div class="flex mt-8 lg:mt-0 lg:flex-shrink-0">
@@ -169,7 +169,7 @@
         <div class="space-y-6 sm:w-1/2">
             <span class="space-y-6">
                 {{ if highlight_title }}<h2 class="">{{ highlight_title }}</h2>{{ /if }}
-                {{ if highlight_textarea }}<p class="">{{ highlight_textarea | strip_tags:p }}</p>{{ /if }}
+                {{ if highlight_textarea }}<div class="prose">{{ highlight_textarea }}</div>{{ /if }}
             </span>
 			{{ if link }}
             <div class="flex mt-8 lg:mt-0 lg:flex-shrink-0">
