@@ -119,7 +119,7 @@ sections:
         type: highlight-item
         enabled: true
     toggle_background: true
-    reverse_alignment: false
+    reverse_alignment: true
     toggle_alignment: false
     type: highlight
     enabled: true
@@ -273,7 +273,7 @@ sections:
         type: highlight-item
         enabled: true
     toggle_background: true
-    reverse_alignment: true
+    reverse_alignment: false
     toggle_alignment: false
     type: highlight
     enabled: true
@@ -391,7 +391,7 @@ sections:
         type: highlight-item
         enabled: true
     toggle_background: true
-    reverse_alignment: false
+    reverse_alignment: true
     toggle_alignment: false
     type: highlight
     enabled: true
@@ -560,7 +560,7 @@ sections:
         type: highlight-item
         enabled: true
     toggle_background: true
-    reverse_alignment: true
+    reverse_alignment: false
     toggle_alignment: false
     type: highlight
     enabled: true
@@ -649,7 +649,7 @@ sections:
     enabled: true
 title: Features
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1638406216
+updated_at: 1638766769
 blueprint: general_content
 categories:
   - products

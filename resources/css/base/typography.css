@@ -21,7 +21,8 @@ ol {
 	text-rendering: optimizeLegibility;
 }
 h1 {
-	@apply py-1 text-4xl font-black leading-none text-transparent bg-clip-text md:text-6xl gradient-purple-to-teal;
+	/* @apply py-1 text-4xl font-black leading-none text-transparent bg-clip-text md:text-6xl gradient-purple-to-teal; */
+	@apply py-1 text-4xl font-bold leading-none text-transparent bg-clip-text md:text-6xl bg-gradient-to-t from-gray-900 to-gray-800;
 	/* -webkit-background-clip: text; */
 	/* -webkit-text-fill-color: transparent; */
 }
