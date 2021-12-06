@@ -3,9 +3,9 @@
 
 {{# Partial template for the featured blog post on blog index page #}}
 
-<section class="container p-3 mx-auto group sm:p-6">
+<section class="container p-3 mx-auto group max-w-7xl sm:p-6">
     <div class="flex flex-col items-center justify-center py-4 space-x-0 space-y-8 space-y-reverse sm:space-y-0 sm:space-x-8 md:flex-row md:py-10">
-        <div class="w-full pr-4 space-y-6 md:w-1/2">
+        <div class="space-y-6 md:w-3/5">
             {{ if categories }}
                 <div class="flex-row items-center hidden space-x-2 sm:flex ">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-500 " fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5a1.99 1.99 0 011.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
@@ -24,7 +24,7 @@
                 </form>
             </div>
         </div>
-        <div class="order-first md:p-16 md:w-1/2 sm:order-last ">
+        <div class="order-first md:w-2/5 sm:order-last ">
             <div class="hero-animation">
 			{{ if default_image }}
                 <div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg shadow-lg left md:aspect-w-6 md:aspect-h-4 group-hover:shadow-2xl">
