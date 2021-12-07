@@ -9,28 +9,28 @@ fields:
       listable: hidden
       default: /general_content/two_text_columns
   -
-    handle: markdown_a
+    handle: columns
     field:
-      restrict: false
-      automatic_line_breaks: true
-      automatic_links: false
-      escape_markup: false
-      smartypants: false
-      antlers: false
-      display: 'Markdown A'
-      type: markdown
-      icon: markdown
-      listable: hidden
-  -
-    handle: markdown_b
-    field:
-      restrict: false
-      automatic_line_breaks: true
-      automatic_links: false
-      escape_markup: false
-      smartypants: false
-      antlers: false
-      display: 'Markdown B'
-      type: markdown
-      icon: markdown
+      collapse: false
+      max_sets: 3
+      sets:
+        column:
+          display: Column
+          fields:
+            -
+              handle: markdown
+              field:
+                restrict: false
+                automatic_line_breaks: true
+                automatic_links: false
+                escape_markup: false
+                smartypants: false
+                antlers: false
+                display: Markdown
+                type: markdown
+                icon: markdown
+                listable: hidden
+      display: Columns
+      type: replicator
+      icon: replicator
       listable: hidden

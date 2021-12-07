@@ -154,6 +154,11 @@ sections:
               fields:
                 -
                   import: faq
+            text_columns:
+              display: 'Text Columns'
+              fields:
+                -
+                  import: pricing_features_section
           display: Sections
           type: replicator
           icon: replicator

@@ -26,7 +26,7 @@ sections:
         type: markdown
         enabled: true
     type: text_content
-    enabled: true
+    enabled: false
     template: /general_content/text_content
     markdown: null
   -
@@ -649,7 +649,7 @@ sections:
     enabled: true
 title: Features
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1638766769
+updated_at: 1638823492
 blueprint: general_content
 categories:
   - products
