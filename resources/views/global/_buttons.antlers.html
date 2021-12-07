@@ -9,25 +9,25 @@
 
 	</a>
 {{ else }}
-	<a href="{{ link }}" class="inline-flex items-center px-8 py-4 font-semibold  {{ if select:value === 'background-secondary' }} text-black bg-green-500 hover:bg-green-600 hover:text-black focus-visible:ring-offset-green-900 {{ else }} text-white bg-purple-500 hover:bg-purple-800 hover:text-purple-100 focus-visible:ring-offset-purple-900 {{ /if }} group text-md  focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2">
+	<a href="{{ link }}" class="inline-flex items-center px-5 py-3 font-semibold  {{ if select:value === 'background-secondary' }} text-black bg-green-500 hover:bg-green-600 hover:text-black focus-visible:ring-offset-green-900 {{ else }} text-white bg-purple-500 hover:bg-purple-800 hover:text-purple-100 focus-visible:ring-offset-purple-900 {{ /if }} group text-md space-x-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2">
 		{{ if select_icon:value === 'chevron-left' }}
 			<div class="transition duration-500 ease-in-out transform group-hover:-translate-x-3">
-				<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 {{ if select:value === 'background-secondary' }} text-black group-hover:text-green-900 {{ else}} text-white group-hover:text-purple-100 {{ /if}} transition duration-500 ease-in-out transform -translate-x-2 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+				<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 {{ if select:value === 'background-secondary' }} text-black group-hover:text-green-900 {{ else}} text-white group-hover:text-purple-100 {{ /if}} transition duration-500 ease-in-out transform translate-x-0 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
 				</svg>
 			</div>
 		{{ /if }}
-		{{ text }}
+		<span>{{ text }}</span>
 		{{ if select_icon:value === 'chevron-right' }}
 			<div class="transition duration-500 ease-in-out transform group-hover:translate-x-3">
-				<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 {{ if select:value === 'background-secondary' }} text-black group-hover:text-green-900 {{ else}} text-white group-hover:text-purple-100 {{ /if}} transition duration-500 ease-in-out transform translate-x-2 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+				<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 {{ if select:value === 'background-secondary' }} text-black group-hover:text-green-900 {{ else}} text-white group-hover:text-purple-100 {{ /if}} transition duration-500 ease-in-out transform translate-x-0 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
 				</svg>
 			</div>
 		{{ /if }}
 		{{ if select_icon:value === 'mail' }}
 			<div class="transition duration-500 ease-in-out transform ">
-				<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 {{ if select:value === 'background-secondary' }} text-black group-hover:text-green-900 {{ else}} text-white group-hover:text-purple-100 {{ /if}} transition duration-500 ease-in-out transform translate-x-2 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+				<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 {{ if select:value === 'background-secondary' }} text-black group-hover:text-green-900 {{ else}} text-white group-hover:text-purple-100 {{ /if}} transition duration-500 ease-in-out transform translate-x-0 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
 				</svg>
 			</div>

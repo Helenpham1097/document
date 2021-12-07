@@ -1,18 +1,18 @@
-{{# Partial to show the hero section of the homepage #}}
+{{# Partial to show the hero section of the general content pages #}}
 <div class="slice-background"></div>
 {{# Partial template for the featured blog post on blog index page #}}
 
-<section class="container mx-auto max-w-7xl group">
+<section class="container pb-6 mx-auto max-w-7xl md:pb-24 group">
     <div class="flex flex-col items-center justify-center py-8 space-x-0 space-y-8 space-y-reverse sm:space-y-0 sm:space-x-8 md:flex-row md:py-12">
         <div class="space-y-6 md:w-3/5">
             {{ if categories }}
-                <div class="flex-row items-center hidden space-x-2 sm:flex ">
+                {{# <div class="flex-row items-center hidden space-x-2 sm:flex ">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-500 " fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5a1.99 1.99 0 011.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
                     <div class="text-purple-500">{{ categories  limit="1" }}  {{ title }} {{ /categories }}</div>
-                </div>
+                </div> #}}
             {{ /if }}
             <div class="flex flex-col items-start space-y-6 lg:flex-grow">
-                <h1 class="">{{ hero_home_title }}</h1>
+                <h1 class="dot">{{ hero_home_title }}</h1>
                 <div class="excerpt"> {{ hero_home_description }}</div>
                 {{ if link }}
                 <div class="flex-none">
@@ -23,12 +23,18 @@
         </div>
 
         {{ if default_image }}
-        <div class="order-first md:w-2/5 sm:order-last ">
-            <div class="hero-animation">
-                <div class="inset-0 flex items-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg shadow-lg justify-centers left md:aspect-w-6 md:aspect-h-4 group-hover:shadow-2xl">
+        <div class="order-first md:w-2/5 sm:order-last">
+            <div class="relative hero-animation">
+                <svg class="absolute w-24 text-green-500 fill-current" viewBox="0 0 1228 1199" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 92.577v115.071L213.483 0h-118.7L0 92.577ZM0 340.226v115.071l213.483-207.649h-118.7L0 340.226ZM0 587.874v115.071l213.483-207.648h-118.7L0 587.874ZM0 835.523v115.071l213.483-207.649h-118.7L0 835.523ZM0 1083.17v115.07l213.483-207.646h-118.7L0 1083.17ZM253.482 92.577v115.071L466.966 0h-118.7l-94.784 92.577ZM506.965 92.577v115.071L720.448 0h-118.7l-94.783 92.577ZM760.447 92.577v115.071L973.931 0h-118.7l-94.784 92.577ZM1013.93 92.577v115.071L1227.41 0h-118.7l-94.78 92.577ZM253.482 340.226v115.071l213.484-207.649h-118.7l-94.784 92.578ZM506.965 340.226v115.071l213.483-207.649h-118.7l-94.783 92.578ZM760.447 340.226v115.071l213.484-207.649h-118.7l-94.784 92.578ZM1013.93 340.226v115.071l213.48-207.649h-118.7l-94.78 92.578ZM253.482 587.874v115.071l213.484-207.648h-118.7l-94.784 92.577ZM506.965 587.874v115.071l213.483-207.648h-118.7l-94.783 92.577ZM760.447 587.874v115.071l213.484-207.648h-118.7l-94.784 92.577ZM1013.93 587.874v115.071l213.48-207.648h-118.7l-94.78 92.577ZM253.482 835.523v115.071l213.484-207.649h-118.7l-94.784 92.578ZM506.965 835.523v115.071l213.483-207.649h-118.7l-94.783 92.578ZM760.447 835.523v115.071l213.484-207.649h-118.7l-94.784 92.578ZM1013.93 835.523v115.071l213.48-207.649h-118.7l-94.78 92.578ZM253.482 1083.17v115.07l213.484-207.646h-118.7l-94.784 92.576ZM506.965 1083.17v115.07l213.483-207.646h-118.7l-94.783 92.576ZM760.447 1083.17v115.07l213.484-207.646h-118.7l-94.784 92.576ZM1013.93 1083.17v115.07l213.48-207.646h-118.7l-94.78 92.576Z" />
+                </svg>
+                <svg class="absolute right-0 w-24 text-green-500 fill-current -bottom-2" viewBox="0 0 1228 1199" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 92.577v115.071L213.483 0h-118.7L0 92.577ZM0 340.226v115.071l213.483-207.649h-118.7L0 340.226ZM0 587.874v115.071l213.483-207.648h-118.7L0 587.874ZM0 835.523v115.071l213.483-207.649h-118.7L0 835.523ZM0 1083.17v115.07l213.483-207.646h-118.7L0 1083.17ZM253.482 92.577v115.071L466.966 0h-118.7l-94.784 92.577ZM506.965 92.577v115.071L720.448 0h-118.7l-94.783 92.577ZM760.447 92.577v115.071L973.931 0h-118.7l-94.784 92.577ZM1013.93 92.577v115.071L1227.41 0h-118.7l-94.78 92.577ZM253.482 340.226v115.071l213.484-207.649h-118.7l-94.784 92.578ZM506.965 340.226v115.071l213.483-207.649h-118.7l-94.783 92.578ZM760.447 340.226v115.071l213.484-207.649h-118.7l-94.784 92.578ZM1013.93 340.226v115.071l213.48-207.649h-118.7l-94.78 92.578ZM253.482 587.874v115.071l213.484-207.648h-118.7l-94.784 92.577ZM506.965 587.874v115.071l213.483-207.648h-118.7l-94.783 92.577ZM760.447 587.874v115.071l213.484-207.648h-118.7l-94.784 92.577ZM1013.93 587.874v115.071l213.48-207.648h-118.7l-94.78 92.577ZM253.482 835.523v115.071l213.484-207.649h-118.7l-94.784 92.578ZM506.965 835.523v115.071l213.483-207.649h-118.7l-94.783 92.578ZM760.447 835.523v115.071l213.484-207.649h-118.7l-94.784 92.578ZM1013.93 835.523v115.071l213.48-207.649h-118.7l-94.78 92.578ZM253.482 1083.17v115.07l213.484-207.646h-118.7l-94.784 92.576ZM506.965 1083.17v115.07l213.483-207.646h-118.7l-94.783 92.576ZM760.447 1083.17v115.07l213.484-207.646h-118.7l-94.784 92.576ZM1013.93 1083.17v115.07l213.48-207.646h-118.7l-94.78 92.576Z" />
+                </svg>
+
+                <div class="relative inset-0 flex items-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg shadow-lg justify-centers left md:aspect-w-6 md:aspect-h-4 group-hover:shadow-2xl">
                     {{ partial:global/default_image }}
                 </div>
-                
             </div>
         </div>
         {{ /if }}
