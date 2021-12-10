@@ -1,7 +1,7 @@
 ---
 title: 'General content'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1638858224
+updated_at: 1639014316
 blueprint: general_content
 description: Lorem
 template: general_content/layout
@@ -1031,6 +1031,35 @@ sections:
         type: column
         enabled: true
   -
+    template: /general_content/two_text_columns
+    columns:
+      -
+        markdown: |
+          #### loremLorem ipsum dolor sit amet.
+          Vestibulum viverra lobortis felis, sit amet congue diam posuere sit amet. Phasellus quis porttitor quam, at tincidunt eros. Nam lorem quam, eleifend non metus iaculis, elementum hendrerit ipsum. _Pellentesque scelerisque iaculis est_, sit amet suscipit magna tincidunt vitae. Donec condimentum libero quis purus rutrum vehicula. Proin elit nunc, convallis eget tempor sit amet, suscipit nec orci. Curabitur sed eros vitae nulla volutpat laoreet. Proin convallis molestie varius.
+        type: column
+        enabled: true
+      -
+        markdown: |
+          #### Aenean egestas tincidunt justo in.
+          Nunc ante quam, consequat nec ante in, auctor volutpat diam. Donec pharetra, velit a pharetra auctor, elit dolor luctus dui, ac interdum metus lectus ut risus. Mauris ultricies sed mauris sit amet feugiat. Proin bibendum ut **nibh vitae luctus**. Curabitur a auctor nisl. Ut nec eros accumsan, luctus turpis ac, bibendum ligula. 
+          - item 1
+          -  item 1
+          - item 1
+          - item 1
+        type: column
+        enabled: true
+      -
+        markdown: |
+          #### Morbi vitae consequat est.
+          Aliquam euismod urna nunc, vitae vestibulum nunc vehicula vitae. Fusce condimentum nisi vitae orci egestas, ut [pharetra risus placerat](#). Duis et feugiat tellus. Pellentesque eget felis turpis. Duis sit amet nibh ut nibh dictum suscipit vel eget dolor. Curabitur euismod ex quis consectetur viverra. Nam vel pharetra felis.
+          
+          Vivamus elementum, libero quis gravida facilisis, orci nisi sodales magna, ac consectetur leo urna non leo. Curabitur porta tempus mauris, vel ornare magna lobortis facilisis.
+        type: column
+        enabled: true
+    type: two_text_columns
+    enabled: true
+  -
     template: /general_content/image_gallery
     display_title_section:
       -
@@ -1203,10 +1232,30 @@ sections:
     select: background-secondary
     select_icon: mail
     text: 'Contact Us'
-    toggle: true
+    toggle: false
     type: horizontal_cta
     enabled: true
     section_id: null
+  -
+    template: /general_content/_horizontal_cta
+    toggle: true
+    template_global: /global/buttons
+    default_image: icons/17.svg
+    title: 'Talk to us'
+    bard:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam. '
+    link: '#'
+    select: background-secondary
+    select_icon: mail
+    text: 'Contact Us'
+    section_id: null
+    type: horizontal_cta
+    enabled: true
 top_section:
   -
     type: hero_general_content

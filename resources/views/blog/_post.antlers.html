@@ -9,7 +9,9 @@
                 </div>
             </div>
         </div>
-        <h3> {{ title }} </h3>
+        {{# title_class defines the displayed size of the partial in "latest_news". #}}
+        <h3 class="{{ title_class ?? "normal-case" }}"> {{ title }} </h3>
+        {{ if ! hide_author }}
         <div class="flex flex-row sm:space-x-4 ">
             <div class="flex items-center space-x-2">
                 {{ if author:avatar }}
@@ -28,9 +30,11 @@
             <div>
             </div>
         </div>
+        {{ /if }}
 
         {{ if subheader }}
-            <p>{{ subheader | truncate:140 }}</p>
+            {{# hide_subheader defines if subheader is displayed on the partial in "latest_news". #}}
+            {{ if ! hide_subheader }}<p>{{ subheader | truncate:140 }}</p>{{ /if }}
         {{ /if }}
 
         <div class="inline-flex ">
