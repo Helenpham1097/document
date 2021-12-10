@@ -1,6 +1,6 @@
 {{# Partial template for latest news linked blog posts. Uses latest_news global #}}
 
-<section class="container space-y-12 max-w-7xl">
+{{# <section class="container space-y-12 max-w-7xl">
     <div class="max-w-2xl mx-auto space-y-4 text-center md:px-8">
         <h2>{{ latest_news:header }}</h2>
         <hr />
@@ -22,4 +22,25 @@
 
         </div>
     </aside>
+</section> #}}
+
+<section class="container space-y-12 max-w-7xl">
+        <div class="grid grid-cols-1 gap-16 sm:grid-cols-4 related-post">
+            <div class="max-w-2xl mx-auto space-y-4">
+                <h2>{{ latest_news:header }}</h2>
+                <hr />
+                <p class="text-base">{{ latest_news:subheader }}</p>
+            </div>
+
+            {{
+                collection:blog
+                :id:isnt="id"
+                :limit="latest_news:entries_limit"
+                sort="date:desc"
+            }}
+            {{ partial:blog/post hide_author="true" hide_subheader="true" title_class="text-xl" subheader_class="text-base" }}
+
+            {{ /collection:blog }}
+        </div>
+
 </section>
