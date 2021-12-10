@@ -1,0 +1,79 @@
+{{# Partial to show the hero section of the general content pages #}}
+<div class="slice-background"></div>
+
+{{# Partial template for the featured blog post on blog index page #}}
+
+<section class="container pb-6 mx-auto max-w-7xl md:pb-24 group">
+    <div class="flex flex-col items-center justify-center py-8 space-x-0 space-y-8 space-y-reverse sm:space-y-0 sm:space-x-8 md:flex-row md:py-12">
+        <div class="space-y-6 md:w-1/2">
+            {{ if categories }}
+                <h3 class="flex-row items-center hidden space-x-2 sm:flex ">
+                    <div class="text-purple-500">{{ categories  limit="1" }}  {{ title }} {{ /categories }}</div>
+                </h3>
+            {{ /if }}
+            <div class="flex flex-col items-start space-y-6 lg:flex-grow">
+                <h1 class="dot">{{ hero_home_title }}</h1>
+                <div class="excerpt"> {{ hero_home_description }}</div>
+                {{ if link }}
+                <div class="flex-none">
+                    {{ partial:global/buttons }}
+                </div>
+                {{ /if }}
+            </div>
+        </div>
+
+        {{ if default_image }}
+        <div class="order-first md:w-1/2 sm:order-last">
+            <div class="relative hero-animation">
+                <svg class="absolute text-green-500 transition duration-700 ease-in-out transform fill-current group-hover:text-green-600 group-hover:-translate-x-12 group-hover:-translate-y-12 w-72 top-6 left-6" viewBox="0 0 373 363" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 161.839V363L373 0H165.606L0 161.839Z"/>
+                </svg>
+                <svg class="absolute text-green-500 transition duration-700 ease-in-out transform fill-current group-hover:text-green-600 group-hover:translate-x-12 group-hover:translate-y-12 w-72 bottom-6 right-6" viewBox="0 0 373 363" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M373 201.161V-2.06527e-06L7.95594e-06 363H207.394L373 201.161Z"/>
+
+                </svg>
+
+                <div class="relative inset-0 flex items-center overflow-hidden transition duration-500 ease-in-out transform bg-purple-500 rounded-lg shadow-2xl justify-centers left md:aspect-w-6 md:aspect-h-4 group-hover:shadow-2xl">
+                    {{ partial:global/default_image }}
+                </div>
+            </div>
+        </div>
+        {{ /if }}
+
+    </div>
+</section>
+
+{{# <section class="container pb-6 mx-auto max-w-7xl md:pb-24 group">
+    <div class="flex flex-col items-center justify-center py-8 space-x-0 space-y-8 space-y-reverse sm:space-y-0 sm:space-x-8 md:flex-row md:py-12">
+        <div class="space-y-6 md:w-3/5">
+            <div class="flex flex-col items-start space-y-6 lg:flex-grow">
+                <h1 class="dot">{{ hero_home_title }}</h1>
+                <div class="excerpt"> {{ hero_home_description }}</div>
+                {{ if link }}
+                <div class="flex-none">
+                    {{ partial:global/buttons }}
+                </div>
+                {{ /if }}
+            </div>
+        </div>
+
+        {{ if default_image }}
+        <div class="order-first md:w-2/5 sm:order-last">
+            <div class="relative hero-animation">
+                <svg class="absolute w-24 text-green-500 fill-current" viewBox="0 0 1228 1199" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 92.577v115.071L213.483 0h-118.7L0 92.577ZM0 340.226v115.071l213.483-207.649h-118.7L0 340.226ZM0 587.874v115.071l213.483-207.648h-118.7L0 587.874ZM0 835.523v115.071l213.483-207.649h-118.7L0 835.523ZM0 1083.17v115.07l213.483-207.646h-118.7L0 1083.17ZM253.482 92.577v115.071L466.966 0h-118.7l-94.784 92.577ZM506.965 92.577v115.071L720.448 0h-118.7l-94.783 92.577ZM760.447 92.577v115.071L973.931 0h-118.7l-94.784 92.577ZM1013.93 92.577v115.071L1227.41 0h-118.7l-94.78 92.577ZM253.482 340.226v115.071l213.484-207.649h-118.7l-94.784 92.578ZM506.965 340.226v115.071l213.483-207.649h-118.7l-94.783 92.578ZM760.447 340.226v115.071l213.484-207.649h-118.7l-94.784 92.578ZM1013.93 340.226v115.071l213.48-207.649h-118.7l-94.78 92.578ZM253.482 587.874v115.071l213.484-207.648h-118.7l-94.784 92.577ZM506.965 587.874v115.071l213.483-207.648h-118.7l-94.783 92.577ZM760.447 587.874v115.071l213.484-207.648h-118.7l-94.784 92.577ZM1013.93 587.874v115.071l213.48-207.648h-118.7l-94.78 92.577ZM253.482 835.523v115.071l213.484-207.649h-118.7l-94.784 92.578ZM506.965 835.523v115.071l213.483-207.649h-118.7l-94.783 92.578ZM760.447 835.523v115.071l213.484-207.649h-118.7l-94.784 92.578ZM1013.93 835.523v115.071l213.48-207.649h-118.7l-94.78 92.578ZM253.482 1083.17v115.07l213.484-207.646h-118.7l-94.784 92.576ZM506.965 1083.17v115.07l213.483-207.646h-118.7l-94.783 92.576ZM760.447 1083.17v115.07l213.484-207.646h-118.7l-94.784 92.576ZM1013.93 1083.17v115.07l213.48-207.646h-118.7l-94.78 92.576Z" />
+                </svg>
+                <svg class="absolute bottom-0 right-0 w-24 text-green-500 fill-current" viewBox="0 0 1228 1199" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 92.577v115.071L213.483 0h-118.7L0 92.577ZM0 340.226v115.071l213.483-207.649h-118.7L0 340.226ZM0 587.874v115.071l213.483-207.648h-118.7L0 587.874ZM0 835.523v115.071l213.483-207.649h-118.7L0 835.523ZM0 1083.17v115.07l213.483-207.646h-118.7L0 1083.17ZM253.482 92.577v115.071L466.966 0h-118.7l-94.784 92.577ZM506.965 92.577v115.071L720.448 0h-118.7l-94.783 92.577ZM760.447 92.577v115.071L973.931 0h-118.7l-94.784 92.577ZM1013.93 92.577v115.071L1227.41 0h-118.7l-94.78 92.577ZM253.482 340.226v115.071l213.484-207.649h-118.7l-94.784 92.578ZM506.965 340.226v115.071l213.483-207.649h-118.7l-94.783 92.578ZM760.447 340.226v115.071l213.484-207.649h-118.7l-94.784 92.578ZM1013.93 340.226v115.071l213.48-207.649h-118.7l-94.78 92.578ZM253.482 587.874v115.071l213.484-207.648h-118.7l-94.784 92.577ZM506.965 587.874v115.071l213.483-207.648h-118.7l-94.783 92.577ZM760.447 587.874v115.071l213.484-207.648h-118.7l-94.784 92.577ZM1013.93 587.874v115.071l213.48-207.648h-118.7l-94.78 92.577ZM253.482 835.523v115.071l213.484-207.649h-118.7l-94.784 92.578ZM506.965 835.523v115.071l213.483-207.649h-118.7l-94.783 92.578ZM760.447 835.523v115.071l213.484-207.649h-118.7l-94.784 92.578ZM1013.93 835.523v115.071l213.48-207.649h-118.7l-94.78 92.578ZM253.482 1083.17v115.07l213.484-207.646h-118.7l-94.784 92.576ZM506.965 1083.17v115.07l213.483-207.646h-118.7l-94.783 92.576ZM760.447 1083.17v115.07l213.484-207.646h-118.7l-94.784 92.576ZM1013.93 1083.17v115.07l213.48-207.646h-118.7l-94.78 92.576Z" />
+                </svg>
+
+                <div class="relative inset-0 flex items-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg shadow-lg justify-centers left md:aspect-w-6 md:aspect-h-4 group-hover:shadow-2xl">
+                    {{ partial:global/default_image }}
+                </div>
+            </div>
+        </div>
+        {{ /if }}
+
+    </div>
+</section> #}}
+

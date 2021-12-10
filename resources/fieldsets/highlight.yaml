@@ -32,8 +32,12 @@ fields:
                 display: Textarea
                 always_show_set_button: false
                 buttons:
+                  - h3
+                  - h4
+                  - h5
                   - bold
                   - italic
+                  - unorderedlist
                   - removeformat
                   - anchor
                   - table

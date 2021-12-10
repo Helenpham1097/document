@@ -1,34 +1,40 @@
 {{# Template showing the last post from the collection of posts #}}
-<section class="container mx-auto space-y-8 md:space-y-8 ">
-
-{{ partial:global/section_title }}
+<section class="container mx-auto space-y-8 max-w-7xl md:space-y-8 ">
 
 {{ collection:blog limit="1" paginate="false" as='posts' sort="date:desc" }}
 	{{ posts }}
 		<div class="mx-auto mt-6 sm:mt-18 group">
 			<div class="flex flex-col items-center justify-center py-4 space-x-0 sm:space-x-reverse sm:space-x-16 md:flex-row md:py-10">
 				<div class="w-full pr-4 space-y-6 md:w-1/2">
-					{{ if categories }}
-						<div class="flex-row items-center hidden space-x-2 sm:flex ">
-							<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-500 " fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5a1.99 1.99 0 011.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
-							<div class="text-purple-500">{{ categories  limit="1" }}  {{ title }} {{ /categories }}</div>
-						</div>
-					{{ /if }}
+					<a class="flex space-x-2" href="/blog">
+					<h4>{{ partial:global/section_title ?? center_title_pre_title }}</h4>
+					<h3 class="text-purple-500 lowercase">{{ partial:global/section_title ?? center_title_title }}</h3>
+					</a>
 					<a href="{{ url }}" class="flex flex-col items-center space-y-6 lg:flex-grow md:items-start">
 						<h2>{{ title }}</h2>
 						<p> {{ subheader }}</p>
-						<span class="inline-flex items-center cta"> Learn More </span>
+						<span class="inline-flex items-center cta"> Read More </span>
 					</a>
 				</div>
 					
-					<div class="relative order-first illustration-bg md:w-1/2 md:pl-4">
-						<div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg shadow-lg md:aspect-w-6 md:aspect-h-4 group-hover:shadow-2xl">
-							<a href="{{ url }}">
-								{{ partial:global/default_image }}
-							</a>
-						</div>
+			{{ if default_image }}
+			<div class="order-first md:w-1/2 ">
+				<div class="relative hero-animation">
+					<svg class="absolute text-green-500 transition duration-700 ease-in-out transform fill-current group-hover:text-green-600 group-hover: group-hover:translate-x-3 w-72 -top-6 -left-6" viewBox="0 0 373 363" fill="none" xmlns="http://www.w3.org/2000/svg">
 
+						<path d="M0 161.839V363L373 0H165.606L0 161.839Z"/>
+					</svg>
+					<svg class="absolute text-green-500 transition duration-700 ease-in-out transform fill-current group-hover:text-green-600 group-hover:-translate-y-3 group-hover:-translate-x-3 w-72 -bottom-6 -right-6" viewBox="0 0 373 363" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M373 201.161V-2.06527e-06L7.95594e-06 363H207.394L373 201.161Z"/>
+
+					</svg>
+
+					<div class="relative inset-0 flex items-center overflow-hidden transition duration-500 ease-in-out transform bg-purple-500 rounded-lg shadow-2xl justify-centers left md:aspect-w-6 md:aspect-h-4 group-hover:shadow-2xl">
+						{{ partial:global/default_image }}
 					</div>
+				</div>
+			</div>
+			{{ /if }}
 			</div>
 		</div>
 	{{ /posts }}

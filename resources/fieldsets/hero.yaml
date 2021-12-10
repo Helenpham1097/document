@@ -1,0 +1,47 @@
+title: Hero
+fields:
+  -
+    handle: template
+    field:
+      display: template
+      type: hidden
+      icon: hidden
+      listable: hidden
+      default: /general_content/hero
+  -
+    handle: hero_home_title
+    field:
+      input_type: text
+      antlers: false
+      display: 'Hero Title'
+      type: text
+      icon: text
+      listable: hidden
+  -
+    handle: hero_home_description
+    field:
+      antlers: false
+      display: 'Hero Description'
+      always_show_set_button: false
+      buttons:
+        - bold
+        - italic
+        - removeformat
+        - anchor
+      save_html: false
+      toolbar_mode: fixed
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      reading_time: false
+      fullscreen: false
+      allow_source: true
+      enable_input_rules: false
+      enable_paste_rules: true
+      type: bard
+      icon: textarea
+      listable: hidden
+  -
+    import: buttons
+  -
+    import: default_image

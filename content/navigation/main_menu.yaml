@@ -3,70 +3,19 @@ collections:
   - pages
 tree:
   -
-    title: Hosting
+    entry: c69d5d08-e270-4673-abce-438cfbd3c854
+  -
+    entry: fee1a2b1-971c-4c72-9517-d2e6c989f49e
+  -
+    entry: 128bc187-e58c-4ccc-a5f7-587727470a54
+  -
+    entry: 178073b8-7594-4432-9b39-2461b487bce8
+  -
+    title: Dropdown
     children:
       -
-        title: 'GitHub Repo'
-        url: 'https://github.com/example/repo'
+        title: 'Item 1'
       -
-        title: 'GitHub Repo'
-        url: 'https://github.com/example/repo'
+        title: 'Item 2'
       -
-        title: 'GitHub Repo'
-        url: 'https://github.com/example/repo'
-      -
-        title: 'GitHub Repo'
-        url: 'https://github.com/example/repo'
-  -
-    entry: f1bdf2c9-3872-40fc-a409-e2265a284d11
-  -
-    title: Servers
-    children:
-      -
-        title: 'GitHub Repo'
-        url: 'https://github.com/example/repo'
-      -
-        title: 'GitHub Repo'
-        url: 'https://github.com/example/repo'
-      -
-        title: 'GitHub Repo'
-        url: 'https://github.com/example/repo'
-      -
-        title: 'GitHub Repo'
-        url: 'https://github.com/example/repo'
-      -
-        title: 'GitHub Repo'
-        url: 'https://github.com/example/repo'
-  -
-    title: About
-    children:
-      -
-        title: 'GitHub Repo'
-        url: 'https://github.com/example/repo'
-      -
-        title: 'GitHub Repo'
-        url: 'https://github.com/example/repo'
-      -
-        title: 'GitHub Repo'
-        url: 'https://github.com/example/repo'
-  -
-    title: Terms
-    children:
-      -
-        title: 'GitHub Repo'
-        url: 'https://github.com/example/repo'
-      -
-        title: 'GitHub Repo'
-        url: 'https://github.com/example/repo'
-      -
-        title: 'GitHub Repo'
-        url: 'https://github.com/example/repo'
-      -
-        title: 'GitHub Repo'
-        url: 'https://github.com/example/repo'
-      -
-        title: 'GitHub Repo'
-        url: 'https://github.com/example/repo'
-  -
-    title: 'GitHub Repo'
-    url: 'https://github.com/example/repo'
+        title: 'Item 3'

@@ -1,7 +1,7 @@
 ---
 title: 'General content'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1638148462
+updated_at: 1639014316
 blueprint: general_content
 description: Lorem
 template: general_content/layout
@@ -1009,16 +1009,54 @@ sections:
     enabled: true
   -
     template: /general_content/two_text_columns
-    markdown_a: |
-      ## Getting Started with Webslice
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer iaculis ex a turpis vestibulum, at facilisis sem ullamcorper. **Proin ut mauris purus.** Cras vitae eleifend eros, vel posuere nisi. Nulla quis libero sit amet mauris consectetur blandit eget eu ligula. Aliquam pulvinar feugiat placerat. Nullam ac justo eu sapien viverra scelerisque. Vestibulum ante ipsum primis in faucibus orci _luctus et ultrices posuere_ cubilia curae; Cras a purus est. Praesent tristique, felis id accumsan pharetra, mauris felis venenatis eros, sed sagittis est risus eu leo. Vivamus laoreet lectus sed mi facilisis, vel pellentesque felis ultricies. Maecenas ut nibh condimentum tellus dictum tincidunt. Donec ac ante diam. Donec hendrerit tincidunt [tincidunt](#).
-    markdown_b: |
-      ### Basics of web development
-      
-      Donec eu lectus in dui rhoncus iaculis. Etiam vel nisl mi. Phasellus a enim id diam tincidunt condimentum. Donec tristique vel ipsum nec suscipit. Vestibulum laoreet ullamcorper lacinia. Donec pretium mattis accumsan. Maecenas eget erat aliquam, condimentum turpis tincidunt, tempus orci.
-      Vestibulum ante ipsum primis in faucibus orci.
-      
-      Luctus et ultrices posuere cubilia curae; Cras a purus est. Praesent tristique, felis id accumsan pharetra, mauris felis venenatis eros, sed sagittis est risus eu leo. Vivamus laoreet lectus sed mi facilisis, vel
+    markdown_a: null
+    markdown_b: null
+    type: two_text_columns
+    enabled: true
+    columns:
+      -
+        markdown: |
+          ## Getting Started with Webslice
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer iaculis ex a turpis vestibulum, at facilisis sem ullamcorper. **Proin ut mauris purus.** Cras vitae eleifend eros, vel posuere nisi. Nulla quis libero sit amet mauris consectetur blandit eget eu ligula. Aliquam pulvinar feugiat placerat. Nullam ac justo eu sapien viverra scelerisque. Vestibulum ante ipsum primis in faucibus orci _luctus et ultrices posuere_ cubilia curae; Cras a purus est. Praesent tristique, felis id accumsan pharetra, mauris felis venenatis eros, sed sagittis est risus eu leo. Vivamus laoreet lectus sed mi facilisis, vel pellentesque felis ultricies. Maecenas ut nibh condimentum tellus dictum tincidunt. Donec ac ante diam. Donec hendrerit tincidunt [tincidunt](#).
+        type: column
+        enabled: true
+      -
+        markdown: |
+          ### Basics of web development
+          
+          Donec eu lectus in dui rhoncus iaculis. Etiam vel nisl mi. Phasellus a enim id diam tincidunt condimentum. Donec tristique vel ipsum nec suscipit. Vestibulum laoreet ullamcorper lacinia. Donec pretium mattis accumsan. Maecenas eget erat aliquam, condimentum turpis tincidunt, tempus orci.
+          Vestibulum ante ipsum primis in faucibus orci.
+          
+          Luctus et ultrices posuere cubilia curae; Cras a purus est. Praesent tristique, felis id accumsan pharetra, mauris felis venenatis eros, sed sagittis est risus eu leo. Vivamus laoreet lectus sed mi facilisis, vel
+        type: column
+        enabled: true
+  -
+    template: /general_content/two_text_columns
+    columns:
+      -
+        markdown: |
+          #### loremLorem ipsum dolor sit amet.
+          Vestibulum viverra lobortis felis, sit amet congue diam posuere sit amet. Phasellus quis porttitor quam, at tincidunt eros. Nam lorem quam, eleifend non metus iaculis, elementum hendrerit ipsum. _Pellentesque scelerisque iaculis est_, sit amet suscipit magna tincidunt vitae. Donec condimentum libero quis purus rutrum vehicula. Proin elit nunc, convallis eget tempor sit amet, suscipit nec orci. Curabitur sed eros vitae nulla volutpat laoreet. Proin convallis molestie varius.
+        type: column
+        enabled: true
+      -
+        markdown: |
+          #### Aenean egestas tincidunt justo in.
+          Nunc ante quam, consequat nec ante in, auctor volutpat diam. Donec pharetra, velit a pharetra auctor, elit dolor luctus dui, ac interdum metus lectus ut risus. Mauris ultricies sed mauris sit amet feugiat. Proin bibendum ut **nibh vitae luctus**. Curabitur a auctor nisl. Ut nec eros accumsan, luctus turpis ac, bibendum ligula. 
+          - item 1
+          -  item 1
+          - item 1
+          - item 1
+        type: column
+        enabled: true
+      -
+        markdown: |
+          #### Morbi vitae consequat est.
+          Aliquam euismod urna nunc, vitae vestibulum nunc vehicula vitae. Fusce condimentum nisi vitae orci egestas, ut [pharetra risus placerat](#). Duis et feugiat tellus. Pellentesque eget felis turpis. Duis sit amet nibh ut nibh dictum suscipit vel eget dolor. Curabitur euismod ex quis consectetur viverra. Nam vel pharetra felis.
+          
+          Vivamus elementum, libero quis gravida facilisis, orci nisi sodales magna, ac consectetur leo urna non leo. Curabitur porta tempus mauris, vel ornare magna lobortis facilisis.
+        type: column
+        enabled: true
     type: two_text_columns
     enabled: true
   -
@@ -1194,7 +1232,28 @@ sections:
     select: background-secondary
     select_icon: mail
     text: 'Contact Us'
+    toggle: false
+    type: horizontal_cta
+    enabled: true
+    section_id: null
+  -
+    template: /general_content/_horizontal_cta
     toggle: true
+    template_global: /global/buttons
+    default_image: icons/17.svg
+    title: 'Talk to us'
+    bard:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam. '
+    link: '#'
+    select: background-secondary
+    select_icon: mail
+    text: 'Contact Us'
+    section_id: null
     type: horizontal_cta
     enabled: true
 top_section:

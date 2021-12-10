@@ -79,6 +79,7 @@ module.exports = {
         extend: {
             // ...
             translate: ['active', 'group-hover'],
+            width: ["responsive", "hover", "focus", 'group-hover'],
         },
     },
     plugins: [

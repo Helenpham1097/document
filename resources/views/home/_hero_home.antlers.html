@@ -1,14 +1,11 @@
 {{# Partial to show the hero section of the homepage #}}
-<!-- <div class="absolute top-0 w-full lines"></div> -->
-<!-- <div class="absolute w-full my-12 sm:my-0 h-1/2 sm:h-2/3 light-purple"></div> -->
-        <div class="slice-blur"></div>
-        <div class=" slice-blog"></div>
+<div class="slice-background"></div>
 
-{{# Partial template for the featured blog post on blog index page #}}
+{{# Partial template homepage #}}
 
-<section class="container mx-auto my-6 sm:my-24">
-    <div class="flex flex-col items-center justify-center py-4 space-x-0 space-y-8 space-y-reverse sm:space-y-0 sm:space-x-8 md:flex-row md:py-10">
-        <div class="w-full pr-4 space-y-6 md:w-1/2">
+<section class="container pb-6 mx-auto max-w-7xl md:pb-24 group">
+    <div class="flex flex-col items-center justify-center py-8 space-x-0 space-y-8 space-y-reverse sm:space-y-0 sm:space-x-8 md:flex-row md:py-12">
+        <div class="space-y-6 md:w-1/2">
             {{ if categories }}
                 <div class="flex-row items-center hidden space-x-2 sm:flex ">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-500 " fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5a1.99 1.99 0 011.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
@@ -16,7 +13,7 @@
                 </div>
             {{ /if }}
             <div class="flex flex-col items-start space-y-6 lg:flex-grow">
-                <h1 class="">{{ hero_home_title }}</h1>
+                <h1 class="dot">{{ hero_home_title }}</h1>
                 <div class="excerpt"> {{ hero_home_description }}</div>
                 <!-- Form -->
                 <form action="" method="post" id="revue-form" name="revue-form" target="_blank" class="flex flex-col justify-between w-full max-w-xl space-y-4 text-center md:flex-row md:space-y-0 md:space-x-4">
@@ -27,15 +24,23 @@
                 </form>
             </div>
         </div>
-        <div class="order-first md:w-1/2 sm:order-last ">
-            <div class="illustration-element">
-			{{ if default_image }}
-                <div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg shadow-lg left md:aspect-w-6 md:aspect-h-4 group-hover:shadow-2xl">
+        {{ if default_image }}
+        <div class="order-first md:w-1/2 sm:order-last">
+            <div class="relative hero-animation">
+                <svg class="absolute text-green-500 transition duration-700 ease-in-out transform fill-current group-hover:text-green-600 group-hover:-translate-x-12 group-hover:-translate-y-12 w-72 top-6 left-6" viewBox="0 0 373 363" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 161.839V363L373 0H165.606L0 161.839Z"/>
+                </svg>
+                <svg class="absolute text-green-500 transition duration-700 ease-in-out transform fill-current group-hover:text-green-600 group-hover:translate-x-12 group-hover:translate-y-12 w-72 bottom-6 right-6" viewBox="0 0 373 363" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M373 201.161V-2.06527e-06L7.95594e-06 363H207.394L373 201.161Z"/>
+
+                </svg>
+
+                <div class="relative inset-0 flex items-center overflow-hidden transition duration-500 ease-in-out transform bg-purple-500 rounded-lg shadow-2xl justify-centers left md:aspect-w-6 md:aspect-h-4 group-hover:shadow-2xl">
                     {{ partial:global/default_image }}
                 </div>
-			{{ /if }}
-
             </div>
         </div>
+        {{ /if }}
+
     </div>
 </section>
