@@ -1,13 +1,8 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-    mode: 'jit',
-    future: {
-        // removeDeprecatedGapUtilities: true,
-        // purgeLayersByDefault: true,
-    },
     content: [
-        './resources/**/*.antlers.html',
+        './resources/**/*.html',
         './resources/**/*.blade.php',
         './content/**/*.md'
     ],
@@ -74,13 +69,6 @@ module.exports = {
                     },
                 },
             }),
-        },
-    },
-    variants: {
-        extend: {
-            // ...
-            translate: ['active', 'group-hover'],
-            width: ["responsive", "hover", "focus", 'group-hover'],
         },
     },
     plugins: [
