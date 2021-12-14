@@ -241,7 +241,7 @@ video {
 Ensure the default browser behavior of the `hidden` attribute.
 */[hidden] {
   display: none;
-}[type='text'], [type='password'], [type='email'], [type='number'], [type='url'], [type='date'], [type='datetime-local'], [type='month'], [type='week'], [type='time'], [type='search'], [type='tel'], select, [multiple], textarea, .back-to-top-link, .cta:after, .dot::after, h2, h2:after, div, .illustration-bg::before, .illustration-bg-left::before, .translate-x-2, .translate-x-0, .translate-x-full, .-translate-y-3, .translate-x-12, .-translate-y-12, .translate-y-1, .translate-x-1, .rotate-180, .rotate-0, .-skew-x-6, .-skew-x-12, .scale-75, .scale-100, .scale-90, .scale-95, .transform, .hover\:translate-x-2, .group-hover\:translate-x-2, .group-hover\:translate-x-12, .group-hover\:translate-x-6, .group-hover\:translate-x-3, .group-hover\:translate-y-12, .sm\:rotate-90, .sm\:skew-x-12, .md\:translate-x-2, .md\:group-hover\:translate-x-12, .md\:group-hover\:translate-y-12{
+}[type='text'], [type='password'], [type='email'], [type='number'], [type='url'], [type='date'], [type='datetime-local'], [type='month'], [type='week'], [type='time'], [type='search'], [type='tel'], select, [multiple], textarea, .back-to-top-link, .cta:after, .dot::after, h2, h2:after, div, .illustration-bg::before, .illustration-bg-left::before, .translate-x-2, .translate-x-0, .translate-x-full, .-translate-y-3, .translate-x-12, .-translate-y-12, .translate-y-1, .translate-x-1, .rotate-180, .rotate-0, .-skew-x-6, .-skew-x-12, .scale-75, .scale-100, .scale-90, .scale-95, .transform, .hover\:translate-x-2, .group-hover\:translate-x-2, .group-hover\:translate-x-12, .group-hover\:translate-x-6, .group-hover\:translate-x-3, .sm\:rotate-90, .sm\:skew-x-12, .md\:translate-x-2, .md\:group-hover\:translate-x-12, .md\:group-hover\:translate-y-12{
   --tw-translate-x: 0;
   --tw-translate-y: 0;
   --tw-rotate: 0;
@@ -278,24 +278,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-scale-y: 1;
   --tw-transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }.group-hover\:-translate-x-3{
-  --tw-translate-x: 0;
-  --tw-translate-y: 0;
-  --tw-rotate: 0;
-  --tw-skew-x: 0;
-  --tw-skew-y: 0;
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  --tw-transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}.group-hover\:-translate-x-12{
-  --tw-translate-x: 0;
-  --tw-translate-y: 0;
-  --tw-rotate: 0;
-  --tw-skew-x: 0;
-  --tw-skew-y: 0;
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  --tw-transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}.group-hover\:-translate-y-12{
   --tw-translate-x: 0;
   --tw-translate-y: 0;
   --tw-rotate: 0;
@@ -1833,22 +1815,12 @@ ol {
   bottom: -4rem;
 }.right-16{
   right: 4rem;
-}.-bottom-10{
-  bottom: -2.5rem;
 }.left-0{
   left: 0px;
 }.-bottom-0\.5{
   bottom: -0.125rem;
 }.-bottom-0{
   bottom: -0px;
-}.top-6{
-  top: 1.5rem;
-}.left-6{
-  left: 1.5rem;
-}.bottom-6{
-  bottom: 1.5rem;
-}.right-6{
-  right: 1.5rem;
 }.-top-6{
   top: -1.5rem;
 }.-left-6{
@@ -1941,6 +1913,8 @@ ol {
   display: flex;
 }.inline-flex{
   display: inline-flex;
+}.table{
+  display: table;
 }.grid{
   display: grid;
 }.hidden{
@@ -2113,6 +2087,8 @@ ol {
   transform: var(--tw-transform);
 }.cursor-pointer{
   cursor: pointer;
+}.resize-y{
+  resize: vertical;
 }.resize{
   resize: both;
 }.auto-cols-max{
@@ -2443,9 +2419,6 @@ ol {
 }.px-12{
   padding-left: 3rem;
   padding-right: 3rem;
-}.px-16{
-  padding-left: 4rem;
-  padding-right: 4rem;
 }.px-6{
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -2786,15 +2759,6 @@ ol {
   transform: var(--tw-transform);
 }.group:hover .group-hover\:translate-x-3{
   --tw-translate-x: 0.75rem;
-  transform: var(--tw-transform);
-}.group:hover .group-hover\:-translate-x-12{
-  --tw-translate-x: -3rem;
-  transform: var(--tw-transform);
-}.group:hover .group-hover\:-translate-y-12{
-  --tw-translate-y: -3rem;
-  transform: var(--tw-transform);
-}.group:hover .group-hover\:translate-y-12{
-  --tw-translate-y: 3rem;
   transform: var(--tw-transform);
 }.group:hover .group-hover\:-translate-y-3{
   --tw-translate-y: -0.75rem;
@@ -3288,6 +3252,8 @@ ol {
     bottom: 1.5rem;
   }.md\:right-6{
     right: 1.5rem;
+  }.md\:-bottom-10{
+    bottom: -2.5rem;
   }.md\:order-none{
     order: 0;
   }.md\:col-span-2{
