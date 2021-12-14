@@ -2,7 +2,7 @@
 <section class="pb-8 space-y-8 lg:space-y-24">
     {{ rows }} {{ if toggle_alignment }} {{ if reverse_alignment }} {{ if { switch between="odd|even" for="Image Right First"} == "odd" }}
     <p>toggle_alignment</p>
-    <div class="container flex flex-col items-center py-10 mx-auto space-y-6 lg:space-x-24 sm:py-5 sm:space-y-0 sm:flex-row max-w-7xl">
+    <div class="container flex flex-col items-center py-10 mx-auto space-y-6 space-y-reverse lg:space-x-24 sm:py-5 sm:space-y-0 sm:flex-row max-w-7xl">
         <div class="space-y-6 sm:w-1/2">
             {{# The styling of the paragraphs inside the Bard is defined in the css since a p tag is added as a container. #}}
             <span class="space-y-6">
@@ -17,7 +17,7 @@
             </div>
 			{{ /if }}
         </div>
-        <div class="relative sm:max-w-2xl sm:mx-auto sm:w-1/2">
+        <div class="relative order-first sm:max-w-2xl md:order-none sm:mx-auto sm:w-1/2">
             <div class="mx-auto {{ if  toggle_background }} illustration-bg {{ else}} illustration-element {{ /if}}">
                 {{ if default_image }}
                 <div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg left md:aspect-w-6 md:aspect-h-4 group-hover:shadow-2xl">
@@ -26,7 +26,7 @@
                 {{ /if }}
 
 				{{ if highlight_textcaption | strip_tags:p }}
-                <div class="absolute right-0 max-w-md sm:left-5 sm:right-5 -bottom-10">
+                <div class="absolute right-0 max-w-md sm:left-5 sm:right-5 md:-bottom-10">
                     <div class="relative text-gray-400">{{ highlight_textcaption | strip_tags:p }}</div>
                 </div>
 				{{ /if }}
@@ -34,7 +34,7 @@
         </div>
     </div>
     {{ else }}
-    <div class="container flex flex-col items-center py-10 mx-auto space-y-6 lg:space-x-24 sm:flex-row-reverse lg:space-x-reverse sm:py-5 sm:space-y-0 max-w-7xl">
+    <div class="container flex flex-col items-center py-10 mx-auto space-y-6 space-y-reverse lg:space-x-24 sm:flex-row-reverse lg:space-x-reverse sm:py-5 sm:space-y-0 max-w-7xl">
         <div class="space-y-6 sm:w-1/2">
             {{# The styling of the paragraphs inside the Bard is defined in the css since a p tag is added as a container. #}}
             <span class="space-y-6">
@@ -50,7 +50,7 @@
 			{{ /if }}
         </div>
         <p>toggle_alignment else</p>
-        <div class="relative sm:max-w-2xl sm:mx-auto sm:w-1/2">
+        <div class="relative order-first sm:max-w-2xl md:order-none sm:mx-auto sm:w-1/2">
             <div class="mx-auto {{ if  toggle_background }} illustration-bg {{ else}} illustration-element {{ /if}}">
                 
                 {{ if default_image }}
@@ -60,7 +60,7 @@
                 {{ /if }}
 
 				{{ if highlight_textcaption | strip_tags:p }}
-                <div class="absolute right-0 max-w-md sm:left-5 sm:right-5 -bottom-10">
+                <div class="absolute right-0 max-w-md sm:left-5 sm:right-5 md:-bottom-10">
                     <div class="relative text-gray-400">{{ highlight_textcaption | strip_tags:p }}</div>
                 </div>
 				{{ /if }}
@@ -69,7 +69,7 @@
     </div>
     
     {{ endif }} {{ else }} {{ if { switch between="odd|even" for="Image Left First"} == "even" }}
-    <div class="container flex flex-col items-center py-10 mx-auto space-y-6 lg:space-x-24 sm:py-5 sm:space-y-0 sm:flex-row max-w-7xl">
+    <div class="container flex flex-col items-center py-10 mx-auto space-y-6 space-y-reverse lg:space-x-24 sm:py-5 sm:space-y-0 sm:flex-row max-w-7xl">
         <div class="space-y-6 sm:w-1/2">
             {{# The styling of the paragraphs inside the Bard is defined in the css since a p tag is added as a container. #}}
             <span class="space-y-6">
@@ -84,7 +84,7 @@
             </div>
 			{{ /if }}
         </div>
-        <div class="relative sm:max-w-2xl group sm:mx-auto sm:w-1/2">
+        <div class="relative order-first sm:max-w-2xl group md:order-none sm:mx-auto sm:w-1/2">
             <div class="mx-auto {{ if  toggle_background }}  {{ else}} illustration-element {{ /if}}">
                 {{ if  toggle_background }}
                 <div class="absolute right-0 flex -space-x-6 transform translate-x-12 -translate-y-12 opacity-90">
@@ -106,7 +106,7 @@
                 {{ /if }}
 
 				{{ if highlight_textcaption | strip_tags:p }}
-                <div class="absolute right-0 max-w-md sm:left-5 sm:right-5 -bottom-10">
+                <div class="absolute right-0 max-w-md sm:left-5 sm:right-5 md:-bottom-10">
                     <div class="relative text-gray-400">{{ highlight_textcaption | strip_tags:p }}</div>
                 </div>
 				{{ /if }}
@@ -114,7 +114,7 @@
         </div>
     </div>
     {{ else }}
-    <div class="container flex flex-col items-center py-10 mx-auto space-y-6 lg:space-x-24 sm:flex-row-reverse lg:space-x-reverse sm:py-5 sm:space-y-0 max-w-7xl">
+    <div class="container flex flex-col items-center py-10 mx-auto space-y-6 space-y-reverse lg:space-x-24 sm:flex-row-reverse lg:space-x-reverse sm:py-5 sm:space-y-0 max-w-7xl">
         <div class="space-y-6 sm:w-1/2">
             {{# The styling of the paragraphs inside the Bard is defined in the css since a p tag is added as a container. #}}
             <span class="space-y-6">
@@ -130,7 +130,7 @@
 			{{ /if }}
         </div>
 
-        <div class="relative group sm:max-w-2xl sm:mx-auto sm:w-1/2">
+        <div class="relative order-first group sm:max-w-2xl md:order-none sm:mx-auto sm:w-1/2">
             <div class="mx-auto {{ if  toggle_background }}  {{ else}} illustration-element {{ /if}}">
                 {{ if  toggle_background }}
                 <div class="absolute right-0 flex -space-x-6 transform translate-x-12 -translate-y-12 opacity-90">
@@ -152,7 +152,7 @@
                 {{ /if }}
 
 				{{ if highlight_textcaption | strip_tags:p }}
-                <div class="absolute right-0 max-w-md sm:left-5 sm:right-5 -bottom-10">
+                <div class="absolute right-0 max-w-md sm:left-5 sm:right-5 md:-bottom-10">
                     <div class="relative text-gray-400">{{ highlight_textcaption | strip_tags:p }}</div>
                 </div>
 				{{ /if }}
@@ -161,7 +161,7 @@
     </div>
     {{ endif }} {{ endif }} {{ else }} {{ if reverse_alignment }}
 
-    <div class="container flex flex-col items-center py-10 mx-auto space-y-6 lg:space-x-24 sm:flex-row-reverse lg:space-x-reverse sm:py-5 sm:space-y-0 max-w-7xl">
+    <div class="container flex flex-col items-center py-10 mx-auto space-y-6 resize-y lg:space-x-24 sm:flex-row-reverse lg:space-x-reverse sm:py-5 sm:space-y-0 max-w-7xl">
         <div class="space-y-6 sm:w-1/2">
             <span class="space-y-6">
                 {{ if highlight_title }}<h2>{{ highlight_title }}</h2>{{ /if }}
@@ -176,7 +176,7 @@
 			{{ /if }}
         </div>
 
-        <div class="relative sm:max-w-2xl group sm:mx-auto sm:w-1/2">
+        <div class="relative order-first sm:max-w-2xl md:order-none group sm:mx-auto sm:w-1/2">
             <div class="mx-auto {{ if  toggle_background }} illustration-bgs {{ else}} illustration-element {{ /if}} ">
                 {{ if  toggle_background }}
                 <div class="absolute right-0 flex -space-x-6 transform translate-x-12 -translate-y-12 opacity-90">
@@ -198,7 +198,7 @@
                 {{ /if }}
 
 				{{ if highlight_textcaption | strip_tags:p }}
-                <div class="absolute right-0 max-w-md sm:left-5 sm:right-5 -bottom-10">
+                <div class="absolute right-0 max-w-md sm:left-5 sm:right-5 md:-bottom-10">
                     <div class="relative text-gray-400">{{ highlight_textcaption | strip_tags:p }}</div>
                 </div>
 				{{ /if }}
@@ -206,7 +206,7 @@
         </div>
     </div>
     {{ else }}
-    <div class="container flex flex-col items-center py-10 mx-auto space-y-6 lg:space-x-24 sm:py-5 sm:space-y-0 sm:flex-row max-w-7xl">
+    <div class="container flex flex-col items-center py-10 mx-auto space-y-6 space-y-reverse lg:space-x-24 sm:py-5 sm:space-y-0 sm:flex-row max-w-7xl">
         <div class="space-y-6 sm:w-1/2">
             <span class="space-y-6">
                 {{ if highlight_title }}<h2>{{ highlight_title }}</h2>{{ /if }}
@@ -220,7 +220,7 @@
             </div>
 			{{ /if }}
         </div>
-        <div class="relative sm:max-w-2xl group sm:mx-auto sm:w-1/2">
+        <div class="relative order-first sm:max-w-2xl group md:order-none sm:mx-auto sm:w-1/2">
             <div class="mx-auto {{ if  toggle_background }} illustration-bg-lefts {{ else}} illustration-element {{ /if}}">
                 {{ if  toggle_background }}
                 <div class="absolute right-0 flex -space-x-6 transform translate-x-12 -translate-y-12 opacity-90">
@@ -236,13 +236,13 @@
                 </div>
                 {{ /if }}
                 {{ if default_image }}
-                <div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg right md:aspect-w-6 md:aspect-h-4 group-hover:shadow-2xl group-hover:shadow-purple-300">
+                <div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg right md:aspect-w-6 md:aspect-h-4 group-hover:shadow-2xl">
                     {{ partial:global/default_image }}
                 </div>
                 {{ /if }}
 
 				{{ if highlight_textcaption | strip_tags:p }}
-                <div class="absolute right-0 max-w-md sm:left-5 sm:right-5 -bottom-10">
+                <div class="absolute right-0 max-w-md sm:left-5 sm:right-5 md:-bottom-10">
                     <div class="relative text-gray-400">{{ highlight_textcaption | strip_tags:p }}</div>
                 </div>
 				{{ /if }}

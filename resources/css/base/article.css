@@ -6,7 +6,9 @@
 	@apply bg-purple-500 rounded-none;
 	
 }
-::marker {
+::marker, .prose ::marker  {
+	@apply w-2 h-2 text-purple-500 bg-purple-500;
+	content: "▰";
 	@apply hidden;
 }
 .prose ul > li::marker, .prose ol > li::marker {
@@ -29,8 +31,6 @@ article p img {
 
 	}
 }
-
-
 .prose {
 	p {
 		color: #425466;
@@ -74,60 +74,5 @@ article p img {
 	}
 	pre {
 		@apply bg-purple-900;
-	}
-}
-
-/* Posts hover animation */
-.post {
-	@apply transition duration-500 ease-in-out transform scale-100 translate-x-0;
-	figure > img {
-		@apply transition duration-500 ease-in-out transform translate-y-1 shadow-lg;
-	}
-	h3 {
-		@apply text-black transition duration-500 ease-in-out transform;
-	}
-	&:hover figure > img {
-		@apply transition duration-500 ease-in-out transform shadow-2xl;
-	}
-	&:hover h3 {
-		@apply transition duration-500 ease-in-out transform;
-	}
-	&:hover.container h3 {
-		@apply text-black;
-	}
-	&:hover {
-		.cta {
-			@apply underline;
-			&:after {
-				@apply transition duration-500 ease-in-out transform translate-x-2;
-			}
-		}
-	}
-}
-
-
-@screen md {
-	.featured-blog {
-		.parallelogram {
-			z-index: 10;
-			clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-			@apply transition-all duration-700 ease-in-out;
-		}
-		&:hover {
-			.parallelogram {
-				clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
-				@apply transition-all duration-700 ease-in-out;
-			}
-		}
-		.shadow-3d {
-			@apply absolute inset-0 h-full m-8 transition-all duration-700 ease-in-out transform skew-x-0 bg-black shadow-2xl opacity-60;
-			filter: blur(1.5rem);
-		}
-		&:hover {
-			.shadow-3d {
-				@apply m-6 transition-all duration-700 ease-in-out transform -skew-x-6 shadow-2xl;
-				filter: blur(1rem);
-			}
-		}
 	}
 }
