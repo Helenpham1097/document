@@ -1,40 +1,21 @@
-:root {
-	color: var(--black);
-	--width: 100vw;
-	--full-width: 100vw;
-	--width: 100vw;
-	--full-width: 100vw;
-	--angle: -10deg;
-	--magic-number: 0.5;
-	--skew-padding: calc(var(--width) * var(--magic-number));
-	--height: 100vh;
-	--primary: rgba(135, 30, 255);
-	--secondary: rgba(50, 255, 220);
-	--black: #555658;
-	--secondary-bg: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
-	@media (min-width: 42em) {
-		--width: 42rem;
-	}
-}
-
 body {
 	@apply overflow-x-hidden;
 }
 
 .text-primary {
-	color: var(--primary);
+	@apply text-purple-500;
 }
 .text-secondary {
-	color: var(--secondary);
+	@apply text-green-500;
 }
 .primary-bg {
-	background: linear-gradient(90deg, var(--primary) 0%, #6d00eb 100%);
+	@apply bg-gradient-to-r from-purple-500 to-purple-700;
 }
 .secondary-bg {
-	background: linear-gradient(-90deg, var(--secondary) 0%, #66ffe5 100%);
+	@apply bg-gradient-to-r from-green-400 to-green-500;
 }
 .gradient-purple-to-teal {
-	background: var(--secondary-bg);
+	@apply bg-gradient-to-r from-purple-500 to-green-500;
 }
 
 @screen sm {
