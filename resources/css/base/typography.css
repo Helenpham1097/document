@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 ::selection {
-	@apply text-white;
-	background: var(--primary);
+    @apply text-white bg-purple-500;
 }
 
 h2,
@@ -10,191 +9,173 @@ h3,
 h4,
 h5,
 h6 {
-	@apply text-black ;
-	text-rendering: optimizeLegibility;
+    @apply text-black;
+    text-rendering: optimizeLegibility;
 }
 
 p,
 ul,
 ol {
-	@apply text-base antialiased md:text-xl;
-	text-rendering: optimizeLegibility;
+    @apply text-base antialiased md:text-xl;
+    text-rendering: optimizeLegibility;
 }
 h1 {
-	@apply py-1 text-4xl font-bold text-transparent bg-clip-text md:text-6xl bg-gradient-to-l from-black to-gray-700;
+    @apply py-1 text-4xl font-bold text-transparent bg-clip-text md:text-6xl bg-gradient-to-l from-black to-gray-700;
 }
 h2 {
-	@apply text-4xl font-bold md:leading-normal md:text-5xl;
+    @apply text-4xl font-bold md:leading-normal md:text-5xl;
 }
 h3 {
-	@apply text-xl font-bold sm:text-2xl;
+    @apply text-xl font-bold sm:text-2xl;
 }
 h4 {
-	@apply text-xl md:text-2xl;
+    @apply text-xl md:text-2xl;
 }
 h5 {
-	@apply text-lg md:text-xl;
+    @apply text-lg md:text-xl;
 }
 
 h6 {
-	@apply text-lg;
+    @apply text-lg;
 }
 p {
-	@apply mb-4 leading-relaxed md:mb-8;
+    @apply mb-4 leading-relaxed md:mb-8;
 }
-/* ol {
-	@apply list-decimal;
-} */
-/* ul,
-ol {
-	@apply pt-4;
-} */
-/* ul li::before {
-	@apply my-0 mr-2 -ml-6 text-sm text-primary;
-	content: "■";
-} */
-/* @screen md {
-	ul li::before {
-		@apply text-2xl;
-	}
-} */
-/* ol li::before {
-	@apply font-bold text-primary;
-}
-
-pre {
-	@apply overflow-x-auto text-sm leading-snug text-white bg-black bg-opacity-75;
-} */
-
 .dot {
-	@apply relative inline ;
-	&::after {
-	@apply absolute bottom-0 w-2 h-2 mb-2 ml-1 transform -skew-x-6 bg-purple-500;
-	content: '';
-	}
+    @apply relative inline;
+    &::after {
+        @apply absolute bottom-0 w-2 h-2 mb-2 ml-1 transform -skew-x-6 bg-purple-500;
+        content: "";
+    }
 }
 @screen md {
-	pre {
-		@apply p-6;
-	}
+    pre {
+        @apply p-6;
+    }
 }
 code {
-	@apply whitespace-normal;
+    @apply whitespace-normal;
 }
 /* hr {
 	@apply mx-4 my-8 border-gray-200;
 } */
 
 hr {
-	@apply mx-4 my-8 border-t border-solid;
-	border-image: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(220, 220, 220, 1), rgba(0, 0, 0, 0)) 100;
+    @apply mx-4 my-8 border-t border-solid;
+    border-image: linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0),
+            rgba(220, 220, 220, 1),
+            rgba(0, 0, 0, 0)
+        )
+        100;
 }
 
 .purple {
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	p,
-	li {
-		@apply text-white;
-	}
-	a {
-		@apply text-secondary;
-	}
-	h1 {
-		@apply text-5xl font-black leading-none tracking-tight gradient-purple-to-teal;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-	}
-	ul li::before {
-		@apply text-secondary;
-	}
-	blockquote {
-		color: var(--black);
-	}
-	.title-section.primary h3 {
-		@apply text-white;
-	}
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    li {
+        @apply text-white;
+    }
+    a {
+        @apply text-secondary;
+    }
+    h1 {
+        @apply text-5xl font-black leading-none tracking-tight gradient-purple-to-teal;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    ul li::before {
+        @apply text-secondary;
+    }
+    blockquote {
+        color: var(--black);
+    }
+    .title-section.primary h3 {
+        @apply text-white;
+    }
 }
 
 table {
-	@apply w-full mb-8 leading-7 text-left table-auto;
+    @apply w-full mb-8 leading-7 text-left table-auto;
 }
 
 thead {
-	@apply font-medium border-b border-gray-300;
+    @apply font-medium border-b border-gray-300;
 }
 
 thead th {
-	@apply px-2 pb-2 align-bottom;
+    @apply px-2 pb-2 align-bottom;
 }
 
 tbody tr {
-	@apply border-b border-gray-200;
+    @apply border-b border-gray-200;
 }
 
 tbody tr:last-child {
-	@apply border-b-0;
+    @apply border-b-0;
 }
 
 tbody td {
-	@apply p-2 align-top;
+    @apply p-2 align-top;
 }
 
 figcaption {
-	@apply mt-2 text-sm leading-none;
+    @apply mt-2 text-sm leading-none;
 }
 
 /* Title section */
 .title-section {
-	@apply space-y-6;
-	&.primary,
-	&.secondary {
-		@apply mx-auto;
-		h3,
-		h2,
-		h4,
-		p {
-			@apply text-center;
-		}
-		h3 {
-			@apply relative mx-auto md:max-w-xl;
-		}
-		h2 {
-			@apply relative z-0 block max-w-sm p-2 mx-auto text-2xl md:text-4xl md:p-4 skew-x-1 md:w-max ;
-			&:after {
-				@apply absolute inset-0 transform -skew-x-12 shadow-lg md:skew-y-0;
-				content: "";
-				z-index: -1;
-			}
-		}
-		p {
-			@apply relative mx-auto md:max-w-3xl;
-		}
-	}
-	&.primary {
-		h3 {
-			@apply text-primary;
-		}
-		h2 {
-			@apply text-white;
-			&:after {
-				@apply primary-bg;
-			}
-		}
-	}
-	&.secondary {
-		h3 {
-			@apply text-black;
-		}
-		h2 {
-			@apply text-black;
-			&:after {
-				@apply secondary-bg;
-			}
-		}
-	}
+    @apply space-y-6;
+    &.primary,
+    &.secondary {
+        @apply mx-auto;
+        h3,
+        h2,
+        h4,
+        p {
+            @apply text-center;
+        }
+        h3 {
+            @apply relative mx-auto md:max-w-xl;
+        }
+        h2 {
+            @apply relative z-0 block max-w-sm p-2 mx-auto text-2xl md:text-4xl md:p-4 skew-x-1 md:w-max;
+            &:after {
+                @apply absolute inset-0 transform -skew-x-12 shadow-lg md:skew-y-0;
+                content: "";
+                z-index: -1;
+            }
+        }
+        p {
+            @apply relative mx-auto md:max-w-3xl;
+        }
+    }
+    &.primary {
+        h3 {
+            @apply text-primary;
+        }
+        h2 {
+            @apply text-white;
+            &:after {
+                @apply primary-bg;
+            }
+        }
+    }
+    &.secondary {
+        h3 {
+            @apply text-black;
+        }
+        h2 {
+            @apply text-black;
+            &:after {
+                @apply secondary-bg;
+            }
+        }
+    }
 }

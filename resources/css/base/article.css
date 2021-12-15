@@ -1,133 +1,79 @@
-
 .prose ol > li::before {
-	@apply text-purple-500;
+    @apply text-purple-500;
 }
 .prose ul > li::before {
-	@apply bg-purple-500 rounded-none;
-	
+    @apply bg-purple-500 rounded-none;
 }
-::marker {
-	@apply hidden;
+::marker,
+.prose ::marker {
+    @apply w-2 h-2 text-purple-500 bg-purple-500;
+    content: "▰";
+    @apply hidden;
 }
-.prose ul > li::marker, .prose ol > li::marker {
-	@apply hidden
+.prose ul > li::marker,
+.prose ol > li::marker {
+    @apply hidden;
 }
 
 article p img {
-	@apply mx-auto text-center justify-self-center;
+    @apply mx-auto text-center justify-self-center;
 }
 
-.excerpt, .excerpt p {
-	@apply mb-8 text-2xl;
+.excerpt,
+.excerpt p {
+    @apply mb-8 text-2xl;
 }
 @screen sm {
-	.excerpt, .excerpt p {
-		@apply text-3xl leading-10;
-	}
-	* > p:last-child {
-		margin-bottom: 1rem;
-
-	}
+    .excerpt,
+    .excerpt p {
+        @apply text-3xl leading-10;
+    }
+    * > p:last-child {
+        margin-bottom: 1rem;
+    }
 }
-
-
 .prose {
-	p {
-		color: #425466;
-		widows: 3;
-	}
+    p {
+        color: #425466;
+        widows: 3;
+    }
 
-	ul > li {
-		/* @apply pl-0; */
-	}
+    ul > li {
+        /* @apply pl-0; */
+    }
 
-	blockquote {
-		@apply relative p-8 pl-24 text-sm not-italic border-l-8 border-purple-400 shadow-lg bg-purple-50;
-		*:last-child {
-			margin-bottom: 0;
-		}
-	}
+    blockquote {
+        @apply relative p-8 pl-24 text-sm not-italic border-l-8 border-purple-400 shadow-lg bg-purple-50;
+        *:last-child {
+            margin-bottom: 0;
+        }
+    }
 
-	blockquote::before {
-		@apply absolute inset-0 block text-6xl font-bold text-purple-300 top-2 left-2;
-		content: "\201C"; /*Unicode for Left Double Quote*/
-		font-family: Georgia, serif;
-	}
+    blockquote::before {
+        @apply absolute inset-0 block text-6xl font-bold text-purple-300 top-2 left-2;
+        content: "\201C"; /*Unicode for Left Double Quote*/
+        font-family: Georgia, serif;
+    }
 
-	table th {
-		@apply text-purple-500;
-	}
+    table th {
+        @apply text-purple-500;
+    }
 
-	table table table {
-		background-color: #FFF;
-	}
+    table table table {
+        background-color: #fff;
+    }
 
-	table tbody > tr:nth-child(odd) > td,
-	table tbody > tr:nth-child(odd) > th {
-		@apply bg-purple-100;
-	}
-	tbody td:first-child {
-		@apply pl-4;
-	}
-	tbody td:last-child {
-		@apply pr-4;
-	}
-	pre {
-		@apply bg-purple-900;
-	}
-}
-
-/* Posts hover animation */
-.post {
-	@apply transition duration-500 ease-in-out transform scale-100 translate-x-0;
-	figure > img {
-		@apply transition duration-500 ease-in-out transform translate-y-1 shadow-lg;
-	}
-	h3 {
-		@apply text-black transition duration-500 ease-in-out transform;
-	}
-	&:hover figure > img {
-		@apply transition duration-500 ease-in-out transform shadow-2xl;
-	}
-	&:hover h3 {
-		@apply transition duration-500 ease-in-out transform;
-	}
-	&:hover.container h3 {
-		@apply text-black;
-	}
-	&:hover {
-		.cta {
-			@apply underline;
-			&:after {
-				@apply transition duration-500 ease-in-out transform translate-x-2;
-			}
-		}
-	}
-}
-
-
-@screen md {
-	.featured-blog {
-		.parallelogram {
-			z-index: 10;
-			clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-			@apply transition-all duration-700 ease-in-out;
-		}
-		&:hover {
-			.parallelogram {
-				clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
-				@apply transition-all duration-700 ease-in-out;
-			}
-		}
-		.shadow-3d {
-			@apply absolute inset-0 h-full m-8 transition-all duration-700 ease-in-out transform skew-x-0 bg-black shadow-2xl opacity-60;
-			filter: blur(1.5rem);
-		}
-		&:hover {
-			.shadow-3d {
-				@apply m-6 transition-all duration-700 ease-in-out transform -skew-x-6 shadow-2xl;
-				filter: blur(1rem);
-			}
-		}
-	}
+    table tbody > tr:nth-child(odd) > td,
+    table tbody > tr:nth-child(odd) > th {
+        @apply bg-purple-100;
+    }
+    tbody td:first-child {
+        @apply pl-4;
+    }
+    tbody td:last-child {
+        @apply pr-4;
+    }
+    pre {
+        @apply bg-purple-900;
+    }
 }
