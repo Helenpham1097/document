@@ -21,15 +21,14 @@ top_section:
     enabled: true
 sections:
   -
-    template: /general_content/two_text_columns
+    template: /general_content/multiple_text_columns
     markdown_a: null
     markdown_b: null
-    type: two_text_columns
+    type: multiple_text_columns
     enabled: true
     columns:
       -
         markdown: |
-          ## We love the nuts and bolts of web hosting | We love PHP
           We’re a small group of web hosting nerds who noticed something back in the 2010s when serverless infrastructure muscled its way onto the scene. It was an exciting, valuable evolution in hosting technology but we also saw some serious limitations.
           
           Serverless web hosting promises website owners and developers near-limitless scalability up and down, dramatic cuts to costs, and lets them forget all about servers. While your site handles any level of traffic and your hosting bills take a downward dive, you can just focus on what your website does for your customers. Cool!
@@ -38,6 +37,11 @@ sections:
       -
         markdown: 'But the real-world web, and most of its developers, were being left behind. Turns out this serverless stuff was built for technical teams with a deep understanding of web services. It didn’t suit the millions of websites, stores and blogs that already make up the bulk of the world wide web. It also didn’t suit a lot of the languages and technologies that will fuel the web development of the future. In particular, PHP sites (including sites on CMSs like WordPress and Craft) weren’t easy to take serverless. Some of our industry peers said it was basically impossible.'
         type: column
+        enabled: true
+    display_title_section:
+      -
+        center_title_title: 'We love the nuts and bolts of web hosting | We love PHP'
+        type: section_title
         enabled: true
   -
     template: /general_content/highlight
@@ -175,7 +179,7 @@ sections:
     enabled: true
 title: 'About Us'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1638858263
+updated_at: 1639706552
 blueprint: general_content
 id: 128bc187-e58c-4ccc-a5f7-587727470a54
 ---

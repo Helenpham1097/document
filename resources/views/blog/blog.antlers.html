@@ -13,15 +13,14 @@
                             <img class="w-6 h-6 rounded-full" src="{{ author:avatar }}" alt="Avatar of {{ author:name }}" />
                         {{ else }}
                             <img class="w-6 h-6 rounded-full" src="{{ placeholder_image:placeholder_avatar }}" alt="Avatar of {{ author:name }}" />
-                        <div> {{ author:name }} </div>
+                        <div class="text-gray-500"> {{ author:name }} </div>
                         {{ /if }}
                     </div>
-                    <span class="flex items-center space-x-2 ">
-                        <svg class="hidden w-5 h-5 text-gray-600 stroke-current sm:block " fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                        </svg>
-                        <span class="block"> {{ date }} </span>
-                    </span>
+                    <div class="flex space-x-1 text-gray-500">
+                        <time class="block"> {{ date iso_format="DD MMMM YYYY" }} </time>
+                        <span class="text-purple-500" aria-hidden="true"> · </span>
+                        <span> {{ content | read_time:180 }} min read </span>
+                    </div>
                         {{ if categories }}
                             <div class="flex flex-row items-center space-x-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="hidden w-6 h-6 text-purple-500 sm:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5a1.99 1.99 0 011.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>

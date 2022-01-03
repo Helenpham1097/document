@@ -1,5 +1,28 @@
-title: 'Two text columns'
+title: 'Multiple text columns'
 fields:
+  -
+    handle: display_title_section
+    field:
+      collapse: false
+      max_sets: 1
+      sets:
+        section_title:
+          display: 'Title Section'
+          fields:
+            -
+              handle: center_title_title
+              field:
+                input_type: text
+                character_limit: 200
+                antlers: false
+                display: 'Title'
+                type: text
+                icon: text
+                listable: hidden
+      display: 'Add Title Section'
+      type: replicator
+      icon: replicator
+      listable: hidden
   -
     handle: template
     field:
@@ -7,7 +30,7 @@ fields:
       type: hidden
       icon: hidden
       listable: hidden
-      default: /general_content/two_text_columns
+      default: /general_content/_multiple_text_columns
   -
     handle: columns
     field:

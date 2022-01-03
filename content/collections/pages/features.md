@@ -631,7 +631,7 @@ sections:
     template: /general_content/_horizontal_cta
     toggle: true
     template_global: /global/buttons
-    default_image: icons/17.svg
+    default_image: aditya-das-Myu7dSCwhSI-unsplash.jpg
     title: 'See it for yourself'
     bard:
       -
@@ -649,7 +649,7 @@ sections:
     enabled: true
 title: Features
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1638823492
+updated_at: 1639626639
 blueprint: general_content
 categories:
   - products
