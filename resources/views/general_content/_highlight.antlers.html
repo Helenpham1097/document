@@ -84,22 +84,28 @@
             </div>
 			{{ /if }}
         </div>
-        <div class="relative order-first sm:max-w-2xl group md:order-none sm:mx-auto sm:w-1/2">
+        <div  class="relative order-first sm:max-w-2xl group md:order-none sm:mx-auto sm:w-1/2">
             <div class="mx-auto {{ if  toggle_background }}  {{ else}} illustration-element {{ /if}}">
                 {{ if  toggle_background }}
-                <div class="absolute right-0 flex -space-x-6 transform translate-x-12 -translate-y-12 opacity-90">
-                    <svg class="self-end w-64 text-[#F1FBFC] transition duration-300 ease-in-out delay-300 opacity-0 fill-current group-hover:translate-x-6 group-hover:opacity-100" viewBox="0 0 549 564" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div class="absolute right-0 flex -space-x-6 translate-x-12 -translate-y-12 opacity-90">
+                    <div data-aos="fade-right" data-aos-delay="300">
+                        <svg   class=" self-end w-64 text-[#F1FBFC] fill-current" viewBox="0 0 549 564" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M304.108 0L-0.000494035 0L548.77 564V250.407L304.108 0Z" />
+                        </svg>
+                    </div>
+                    <div data-aos="fade-right" data-aos-delay="600">
+                    <svg class=" self-end w-64 text-[#F1F5FB] fill-current" viewBox="0 0 549 564" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M304.108 0L-0.000494035 0L548.77 564V250.407L304.108 0Z" />
                     </svg>
-                    <svg class="self-end w-64 text-[#F1F5FB] transition duration-200 ease-in-out delay-200 opacity-0 fill-current group-hover:translate-x-6 group-hover:opacity-100" viewBox="0 0 549 564" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    </div>
+                    <div data-aos="fade-right" data-aos-delay="900">
+                    <svg data-aos="fade-left" class=" self-end w-64 text-[#F1ECFD] fill-current" viewBox="0 0 549 564" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M304.108 0L-0.000494035 0L548.77 564V250.407L304.108 0Z" />
                     </svg>
-                    <svg class="self-end w-64 text-[#F1ECFD] transition duration-100 ease-in-out delay-100 opacity-0 fill-current group-hover:translate-x-6 group-hover:opacity-100" viewBox="0 0 549 564" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M304.108 0L-0.000494035 0L548.77 564V250.407L304.108 0Z" />
-                    </svg>
+                    </div>
                 </div>
                 {{ /if}}
-                                {{ if default_image }}
+                {{ if default_image }}
                 <div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg left md:aspect-w-6 md:aspect-h-4 group-hover:shadow-2xl">
                     {{ partial:global/default_image }}
                 </div>
@@ -133,18 +139,24 @@
         <div class="relative order-first group sm:max-w-2xl md:order-none sm:mx-auto sm:w-1/2">
             <div class="mx-auto {{ if  toggle_background }}  {{ else}} illustration-element {{ /if}}">
                 {{ if  toggle_background }}
-                <div class="absolute right-0 flex -space-x-6 transform translate-x-12 -translate-y-12 opacity-90">
-                    <svg class="self-end w-64 text-[#F1FBFC] transition duration-300 ease-in-out delay-300 opacity-0 fill-current group-hover:translate-x-6 group-hover:opacity-100" viewBox="0 0 549 564" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div class="absolute right-0 flex -space-x-6 translate-x-12 -translate-y-12 opacity-90">
+                    <div data-aos="fade-right" data-aos-delay="300">
+                        <svg   class=" self-end w-64 text-[#F1FBFC] fill-current" viewBox="0 0 549 564" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M304.108 0L-0.000494035 0L548.77 564V250.407L304.108 0Z" />
+                        </svg>
+                    </div>
+                    <div data-aos="fade-right" data-aos-delay="600">
+                    <svg class=" self-end w-64 text-[#F1F5FB] fill-current" viewBox="0 0 549 564" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M304.108 0L-0.000494035 0L548.77 564V250.407L304.108 0Z" />
                     </svg>
-                    <svg class="self-end w-64 text-[#F1F5FB] transition duration-200 ease-in-out delay-200 opacity-0 fill-current group-hover:translate-x-6 group-hover:opacity-100" viewBox="0 0 549 564" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    </div>
+                    <div data-aos="fade-right" data-aos-delay="900">
+                    <svg data-aos="fade-left" class=" self-end w-64 text-[#F1ECFD] fill-current" viewBox="0 0 549 564" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M304.108 0L-0.000494035 0L548.77 564V250.407L304.108 0Z" />
                     </svg>
-                    <svg class="self-end w-64 text-[#F1ECFD] transition duration-100 ease-in-out delay-100 opacity-0 fill-current group-hover:translate-x-6 group-hover:opacity-100" viewBox="0 0 549 564" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M304.108 0L-0.000494035 0L548.77 564V250.407L304.108 0Z" />
-                    </svg>
+                    </div>
                 </div>
-                {{ /if }}
+                {{ /if}}
                 {{ if default_image }}
                 <div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg right md:aspect-w-6 md:aspect-h-4 group-hover:shadow-2xl">
                     {{ partial:global/default_image }}
@@ -179,18 +191,24 @@
         <div class="relative order-first sm:max-w-2xl md:order-none group sm:mx-auto sm:w-1/2">
             <div class="mx-auto {{ if  toggle_background }} illustration-bgs {{ else}} illustration-element {{ /if}} ">
                 {{ if  toggle_background }}
-                <div class="absolute right-0 flex -space-x-6 transform translate-x-12 -translate-y-12 opacity-90">
-                    <svg class="self-end w-64 text-[#F1FBFC] transition duration-300 ease-in-out delay-300 opacity-0 fill-current group-hover:translate-x-6 group-hover:opacity-100" viewBox="0 0 549 564" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div class="absolute right-0 flex -space-x-6 translate-x-12 -translate-y-12 opacity-90">
+                    <div data-aos="fade-right" data-aos-delay="300">
+                        <svg   class=" self-end w-64 text-[#F1FBFC] fill-current" viewBox="0 0 549 564" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M304.108 0L-0.000494035 0L548.77 564V250.407L304.108 0Z" />
+                        </svg>
+                    </div>
+                    <div data-aos="fade-right" data-aos-delay="600">
+                    <svg class=" self-end w-64 text-[#F1F5FB] fill-current" viewBox="0 0 549 564" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M304.108 0L-0.000494035 0L548.77 564V250.407L304.108 0Z" />
                     </svg>
-                    <svg class="self-end w-64 text-[#F1F5FB] transition duration-200 ease-in-out delay-200 opacity-0 fill-current group-hover:translate-x-6 group-hover:opacity-100" viewBox="0 0 549 564" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    </div>
+                    <div data-aos="fade-right" data-aos-delay="900">
+                    <svg data-aos="fade-left" class=" self-end w-64 text-[#F1ECFD] fill-current" viewBox="0 0 549 564" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M304.108 0L-0.000494035 0L548.77 564V250.407L304.108 0Z" />
                     </svg>
-                    <svg class="self-end w-64 text-[#F1ECFD] transition duration-100 ease-in-out delay-100 opacity-0 fill-current group-hover:translate-x-6 group-hover:opacity-100" viewBox="0 0 549 564" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M304.108 0L-0.000494035 0L548.77 564V250.407L304.108 0Z" />
-                    </svg>
+                    </div>
                 </div>
-                {{ /if }}
+                {{ /if}}
                 {{ if default_image }}
                 <div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg left md:aspect-w-6 md:aspect-h-4 group-hover:shadow-2xl">
                     {{ partial:global/default_image }}
@@ -223,18 +241,24 @@
         <div class="relative order-first sm:max-w-2xl group md:order-none sm:mx-auto sm:w-1/2">
             <div class="mx-auto {{ if  toggle_background }} illustration-bg-lefts {{ else}} illustration-element {{ /if}}">
                 {{ if  toggle_background }}
-                <div class="absolute right-0 flex -space-x-6 transform translate-x-12 -translate-y-12 opacity-90">
-                    <svg class="self-end w-64 text-[#F1FBFC] transition duration-300 ease-in-out delay-300 opacity-0 fill-current group-hover:translate-x-6 group-hover:opacity-100" viewBox="0 0 549 564" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div class="absolute right-0 flex -space-x-6 translate-x-12 -translate-y-12 opacity-90">
+                    <div data-aos="fade-right" data-aos-delay="300">
+                        <svg   class=" self-end w-64 text-[#F1FBFC] fill-current" viewBox="0 0 549 564" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M304.108 0L-0.000494035 0L548.77 564V250.407L304.108 0Z" />
+                        </svg>
+                    </div>
+                    <div data-aos="fade-right" data-aos-delay="600">
+                    <svg class=" self-end w-64 text-[#F1F5FB] fill-current" viewBox="0 0 549 564" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M304.108 0L-0.000494035 0L548.77 564V250.407L304.108 0Z" />
                     </svg>
-                    <svg class="self-end w-64 text-[#F1F5FB] transition duration-200 ease-in-out delay-200 opacity-0 fill-current group-hover:translate-x-6 group-hover:opacity-100" viewBox="0 0 549 564" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    </div>
+                    <div data-aos="fade-right" data-aos-delay="900">
+                    <svg data-aos="fade-left" class=" self-end w-64 text-[#F1ECFD] fill-current" viewBox="0 0 549 564" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M304.108 0L-0.000494035 0L548.77 564V250.407L304.108 0Z" />
                     </svg>
-                    <svg class="self-end w-64 text-[#F1ECFD] transition duration-100 ease-in-out delay-100 opacity-0 fill-current group-hover:translate-x-6 group-hover:opacity-100" viewBox="0 0 549 564" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M304.108 0L-0.000494035 0L548.77 564V250.407L304.108 0Z" />
-                    </svg>
+                    </div>
                 </div>
-                {{ /if }}
+                {{ /if}}
                 {{ if default_image }}
                 <div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg right md:aspect-w-6 md:aspect-h-4 group-hover:shadow-2xl">
                     {{ partial:global/default_image }}

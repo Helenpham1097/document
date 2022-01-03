@@ -1,7 +1,7 @@
 ---
 title: 'General content'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1639014316
+updated_at: 1639706232
 blueprint: general_content
 description: Lorem
 template: general_content/layout
@@ -19,9 +19,46 @@ sections:
             type: text
             text: 'Get your website up and running quickly with our tailored Web Hosting plans'
     type: section_title
-    enabled: true
+    enabled: false
     toggle_alignment: true
     toggle_color: false
+  -
+    template: /general_content/_multiple_text_columns
+    columns:
+      -
+        markdown: |
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus lacus at metus pulvinar, at ultricies dui lobortis. In volutpat mauris quis mauris elementum laoreet. Etiam in interdum tellus. Suspendisse ac eros augue. Donec felis enim, facilisis ut enim vitae, luctus elementum nibh. Quisque eleifend dolor non finibus porta. Vivamus luctus arcu vitae dolor pellentesque, a congue nisl lacinia. Pellentesque tristique a neque quis vehicula. Nullam ante lectus, facilisis ac consequat ac, commodo ut leo. Nullam tempor laoreet lacus, vulputate venenatis nisl porttitor at. Nam eu laoreet nibh. Phasellus feugiat leo purus, condimentum ultricies velit imperdiet sit amet. Integer ac faucibus ipsum. Proin a eleifend elit, ut eleifend nulla.
+          
+          Cras vel leo et odio viverra consequat. Duis neque elit, posuere vitae bibendum sit amet, auctor eget lectus. Duis tempor in neque eget facilisis. Maecenas ullamcorper ante neque, at aliquam augue bibendum id. Suspendisse ex nibh, varius at sem sit amet, vestibulum tristique nisi. Donec nec ornare nunc. Donec ac enim vestibulum, feugiat nibh sed, lacinia mauris. Etiam sed quam sapien. Aliquam erat volutpat. Praesent sed massa et lacus laoreet feugiat a vel nibh. Proin sed cursus libero. Etiam mattis elit congue, consectetur eros elementum, pellentesque mi.
+          
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris imperdiet porta elit, vitae placerat ipsum pharetra a. Proin sit amet nulla nec risus rutrum fermentum. Vivamus ultrices quis dolor eu placerat. Cras posuere cursus quam, quis blandit neque vehicula non. Morbi cursus quam nisi, a porttitor magna varius nec. In risus enim, eleifend in accumsan maximus, consectetur a nisl. Maecenas turpis eros, consequat vitae nibh ac, malesuada tincidunt risus.
+        type: column
+        enabled: true
+      -
+        markdown: |
+          ## Integer ac sodales neque.
+          In non suscipit augue, sed tincidunt elit. Donec facilisis dui sapien, eu imperdiet orci pretium ac. Sed pretium, augue eget tristique tempor, risus sapien maximus odio, sit amet lacinia velit justo quis dolor. Aliquam dignissim nibh id libero tempor facilisis. Fusce facilisis, felis in aliquam feugiat, augue turpis malesuada ante, vel egestas tortor leo et massa. Nulla vitae elementum leo. Aliquam accumsan, enim non maximus bibendum, massa purus finibus dui, ac ornare turpis elit a purus. Aenean ut nulla sodales dui mollis maximus eget nec sapien. Donec ac elementum turpis, bibendum facilisis sapien. Praesent molestie pellentesque cursus. Vestibulum sit amet nisi placerat, varius lectus et, vehicula tellus. Aliquam erat volutpat.
+          
+          Maecenas ut ipsum non metus porta accumsan. Duis eu malesuada mauris, et accumsan ipsum. Proin id tellus felis. Sed quam arcu, euismod non lorem quis, facilisis tincidunt ex. Integer eu pellentesque orci. Phasellus libero risus, mattis in ultricies fermentum, sagittis at sem. Duis vulputate accumsan porttitor. Maecenas molestie mi a ipsum lacinia placerat. Quisque pretium, mauris id tempor sollicitudin, quam odio sodales ex, non ullamcorper dui augue sed ex. Nam blandit maximus ultricies. Nunc imperdiet vitae sem quis dignissim. Phasellus magna tellus, elementum quis lectus vitae, ullamcorper interdum sapien. Suspendisse ante nibh, euismod at ex nec, scelerisque dictum tortor. Phasellus ut lacus aliquet eros finibus maximus quis eu nisl. Praesent laoreet lacinia nisl, sit amet congue elit. Morbi scelerisque scelerisque diam at sodales.
+        type: column
+        enabled: true
+    type: multiple_text_columns
+    enabled: true
+    display_title_section:
+      -
+        template: /global/section_title
+        center_title_pre_title: 'Smaller title that appears above this section title'
+        center_title_title: 'Nulla vitae elementum leo. Aliquam accumsan, enim non maximus bibendum'
+        center_title_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Text area to complement the secondary title'
+        toggle_color: false
+        type: section_title
+        enabled: true
   -
     template: /global/companies_logo
     companies_title: 'We’re proud to have played a part in these amazing journeys.'
@@ -48,7 +85,7 @@ sections:
         default_image: algolia.svg
         template_global: /global/default_image
     type: companies_logo
-    enabled: true
+    enabled: false
   -
     template: /general_content/highlight
     rows:
@@ -111,7 +148,7 @@ sections:
     reverse_alignment: false
     toggle_alignment: true
     type: highlight
-    enabled: true
+    enabled: false
     toggle_background: false
   -
     template: /general_content/highlight
@@ -175,7 +212,7 @@ sections:
     reverse_alignment: false
     toggle_alignment: true
     type: highlight
-    enabled: true
+    enabled: false
     toggle_background: true
   -
     template: /general_content/features_columns
@@ -241,7 +278,7 @@ sections:
         default_image: 2.png
         template_global: /global/default_image
     type: features_columns_item
-    enabled: true
+    enabled: false
     display_title: true
     center_title_pre_title: 'Pre Title'
     center_title_title: 'Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
@@ -358,7 +395,7 @@ sections:
         default_image: 4.png
         template_global: /global/default_image
     type: steps
-    enabled: true
+    enabled: false
   -
     template: /general_content/testimonial
     rows:
@@ -402,7 +439,7 @@ sections:
     reverse_alignment: false
     toggle_alignment: false
     type: testimonial
-    enabled: true
+    enabled: false
     testimonial_section_title: 'Duo assum utroque appetere an'
     testimonial_text_area:
       -
@@ -598,7 +635,7 @@ sections:
         type: column
         enabled: true
     type: icon_features
-    enabled: true
+    enabled: false
   -
     template: /general_content/social_proof
     social_proof_section_title: null
@@ -645,7 +682,7 @@ sections:
         enabled: true
         template_global: /global/buttons
     type: social_proof
-    enabled: true
+    enabled: false
     call_to_action_pre_title: 'Pre Title'
     call_to_action_title: 'Section title'
     call_to_action_textarea:
@@ -1001,18 +1038,18 @@ sections:
             type: text
             text: 'Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. '
     type: comparison_table
-    enabled: true
+    enabled: false
   -
     template: /global/embed_video
     video: 'https://youtu.be/pONeWAzDsQg'
     type: embed_video
-    enabled: true
+    enabled: false
   -
-    template: /general_content/two_text_columns
+    template: /general_content/multiple_text_columns
     markdown_a: null
     markdown_b: null
-    type: two_text_columns
-    enabled: true
+    type: multiple_text_columns
+    enabled: false
     columns:
       -
         markdown: |
@@ -1030,8 +1067,9 @@ sections:
           Luctus et ultrices posuere cubilia curae; Cras a purus est. Praesent tristique, felis id accumsan pharetra, mauris felis venenatis eros, sed sagittis est risus eu leo. Vivamus laoreet lectus sed mi facilisis, vel
         type: column
         enabled: true
+    display_title_section: {  }
   -
-    template: /general_content/two_text_columns
+    template: /general_content/multiple_text_columns
     columns:
       -
         markdown: |
@@ -1057,8 +1095,9 @@ sections:
           Vivamus elementum, libero quis gravida facilisis, orci nisi sodales magna, ac consectetur leo urna non leo. Curabitur porta tempus mauris, vel ornare magna lobortis facilisis.
         type: column
         enabled: true
-    type: two_text_columns
-    enabled: true
+    type: multiple_text_columns
+    enabled: false
+    display_title_section: {  }
   -
     template: /general_content/image_gallery
     display_title_section:
@@ -1108,11 +1147,11 @@ sections:
         type: image
         enabled: false
     type: image_gallery
-    enabled: true
+    enabled: false
   -
     template: /forms/contact_us
     type: contact_us_form
-    enabled: true
+    enabled: false
   -
     template: /general_content/text_content
     markdown: |
@@ -1125,11 +1164,11 @@ sections:
       
       Donec eu lectus in dui rhoncus iaculis. Etiam vel nisl mi. Phasellus a enim id diam tincidunt condimentum. Donec tristique vel ipsum nec suscipit. Vestibulum laoreet ullamcorper lacinia. Donec pretium mattis accumsan. Maecenas eget erat aliquam, condimentum turpis tincidunt, tempus orci.
     type: text_content
-    enabled: true
+    enabled: false
   -
     template: /home/latest_post
     type: latest_post
-    enabled: true
+    enabled: false
     center_title_pre_title: 'Last articles'
     center_title_title: 'From our blog'
     center_title_textarea: null
@@ -1144,7 +1183,7 @@ sections:
       - a9f9ef1a-f20a-4e06-9353-98d810fa2fe7
       - ff4f50d5-1343-4f9f-bfd2-ded4d205c19a
     type: faq
-    enabled: true
+    enabled: false
     center_title_pre_title: FAQ
     center_title_title: 'Frequently asked questions'
     center_title_textarea:
@@ -1167,7 +1206,7 @@ sections:
             type: text
             text: 'Subscribe to receive our newsletter'
     type: call_to_action
-    enabled: true
+    enabled: false
     call_to_action_pre_title: 'Pre Title'
     call_to_action_title: Suscribe
     call_to_action_textarea:
@@ -1219,7 +1258,7 @@ sections:
   -
     template: /general_content/_horizontal_cta
     template_global: /global/buttons
-    default_image: icons/9.svg
+    default_image: 09054a5f40e858381279a62e2ee534a7.webp
     title: 'Talk to us'
     bard:
       -
@@ -1234,13 +1273,13 @@ sections:
     text: 'Contact Us'
     toggle: false
     type: horizontal_cta
-    enabled: true
+    enabled: false
     section_id: null
   -
     template: /general_content/_horizontal_cta
     toggle: true
     template_global: /global/buttons
-    default_image: icons/17.svg
+    default_image: 2f72e4702fbbfad307de663bcf1218c0.webp
     title: 'Talk to us'
     bard:
       -
@@ -1255,7 +1294,7 @@ sections:
     text: 'Contact Us'
     section_id: null
     type: horizontal_cta
-    enabled: true
+    enabled: false
 top_section:
   -
     type: hero_general_content
