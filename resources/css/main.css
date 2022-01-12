@@ -22,10 +22,10 @@
 
 /* Browser-Sync notification */
 #__bs_notify__ {
-	display: none;
-	opacity: 0;
+    display: none;
+    opacity: 0;
 }
 
 .dev * {
-	@apply border border-red-500;
+    @apply border border-red-500/30 ;
 }

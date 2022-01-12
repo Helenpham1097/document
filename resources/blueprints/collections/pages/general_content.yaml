@@ -124,8 +124,8 @@ sections:
               fields:
                 -
                   import: embed_video
-            two_text_columns:
-              display: 'Two text columns'
+            multiple_text_columns:
+              display: 'Multiple text columns'
               fields:
                 -
                   import: two_text_column
