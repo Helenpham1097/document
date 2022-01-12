@@ -6,10 +6,9 @@
 				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
 			</svg>
 		</div>
-
 	</a>
 {{ else }}
-	<a href="{{ link }}" class="inline-flex items-center px-5 py-3 font-semibold  {{ if select:value === 'background-secondary' }} text-black bg-green-500 hover:bg-green-600 hover:text-black focus-visible:ring-offset-green-900 {{ else }} text-white bg-purple-500 hover:bg-purple-800 hover:text-purple-100 focus-visible:ring-offset-purple-900 {{ /if }} group text-md space-x-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2">
+	<a href="{{ link }}" class="inline-flex items-center px-5 py-3 font-semibold shadow-xl hover:shadow-sm {{ if select:value === 'background-secondary' }} text-black bg-green-500 hover:shadow-green-600/40 shadow-green-500/30 hover:bg-green-600 hover:text-black focus-visible:ring-offset-green-900 {{ else }} text-white bg-purple-500 hover:bg-purple-800 hover:shadow-purple-600/40 shadow-purple-500/20 hover:text-purple-100 focus-visible:ring-offset-purple-900 {{ /if }} group text-md space-x-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2">
 		{{ if select_icon:value === 'chevron-left' }}
 			<div class="transition duration-500 ease-in-out transform group-hover:-translate-x-3">
 				<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 {{ if select:value === 'background-secondary' }} text-black group-hover:text-green-900 {{ else}} text-white group-hover:text-purple-100 {{ /if}} transition duration-500 ease-in-out transform translate-x-0 " fill="none" viewBox="0 0 24 24" stroke="currentColor">

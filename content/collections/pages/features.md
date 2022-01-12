@@ -16,19 +16,10 @@ top_section:
     select: background
     select_icon: mail
     text: 'Contact Us'
-    default_image: photo-1601933973783-43cf8a7d4c5f.jpeg
+    default_image: Feratures7.png
     type: hero
     enabled: true
 sections:
-  -
-    text_content:
-      -
-        type: markdown
-        enabled: true
-    type: text_content
-    enabled: false
-    template: /general_content/text_content
-    markdown: null
   -
     template: /general_content/highlight
     rows:
@@ -649,7 +640,7 @@ sections:
     enabled: true
 title: Features
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1639626639
+updated_at: 1641955950
 blueprint: general_content
 categories:
   - products
