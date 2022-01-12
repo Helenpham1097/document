@@ -6,9 +6,8 @@
 }
 ::marker,
 .prose ::marker {
-    @apply w-2 h-2 text-purple-500 bg-purple-500;
-    content: "▰";
-    @apply hidden;
+    @apply hidden text-purple-500 bg-purple-500;
+    content: url("data:image/svg+xml,%3Csvg width='9' height='8' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.3731 13.6668H0L2.62687 0.333496H16L13.3731 13.6668Z' fill='%23871EFF'/%3E%3C/svg%3E%0A");
 }
 .prose ul > li::marker,
 .prose ol > li::marker {
@@ -43,7 +42,7 @@ article p img {
     }
 
     blockquote {
-        @apply relative p-8 pl-24 text-sm not-italic border-l-8 border-purple-400 shadow-lg bg-purple-50;
+        @apply relative p-8 pl-8 text-sm not-italic border-l-8 border-purple-400 shadow-lg bg-purple-50;
         *:last-child {
             margin-bottom: 0;
         }
