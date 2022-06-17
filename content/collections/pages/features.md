@@ -1,4 +1,6 @@
 ---
+id: c69d5d08-e270-4673-abce-438cfbd3c854
+blueprint: general_content
 template: general_content/index
 top_section:
   -
@@ -105,7 +107,6 @@ sections:
                 text: 'My Caption'
         link: '#cta'
         select: info
-        select_icon: null
         text: 'See it for yourself'
         type: highlight-item
         enabled: true
@@ -116,14 +117,10 @@ sections:
     enabled: true
   -
     template: /general_content/features_columns
-    display_title_section: {  }
     items:
       -
-        template: null
         template_global: /global/buttons
         default_image: 01.gif
-        features_columns_title: null
-        features_columns_subtitle: null
         features_columns_list:
           -
             type: paragraph
@@ -131,18 +128,11 @@ sections:
               -
                 type: text
                 text: 'Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula.'
-        link: null
-        select: null
-        select_icon: null
-        text: null
         type: column
         enabled: true
       -
-        template: null
         template_global: /global/buttons
         default_image: 02.gif
-        features_columns_title: null
-        features_columns_subtitle: null
         features_columns_list:
           -
             type: paragraph
@@ -150,18 +140,11 @@ sections:
               -
                 type: text
                 text: 'Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula.'
-        link: null
-        select: null
-        select_icon: null
-        text: null
         type: column
         enabled: true
       -
-        template: null
         template_global: /global/buttons
         default_image: 03.gif
-        features_columns_title: null
-        features_columns_subtitle: null
         features_columns_list:
           -
             type: paragraph
@@ -169,10 +152,6 @@ sections:
               -
                 type: text
                 text: 'Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula.'
-        link: null
-        select: null
-        select_icon: null
-        text: null
         type: column
         enabled: true
     type: features_columns_item
@@ -259,7 +238,6 @@ sections:
                 text: 'My Caption'
         link: '#cta'
         select: info
-        select_icon: null
         text: 'See it for yourself'
         type: highlight-item
         enabled: true
@@ -270,14 +248,10 @@ sections:
     enabled: true
   -
     template: /general_content/features_columns
-    display_title_section: {  }
     items:
       -
-        template: null
         template_global: /global/buttons
         default_image: 01.gif
-        features_columns_title: null
-        features_columns_subtitle: null
         features_columns_list:
           -
             type: paragraph
@@ -285,18 +259,11 @@ sections:
               -
                 type: text
                 text: 'Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula.'
-        link: null
-        select: null
-        select_icon: null
-        text: null
         type: column
         enabled: true
       -
-        template: null
         template_global: /global/buttons
         default_image: 02.gif
-        features_columns_title: null
-        features_columns_subtitle: null
         features_columns_list:
           -
             type: paragraph
@@ -304,18 +271,11 @@ sections:
               -
                 type: text
                 text: 'Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula.'
-        link: null
-        select: null
-        select_icon: null
-        text: null
         type: column
         enabled: true
       -
-        template: null
         template_global: /global/buttons
         default_image: 03.gif
-        features_columns_title: null
-        features_columns_subtitle: null
         features_columns_list:
           -
             type: paragraph
@@ -323,10 +283,6 @@ sections:
               -
                 type: text
                 text: 'Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula.'
-        link: null
-        select: null
-        select_icon: null
-        text: null
         type: column
         enabled: true
     type: features_columns_item
@@ -377,7 +333,6 @@ sections:
                 text: 'My Caption'
         link: '#cta'
         select: info
-        select_icon: chevron-right
         text: 'See it for yourself'
         type: highlight-item
         enabled: true
@@ -388,14 +343,10 @@ sections:
     enabled: true
   -
     template: /general_content/features_columns
-    display_title_section: {  }
     items:
       -
-        template: null
         template_global: /global/buttons
         default_image: 01.gif
-        features_columns_title: null
-        features_columns_subtitle: null
         features_columns_list:
           -
             type: paragraph
@@ -403,18 +354,11 @@ sections:
               -
                 type: text
                 text: 'Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula.'
-        link: null
-        select: null
-        select_icon: null
-        text: null
         type: column
         enabled: true
       -
-        template: null
         template_global: /global/buttons
         default_image: 02.gif
-        features_columns_title: null
-        features_columns_subtitle: null
         features_columns_list:
           -
             type: paragraph
@@ -422,18 +366,11 @@ sections:
               -
                 type: text
                 text: 'Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula.'
-        link: null
-        select: null
-        select_icon: null
-        text: null
         type: column
         enabled: true
       -
-        template: null
         template_global: /global/buttons
         default_image: 03.gif
-        features_columns_title: null
-        features_columns_subtitle: null
         features_columns_list:
           -
             type: paragraph
@@ -441,10 +378,6 @@ sections:
               -
                 type: text
                 text: 'Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula.'
-        link: null
-        select: null
-        select_icon: null
-        text: null
         type: column
         enabled: true
     type: features_columns_item
@@ -546,7 +479,6 @@ sections:
                 text: 'My Caption'
         link: '#cta'
         select: info
-        select_icon: null
         text: 'See it for yourself'
         type: highlight-item
         enabled: true
@@ -557,14 +489,10 @@ sections:
     enabled: true
   -
     template: /general_content/features_columns
-    display_title_section: {  }
     items:
       -
-        template: null
         template_global: /global/buttons
         default_image: 01.gif
-        features_columns_title: null
-        features_columns_subtitle: null
         features_columns_list:
           -
             type: paragraph
@@ -572,18 +500,11 @@ sections:
               -
                 type: text
                 text: 'Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula.'
-        link: null
-        select: null
-        select_icon: null
-        text: null
         type: column
         enabled: true
       -
-        template: null
         template_global: /global/buttons
         default_image: 02.gif
-        features_columns_title: null
-        features_columns_subtitle: null
         features_columns_list:
           -
             type: paragraph
@@ -591,18 +512,11 @@ sections:
               -
                 type: text
                 text: 'Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula.'
-        link: null
-        select: null
-        select_icon: null
-        text: null
         type: column
         enabled: true
       -
-        template: null
         template_global: /global/buttons
         default_image: 03.gif
-        features_columns_title: null
-        features_columns_subtitle: null
         features_columns_list:
           -
             type: paragraph
@@ -610,10 +524,6 @@ sections:
               -
                 type: text
                 text: 'Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula.'
-        link: null
-        select: null
-        select_icon: null
-        text: null
         type: column
         enabled: true
     type: features_columns_item
@@ -640,9 +550,7 @@ sections:
     enabled: true
 title: Features
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1641955950
-blueprint: general_content
+updated_at: 1655418459
 categories:
   - products
-id: c69d5d08-e270-4673-abce-438cfbd3c854
 ---

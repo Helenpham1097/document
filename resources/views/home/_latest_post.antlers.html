@@ -1,5 +1,5 @@
 {{# Template showing the last post from the collection of posts #}}
-<section class="container mx-auto space-y-8 max-w-7xl md:space-y-8 ">
+<section class="container mx-auto space-y-8 md:space-y-8 ">
 
 {{ collection:blog limit="1" paginate="false" as='posts' sort="date:desc" }}
 	{{ posts }}
