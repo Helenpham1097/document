@@ -1,4 +1,6 @@
 ---
+id: 178073b8-7594-4432-9b39-2461b487bce8
+blueprint: general_content
 template: general_content/index
 top_section:
   -
@@ -12,11 +14,6 @@ top_section:
             type: text
             text: 'Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
     template_global: /global/default_image
-    link: null
-    select: null
-    select_icon: null
-    text: null
-    default_image: null
     type: hero
     enabled: true
 sections:
@@ -58,17 +55,17 @@ sections:
     markdown_a: asdads
     markdown_b: asdasda
     type: two_text_columns
-    enabled: true
+    enabled: false
     columns:
       -
-        markdown: |
+        markdown: |-
           ## Call us
           [0800 454 537](#)
            (24 hours, 7 days a week)
         type: column
         enabled: true
       -
-        markdown: |
+        markdown: |-
           ## Snail mail
           PO Box 11859 
           Ellerslie
@@ -77,7 +74,7 @@ sections:
         type: column
         enabled: true
       -
-        markdown: |
+        markdown: |-
           ## Our office
           [44 Olive Road](https://goo.gl/maps/WjGdjKFwtZnYpW1U9).
           Penrose 
@@ -87,7 +84,5 @@ sections:
         enabled: true
 title: 'Contact Us'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1638860212
-blueprint: general_content
-id: 178073b8-7594-4432-9b39-2461b487bce8
+updated_at: 1655417251
 ---

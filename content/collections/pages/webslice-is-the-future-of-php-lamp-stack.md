@@ -1,4 +1,6 @@
 ---
+id: bcfcdde9-26bc-4990-8ec0-4c6f968a9010
+blueprint: general_content
 template: general_content/index
 top_section:
   -
@@ -28,27 +30,24 @@ sections:
     type: text_content
     enabled: true
     template: /general_content/text_content
-    markdown: |
+    markdown: |-
       We were surprised when we found out how inaccessible serverless is for PHP developers. 
-      
+
       You have probably seen all the roundabout ways you can get your PHP websites onto serverless. And it very likely ended up in the “too hard basket”. 
-      
+
       **Webslice is about making serverless easily accessible for all PHP developers.**
-      
+
       With around 80% of all websites using PHP, it didn’t make sense that getting websites onto serverless hosting wasn’t easy. So we changed that.
-      
+
       With our easy-to-use platform you will be able to
       - Easily deploy your current PHP sites onto serverless
       - Write new serverless applications in PHP
   -
     template: /general_content/features_columns
-    display_title_section: {  }
     items:
       -
-        template: null
         template_global: /global/buttons
         default_image: 01.gif
-        features_columns_title: null
         features_columns_subtitle: 'Rewrite your current sites'
         features_columns_list:
           -
@@ -57,17 +56,11 @@ sections:
               -
                 type: text
                 text: 'Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam.'
-        link: null
-        select: null
-        select_icon: null
-        text: null
         type: column
         enabled: true
       -
-        template: null
         template_global: /global/buttons
         default_image: 02.gif
-        features_columns_title: null
         features_columns_subtitle: 'Navigate through hoops to get an existing PHP application working'
         features_columns_list:
           -
@@ -76,17 +69,11 @@ sections:
               -
                 type: text
                 text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. '
-        link: null
-        select: null
-        select_icon: null
-        text: null
         type: column
         enabled: true
       -
-        template: null
         template_global: /global/buttons
         default_image: 03.gif
-        features_columns_title: null
         features_columns_subtitle: 'Change the way you use WordPress'
         features_columns_list:
           -
@@ -95,10 +82,6 @@ sections:
               -
                 type: text
                 text: 'Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. Phasellus molestie blandit erat.'
-        link: null
-        select: null
-        select_icon: null
-        text: null
         type: column
         enabled: true
     type: features_columns_item
@@ -117,7 +100,6 @@ sections:
             type: text
             text: 'We will be in Beta soon! Join our subscriber list for updates on the Webslice platform and access to the beta when it is released.'
     link: '#'
-    select: null
     select_icon: mail
     text: 'Join Now'
     section_id: cta
@@ -125,7 +107,5 @@ sections:
     enabled: true
 title: 'Webslice is the future of PHP/LAMP stack'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1638314305
-blueprint: general_content
-id: bcfcdde9-26bc-4990-8ec0-4c6f968a9010
+updated_at: 1655417157
 ---

@@ -1,4 +1,6 @@
 ---
+id: 128bc187-e58c-4ccc-a5f7-587727470a54
+blueprint: general_content
 template: general_content/index
 top_section:
   -
@@ -12,25 +14,19 @@ top_section:
             type: text
             text: 'Aliquam rhoncus ultrices euismod. Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam. Fusce maximus non metus ac facilisis.'
     template_global: /global/default_image
-    link: null
-    select: null
-    select_icon: null
-    text: null
     default_image: about-us/team.jpg
     type: hero
     enabled: true
 sections:
   -
     template: /general_content/multiple_text_columns
-    markdown_a: null
-    markdown_b: null
     type: multiple_text_columns
     enabled: true
     columns:
       -
-        markdown: |
+        markdown: |-
           We’re a small group of web hosting nerds who noticed something back in the 2010s when serverless infrastructure muscled its way onto the scene. It was an exciting, valuable evolution in hosting technology but we also saw some serious limitations.
-          
+
           Serverless web hosting promises website owners and developers near-limitless scalability up and down, dramatic cuts to costs, and lets them forget all about servers. While your site handles any level of traffic and your hosting bills take a downward dive, you can just focus on what your website does for your customers. Cool!
         type: column
         enabled: true
@@ -74,11 +70,6 @@ sections:
                 type: hard_break
         template_global: /global/buttons
         default_image: about-us/2d34429616f83487ec069ebd911356db.webp
-        highlight_textcaption: null
-        link: null
-        select: null
-        select_icon: null
-        text: null
         type: highlight-item
         enabled: true
       -
@@ -115,11 +106,6 @@ sections:
                 type: hard_break
         template_global: /global/buttons
         default_image: about-us/c8dfd769f4b2c76ecc3222bedf6bd6e1.webp
-        highlight_textcaption: null
-        link: null
-        select: null
-        select_icon: null
-        text: null
         type: highlight-item
         enabled: true
       -
@@ -165,11 +151,6 @@ sections:
                 text: 'We’re a proud New Zealand company with global ambitions for Webslice.'
         template_global: /global/buttons
         default_image: about-us/b59a3e521a070fd532a000228128afc0.webp
-        highlight_textcaption: null
-        link: null
-        select: null
-        select_icon: null
-        text: null
         type: highlight-item
         enabled: true
     toggle_background: false
@@ -179,7 +160,5 @@ sections:
     enabled: true
 title: 'About Us'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1639706552
-blueprint: general_content
-id: 128bc187-e58c-4ccc-a5f7-587727470a54
+updated_at: 1655418514
 ---

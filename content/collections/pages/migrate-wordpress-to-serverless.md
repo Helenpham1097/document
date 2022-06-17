@@ -1,4 +1,6 @@
 ---
+id: b2eda7c6-73c8-4eb5-ad8c-baf81496fb81
+blueprint: general_content
 template: general_content/index
 top_section:
   -
@@ -11,7 +13,6 @@ top_section:
           -
             type: text
             text: 'Get your Wordpress site onto Serverless Hosting in minutes with Webslice.'
-    hero_home_image: null
     template_global: /global/default_image
     link: '#cta'
     select: background-secondary
@@ -29,26 +30,23 @@ sections:
     type: text_content
     enabled: true
     template: /general_content/text_content
-    markdown: |
+    markdown: |-
       Serverless and PHP weren’t always two words that went well together, unless you had a truck load of experience in hosting infrastructure. And even then it wasn’t enjoyable. 
-      
+
       Webslice was designed to **take the hassle out of getting WordPress sites onto Serverless Hosting.**
-      
+
       ### Sound impossible? With Webslice, it’s not.
-      
+
       With the platform we are working on, you won’t have to
       - Rewrite your current sites
       - Navigate through hoops to get an existing PHP application working
       - Change the way you use WordPress
   -
     template: /general_content/features_columns
-    display_title_section: {  }
     items:
       -
-        template: null
         template_global: /global/buttons
         default_image: 01.gif
-        features_columns_title: null
         features_columns_subtitle: 'Rewrite your current sites'
         features_columns_list:
           -
@@ -57,17 +55,11 @@ sections:
               -
                 type: text
                 text: 'Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam.'
-        link: null
-        select: null
-        select_icon: null
-        text: null
         type: column
         enabled: true
       -
-        template: null
         template_global: /global/buttons
         default_image: 02.gif
-        features_columns_title: null
         features_columns_subtitle: 'Navigate through hoops to get an existing PHP application working'
         features_columns_list:
           -
@@ -76,17 +68,11 @@ sections:
               -
                 type: text
                 text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. '
-        link: null
-        select: null
-        select_icon: null
-        text: null
         type: column
         enabled: true
       -
-        template: null
         template_global: /global/buttons
         default_image: 03.gif
-        features_columns_title: null
         features_columns_subtitle: 'Change the way you use WordPress'
         features_columns_list:
           -
@@ -95,10 +81,6 @@ sections:
               -
                 type: text
                 text: 'Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. Phasellus molestie blandit erat.'
-        link: null
-        select: null
-        select_icon: null
-        text: null
         type: column
         enabled: true
     type: features_columns_item
@@ -125,10 +107,8 @@ sections:
     section_id: cta
 title: 'Migrate WordPress to serverless'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1638314217
-blueprint: general_content
+updated_at: 1655417159
 categories:
   - products
 page_description: 'Migrate WordPress to serverless'
-id: b2eda7c6-73c8-4eb5-ad8c-baf81496fb81
 ---
