@@ -1,79 +1,168 @@
 {{# Partial to show the hero section of the general content pages #}}
-<div class="slice-background"></div>
+<div class="relative flex flex-col justify-center">
+    {{# This container creates the vertical lines of the grid, the empty elements allow to create the 6 internal columns and hide 3 when viewed on smaller screens. #}}
+    <div class="container absolute inset-0 grid h-screen grid-cols-2 gap-4 overflow-visible xl:grid-cols-6 lg:grid-cols-3 grid-lines">
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="hidden lg:block"></div>
+        <div class="hidden lg:block"></div>
+        <div class="hidden lg:block"></div>
+        <div class="hidden lg:block"></div>
+    </div>
+    <svg class="absolute" width="2386" height="948" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1974.25 1.263 1028.3 947.207" stroke="url(#a)" stroke-opacity=".2"/>
+        <path d="M1905.78 1.263 959.834 947.207" stroke="url(#b)" stroke-opacity=".2"/>
+        <path d="m2111.19 1.263-945.95 945.944" stroke="url(#c)" stroke-opacity=".2"/>
+        <path d="m2042.72 1.263-945.95 945.944" stroke="url(#d)" stroke-opacity=".2"/>
+        <path d="m2248.12 1.263-945.94 945.944" stroke="url(#e)" stroke-opacity=".2"/>
+        <path d="m2179.65 1.263-945.94 945.944" stroke="url(#f)" stroke-opacity=".2"/>
+        <path d="m2385.06 1.263-945.94 945.944" stroke="url(#g)" stroke-opacity=".2"/>
+        <path d="m2316.59 1.263-945.94 945.944" stroke="url(#h)" stroke-opacity=".2"/>
+        <path d="M1837.31 1.263 891.365 947.207" stroke="url(#i)" stroke-opacity=".2"/>
+        <path d="M1768.84 1.263 822.895 947.207" stroke="url(#j)" stroke-opacity=".2"/>
+        <path d="M1700.37 1.263 754.426 947.207" stroke="url(#k)" stroke-opacity=".2"/>
+        <path d="M1631.9 1.263 685.957 947.207" stroke="url(#l)" stroke-opacity=".2"/>
+        <path d="M1563.43 1.263 617.488 947.207" stroke="url(#m)" stroke-opacity=".2"/>
+        <path d="M1494.96 1.263 549.018 947.207" stroke="url(#n)" stroke-opacity=".2"/>
+        <path d="M1426.49 1.263 480.549 947.207" stroke="url(#o)" stroke-opacity=".2"/>
+        <path d="M1358.02 1.263 412.08 947.207" stroke="url(#p)" stroke-opacity=".2"/>
+        <path d="M1289.55 1.263 343.61 947.207" stroke="url(#q)" stroke-opacity=".2"/>
+        <path d="M1221.08 1.263 275.14 947.207" stroke="url(#r)" stroke-opacity=".2"/>
+        <path d="M1152.61 1.263 206.671 947.207" stroke="url(#s)" stroke-opacity=".2"/>
+        <path d="M1084.15 1.263 138.202 947.207" stroke="url(#t)" stroke-opacity=".2"/>
+        <path d="M1015.68 1.263 69.732 947.207" stroke="url(#u)" stroke-opacity=".2"/>
+        <path d="M947.206 1.263 1.262 947.207" stroke="url(#v)" stroke-opacity=".2"/>
+        <defs>
+        <linearGradient id="a" x1="1974.25" y1="1.263" x2="1028.3" y2="947.206" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#1C1C1E"/>
+        <stop offset="1" stop-color="#1C1C1E" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="b" x1="1905.78" y1="1.263" x2="959.834" y2="947.206" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#1C1C1E"/>
+        <stop offset="1" stop-color="#1C1C1E" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="c" x1="2111.19" y1="1.263" x2="1165.24" y2="947.206" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#1C1C1E"/>
+        <stop offset="1" stop-color="#1C1C1E" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="d" x1="2042.72" y1="1.263" x2="1096.77" y2="947.206" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#1C1C1E"/>
+        <stop offset="1" stop-color="#1C1C1E" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="e" x1="2248.12" y1="1.263" x2="1302.18" y2="947.206" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#1C1C1E"/>
+        <stop offset="1" stop-color="#1C1C1E" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="f" x1="2179.65" y1="1.263" x2="1233.71" y2="947.206" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#1C1C1E"/>
+        <stop offset="1" stop-color="#1C1C1E" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="g" x1="2385.06" y1="1.263" x2="1439.12" y2="947.206" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#1C1C1E"/>
+        <stop offset="1" stop-color="#1C1C1E" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="h" x1="2316.59" y1="1.263" x2="1370.65" y2="947.206" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#1C1C1E"/>
+        <stop offset="1" stop-color="#1C1C1E" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="i" x1="1837.31" y1="1.263" x2="891.365" y2="947.206" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#1C1C1E"/>
+        <stop offset="1" stop-color="#1C1C1E" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="j" x1="1768.84" y1="1.263" x2="822.895" y2="947.206" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#1C1C1E"/>
+        <stop offset="1" stop-color="#1C1C1E" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="k" x1="1700.37" y1="1.263" x2="754.426" y2="947.206" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#1C1C1E"/>
+        <stop offset="1" stop-color="#1C1C1E" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="l" x1="1631.9" y1="1.263" x2="685.957" y2="947.206" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#1C1C1E"/>
+        <stop offset="1" stop-color="#1C1C1E" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="m" x1="1563.43" y1="1.263" x2="617.488" y2="947.206" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#1C1C1E"/>
+        <stop offset="1" stop-color="#1C1C1E" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="n" x1="1494.96" y1="1.263" x2="549.018" y2="947.206" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#1C1C1E"/>
+        <stop offset="1" stop-color="#1C1C1E" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="o" x1="1426.49" y1="1.263" x2="480.549" y2="947.206" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#1C1C1E"/>
+        <stop offset="1" stop-color="#1C1C1E" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="p" x1="1358.02" y1="1.263" x2="412.08" y2="947.206" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#1C1C1E"/>
+        <stop offset="1" stop-color="#1C1C1E" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="q" x1="1289.55" y1="1.263" x2="343.61" y2="947.206" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#1C1C1E"/>
+        <stop offset="1" stop-color="#1C1C1E" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="r" x1="1221.08" y1="1.263" x2="275.14" y2="947.206" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#1C1C1E"/>
+        <stop offset="1" stop-color="#1C1C1E" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="s" x1="1152.61" y1="1.263" x2="206.671" y2="947.206" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#1C1C1E"/>
+        <stop offset="1" stop-color="#1C1C1E" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="t" x1="1084.15" y1="1.263" x2="138.202" y2="947.206" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#1C1C1E"/>
+        <stop offset="1" stop-color="#1C1C1E" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="u" x1="1015.68" y1="1.263" x2="69.732" y2="947.206" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#1C1C1E"/>
+        <stop offset="1" stop-color="#1C1C1E" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="v" x1="947.206" y1="1.263" x2="1.262" y2="947.206" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#1C1C1E"/>
+        <stop offset="1" stop-color="#1C1C1E" stop-opacity="0"/>
+        </linearGradient>
+        </defs>
+    </svg>
+</div>
 
-{{# Partial template for the featured blog post on blog index page #}}
+<div class="relative flex flex-col justify-center ">
+    <div class="container relative mx-auto">
+        <div class="grid gap-4 py-24 md:grid-cols-2">
+            <div class="space-y-6">
+                {{ if categories }}
+                <h5
+                    class="flex-row items-center hidden space-x-2 uppercase sm:flex"
+                >
+                    <div class="text-purple-500">
+                        {{ categories limit="1" }} {{ title }} {{ /categories }}
+                    </div>
+                </h5>
+                {{ /if }}
+                <div class="flex flex-col items-start space-y-6 lg:flex-grow">
+                    <h1 class="dot">{{ hero_home_title }}</h1>
+                    <div class="excerpt">{{ hero_home_description }}</div>
+                    {{ if link }}
+                    <div class="flex-none">{{ partial:global/buttons }}</div>
+                    {{ /if }}
+                </div>
+            </div>
 
-<section class="container pb-6 mx-auto md:pb-24 group">
-    <div class="flex flex-col items-center justify-center py-8 space-x-0 space-y-8 space-y-reverse sm:space-y-0 sm:space-x-8 md:flex-row md:py-12">
-        <div class="space-y-6 md:w-1/2">
-            {{ if categories }}
-                <h3 class="flex-row items-center hidden space-x-2 sm:flex ">
-                    <div class="text-purple-500">{{ categories  limit="1" }}  {{ title }} {{ /categories }}</div>
-                </h3>
-            {{ /if }}
-            <div class="flex flex-col items-start space-y-6 lg:flex-grow">
-                <h1 class="dot">{{ hero_home_title }}</h1>
-                <div class="excerpt"> {{ hero_home_description }}</div>
-                {{ if link }}
-                <div class="flex-none">
-                    {{ partial:global/buttons }}
+            <div class="relative">
+                <div class="absolute inset-0 mx-8 my-12 transform rounded-full opacity-50 bg-gradient-to-r from-purple-500 to-green-300 md:mx-2 md:my-2 animate-blob rotate-6 filter blur-3xl"
+                ></div>
+                {{ if default_image }}
+                <div class="order-first sm:order-last">
+                    <div class="relative">
+                        <div
+                            class="relative inset-0 flex items-center overflow-hidden transition duration-500 ease-in-out transform rounded-lg justify-centers left md:aspect-w-6 md:aspect-h-4 group-hover:shadow-2xls group-hover:shadow-slate-500"
+                        >
+                            {{ partial:global/default_image }}
+                        </div>
+                    </div>
                 </div>
                 {{ /if }}
             </div>
         </div>
-
-        {{ if default_image }}
-        <div class="order-first md:w-1/2 sm:order-last">
-            <div class="relative hero-animation">
-                <svg class="absolute w-32 text-green-500 transition duration-700 ease-in-out transform fill-current group-hover:text-green-400 md:group-hover:-translate-x-12 md:group-hover:-translate-y-12 md:w-72 md:top-6 md:left-6" viewBox="0 0 373 363" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 161.839V363L373 0H165.606L0 161.839Z"/>
-                </svg>
-                <svg class="absolute w-32 text-green-500 transition duration-700 ease-in-out transform fill-current group-hover:text-green-400 md:group-hover:translate-x-12 md:group-hover:translate-y-12 md:w-72 md:bottom-6 md:right-6" viewBox="0 0 373 363" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M373 201.161V-2.06527e-06L7.95594e-06 363H207.394L373 201.161Z"/>
-
-                </svg>
-
-                <div class="relative inset-0 flex items-center overflow-hidden transition duration-500 ease-in-out transform rounded-lg justify-centers left md:aspect-w-6 md:aspect-h-4 group-hover:shadow-2xls group-hover:shadow-slate-500">
-                    {{ partial:global/default_image }}
-                </div>
-            </div>
-        </div>
-        {{ /if }}
-
     </div>
-</section>
-
-{{# <section class="container pb-6 mx-auto md:pb-24 group">
-    <div class="flex flex-col items-center justify-center py-8 space-x-0 space-y-8 space-y-reverse sm:space-y-0 sm:space-x-8 md:flex-row md:py-12">
-        <div class="space-y-6 md:w-3/5">
-            <div class="flex flex-col items-start space-y-6 lg:flex-grow">
-                <h1 class="dot">{{ hero_home_title }}</h1>
-                <div class="excerpt"> {{ hero_home_description }}</div>
-                {{ if link }}
-                <div class="flex-none">
-                    {{ partial:global/buttons }}
-                </div>
-                {{ /if }}
-            </div>
-        </div>
-
-        {{ if default_image }}
-        <div class="order-first md:w-2/5 sm:order-last">
-            <div class="relative hero-animation">
-                <svg class="absolute w-24 text-green-500 fill-current" viewBox="0 0 1228 1199" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 92.577v115.071L213.483 0h-118.7L0 92.577ZM0 340.226v115.071l213.483-207.649h-118.7L0 340.226ZM0 587.874v115.071l213.483-207.648h-118.7L0 587.874ZM0 835.523v115.071l213.483-207.649h-118.7L0 835.523ZM0 1083.17v115.07l213.483-207.646h-118.7L0 1083.17ZM253.482 92.577v115.071L466.966 0h-118.7l-94.784 92.577ZM506.965 92.577v115.071L720.448 0h-118.7l-94.783 92.577ZM760.447 92.577v115.071L973.931 0h-118.7l-94.784 92.577ZM1013.93 92.577v115.071L1227.41 0h-118.7l-94.78 92.577ZM253.482 340.226v115.071l213.484-207.649h-118.7l-94.784 92.578ZM506.965 340.226v115.071l213.483-207.649h-118.7l-94.783 92.578ZM760.447 340.226v115.071l213.484-207.649h-118.7l-94.784 92.578ZM1013.93 340.226v115.071l213.48-207.649h-118.7l-94.78 92.578ZM253.482 587.874v115.071l213.484-207.648h-118.7l-94.784 92.577ZM506.965 587.874v115.071l213.483-207.648h-118.7l-94.783 92.577ZM760.447 587.874v115.071l213.484-207.648h-118.7l-94.784 92.577ZM1013.93 587.874v115.071l213.48-207.648h-118.7l-94.78 92.577ZM253.482 835.523v115.071l213.484-207.649h-118.7l-94.784 92.578ZM506.965 835.523v115.071l213.483-207.649h-118.7l-94.783 92.578ZM760.447 835.523v115.071l213.484-207.649h-118.7l-94.784 92.578ZM1013.93 835.523v115.071l213.48-207.649h-118.7l-94.78 92.578ZM253.482 1083.17v115.07l213.484-207.646h-118.7l-94.784 92.576ZM506.965 1083.17v115.07l213.483-207.646h-118.7l-94.783 92.576ZM760.447 1083.17v115.07l213.484-207.646h-118.7l-94.784 92.576ZM1013.93 1083.17v115.07l213.48-207.646h-118.7l-94.78 92.576Z" />
-                </svg>
-                <svg class="absolute bottom-0 right-0 w-24 text-green-500 fill-current" viewBox="0 0 1228 1199" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 92.577v115.071L213.483 0h-118.7L0 92.577ZM0 340.226v115.071l213.483-207.649h-118.7L0 340.226ZM0 587.874v115.071l213.483-207.648h-118.7L0 587.874ZM0 835.523v115.071l213.483-207.649h-118.7L0 835.523ZM0 1083.17v115.07l213.483-207.646h-118.7L0 1083.17ZM253.482 92.577v115.071L466.966 0h-118.7l-94.784 92.577ZM506.965 92.577v115.071L720.448 0h-118.7l-94.783 92.577ZM760.447 92.577v115.071L973.931 0h-118.7l-94.784 92.577ZM1013.93 92.577v115.071L1227.41 0h-118.7l-94.78 92.577ZM253.482 340.226v115.071l213.484-207.649h-118.7l-94.784 92.578ZM506.965 340.226v115.071l213.483-207.649h-118.7l-94.783 92.578ZM760.447 340.226v115.071l213.484-207.649h-118.7l-94.784 92.578ZM1013.93 340.226v115.071l213.48-207.649h-118.7l-94.78 92.578ZM253.482 587.874v115.071l213.484-207.648h-118.7l-94.784 92.577ZM506.965 587.874v115.071l213.483-207.648h-118.7l-94.783 92.577ZM760.447 587.874v115.071l213.484-207.648h-118.7l-94.784 92.577ZM1013.93 587.874v115.071l213.48-207.648h-118.7l-94.78 92.577ZM253.482 835.523v115.071l213.484-207.649h-118.7l-94.784 92.578ZM506.965 835.523v115.071l213.483-207.649h-118.7l-94.783 92.578ZM760.447 835.523v115.071l213.484-207.649h-118.7l-94.784 92.578ZM1013.93 835.523v115.071l213.48-207.649h-118.7l-94.78 92.578ZM253.482 1083.17v115.07l213.484-207.646h-118.7l-94.784 92.576ZM506.965 1083.17v115.07l213.483-207.646h-118.7l-94.783 92.576ZM760.447 1083.17v115.07l213.484-207.646h-118.7l-94.784 92.576ZM1013.93 1083.17v115.07l213.48-207.646h-118.7l-94.78 92.576Z" />
-                </svg>
-
-                <div class="relative inset-0 flex items-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg shadow-lg justify-centers left md:aspect-w-6 md:aspect-h-4 group-hover:shadow-2xl">
-                    {{ partial:global/default_image }}
-                </div>
-            </div>
-        </div>
-        {{ /if }}
-
-    </div>
-</section> #}}
+</div>
 

@@ -7,11 +7,8 @@ const imagemin = require("gulp-imagemin");
 const newer = require("gulp-newer");
 const plumber = require("gulp-plumber");
 const postcss = require("gulp-postcss");
-const cssnano = require('gulp-cssnano');
-const rename = require("gulp-rename");
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
-const touch = require('gulp-touch-fd');
 
 function clean() {
    return del(['public/css', 'public/js']);
@@ -20,13 +17,12 @@ function clean() {
 if (process.env.NODE_ENV === 'production') {
 
    function styles() {
+
       return gulp
          .src("./resources/css/main.css")
          .pipe(plumber())
          .pipe(postcss())
-         .pipe(cssnano())
          .pipe(gulp.dest("public/css"))
-         .pipe(touch());
    }
    
    function scripts() {
@@ -34,8 +30,6 @@ if (process.env.NODE_ENV === 'production') {
          .src('./resources/js/**/*.js')
          .pipe(plumber())
          .pipe(concat('main.js'))
-         .pipe(gulp.dest('public/js'))
-         .pipe(rename({ suffix: '.min' }))
          .pipe(uglify())
          .pipe(gulp.dest('public/js'))
    }
@@ -93,7 +87,6 @@ else {
          .pipe(plumber())
          .pipe(postcss())
          .pipe(gulp.dest("public/css"))
-         .pipe(touch())
          .pipe(browsersync.stream());
    }
    
@@ -102,8 +95,6 @@ else {
          .src('./resources/js/**/*.js')
          .pipe(plumber())
          .pipe(concat('main.js'))
-         .pipe(gulp.dest('public/js'))
-         .pipe(rename({ suffix: '.min' }))
          .pipe(uglify())
          .pipe(gulp.dest('public/js'))
          .pipe(browsersync.stream());
@@ -115,7 +106,7 @@ else {
       gulp.watch("./resources/css/**/*", styles);
       gulp.watch("./resources/js/**/*", scripts);
       gulp.watch("./resources/img/**/*", images);
-    //   gulp.series(browserSyncReload);
+      gulp.series(browserSyncReload);
    }
 
    // define complex tasks
