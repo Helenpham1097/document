@@ -26,7 +26,7 @@
 				{{ if features_columns_title }}
 				<svg class="flex-none w-4 h-4 mt-2 text-purple-500" viewBox="0 0 32 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M26.7463 25.8H0L5.25373 0.200048H32L26.7463 25.8Z" fill="currentColor"></path></svg>
 				{{ /if }}
-				<div class="flex flex-col space-y-8">
+				<div class="flex flex-col space-y-8 prose">
 					{{ if features_columns_title }}
 						<h3 class="leading-tight tracking-wide text-black">
 							{{ features_columns_title | strip_tags:p }}
@@ -38,9 +38,9 @@
 						</h5>
 					{{ /if }}
 					{{ if features_columns_list }}
-						<div>
+						<p>
 							{{ features_columns_list | strip_tags:p }}
-						</div>
+						</p>
 					{{ /if }}
 					{{ if link  }}
 					<div>

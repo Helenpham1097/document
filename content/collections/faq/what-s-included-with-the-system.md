@@ -1,4 +1,6 @@
 ---
+id: ff4f50d5-1343-4f9f-bfd2-ded4d205c19a
+blueprint: faq
 title: 'What’s included with the system?'
 answer:
   -
@@ -74,6 +76,5 @@ answer:
                 type: text
                 text: 'HDMI cable'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1637276664
-id: ff4f50d5-1343-4f9f-bfd2-ded4d205c19a
+updated_at: 1655447299
 ---
