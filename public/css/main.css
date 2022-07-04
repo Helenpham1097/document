@@ -2348,6 +2348,10 @@ ol {
        column-gap: 2rem;
 }.gap-y-8{
   row-gap: 2rem;
+}.space-y-6 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }.space-y-4 > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
@@ -2360,10 +2364,6 @@ ol {
   --tw-space-y-reverse: 0;
   margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
-}.space-y-6 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }.space-x-2 > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -2460,12 +2460,12 @@ ol {
 }.border-purple-800{
   --tw-border-opacity: 1;
   border-color: rgb(81 18 153 / var(--tw-border-opacity));
-}.border-gray-300{
-  --tw-border-opacity: 1;
-  border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }.border-gray-200{
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
+}.border-gray-300{
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }.border-purple-200{
   --tw-border-opacity: 1;
   border-color: rgb(225 199 255 / var(--tw-border-opacity));
@@ -2645,6 +2645,8 @@ ol {
   padding-top: 0px;
 }.pl-0{
   padding-left: 0px;
+}.pt-12{
+  padding-top: 3rem;
 }.pb-8{
   padding-bottom: 2rem;
 }.pb-6{
@@ -3513,12 +3515,12 @@ ol {
     display: flex;
   }.md\:inline-flex{
     display: inline-flex;
-  }.md\:h-screen{
-    height: 100vh;
   }.md\:h-24{
     height: 6rem;
   }.md\:h-32{
     height: 8rem;
+  }.md\:h-screen{
+    height: 100vh;
   }.md\:w-1\/5{
     width: 20%;
   }.md\:w-3\/5{
@@ -3645,6 +3647,8 @@ ol {
   }.md\:py-10{
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+  }.md\:pt-24{
+    padding-top: 6rem;
   }.md\:pb-8{
     padding-bottom: 2rem;
   }.md\:pb-24{
