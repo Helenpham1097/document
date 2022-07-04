@@ -1,21 +1,3 @@
 title: 'Main Menu'
 collections:
   - pages
-tree:
-  -
-    entry: c69d5d08-e270-4673-abce-438cfbd3c854
-  -
-    entry: fee1a2b1-971c-4c72-9517-d2e6c989f49e
-  -
-    entry: 128bc187-e58c-4ccc-a5f7-587727470a54
-  -
-    entry: 178073b8-7594-4432-9b39-2461b487bce8
-  -
-    title: Dropdown
-    children:
-      -
-        title: 'Item 1'
-      -
-        title: 'Item 2'
-      -
-        title: 'Item 3'

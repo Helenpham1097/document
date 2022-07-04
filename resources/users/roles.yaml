@@ -32,3 +32,5 @@ editor:
     - 'rename assets assets'
     - 'delete assets assets'
     - 'view users'
+    - 'edit other authors blog entries'
+    - 'edit other authors pages entries'
