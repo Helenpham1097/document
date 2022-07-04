@@ -3,10 +3,13 @@ fields:
   -
     handle: template
     field:
-      display: template
+      display: template_global
       type: hidden
       icon: hidden
       listable: hidden
+      instructions_position: above
+      read_only: false
+      default: general_content/product/feature_section
   -
     handle: section_title
     field:
@@ -78,6 +81,13 @@ fields:
       icon: replicator
       listable: hidden
   -
+    handle: add_highlight_features
+    field:
+      display: 'Add Highlight Features'
+      type: toggle
+      icon: toggle
+      listable: hidden
+  -
     handle: background_select
     field:
       options:
@@ -94,6 +104,10 @@ fields:
       type: select
       icon: select
       listable: hidden
+      instructions_position: above
+      read_only: false
+      if:
+        add_highlight_features: 'equals true'
   -
     handle: highlight_features_title
     field:
@@ -103,13 +117,10 @@ fields:
       type: text
       icon: text
       listable: hidden
-  -
-    handle: add_highlight_features
-    field:
-      display: 'Add Highlight Features'
-      type: toggle
-      icon: toggle
-      listable: hidden
+      instructions_position: above
+      read_only: false
+      if:
+        add_highlight_features: 'equals true'
   -
     handle: features
     field:
@@ -119,7 +130,52 @@ fields:
           display: 'Highlight Feature'
           fields:
             -
-              import: default_image
+              handle: select_type
+              field:
+                options:
+                  image: Image
+                  icon: icon
+                multiple: false
+                clearable: false
+                searchable: true
+                taggable: false
+                push_tags: false
+                cast_booleans: false
+                display: 'Select Type'
+                type: select
+                icon: select
+                listable: hidden
+                instructions_position: above
+                read_only: false
+            -
+              handle: default_image
+              field:
+                mode: grid
+                container: assets
+                restrict: false
+                allow_uploads: true
+                show_filename: true
+                max_files: 1
+                display: Image
+                type: assets
+                icon: assets
+                listable: hidden
+                instructions_position: above
+                read_only: false
+                if:
+                  select_type: 'equals image'
+            -
+              handle: iconamic
+              field:
+                path_helper: public_path
+                display: Iconamic
+                type: iconamic
+                icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M19 9h19.84c2.76 0 5 2.24 5 5v24.84c0 2.76-2.24 5-5 5H14c-2.76 0-5-2.24-5-5V19c0-5.52 4.48-10 10-10ZM61.16 9H81c5.52 0 10 4.48 10 10v19.84c0 2.76-2.24 5-5 5H61.16c-2.76 0-5-2.24-5-5V14c0-2.76 2.24-5 5-5ZM14 56.16h24.84c2.76 0 5 2.24 5 5V86c0 2.76-2.24 5-5 5H19c-5.52 0-10-4.48-10-10V61.16c0-2.76 2.24-5 5-5ZM61.16 56.16H86c2.76 0 5 2.24 5 5V81c0 5.52-4.48 10-10 10H61.16c-2.76 0-5-2.24-5-5V61.16c0-2.76 2.24-5 5-5Z" style="fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:6px"/></svg>'
+                listable: hidden
+                instructions_position: above
+                read_only: false
+                if:
+                  select_type: 'equals icon'
             -
               handle: title
               field:
@@ -154,3 +210,7 @@ fields:
       type: replicator
       icon: replicator
       listable: hidden
+      instructions_position: above
+      read_only: false
+      if:
+        add_highlight_features: 'equals true'

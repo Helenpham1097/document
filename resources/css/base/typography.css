@@ -23,7 +23,7 @@ ol {
     @apply py-1 text-4xl font-bold text-transparent bg-clip-text md:text-6xl bg-gradient-to-l from-black to-gray-700;
 }
 .h2 {
-    @apply text-4xl font-bold md:leading-normal md:text-5xl;
+    @apply text-4xl font-bold prose md:text-5xl;
 }
 .h3 {
     @apply text-xl font-bold sm:text-2xl;

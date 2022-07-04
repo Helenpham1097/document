@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "16de39b5e11880146115a7b62863d117",
+    "content-hash": "f9e9bf661e827f9fcf488b3894cdd6db",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -2694,6 +2694,55 @@
                 "source": "https://github.com/michelf/php-smartypants/tree/1.8.1"
             },
             "time": "2016-12-13T01:01:17+00:00"
+        },
+        {
+            "name": "mitydigital/iconamic",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mitydigital/statamic-iconamic.git",
+                "reference": "d4a11b6cb10c39c0dfeee6ca2aaa72551dd9002d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mitydigital/statamic-iconamic/zipball/d4a11b6cb10c39c0dfeee6ca2aaa72551dd9002d",
+                "reference": "d4a11b6cb10c39c0dfeee6ca2aaa72551dd9002d",
+                "shasum": ""
+            },
+            "require": {
+                "statamic/cms": "~3.3"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.9|^7.1",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "statamic-addon",
+            "extra": {
+                "statamic": {
+                    "name": "Iconamic",
+                    "description": "The SVG Icon Selector for Statamic 3"
+                },
+                "laravel": {
+                    "providers": [
+                        "MityDigital\\Iconamic\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "MityDigital\\Iconamic\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "The SVG icon selector fieldtype and tag for Statamic.",
+            "support": {
+                "issues": "https://github.com/mitydigital/statamic-iconamic/issues",
+                "source": "https://github.com/mitydigital/statamic-iconamic/tree/v1.0.2"
+            },
+            "time": "2022-05-15T22:04:09+00:00"
         },
         {
             "name": "monolog/monolog",

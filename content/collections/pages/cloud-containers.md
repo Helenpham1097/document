@@ -24,14 +24,14 @@ top_section:
 sections:
   -
     template: /general_content/product/feature_section
-    section_title: 'Migrate WordPress to serverless'
+    section_title: 'Get started quickly on easy, powerful hosting'
     section_subtitle:
       -
         type: paragraph
         content:
           -
             type: text
-            text: 'Get your Wordpress site onto Serverless Hosting in minutes.'
+            text: 'Provision a server super-fast, choose from prebuilt images'
     template_global: /global/buttons
     link: '#'
     select: info
@@ -44,21 +44,9 @@ sections:
             content:
               -
                 type: text
-                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam. Fusce maximus non metus ac facilisis. Sed id nunc a ante interdum efficitur.'
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue. Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. Phasellus molestie blandit erat, vitae ullamcorper ante viverra et.'
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
+                text: 'As soon as you get started with Cloud Containers you’ll see how fast and flexible they are. It only takes a few minutes to launch a server, spin up a Container or two and see how much easier development can be with the right infrastructure.'
         type: add_columns
-        enabled: false
+        enabled: true
       -
         column:
           -
@@ -66,149 +54,139 @@ sections:
             content:
               -
                 type: text
-                text: 'Get your Wordpress site onto Serverless Hosting in minutes with Webslice.'
-          -
-            type: paragraph
-            content:
+                marks:
+                  -
+                    type: bold
+                text: 'Provision a server super-fast'
+              -
+                type: hard_break
               -
                 type: text
-                text: 'Serverless and PHP weren’t always two words that went well together, unless you had a truck load of experience in hosting infrastructure. And even then it wasn’t enjoyable.'
-          -
-            type: paragraph
-            content:
+                text: 'Choose your server specs and location, and it will be up and running in just a few clicks.'
               -
-                type: text
-                text: 'Webslice was designed to '
+                type: hard_break
+              -
+                type: hard_break
               -
                 type: text
                 marks:
                   -
                     type: bold
-                text: 'take the hassle out of getting WordPress sites onto Serverless Hosting.'
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Sound impossible? With Webslice, it’s not.'
+                text: 'Choose from prebuilt images'
               -
                 type: hard_break
               -
                 type: text
-                text: 'With the platform we are working on, you won’t have to'
-          -
-            type: bullet_list
-            content:
-              -
-                type: list_item
-                content:
-                  -
-                    type: paragraph
-                    content:
-                      -
-                        type: text
-                        text: 'Rewrite your current sites'
-              -
-                type: list_item
-                content:
-                  -
-                    type: paragraph
-                    content:
-                      -
-                        type: text
-                        text: 'Navigate through hoops to get an existing PHP application working'
-              -
-                type: list_item
-                content:
-                  -
-                    type: paragraph
-                    content:
-                      -
-                        type: text
-                        text: 'Change the way you use WordPress'
+                text: 'Once your server’s up, it’s Container time. A range of pre-built images including PHP, Apache and Wordpress, you can just pick and go.'
         type: add_columns
         enabled: true
     background_select: stripe_background
     add_highlight_features: true
-    highlight_features_title: 'Supercharge your development projects'
-    features:
-      -
-        template_global: /global/default_image
-        default_image: color-mode-dark-1656887943.png
-        title: 'Getting started with Webslice'
-        description:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Get familiar with the Webslice, the different tools it offers, and the most important features.'
-        type: highlight_feature
-        enabled: true
-      -
-        template_global: /global/default_image
-        default_image: color-mode-dark.png
-        title: 'Getting started with Webslice'
-        description:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Get familiar with the Webslice, the different tools it offers, and the most important features.'
-        type: highlight_feature
-        enabled: true
-      -
-        template_global: /global/default_image
-        default_image: color-mode-dark-1656887943.png
-        title: 'Getting started with Webslice'
-        description:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Get familiar with the Webslice, the different tools it offers, and the most important features.'
-        type: highlight_feature
-        enabled: true
-      -
-        template_global: /global/default_image
-        default_image: color-mode-dark.png
-        title: 'Getting started with Webslice'
-        description:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Get familiar with the Webslice, the different tools it offers, and the most important features.'
-        type: highlight_feature
-        enabled: false
-      -
-        template_global: /global/default_image
-        default_image: 09054a5f40e858381279a62e2ee534a7.webp
-        title: 'Getting started with Webslice'
-        description:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Get familiar with the Webslice, the different tools it offers, and the most important features.'
-        type: highlight_feature
-        enabled: false
+    highlight_features_title: 'Provision a server super-fast'
     type: feature_section
     enabled: true
+    features:
+      -
+        select_type: icon
+        iconamic: beach
+        title: 'Start risk-free, never get locked in'
+        description:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Get familiar with the Webslice, the different tools it offers, and the most important features.'
+        type: highlight_feature
+        enabled: true
+      -
+        select_type: icon
+        iconamic: earth
+        title: 'Host sites around the world'
+        description:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Get familiar with the Webslice, the different tools it offers, and the most important features.'
+        type: highlight_feature
+        enabled: true
+      -
+        select_type: icon
+        iconamic: environments
+        title: 'Run independent environments'
+        description:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Get familiar with the Webslice, the different tools it offers, and the most important features.'
+        type: highlight_feature
+        enabled: true
+      -
+        select_type: icon
+        iconamic: transfer
+        title: 'BYO containers'
+        description:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Get familiar with the Webslice, the different tools it offers, and the most important features.'
+        type: highlight_feature
+        enabled: true
+      -
+        select_type: icon
+        iconamic: cursor-click
+        title: 'Install SSL in one click'
+        description:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Get familiar with the Webslice, the different tools it offers, and the most important features.'
+        type: highlight_feature
+        enabled: true
+      -
+        select_type: icon
+        iconamic: auto-dns
+        title: 'Set up DNS automatically'
+        description:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Get familiar with the Webslice, the different tools it offers, and the most important features.'
+        type: highlight_feature
+        enabled: true
+      -
+        select_type: icon
+        iconamic: beach
+        title: 'Set and forget'
+        description:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Once you are up and running, you can have confidence that you will stay that way. Cloud Containers are stable, reliable, and run on a platform that we maintain.'
+        type: highlight_feature
+        enabled: true
   -
     template: /general_content/product/feature_section
-    section_title: 'Migrate WordPress to serverless'
+    section_title: 'Manage your hosting efficiently and without the stress'
     section_subtitle:
       -
         type: paragraph
         content:
           -
             type: text
-            text: 'Get your Wordpress site onto Serverless Hosting in minutes.'
+            text: 'The Cloud Containers platform makes it easy for you to develop and manage any number of websites.'
     template_global: /global/buttons
     link: '#'
     select: info
@@ -221,19 +199,24 @@ sections:
             content:
               -
                 type: text
-                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam. Fusce maximus non metus ac facilisis. Sed id nunc a ante interdum efficitur.'
-          -
-            type: paragraph
-            content:
+                text: 'Easily monitor and scale your hosting, and access a range of developer-focused tools that help you achieve more in less time.'
+              -
+                type: hard_break
+              -
+                type: hard_break
               -
                 type: text
-                text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue. Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. Phasellus molestie blandit erat, vitae ullamcorper ante viverra et.'
-          -
-            type: paragraph
-            content:
+                marks:
+                  -
+                    type: bold
+                text: 'Control changes with cloning and syncing'
+              -
+                type: hard_break
               -
                 type: text
-                text: 'Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
+                text: 'Never edit in production again. Easily create a copy of an existing Container, work on the clone until it’s good to go, then synchronise the data between Containers.'
+              -
+                type: hard_break
         type: add_columns
         enabled: true
       -
@@ -243,157 +226,294 @@ sections:
             content:
               -
                 type: text
-                text: 'Get your Wordpress site onto Serverless Hosting in minutes with Webslice.'
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Serverless and PHP weren’t always two words that went well together, unless you had a truck load of experience in hosting infrastructure. And even then it wasn’t enjoyable.'
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Webslice was designed to '
-              -
-                type: text
                 marks:
                   -
                     type: bold
-                text: 'take the hassle out of getting WordPress sites onto Serverless Hosting.'
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Sound impossible? With Webslice, it’s not.'
+                text: 'Scale up fast'
               -
                 type: hard_break
               -
                 type: text
-                text: 'With the platform we are working on, you won’t have to'
-          -
-            type: bullet_list
-            content:
-              -
-                type: list_item
-                content:
-                  -
-                    type: paragraph
-                    content:
-                      -
-                        type: text
-                        text: 'Rewrite your current sites'
-              -
-                type: list_item
-                content:
-                  -
-                    type: paragraph
-                    content:
-                      -
-                        type: text
-                        text: 'Navigate through hoops to get an existing PHP application working'
-              -
-                type: list_item
-                content:
-                  -
-                    type: paragraph
-                    content:
-                      -
-                        type: text
-                        text: 'Change the way you use WordPress'
+                text: 'Quickly upgrade your plan to handle whatever traffic or growth comes your way. Quickly shift servers to increase the cores, RAM, and storage at your disposal. Or you can add disk space alone.'
         type: add_columns
         enabled: true
     background_select: grid_background
     add_highlight_features: true
-    highlight_features_title: 'Supercharge your development projects'
+    highlight_features_title: 'Control changes with cloning and syncing'
     features:
       -
         template_global: /global/default_image
         default_image: color-mode-dark-1656887943.png
-        title: 'Getting started with Webslice'
+        title: 'Manage it all in one control panel'
         description:
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'Get familiar with the Webslice, the different tools it offers, and the most important features.'
+                text: 'Have all the tools you need to manage your servers, domain and containers with our purpose-built, easy to use control panel.'
         type: highlight_feature
         enabled: true
+        select_type: image
       -
         template_global: /global/default_image
         default_image: color-mode-dark.png
-        title: 'Getting started with Webslice'
+        title: 'See all your sites, databases and domains'
         description:
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'Get familiar with the Webslice, the different tools it offers, and the most important features.'
+                text: 'Ditch multiple logins and enjoy the ease of having all your sites, databases and domains in one place, under one account.'
         type: highlight_feature
         enabled: true
+        select_type: image
       -
         template_global: /global/default_image
         default_image: color-mode-dark-1656887943.png
-        title: 'Getting started with Webslice'
+        title: 'Track your performance and usage'
         description:
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'Get familiar with the Webslice, the different tools it offers, and the most important features.'
+                text: 'See server load stats, as well as bandwidth, disk, memory, and CPU usage for every Container and server, for periods from an hour to a year.'
         type: highlight_feature
         enabled: true
+        select_type: image
       -
         template_global: /global/default_image
         default_image: color-mode-dark.png
-        title: 'Getting started with Webslice'
+        title: 'Continually monitor server connectivity'
         description:
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'Get familiar with the Webslice, the different tools it offers, and the most important features.'
+                text: 'Set up connectivity monitoring including DNS, FTP, HTTP/S, SSH and SMTP and get email alerts if anything isn’t responding.'
         type: highlight_feature
-        enabled: false
+        enabled: true
+        select_type: image
       -
         template_global: /global/default_image
         default_image: 09054a5f40e858381279a62e2ee534a7.webp
-        title: 'Getting started with Webslice'
+        title: 'Cache your site the easy way'
         description:
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'Get familiar with the Webslice, the different tools it offers, and the most important features.'
+                text: 'Remove the complexities of caching in NGINX with our powerful Simple Cache integrated directly into managed Cloud Containers.'
         type: highlight_feature
-        enabled: false
+        enabled: true
+        select_type: image
+      -
+        select_type: image
+        default_image: bb28417eb2b2507580ab0f08bf09ea69.webp
+        title: 'Serve worldwide traffic, fast'
+        description:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Give your overseas customers a consistent, fast experience and reduce your international bandwidth usage with our CDN add-on.'
+        type: highlight_feature
+        enabled: true
     type: feature_section
     enabled: true
   -
-    template: /global/section_title
-    center_title_title: FAQ
-    center_title_textarea:
+    template: general_content/product/feature_section
+    section_title: 'We’ll take care of the rest so you don’t have to'
+    section_subtitle:
       -
         type: paragraph
         content:
           -
             type: text
-            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam. Fusce maximus non metus ac facilisis. Sed id nunc a ante interdum efficitur.'
-    toggle_color: false
-    faq_entries:
-      - 57c83bb4-e74d-47f9-924b-1f6ddf8c854a
-      - 236c12aa-a0ec-4e7e-8f4e-e67f29243f62
-      - ec1dbb6f-3d34-49e2-a387-c28342c8ab42
-    type: faq
+            text: 'While you’re building and maintaining great websites, we’re hard at work keeping the Cloud Containers platform fast and secure.'
+    template_global: /global/buttons
+    link: '#'
+    select: background
+    select_icon: none
+    text: 'See it for yourself'
+    columns:
+      -
+        column:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'We’re working with customers like you, too, offering 24/7 expert support.'
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Get support when you need it'
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'We don’t do long wait times or outsourced support. Our team is on the job around the clock and there’s always an engineer available.'
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Restore from automatic backups'
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'We take a daily backup of your server and store it for 14 days in a secure offsite location just in case you ever need it.'
+        type: add_columns
+        enabled: true
+    add_highlight_features: true
+    background_select: gradient_background
+    highlight_features_title: 'Supercharge your development projects'
+    features:
+      -
+        select_type: image
+        default_image: color-mode-dark.png
+        title: 'Forget about server maintenance'
+        description:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Don’t worry about patching or upgrading servers. We maintain every Cloud Container server to the same high standard, including hardware and operating system.'
+        type: highlight_feature
+        enabled: true
+      -
+        select_type: image
+        default_image: wordpress-on-aws.png
+        title: 'Run on genuinely powerful hardware'
+        description:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'We put our hardware through the grinder to ensure excellent performance and reliability. NVMe storage is standard across our whole product range.'
+        type: highlight_feature
+        enabled: true
+      -
+        select_type: image
+        default_image: b8f5db7682a5fb3fa938f2e26c0e855c.webp
+        title: 'Enjoy built-in security'
+        description:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'We keep the Cloud Container platform patched and up-to-date to stop vulnerabilities creeping in. Add Managed Services and we’re even more proactive.'
+        type: highlight_feature
+        enabled: true
+    type: feature_section
+    enabled: true
+  -
+    template: /general_content/highlight
+    rows:
+      -
+        highlight_title: 'Run different software, CMSs, and services without interference.'
+        highlight_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Making use of technologies like Docker, you can have a Container for each individual website or application, all on your own private server. This makes your hosting far more flexible by allowing each Container to run different software or services, without interfering with each other.'
+              -
+                type: hard_break
+              -
+                type: hard_break
+              -
+                type: text
+                text: 'Cloud Containers are an easy, flexible and powerful hosting option. With customers already hosting CMSs like '
+              -
+                type: text
+                marks:
+                  -
+                    type: link
+                    attrs:
+                      href: '#'
+                      rel: null
+                      target: null
+                      title: null
+                text: 'Craft CMS'
+              -
+                type: text
+                text: ', '
+              -
+                type: text
+                marks:
+                  -
+                    type: link
+                    attrs:
+                      href: '#'
+                      rel: null
+                      target: null
+                      title: null
+                text: Silverstripe
+              -
+                type: text
+                text: ', '
+              -
+                type: text
+                marks:
+                  -
+                    type: link
+                    attrs:
+                      href: '#'
+                      rel: null
+                      target: null
+                      title: null
+                text: WordPress
+              -
+                type: text
+                text: ' and more on Cloud Containers, we know your sites will be fast, secure and scalable.'
+        template_global: /global/buttons
+        default_image: color-mode-dark-1656887943.png
+        highlight_textcaption:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Color-mode: Dark'
+        link: '#'
+        select: background
+        select_icon: chevron-right
+        text: 'Click me'
+        type: highlight-item
+        enabled: true
+    toggle_background: false
+    reverse_alignment: true
+    toggle_alignment: false
+    type: highlight
+    enabled: true
+  -
+    template: /general_content/testimonial
+    testimonial_section_title: 'Developers love Cloud Containers'
+    type: testimonial
     enabled: true
 title: 'Cloud Containers'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1656911535
+updated_at: 1656973972
 ---

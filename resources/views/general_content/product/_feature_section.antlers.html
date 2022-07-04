@@ -19,8 +19,8 @@ they will alternate their order, they can all line up on either side. #}}
             </div>
         </div>
     </div>
-    <div class="relative">
-
+    {{ if add_highlight_features }}
+        <div class="relative">
             {{ if background_select:value === 'grid_background' }}
                 {{ partial:global/grid_lines hide_diagonal="true" }}
             {{ /if }}
@@ -95,23 +95,31 @@ they will alternate their order, they can all line up on either side. #}}
                 <div class="absolute inset-0 mx-8 my-12 transform rounded-full opacity-20 -z-10 bg-gradient-to-r from-purple-400 to-green-500 md:mx-2 md:my-2 rotate-6 filter blur-3xl"></div>
             {{ /if }}
 
-    <div class="container grid items-center grid-cols-8 gap-12">
-        <div class="col-span-2 space-y-8">
-            <h3 class="text-3xl font-medium ">{{ highlight_features_title }}</h3>
-        </div>
-        <div class="grid grid-cols-3 col-span-6 gap-8 mx-auto">
-        {{ features }}
-            <div class="col-span-1 p-4 space-y-4 bg-white border border-gray-100 rounded-lg shadow-xl shadow-purple-500/10">
-                <div class=" aspect-video">
-                    {{ partial:global/default_image }}
+            <div class="container grid items-center grid-cols-8 gap-12">
+                <div class="col-span-2 space-y-8">
+                    <h3 class="text-3xl font-medium ">{{ highlight_features_title }}</h3>
                 </div>
-                <h4 class="h5"> <span class="text-gray-300"> {{ index }} | </span> {{ title }}</h4>
-                <div class="prose prose-p:text-base">
-                    {{ description }}
+                <div class="grid grid-cols-3 col-span-6 gap-8 mx-auto">
+                {{ features }}
+                    <div class="col-span-1 p-4 space-y-4 bg-white border border-gray-100 rounded-lg shadow-xl shadow-purple-500/10">
+                        {{ if default_image }}
+                            <div class=" aspect-video">
+                                {{ partial:global/default_image }}
+                            </div>
+                        {{ /if }}
+                        {{ if iconamic }}
+                            <div class="text-purple-500">
+                                {{ svg src="{{ config:iconamic:path }}/{{iconamic}}.svg" class=" {{iconamic}} w-8 h-8 stroke-current aspect-square" }}
+                            </div>
+                        {{ /if }}
+                        <h4 class="h5"> <span class="text-gray-300"> {{ index }} | </span> {{ title }}</h4>
+                        <div class="prose prose-p:text-base">
+                            {{ description }}
+                        </div>
+                    </div>
+                {{ /features }}
                 </div>
             </div>
-        {{ /features }}
         </div>
-    </div>
-    </div>
+    {{ /if }}
 </section>
