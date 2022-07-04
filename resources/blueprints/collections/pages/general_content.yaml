@@ -159,6 +159,11 @@ sections:
               fields:
                 -
                   import: pricing_features_section
+            feature_section:
+              display: 'Feature Section'
+              fields:
+                -
+                  import: feature_section
           display: Sections
           type: replicator
           icon: replicator

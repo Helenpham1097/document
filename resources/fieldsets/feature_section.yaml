@@ -1,0 +1,157 @@
+title: 'Feature Section'
+fields:
+  -
+    handle: section_title
+    field:
+      input_type: text
+      antlers: false
+      display: 'Section Title'
+      type: text
+      icon: text
+      listable: hidden
+      default: /general_content/product/feature_section
+  -
+    handle: section_subtitle
+    field:
+      always_show_set_button: false
+      buttons:
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - anchor
+      save_html: false
+      toolbar_mode: fixed
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      reading_time: false
+      fullscreen: true
+      allow_source: true
+      display: 'Section Subtitle'
+      type: bard
+      icon: bard
+      listable: hidden
+  -
+    import: buttons
+  -
+    handle: columns
+    field:
+      collapse: false
+      max_sets: 2
+      sets:
+        add_columns:
+          display: 'Add columns'
+          fields:
+            -
+              handle: column
+              field:
+                always_show_set_button: false
+                buttons:
+                  - bold
+                  - italic
+                  - unorderedlist
+                  - orderedlist
+                  - removeformat
+                  - anchor
+                save_html: false
+                toolbar_mode: fixed
+                link_noopener: false
+                link_noreferrer: false
+                target_blank: false
+                reading_time: false
+                fullscreen: true
+                allow_source: true
+                display: Column
+                type: bard
+                icon: bard
+                listable: hidden
+      display: Columns
+      type: replicator
+      icon: replicator
+      listable: hidden
+  -
+    handle: background_select
+    field:
+      options:
+        grid_background: 'Grid Background'
+        gradient_background: 'Gradient Background'
+        stripe_background: 'Stripe Background'
+      multiple: false
+      clearable: false
+      searchable: true
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      display: 'Background Select'
+      type: select
+      icon: select
+      listable: hidden
+  -
+    handle: add_highlight_features
+    field:
+      display: 'Add Highlight Features'
+      type: toggle
+      icon: toggle
+      listable: hidden
+  -
+    handle: highlight_features_title
+    field:
+      input_type: text
+      antlers: false
+      display: 'Highlight Features Title'
+      type: text
+      icon: text
+      listable: hidden
+  -
+    handle: features
+    field:
+      collapse: false
+      sets:
+        highlight_feature:
+          display: 'Highlight Feature'
+          fields:
+            -
+              import: default_image
+            -
+              handle: title
+              field:
+                input_type: text
+                antlers: false
+                display: Title
+                type: text
+                icon: text
+                listable: hidden
+            -
+              handle: description
+              field:
+                always_show_set_button: false
+                buttons:
+                  - bold
+                  - italic
+                  - removeformat
+                  - anchor
+                save_html: false
+                toolbar_mode: fixed
+                link_noopener: false
+                link_noreferrer: false
+                target_blank: false
+                reading_time: false
+                fullscreen: true
+                allow_source: true
+                display: Description
+                type: bard
+                icon: bard
+                listable: hidden
+      display: Features
+      type: replicator
+      icon: replicator
+      listable: hidden
+  -
+    handle: template
+    field:
+      display: template
+      type: hidden
+      icon: hidden
+      listable: hidden
