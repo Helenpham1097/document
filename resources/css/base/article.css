@@ -14,6 +14,16 @@
     @apply hidden;
 }
 
+.feature-section .prose {
+    ::marker {
+        @apply hidden text-red-500 bg-red-500;
+        content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='12' fill='%2332FFDC'/%3E%3Cpath d='M8 12L10.8 15L16 9' stroke='%23555658' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    }
+    li p {
+        @apply my-1;
+    }
+}
+
 article p img {
     @apply mx-auto text-center justify-self-center;
 }

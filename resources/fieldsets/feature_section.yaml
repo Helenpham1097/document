@@ -1,6 +1,13 @@
 title: 'Feature Section'
 fields:
   -
+    handle: template
+    field:
+      display: template
+      type: hidden
+      icon: hidden
+      listable: hidden
+  -
     handle: section_title
     field:
       input_type: text
@@ -9,7 +16,6 @@ fields:
       type: text
       icon: text
       listable: hidden
-      default: /general_content/product/feature_section
   -
     handle: section_subtitle
     field:
@@ -89,13 +95,6 @@ fields:
       icon: select
       listable: hidden
   -
-    handle: add_highlight_features
-    field:
-      display: 'Add Highlight Features'
-      type: toggle
-      icon: toggle
-      listable: hidden
-  -
     handle: highlight_features_title
     field:
       input_type: text
@@ -103,6 +102,13 @@ fields:
       display: 'Highlight Features Title'
       type: text
       icon: text
+      listable: hidden
+  -
+    handle: add_highlight_features
+    field:
+      display: 'Add Highlight Features'
+      type: toggle
+      icon: toggle
       listable: hidden
   -
     handle: features
@@ -147,11 +153,4 @@ fields:
       display: Features
       type: replicator
       icon: replicator
-      listable: hidden
-  -
-    handle: template
-    field:
-      display: template
-      type: hidden
-      icon: hidden
       listable: hidden

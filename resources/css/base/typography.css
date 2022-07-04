@@ -19,26 +19,25 @@ ol {
     @apply text-base antialiased md:text-xl;
     text-rendering: optimizeLegibility;
 }
-h1 {
+.h1 {
     @apply py-1 text-4xl font-bold text-transparent bg-clip-text md:text-6xl bg-gradient-to-l from-black to-gray-700;
 }
-h2 {
+.h2 {
     @apply text-4xl font-bold md:leading-normal md:text-5xl;
 }
-h3 {
+.h3 {
     @apply text-xl font-bold sm:text-2xl;
 }
-h4 {
+.h4 {
     @apply text-xl md:text-2xl;
 }
-h5 {
+.h5 {
     @apply text-lg md:text-xl;
 }
-
-h6 {
+.h6 {
     @apply text-lg;
 }
-p {
+.p {
     @apply mb-4 leading-relaxed md:mb-8;
 }
 .dot {
@@ -60,7 +59,7 @@ code {
 	@apply mx-4 my-8 border-gray-200;
 } */
 
-hr {
+.hr {
     @apply mx-4 my-8 border-t border-solid;
     border-image: linear-gradient(
             90deg,
@@ -69,6 +68,10 @@ hr {
             rgba(0, 0, 0, 0)
         )
         100;
+}
+
+hr {
+    @apply my-8;
 }
 
 .purple {
