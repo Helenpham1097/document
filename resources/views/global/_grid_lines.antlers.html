@@ -2,17 +2,19 @@
     {{# This container creates the vertical lines of the grid, the empty
     elements allow to create the 6 internal columns and hide 3 when viewed on
     smaller screens. #}}
-    <div class="container absolute inset-0 grid h-screen grid-cols-2 gap-4 overflow-visible xl:grid-cols-6 lg:grid-cols-3 grid-lines">
+    <div class="container absolute inset-0 grid h-screen grid-cols-2 gap-4 overflow-visible  {{ if ! hide_diagonal}} xl:grid-cols-6 {{else}} xl:grid-cols-4 {{ /if }} lg:grid-cols-3 grid-lines">
         <div class="block"></div>
         <div class="block"></div>
         <div class="hidden lg:block"></div>
         <div class="hidden lg:block"></div>
+        {{ if ! hide_diagonal}}
         <div class="hidden lg:block"></div>
         <div class="hidden lg:block"></div>
+        {{ /if }}
     </div>
     {{ if ! hide_diagonal}}
         <svg
-            class="absolute"
+            class="absolute translate-x-5"
             width="2386"
             height="948"
             fill="none"

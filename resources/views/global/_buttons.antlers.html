@@ -1,35 +1,38 @@
+{{#
+	The button partial is used in most of the site's call to action, with the exception of the buttons in the navigation bar, footer and contact page, as these buttons have custom styles.
+
+	It has three variants:
+	- Primary or solid background button for main actions.
+	- Secondary or transparent button, for secondary actions
+	- Link or info button for links
+#}}
+
 {{ if select:value === 'info' }}
-	<a href="{{ link }}" class="inline-flex items-center text-lg font-semibold text-purple-500 group hover:text-purple-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-purple-900">
+	{{# Link button with chevron #}}
+	<a href="{{ link }}"
+		class="inline-flex items-center text-lg font-semibold text-purple-500 focus-visible:outline-none focus-visible:ring focus-visible:ring-transparent group active:text-sky-700 hover:text-purple-500 focus:outline-none focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:outline-dashed focus-visible:ring-offset-sitehost-blue" >
 		{{ text }}
 		<div class="transition duration-500 ease-in-out transform group-hover:translate-x-2">
-			<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 transition duration-500 ease-in-out transform translate-x-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+			<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mt-0.5 transition duration-500 ease-in-out transform translate-x-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
 			</svg>
 		</div>
 	</a>
 {{ else }}
-	<a href="{{ link }}" class="inline-flex items-center px-5 py-3 font-semibold shadow-xl hover:shadow-sm {{ if select:value === 'background-secondary' }} text-black bg-green-500 hover:shadow-green-600/40 shadow-green-500/30 hover:bg-green-600 hover:text-black focus-visible:ring-offset-green-900 {{ else }} text-white bg-purple-500 hover:bg-purple-800 hover:shadow-purple-600/40 shadow-purple-500/20 hover:text-purple-100 focus-visible:ring-offset-purple-900 {{ /if }} group text-md space-x-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2">
-		{{ if select_icon:value === 'chevron-left' }}
-			<div class="transition duration-500 ease-in-out transform group-hover:-translate-x-3">
-				<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 {{ if select:value === 'background-secondary' }} text-black group-hover:text-green-900 {{ else}} text-white group-hover:text-purple-100 {{ /if}} transition duration-500 ease-in-out transform translate-x-0 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-				</svg>
-			</div>
-		{{ /if }}
+	<a href="{{ link }}"
+		class="inline-flex items-center focus-visible:outline-none focus-visible:ring focus-visible:ring-sitehost-orange/80 active:bg-black justify-center max-w-fit text-base py-2
+		{{if iconamic}} pl-4 pr-3 space-x-2 {{else}} px-6 {{/if}} font-bold transition  border group text-md  focus:outline-none focus-visible:ring-white focus-visible:ring-offset-2
+		{{# Secondary transparent button #}}
+		{{ if select:value === 'background-secondary' }}
+		border-slate-300 bg-white text-slate-900 hover:text-white hover:bg-purple-500 hover:border-purple-400 
+		{{# Main solid button #}}
+		{{ else }}
+		border-slate-600 bg-purple-500 text-white hover:text-white hover:bg-purple-800 hover:border-purple-400
+		{{ /if }} ">
 		<span>{{ text }}</span>
-		{{ if select_icon:value === 'chevron-right' }}
-			<div class="transition duration-500 ease-in-out transform group-hover:translate-x-3">
-				<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 {{ if select:value === 'background-secondary' }} text-black group-hover:text-green-900 {{ else}} text-white group-hover:text-purple-100 {{ /if}} transition duration-500 ease-in-out transform translate-x-0 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-				</svg>
-			</div>
-		{{ /if }}
-		{{ if select_icon:value === 'mail' }}
-			<div class="transition duration-500 ease-in-out transform ">
-				<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 {{ if select:value === 'background-secondary' }} text-black group-hover:text-green-900 {{ else}} text-white group-hover:text-purple-100 {{ /if}} transition duration-500 ease-in-out transform translate-x-0 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-				</svg>
-			</div>
+		{{# The optional icons come from the public/icons folder thanks to the iconamic add on, and have a size variant applied with the medium_icon variable, and the color is defined by (stroke-current) the selected button variant. #}}
+		{{ if iconamic }}
+			{{ svg src="{{ config:iconamic:path }}/{{iconamic}}.svg" class=" {{iconamic}}  {{ if medium_icon }} w-8 {{else}} w-5 {{ /if }} stroke-current" }}
 		{{ /if }}
 	</a>
 {{ /if }}

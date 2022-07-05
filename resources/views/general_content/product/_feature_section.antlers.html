@@ -2,7 +2,7 @@
 they will alternate their order, they can all line up on either side. #}}
 <section class="relative space-y-8 feature-section lg:space-y-24 {{ if background_select:value === 'stripe_background' }} pb-24 {{ /if }}">
     <div class="container ">
-        <h2 class="w-1/3 h2">{{ section_title }}</h2>
+        <h2 class="w-1/3 text-black h2">{{ section_title }}</h2>
         <hr />
         <div class="grid grid-cols-6 gap-12">
             <div class="col-span-2 space-y-8">
@@ -25,7 +25,7 @@ they will alternate their order, they can all line up on either side. #}}
                 {{ partial:global/grid_lines hide_diagonal="true" }}
             {{ /if }}
             {{ if background_select:value === 'stripe_background' }}
-                <div class="absolute h-full w-[110%] transform translate-y-24 opacity-20 -translate-x-10 -z-10 rotate-3 bg-gradient-to-r from-green-500 to-purple-400"></div>
+                <div class="absolute h-full w-[110%] transform translate-y-24 opacity-20 -translate-x-10 -z-10 rotate-3 bg-gradient-to-r from-purple-500 to-green-400"></div>
                 <div class="absolute inset-0 h-full mx-auto -z-10 max-w-screen-2xl ">
                     <svg class="relative text-green-300 -translate-x-full -translate-y-1/2 " width="273" height="269" viewBox="0 0 273 269" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <mask id="mask0_1430_25914" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="1" width="272" height="268">
@@ -92,16 +92,29 @@ they will alternate their order, they can all line up on either side. #}}
                 </div>
             {{ /if }}
             {{ if background_select:value === 'gradient_background' }}
-                <div class="absolute inset-0 mx-8 my-12 transform rounded-full opacity-20 -z-10 bg-gradient-to-r from-purple-400 to-green-500 md:mx-2 md:my-2 rotate-6 filter blur-3xl"></div>
+                <div class="absolute inset-0 mx-8 my-12 transform rounded-full translate-x-1/3 opacity-20 -z-10 bg-gradient-to-r from-green-400 to-purple-500 md:mx-2 md:my-2 rotate-6 filter blur-3xl"></div>
             {{ /if }}
 
-            <div class="container grid items-center grid-cols-8 gap-12">
+            <div class="container grid items-center grid-cols-8 gap-4">
                 <div class="col-span-2 space-y-8">
-                    <h3 class="text-3xl font-medium ">{{ highlight_features_title }}</h3>
+                    <h3 class="mr-8 text-4xl font-bold prose text-black ">{{ highlight_features_title }}</h3>
+                    {{ if background_select:value === 'grid_background' }}
+                        <svg class="text-purple-100" width="91" height="89" viewBox="0 0 91 89" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 12.2713V27.5241L28.2975 0H12.5636L0 12.2713Z" fill="currentColor"/>
+                            <path d="M0 42.7713V58.0241L28.2975 30.5H12.5636L0 42.7713Z" fill="currentColor"/>
+                            <path d="M0 73.2713V88.5241L28.2975 61H12.5636L0 73.2713Z" fill="currentColor"/>
+                            <path d="M61.9727 12.2713V27.5241L90.2702 0H74.5363L61.9727 12.2713Z" fill="currentColor"/>
+                            <path d="M61.9727 42.7713V58.0241L90.2702 30.5H74.5363L61.9727 42.7713Z" fill="currentColor"/>
+                            <path d="M61.9727 73.2713V88.5241L90.2702 61H74.5363L61.9727 73.2713Z" fill="currentColor"/>
+                            <path d="M30.9727 12.2713V27.5241L59.2702 0H43.5363L30.9727 12.2713Z" fill="currentColor"/>
+                            <path d="M30.9727 42.7713V58.0241L59.2702 30.5H43.5363L30.9727 42.7713Z" fill="currentColor"/>
+                            <path d="M30.9727 73.2713V88.5241L59.2702 61H43.5363L30.9727 73.2713Z" fill="currentColor"/>
+                        </svg>
+                    {{ /if }}
                 </div>
-                <div class="grid grid-cols-3 col-span-6 gap-8 mx-auto">
+                <div class="grid grid-cols-3 col-span-6 gap-4 mx-auto">
                 {{ features }}
-                    <div class="col-span-1 p-4 space-y-4 bg-white border border-gray-100 rounded-lg shadow-xl shadow-purple-500/10">
+                    <div class="col-span-1 p-4 m-px space-y-4 bg-white border border-gray-100 rounded-lg shadow-xl shadow-neutral-500/10">
                         {{ if default_image }}
                             <div class=" aspect-video">
                                 {{ partial:global/default_image }}
@@ -112,7 +125,12 @@ they will alternate their order, they can all line up on either side. #}}
                                 {{ svg src="{{ config:iconamic:path }}/{{iconamic}}.svg" class=" {{iconamic}} w-8 h-8 stroke-current aspect-square" }}
                             </div>
                         {{ /if }}
-                        <h4 class="h5"> <span class="text-gray-300"> {{ index }} | </span> {{ title }}</h4>
+                        <div class="flex flex-col space-y-3">
+                            {{# <span class="text-gray-300"> {{ index }}</span> #}}
+                            {{# <span class="flex-none h-6 border"></span> #}}
+                            <h4 class="font-semibold h5">{{ title }}</h4>
+                            <hr class="w-1/3 my-0 border-purple-500/20 ">
+                        </div>
                         <div class="prose prose-p:text-base">
                             {{ description }}
                         </div>

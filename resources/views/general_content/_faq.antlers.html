@@ -1,9 +1,12 @@
 {{# Single Faq template, brings Faqs from the Faq collection, more can be added from the replicator. #}}
 <section class="mx-auto space-y-8 md:space-y-8">
-{{ partial:global/section_title }}
+    <div class="container mx-auto space-y-8 text-center md:max-w-3xl">
+        <h2 class="h2">{{ faq_title }}</h2>
+        <p class="excerpt">{{ faq_intro_text | strip_tags:p }}</p>
+    </div>
 
-        <div class="flex flex-row justify-between mx-auto max-w-7xl">
-        <div class="container max-w-4xl mx-auto bg-white border border-gray-200 rounded-lg shadow-2xl shadow-sitehost-blue/20 " x-data="{selected:0}">
+    <div class="flex flex-row justify-between mx-auto max-w-7xl">
+        <div class="container max-w-4xl mx-auto bg-white border border-gray-200 rounded-lg shadow-2xl shadow-purple-blue/20 " x-data="{selected:0}">
             <ul>
                 {{ faq_entries }}
                 <div class="relative {{ if last }}  {{ else }} border-b {{ /if }} border-gray-200">
@@ -13,15 +16,15 @@
                         <path d="M8.22766 9C8.77678 7.83481 10.2584 7 12.0001 7C14.2092 7 16.0001 8.34315 16.0001 10C16.0001 11.3994 14.7224 12.5751 12.9943 12.9066C12.4519 13.0106 12.0001 13.4477 12.0001 14M12 17H12.01M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
-                    <div class="relative h-auto overflow-hidden prose-sm prose transition-all duration-700 ease-in-out max-w-none prose-purple max-h-0" style="" x-ref="container" x-bind:style="selected == {{ index }} ? 'max-height:' + 450 + 'px' : ''">
-                        <p class="px-8 pb-6">
+                    <div class="relative h-auto overflow-hidden prose transition-all duration-700 ease-in-out prose-li:text-base max-w-none prose-purple max-h-0" style="" x-ref="container" x-bind:style="selected == {{ index }} ? 'max-height:' + 450 + 'px' : ''">
+                        <div class="px-8 pb-6">
                             {{ answer  | strip_tags:p  }}
-                        </p>
+                        </div>
                     </div>
                 </div>
                 {{ /faq_entries }}
             </ul>
         </div>
-    </div>
+</div>
 
 </section>

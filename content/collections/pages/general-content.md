@@ -1,8 +1,9 @@
 ---
+id: 26513dc7-59f7-4673-815e-7d9ace16248b
+blueprint: general_content
 title: 'General content'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1641948197
-blueprint: general_content
+updated_at: 1656985142
 description: Lorem
 template: general_content/layout
 subheader: sdasda
@@ -26,20 +27,20 @@ sections:
     template: /general_content/_multiple_text_columns
     columns:
       -
-        markdown: |
+        markdown: |-
           ## Consectetur adipiscing elit.
           Suspendisse tempus lacus at metus pulvinar, at ultricies dui lobortis. In volutpat mauris quis mauris elementum laoreet. Etiam in interdum tellus. Suspendisse ac eros augue. Donec felis enim, facilisis ut enim vitae, luctus elementum nibh. Quisque eleifend dolor non finibus porta. Vivamus luctus arcu vitae dolor pellentesque, a congue nisl lacinia. Pellentesque tristique a neque quis vehicula. Nullam ante lectus, facilisis ac consequat ac, commodo ut leo. Nullam tempor laoreet lacus, vulputate venenatis nisl porttitor at. Nam eu laoreet nibh. Phasellus feugiat leo purus, condimentum ultricies velit imperdiet sit amet. Integer ac faucibus ipsum. Proin a eleifend elit, ut eleifend nulla.
-          
+
           Cras vel leo et odio viverra consequat. Duis neque elit, posuere vitae bibendum sit amet, auctor eget lectus. Duis tempor in neque eget facilisis. Maecenas ullamcorper ante neque, at aliquam augue bibendum id. Suspendisse ex nibh, varius at sem sit amet, vestibulum tristique nisi. Donec nec ornare nunc. Donec ac enim vestibulum, feugiat nibh sed, lacinia mauris. Etiam sed quam sapien. Aliquam erat volutpat. Praesent sed massa et lacus laoreet feugiat a vel nibh. Proin sed cursus libero. Etiam mattis elit congue, consectetur eros elementum, pellentesque mi.
-          
+
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris imperdiet porta elit, vitae placerat ipsum pharetra a. Proin sit amet nulla nec risus rutrum fermentum. Vivamus ultrices quis dolor eu placerat. Cras posuere cursus quam, quis blandit neque vehicula non. Morbi cursus quam nisi, a porttitor magna varius nec. In risus enim, eleifend in accumsan maximus, consectetur a nisl. Maecenas turpis eros, consequat vitae nibh ac, malesuada tincidunt risus.
         type: column
         enabled: true
       -
-        markdown: |
+        markdown: |-
           ## Integer ac sodales neque.
           In non suscipit augue, sed tincidunt elit. Donec facilisis dui sapien, eu imperdiet orci pretium ac. Sed pretium, augue eget tristique tempor, risus sapien maximus odio, sit amet lacinia velit justo quis dolor. Aliquam dignissim nibh id libero tempor facilisis. Fusce facilisis, felis in aliquam feugiat, augue turpis malesuada ante, vel egestas tortor leo et massa. Nulla vitae elementum leo. Aliquam accumsan, enim non maximus bibendum, massa purus finibus dui, ac ornare turpis elit a purus. Aenean ut nulla sodales dui mollis maximus eget nec sapien. Donec ac elementum turpis, bibendum facilisis sapien. Praesent molestie pellentesque cursus. Vestibulum sit amet nisi placerat, varius lectus et, vehicula tellus. Aliquam erat volutpat.
-          
+
           Maecenas ut ipsum non metus porta accumsan. Duis eu malesuada mauris, et accumsan ipsum. Proin id tellus felis. Sed quam arcu, euismod non lorem quis, facilisis tincidunt ex. Integer eu pellentesque orci. Phasellus libero risus, mattis in ultricies fermentum, sagittis at sem. Duis vulputate accumsan porttitor. Maecenas molestie mi a ipsum lacinia placerat. Quisque pretium, mauris id tempor sollicitudin, quam odio sodales ex, non ullamcorper dui augue sed ex. Nam blandit maximus ultricies. Nunc imperdiet vitae sem quis dignissim. Phasellus magna tellus, elementum quis lectus vitae, ullamcorper interdum sapien. Suspendisse ante nibh, euismod at ex nec, scelerisque dictum tortor. Phasellus ut lacus aliquet eros finibus maximus quis eu nisl. Praesent laoreet lacinia nisl, sit amet congue elit. Morbi scelerisque scelerisque diam at sodales.
         type: column
         enabled: true
@@ -65,7 +66,6 @@ sections:
     companies_title: 'We’re proud to have played a part in these amazing journeys.'
     company:
       -
-        company_logo: null
         type: companies
         enabled: true
         template: /global/default_image
@@ -113,7 +113,6 @@ sections:
         enabled: true
         template: /global/buttons
         select: info
-        select_icon: null
         text: 'Learn more'
         link: '#'
         default_image: 09054a5f40e858381279a62e2ee534a7.webp
@@ -177,7 +176,6 @@ sections:
         enabled: true
         template: /global/buttons
         select: info
-        select_icon: null
         text: 'Read more'
         link: '#'
         default_image: 09054a5f40e858381279a62e2ee534a7.webp
@@ -205,7 +203,6 @@ sections:
         enabled: true
         template: /global/buttons
         select: info
-        select_icon: null
         text: 'Read mores'
         link: '#'
         default_image: b8f5db7682a5fb3fa938f2e26c0e855c.webp
@@ -234,7 +231,6 @@ sections:
         feature_image: bb28417eb2b2507580ab0f08bf09ea69.webp
         link: '#'
         select: info
-        select_icon: null
         text: 'Learn more'
         default_image: 09054a5f40e858381279a62e2ee534a7.webp
         template_global: /global/default_image
@@ -308,11 +304,8 @@ sections:
         enabled: true
   -
     template: /general_content/steps
-    testimonial_section_title: null
-    testimonial_text_area: null
     Items:
       -
-        step_image: null
         step_title: 'First Step'
         step_textarea:
           -
@@ -347,10 +340,6 @@ sections:
         type: Step-item
         enabled: true
         template: /global/buttons
-        link: null
-        select: null
-        select_icon: null
-        text: null
         default_image: 1.png
         template_global: /global/default_image
       -
@@ -368,10 +357,6 @@ sections:
         type: Step-item
         enabled: true
         template: /global/buttons
-        link: null
-        select: null
-        select_icon: null
-        text: null
         default_image: 2.png
         template_global: /global/default_image
       -
@@ -389,10 +374,6 @@ sections:
         type: Step-item
         enabled: true
         template: /global/buttons
-        link: null
-        select: null
-        select_icon: null
-        text: null
         default_image: 4.png
         template_global: /global/default_image
     type: steps
@@ -448,7 +429,7 @@ sections:
         content:
           -
             type: text
-            text: 'Pri ex magna scaevola moderatius. Nullam '
+            text: 'Pri ex magna scaevola moderatius. Nullam'
           -
             type: text
             marks:
@@ -461,7 +442,7 @@ sections:
             text: accommodare
           -
             type: text
-            text: ' no vix, est ei diceret alienum, et sit cetero malorum. Et sea iudico consequat, est sanctus adipisci ex.'
+            text: 'no vix, est ei diceret alienum, et sit cetero malorum. Et sea iudico consequat, est sanctus adipisci ex.'
     Items:
       -
         testimonial_image: profile.png
@@ -558,18 +539,14 @@ sections:
     display_title_section:
       -
         template: /global/section_title
-        center_title_pre_title: null
         center_title_title: 'Icon Features'
-        center_title_textarea: null
         toggle_color: true
         type: section_title
         enabled: true
     items:
       -
-        template: null
         feature_image: 05.svg
         features_columns_title: 'This is a Feature Icon item'
-        features_columns_subtitle: null
         features_columns_list:
           -
             type: paragraph
@@ -587,7 +564,6 @@ sections:
         type: column
         enabled: true
       -
-        template: null
         feature_image: 05.svg
         features_columns_title: 'This is a Feature Icon item'
         features_columns_list:
@@ -605,7 +581,6 @@ sections:
         type: column
         enabled: true
       -
-        template: null
         feature_image: 05.svg
         features_columns_title: 'This is a Feature Icon item'
         features_columns_list:
@@ -623,7 +598,6 @@ sections:
         type: column
         enabled: true
       -
-        template: null
         feature_image: 05.svg
         features_columns_title: Feature
         features_columns_list:
@@ -639,8 +613,6 @@ sections:
     enabled: false
   -
     template: /general_content/social_proof
-    social_proof_section_title: null
-    social_proof_text_area: null
     Items:
       -
         social_proof_image: profile.png
@@ -653,14 +625,11 @@ sections:
               -
                 type: text
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam.'
-        social_proof_link: null
-        social_proof_text_link: null
         type: Social-Proof-item
         enabled: true
         template: /global/buttons
         link: '#'
         select: info
-        select_icon: null
         text: 'Learn more'
         template_global: /global/buttons
       -
@@ -675,10 +644,6 @@ sections:
                 type: text
                 text: 'Fusce maximus non metus ac facilisis. Sed id nunc a ante interdum efficitur. Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue.'
         template: /global/buttons
-        link: null
-        select: null
-        select_icon: null
-        text: null
         type: Social-Proof-item
         enabled: true
         template_global: /global/buttons
@@ -745,10 +710,6 @@ sections:
         toggle_color: false
         type: section_title
         enabled: true
-    link: null
-    select: null
-    select_icon: null
-    text: null
   -
     template: /general_content/pricing_table
     Items:
@@ -772,9 +733,6 @@ sections:
         template_global: /global/buttons
       -
         template: /global/buttons
-        pricing_features_title: null
-        pricing_features_subtitle: null
-        pricing_features_list: null
         type: column
         enabled: true
         link: '#'
@@ -784,9 +742,6 @@ sections:
         template_global: /global/buttons
       -
         template: /global/buttons
-        pricing_features_title: null
-        pricing_features_subtitle: null
-        pricing_features_list: null
         type: column
         enabled: true
         link: '#'
@@ -841,7 +796,6 @@ sections:
     header_table:
       -
         brand_left: 05.svg
-        brand_right: null
         text: Title
         table_icon: default-avatar.png
         header_column_1:
@@ -944,7 +898,6 @@ sections:
               -
                 type: text
                 text: comparison_1
-        comparison_2: null
         comparison_3:
           -
             type: bullet_list
@@ -986,7 +939,6 @@ sections:
                         type: text
                         text: 'item 4'
       -
-        text: null
         comparison_1:
           -
             type: paragraph
@@ -1009,7 +961,6 @@ sections:
                 type: text
                 text: dasda
       -
-        text: null
         comparison_1:
           -
             type: paragraph
@@ -1047,39 +998,36 @@ sections:
     enabled: true
   -
     template: /general_content/multiple_text_columns
-    markdown_a: null
-    markdown_b: null
     type: multiple_text_columns
     enabled: true
     columns:
       -
-        markdown: |
+        markdown: |-
           ## Getting Started with Webslice
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer iaculis ex a turpis vestibulum, at facilisis sem ullamcorper. **Proin ut mauris purus.** Cras vitae eleifend eros, vel posuere nisi. Nulla quis libero sit amet mauris consectetur blandit eget eu ligula. Aliquam pulvinar feugiat placerat. Nullam ac justo eu sapien viverra scelerisque. Vestibulum ante ipsum primis in faucibus orci _luctus et ultrices posuere_ cubilia curae; Cras a purus est. Praesent tristique, felis id accumsan pharetra, mauris felis venenatis eros, sed sagittis est risus eu leo. Vivamus laoreet lectus sed mi facilisis, vel pellentesque felis ultricies. Maecenas ut nibh condimentum tellus dictum tincidunt. Donec ac ante diam. Donec hendrerit tincidunt [tincidunt](#).
         type: column
         enabled: true
       -
-        markdown: |
+        markdown: |-
           ### Basics of web development
-          
+
           Donec eu lectus in dui rhoncus iaculis. Etiam vel nisl mi. Phasellus a enim id diam tincidunt condimentum. Donec tristique vel ipsum nec suscipit. Vestibulum laoreet ullamcorper lacinia. Donec pretium mattis accumsan. Maecenas eget erat aliquam, condimentum turpis tincidunt, tempus orci.
           Vestibulum ante ipsum primis in faucibus orci.
-          
+
           Luctus et ultrices posuere cubilia curae; Cras a purus est. Praesent tristique, felis id accumsan pharetra, mauris felis venenatis eros, sed sagittis est risus eu leo. Vivamus laoreet lectus sed mi facilisis, vel
         type: column
         enabled: true
-    display_title_section: {  }
   -
     template: /general_content/multiple_text_columns
     columns:
       -
-        markdown: |
+        markdown: |-
           #### loremLorem ipsum dolor sit amet.
           Vestibulum viverra lobortis felis, sit amet congue diam posuere sit amet. Phasellus quis porttitor quam, at tincidunt eros. Nam lorem quam, eleifend non metus iaculis, elementum hendrerit ipsum. _Pellentesque scelerisque iaculis est_, sit amet suscipit magna tincidunt vitae. Donec condimentum libero quis purus rutrum vehicula. Proin elit nunc, convallis eget tempor sit amet, suscipit nec orci. Curabitur sed eros vitae nulla volutpat laoreet. Proin convallis molestie varius.
         type: column
         enabled: true
       -
-        markdown: |
+        markdown: |-
           #### Aenean egestas tincidunt justo in.
           Nunc ante quam, consequat nec ante in, auctor volutpat diam. Donec pharetra, velit a pharetra auctor, elit dolor luctus dui, ac interdum metus lectus ut risus. Mauris ultricies sed mauris sit amet feugiat. Proin bibendum ut **nibh vitae luctus**. Curabitur a auctor nisl. Ut nec eros accumsan, luctus turpis ac, bibendum ligula. 
           - item 1
@@ -1089,16 +1037,15 @@ sections:
         type: column
         enabled: true
       -
-        markdown: |
+        markdown: |-
           #### Morbi vitae consequat est.
           Aliquam euismod urna nunc, vitae vestibulum nunc vehicula vitae. Fusce condimentum nisi vitae orci egestas, ut [pharetra risus placerat](#). Duis et feugiat tellus. Pellentesque eget felis turpis. Duis sit amet nibh ut nibh dictum suscipit vel eget dolor. Curabitur euismod ex quis consectetur viverra. Nam vel pharetra felis.
-          
+
           Vivamus elementum, libero quis gravida facilisis, orci nisi sodales magna, ac consectetur leo urna non leo. Curabitur porta tempus mauris, vel ornare magna lobortis facilisis.
         type: column
         enabled: true
     type: multiple_text_columns
     enabled: true
-    display_title_section: {  }
   -
     template: /general_content/image_gallery
     display_title_section:
@@ -1106,43 +1053,36 @@ sections:
         template: /global/section_title
         center_title_pre_title: Lightbox
         center_title_title: 'Image gallery'
-        center_title_textarea: null
         toggle_color: true
         type: section_title
         enabled: true
     items:
       -
-        template: null
         template_global: /global/default_image
         default_image: 09054a5f40e858381279a62e2ee534a7.webp
         type: image
         enabled: true
       -
-        template: null
         template_global: /global/default_image
         default_image: 2f72e4702fbbfad307de663bcf1218c0.webp
         type: image
         enabled: true
       -
-        template: null
         template_global: /global/default_image
         default_image: aditya-das-Myu7dSCwhSI-unsplash.jpg
         type: image
         enabled: true
       -
-        template: null
         template_global: /global/default_image
         default_image: b8f5db7682a5fb3fa938f2e26c0e855c.webp
         type: image
         enabled: false
       -
-        template: null
         template_global: /global/default_image
         default_image: ice-cream-cones.jpeg
         type: image
         enabled: false
       -
-        template: null
         template_global: /global/default_image
         default_image: serverless-nights-php-quinitin.png
         type: image
@@ -1155,14 +1095,14 @@ sections:
     enabled: true
   -
     template: /general_content/text_content
-    markdown: |
+    markdown: |-
       ## Getting Started with Webslice
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer iaculis ex a turpis vestibulum, at facilisis sem ullamcorper. **Proin ut mauris purus.** Cras vitae eleifend eros, vel posuere nisi. Nulla quis libero sit amet mauris consectetur blandit eget eu ligula. Aliquam pulvinar feugiat placerat. Nullam ac justo eu sapien viverra scelerisque. Vestibulum ante ipsum primis in faucibus orci _luctus et ultrices posuere_ cubilia curae; Cras a purus est. Praesent tristique, felis id accumsan pharetra, mauris felis venenatis eros, sed sagittis est risus eu leo. Vivamus laoreet lectus sed mi facilisis, vel pellentesque felis ultricies. Maecenas ut nibh condimentum tellus dictum tincidunt. Donec ac ante diam. Donec hendrerit tincidunt [tincidunt](#).
-      
+
       ![alt text](https://cdn.dribbble.com/users/1787323/screenshots/14750853/media/856e01d496f23c383d0913eaaaecd1c9.png?compress=1&resize=1200x900)
-      
+
       ### Basics of web development
-      
+
       Donec eu lectus in dui rhoncus iaculis. Etiam vel nisl mi. Phasellus a enim id diam tincidunt condimentum. Donec tristique vel ipsum nec suscipit. Vestibulum laoreet ullamcorper lacinia. Donec pretium mattis accumsan. Maecenas eget erat aliquam, condimentum turpis tincidunt, tempus orci.
     type: text_content
     enabled: true
@@ -1172,28 +1112,6 @@ sections:
     enabled: true
     center_title_pre_title: 'Last articles'
     center_title_title: 'From our blog'
-    center_title_textarea: null
-    toggle_color: true
-  -
-    template: /general_content/faq
-    faq_entries:
-      - 57c83bb4-e74d-47f9-924b-1f6ddf8c854a
-      - 236c12aa-a0ec-4e7e-8f4e-e67f29243f62
-      - ec1dbb6f-3d34-49e2-a387-c28342c8ab42
-      - a1c95fbe-5b46-427a-ab56-764bc1fa0e4d
-      - a9f9ef1a-f20a-4e06-9353-98d810fa2fe7
-      - ff4f50d5-1343-4f9f-bfd2-ded4d205c19a
-    type: faq
-    enabled: true
-    center_title_pre_title: FAQ
-    center_title_title: 'Frequently asked questions'
-    center_title_textarea:
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: ' Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. '
     toggle_color: true
   -
     template: /global/call_to_action
@@ -1275,7 +1193,6 @@ sections:
     toggle: false
     type: horizontal_cta
     enabled: true
-    section_id: null
   -
     template: /general_content/_horizontal_cta
     toggle: true
@@ -1293,7 +1210,6 @@ sections:
     select: background-secondary
     select_icon: mail
     text: 'Contact Us'
-    section_id: null
     type: horizontal_cta
     enabled: false
 top_section:
@@ -1333,9 +1249,7 @@ top_section:
             text: '⚡ Get your free $5 credit upon signing up today!'
     hero_home_image: bb28417eb2b2507580ab0f08bf09ea69.webp
     hero_home_primary_text: cta
-    hero_home_primary: null
     hero_home_secondary_text: cta
-    hero_home_secondary: null
     link: '@'
     select: background
     select_icon: chevron-right
@@ -1344,5 +1258,4 @@ top_section:
     template_global: /global/default_image
 meta_title: 'Meta title'
 meta_description: 'Meta Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod.'
-id: 26513dc7-59f7-4673-815e-7d9ace16248b
 ---

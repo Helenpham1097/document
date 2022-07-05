@@ -19,9 +19,9 @@ fields:
     handle: select
     field:
       options:
-        background: 'Background Primary'
+        background: Solid
         info: Link
-        background-secondary: 'Background Secondary'
+        background-secondary: Transparent
       placeholder: 'Choose your button type'
       multiple: false
       clearable: false
@@ -29,35 +29,15 @@ fields:
       taggable: false
       push_tags: false
       cast_booleans: false
-      display: 'Select type'
+      display: Type
       type: select
       icon: select
       listable: hidden
-      width: 50
       if:
         link: 'not empty'
+      instructions_position: above
   -
-    handle: select_icon
-    field:
-      options:
-        none: null
-        chevron-left: null
-        chevron-right: null
-        mail: null
-      multiple: false
-      clearable: false
-      searchable: true
-      taggable: false
-      push_tags: false
-      cast_booleans: false
-      display: 'Select Icon'
-      type: select
-      icon: select
-      listable: hidden
-      width: 50
-      if:
-        select: '!== info'
-        link: 'not empty'
+    import: icon
   -
     handle: text
     field:

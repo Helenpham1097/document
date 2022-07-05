@@ -73,7 +73,7 @@ sections:
               display: 'Testimonial Section'
               fields:
                 -
-                  import: testimonial
+                  import: testimonial_section
             steps:
               display: Steps
               fields:
@@ -177,6 +177,8 @@ sections:
                   enabled: true
               type: text_content
               enabled: true
+          instructions_position: above
+          read_only: false
   sidebar:
     display: Sidebar
     fields:
@@ -185,7 +187,6 @@ sections:
         field:
           type: slug
           localizable: true
-          required: true
           validate:
             - required
             - 'unique_entry_value:{collection},{id},{site}'

@@ -21,6 +21,7 @@ top_section:
     default_image: color-mode-dark-1656887943.png
     type: hero
     enabled: true
+    iconamic: academic-cap
 sections:
   -
     template: /general_content/product/feature_section
@@ -328,7 +329,7 @@ sections:
     enabled: true
   -
     template: general_content/product/feature_section
-    section_title: 'We’ll take care of the rest so you don’t have to'
+    section_title: 'We’ll take care of the rest so you don’t have to...'
     section_subtitle:
       -
         type: paragraph
@@ -503,17 +504,46 @@ sections:
         text: 'Click me'
         type: highlight-item
         enabled: true
-    toggle_background: false
+    toggle_background: true
     reverse_alignment: true
     toggle_alignment: false
     type: highlight
     enabled: true
   -
-    template: /general_content/testimonial
-    testimonial_section_title: 'Developers love Cloud Containers'
+    template: general_content/testimonial_section
+    title_testimonial: 'Developers love Cloud Containers'
+    testimonial_textarea:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam. '
+    testimonial:
+      - 24221891-6df7-4106-8ee6-7e790b922d53
+      - cfd76af2-1e89-4264-b73b-1270a0a37a1a
+      - 4cc49739-f6c6-43b2-96bb-c394cd82f866
     type: testimonial
+    enabled: true
+  -
+    template: /general_content/faq
+    faq_title: 'Frequently Asked Questions'
+    faq_intro_text:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula.'
+    faq_entries:
+      - 236c12aa-a0ec-4e7e-8f4e-e67f29243f62
+      - ec1dbb6f-3d34-49e2-a387-c28342c8ab42
+      - a1c95fbe-5b46-427a-ab56-764bc1fa0e4d
+      - a9f9ef1a-f20a-4e06-9353-98d810fa2fe7
+      - ff4f50d5-1343-4f9f-bfd2-ded4d205c19a
+    type: faq
     enabled: true
 title: 'Cloud Containers'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1656973972
+updated_at: 1656989539
 ---
