@@ -18,10 +18,10 @@ top_section:
     select: background
     select_icon: chevron-left
     text: Click
-    default_image: color-mode-dark-1656887943.png
     type: hero
     enabled: true
     iconamic: academic-cap
+    default_image: color-mode-dark.png
 sections:
   -
     template: /general_content/product/feature_section
@@ -244,7 +244,6 @@ sections:
     features:
       -
         template_global: /global/default_image
-        default_image: color-mode-dark-1656887943.png
         title: 'Manage it all in one control panel'
         description:
           -
@@ -256,6 +255,7 @@ sections:
         type: highlight_feature
         enabled: true
         select_type: image
+        default_image: color-mode-dark.png
       -
         template_global: /global/default_image
         default_image: color-mode-dark.png
@@ -272,7 +272,6 @@ sections:
         select_type: image
       -
         template_global: /global/default_image
-        default_image: color-mode-dark-1656887943.png
         title: 'Track your performance and usage'
         description:
           -
@@ -284,6 +283,7 @@ sections:
         type: highlight_feature
         enabled: true
         select_type: image
+        default_image: color-mode-dark.png
       -
         template_global: /global/default_image
         default_image: color-mode-dark.png
@@ -490,7 +490,6 @@ sections:
                 type: text
                 text: ' and more on Cloud Containers, we know your sites will be fast, secure and scalable.'
         template_global: /global/buttons
-        default_image: color-mode-dark-1656887943.png
         highlight_textcaption:
           -
             type: paragraph
@@ -504,6 +503,7 @@ sections:
         text: 'Click me'
         type: highlight-item
         enabled: true
+        default_image: color-mode-dark.png
     toggle_background: true
     reverse_alignment: true
     toggle_alignment: false
@@ -545,5 +545,5 @@ sections:
     enabled: true
 title: 'Cloud Containers'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1656989539
+updated_at: 1656997367
 ---

@@ -10,3 +10,7 @@ preferences:
   assets:
     assets:
       mode: table
+  favorites:
+    -
+      name: 'Pages ‹ Collections'
+      url: collections/pages

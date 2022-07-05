@@ -116,9 +116,9 @@ they will alternate their order, they can all line up on either side. #}}
                 {{ features }}
                     <div class="col-span-1 p-4 m-px space-y-4 bg-white border border-gray-100 rounded-lg shadow-xl shadow-neutral-500/10">
                         {{ if default_image }}
-                            <div class=" aspect-video">
-                                {{ partial:global/default_image }}
-                            </div>
+                            <figure>
+                            {{ partial:global/picture :image="default_image" cover="true" lazy="true" sizes="(min-width: 768px) 33vw, 90vw" }}
+                            </figure>
                         {{ /if }}
                         {{ if iconamic }}
                             <div class="text-purple-500">

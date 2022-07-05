@@ -20,8 +20,10 @@
         <div class="relative order-first sm:max-w-2xl md:order-none sm:mx-auto sm:w-1/2">
             <div class="mx-auto {{ if  toggle_background }} illustration-bg {{ else}} illustration-element {{ /if}}">
                 {{ if default_image }}
-                <div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg left md:aspect-w-6 md:aspect-h-4 group-hover:shadow-2xl">
-                    {{ partial:global/default_image }}
+                <div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg left group-hover:shadow-2xl">
+                        <figure>
+                        {{ partial:global/picture :image="default_image" cover="true" lazy="true" sizes="(min-width: 768px) 33vw, 90vw" }}
+                        </figure>
                 </div>
                 {{ /if }}
 
@@ -54,8 +56,10 @@
             <div class="mx-auto {{ if  toggle_background }} illustration-bg {{ else}} illustration-element {{ /if}}">
                 
                 {{ if default_image }}
-                <div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg right md:aspect-w-6 md:aspect-h-4 group-hover:shadow-2xl">
-                    {{ partial:global/default_image }}
+                <div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg right group-hover:shadow-2xl">
+                        <figure>
+                        {{ partial:global/picture :image="default_image" cover="true" lazy="true" sizes="(min-width: 768px) 33vw, 90vw" }}
+                        </figure>
                 </div>
                 {{ /if }}
 
@@ -106,8 +110,10 @@
                 </div>
                 {{ /if}}
                 {{ if default_image }}
-                <div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg left md:aspect-w-6 md:aspect-h-4 group-hover:shadow-2xl">
-                    {{ partial:global/default_image }}
+                <div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg left group-hover:shadow-2xl">
+                        <figure>
+                        {{ partial:global/picture :image="default_image" cover="true" lazy="true" sizes="(min-width: 768px) 33vw, 90vw" }}
+                        </figure>
                 </div>
                 {{ /if }}
 
@@ -158,8 +164,10 @@
                 </div>
                 {{ /if}}
                 {{ if default_image }}
-                <div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg right md:aspect-w-6 md:aspect-h-4 group-hover:shadow-2xl">
-                    {{ partial:global/default_image }}
+                <div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg right group-hover:shadow-2xl">
+                        <figure>
+                        {{ partial:global/picture :image="default_image" cover="true" lazy="true" sizes="(min-width: 768px) 33vw, 90vw" }}
+                        </figure>
                 </div>
                 {{ /if }}
 
@@ -210,8 +218,10 @@
                 </div>
                 {{ /if}}
                 {{ if default_image }}
-                <div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg left md:aspect-w-6 md:aspect-h-4 group-hover:shadow-2xl">
-                    {{ partial:global/default_image }}
+                <div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg left group-hover:shadow-2xl">
+                        <figure>
+                        {{ partial:global/picture :image="default_image" cover="true" lazy="true" sizes="(min-width: 768px) 33vw, 90vw" }}
+                        </figure>
                 </div>
                 {{ /if }}
 
@@ -261,8 +271,10 @@
                 </div>
                 {{ /if}}
                 {{ if default_image }}
-                <div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg right md:aspect-w-6 md:aspect-h-4 group-hover:shadow-2xl">
-                    {{ partial:global/default_image }}
+                <div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg right group-hover:shadow-2xl">
+                        <figure>
+                        {{ partial:global/picture :image="default_image" cover="true" lazy="true" sizes="(min-width: 768px) 33vw, 90vw" }}
+                        </figure>
                 </div>
                 {{ /if }}
 

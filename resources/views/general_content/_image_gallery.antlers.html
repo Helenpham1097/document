@@ -46,9 +46,10 @@
     <div x-data="{}" class="container grid items-center grid-cols-1 gap-8 md:flex-row ">
 {{ /if }}
 {{ items }}
-    <a @click="$dispatch('img-modal', {  imgModalSrc: '{{ default_image }}', imgModalDesc: '{{ default_image | get:alt }}' })"
-        class="w-full overflow-hidden transition duration-500 bg-purple-500 rounded-lg shadow-2xl cursor-pointer shadow-purple-500/20 md:aspect-w-4 md:aspect-h-3 hover:opacity-50 hover:shadow-xl">
-        {{ partial:global/default_image }}
+    <a @click="$dispatch('img-modal', {  imgModalSrc: '{{ default_image }}', imgModalDesc: '{{ default_image | get:alt }}' })">
+        <figure class="w-full overflow-hidden transition duration-500 bg-purple-500 rounded-lg shadow-2xl cursor-pointer shadow-purple-500/20 hover:opacity-50 hover:shadow-xl">
+        {{ partial:global/picture :image="default_image" cover="true" lazy="true" sizes="(min-width: 768px) 33vw, 90vw" }}
+        </figure>
     </a>
 {{ /items }}
 		</div>

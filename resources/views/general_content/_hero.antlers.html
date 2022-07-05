@@ -24,7 +24,9 @@
                 <div class="absolute inset-0 mx-8 my-12 transform rounded-full opacity-50 bg-gradient-to-r from-purple-500 to-green-300 md:mx-2 md:my-2 animate-blob rotate-6 filter blur-3xl"></div>
                 {{ if default_image }}
                     <div class="relative">
-                        {{ partial:global/default_image }}
+                        <figure>
+                        {{ partial:global/picture :image="default_image" cover="true" lazy="true" sizes="(min-width: 768px) 33vw, 90vw" }}
+                        </figure>
                     </div>
                 {{ /if }}
             </div>

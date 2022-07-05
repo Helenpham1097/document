@@ -71,7 +71,9 @@ select="info"
 				<div class="flex items-center space-x-4">
 					{{ if default_image }}
 						<div class="w-12 h-12 overflow-hidden bg-white border-4 rounded-full shadow-2xl {{ switch between='border-sitehost-orange/30 | border-sitehost-green/30 | border-sitehost-blue/30' }}  aspect-square">
-							{{ partial:global/default_image }}
+                        <figure>
+                        {{ partial:global/picture :image="default_image" cover="false" lazy="true" sizes="(min-width: 768px) 33vw, 90vw" }}
+                        </figure>
 						</div>
 					{{ /if }}
 					<div >
