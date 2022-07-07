@@ -161,6 +161,11 @@ sections:
               fields:
                 -
                   import: feature_section
+            easy_steps:
+              display: 'Easy Steps'
+              fields:
+                -
+                  import: easy_steps
           display: Sections
           type: replicator
           icon: replicator

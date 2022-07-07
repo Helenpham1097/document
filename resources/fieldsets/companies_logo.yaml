@@ -32,4 +32,6 @@ fields:
       icon: replicator
       listable: hidden
       instructions: 'Add horizontal images to the row with a maximum of 6 images.'
-      max_sets: 6
+      max_sets: 12
+      instructions_position: above
+      read_only: false

@@ -3,7 +3,9 @@ they will alternate their order, they can all line up on either side. #}}
 <section class="relative space-y-8 feature-section lg:space-y-24 {{ if background_select:value === 'stripe_background' }} pb-24 {{ /if }}">
     <div class="container ">
         <h2 class="w-1/3 text-black h2">{{ section_title }}</h2>
+        {{ if section_title}}
         <hr />
+        {{ /if }}
         <div class="grid grid-cols-6 gap-12">
             <div class="col-span-2 space-y-8">
                 <div class="excerpt">{{section_subtitle | strip_tags:p}}</div>

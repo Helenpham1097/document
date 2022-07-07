@@ -1,21 +1,47 @@
 {{# Grid logo gallery #}}
-<section class="container mx-auto space-y-6">
+<section class="container mx-auto space-y-12 md:space-y-24 ">
 
     <div class="flex flex-col items-center space-y-10 text-center">
-        <p class="text-2xl font-medium text-center text-gray-500">{{ companies_title }}</p>
+        <p class="text-black h2 ">{{ companies_title }}</p>
     </div>
 
-    <div class="grid justify-center grid-cols-2 gap-6 text-gray-400 sm:grid-cols-3 lg:grid-cols-none lg:grid-flow-col auto-cols-max justify-items-center">
-        {{ if company }}
-            {{ company }}
-
-            {{ default_image }}
-            
-            <img class="object-cover w-32 max-w-xs p-2 md:w-48 filter grayscale" src="{{ default_image }}" {{ if default_image | get:alt }} alt="{{ default_image | get:alt }}" {{ else }} alt="{{ title }}" {{ /if }} />
-
-            {{ /default_image }}
-            
-            {{ /company }}
-        {{ /if }}
+    <div class="relative mx-auto sm:col-end-13 sm:col-span-6">
+        <div class="relative inline-flex">
+            <div class="absolute duration-1000 opacity-25 inset-1 rounded-xl blur-2xl bg-gradient-to-r from-purple-500/30 to-green-500"></div>
+            <div class="relative space-y-6 ">
+                {{# if 3 images are included #}}
+                {{if company | count >= 1 }} 
+                    <div class="grid grid-cols-1 gap-5 sm:grid-cols-5">
+                    {{ company  limit="5" }}
+                        {{# limit the loop to 3 images #}}
+                        {{ if default_image }}
+                            <div class="flex items-center justify-center px-6 py-4 mx-auto overflow-hidden bg-white rounded-lg shadow-lg shadow-neutral-500/20 w-44 sm:w-full">
+                                <figure>
+                                    {{ partial:global/picture :image="default_image" cover="true" lazy="true" parent='xs' sizes="(min-width: 768px) 8vw, 90vw" }}
+                                </figure>
+                            </div>
+                        {{ /if }}
+                    {{ /company }}
+                    </div>
+                {{ /if }}
+                {{# if more then 3 images are included #}}
+                {{if company | count >= 3 }}
+                    <div class="grid grid-cols-1 gap-5 sm:translate-x-6 sm:grid-cols-4">
+                    {{ company  limit="12" offset="5" }}
+                        {{# limit the loop to the first 6 images and skip the first 3 images. #}}
+                        {{ if default_image }}
+                            <div class="flex items-center justify-center px-6 py-4 mx-auto overflow-hidden bg-white rounded-lg shadow-lg shadow-neutral-500/20 w-44 sm:w-full">
+                                <figure>
+                                    {{ partial:global/picture :image="default_image" cover="true" lazy="true" sizes="(min-width: 768px) 8vw, 90vw" }}
+                                </figure>
+                            </div>
+                        {{ /if }}
+                    {{ /company }}
+                    </div>
+                {{ /if }}
+                {{# if more then 4 images are included #}}
+            </div>
+        </div>
+        {{# <div class="absolute duration-1000 translate-y-6 blur-2xl -inset-4 bg-gradient-to-b from-white/0 to-white"></div> #}}
     </div>
 </section>
