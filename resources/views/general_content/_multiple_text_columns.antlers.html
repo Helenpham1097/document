@@ -16,10 +16,10 @@
 	{{ if columns | count === 1 }} 
 		<div class="grid items-center grid-cols-1 gap-12 md:flex-row">
 	{{ /if }}
-            {{ columns }}
-            <div class="w-full mx-auto prose md:prose-lg lg:prose-xl prose-purple ">
-                {{ markdown }}
-            </div>
-            {{ /columns }}
-        </div>
+		{{ columns }}
+		<div class="w-full mx-auto prose md:prose-lg lg:prose-xl prose-purple ">
+			{{ markdown }}
+		</div>
+		{{ /columns }}
+	</div>
 </section>

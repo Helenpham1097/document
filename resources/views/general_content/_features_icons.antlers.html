@@ -28,10 +28,10 @@
 					{{ /if }}
 					<div class="flex flex-col space-y-6">
 						{{ if features_columns_title }}
-							<h5 class="text-xl font-bold text-black inter">{{ features_columns_title }}</h5>
+							<h5 class="h3">{{ features_columns_title }}</h5>
 						{{ /if }}
 						{{ if features_columns_list }}
-							<div class="text-lg font-light text-black ">{{ features_columns_list | strip_tags:p }}</div>
+							<div class="prose ">{{ features_columns_list }}</div>
 						{{ /if }}
 					</div>
 				</div>

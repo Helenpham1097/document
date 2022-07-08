@@ -29,7 +29,7 @@
 		{{ else }}
 		border-slate-600 bg-purple-500 text-white hover:text-white hover:bg-purple-800 hover:border-purple-400
 		{{ /if }} ">
-		<span>{{ text }}</span>
+		{{ text }}
 		{{# The optional icons come from the public/icons folder thanks to the iconamic add on, and have a size variant applied with the medium_icon variable, and the color is defined by (stroke-current) the selected button variant. #}}
 		{{ if iconamic }}
 			{{ svg src="{{ config:iconamic:path }}/{{iconamic}}.svg" class=" {{iconamic}}  {{ if medium_icon }} w-8 {{else}} w-5 {{ /if }} stroke-current" }}

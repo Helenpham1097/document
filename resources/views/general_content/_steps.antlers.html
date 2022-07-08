@@ -18,18 +18,14 @@
 						{{ default_image }}
 						<img class="object-cover w-auto " width="200" src="{{ default_image }}" {{ if default_image | get:alt }} alt="{{ default_image | get:alt }}" {{ else }} alt="{{ title }}" {{ /if }} />
 						{{ /default_image }}
-						<div class="text-6xl font-extrabold text-black ">0{{ count }}.</div>
-						<div class="space-y-4 ">
-							<h3 class="font-bold">{{ step_title }}</h3>
-							<p class="leading-relaxed ">
-								{{ step_textarea | strip_tags:p }}
-							</p>
-
-							{{ if link  }}
+						<div class="h1">0{{ count }}.</div>
+						<div class="space-y-4 "><div class="space-y-4 prose ">
+						<h3 class="h3">{{ step_title }}</h3>
+						{{ step_textarea }}
+						{{ if link  }}
 								{{ partial:global/buttons }}
-							{{ /if }}
-
-						</div>
+						{{ /if }}
+					</div></div>
 					</div>
 				</div>
 			{{ else }}
@@ -40,12 +36,10 @@
 						<img class="object-cover w-auto " width="200" src="{{ default_image }}" {{ if default_image | get:alt }} alt="{{ default_image | get:alt }}" {{ else }} alt="{{ title }}" {{ /if }} />
 						{{ /default_image }}
 					</div>
-					<div class="text-6xl font-extrabold text-black ">0{{ count }}.</div>
-					<div class="space-y-4 ">
-						<h3 class="font-bold">{{ step_title }}</h3>
-						<p class="leading-relaxed ">
-							{{ step_textarea | strip_tags:p }}
-						</p>
+					<div class="h1">0{{ count }}.</div>
+					<div class="space-y-4 prose ">
+						<h3 class="h3">{{ step_title }}</h3>
+						{{ step_textarea }}
 						{{ if link  }}
 								{{ partial:global/buttons }}
 						{{ /if }}

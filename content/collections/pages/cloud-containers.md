@@ -178,6 +178,7 @@ sections:
                 text: 'Once you are up and running, you can have confidence that you will stay that way. Cloud Containers are stable, reliable, and run on a platform that we maintain.'
         type: highlight_feature
         enabled: true
+    add_intro_features: true
   -
     template: /general_content/product/feature_section
     section_title: 'Manage your hosting efficiently and without the stress'
@@ -327,6 +328,7 @@ sections:
         enabled: true
     type: feature_section
     enabled: true
+    add_intro_features: true
   -
     template: general_content/product/feature_section
     section_title: 'We’ll take care of the rest so you don’t have to...'
@@ -428,6 +430,7 @@ sections:
         enabled: true
     type: feature_section
     enabled: true
+    add_intro_features: true
   -
     template: /general_content/highlight
     rows:
@@ -545,5 +548,5 @@ sections:
     enabled: true
 title: 'Cloud Containers'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1656997367
+updated_at: 1657258802
 ---

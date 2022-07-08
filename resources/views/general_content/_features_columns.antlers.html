@@ -26,14 +26,15 @@
 				{{ if features_columns_title }}
 				<svg class="flex-none w-4 h-4 mt-2 text-purple-500" viewBox="0 0 32 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M26.7463 25.8H0L5.25373 0.200048H32L26.7463 25.8Z" fill="currentColor"></path></svg>
 				{{ /if }}
-				<div class="flex flex-col space-y-8 prose">
+				<div class="flex flex-col space-y-8">
+					<div class="prose">
 					{{ if features_columns_title }}
-						<h3 class="leading-tight tracking-wide text-black">
+						<h3 class="h3">
 							{{ features_columns_title | strip_tags:p }}
 						</h3>
 					{{ /if }}
 					{{ if features_columns_subtitle }}
-						<h5 class="text-black">
+						<h5 class="h5">
 							{{ features_columns_subtitle | strip_tags:p }}
 						</h5>
 					{{ /if }}
@@ -42,6 +43,7 @@
 							{{ features_columns_list | strip_tags:p }}
 						</p>
 					{{ /if }}
+					</div>
 					{{ if link  }}
 					<div>
 						{{ partial:global/buttons }}

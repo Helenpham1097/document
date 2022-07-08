@@ -3,26 +3,169 @@ id: 26513dc7-59f7-4673-815e-7d9ace16248b
 blueprint: general_content
 title: 'General content'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1657254480
+updated_at: 1657259480
 description: Lorem
 template: general_content/layout
 subheader: sdasda
 sections:
   -
-    template: /global/section_title
-    center_title_pre_title: 'Running quickly'
-    center_title_title: 'Web Hosting plans'
-    center_title_textarea:
+    template: general_content/product/feature_section
+    add_intro_features: true
+    section_title: 'Get started quickly on easy, powerful hosting'
+    section_subtitle:
       -
         type: paragraph
         content:
           -
             type: text
-            text: 'Get your website up and running quickly with our tailored Web Hosting plans'
-    type: section_title
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. '
+    template_global: /global/iconamic
+    link: '#'
+    select: info
+    iconamic: archive
+    text: 'See it for yourself'
+    columns:
+      -
+        column:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'As soon as you get started with Cloud '
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: Containers
+              -
+                type: text
+                text: ' you’ll see how fast and '
+              -
+                type: text
+                marks:
+                  -
+                    type: italic
+                text: flexible
+              -
+                type: text
+                text: ' they are. It only takes a few minutes to l'
+              -
+                type: text
+                marks:
+                  -
+                    type: link
+                    attrs:
+                      href: '#'
+                      rel: null
+                      target: null
+                      title: null
+                text: 'aunch a server'
+              -
+                type: text
+                text: ', spin up a Container or two and see how much easier development can be with the right infrastructure.'
+          -
+            type: ordered_list
+            attrs:
+              order: 1
+            content:
+              -
+                type: list_item
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Aliquam placerat eu enim ac faucibus.'
+              -
+                type: list_item
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Donec ac diam congue, lobortis magna nec.'
+              -
+                type: list_item
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Fermentum arcu. Ut ornare enim at elit molestie congue.'
+              -
+                type: list_item
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Nullam commodo bibendum accumsan.'
+        type: add_columns
+        enabled: true
+      -
+        column:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam. Fusce maximus non metus ac facilisis. Sed id nunc a ante interdum efficitur.'
+          -
+            type: bullet_list
+            content:
+              -
+                type: list_item
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Aliquam placerat eu enim ac faucibus.'
+              -
+                type: list_item
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Donec ac diam congue, lobortis magna nec.'
+              -
+                type: list_item
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Fermentum arcu. Ut ornare enim at elit molestie congue.'
+              -
+                type: list_item
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Nullam commodo bibendum accumsan.'
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
+        type: add_columns
+        enabled: true
+    add_highlight_features: false
+    type: feature_section
     enabled: true
-    toggle_alignment: true
-    toggle_color: false
   -
     template: /general_content/_multiple_text_columns
     columns:
@@ -251,9 +394,10 @@ sections:
         link: '#'
         select: background
         select_icon: chevron-right
-        text: 'Learn More'
+        text: 'Learn Mores'
         default_image: 02.svg
         template_global: /global/default_image
+        iconamic: academic-cap
       -
         template: /global/buttons
         feature_image: 09054a5f40e858381279a62e2ee534a7.webp

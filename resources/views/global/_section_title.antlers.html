@@ -1,16 +1,16 @@
 {{# Title centred to start a section #}}
-<div class="container title-section {{ if  toggle_color }} primary {{ else }} secondary {{ /if }} ">   
+<div class="container title-section prose {{ if  toggle_color }} primary {{ else }} secondary {{ /if }} ">   
     {{ if center_title_pre_title }}
         <h3>
             {{ center_title_pre_title | strip_tags:p }}
         </h3>
     {{ /if }}
     {{ if center_title_title }}
-        <h2 class="h2">{{center_title_title}}</h2>
+        <h2>{{ center_title_title}}</h2>
     {{ /if }}
     {{ if center_title_textarea }}
-        <p class="prose md:prose-lg lg:prose-xl prose-purple">
-            {{center_title_textarea | strip_tags:p }}
+        <p>
+            {{ center_title_textarea | strip_tags:p }}
         </p>
     {{ /if }}
 </div>
