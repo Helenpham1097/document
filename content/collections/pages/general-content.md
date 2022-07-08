@@ -3,7 +3,7 @@ id: 26513dc7-59f7-4673-815e-7d9ace16248b
 blueprint: general_content
 title: 'General content'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1656985142
+updated_at: 1657254480
 description: Lorem
 template: general_content/layout
 subheader: sdasda
@@ -275,7 +275,7 @@ sections:
         default_image: 2.png
         template_global: /global/default_image
     type: features_columns_item
-    enabled: false
+    enabled: true
     display_title: true
     center_title_pre_title: 'Pre Title'
     center_title_title: 'Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
@@ -377,163 +377,23 @@ sections:
         default_image: 4.png
         template_global: /global/default_image
     type: steps
-    enabled: false
+    enabled: true
   -
-    template: /general_content/testimonial
-    rows:
-      -
-        testimonial_title: 'Leroy Jenkins'
-        testimonial_textarea:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'An audire commodo habemus cum. Ne sed corrumpit'
-              -
-                type: text
-                marks:
-                  -
-                    type: bold
-                text: repudiandae
-              -
-                type: text
-                text: '. Tota aliquip democritum pro in, nec democritum intellegam ne. Propriae volutpat dissentiet ea sit, nec at lorem inani tritani, an ius populo perfecto'
-              -
-                type: text
-                marks:
-                  -
-                    type: link
-                    attrs:
-                      href: '#'
-                      target: null
-                      rel: null
-                text: vituperatoribus
-              -
-                type: text
-                text: '. Eu cum case modus salutandi, ut eum vocent sensibus reprehendunt.'
-        testimonial_link: '#'
-        testimonial_text_link: Link
-        testimonial_image: profile.png
-        testimonial_textcaption: null
-        type: Testimonial-item
-        enabled: true
-    reverse_alignment: false
-    toggle_alignment: false
-    type: testimonial
-    enabled: false
-    testimonial_section_title: 'Duo assum utroque appetere an'
-    testimonial_text_area:
+    template: general_content/testimonial_section
+    title_testimonial: 'Developers love Cloud Containers'
+    testimonial_textarea:
       -
         type: paragraph
         content:
           -
             type: text
-            text: 'Pri ex magna scaevola moderatius. Nullam'
-          -
-            type: text
-            marks:
-              -
-                type: link
-                attrs:
-                  href: '#'
-                  target: null
-                  rel: null
-            text: accommodare
-          -
-            type: text
-            text: 'no vix, est ei diceret alienum, et sit cetero malorum. Et sea iudico consequat, est sanctus adipisci ex.'
-    Items:
-      -
-        testimonial_image: profile.png
-        testimonial_name: 'Lena Oxton'
-        testimonial_position: 'Blizzard Entertainment'
-        testimonial_textarea:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: '01 An audire commodo habemus cum. Ne sed corrumpit repudiandae. Tota aliquip democritum pro in, nec democritum intellegam ne. Propriae volutpat dissentiet ea sit, nec at lorem inani tritani, an ius populo perfecto vituperatoribus. Eu cum case modus salutandi, ut eum vocent sensibus reprehendunt.'
-        testimonial_link: '#'
-        testimonial_text_link: Link
-        type: Testimonial-item
-        enabled: true
-      -
-        testimonial_image: profile.png
-        testimonial_name: 'Lena Oxton'
-        testimonial_position: 'Blizzard Entertainment'
-        testimonial_textarea:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: '02 An audire commodo habemus cum. Ne sed corrumpit repudiandae. Tota aliquip democritum pro in, nec democritum intellegam ne. Propriae volutpat dissentiet ea sit, nec at lorem inani tritani, an ius populo perfecto vituperatoribus. Eu cum case modus salutandi, ut eum vocent sensibus reprehendunt.'
-        testimonial_link: '#'
-        testimonial_text_link: Link
-        type: Testimonial-item
-        enabled: true
-      -
-        testimonial_image: profile.png
-        testimonial_name: 'Lena Oxton'
-        testimonial_position: 'Blizzard Entertainment'
-        testimonial_textarea:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: '03 An audire commodo habemus cum. Ne sed corrumpit repudiandae. Tota aliquip democritum pro in, nec democritum intellegam ne. Propriae volutpat dissentiet ea sit, nec at lorem inani tritani, an ius populo perfecto vituperatoribus. Eu cum case modus salutandi, ut eum vocent sensibus reprehendunt.'
-        testimonial_link: '#'
-        testimonial_text_link: Link
-        type: Testimonial-item
-        enabled: true
-      -
-        testimonial_image: profile.png
-        testimonial_name: 'Lena Oxton'
-        testimonial_position: 'Blizzard Entertainment'
-        testimonial_textarea:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: '04 An audire commodo habemus cum. Ne sed corrumpit repudiandae. Tota aliquip democritum pro in, nec democritum intellegam ne. Propriae volutpat dissentiet ea sit, nec at lorem inani tritani, an ius populo perfecto vituperatoribus. Eu cum case modus salutandi, ut eum vocent sensibus reprehendunt.'
-        testimonial_link: '#'
-        testimonial_text_link: Link
-        type: Testimonial-item
-        enabled: true
-      -
-        testimonial_image: profile.png
-        testimonial_name: 'Lena Oxton'
-        testimonial_position: 'Blizzard Entertainment'
-        testimonial_textarea:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: '05 An audire commodo habemus cum. Ne sed corrumpit repudiandae. Tota aliquip democritum pro in, nec democritum intellegam ne. Propriae volutpat dissentiet ea sit, nec at lorem inani tritani, an ius populo perfecto vituperatoribus. Eu cum case modus salutandi, ut eum vocent sensibus reprehendunt.'
-        testimonial_link: '#'
-        testimonial_text_link: Link
-        type: Testimonial-item
-        enabled: true
-      -
-        testimonial_image: profile.png
-        testimonial_name: 'Lena Oxton'
-        testimonial_position: 'Blizzard Entertainment'
-        testimonial_textarea:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: '06 An audire commodo habemus cum. Ne sed corrumpit repudiandae. Tota aliquip democritum pro in, nec democritum intellegam ne. Propriae volutpat dissentiet ea sit, nec at lorem inani tritani, an ius populo perfecto vituperatoribus. Eu cum case modus salutandi, ut eum vocent sensibus reprehendunt.'
-        testimonial_link: '#'
-        testimonial_text_link: Link
-        type: Testimonial-item
-        enabled: true
+            text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue. Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. Phasellus molestie blandit erat, vitae ullamcorper ante viverra et.'
+    testimonial:
+      - 24221891-6df7-4106-8ee6-7e790b922d53
+      - cfd76af2-1e89-4264-b73b-1270a0a37a1a
+      - 0c7d0b62-28ea-4139-a5e5-c206ab916599
+    type: testimonial
+    enabled: true
   -
     template: /general_content/features_icons
     display_title_section:
@@ -610,106 +470,7 @@ sections:
         type: column
         enabled: true
     type: icon_features
-    enabled: false
-  -
-    template: /general_content/social_proof
-    Items:
-      -
-        social_proof_image: profile.png
-        social_proof_name: Ariel
-        social_proof_position: Designer
-        social_proof_textarea:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam.'
-        type: Social-Proof-item
-        enabled: true
-        template: /global/buttons
-        link: '#'
-        select: info
-        text: 'Learn more'
-        template_global: /global/buttons
-      -
-        social_proof_image: 09054a5f40e858381279a62e2ee534a7.webp
-        social_proof_name: 'Katie F. Sullivan'
-        social_proof_position: 'Robinson Furniture'
-        social_proof_textarea:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Fusce maximus non metus ac facilisis. Sed id nunc a ante interdum efficitur. Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue.'
-        template: /global/buttons
-        type: Social-Proof-item
-        enabled: true
-        template_global: /global/buttons
-    type: social_proof
     enabled: true
-    call_to_action_pre_title: 'Pre Title'
-    call_to_action_title: 'Section title'
-    call_to_action_textarea:
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: 'Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
-      -
-        type: paragraph
-    center_title_pre_title: 'Pre Title'
-    center_title_title: 'Pre Title'
-    center_title_textarea:
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: 'Text area to complement the secondary title'
-      -
-        type: paragraph
-        content:
-          -
-            type: hard_break
-    toggle_color: true
-    add_title_section:
-      -
-        template: /global/section_title
-        center_title_pre_title: 'Pre Title'
-        center_title_title: 'Section title'
-        center_title_textarea:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Text area to complement the secondary title'
-          -
-            type: paragraph
-            content:
-              -
-                type: hard_break
-        toggle_color: false
-        type: section_title
-        enabled: true
-    display_title_section:
-      -
-        template: /global/section_title
-        center_title_pre_title: 'Pre Title'
-        center_title_title: 'Pre Title'
-        center_title_textarea:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Text area to complement the secondary title'
-        toggle_color: false
-        type: section_title
-        enabled: true
   -
     template: /general_content/pricing_table
     Items:
@@ -736,9 +497,7 @@ sections:
         type: column
         enabled: true
         link: '#'
-        select: background-secondary
         select_icon: chevron-right
-        text: 'Most popular'
         template_global: /global/buttons
       -
         template: /global/buttons
@@ -750,7 +509,7 @@ sections:
         text: 'Choose Plan'
         template_global: /global/buttons
     type: pricing_table
-    enabled: false
+    enabled: true
     items:
       -
         template: null
@@ -990,7 +749,7 @@ sections:
             type: text
             text: 'Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. '
     type: comparison_table
-    enabled: false
+    enabled: true
   -
     template: /global/embed_video
     video: 'https://youtu.be/pONeWAzDsQg'
@@ -1211,7 +970,7 @@ sections:
     select_icon: mail
     text: 'Contact Us'
     type: horizontal_cta
-    enabled: false
+    enabled: true
 top_section:
   -
     type: hero_general_content
@@ -1220,7 +979,22 @@ top_section:
     hero_general_content_textarea: 'Serverless is the future of hosting. We’re building a brand new serverless platform from the ground up for your existing websites and applications so you get all the serverless benefits without the pain.'
     hero_general_content_image: placeholder-image.jpg
     template: /home/hero_home
-    hero_home_title: 'Deploy existing websites in seconds'
+    hero_home_title:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Deploy existing '
+          -
+            type: text
+            marks:
+              -
+                type: bold
+            text: websites
+          -
+            type: text
+            text: ' in seconds'
     hero_home_description:
       -
         type: paragraph
@@ -1256,6 +1030,7 @@ top_section:
     text: 'Sign Up'
     default_image: bb28417eb2b2507580ab0f08bf09ea69.webp
     template_global: /global/default_image
+    iconamic: cheveron-right
 meta_title: 'Meta title'
 meta_description: 'Meta Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod.'
 ---

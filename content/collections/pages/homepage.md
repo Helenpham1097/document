@@ -4,7 +4,7 @@ blueprint: home
 template: general_content/index
 title: Homepage
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1657168039
+updated_at: 1657254196
 top_section:
   -
     template: /home/hero_home
@@ -148,7 +148,7 @@ sections:
         type: Step-item
         enabled: true
     type: steps
-    enabled: false
+    enabled: true
   -
     template: general_content/product/feature_section
     template_global: /global/iconamic
@@ -266,30 +266,5 @@ sections:
         type: companies
         enabled: true
     type: companies_logo
-    enabled: true
-  -
-    template: /general_content/highlight
-    rows:
-      -
-        highlight_title: 'We’ve helped thousands  of businesses.'
-        highlight_textarea:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Sed lobortis convallis molestie. Duis nec sapien non nisl venenatis lobortis. Vestibulum tempor nisi commodo libero viverra, sed dignissim ex rutrum. Morbi consequat massa sed quam dictum mollis. Sed mattis commodo justo, nec imperdiet mi consectetur eu. Suspendisse varius orci eu interdum ultricies.'
-        template_global: /global/iconamic
-        default_image: cube.png
-        link: '#'
-        select: info
-        iconamic: academic-cap
-        text: 'Read documentation'
-        type: highlight-item
-        enabled: true
-    toggle_background: true
-    reverse_alignment: false
-    toggle_alignment: false
-    type: highlight
     enabled: true
 ---

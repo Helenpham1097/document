@@ -25,6 +25,7 @@ module.exports = {
         'sm:grid-cols-6',
         'lg:grid-cols-6',
         'row-span-2',
+        'space-x-reverse'
     ],
     theme: {
         container: {
@@ -61,19 +62,10 @@ module.exports = {
                     '800': '#1e9984',
                     '900': '#197d6c'
                 },
-                gold: {
-                    light: '#ddbf5f',
-                    base: '#d4af37',
-                    dark: '#aa8c2c'
-                },
             },
             typography: (theme) => ({
                 DEFAULT: {
                     css: {
-                        h2: {
-                            fontWeight: '700',
-                            color: theme('colors.gray.900'),
-                        },
                         a: {
                             'text-decoration': 'none',
                             '&:hover': {

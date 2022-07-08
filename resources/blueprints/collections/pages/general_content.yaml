@@ -84,11 +84,6 @@ sections:
               fields:
                 -
                   import: features_icon
-            social_proof:
-              display: 'Social Proof'
-              fields:
-                -
-                  import: social_proof
             pricing_table:
               display: 'Pricing Table'
               fields:
