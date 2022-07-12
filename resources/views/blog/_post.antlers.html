@@ -1,17 +1,20 @@
 {{# Partial template for non-featured blog posts, used in the blog index grid and related blog entries #}}
 
 {{# <a class="post" href="{{ url }}">
-    <div class="flex flex-col space-y-6 group ">
+    <article aria-label="{{ title }}" class="flex flex-col space-y-6 group ">
         <div class="relative w-full">
-            <div class="relative flex flex-col items-center">
-                <div class="inset-0 w-full overflow-hidden transition duration-500 ease-in-out transform rounded-lg shadow-lg group-hover:shadow-2xl aspect-w-8 aspect-h-5">
-                    {{ partial:global/default_image }}
-                </div>
-            </div>
+            <figure class="overflow-hidden border rounded-lg border-slate-200 bg-slate-50 aspect-w-6 aspect-h-4 ">
+                {{ partial:global/picture :image="default_image" cover="true" lazy="true" sizes="(min-width: 768px) 33vw, 90vw" }}
+            </figure>
         </div>
-        <h3 class="{{ title_class ?? "normal-case" }}"> {{ title }} </h3>
+        <h4 class="h3"> {{ title }} </h4>
+        <div class="flex space-x-1 text-sm text-gray-500">
+            <time class="block"> {{ date iso_format="DD MMMM YYYY" }} </time>
+            <span class="text-purple-500 " aria-hidden="true"> · </span>
+            <span> {{ content | read_time:180 }} min read </span>
+        </div>
         {{ if subheader }}
-            {{ if ! hide_subheader }}<p>{{ subheader | truncate:140 }}</p>{{ /if }}
+            {{ if ! hide_subheader }}<p class="text-slate-400">{{ subheader | truncate:140 }}</p>{{ /if }}
         {{ /if }}
 
         <div class="inline-flex ">
@@ -22,49 +25,47 @@
             </div>
         </div>
 
-    </div>
+    </article>
 </a> #}}
 
-<a class="post group" href="{{ url }}">
-    <article aria-label="{{ title }}" class="flex flex-col items-center w-full">
-        <div class="relative w-full mt-8 md:mt-0">
-            <div class="inset-0 w-full overflow-hidden transition duration-500 ease-in-out transform rounded-lg shadow-lg group-hover:shadow-2xl aspect-w-4 aspect-h-4">
-                {{ partial:global/default_image }}
-            </div>
-            <div class="relative w-11/12 mx-auto -mt-32 border-tborder-color">
-                <div class="relative bg-white space-y-4 -mt-0.5 p-4 md:p-6">
-                    <div class="flex items-center justify-between w-full">
-                        <div class="flex items-start justify-between w-full cursor-pointer">
-                            <h3 class="h3 {{ title_class ?? "normal-case" }}"> {{ title }} </h3>
-                        </div>
-                    </div>
-                    <div class="flex space-x-1 text-sm text-gray-500">
-                        <time class="block"> {{ date iso_format="DD MMMM YYYY" }} </time>
-                        <span class="text-purple-500 " aria-hidden="true"> · </span>
-                        <span> {{ content | read_time:180 }} min read </span>
-                    </div>
-                    <p class="leading-none text-gray-700 md:text-base ">
-                    {{ if subheader }}
-                        {{# hide_subheader defines if subheader is displayed on the partial in "latest_news". #}}
-                        {{ if ! hide_subheader }}{{ subheader | truncate:140 }}{{ /if }}
-                    {{ /if }}
-                    </p>
-                    <div class="w-full pb-4 mt-7 justify-bewteen sm:flex sm:pb-0">
-                        <div class="inline-flex ">
-                            <div class="relative inline-flex items-center ">
-                                <span href="{{ url }}" class="inline-flex items-center text-purple-500 group hover:text-purple-700 ">
-                                    {{ latest_news:link_text }}
-                                    <div class="transition duration-500 ease-in-out transform group-hover:translate-x-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 transition duration-500 ease-in-out transform translate-x-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                                        </svg>
-                                    </div>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
+
+
+<div>
+<a href="{{ url }}">
+    <div class="flex flex-col space-x-0 space-y-8 sm:space-x-8 group sm:space-y-0 sm:flex-row">
+        <div class="relative w-full basis-1/3">
+            <figure class="overflow-hidden border rounded-lg border-slate-200 bg-slate-50 aspect-w-6 aspect-h-4 ">
+                {{ partial:global/picture :image="default_image" cover="true" lazy="true" sizes="(min-width: 768px) 3vw, 90vw" }}
+            </figure>
+        </div>
+
+        <div class="space-y-4 basis-2/3">
+            <span class="text-xs font-bold text-dark-600">{{ date iso_format="DD MMM, YYYY" }}</span>
+            <h2 class="h3">{{ title }}</h2>
+            {{# <div class="flex space-x-1 text-sm text-gray-500">
+                <time class="block"> {{ date iso_format="DD MMMM YYYY" }} </time>
+                <span class="text-purple-500 " aria-hidden="true"> · </span>
+                <span> {{ content | read_time:180 }} min read </span>
+            </div> #}}
+            <p class="text-base text-slate-500">
+                {{ subheader | strip_tags:p }}
+            </p>
+            <div class="flex mt-8 lg:mt-0 lg:flex-shrink-0">
+                <div class="inline-flex">
+                    <button href="{{ url }}" class="relative inline-flex items-center text-lg font-medium text-purple-500 hover:text-purple-700 group">
+                        {{ if url}}
+                        <span class="absolute right-0 flex items-center justify-start w-10 h-10 mt-1 duration-300 transform translate-x-full group-hover:translate-x-12 ease">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                        <span class="relative">Read More</span>
+                        {{ /if }}
+                    </button>
                 </div>
             </div>
         </div>
-    </article>
+    </div>
 </a>
+
+</div>

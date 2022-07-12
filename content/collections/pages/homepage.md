@@ -4,7 +4,7 @@ blueprint: home
 template: general_content/index
 title: Homepage
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1657254196
+updated_at: 1657576460
 top_section:
   -
     template: /home/hero_home
@@ -148,7 +148,7 @@ sections:
         type: Step-item
         enabled: true
     type: steps
-    enabled: true
+    enabled: false
   -
     template: general_content/product/feature_section
     template_global: /global/iconamic
@@ -267,4 +267,72 @@ sections:
         enabled: true
     type: companies_logo
     enabled: true
+  -
+    template: /general_content/highlight
+    rows:
+      -
+        highlight_title: 'We’ve helped thousands  of businesses'
+        highlight_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Sed lobortis convallis molestie. Duis nec sapien non nisl venenatis lobortis. Vestibulum tempor nisi commodo libero viverra, sed dignissim ex rutrum. Morbi consequat massa sed quam dictum mollis. Sed mattis commodo justo, nec imperdiet mi consectetur eu. Suspendisse varius orci eu interdum ultricies.'
+        template_global: /global/iconamic
+        default_image: cube.png
+        highlight_textcaption:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: TextCaption
+        link: '#'
+        select: background
+        iconamic: check
+        text: 'Read the documentation'
+        type: highlight-item
+        enabled: true
+    toggle_background: false
+    reverse_alignment: false
+    toggle_alignment: false
+    type: highlight
+    enabled: true
+  -
+    template: general_content/testimonial_section
+    title_testimonial: 'What our customer are saying 😍'
+    testimonial:
+      - 24221891-6df7-4106-8ee6-7e790b922d53
+      - cfd76af2-1e89-4264-b73b-1270a0a37a1a
+      - 0c7d0b62-28ea-4139-a5e5-c206ab916599
+    type: testimonial
+    enabled: true
+  -
+    template: /general_content/_horizontal_cta
+    toggle: false
+    template_global: /global/iconamic
+    type: horizontal_cta
+    enabled: false
+  -
+    template: /global/section_title
+    toggle_color: true
+    template_global: /global/iconamic
+    type: call_to_action
+    enabled: true
+    center_title_pre_title: asdasda
+    center_title_textarea:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam. '
+    call_to_action_terms:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: asdasdasd
 ---

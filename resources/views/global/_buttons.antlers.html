@@ -21,7 +21,7 @@
 {{ else }}
 	<a href="{{ link }}"
 		class="inline-flex items-center focus-visible:outline-none focus-visible:ring focus-visible:ring-sitehost-orange/80 active:bg-black justify-center max-w-fit text-base py-2
-		{{if iconamic}} pl-4 pr-3 space-x-2 {{else}} px-6 {{/if}} font-bold transition  border group text-md  focus:outline-none focus-visible:ring-white focus-visible:ring-offset-2
+		{{if iconamic}} pl-4 pr-3 space-x-2 {{else}} px-6 {{/if}} space-x-2 font-bold transition  border group text-md  focus:outline-none focus-visible:ring-white focus-visible:ring-offset-2
 		{{# Secondary transparent button #}}
 		{{ if select:value === 'background-secondary' }}
 		border-slate-300 bg-white text-slate-900 hover:text-white hover:bg-purple-500 hover:border-purple-400 
@@ -29,7 +29,7 @@
 		{{ else }}
 		border-slate-600 bg-purple-500 text-white hover:text-white hover:bg-purple-800 hover:border-purple-400
 		{{ /if }} ">
-		{{ text }}
+		<span>{{ text }}</span>
 		{{# The optional icons come from the public/icons folder thanks to the iconamic add on, and have a size variant applied with the medium_icon variable, and the color is defined by (stroke-current) the selected button variant. #}}
 		{{ if iconamic }}
 			{{ svg src="{{ config:iconamic:path }}/{{iconamic}}.svg" class=" {{iconamic}}  {{ if medium_icon }} w-8 {{else}} w-5 {{ /if }} stroke-current" }}

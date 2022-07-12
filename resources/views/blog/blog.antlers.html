@@ -5,76 +5,68 @@
     <div class="h-1 bg-gradient-to-r from-purple-500 to-green-500" :style="`width: ${percent}%`"></div>
 </div>
 
-{{# Content #}}
-<main class="space-y-12 sm:space-y-24">
-    <article class="relative">
-        <div class="relative py-8 bg-gray-50 sm:py-12">
-            <div class="slice-background"></div>
-            <div class="max-w-3xl px-4 mx-auto space-y-8 ">
-                <h1 class="h1">{{ title }}</h1>
-                <div class="flex flex-row space-x-1 item-center sm:space-y-0 sm:space-x-2">
-                    <div class="flex items-center space-x-2">
-                        {{ if author:avatar }}
-                            <img class="w-6 h-6 rounded-full" src="{{ author:avatar }}" alt="Avatar of {{ author:name }}" />
-                        {{ else }}
-                            <img class="w-6 h-6 rounded-full" src="{{ placeholder_image:placeholder_avatar }}" alt="Avatar of {{ author:name }}" />
-                        <div class="text-gray-500"> {{ author:name }} </div>
-                        {{ /if }}
+
+{{ partial:global/grid_lines reflect="false" }}
+
+<div class="container relative space-y-8 lg:space-y-16">
+    <div class="grid grid-cols-2 gap-4 pt-12 pb-6 lg:grid-cols-6 lg:pb-12 lg:pt-24">
+        <div class="col-span-2 space-y-8 lg:col-span-3">
+            <div>
+                {{ if categories }}
+                    <div class="font-medium text-purple-500 uppercase">
+                        {{ categories  limit="1" }}  {{ title }} {{ /categories }}
                     </div>
-                    <span class="text-purple-500" aria-hidden="true"> · </span>
-                    <div class="flex space-x-1 text-gray-500 sm:space-x-2">
-                        <time class="block"> {{ date iso_format="DD MMMM YYYY" }} </time>
-                        <span class="text-purple-500" aria-hidden="true"> · </span>
-                        <span> {{ content | read_time:180 }} min read </span>
-                    </div>
-                        {{ if categories }}
-                            <div class="flex flex-row items-center space-x-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="hidden w-6 h-6 text-purple-500 sm:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5a1.99 1.99 0 011.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
-                                <div class="">{{ categories  limit="1" }}  {{ title }} {{ /categories }}</div>
-                            </div>
-                        {{ /if }}
-                    <div>
-                    </div>
-                </div>
-                {{ if subheader }}
-                    <p class="excerpt">{{ subheader }}</p>
                 {{ /if }}
+                <h1 class="text-5xl font-semibold lg:leading-tight ">{{ title }}</h1>
             </div>
+            {{ if subheader }}
+                <p class="text-2xl text-slate-400 ">{{ subheader }}</p>
+            {{ /if }}
         </div>
-        <div class="relative bg-gray-50">
-            <div class="absolute bottom-0 object-fill w-full ">
-                <svg class="w-full " viewBox="0 0 1440 480" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0L720 193.065H0V0Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0L720 193.065H0V0Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1440 0L720 193.065H1440V0Z" fill="white"/>
-                    <rect y="193" width="1440" height="300" fill="white"/>
+        <div class="relative col-span-2 col-start-2 lg:col-start-5 lg:-translate-y-28 translate-y-28">
+            <div class="absolute w-full h-96 lg:h-screen -z-10 bg-gradient-to-t from-green-500 to-purple-500 opacity-20"></div>
+            <div class="absolute w-full h-96 lg:h-screen -z-10 ">
+                <svg class="absolute bottom-0 w-full -z-20 " viewBox="0 0 482 482" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M482 0V482H0L482 0Z" fill="#fff"/>
                 </svg>
             </div>
-            <div class="relative max-w-4xl pb-8 mx-auto sm:pb-16">
-                <div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform rounded-lg shadow-lg left aspect-w-6 aspect-h-4 group-hover:shadow-2xl">
-                    {{ partial:global/default_image }}
-                </div>
-            </div>
+            
+
         </div>
-        <!-- Blog content -->
-        <div class="container mx-auto prose bg-white md:prose-lg lg:prose-xl prose-purple ">
-            {{ content }}
+        
+    </div>
+
+    <div class="grid gap-5 lg:space-x-12 lg:space-x-reverse lg:grid-cols-2">
+        <div class="z-10 order-first col-span-1 lg:order-last ">
+            <figure class="overflow-hidden rounded-lg">
+                {{ partial:global/picture :image="default_image" cover="true" lazy="true" sizes="(min-width: 768px) 33vw, 90vw" }}
+            </figure>
         </div>
 
+    
+    {{# Blog content #}}
+    <article class="mx-auto prose prose-xl max-w-none prose-purple">
+        {{ content }}
     </article>
-    <div class="back-to-top-wrapper">
-        <a href="#top" class="border border-purple-200 back-to-top-link" aria-label="Scroll to Top">
-            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
-            </svg>
-        </a>
+
+    
     </div>
 
     {{ if {collection:count in="blog"} > 1 }}
         {{ partial:blog/latest_news }}
     {{ /if }}
 
-</main>
+
+    <div class="z-20 back-to-top-wrapper">
+        <a href="#top" class="bg-white border border-purple-200 back-to-top-link" aria-label="Scroll to Top">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
+            </svg>
+        </a>
+    </div>
+</div>
+
+
 
 <script>
 	const scrollProgress = () => {
@@ -91,3 +83,5 @@
 		}
 	}
 </script>
+
+

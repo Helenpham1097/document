@@ -7,7 +7,7 @@
             <div class="max-w-xl space-y-6">
                 <div class="flex flex-col items-start space-y-6 lg:flex-grow">
                     <h1 class="prose slash prose-strong:font-bold h1">{{ hero_home_title | strip_tags:p }}</h1>
-                    <div class="prose excerpt">{{ hero_home_description }}</div>
+                    <div class="text-2xl text-slate-400 ">{{ hero_home_description }}</div>
                     {{ if link }}
                         {{ partial:global/buttons }}
                     {{ /if }}
