@@ -1,0 +1,13 @@
+{{# formattable text section template in markdown and the bard editor #}}
+{{# <section class="container mx-auto prose md:prose-lg lg:prose-xl prose-purple ">
+    {{ markdown }}
+</section> #}}
+{{# <section class="container mx-auto prose md:prose-lg lg:prose-xl prose-purple ">
+    {{ partial:typography/p :content="text" color='' }}
+</section> #}}
+
+<section class="container mx-auto prose md:prose-lg lg:prose-xl prose-purple ">
+    {{ partial:typography/prose }}
+        {{ text }}
+    {{ /partial:typography/prose }}
+</section>

@@ -1,0 +1,7 @@
+title: Team
+template: blog/author/index
+revisions: false
+date_behavior:
+  past: public
+  future: private
+route: '/blog/author/{slug}'

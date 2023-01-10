@@ -1,87 +1,69 @@
-{{# Template for a blog entry #}}
-
-{{# Scroll Progress #}}
-<div x-data="scrollProgress" class="fixed inset-x-0 top-0 z-50">
-    <div class="h-1 bg-gradient-to-r from-purple-500 to-green-500" :style="`width: ${percent}%`"></div>
-</div>
-
-
-{{ partial:global/grid_lines reflect="false" }}
-
+{{# Template for a blog entry #}} {{ partial:snippets/scrollProgress }}
+<div class="slice-background"></div>
 <div class="container relative space-y-8 lg:space-y-16">
-    <div class="grid grid-cols-2 gap-4 pt-12 pb-6 lg:grid-cols-6 lg:pb-12 lg:pt-24">
-        <div class="col-span-2 space-y-8 lg:col-span-3">
-            <div>
-                {{ if categories }}
-                    <div class="font-medium text-purple-500 uppercase">
-                        {{ categories  limit="1" }}  {{ title }} {{ /categories }}
-                    </div>
-                {{ /if }}
-                <h1 class="text-5xl font-semibold lg:leading-tight ">{{ title }}</h1>
-            </div>
-            {{ if subheader }}
-                <p class="text-2xl text-slate-400 ">{{ subheader }}</p>
-            {{ /if }}
-        </div>
-        <div class="relative col-span-2 col-start-2 lg:col-start-5 lg:-translate-y-28 translate-y-28">
-            <div class="absolute w-full h-96 lg:h-screen -z-10 bg-gradient-to-t from-green-500 to-purple-500 opacity-20"></div>
-            <div class="absolute w-full h-96 lg:h-screen -z-10 ">
-                <svg class="absolute bottom-0 w-full -z-20 " viewBox="0 0 482 482" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M482 0V482H0L482 0Z" fill="#fff"/>
-                </svg>
-            </div>
-            
+	<article class="relative grid grid-cols-1 pt-6 mx-auto lg:gap-16 lg:pb-6 xl:grid-cols-12 lg:pt-12">
 
-        </div>
-        
-    </div>
+		{{# Header #}}
+		<div class="z-10 flex flex-col items-end col-span-6 gap-8 lg:gap-16 lg:flex-row lg:col-span-12">
+			{{if default_image}}
+			<figure class="relative w-full lg:w-1/2 overflow-hidden shadow-slate-500 shadow-2xl rounded-lg lg:aspect-[6/4]">
+				{{ partial:global/picture :image="default_image" cover="true" maxheight="512" lazy="false" maxwidth="768" quality='70' }}
+			</figure>
+			{{ else }}
+			<div class="hidden w-24 lg:block"></div>
+			{{ /if }}
 
-    <div class="grid gap-5 lg:space-x-12 lg:space-x-reverse lg:grid-cols-2">
-        <div class="z-10 order-first col-span-1 lg:order-last ">
-            <figure class="overflow-hidden rounded-lg">
-                {{ partial:global/picture :image="default_image" cover="true" lazy="true" sizes="(min-width: 768px) 33vw, 90vw" }}
-            </figure>
-        </div>
+			<div class="w-full space-y-3 lg:space-y-6 lg:w-1/2">
+				{{ partial:typography/category }}
+				{{ partial:typography/h1 :content="title" color='text-black' }}
+				{{ partial:typography/subheader :content="title" }}
+			</div>
+		</div>
 
-    
-    {{# Blog content #}}
-    <article class="mx-auto prose prose-xl max-w-none prose-purple">
-        {{ content }}
-    </article>
+		{{# Svg #}} {{if default_image}}
+		<svg class="hidden col-span-1 translate-x-24 -translate-y-24 lg:block " width="100" height="789" viewBox="0 0 100 789" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    opacity="0.2"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0 0H100V441.132L0 541.132V0ZM100 454.132L0 554.132V619.711L100 519.711V454.132ZM0 632.711L100 532.711V572.843L0 672.843V632.711ZM99.1067 715.157L100 714.264V715.157H99.1067ZM100 586L0 686V726.132L100 626.132V586ZM100 767.553L99.1067 768.447H100V767.553ZM0 739L100 639V659.132L0 759.132V739ZM100 672L0 772V788.132L100 688.132V672Z"
+                    fill="url(#paint0_linear_1671_25835)"
+                />
+                <defs>
+                    <linearGradient id="paint0_linear_1671_25835" x1="100" y1="642.601" x2="-295.552" y2="522.434" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#32FFDC" />
+                        <stop offset="1" stop-color="#871EFF" />
+                    </linearGradient>
+                </defs>
+            </svg> {{ /if }} {{# Content #}} {{ page_builder scope="block" }} {{ partial src="page_builder/{type}" }} {{ /page_builder }} {{# Sidebar #}}
+		<aside class="col-span-3 lg:space-y-2">
 
-    
-    </div>
+			<a href="/blog">
+				<div class="inline-flex items-center text-lg font-semibold text-purple-500 group focus-visible:outline-none focus-visible:ring focus-visible:ring-transparent active:text-sky-700 hover:text-purple-500 focus:outline-none focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:outline-dashed focus-visible:ring-offset-sitehost-blue">
+					<div class="transition duration-500 ease-in-out transform group-hover:-translate-x-2">
+						<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 transition duration-500 ease-in-out transform translate-x-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                        </svg>
 
-    {{ if {collection:count in="blog"} > 1 }}
-        {{ partial:blog/latest_news }}
-    {{ /if }}
+					</div>
+					Back to blog
+				</div>
+			</a>
+
+			{{ partial:components/author }}
+		</aside>
 
 
-    <div class="z-20 back-to-top-wrapper">
-        <a href="#top" class="bg-white border border-purple-200 back-to-top-link" aria-label="Scroll to Top">
-            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+
+		<div class="z-20 back-to-top-wrapper">
+			<a href="#top" class="bg-white border border-purple-200 back-to-top-link" aria-label="Scroll to Top">
+				<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
             </svg>
-        </a>
-    </div>
-</div>
+			</a>
+		</div>
+	</article>
 
-
-
-<script>
-	const scrollProgress = () => {
-		return {
-			init() {
-				window.addEventListener('scroll', () => {
-					let winScroll = document.body.scrollTop || document.documentElement.scrollTop
-					let height = document.documentElement.scrollHeight - document.documentElement.clientHeight
-					this.percent = Math.round((winScroll / height) * 100)
-				})
-			},
-			circumference: 30 * 2 * Math.PI,
-			percent: 0,
-		}
-	}
-</script>
-
-
+	<div class="container">
+		{{ if {collection:count in="blog"} > 1 }} {{ partial:blog/latest_news }} {{ /if }}
+	</div>

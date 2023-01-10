@@ -4,7 +4,7 @@ blueprint: home
 template: general_content/index
 title: Homepage
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1657576460
+updated_at: 1667523361
 top_section:
   -
     template: /home/hero_home
@@ -45,12 +45,13 @@ top_section:
     text: 'SIGN UP'
     type: hero_homepage
     enabled: true
-sections:
+page_builder:
   -
-    template: /general_content/easy_steps
+    template: /page_builder/easy_steps
     Items:
       -
         template_global: /global/default_image
+        default_image: 01.gif
         step_title: 'Track Customers'
         step_textarea:
           -
@@ -61,9 +62,9 @@ sections:
                 text: 'Lorem ipsum dolor sit amet, consectetur adiblur-xlscing elit. Eleifend nullam cons.'
         type: Step-item
         enabled: true
+      -
+        template_global: /global/default_image
         default_image: 01.gif
-      -
-        template_global: /global/default_image
         step_title: 'Track Customers'
         step_textarea:
           -
@@ -71,12 +72,12 @@ sections:
             content:
               -
                 type: text
-                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. '
+                text: 'Lorem ipsum dolor sit amet, consectetur adiblur-xlscing elit. Eleifend nullam cons.'
         type: Step-item
         enabled: true
-        default_image: 03.gif
       -
         template_global: /global/default_image
+        default_image: 01.gif
         step_title: 'Track Customers'
         step_textarea:
           -
@@ -84,80 +85,97 @@ sections:
             content:
               -
                 type: text
-                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. '
+                text: 'Lorem ipsum dolor sit amet, consectetur adiblur-xlscing elit. Eleifend nullam cons.'
         type: Step-item
         enabled: true
-        default_image: 02.gif
     type: easy_steps
     enabled: true
   -
-    template: /general_content/steps
-    Items:
-      -
-        template_global: /global/iconamic
-        step_title: Title
-        step_textarea:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam. Fusce maximus non metus ac facilisis. Sed id nunc a ante interdum efficitur.'
-        type: Step-item
-        enabled: true
-      -
-        template_global: /global/iconamic
-        step_title: Title
-        step_textarea:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue. Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. Phasellus molestie blandit erat, vitae ullamcorper ante viverra et.'
-        type: Step-item
-        enabled: true
-      -
-        template_global: /global/iconamic
-        step_title: Title
-        step_textarea:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
-        type: Step-item
-        enabled: true
-      -
-        template_global: /global/iconamic
-        step_title: Title
-        step_textarea:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. Phasellus molestie blandit erat, vitae ullamcorper ante viverra et.'
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. '
-        type: Step-item
-        enabled: true
-    type: steps
-    enabled: false
-  -
-    template: general_content/product/feature_section
-    template_global: /global/iconamic
-    add_highlight_features: true
-    background_select: stripe_background
-    highlight_features_title: 'Even more features'
+    template: page_builder/feature_section
+    add_intro_features: true
+    add_highlight_features: false
     type: feature_section
     enabled: true
+    section_title: 'Best features'
+    columns:
+      -
+        column:
+          -
+            type: heading
+            attrs:
+              level: 4
+            content:
+              -
+                type: text
+                text: 'Eleifend nullam'
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Aliquam rhoncus ultrices euismod. Morbi auctor scelerisque lacus, nec vehicula eros tempus at. '
+        type: add_columns
+        enabled: true
+      -
+        column:
+          -
+            type: heading
+            attrs:
+              level: 4
+            content:
+              -
+                type: text
+                text: 'Diam pretium'
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Vestibulum scelerisque finibus leo ac aliquam. Fusce maximus non metus ac facilisis. Sed id nunc a ante interdum efficitur.'
+        type: add_columns
+        enabled: true
+      -
+        column:
+          -
+            type: heading
+            attrs:
+              level: 4
+            content:
+              -
+                type: text
+                text: 'Consectetur placerat'
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue.'
+        type: add_columns
+        enabled: true
+      -
+        column:
+          -
+            type: heading
+            attrs:
+              level: 4
+            content:
+              -
+                type: text
+                text: 'Morbi auctor scelerisque'
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Fusce maximus non metus ac facilisis. Sed id nunc a ante interdum efficitur.'
+        type: add_columns
+        enabled: true
+  -
+    template: page_builder/feature_section
     add_intro_features: false
+    add_highlight_features: true
+    background_select: grid_background
+    highlight_features_title: 'Even more features'
     features:
       -
         select_type: icon
@@ -216,9 +234,166 @@ sections:
                 text: 'Eleifend nullam consectetur placerat pelle tesque ut massa volutpat bonur los.'
         type: highlight_feature
         enabled: true
+    type: feature_section
+    enabled: true
   -
-    template: /global/companies_logo
-    companies_title: '1000+ <br> Big brands trust us'
+    template: page_builder/feature_section
+    add_intro_features: false
+    add_highlight_features: true
+    background_select: grid_background
+    features:
+      -
+        select_type: icon
+        iconamic: chevron-double-right
+        title: 'Fastest Speed'
+        description:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eleifend nullam consectetur placerat pellentesque ut massa volutpat at. Diam pretium orci dui sagittis.'
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Eleifend nullam consectetur placerat pelle tesque ut massa volutpat bonur los.'
+        type: highlight_feature
+        enabled: true
+      -
+        select_type: icon
+        iconamic: chevron-double-right
+        title: 'Fastest Speed'
+        description:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eleifend nullam consectetur placerat pellentesque ut massa volutpat at. Diam pretium orci dui sagittis.'
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Eleifend nullam consectetur placerat pelle tesque ut massa volutpat bonur los.'
+        type: highlight_feature
+        enabled: true
+      -
+        select_type: icon
+        iconamic: chevron-double-right
+        title: 'Fastest Speed'
+        description:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eleifend nullam consectetur placerat pellentesque ut massa volutpat at. Diam pretium orci dui sagittis.'
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Eleifend nullam consectetur placerat pelle tesque ut massa volutpat bonur los.'
+        type: highlight_feature
+        enabled: true
+    type: feature_section
+    enabled: true
+    highlight_features_title: '&nbsp;'
+  -
+    template: /page_builder/highlight
+    rows:
+      -
+        highlight_title: 'We’ve helped thousands  of businesses'
+        highlight_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Sed lobortis convallis molestie. Duis nec sapien non nisl venenatis lobortis. Vestibulum tempor nisi commodo libero viverra, sed dignissim ex rutrum. Morbi consequat massa sed quam dictum mollis. Sed mattis commodo justo, nec imperdiet mi consectetur eu. Suspendisse varius orci eu interdum ultricies.'
+        template_global: /global/default_image
+        default_image: color-mode-dark.png
+        buttons:
+          -
+            template_global: /components/buttons
+            label: 'Read the documentation'
+            link_type: url
+            target_blank: false
+            url: '#'
+            button_type: button
+        type: highlight-item
+        enabled: true
+      -
+        highlight_title: 'We’ve helped thousands  of businesses'
+        highlight_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Sed lobortis convallis molestie. Duis nec sapien non nisl venenatis lobortis. Vestibulum tempor nisi commodo libero viverra, sed dignissim ex rutrum. Morbi consequat massa sed quam dictum mollis. Sed mattis commodo justo, nec imperdiet mi consectetur eu. Suspendisse varius orci eu interdum ultricies.'
+        template_global: /global/default_image
+        default_image: color-mode-dark.png
+        buttons:
+          -
+            template_global: /components/buttons
+            label: 'Read the documentation'
+            link_type: url
+            target_blank: false
+            url: '#'
+            button_type: button
+        type: highlight-item
+        enabled: true
+    toggle_background: true
+    reverse_alignment: true
+    toggle_alignment: true
+    type: highlight
+    enabled: true
+  -
+    template: /components/section_title
+    pre_title: Testimonials
+    title: 'What our customer are saying 😍'
+    toggle_color: false
+    alignment: center
+    testimonial:
+      - cfd76af2-1e89-4264-b73b-1270a0a37a1a
+      - 5470de51-4f5d-4a01-81ff-afffe73f680d
+      - c8b148c7-3d15-487e-acef-54c45a653adf
+    type: testimonial
+    enabled: true
+  -
+    template: /components/section_title
+    toggle_color: false
+    faq_entries:
+      - 57c83bb4-e74d-47f9-924b-1f6ddf8c854a
+      - 236c12aa-a0ec-4e7e-8f4e-e67f29243f62
+      - ec1dbb6f-3d34-49e2-a387-c28342c8ab42
+      - a1c95fbe-5b46-427a-ab56-764bc1fa0e4d
+      - a9f9ef1a-f20a-4e06-9353-98d810fa2fe7
+      - ff4f50d5-1343-4f9f-bfd2-ded4d205c19a
+    type: faq
+    enabled: true
+    pre_title: FAQ
+    title: 'Frequently Asked Questions'
+    textarea_field:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula.'
+      -
+        type: paragraph
+        content:
+          -
+            type: hard_break
+    alignment: center
+  -
+    template: /page_builder/companies_logo
+    companies_title: '1000+ Big brands trust us ddd'
     company:
       -
         template_global: /global/default_image
@@ -268,71 +443,9 @@ sections:
     type: companies_logo
     enabled: true
   -
-    template: /general_content/highlight
-    rows:
-      -
-        highlight_title: 'We’ve helped thousands  of businesses'
-        highlight_textarea:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Sed lobortis convallis molestie. Duis nec sapien non nisl venenatis lobortis. Vestibulum tempor nisi commodo libero viverra, sed dignissim ex rutrum. Morbi consequat massa sed quam dictum mollis. Sed mattis commodo justo, nec imperdiet mi consectetur eu. Suspendisse varius orci eu interdum ultricies.'
-        template_global: /global/iconamic
-        default_image: cube.png
-        highlight_textcaption:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: TextCaption
-        link: '#'
-        select: background
-        iconamic: check
-        text: 'Read the documentation'
-        type: highlight-item
-        enabled: true
-    toggle_background: false
-    reverse_alignment: false
-    toggle_alignment: false
-    type: highlight
+    template: /page_builder/latest_post
+    pre-title: 'Stay in the loop'
+    title_section: 'Our latest article'
+    type: latest_post
     enabled: true
-  -
-    template: general_content/testimonial_section
-    title_testimonial: 'What our customer are saying 😍'
-    testimonial:
-      - 24221891-6df7-4106-8ee6-7e790b922d53
-      - cfd76af2-1e89-4264-b73b-1270a0a37a1a
-      - 0c7d0b62-28ea-4139-a5e5-c206ab916599
-    type: testimonial
-    enabled: true
-  -
-    template: /general_content/_horizontal_cta
-    toggle: false
-    template_global: /global/iconamic
-    type: horizontal_cta
-    enabled: false
-  -
-    template: /global/section_title
-    toggle_color: true
-    template_global: /global/iconamic
-    type: call_to_action
-    enabled: true
-    center_title_pre_title: asdasda
-    center_title_textarea:
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam. '
-    call_to_action_terms:
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: asdasdasd
 ---

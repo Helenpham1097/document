@@ -1,0 +1,64 @@
+title: Team
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: template
+        field:
+          default: general_content/team_member
+          display: template
+          type: hidden
+          icon: hidden
+          listable: hidden
+          instructions_position: above
+      -
+        import: default_image
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+          display: Name
+          instructions_position: above
+          listable: hidden
+          input_type: text
+          antlers: false
+      -
+        handle: team
+        field:
+          options:
+            owner_founder: 'Owner & Founder'
+            operations: Operations
+            product_automation: 'Product & Automation'
+            sales: Sales
+            hardware_operations: 'Hardware & Operations'
+            admin_accounts: 'Admin & Accounts'
+            marketing: Marketing
+          multiple: false
+          clearable: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          display: Team
+          type: select
+          icon: select
+          listable: hidden
+          instructions_position: above
+      -
+        handle: content
+        field:
+          type: markdown
+          display: Content
+          localizable: true
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true

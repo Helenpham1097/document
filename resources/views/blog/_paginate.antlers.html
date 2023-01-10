@@ -1,61 +1,79 @@
 {{# Template for blog post pagination #}}
 
+
+
 {{ paginate }}
 {{ if prev_page || next_page }}
-<div class="container flex items-center w-full px-5 py-6 mx-auto mt-24 border-gray-200 paginator sm:border-t sm:px-6">
-    <div class="container flex flex-row justify-center">
-        {{ if prev_page }}
-        <a href="{{ prev_page }}" class="px-2 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-l-md hover:bg-purple-500 hover:text-white">
-            <span class="sr-only">Previous</span>
-            <!-- Heroicon name: chevron-left -->
-            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
-            </svg>
-        </a>
-        {{ /if }}
-        {{ links:segments }}
-            {{ first }}
-                {{ if page == current_page }}
-                    <a href="{{ url }}" class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-purple-500 border-t border-b border-r border-gray-300"> {{ page }} </a>
-                {{ else }}
-                    <a href="{{ url }}" class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border-t border-b border-r border-gray-300 hover:bg-purple-500 hover:text-white"> {{ page }} </a>
-                {{ /if }}
-            {{ /first }}
+<div class="container flex items-center justify-center px-4 py-10 lg:px-0 sm:px-6">
+        <div class="flex items-center justify-between w-full border-t border-gray-200 ">
 
-            {{ if slider }}
-                <span class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border-t border-b border-r border-gray-300"> ... </span>
+            
+            {{ if prev_page }}
+            <a href="{{ if prev_page }}{{ prev_page }} {{ /if }}" class="flex items-center pt-3 {{ if prev_page }}text-gray-600 cursor-pointer hover:text-purple-500 {{ else }} text-gray-300 cursor-default {{ /if }} ">
+                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.1665 4H12.8332" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1.1665 4L4.49984 7.33333" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1.1665 4.00002L4.49984 0.666687" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <p class="ml-3 text-sm font-medium leading-none ">Previous</p>                    
+            </a>
+            {{ else }}
+            <span></span>
             {{ /if }}
+            
+            
+            <div class="hidden sm:flex">
 
-            {{ slider }}
-                {{ if page == current_page }}
-                    <a href="{{ url }}" class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-purple-500 border-t border-b border-r border-gray-300"> {{ page }} </a>
-                {{ else }}
-                    <a href="{{ url }}" class="relative items-center hidden px-4 py-2 text-sm font-medium text-gray-700 bg-white border-t border-b border-r border-gray-300 md:inline-flex hover:bg-purple-500 hover:text-white"> {{ page }} </a>
-                {{ /if }}
-            {{ /slider }}
+                {{ links:segments }}
+                    {{ first }}
+                        {{ if page == current_page }}
+                            <a href="{{ url }}" class="px-2 pt-3 mr-4 text-sm font-medium leading-none text-gray-600 border-t-2 border-transparent cursor-pointer hover:text-purple-500 hover:border-purple-500"> {{ page }} </a>
+                        {{ else }}
+                            <a href="{{ url }}" class="px-2 pt-3 mr-4 text-sm font-medium leading-none text-gray-600 border-t-2 border-transparent cursor-pointer hover:text-purple-800 hover:border-purple-500"> {{ page }} </a>
+                        {{ /if }}
+                    {{ /first }}
 
-            {{ if slider || (!slider && last) }}
-                <span class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border-t border-b border-r border-gray-300"> ... </span>
+                    {{ if slider }}
+                        <span class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border-t-2 border-b border-r border-gray-300"> ... </span>
+                    {{ /if }}
+
+                    {{ slider }}
+                        {{ if page == current_page }}
+                            <a href="{{ url }}" class="px-2 pt-3 mr-4 text-sm font-medium leading-none text-gray-600 border-t-2 border-transparent cursor-pointer hover:text-purple-500 hover:border-purple-500"> {{ page }} </a>
+                        {{ else }}
+                            <a href="{{ url }}" class="px-2 pt-3 mr-4 text-sm font-medium leading-none text-gray-600 border-t-2 border-transparent cursor-pointer hover:text-purple-800 hover:border-purple-500"> {{ page }} </a>
+                        {{ /if }}
+                    {{ /slider }}
+
+                    {{ if slider || (!slider && last) }}
+                        <span class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border-t-2 border-b border-r border-gray-300"> ... </span>
+                    {{ /if }}
+
+                    {{ last }}
+                        {{ if page == current_page }}
+                            <a href="{{ url }}" class="px-2 pt-3 mr-4 text-sm font-medium leading-none text-gray-600 border-t-2 border-transparent cursor-pointer hover:text-purple-500 hover:border-purple-500"> {{ page }} </a>
+                        {{ else }}
+                            <a href="{{ url }}" class="px-2 pt-3 mr-4 text-sm font-medium leading-none text-gray-600 border-t-2 border-transparent cursor-pointer hover:text-purple-800 hover:border-purple-500"> {{ page }} </a>
+                        {{ /if }}
+                    {{ /last }}
+                {{ /links:segments }}
+            </div>
+
+
+            {{ if next_page}}
+            <a href="{{ if next_page}} {{ next_page }} {{ /if }}" class="flex items-center pt-3 {{ if next_page }}text-gray-600 cursor-pointer hover:text-purple-500 {{ else }} text-gray-300 cursor-default {{ /if }}  ">
+                <p class="mr-3 text-sm font-medium leading-none">Next</p>
+                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.1665 4H12.8332" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9.5 7.33333L12.8333 4" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9.5 0.666687L12.8333 4.00002" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+            </a>
+            {{ else }}
+            <span></span>
             {{ /if }}
-
-            {{ last }}
-                {{ if page == current_page }}
-                    <a href="{{ url }}" class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-purple-500 border-t border-b border-r border-gray-300"> {{ page }} </a>
-                {{ else }}
-                    <a href="{{ url }}" class="relative items-center hidden px-4 py-2 text-sm font-medium text-gray-700 bg-white border-t border-b border-r border-gray-300 md:inline-flex hover:bg-purple-500 hover:text-white"> {{ page }} </a>
-                {{ /if }}
-            {{ /last }}
-        {{ /links:segments }}
-        {{ if next_page }}
-        <a href="{{ next_page }}" class="relative inline-flex items-center px-2 py-2 text-sm font-medium text-gray-500 bg-white border-t border-b border-r border-gray-300 rounded-r-md hover:bg-purple-500 hover:text-white">
-            <span class="sr-only">Next</span>
-            <!-- Heroicon name: chevron-right -->
-            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-            </svg>
-        </a>
-        {{ /if }}
+            
+        </div>
     </div>
-</div>
-{{ /if }}
+    {{ /if }}
 {{ /paginate }}

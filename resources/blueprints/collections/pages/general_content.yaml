@@ -39,141 +39,130 @@ sections:
               hero_general_content_title: 'General Content Title'
               hero_general_content_textarea: 'Serverless is the future of hosting. We’re building a brand new serverless platform from the ground up for your existing websites and applications so you get all the serverless benefits without the pain.'
               hero_general_content_image: placeholder-image.jpg
-      -
-        handle: sections
-        field:
-          collapse: true
-          sets:
-            section_title:
-              display: 'Section Title'
-              fields:
-                -
-                  import: section_title
-            call_to_action:
-              display: 'Call To Action'
-              fields:
-                -
-                  import: call_to_action
-            features_columns_item:
-              display: 'Column Features With Image'
-              fields:
-                -
-                  import: features_columns
-            highlight:
-              display: 'Highlight Features'
-              fields:
-                -
-                  import: highlight
-            companies_logo:
-              display: 'Companies Logo'
-              fields:
-                -
-                  import: companies_logo
-            testimonial:
-              display: 'Testimonial Section'
-              fields:
-                -
-                  import: testimonial_section
-            steps:
-              display: Steps
-              fields:
-                -
-                  import: steps
-            icon_features:
-              display: 'Features With Icon'
-              fields:
-                -
-                  import: features_icon
-            pricing_table:
-              display: 'Pricing Table'
-              fields:
-                -
-                  import: pricing_table
-            buttons:
-              display: Buttons
-              fields:
-                -
-                  import: buttons
-            comparison_table:
-              display: 'Comparison Table'
-              fields:
-                -
-                  import: comparison_table
-            iimage_gallery:
-              display: 'iImage Gallery'
-              fields:
-                -
-                  import: image_gallery
-            horizontal_cta:
-              display: 'Horizontal CTA'
-              fields:
-                -
-                  import: _horizontal_cta
-            contact_us:
-              display: 'Contact Us'
-              fields:
-                -
-                  import: contact_us_form
-            embed_video:
-              display: 'Embed Video'
-              fields:
-                -
-                  import: embed_video
-            multiple_text_columns:
-              display: 'Multiple text columns'
-              fields:
-                -
-                  import: two_text_column
-            latest_post:
-              display: 'Latest Post'
-              fields:
-                -
-                  import: latest_post
-            image_gallery:
-              display: 'Image Gallery'
-              fields:
-                -
-                  import: image_gallery
-            contact_us_form:
-              display: 'Contact Us form'
-              fields:
-                -
-                  import: contact_us_form
-            text_content:
-              display: 'Text Content'
-              fields:
-                -
-                  import: text_content
-            faq:
-              display: FAQ
-              fields:
-                -
-                  import: faq
-            text_columns:
-              display: 'Text Columns'
-              fields:
-                -
-                  import: pricing_features_section
-            feature_section:
-              display: 'Feature Section'
-              fields:
-                -
-                  import: feature_section
-          display: Sections
-          type: replicator
-          icon: replicator
-          listable: hidden
-          instructions: 'Customisable sections, you can reorder them and add new sections from the + symbol.'
-          default:
-            -
-              text_content:
-                -
-                  type: markdown
-                  enabled: true
-              type: text_content
-              enabled: true
           instructions_position: above
           read_only: false
+      # -
+      #   handle: sections
+      #   field:
+      #     collapse: true
+      #     sets:
+      #       section_title:
+      #         display: 'Section Title'
+      #         fields:
+      #           -
+      #             import: section_title
+      #       call_to_action:
+      #         display: 'Call To Action'
+      #         fields:
+      #           -
+      #             import: call_to_action
+      #       highlight:
+      #         display: 'Highlight Features'
+      #         fields:
+      #           -
+      #             import: highlight
+      #       companies_logo:
+      #         display: 'Companies Logo'
+      #         fields:
+      #           -
+      #             import: companies_logo
+      #       testimonial:
+      #         display: 'Testimonial Section'
+      #         fields:
+      #           -
+      #             import: testimonial_section
+      #       steps:
+      #         display: Steps
+      #         fields:
+      #           -
+      #             import: steps
+      #       pricing_table:
+      #         display: 'Pricing Table'
+      #         fields:
+      #           -
+      #             import: pricing_table
+      #       buttons:
+      #         display: Buttons
+      #         fields:
+      #           -
+      #             import: buttons
+      #       iimage_gallery:
+      #         display: 'iImage Gallery'
+      #         fields:
+      #           -
+      #             import: image_gallery
+      #       contact_us:
+      #         display: 'Contact Us'
+      #         fields:
+      #           -
+      #             import: contact_us_form
+      #       embed_video:
+      #         display: 'Embed Video'
+      #         fields:
+      #           -
+      #             import: embed_video
+      #       multiple_text_columns:
+      #         display: 'Multiple text columns'
+      #         fields:
+      #           -
+      #             import: two_text_column
+      #       latest_post:
+      #         display: 'Latest Post'
+      #         fields:
+      #           -
+      #             import: latest_post
+      #       image_gallery:
+      #         display: 'Image Gallery'
+      #         fields:
+      #           -
+      #             import: image_gallery
+      #       contact_us_form:
+      #         display: 'Contact Us form'
+      #         fields:
+      #           -
+      #             import: contact_us_form
+      #       text_content:
+      #         display: 'Text Content'
+      #         fields:
+      #           -
+      #             import: text_content
+      #       faq:
+      #         display: FAQ
+      #         fields:
+      #           -
+      #             import: faq
+      #       text_columns:
+      #         display: 'Text Columns'
+      #         fields:
+      #           -
+      #             import: pricing_features_section
+      #       feature_section:
+      #         display: 'Feature Section'
+      #         fields:
+      #           -
+      #             import: feature_section
+      #       article:
+      #         display: article
+      #         fields:
+      #           -
+      #             import: article
+      #     display: Sections
+      #     type: replicator
+      #     icon: replicator
+      #     listable: hidden
+      #     instructions: 'Customisable sections, you can reorder them and add new sections from the + symbol. (sectionss)'
+      #     default:
+      #       -
+      #         text_content:
+      #           -
+      #             type: markdown
+      #             enabled: true
+      #         type: text_content
+      #         enabled: true
+      #     instructions_position: above
+      #     read_only: false
+      -
+        import: page_builder
   sidebar:
     display: Sidebar
     fields:

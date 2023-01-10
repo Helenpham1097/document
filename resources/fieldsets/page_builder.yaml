@@ -1,0 +1,90 @@
+title: 'Page builder'
+fields:
+  -
+    handle: page_builder
+    field:
+      type: replicator
+      localizable: true
+      collapse: true
+      listable: false
+      display: 'Page builder'
+      instructions: 'Build your page by using various predefined content models.'
+      sets:
+        article:
+          display: Article
+          instructions: 'Long form content, can be expanded with media like figures, video, quotes or tables.'
+          fields:
+            -
+              import: article
+        companies_logo:
+          display: 'Companies Logo'
+          fields:
+            -
+              import: companies_logo
+        contact_us_form:
+          display: 'Contact Us form'
+          fields:
+            -
+              import: contact_us_form
+        easy_steps:
+          display: 'Easy steps'
+          fields:
+            -
+              import: easy_steps
+        faq:
+          display: FAQ
+          fields:
+            -
+              import: faq
+        feature_section:
+          display: 'Feature Section'
+          fields:
+            -
+              import: feature_section
+        highlight:
+          display: 'Highlight Features'
+          fields:
+            -
+              import: highlight
+        image_gallery:
+          display: 'Image Gallery'
+          fields:
+            -
+              import: image_gallery
+        latest_post:
+          display: 'Latest Post'
+          fields:
+            -
+              import: latest_post
+        multiple_text_columns:
+          display: 'Multiple text columns'
+          fields:
+            -
+              import: multiple_text_columns
+        pricing_table:
+          display: 'Pricing Table'
+          fields:
+            -
+              import: pricing_table
+        testimonial:
+          display: 'Testimonial Section'
+          fields:
+            -
+              import: testimonial_section
+        text_columns:
+          display: 'Text Columns'
+          fields:
+            -
+              import: pricing_features_section
+        text_content:
+          display: 'Text Content'
+          fields:
+            -
+              import: text_content
+        tile_steps:
+          display: 'Tile steps'
+          fields:
+            -
+              import: tile_steps
+      instructions_position: above
+      read_only: false

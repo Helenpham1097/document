@@ -1,0 +1,54 @@
+{{#
+	@name Table
+	@desc The table component for sizeable content tables.
+    @set page.article.table
+#}}
+
+<!-- /components/_table.antlers.html -->
+<div
+    class="
+        overflow-auto not-prose
+        {{ if size == 'md'}} size-md {{/if}}
+        {{ if size == 'lg'}} size-lg {{/if}}
+        {{ if size == 'xl'}} size-xl {{/if}}
+        {{ if size == ''}}  {{/if}}
+    "
+>
+    <table class="w-full bg-light border-collapse min-w-[580px] sm:min-w-none">
+        {{ table }}
+            {{ if first && first_row_headers }}
+                <thead>
+                    <tr>
+                        {{ cells }}
+                            <th class="px-3 py-3 text-base font-bold tracking-wider text-left text-purple-500 uppercase border-b bg-slate-200 border-slate-200 xl:px-6">{{ value }}</th>
+                        {{ /cells }}
+                    </tr>
+                </thead>
+                <tbody>
+            {{ /if }}
+
+            {{ if !first && first_row_headers || !first_row_headers }}
+                {{ if first }}
+                    <tbody class="box-border border-y border-slate-200">
+                {{ /if }}
+
+                <tr class="box-border border-x border-slate-200 ">
+                    {{ cells }}
+                        {{ if first && first_column_headers }}
+                            <th class="px-3 py-3 text-base font-bold tracking-wider text-left text-purple-500 uppercase border-b bg-slate-200 border-slate-200 xl:px-6">{{ value }}</th>
+                        {{ else }}
+                            <td class="px-3 py-3 text-base border-b text-slate-800 border-slate-200 xl:px-6">{{ value }}</td>
+                        {{ /if }}
+                    {{ /cells }}
+                </tr>
+
+                {{ if last }}
+                    </tbody>
+                {{ /if }}
+            {{ /if }}
+        {{ /table }}
+    </table>
+
+    {{ partial:typography/caption }}
+</div>
+<!-- End: /components/_table.antlers.html -->

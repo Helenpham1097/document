@@ -1,0 +1,44 @@
+<div class="slice-background"></div>
+<div class="container relative pt-6 space-y-4 lg:space-y-12 lg:pt-12 ">
+
+	<a class="flex text-sm font-semibold group text-sitehost-blue" href="/blog">
+		<svg viewBox="0 -9 3 24" class="relative w-auto h-6 mr-3 overflow-visible ">
+				<path class="transition-all duration-200 ease-in-out group-hover:-translate-x-1" d="M3 0L0 3L3 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+		</svg>
+		Back to blog
+	</a>
+
+	<div class="flex flex-col gap-6 p-8 lg:flex-row lg:w-2/3 lg:gap-12">
+		<div class="flex flex-col content-center space-x-6 lg:flex-row ">
+			<figure class="w-24 h-24 overflow-hidden transition duration-200 ease-in-out bg-white rounded-full shadow-xl group-hover:shadow-2xl">
+			{{ partial:global/picture :image="default_image" cover="true" lazy="false" maxheight="150" maxwidth="150" quality='70' }}
+		</figure>
+		</div>
+		<div class="relative flex flex-col space-y-4 ">
+				<h3 class="h4">{{ title }}</h3>
+				<h5 class="font-normal text-dark-600">{{ team:label }}</h5>
+				<hr>
+				<p class="prose">{{ content| strip_tags:p }}</p>
+		</div>
+	</div>
+<div class="mx-auto ">
+	{{ collection:blog limit="12" team_member:contains="{id}"  paginate="true" as='posts' sort="date:desc" }}
+		{{ if posts && (get:page == "1" || !get:page) }}
+			<div class="py-8 space-y-10 lg:pb-8 sm:space-y-20">
+		{{ else }}
+			<div class="py-8 space-y-10 lg:pb-8 sm:space-y-20">
+		{{ /if }}
+		<div class="grid gap-16 mx-auto grid-cols-1 lg:grid-cols-2 place-items-startgrid {{ if {collection:count team_member:contains="{id}" in="blog"} > 12 }} {{else}} pb-6 lg:pb-12 {{ /if }} ">
+
+			{{ posts }}
+				{{ partial:blog/post }}
+			{{ /posts }}	
+		</div>
+		{{# Paginator #}}
+		{{ if {collection:count team_member:contains="{id}" in="blog"} > 12 }}
+			{{ partial:blog/paginate }}
+		{{ /if }}
+	{{ /collection:blog }}
+		</div>
+	</div>
+</div>

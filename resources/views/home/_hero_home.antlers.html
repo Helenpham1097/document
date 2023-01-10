@@ -8,9 +8,9 @@
                 <div class="flex flex-col items-start space-y-6 lg:flex-grow">
                     <h1 class="prose slash prose-strong:font-bold h1">{{ hero_home_title | strip_tags:p }}</h1>
                     <div class="text-2xl text-slate-400 ">{{ hero_home_description }}</div>
-                    {{ if link }}
-                        {{ partial:global/buttons }}
-                    {{ /if }}
+                    
+                        {{ partial:components/buttons }}
+                    
                 </div>
             </div>
 
@@ -19,7 +19,7 @@
                 {{ if hero_home_image }}
                     <div class="relative">
                         <figure class="relative drop-shadow-2xl">
-                        {{ partial:global/picture :image="hero_home_image" preset="xs" cover="true" lazy="true" }}
+                            {{ partial:global/picture :image="hero_home_image" cover="false" maxheight="512" lazy="false" maxwidth="768" quality='70' }}
                         </figure>
                         <div class="absolute inset-0 h-full mx-auto max-w-screen-2xl ">
                             <svg class="relative text-green-300 -translate-x-1/2 translate-y-1/2 -z-10 w-36" viewBox="0 0 273 269" fill="none" xmlns="http://www.w3.org/2000/svg">

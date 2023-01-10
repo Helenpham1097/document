@@ -4,25 +4,28 @@
 .prose ul > li::before {
     @apply bg-purple-500 rounded-none;
 }
-::marker,
-.prose ::marker {
+/* ::marker, */
+.prose ul ::marker {
     @apply hidden text-purple-500 bg-purple-500;
-    content: url("data:image/svg+xml,%3Csvg width='9' height='8' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.3731 13.6668H0L2.62687 0.333496H16L13.3731 13.6668Z' fill='%23871EFF'/%3E%3C/svg%3E%0A");
+    content: url("data:image/svg+xml,%3Csvg width='9' height='12' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.3731 13.6668H0L2.62687 0.333496H16L13.3731 13.6668Z' fill='%23871EFF'/%3E%3C/svg%3E%0A");
+}
+.prose ol ::marker {
+    @apply hidden text-base font-bold text-purple-500;
 }
 .prose ul > li::marker,
 .prose ol > li::marker {
     @apply hidden;
 }
 
-.feature-section .prose {
+/* .feature-section .prose {
     ::marker {
-        @apply hidden text-red-500 bg-red-500;
+        @apply hidden text-purple-500 bg-purple-500;
         content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='12' fill='%2332FFDC'/%3E%3Cpath d='M8 12L10.8 15L16 9' stroke='%23555658' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
     }
     li p {
         @apply my-1;
     }
-}
+} */
 
 article p img {
     @apply mx-auto text-center justify-self-center;
@@ -41,37 +44,12 @@ article p img {
     ul > li {
         /* @apply pl-0; */
     }
-
     blockquote {
-        @apply relative p-8 pl-8 text-sm not-italic border border-purple-200 shadow-lg bg-purple-50;
-        *:last-child {
-            margin-bottom: 0;
-        }
-    }
-
-    blockquote::before {
-        @apply absolute inset-0 block text-6xl font-bold text-purple-300 top-2 left-2;
-        content: "\201C"; /*Unicode for Left Double Quote*/
-        font-family: Georgia, serif;
-    }
-
-    table th {
-        @apply text-purple-500;
-    }
-
-    table table table {
-        background-color: #fff;
-    }
-
-    table tbody > tr:nth-child(odd) > td,
-    table tbody > tr:nth-child(odd) > th {
-        @apply bg-purple-100;
-    }
-    tbody td:first-child {
-        @apply pl-4;
-    }
-    tbody td:last-child {
-        @apply pr-4;
+        @apply  relative p-8 mt-0 space-y-4 text-base font-normal leading-7 bg-white bg-right-bottom bg-no-repeat border shadow-xl border-slate-200 text-slate-700 shadow-slate-500/20 rounded-xl;
+        background-image: url("data:image/svg+xml,%3Csvg class='absolute text-purple-100 bottom-4 right-4 w-28 h-28 ' viewBox='0 0 33 28' fill='%23F1EAFE' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.0353 27.9398C23.362 26.9131 26.5886 24.8598 28.7153 21.7798C30.9153 18.6265 32.0153 14.6665 32.0153 9.89981V0.549805H21.2353V13.7498H26.1853C26.0386 16.0965 25.3786 18.0765 24.2053 19.6898C23.1053 21.3031 21.382 22.4031 19.0353 22.9898V27.9398ZM0.665283 27.9398C4.91862 26.9131 8.10862 24.8598 10.2353 21.7798C12.4353 18.6265 13.5353 14.6665 13.5353 9.89981V0.549805H2.86528V13.7498H7.81528C7.59528 16.0965 6.89861 18.0765 5.72528 19.6898C4.62528 21.3031 2.93862 22.4031 0.665283 22.9898V27.9398Z' fill='%23F1EAFE'%3E%3C/path%3E%3C/svg%3E");
+        content: "";
+        background-size: 18%;
+        background-position: 95% 90%;
     }
     pre {
         @apply bg-purple-900;

@@ -1,106 +1,59 @@
 {{# Partial template for the featured blog post on blog index page #}}
 
-
-<div class="slice-background -z-20"></div>
 <section class="container mx-auto featured-blog">
-    <a href="{{ url }}"  class="grid items-center grid-cols-2 gap-16 py-8 group lg:py-12 lg:grid-cols-6">
-            <div class="col-span-2 space-y-8 lg:col-span-3">
-                <div>
+    <a href="{{ url }}">
+    <div class="flex flex-col items-end col-span-6 gap-8 pt-6 group lg:pt-12 lg:gap-16 lg:flex-row lg:col-span-6">
+            {{if default_image}}
+            <figure class="relative w-full lg:w-1/2 overflow-hidden shadow-slate-500 shadow-2xl rounded-lg lg:aspect-[6/4]">
+                {{ partial:global/picture :image="default_image" cover="false" maxheight="512" lazy="false" maxwidth="768" quality='70' }}
+            </figure>
+            {{ /if }}
+
+            <div class="w-full space-y-3 lg:space-y-6 lg:w-1/2">
+                <span class="inline-block px-2 py-1 text-xs font-medium tracking-widest text-indigo-500 rounded bg-indigo-50">
                     {{ if categories }}
-                        <div class="font-medium text-purple-500 uppercase">
-                            {{ categories  limit="1" }}  {{ title }} {{ /categories }}
-                        </div>
+                    <div class="font-medium text-purple-500 uppercase">
+                        {{ categories limit="1" }} {{ title }} {{ /categories }}
+                    </div>
+                    {{ else }}
+                    <div class="font-medium text-purple-500 uppercase">
+                        Article
+                    </div>
                     {{ /if }}
-                    <h2 class="text-5xl font-semibold dot lg:leading-tight ">{{ title }}</h2>
-                </div>
+                </span>
+                <h1 class="text-3xl font-semibold lg:text-5xl lg:leading-tight">{{ title }}</h1>
                 {{ if subheader }}
-                    <p class="text-2xl text-slate-400 ">{{ subheader }}</p>
+                <p class="text-2xl lg:text-3xl text-slate-500">{{ subheader }}</p>
                 {{ /if }}
-
                 
-            <div 
-                class="inline-flex items-center text-lg font-semibold text-purple-500 focus-visible:outline-none focus-visible:ring focus-visible:ring-transparent group active:text-sky-700 hover:text-purple-500 focus:outline-none focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:outline-dashed focus-visible:ring-offset-sitehost-blue" >
-                Read more
-                <div class="transition duration-500 ease-in-out transform group-hover:translate-x-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mt-0.5 transition duration-500 ease-in-out transform translate-x-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                </div>
-            </div>
-                
-
-            </div>
-            <div class="col-span-2 space-y-8 lg:col-span-3">
-                <div class="relative">
-                        <figure class="overflow-hidden rounded-lg ">
-                        {{ partial:global/picture :image="default_image" preset="xs" cover="true" lazy="true" }}
-                        </figure>
-                        <div class="absolute inset-0 h-full mx-auto max-w-screen-2xl ">
-                            <svg class="relative text-green-300 -translate-x-1/2 translate-y-1/2 -z-10 w-36" viewBox="0 0 273 269" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <mask id="mask0_1430_25914" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="1" width="272" height="268">
-                                <rect y="1" width="272" height="268" fill="#D9D9D9"/>
-                                </mask>
-                                <g mask="url(#mask0_1430_25914)">
-                                <path d="M0 24.1049V36.668L61.7788 1H40.0188L0 24.1049Z" fill="currentColor"/>
-                                <path d="M98.9085 1L0 58.1049V70.668L120.669 1H98.9085Z" fill="currentColor"/>
-                                <path d="M157.798 1L0 92.1049V104.668L179.558 1H157.798Z" fill="currentColor"/>
-                                <path d="M216.688 1L0 126.105V138.668L238.448 1H216.688Z" fill="currentColor"/>
-                                <path d="M272 3.0656L0 160.105V172.668L272 15.6287V3.0656Z" fill="currentColor"/>
-                                <path d="M272 37.0656L0 194.105V206.668L272 49.6287V37.0656Z" fill="currentColor"/>
-                                <path d="M272 71.0656L0 228.105V240.668L272 83.6287V71.0656Z" fill="currentColor"/>
-                                <path d="M272 105.066L0 262.105V274.668L272 117.629V105.066Z" fill="currentColor"/>
-                                <path d="M272 139.066L0 296.105V308.668L272 151.629V139.066Z" fill="currentColor"/>
-                                <path d="M272 173.066L0 330.105V342.668L272 185.629V173.066Z" fill="currentColor"/>
-                                <path d="M272 207.066L0 364.105V376.668L272 219.629V207.066Z" fill="currentColor"/>
-                                <path d="M272 241.066L0 398.105V409H2.88905L272 253.629V241.066Z" fill="currentColor"/>
-                                <path d="M272 275.066L40.0188 409H61.7788L272 287.629V275.066Z" fill="currentColor"/>
-                                <path d="M272 309.066L98.9086 409H120.669L272 321.629V309.066Z" fill="currentColor"/>
-                                <path d="M272 343.066L157.798 409H179.558L272 355.629V343.066Z" fill="currentColor"/>
-                                <path d="M272 377.066L216.688 409H238.448L272 389.629V377.066Z" fill="currentColor"/>
-                                </g>
-                            </svg>
-
-                            <svg class="absolute bottom-0 right-0 z-10 text-purple-200 translate-x-1/2 -translate-y-1/3 w-36" viewBox="0 0 273 268" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.285156 18.2178V40.862L42.2954 0H18.937L0.285156 18.2178Z" fill="currentColor"/>
-                                <path d="M0.285156 63.4978V86.142L42.2954 45.28H18.937L0.285156 63.4978Z" fill="currentColor"/>
-                                <path d="M0.285156 108.778V131.422L42.2954 90.5601H18.937L0.285156 108.778Z" fill="currentColor"/>
-                                <path d="M0.285156 154.058V176.702L42.2954 135.84H18.937L0.285156 154.058Z" fill="currentColor"/>
-                                <path d="M0.285156 199.338V221.982L42.2954 181.12H18.937L0.285156 199.338Z" fill="currentColor"/>
-                                <path d="M0.285156 244.618V267.262L42.2954 226.4H18.937L0.285156 244.618Z" fill="currentColor"/>
-                                <path d="M92.2891 18.2178V40.862L134.299 0H110.941L92.2891 18.2178Z" fill="currentColor"/>
-                                <path d="M92.2891 63.4978V86.142L134.299 45.28H110.941L92.2891 63.4978Z" fill="currentColor"/>
-                                <path d="M92.2891 108.778V131.422L134.299 90.5601H110.941L92.2891 108.778Z" fill="currentColor"/>
-                                <path d="M92.2891 154.058V176.702L134.299 135.84H110.941L92.2891 154.058Z" fill="currentColor"/>
-                                <path d="M92.2891 199.338V221.982L134.299 181.12H110.941L92.2891 199.338Z" fill="currentColor"/>
-                                <path d="M92.2891 244.618V267.262L134.299 226.4H110.941L92.2891 244.618Z" fill="currentColor"/>
-                                <path d="M184.293 18.2178V40.862L226.303 0H202.945L184.293 18.2178Z" fill="currentColor"/>
-                                <path d="M184.293 63.4978V86.142L226.303 45.28H202.945L184.293 63.4978Z" fill="currentColor"/>
-                                <path d="M184.293 108.778V131.422L226.303 90.5601H202.945L184.293 108.778Z" fill="currentColor"/>
-                                <path d="M184.293 154.058V176.702L226.303 135.84H202.945L184.293 154.058Z" fill="currentColor"/>
-                                <path d="M184.293 199.338V221.982L226.303 181.12H202.945L184.293 199.338Z" fill="currentColor"/>
-                                <path d="M184.293 244.618V267.262L226.303 226.4H202.945L184.293 244.618Z" fill="currentColor"/>
-                                <path d="M46.2666 18.2178V40.862L88.2768 0H64.9185L46.2666 18.2178Z" fill="currentColor"/>
-                                <path d="M46.2666 63.4978V86.142L88.2768 45.28H64.9185L46.2666 63.4978Z" fill="currentColor"/>
-                                <path d="M46.2666 108.778V131.422L88.2768 90.5601H64.9185L46.2666 108.778Z" fill="currentColor"/>
-                                <path d="M46.2666 154.058V176.702L88.2768 135.84H64.9185L46.2666 154.058Z" fill="currentColor"/>
-                                <path d="M46.2666 199.338V221.982L88.2768 181.12H64.9185L46.2666 199.338Z" fill="currentColor"/>
-                                <path d="M46.2666 244.618V267.262L88.2768 226.4H64.9185L46.2666 244.618Z" fill="currentColor"/>
-                                <path d="M138.271 18.2178V40.862L180.281 0H156.922L138.271 18.2178Z" fill="currentColor"/>
-                                <path d="M138.271 63.4978V86.142L180.281 45.28H156.922L138.271 63.4978Z" fill="currentColor"/>
-                                <path d="M138.271 108.778V131.422L180.281 90.5601H156.922L138.271 108.778Z" fill="currentColor"/>
-                                <path d="M138.271 154.058V176.702L180.281 135.84H156.922L138.271 154.058Z" fill="currentColor"/>
-                                <path d="M138.271 199.338V221.982L180.281 181.12H156.922L138.271 199.338Z" fill="currentColor"/>
-                                <path d="M138.271 244.618V267.262L180.281 226.4H156.922L138.271 244.618Z" fill="currentColor"/>
-                                <path d="M230.275 18.2178V40.862L272.286 0H248.927L230.275 18.2178Z" fill="currentColor"/>
-                                <path d="M230.275 63.4978V86.142L272.286 45.28H248.927L230.275 63.4978Z" fill="currentColor"/>
-                                <path d="M230.275 108.778V131.422L272.286 90.5601H248.927L230.275 108.778Z" fill="currentColor"/>
-                                <path d="M230.275 154.058V176.702L272.286 135.84H248.927L230.275 154.058Z" fill="currentColor"/>
-                                <path d="M230.275 199.338V221.982L272.286 181.12H248.927L230.275 199.338Z" fill="currentColor"/>
-                                <path d="M230.275 244.618V267.262L272.286 226.4H248.927L230.275 244.618Z" fill="currentColor"/>
+                <div class="flex flex-wrap items-center w-full pb-4 mt-auto mb-4">
+                    
+                    <div class="inline-flex items-center text-lg font-semibold text-purple-500 focus-visible:outline-none focus-visible:ring focus-visible:ring-transparent active:text-sky-700 hover:text-purple-500 focus:outline-none focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:outline-dashed focus-visible:ring-offset-sitehost-blue" >
+                        Read more
+                        <div class="transition duration-500 ease-in-out transform group-hover:translate-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mt-0.5 transition duration-500 ease-in-out transform translate-x-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                             </svg>
                         </div>
                     </div>
+                    
+                    <span class="inline-flex items-center py-1 pr-3 ml-auto mr-3 space-x-2 text-sm leading-none text-gray-400">
+                        {{ if team_member }}
+                        <figure class="object-cover w-8 h-8 overflow-hidden border border-gray-100 rounded-full">
+                            {{ partial:global/picture :image="team_member:default_image" cover="true" maxheight="44" lazy="false" maxwidth="44" quality='70' }}
+                        </figure>
+                        <span class="truncate md:w-auto md:text-clip md:overflow-hidden">{{ team_member:title }}</span>
+                        {{ else }}
+                        <figure class="object-cover w-8 h-8 overflow-hidden border border-gray-100 rounded-full">
+                            {{ partial:global/picture :image="author:avatar" cover="true" maxheight="44" lazy="false" maxwidth="44" quality='70' }}
+                        </figure>
+                        <span class="truncate md:w-auto md:text-clip md:overflow-hidden">{{ author:name }}</span>
+                        {{ /if }}
+                        <span>/ {{ date iso_format="DD MMM, YYYY" }}</span>
+                    </span>
+                </div>
+
             </div>
-            
+        </div>
         </a>
 </section>

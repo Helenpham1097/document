@@ -10,41 +10,7 @@ fields:
       default: /general_content/faq
       instructions_position: above
   -
-    handle: faq_title
-    field:
-      input_type: text
-      antlers: false
-      display: 'Faq Title'
-      type: text
-      icon: text
-      listable: hidden
-      instructions_position: above
-      default: 'Frequently Asked Questions'
-  -
-    handle: faq_intro_text
-    field:
-      always_show_set_button: false
-      buttons:
-        - bold
-        - italic
-        - removeformat
-        - anchor
-      save_html: false
-      toolbar_mode: fixed
-      link_noopener: false
-      link_noreferrer: false
-      target_blank: false
-      reading_time: false
-      fullscreen: true
-      allow_source: true
-      enable_input_rules: true
-      enable_paste_rules: true
-      antlers: false
-      display: 'Faq intro text'
-      type: bard
-      icon: bard
-      listable: hidden
-      instructions_position: above
+    import: section_title
   -
     handle: faq_entries
     field:

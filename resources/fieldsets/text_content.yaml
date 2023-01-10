@@ -9,15 +9,16 @@ fields:
       listable: hidden
       default: /general_content/text_content
   -
-    handle: markdown
-    field:
-      restrict: false
-      automatic_line_breaks: true
-      automatic_links: false
-      escape_markup: false
-      smartypants: false
-      antlers: false
-      display: Markdown
-      type: markdown
-      icon: markdown
-      listable: hidden
+    handle: text
+    field: common.text_rich
+    config:
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - anchor
+        - image

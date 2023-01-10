@@ -1,0 +1,82 @@
+title: Article
+fields:
+  -
+    handle: template
+    field:
+      default: /page_builder/_article
+      display: template
+      type: hidden
+      icon: hidden
+      listable: hidden
+      instructions_position: above
+      read_only: false
+  -
+    handle: article
+    field:
+      buttons:
+        - h1
+        - h2
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - quote
+        - removeformat
+        - anchor
+        - code
+        - codeblock
+      save_html: false
+      toolbar_mode: fixed
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      reading_time: true
+      fullscreen: true
+      allow_source: true
+      type: bard
+      localizable: true
+      listable: hidden
+      display: Article
+      replicator_preview: false
+      always_show_set_button: true
+      sets:
+        buttons:
+          display: Buttons
+          fields:
+            -
+              import: buttons
+        figure:
+          display: Figure
+          fields:
+            -
+              import: figure
+        pull_quote:
+          display: 'Pull quote'
+          fields:
+            -
+              import: pull_quote
+        table:
+          display: Table
+          fields:
+            -
+              import: table
+        video:
+          display: Video
+          fields:
+            -
+              import: video
+        code:
+          display: Code
+          fields:
+            -
+              import: code
+      container: assets
+      enable_input_rules: true
+      enable_paste_rules: true
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      previews: true
+      antlers: false
+      remove_empty_nodes: trim
+      read_only: false

@@ -7,19 +7,23 @@ fields:
       type: hidden
       icon: hidden
       listable: hidden
-      default: /global/section_title
+      default: /components/section_title
+      instructions_position: above
+      read_only: false
   -
-    handle: center_title_pre_title
+    handle: pre_title
     field:
       input_type: text
       antlers: false
-      display: 'Pre Title'
+      display: Pre-title
       type: text
       icon: text
       listable: hidden
       instructions: 'Smaller title that appears above this section title'
+      instructions_position: above
+      read_only: false
   -
-    handle: center_title_title
+    handle: title
     field:
       input_type: text
       character_limit: 200
@@ -29,8 +33,10 @@ fields:
       icon: text
       listable: hidden
       instructions: 'Secondary title centred'
+      instructions_position: above
+      read_only: false
   -
-    handle: center_title_textarea
+    handle: textarea_field
     field:
       character_limit: '400'
       antlers: false
@@ -55,6 +61,8 @@ fields:
       icon: textarea
       listable: hidden
       instructions: 'Text area to complement the secondary title'
+      instructions_position: above
+      read_only: false
   -
     handle: toggle_color
     field:
@@ -64,3 +72,17 @@ fields:
       listable: hidden
       width: 25
       instructions: 'Alternate the colour of the highlighted title between purple and green.'
+  -
+    handle: alignment
+    field:
+      options:
+        left: Left
+        center: Center
+        right: Right
+      display: Alignment
+      type: button_group
+      icon: button_group
+      width: 75
+      listable: hidden
+      instructions_position: above
+      read_only: false

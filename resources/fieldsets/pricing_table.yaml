@@ -7,7 +7,9 @@ fields:
       type: hidden
       icon: hidden
       listable: hidden
-      default: /general_content/pricing_table
+      default: /page_builder/pricing_table
+      instructions_position: above
+      read_only: false
   -
     handle: display_title_section
     field:

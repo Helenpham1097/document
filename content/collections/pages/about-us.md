@@ -17,30 +17,50 @@ top_section:
     default_image: about-us/team.jpg
     type: hero
     enabled: true
-sections:
+title: 'About Us'
+updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
+updated_at: 1667509848
+page_builder:
   -
-    template: /general_content/multiple_text_columns
-    type: multiple_text_columns
+    template: page_builder/product/feature_section
+    add_intro_features: true
+    add_highlight_features: false
+    type: feature_section
     enabled: true
+    section_title: 'We love the nuts and bolts of web hosting | We love PHP'
     columns:
       -
-        markdown: |-
-          We’re a small group of web hosting nerds who noticed something back in the 2010s when serverless infrastructure muscled its way onto the scene. It was an exciting, valuable evolution in hosting technology but we also saw some serious limitations.
-
-          Serverless web hosting promises website owners and developers near-limitless scalability up and down, dramatic cuts to costs, and lets them forget all about servers. While your site handles any level of traffic and your hosting bills take a downward dive, you can just focus on what your website does for your customers. Cool!
-        type: column
+        column:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'We’re a small group of web hosting nerds who noticed something back in the 2010s when serverless infrastructure muscled its way onto the scene. It was an exciting, valuable evolution in hosting technology but we also saw some serious limitations.'
+        type: add_columns
         enabled: true
       -
-        markdown: 'But the real-world web, and most of its developers, were being left behind. Turns out this serverless stuff was built for technical teams with a deep understanding of web services. It didn’t suit the millions of websites, stores and blogs that already make up the bulk of the world wide web. It also didn’t suit a lot of the languages and technologies that will fuel the web development of the future. In particular, PHP sites (including sites on CMSs like WordPress and Craft) weren’t easy to take serverless. Some of our industry peers said it was basically impossible.'
-        type: column
+        column:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Serverless web hosting promises website owners and developers near-limitless scalability up and down, dramatic cuts to costs, and lets them forget all about servers. While your site handles any level of traffic and your hosting bills take a downward dive, you can just focus on what your website does for your customers. Cool!'
+        type: add_columns
         enabled: true
-    display_title_section:
       -
-        center_title_title: 'We love the nuts and bolts of web hosting | We love PHP'
-        type: section_title
+        column:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'But the real-world web, and most of its developers, were being left behind. Turns out this serverless stuff was built for technical teams with a deep understanding of web services. It didn’t suit the millions of websites, stores and blogs that already make up the bulk of the world wide web. It also didn’t suit a lot of the languages and technologies that will fuel the web development of the future. In particular, PHP sites (including sites on CMSs like WordPress and Craft) weren’t easy to take serverless. Some of our industry peers said it was basically impossible.'
+        type: add_columns
         enabled: true
   -
-    template: /general_content/highlight
+    template: /page_builder/highlight
     rows:
       -
         highlight_title: 'We understand that most people don’t love the nuts and bolts of web hosting'
@@ -63,13 +83,15 @@ sections:
               -
                 type: text
                 text: 'So while the rest of the web hosting industry ignored this problem, we quietly went to work.'
+        template_global: /global/default_image
+        default_image: about-us/2d34429616f83487ec069ebd911356db.webp
+        highlight_textcaption:
           -
             type: paragraph
             content:
               -
-                type: hard_break
-        template_global: /global/buttons
-        default_image: about-us/2d34429616f83487ec069ebd911356db.webp
+                type: text
+                text: 'Ben and Quintin'
         type: highlight-item
         enabled: true
       -
@@ -99,13 +121,30 @@ sections:
               -
                 type: text
                 text: 'As far as we know, there’s nothing else in the world like Webslice.'
+        template_global: /global/default_image
+        default_image: about-us/c8dfd769f4b2c76ecc3222bedf6bd6e1.webp
+        highlight_textcaption:
           -
             type: paragraph
             content:
               -
-                type: hard_break
-        template_global: /global/buttons
-        default_image: about-us/c8dfd769f4b2c76ecc3222bedf6bd6e1.webp
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Srivats '
+              -
+                type: text
+                text: from
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: ' '
+              -
+                type: text
+                text: Operations
         type: highlight-item
         enabled: true
       -
@@ -124,8 +163,9 @@ sections:
                     type: link
                     attrs:
                       href: 'https://docs.google.com/document/d/177DjzGLALVJk3F39qbcahbYOiSdUTtEepwQ2S4y2C0g/edit#'
-                      target: null
                       rel: null
+                      target: null
+                      title: null
                 text: 'Webslice team'
               -
                 type: text
@@ -137,8 +177,9 @@ sections:
                     type: link
                     attrs:
                       href: 'https://docs.google.com/document/d/177DjzGLALVJk3F39qbcahbYOiSdUTtEepwQ2S4y2C0g/edit#'
-                      target: null
                       rel: null
+                      target: null
+                      title: null
                 text: 'SiteTech Group'
               -
                 type: text
@@ -149,16 +190,20 @@ sections:
               -
                 type: text
                 text: 'We’re a proud New Zealand company with global ambitions for Webslice.'
-        template_global: /global/buttons
+        template_global: /global/default_image
         default_image: about-us/b59a3e521a070fd532a000228128afc0.webp
+        highlight_textcaption:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'SiteTech HQ'
         type: highlight-item
         enabled: true
     toggle_background: false
     reverse_alignment: false
-    toggle_alignment: true
+    toggle_alignment: false
     type: highlight
     enabled: true
-title: 'About Us'
-updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1655418514
 ---

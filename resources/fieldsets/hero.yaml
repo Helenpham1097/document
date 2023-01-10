@@ -42,6 +42,6 @@ fields:
       icon: textarea
       listable: hidden
   -
-    import: buttons
-  -
     import: default_image
+  -
+    import: buttons

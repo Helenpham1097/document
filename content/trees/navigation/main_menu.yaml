@@ -1,18 +1,20 @@
 tree:
   -
-    entry: c69d5d08-e270-4673-abce-438cfbd3c854
-  -
+    id: 1d6b75bd-138e-4525-b155-75d3b09dab49
     entry: fee1a2b1-971c-4c72-9517-d2e6c989f49e
   -
+    id: 6aa7da07-4489-49a3-982b-3b7f1069b750
     entry: 128bc187-e58c-4ccc-a5f7-587727470a54
   -
+    id: 2a383246-f53b-423c-8944-740b58611891
     entry: 178073b8-7594-4432-9b39-2461b487bce8
   -
-    title: Dropdown
+    id: 4d0b3f4e-f4c7-4697-8e6a-1fbd217272fe
+    title: 'Example pages'
     children:
       -
-        title: 'Item 1'
+        id: b978a602-a52e-4fb5-8c87-ed30cfd7de29
+        entry: 321f3638-6149-4686-a430-c179ad55fcbe
       -
-        title: 'Item 2'
-      -
-        title: 'Item 3'
+        id: ad47f904-7d82-4d40-9ecf-a2a6c56931bb
+        entry: 26513dc7-59f7-4673-815e-7d9ace16248b

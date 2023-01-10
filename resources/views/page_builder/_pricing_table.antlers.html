@@ -1,0 +1,194 @@
+<section class="space-y-8">
+	{{ display_title_section }}
+		{{ partial:components/section_title }}
+	{{ /display_title_section}}
+
+	{{ if pricing_toggle }}
+		{{ partial:general_content/toggle }}
+	{{ /if }}
+
+	
+	{{ if Items | count >= 4 }}
+		<div class="container grid grid-cols-1 gap-8 antialiased lg:grid-cols-2 2xl:grid-cols-4">
+	{{ elseif Items | count >= 3 }}
+		<div class="container grid gap-8 md:grid-cols-3 md:flex-row ">
+	{{ elseif Items | count >= 2 }}
+		<div class="container grid max-w-5xl gap-8 mx-auto md:grid-cols-2 md:flex-row ">
+	{{ /if }}
+	{{ if Items | count === 1 }} 
+		<div class="container grid items-center grid-cols-1 gap-8 md:flex-row ">
+	{{ /if }}
+		{{ Items }}
+			{{ if { switch between="odd|even" for="Image Left First"} == "odd" }}
+
+			<div>
+				<div class="relative w-full p-8 mx-auto transition duration-200 ease-linear bg-white shadow-lg group md:w-96 rounded-2xl">
+					<div class="space-y-4">
+						<div class="flex items-center justify-between text-black ">
+							<div class="text-4xl font-medium">Pro</div>
+							<div class="flex flex-col text-3xl font-bold">$99
+								<span class="text-sm font-medium text-right">month</span>
+							</div>
+						</div>
+						<div class="text-black text-md">Plan include:</div>
+						<ul class="w-full space-y-2 text-sm text-black">
+							<li class="flex items-center">
+								<svg class="w-6 h-6 mr-2 text-purple-500" xmlns="http://www.w3.org/2000/svg" width="6" height="6" stroke="currentColor" fill="currentColor" viewBox="0 0 1792 1792">
+									<path
+										d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"
+									></path>
+								</svg>
+								All illimited components
+							</li>
+							<li class="flex items-center ">
+								<svg class="w-6 h-6 mr-2 text-purple-500" xmlns="http://www.w3.org/2000/svg" width="6" height="6" stroke="currentColor" fill="currentColor" viewBox="0 0 1792 1792">
+									<path
+										d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"
+									></path>
+								</svg>
+								Own custom Tailwind styles
+							</li>
+							<li class="flex items-center ">
+								<svg class="w-6 h-6 mr-2 text-purple-500" xmlns="http://www.w3.org/2000/svg" width="6" height="6" stroke="currentColor" fill="currentColor" viewBox="0 0 1792 1792">
+									<path
+										d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"
+									></path>
+								</svg>
+								Unlimited Templates
+							</li>
+							<li class="flex items-center ">
+								<svg class="w-6 h-6 mr-2 text-purple-500" xmlns="http://www.w3.org/2000/svg" width="6" height="6" stroke="currentColor" fill="currentColor" viewBox="0 0 1792 1792">
+									<path
+										d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"
+									></path>
+								</svg>
+								Free premium dashboard
+							</li>
+							<li class="flex items-center ">
+								<svg class="w-6 h-6 mr-2 text-purple-500" xmlns="http://www.w3.org/2000/svg" width="6" height="6" stroke="currentColor" fill="currentColor" viewBox="0 0 1792 1792">
+									<path
+										d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"
+									></path>
+								</svg>
+								Best ranking
+							</li>
+							<li class="flex items-center opacity-50">
+								<svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" class="w-6 h-6 mr-2 text-purple-500" fill="currentColor" viewBox="0 0 1792 1792">
+									<path
+										d="M1277 1122q0-26-19-45l-181-181 181-181q19-19 19-45 0-27-19-46l-90-90q-19-19-46-19-26 0-45 19l-181 181-181-181q-19-19-45-19-27 0-46 19l-90 90q-19 19-19 46 0 26 19 45l181 181-181 181q-19 19-19 45 0 27 19 46l90 90q19 19 46 19 26 0 45-19l181-181 181 181q19 19 45 19 27 0 46-19l90-90q19-19 19-46zm387-226q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"
+									></path>
+								</svg>
+								Prenium svg
+							</li>
+							<li class="flex items-center opacity-50">
+								<svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" class="w-6 h-6 mr-2 text-purple-500" fill="currentColor" viewBox="0 0 1792 1792">
+									<path
+										d="M1277 1122q0-26-19-45l-181-181 181-181q19-19 19-45 0-27-19-46l-90-90q-19-19-46-19-26 0-45 19l-181 181-181-181q-19-19-45-19-27 0-46 19l-90 90q-19 19-19 46 0 26 19 45l181 181-181 181q-19 19-19 45 0 27 19 46l90 90q19 19 46 19 26 0 45-19l181-181 181 181q19 19 45 19 27 0 46-19l90-90q19-19 19-46zm387-226q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"
+									></path>
+								</svg>
+								Auto Compile
+							</li>
+						</ul>
+						<div class="relative">
+							<div class="flex justify-center w-full mx-auto text-center -mb-14">
+								<div class="shadow-2xl">
+									{{ partial:components/buttons }}
+								</div>
+							</div>
+						</div>
+						</div>
+				</div>
+			</div>	
+
+			{{ else }}
+			{{# most popular #}}
+			<div class="my-12 md:my-0">
+				<div class="relative w-full p-8 mx-auto transition duration-200 ease-linear shadow-lg bg-gradient-to-r from-purple-500 to-purple-600 group md:w-96 rounded-2xl">
+					<div class="absolute">
+						<div class="relative -mt-12 transition duration-200 ease-linear transform group-hover:-translate-x-1">
+							<div class="absolute inset-0 transform -skew-x-12 shadow-lg bg-gradient-to-r from-green-500 to-green-600"></div>
+							<div class="relative px-6 py-2 mx-auto mb-4 -mt-8 text-xs font-semibold text-center text-black uppercase">Popular</div>
+						</div>
+					</div>
+					<div class="space-y-4">
+						<div class="flex items-center justify-between text-white ">
+							<div class="text-4xl font-medium">Pro</div>
+							<div class="flex flex-col text-3xl font-bold">$99
+								<span class="text-sm font-medium text-right">month</span>
+							</div>
+						</div>
+						<div class="text-white text-md">Plan include:</div>
+						<ul class="w-full space-y-2 text-sm text-white">
+							<li class="flex items-center">
+								<svg class="w-6 h-6 mr-2 text-white" xmlns="http://www.w3.org/2000/svg" width="6" height="6" stroke="currentColor" fill="currentColor" viewBox="0 0 1792 1792">
+									<path
+										d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"
+									></path>
+								</svg>
+								All illimited components
+							</li>
+							<li class="flex items-center ">
+								<svg class="w-6 h-6 mr-2 text-white" xmlns="http://www.w3.org/2000/svg" width="6" height="6" stroke="currentColor" fill="currentColor" viewBox="0 0 1792 1792">
+									<path
+										d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"
+									></path>
+								</svg>
+								Own custom Tailwind styles
+							</li>
+							<li class="flex items-center ">
+								<svg class="w-6 h-6 mr-2 text-white" xmlns="http://www.w3.org/2000/svg" width="6" height="6" stroke="currentColor" fill="currentColor" viewBox="0 0 1792 1792">
+									<path
+										d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"
+									></path>
+								</svg>
+								Unlimited Templates
+							</li>
+							<li class="flex items-center ">
+								<svg class="w-6 h-6 mr-2 text-white" xmlns="http://www.w3.org/2000/svg" width="6" height="6" stroke="currentColor" fill="currentColor" viewBox="0 0 1792 1792">
+									<path
+										d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"
+									></path>
+								</svg>
+								Free premium dashboard
+							</li>
+							<li class="flex items-center ">
+								<svg class="w-6 h-6 mr-2 text-white" xmlns="http://www.w3.org/2000/svg" width="6" height="6" stroke="currentColor" fill="currentColor" viewBox="0 0 1792 1792">
+									<path
+										d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"
+									></path>
+								</svg>
+								Best ranking
+							</li>
+							<li class="flex items-center opacity-50">
+								<svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" class="w-6 h-6 mr-2 text-white" fill="currentColor" viewBox="0 0 1792 1792">
+									<path
+										d="M1277 1122q0-26-19-45l-181-181 181-181q19-19 19-45 0-27-19-46l-90-90q-19-19-46-19-26 0-45 19l-181 181-181-181q-19-19-45-19-27 0-46 19l-90 90q-19 19-19 46 0 26 19 45l181 181-181 181q-19 19-19 45 0 27 19 46l90 90q19 19 46 19 26 0 45-19l181-181 181 181q19 19 45 19 27 0 46-19l90-90q19-19 19-46zm387-226q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"
+									></path>
+								</svg>
+								Prenium svg
+							</li>
+							<li class="flex items-center opacity-50">
+								<svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" class="w-6 h-6 mr-2 text-white" fill="currentColor" viewBox="0 0 1792 1792">
+									<path
+										d="M1277 1122q0-26-19-45l-181-181 181-181q19-19 19-45 0-27-19-46l-90-90q-19-19-46-19-26 0-45 19l-181 181-181-181q-19-19-45-19-27 0-46 19l-90 90q-19 19-19 46 0 26 19 45l181 181-181 181q-19 19-19 45 0 27 19 46l90 90q19 19 46 19 26 0 45-19l181-181 181 181q19 19 45 19 27 0 46-19l90-90q19-19 19-46zm387-226q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"
+									></path>
+								</svg>
+								Auto Compile
+							</li>
+						</ul>
+						<div class="relative">
+							<div class="flex justify-center w-full mx-auto text-center -mb-14">
+								<div class="shadow-2xl">
+									{{ partial:components/buttons }}
+								</div>
+							</div>
+						</div>
+						</div>
+				</div>
+			</div>	
+
+			{{ /if }}
+		{{ /Items }}
+		
+	</div>
+</section>

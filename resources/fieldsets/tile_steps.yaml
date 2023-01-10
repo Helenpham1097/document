@@ -1,0 +1,63 @@
+title: Tile steps
+fields:
+  -
+    handle: template
+    field:
+      display: template
+      type: hidden
+      icon: hidden
+      listable: hidden
+      default: /page_builder/tile_steps
+      instructions_position: above
+      read_only: false
+  -
+    handle: Items
+    field:
+      collapse: false
+      sets:
+        Step-item:
+          display: Step-item
+          fields:
+            -
+              import: default_image
+            -
+              handle: step_title
+              field:
+                input_type: text
+                antlers: false
+                display: Title
+                type: text
+                icon: text
+                listable: hidden
+            -
+              handle: step_textarea
+              field:
+                antlers: false
+                display: 'Text Area'
+                always_show_set_button: false
+                buttons:
+                  - bold
+                  - italic
+                  - removeformat
+                  - anchor
+                  - table
+                save_html: false
+                toolbar_mode: fixed
+                link_noopener: false
+                link_noreferrer: false
+                target_blank: false
+                reading_time: false
+                fullscreen: false
+                allow_source: true
+                enable_input_rules: false
+                enable_paste_rules: true
+                type: bard
+                icon: textarea
+                listable: hidden
+            -
+              import: buttons
+      display: 'Add tile'
+      type: replicator
+      icon: replicator
+      listable: hidden
+      instructions: 'Add steps horizontally, alternating the colour and position and adding the number in ascending order.'

@@ -1,0 +1,15 @@
+title: Code
+fields:
+  -
+    handle: size
+    field: common.size
+  -
+    handle: code
+    field:
+      antlers: false
+      display: code
+      type: textarea
+      icon: textarea
+      listable: hidden
+      instructions_position: above
+      read_only: false

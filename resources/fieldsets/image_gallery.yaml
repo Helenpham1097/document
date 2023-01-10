@@ -7,7 +7,9 @@ fields:
       type: hidden
       icon: hidden
       listable: hidden
-      default: /general_content/image_gallery
+      default: /page_builder/image_gallery
+      instructions_position: above
+      read_only: false
   -
     handle: display_title_section
     field:

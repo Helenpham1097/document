@@ -33,22 +33,7 @@ sections:
           icon: textarea
           listable: hidden
       -
-        import: default_image
-      -
-        handle: content
-        field:
-          restrict: false
-          automatic_line_breaks: true
-          automatic_links: false
-          escape_markup: false
-          smartypants: false
-          input_type: text
-          antlers: false
-          display: content
-          type: markdown
-          icon: markdown
-          listable: hidden
-          container: assets
+        import: page_builder
   sidebar:
     display: Sidebar
     fields:
@@ -57,7 +42,6 @@ sections:
         field:
           type: slug
           localizable: true
-          required: true
           validate:
             - required
             - 'unique_entry_value:{collection},{id},{site}'
@@ -85,6 +69,23 @@ sections:
           type: users
           icon: users
           listable: true
+      -
+        handle: team_member
+        field:
+          max_items: 1
+          mode: default
+          create: true
+          collections:
+            - team
+          display: 'Team Member'
+          type: entries
+          icon: entries
+          listable: hidden
+          instructions_position: above
+          read_only: false
+          instructions: 'Team member to display as author'
+      -
+        import: default_image
   meta:
     display: Meta
     fields:

@@ -9,7 +9,7 @@ fields:
       listable: hidden
       instructions_position: above
       read_only: false
-      default: general_content/product/feature_section
+      default: page_builder/product/feature_section
   -
     handle: add_intro_features
     field:
@@ -34,42 +34,10 @@ fields:
       if:
         add_intro_features: 'equals true'
   -
-    handle: section_subtitle
-    field:
-      always_show_set_button: false
-      buttons:
-        - bold
-        - italic
-        - unorderedlist
-        - orderedlist
-        - removeformat
-        - anchor
-      save_html: false
-      toolbar_mode: fixed
-      link_noopener: false
-      link_noreferrer: false
-      target_blank: false
-      reading_time: false
-      fullscreen: true
-      allow_source: true
-      display: 'Section Subtitle'
-      type: bard
-      icon: bard
-      listable: hidden
-      instructions_position: above
-      read_only: false
-      enable_input_rules: true
-      enable_paste_rules: true
-      antlers: false
-      if:
-        add_intro_features: 'equals true'
-  -
-    import: buttons
-  -
     handle: columns
     field:
       collapse: false
-      max_sets: 2
+      max_sets: 4
       sets:
         add_columns:
           display: 'Add columns'
@@ -79,12 +47,19 @@ fields:
               field:
                 always_show_set_button: false
                 buttons:
+                  - h3
+                  - h4
+                  - h5
+                  - h6
                   - bold
                   - italic
+                  - underline
+                  - strikethrough
                   - unorderedlist
                   - orderedlist
                   - removeformat
                   - anchor
+                  - image
                 save_html: false
                 toolbar_mode: fixed
                 link_noopener: false
@@ -97,6 +72,17 @@ fields:
                 type: bard
                 icon: bard
                 listable: hidden
+                instructions_position: above
+                read_only: false
+                sets:
+                  buttons:
+                    display: Buttons
+                    fields:
+                      -
+                        import: buttons
+                enable_input_rules: true
+                enable_paste_rules: true
+                antlers: false
       display: Columns
       type: replicator
       icon: replicator

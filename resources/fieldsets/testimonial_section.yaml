@@ -3,7 +3,7 @@ fields:
   -
     handle: template
     field:
-      default: general_content/testimonial_section
+      default: page_builder/testimonial_section
       display: template
       type: hidden
       icon: hidden
@@ -11,47 +11,7 @@ fields:
       instructions_position: above
       read_only: false
   -
-    handle: title_testimonial
-    field:
-      input_type: text
-      antlers: false
-      display: Title
-      type: text
-      icon: text
-      listable: hidden
-      instructions_position: above
-  -
-    handle: testimonial_textarea
-    field:
-      always_show_set_button: false
-      buttons:
-        - h2
-        - h3
-        - bold
-        - italic
-        - unorderedlist
-        - orderedlist
-        - removeformat
-        - quote
-        - anchor
-        - image
-        - table
-      save_html: false
-      toolbar_mode: fixed
-      link_noopener: false
-      link_noreferrer: false
-      target_blank: false
-      reading_time: false
-      fullscreen: true
-      allow_source: true
-      enable_input_rules: true
-      enable_paste_rules: true
-      antlers: false
-      display: Textarea
-      type: bard
-      icon: bard
-      listable: hidden
-      instructions_position: above
+    import: section_title
   -
     handle: testimonial
     field:

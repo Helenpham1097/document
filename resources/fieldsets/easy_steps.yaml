@@ -7,7 +7,7 @@ fields:
       type: hidden
       icon: hidden
       listable: hidden
-      default: /general_content/easy_steps
+      default: /page_builder/easy_steps
       instructions_position: above
       read_only: false
   -

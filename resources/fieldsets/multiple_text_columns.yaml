@@ -1,0 +1,61 @@
+title: 'Multiple text columns'
+fields:
+  -
+    handle: template
+    field:
+      display: template
+      type: hidden
+      icon: hidden
+      listable: hidden
+      default: /general_content/_multiple_text_columns
+  -
+    handle: display_title_section
+    field:
+      collapse: false
+      max_sets: 1
+      sets:
+        section_title:
+          display: 'Title Section'
+          fields:
+            -
+              handle: center_title_title
+              field:
+                input_type: text
+                character_limit: 200
+                antlers: false
+                display: Title
+                type: text
+                icon: text
+                listable: hidden
+      display: 'Add Title Section'
+      type: replicator
+      icon: replicator
+      listable: hidden
+  -
+    handle: columns
+    field:
+      collapse: false
+      max_sets: 3
+      sets:
+        column:
+          display: Column
+          fields:
+            -
+              handle: text
+              field: common.text_rich
+              config:
+                buttons:
+                  - h2
+                  - h3
+                  - bold
+                  - italic
+                  - unorderedlist
+                  - orderedlist
+                  - removeformat
+                  - anchor
+      display: Columns
+      type: replicator
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      read_only: false

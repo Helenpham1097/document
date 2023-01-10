@@ -1,52 +1,16 @@
 title: Buttons
 fields:
   -
-    handle: template_global
+    handle: buttons
     field:
-      display: template_global
-      type: hidden
-      icon: hidden
+      fields:
+        -
+          import: button
+      mode: stacked
+      add_row: 'Add button'
+      reorderable: true
+      type: grid
+      localizable: true
       listable: hidden
-      default: /global/buttons
-  -
-    handle: link
-    field:
-      display: Link
-      type: link
-      icon: link
-      listable: hidden
-  -
-    handle: select
-    field:
-      options:
-        background: Solid
-        info: Link
-        background-secondary: Transparent
-      placeholder: 'Choose your button type'
-      multiple: false
-      clearable: false
-      searchable: false
-      taggable: false
-      push_tags: false
-      cast_booleans: false
-      display: Type
-      type: select
-      icon: select
-      listable: hidden
-      if:
-        link: 'not empty'
-      instructions_position: above
-  -
-    import: icon
-  -
-    handle: text
-    field:
-      input_type: text
-      character_limit: 100
-      antlers: false
-      display: Text
-      type: text
-      icon: text
-      listable: hidden
-      if:
-        link: 'not empty'
+      display: Buttons
+      replicator_preview: false

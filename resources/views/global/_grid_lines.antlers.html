@@ -1,20 +1,30 @@
-<div class="relative flex flex-col justify-center transform -translate-y-6 -z-10 ">
+<div class="absolute inset-0 flex flex-col justify-center transform -tranred-y-6 -z-10 ">
     {{# This container creates the vertical lines of the grid, the empty
     elements allow to create the 6 internal columns and hide 3 when viewed on
     smaller screens. #}}
-    <div class="container  absolute inset-0 grid h-screen grid-cols-2 gap-4 overflow-visible  {{ if ! hide_diagonal}} xl:grid-cols-6 {{else}} xl:grid-cols-4 {{ /if }} lg:grid-cols-3 grid-lines">
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="hidden lg:block"></div>
-        <div class="hidden lg:block"></div>
-        {{ if ! hide_diagonal}}
-        <div class="hidden lg:block"></div>
-        <div class="hidden lg:block"></div>
-        {{ /if }}
+    <div class="container relative py-0 h-full grid grid-flow-col grid-cols-2 gap-8 overflow-visible
+        {{# {{ if grid }} grid-lines {{ /if }} #}}
+        {{ if grid_number == '4'}}lg:grid-cols-4{{/if}}
+        {{ if grid_number == '6'}}lg:grid-cols-6{{/if}}
+        ">
+        {{ if grid_number == '4'}}
+            <span class="block border-x border-slate-100"></span>
+            <span class="block border-x border-slate-100"></span>
+            <span class="hidden lg:block border-x border-slate-100"></span>
+            <span class="hidden lg:block border-x border-slate-100"></span>
+        {{/if}}
+        {{ if grid_number == '6'}}
+            <span class="block border-x border-slate-100"></span>
+            <span class="block border-x border-slate-100"></span>
+            <span class="hidden lg:block border-x border-slate-100"></span>
+            <span class="hidden lg:block border-x border-slate-100"></span>
+            <span class="hidden lg:block border-x border-slate-100"></span>
+            <span class="hidden lg:block border-x border-slate-100"></span>
+        {{/if}}
     </div>
-    {{ if ! hide_diagonal}}
+    {{ if  diagonal_lines}}
         <svg
-            class="absolute translate-x-5 {{ if reflect }} scale-y-[-1] {{ /if }}"
+            class="absolute  {{ if reflect }} scale-y-[-] {{ /if }}"
             width="2386"
             height="948"
             fill="none"
@@ -377,3 +387,13 @@
         </svg>
     {{ /if }}
 </div>
+
+
+{{# <div class="container absolute px-0 -inset-8 ">
+    <div class="grid w-full h-full grid-cols-8 ">
+        <div class="col-span-2 border-l border-red-100 "></div>
+        <div class="col-span-2 border-l border-red-100 "></div>
+        <div class="col-span-2 border-red-100 border-x "></div>
+        <div class="col-span-2 border-r border-red-100 "></div>
+    </div>
+</div> #}}

@@ -2,16 +2,14 @@
 @import "tailwindcss/components";
 
 /* Basic styles */
-@import "./utilities/button.css";
 @import "./base/typography.css";
 @import "./utilities/inputs.css";
 @import "./base/global.css";
 @import "./utilities/animation.css";
 @import "./base/article.css";
+@import "./utilities/wrapper.css";
 
 /* Components */
-/* @import "./components/header.css"; */
-@import "./components/footer.css";
 @import "./components/cover.css";
 @import "./components/hero.css";
 
@@ -28,5 +26,5 @@
 }
 
 .dev * {
-    @apply border border-red-500/30 ;
+    @apply border bg-red-500/20 border-red-500/30 ;
 }

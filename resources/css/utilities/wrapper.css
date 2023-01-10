@@ -1,0 +1,43 @@
+.size-md,
+.size-lg,
+.size-xl {
+    @apply col-span-12;
+}
+
+@screen md {
+    .size-md {
+        @apply col-span-10 col-start-3;
+    }
+
+    .size-lg {
+        @apply col-span-8 col-start-3;
+    }
+
+    .size-xl {
+        @apply col-span-10 col-start-2;
+    }
+}
+
+@screen lg {
+    .size-md {
+        @apply col-span-8 col-start-3;
+    }
+
+    .size-lg {
+        @apply col-span-10 col-start-2;
+    }
+
+    .size-xl {
+        @apply col-span-12 col-start-1;
+    }
+}
+
+
+.fluid-container {
+    @apply w-full max-w-screen-xl mx-auto;
+}
+
+.not-prose,
+.prose-figure {
+    @apply my-8;
+}

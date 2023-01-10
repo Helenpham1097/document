@@ -66,25 +66,23 @@ module.exports = {
             typography: (theme) => ({
                 DEFAULT: {
                     css: {
-                        a: {
-                            'text-decoration': 'none',
-                            '&:hover': {
-                                'text-decoration': 'underline',
-                            }
-                        },
-
                         ul: {
                             li: {
                                 'padding-left': '96',
                             }
                         },
+                        '.not-prose': {
+                            margin: '2rem 0 !important',
+                        }
                     },
                 },
             }),
         },
     },
     plugins: [
-        require('@tailwindcss/typography'),
+        require('@tailwindcss/typography')({
+        modifiers: [],
+        }),
         require('@tailwindcss/forms'),
         require('@tailwindcss/aspect-ratio'),
     ],

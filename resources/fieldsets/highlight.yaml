@@ -7,7 +7,9 @@ fields:
       type: hidden
       icon: hidden
       listable: hidden
-      default: /general_content/highlight
+      default: /page_builder/highlight
+      instructions_position: above
+      read_only: false
   -
     handle: rows
     field:

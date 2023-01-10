@@ -123,14 +123,14 @@
 		.left, .right {
 			/* box-shadow: 24px 48px 88px rgb(24 35 52 / 32%); */
 			transform:
-				perspective(1000px)
+				/* perspective(1000px)
 				rotateY(-6deg)
 				rotateX(5deg)
 				rotateZ(3deg)
 				scaleY(0.9)
 				scaleX(0.95)
 				translateX(-1%)
-				translateY(-1%);
+				translateY(-1%); */
 		}
 	} 
 	.illustration-element {
@@ -165,17 +165,6 @@
 	}
 }
 
-
-/* Hero Homepage strong tag style */
-
-/* h1 strong {
-	@apply relative;
-}
-
-h1 strong::before {
-	@apply absolute h-full px-12 my-1 transform -translate-y-2 -skew-x-12 shadow-2xl -inset-x-2 -z-10;
-	content: attr(data-text);
-} */
 .slash {
 	strong {
 		color:red;
