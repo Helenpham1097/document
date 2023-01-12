@@ -1,7 +1,16 @@
+title: Documentation
 sections:
   main:
     display: Main
     fields:
+      -
+        handle: template
+        field:
+          display: template
+          type: hidden
+          icon: hidden
+          listable: hidden
+          default: documentation/docs
       -
         handle: title
         field:
@@ -9,13 +18,36 @@ sections:
           required: true
           validate:
             - required
+          display: Title
+          default: 'Docs title'
+          instructions: 'This is the title that will be displayed in the browser bar and will help you to identify it.'
+          listable: hidden
+          input_type: text
+          antlers: false
       -
-        handle: content
+        handle: subheader
         field:
-          type: markdown
-          localizable: true
+          antlers: false
+          display: Subheader
+          type: textarea
+          icon: textarea
+          listable: hidden
       -
-        import: article
+        handle: article
+        field: article.article
+        config:
+          buttons:
+            - h1
+            - h2
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - quote
+            - removeformat
+            - anchor
+            - code
+            - codeblock
   sidebar:
     display: Sidebar
     fields:
@@ -24,6 +56,9 @@ sections:
         field:
           type: slug
           localizable: true
+          validate:
+            - required
+            - 'unique_entry_value:{collection},{id},{site}'
       -
         handle: date
         field:
@@ -31,4 +66,59 @@ sections:
           required: true
           validate:
             - required
-title: Documentation
+      -
+        handle: documentation
+        field:
+          type: terms
+          taxonomies:
+            - documentation
+          display: Documentation
+          mode: select
+      -
+        handle: author
+        field:
+          max_items: 1
+          mode: select
+          display: Author
+          type: users
+          icon: users
+          listable: true
+      -
+        handle: team_member
+        field:
+          max_items: 1
+          mode: default
+          create: true
+          collections:
+            - team
+          display: 'Team Member'
+          type: entries
+          icon: entries
+          listable: hidden
+          instructions_position: above
+          read_only: false
+          instructions: 'Team member to display as author'
+      -
+        import: default_image
+  meta:
+    display: Meta
+    fields:
+      -
+        handle: meta_title
+        field:
+          input_type: text
+          character_limit: 60
+          antlers: false
+          display: 'Meta title'
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: meta_description
+        field:
+          character_limit: '160'
+          antlers: false
+          display: 'Meta description'
+          type: textarea
+          icon: textarea
+          listable: hidden

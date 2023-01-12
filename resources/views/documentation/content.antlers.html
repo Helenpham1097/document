@@ -1,0 +1,188 @@
+
+<main class="relative w-4/6 px-4 mx-auto space-y-16 sm:px-6 lg:px-8">
+    {{ partial:documentation/breadcrumbs }}
+    <div class="relative flex group ">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="absolute w-5 h-5 -ml-2 -translate-x-full translate-y-1/2 group-hover:opacity-50 stroke-purple-500 ">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5l-3.9 19.5m-2.1-19.5l-3.9 19.5" />
+        </svg>
+        <a class="no-underline " href="#{{ title | slugify }}">
+            {{ partial:typography/h3 content="{{ title }}" }}
+        </a>
+    </div>
+        {{ partial:typography/prose as="article" class="contents dark:prose-invert" }}
+            {{ article }}
+                {{ partial src="components/{type}" }}
+            {{ /article }}
+        {{ /partial:typography/prose }}
+        
+        
+        {{# <p class="lead">Use the Protocol API to access contacts, conversations, group messages, and more and seamlessly integrate your product into the workflows of dozens of devoted Protocol users.</p>
+        <div class="flex gap-3 mt-6 mb-16 not-prose">
+            <a
+                class="inline-flex gap-0.5 justify-center overflow-hidden text-sm font-medium transition rounded-full bg-zinc-900 py-1 px-3 text-white hover:bg-zinc-700 dark:bg-purple-400/10 dark:text-purple-400 dark:ring-1 dark:ring-inset dark:ring-purple-400/20 dark:hover:bg-purple-400/10 dark:hover:text-purple-300 dark:hover:ring-purple-300"
+                href="/quickstart"
+            >
+                Quickstart
+                <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" class="mt-0.5 h-5 w-5 -mr-1"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m11.5 6.5 3 3.5m0 0-3 3.5m3-3.5h-9"></path></svg>
+            </a>
+            <a
+                class="inline-flex gap-0.5 justify-center overflow-hidden text-sm font-medium transition rounded-full py-1 px-3 text-zinc-700 ring-1 ring-inset ring-zinc-900/10 hover:bg-zinc-900/2.5 hover:text-zinc-900 dark:text-zinc-400 dark:ring-white/10 dark:hover:bg-white/5 dark:hover:text-white"
+                href="/sdks"
+            >
+                Explore SDKs
+            </a>
+        </div>
+        <h2 class="scroll-mt-24">Getting started</h2>
+        <p class="lead">
+            To get started, create a new application in your <a href="/#">developer settings</a>, then read about how to make requests for the resources you need to access using our HTTP APIs or dedicated client SDKs. When your
+            integration is ready to go live, publish it to our <a href="/#">integrations directory</a> to reach the Protocol community.
+        </p>
+        <div class="not-prose">
+            <a class="inline-flex gap-0.5 justify-center overflow-hidden text-sm font-medium transition text-purple-500 hover:text-purple-600 dark:text-purple-400 dark:hover:text-purple-500" href="/sdks">
+                Get your API key
+                <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" class="mt-0.5 h-5 w-5 relative top-px -mr-1">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m11.5 6.5 3 3.5m0 0-3 3.5m3-3.5h-9"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="my-16 xl:max-w-none">
+            <h2 id="guides" class="scroll-mt-24">
+                <a class="no-underline group text-inherit hover:text-inherit" href="/#guides">
+                    <div
+                        class="absolute mt-1 transition opacity-0 group-hover:opacity-100 group-focus:opacity-100 md:block lg:z-50 "
+                    >
+                        <div
+                            class="block w-5 h-5 transition rounded-lg bg-zinc-50 ring-1 ring-inset ring-zinc-300 hover:ring-zinc-500 dark:bg-zinc-800 dark:ring-zinc-700 dark:hover:bg-zinc-700 dark:hover:ring-zinc-600"
+                        >
+                            <svg viewBox="0 0 20 20" fill="none" stroke-linecap="round" aria-hidden="true" class="w-5 h-5 transition stroke-zinc-500 dark:stroke-zinc-400 dark:group-hover/anchor:stroke-white">
+                                <path d="m6.5 11.5-.964-.964a3.535 3.535 0 1 1 5-5l.964.964m2 2 .964.964a3.536 3.536 0 0 1-5 5L8.5 13.5m0-5 3 3"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    Guides
+                </a>
+            </h2>
+            <div class="grid grid-cols-1 gap-8 pt-10 mt-4 border-t not-prose border-zinc-900/5 dark:border-white/5 sm:grid-cols-2 xl:grid-cols-4">
+                <div>
+                    <h3 class="text-sm font-semibold text-zinc-900 dark:text-white">Authentication</h3>
+                    <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Learn how to authenticate your API requests.</p>
+                    <p class="mt-4">
+                        <a class="inline-flex gap-0.5 justify-center overflow-hidden text-sm font-medium transition text-purple-500 hover:text-purple-600 dark:text-purple-400 dark:hover:text-purple-500" href="/authentication">
+                            Read more
+                            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" class="mt-0.5 h-5 w-5 relative top-px -mr-1">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m11.5 6.5 3 3.5m0 0-3 3.5m3-3.5h-9"></path>
+                            </svg>
+                        </a>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-zinc-900 dark:text-white">Pagination</h3>
+                    <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Understand how to work with paginated responses.</p>
+                    <p class="mt-4">
+                        <a class="inline-flex gap-0.5 justify-center overflow-hidden text-sm font-medium transition text-purple-500 hover:text-purple-600 dark:text-purple-400 dark:hover:text-purple-500" href="/pagination">
+                            Read more
+                            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" class="mt-0.5 h-5 w-5 relative top-px -mr-1">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m11.5 6.5 3 3.5m0 0-3 3.5m3-3.5h-9"></path>
+                            </svg>
+                        </a>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-zinc-900 dark:text-white">Errors</h3>
+                    <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Read about the different types of errors returned by the API.</p>
+                    <p class="mt-4">
+                        <a class="inline-flex gap-0.5 justify-center overflow-hidden text-sm font-medium transition text-purple-500 hover:text-purple-600 dark:text-purple-400 dark:hover:text-purple-500" href="/errors">
+                            Read more
+                            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" class="mt-0.5 h-5 w-5 relative top-px -mr-1">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m11.5 6.5 3 3.5m0 0-3 3.5m3-3.5h-9"></path>
+                            </svg>
+                        </a>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-zinc-900 dark:text-white">Webhooks</h3>
+                    <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Learn how to programmatically configure webhooks for your app.</p>
+                    <p class="mt-4">
+                        <a class="inline-flex gap-0.5 justify-center overflow-hidden text-sm font-medium transition text-purple-500 hover:text-purple-600 dark:text-purple-400 dark:hover:text-purple-500" href="/webhooks">
+                            Read more
+                            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" class="mt-0.5 h-5 w-5 relative top-px -mr-1">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m11.5 6.5 3 3.5m0 0-3 3.5m3-3.5h-9"></path>
+                            </svg>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="my-16 xl:max-w-none">
+            <h2 id="resources" class="scroll-mt-24">
+                <a class="no-underline group text-inherit hover:text-inherit" href="/#resources">
+                    <div
+                        class="absolute mt-1 transition opacity-0 group-hover:opacity-100 group-focus:opacity-100 md:block lg:z-50"
+                    >
+                        <div
+                            class="block w-5 h-5 transition rounded-lg group/anchor bg-zinc-50 ring-1 ring-inset ring-zinc-300 hover:ring-zinc-500 dark:bg-zinc-800 dark:ring-zinc-700 dark:hover:bg-zinc-700 dark:hover:ring-zinc-600"
+                        >
+                            <svg viewBox="0 0 20 20" fill="none" stroke-linecap="round" aria-hidden="true" class="w-5 h-5 transition stroke-zinc-500 dark:stroke-zinc-400 dark:group-hover/anchor:stroke-white">
+                                <path d="m6.5 11.5-.964-.964a3.535 3.535 0 1 1 5-5l.964.964m2 2 .964.964a3.536 3.536 0 0 1-5 5L8.5 13.5m0-5 3 3"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    Resources
+                </a>
+            </h2>
+            <div class="grid grid-cols-1 gap-8 pt-10 mt-4 border-t not-prose border-zinc-900/5 dark:border-white/5 sm:grid-cols-2 xl:grid-cols-4">
+                <div class="group relative flex rounded-2xl bg-zinc-50 transition-shadow hover:shadow-md hover:shadow-zinc-900/5 dark:bg-white/2.5 dark:hover:shadow-black/5">
+                    <div class="pointer-events-none">
+                        <div class="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50">
+                            <svg aria-hidden="true" class="absolute inset-x-0 inset-y-[-30%] h-[160%] w-full skew-y-[-18deg] fill-black/[0.02] stroke-black/5 dark:fill-white/1 dark:stroke-white/2.5">
+                                <defs>
+                                    <pattern id=":ra0:" width="72" height="56" patternUnits="userSpaceOnUse" x="50%" y="16"><path d="M.5 56V.5H72" fill="none"></path></pattern>
+                                </defs>
+                                <rect width="100%" height="100%" stroke-width="0" fill="url(#:ra0:)"></rect>
+                                <svg x="50%" y="16" class="overflow-visible">
+                                    <rect stroke-width="0" width="73" height="57" x="0" y="56"></rect>
+                                    <rect stroke-width="0" width="73" height="57" x="72" y="168"></rect>
+                                </svg>
+                            </svg>
+                        </div>
+                        <div
+                            class="absolute inset-0 transition duration-300 opacity-0 rounded-2xl bg-gradient-to-r from-purple-500/10 to-purple-600/10 group-hover:opacity-100 dark:from-purple-500/10 dark:to-purple-600/10"
+                            style="-webkit-mask-image: radial-gradient(180px at 3.5px 63px, white, transparent);"
+                        ></div>
+                        <div
+                            class="absolute inset-0 transition duration-300 opacity-0 rounded-2xl mix-blend-overlay group-hover:opacity-100"
+                            data-projection-id="39"
+                            style="-webkit-mask-image: radial-gradient(180px at 3.5px 63px, white, transparent);"
+                        >
+                            <svg aria-hidden="true" class="absolute inset-x-0 inset-y-[-30%] h-[160%] w-full skew-y-[-18deg] fill-black/50 stroke-black/70 dark:fill-white/2.5 dark:stroke-white/10">
+                                <defs>
+                                    <pattern id=":ra1:" width="72" height="56" patternUnits="userSpaceOnUse" x="50%" y="16"><path d="M.5 56V.5H72" fill="none"></path></pattern>
+                                </defs>
+                                <rect width="100%" height="100%" stroke-width="0" fill="url(#:ra1:)"></rect>
+                                <svg x="50%" y="16" class="overflow-visible">
+                                    <rect stroke-width="0" width="73" height="57" x="0" y="56"></rect>
+                                    <rect stroke-width="0" width="73" height="57" x="72" y="168"></rect>
+                                </svg>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-zinc-900/7.5 group-hover:ring-zinc-900/10 dark:ring-white/10 dark:group-hover:ring-white/20"></div>
+                    <div class="relative px-4 pt-16 pb-4 rounded-2xl">
+                        <div
+                            class="flex h-7 w-7 items-center justify-center rounded-full bg-zinc-900/5 ring-1 ring-zinc-900/25 backdrop-blur-[2px] transition duration-300 group-hover:bg-white/50 group-hover:ring-zinc-900/25 dark:bg-white/7.5 dark:ring-white/15 dark:group-hover:bg-purple-300/10 dark:group-hover:ring-purple-400"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 transition-colors duration-300 fill-zinc-700/10 stroke-zinc-700 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-purple-300/10 dark:group-hover:stroke-purple-400">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 12.75c1.148 0 2.278.08 3.383.237 1.037.146 1.866.966 1.866 2.013 0 3.728-2.35 6.75-5.25 6.75S6.75 18.728 6.75 15c0-1.046.83-1.867 1.866-2.013A24.204 24.204 0 0112 12.75zm0 0c2.883 0 5.647.508 8.207 1.44a23.91 23.91 0 01-1.152 6.06M12 12.75c-2.883 0-5.647.508-8.208 1.44.125 2.104.52 4.136 1.153 6.06M12 12.75a2.25 2.25 0 002.248-2.354M12 12.75a2.25 2.25 0 01-2.248-2.354M12 8.25c.995 0 1.971-.08 2.922-.236.403-.066.74-.358.795-.762a3.778 3.778 0 00-.399-2.25M12 8.25c-.995 0-1.97-.08-2.922-.236-.402-.066-.74-.358-.795-.762a3.734 3.734 0 01.4-2.253M12 8.25a2.25 2.25 0 00-2.248 2.146M12 8.25a2.25 2.25 0 012.248 2.146M8.683 5a6.032 6.032 0 01-1.155-1.002c.07-.63.27-1.222.574-1.747m.581 2.749A3.75 3.75 0 0115.318 5m0 0c.427-.283.815-.62 1.155-.999a4.471 4.471 0 00-.575-1.752M4.921 6a24.048 24.048 0 00-.392 3.314c1.668.546 3.416.914 5.223 1.082M19.08 6c.205 1.08.337 2.187.392 3.314a23.882 23.882 0 01-5.223 1.082" />
+                            </svg>
+
+                        </div>
+                        <h3 class="mt-4 text-sm font-semibold leading-7 text-zinc-900 dark:text-white">
+                            <a class="no-underline" href="/contacts">Contacts</a>
+                        </h3>
+                        <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Learn about the contact model and how to create, retrieve, update, delete, and list contacts.</p>
+                    </div>
+                </div>
+            </div>
+        </div> #}}
+
+</main>

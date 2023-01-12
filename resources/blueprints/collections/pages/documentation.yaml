@@ -12,40 +12,21 @@ sections:
           validate:
             - required
       -
-        handle: description
-        field:
-          input_type: text
-          antlers: false
-          display: Description
-          type: text
-          icon: text
-          listable: hidden
-      -
-        handle: header
-        field:
-          input_type: text
-          antlers: false
-          display: Header
-          type: text
-          icon: text
-          listable: hidden
-      -
-        handle: content
-        field:
-          antlers: false
-          display: Content
-          type: textarea
-          icon: textarea
-          listable: hidden
-      -
-        handle: sign_up_prompt
-        field:
-          input_type: text
-          antlers: false
-          display: 'Sign Up Prompt'
-          type: text
-          icon: text
-          listable: hidden
+        handle: article
+        field: article.article
+        config:
+          buttons:
+            - h1
+            - h2
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - quote
+            - removeformat
+            - anchor
+            - code
+            - codeblock
   sidebar:
     display: Sidebar
     fields:
@@ -68,10 +49,13 @@ sections:
           listable: false
           localizable: true
       -
-        handle: template
+        handle: stickied_post
         field:
-          hide_partials: true
-          display: Template
-          type: template
-          icon: template
+          max_items: 1
+          mode: default
+          collections:
+            - blog
+          display: 'Stickied Post'
+          type: entries
+          icon: entries
           listable: hidden

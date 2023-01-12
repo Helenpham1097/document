@@ -1,7 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{ partial:global/page_head }}
+{{ partial:global/meta }}
 
-{{# The Index view is the entry point of our documentation page. It features a layout similar to that found in docs.antherls.html, but with the added flexibility of being able to include unique partial content specific to this page without having to add it to all pages.  #}}
-<div class="antialiased bg-white dark:bg-zinc-900">
-    <div class="container flex mx-auto antialiased py-14">
+<link rel="stylesheet" href="/css/main.css?{{ config:app:cache_timestamp }}"/>
+{{# <script src="/js/alpine.collapse.min.js?{{ config:app:cache_timestamp }}" defer></script> #}}
+{{# <script src="/js/alpine-3.10.2.js?{{ config:app:cache_timestamp }}" defer></script> #}}
+
+</head>
+<body class="antialiased bg-white dark:bg-zinc-900">
+    {{ partial:global/nav }}
+    <div class="container flex mx-auto antialiased pt-14">
         <div class="absolute inset-0 mx-0 overflow-hidden -z-10 max-w-none">
             <div class="absolute left-1/2 top-0 ml-[-38rem] h-[25rem] w-[81.25rem] dark:[mask-image:linear-gradient(white,transparent)]">
                 <div class="absolute inset-0 bg-gradient-to-r from-purple-200 to-purple-100 opacity-40 [mask-image:radial-gradient(farthest-side_at_top,white,transparent)] dark:from-purple-500/30 dark:to-purple-600/30 dark:opacity-100">
@@ -24,6 +34,8 @@
             </div>
         </div>
         {{ partial:documentation/_sidebar }}
-        {{ partial:documentation/content }}
+        {{ partial:documentation/show }}
     </div>
-</div>
+    {{ partial:global/footer }}
+</body>
+
