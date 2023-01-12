@@ -193,6 +193,33 @@
 	}
 }
 
+
+.bg2 {
+	background: radial-gradient(100% 225% at 100% 0%, #ffffff 0%, #000000 100%),
+		linear-gradient(-235deg,
+			#9F4BFF 0%,
+			#000000 100%),
+		linear-gradient(-45deg,
+			#5600B8 0%,
+			#5600B8 40%,
+			#8118F9 40%,
+			#8118F9 50%,
+			#A557FF 50%,
+			#A557FF 70%,
+			#D3ADFF 70%,
+			#D3ADFF 100%),
+		linear-gradient(-180deg,
+			#16002F 0%,
+			#16002F 43%,
+			#760DEE 43%,
+			#760DEE 62%,
+			#8C27FF 62%,
+			#8C27FF 80%,
+			#B370FF 80%,
+			#B370FF 100%);
+	background-blend-mode: screen, soft-light, screen, normal;
+}
+
 /* Animate Background Image */
 
 @-webkit-keyframes speed {
