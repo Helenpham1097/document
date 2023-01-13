@@ -12,3 +12,6 @@ default_status: draft
 date_behavior:
   past: public
   future: private
+structure:
+  root: false
+  max_depth: 1
