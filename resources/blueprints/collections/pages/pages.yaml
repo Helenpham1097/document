@@ -21,14 +21,21 @@ sections:
           icon: text
           listable: hidden
       -
-        handle: subheader
-        field:
-          input_type: text
-          antlers: false
-          display: Subheader
-          type: text
-          icon: text
-          listable: hidden
+        handle: article
+        field: article.article
+        config:
+          buttons:
+            - h1
+            - h2
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - quote
+            - removeformat
+            - anchor
+            - code
+            - codeblock
       -
         handle: template
         field:
@@ -45,7 +52,6 @@ sections:
         field:
           type: slug
           localizable: true
-          required: true
           validate:
             - required
             - 'unique_entry_value:{collection},{id},{site}'

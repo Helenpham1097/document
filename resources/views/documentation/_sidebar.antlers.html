@@ -11,8 +11,8 @@
                 
                     <a href="{{ url }}" class="{{ if is_current || is_parent }} dark:text-white {{/if}} text-base font-semibold text-zinc-900 dark:text-white/30">{{ title }}</a>
                 
-
-                    {{ entries }}
+                    {{ if entries}}
+                    {{ entries  status:in="published" }}
                         <div class="relative pl-2 mt-3">
                             {{ if is_current }}
                                 <div class="bg-zinc-800/2.5 dark:bg-white/2.5 absolute inset-x-0 top-0 will-change-transform"></div>
@@ -27,7 +27,8 @@
                                 </li>
                             </ul>
                         </div>
-                        {{ /entries }}
+                    {{ /entries }}
+                    {{ /if }}
                     </li>
                 </ul>
         {{ /taxonomy }}
