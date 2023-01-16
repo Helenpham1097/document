@@ -70,6 +70,11 @@ fields:
           fields:
             -
               import: code
+        code_snippet:
+          display: 'Code Snippet'
+          fields:
+            -
+              import: code_snippet
       container: assets
       enable_input_rules: true
       enable_paste_rules: true

@@ -1,9 +1,6 @@
 title: Code
 fields:
   -
-    handle: size
-    field: common.size
-  -
     handle: code
     field:
       antlers: false
