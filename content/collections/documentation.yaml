@@ -6,7 +6,6 @@ taxonomies:
   - documentation
 revisions: false
 route: '/{mount}/{slug}'
-date: true
 sort_dir: asc
 default_status: draft
 date_behavior:
