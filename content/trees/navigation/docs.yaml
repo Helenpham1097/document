@@ -8,12 +8,11 @@ tree:
         id: 4e97c01b-66af-4069-998f-968f08381f02
         entry: c0bffb62-b82a-4e9a-ab43-d0bebe2445a1
       -
+        id: f7e381af-eeaf-459b-be6d-3ecdbee8d8ea
+        entry: 0be64eed-d97d-4598-9d60-3c31e19fed26
+      -
         id: d46f8c3a-b3c8-4b29-a772-70be6ef6535f
         entry: 79ada870-3066-425a-98f4-cbab9715cac8
-        children:
-          -
-            id: f7e381af-eeaf-459b-be6d-3ecdbee8d8ea
-            entry: 0be64eed-d97d-4598-9d60-3c31e19fed26
   -
     id: b5f8325b-cbd5-4751-be94-d0da5f692f9d
     title: Resources

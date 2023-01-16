@@ -4,14 +4,6 @@ sections:
     display: Main
     fields:
       -
-        handle: template
-        field:
-          display: template
-          type: hidden
-          icon: hidden
-          listable: hidden
-          default: documentation/docs
-      -
         handle: title
         field:
           type: text
@@ -33,21 +25,7 @@ sections:
           icon: textarea
           listable: hidden
       -
-        handle: article
-        field: article.article
-        config:
-          buttons:
-            - h1
-            - h2
-            - bold
-            - italic
-            - unorderedlist
-            - orderedlist
-            - quote
-            - removeformat
-            - anchor
-            - code
-            - codeblock
+        import: article
   sidebar:
     display: Sidebar
     fields:
@@ -63,7 +41,6 @@ sections:
         handle: date
         field:
           type: date
-          required: true
           validate:
             - required
       -
@@ -100,6 +77,15 @@ sections:
           instructions: 'Team member to display as author'
       -
         import: default_image
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - documentation
+          max_items: 1
+          listable: false
+          localizable: true
   meta:
     display: Meta
     fields:

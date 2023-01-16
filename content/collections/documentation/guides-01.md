@@ -21,10 +21,10 @@ article:
     content:
       -
         type: text
-        text: 'Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
+        text: 'Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae. Truncate'
 documentation:
   - guides
 template_global: /global/default_image
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1673502898
+updated_at: 1673837096
 ---

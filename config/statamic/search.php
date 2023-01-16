@@ -28,13 +28,19 @@ return [
         'default' => [
             'driver' => 'local',
             'searchables' => 'all',
-            'fields' => ['title'],
+            'fields' => ['title', 'subheader'],
         ],
 
         // 'blog' => [
         //     'driver' => 'local',
         //     'searchables' => 'collection:blog',
         // ],
+
+        'documentation' => [
+            'driver' => 'local',
+            'searchables' => 'collection:documentation',
+            'fields' => ['title', 'article', 'taxonomy:*'],
+        ],
 
     ],
 

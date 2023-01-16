@@ -1,11 +1,10 @@
 title: Documentation
 template: documentation/docs
 layout: documentation/layout
-mount: 5f3ec833-66d3-43ef-9f35-97f1b4b0afc5
 taxonomies:
   - documentation
 revisions: false
-route: '/{mount}/{slug}'
+route: '{parent_uri}/{slug}'
 sort_dir: asc
 default_status: draft
 date_behavior:
@@ -13,4 +12,3 @@ date_behavior:
   future: private
 structure:
   root: false
-  max_depth: 1
