@@ -5,7 +5,8 @@
         <div x-data="{ open: false }" class="flex flex-col md:space-y-4 xl:space-y-0 xl:flex-col">
             <nav :class="{' md:mt-4': open, 'hidden invisible xl:visible': !open}" class="relative flex-grow invisible xl:flex xl:justify-center xl:flex-col xl:visible" role="navigation" aria-label="Main nav">
 
-                {{ nav:docs show_unpublished="true" }}
+                {{ nav:collection:documentation as="posts" show_unpublished="true" }}
+                    {{ posts }}
                     {{ if children }}
                         <div @click.away="open = true" class="relative pl-2 mt-3" x-data="{ open: true }">
                             {{ if is_current || is_parent }}
@@ -42,11 +43,16 @@
                         </div>
                     {{ else }}
                         {{# Item menu level 1 without nested items #}}
-                        <a class="{{ if is_current || is_parent }} dark:text-white {{/if}} text-zinc-900 font-semibold dark:text-white/30" href="{{ url }}">{{ title }}</a>
+                        <a class="{{ if is_current || is_parent }} dark:text-white {{/if}} text-zinc-900 font-semibold dark:text-white/30" href="{{ url }}">
+                            <span class="font-semibold text-zinc-900 dark:text-white/30" >{{ title }}</span>
+                        </a>
                     {{ /if }}
-                {{ /nav:docs }}
+                    {{ /posts }}
+                {{ /nav:collection:documentation }}
 
             </nav>
         </div>
     </div>
 </header>
+
+

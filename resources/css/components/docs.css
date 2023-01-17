@@ -1,0 +1,40 @@
+.docs {
+    h2 > .anchor,
+    h3 > .anchor,
+    h4 > .anchor {
+        @apply absolute top-0 block text-white no-underline opacity-0;
+        transition: all .2s ease-in-out;
+        &:hover {
+            @apply text-pink-500;
+            text-shadow: none;
+        }
+    }
+
+    h2 > .anchor {
+        @apply pr-4 -left-6;
+    }
+
+    h2:not(:first-of-type) > .anchor {
+        @apply top-14;
+    }
+
+    h2:hover > .anchor {
+        @apply opacity-100 -left-8;
+    }
+
+    h3 > .anchor {
+        @apply pr-2 -left-3;
+    }
+
+    h3:hover > .anchor {
+        @apply opacity-100 -left-5;
+    }
+
+    h4 > .anchor {
+        @apply pr-2 -left-2;
+    }
+
+    h4:hover > .anchor {
+        @apply opacity-100 -left-4;
+    }
+}

@@ -1587,6 +1587,42 @@ pre[class*=language-] {
 	font-style: italic
 }.token.entity {
 	cursor: help
+}.docs h2 > .anchor, 
+    .docs h3 > .anchor, 
+    .docs h4 > .anchor{
+  position: absolute;
+  top: 0px;
+  display: block;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  opacity: 0;
+        transition: all .2s ease-in-out;
+}.docs h2 > .anchor:hover,  .docs h3 > .anchor:hover,  .docs h4 > .anchor:hover{
+  --tw-text-opacity: 1;
+  color: rgb(236 72 153 / var(--tw-text-opacity));
+            text-shadow: none;
+}.docs h2 > .anchor{
+  left: -1.5rem;
+  padding-right: 1rem;
+}.docs h2:not(:first-of-type) > .anchor{
+  top: 3.5rem;
+}.docs h2:hover > .anchor{
+  left: -2rem;
+  opacity: 1;
+}.docs h3 > .anchor{
+  left: -0.75rem;
+  padding-right: 0.5rem;
+}.docs h3:hover > .anchor{
+  left: -1.25rem;
+  opacity: 1;
+}.docs h4 > .anchor{
+  left: -0.5rem;
+  padding-right: 0.5rem;
+}.docs h4:hover > .anchor{
+  left: -1rem;
+  opacity: 1;
 }/* Components */.slice-background::before{
   position: absolute;
   top: 0px;
@@ -2644,12 +2680,9 @@ pre[class*=language-] {
 }.bg-green-100{
   --tw-bg-opacity: 1;
   background-color: rgb(235 255 252 / var(--tw-bg-opacity));
-}.bg-slate-700{
+}.bg-red-50{
   --tw-bg-opacity: 1;
-  background-color: rgb(51 65 85 / var(--tw-bg-opacity));
-}.bg-slate-300{
-  --tw-bg-opacity: 1;
-  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+  background-color: rgb(254 242 242 / var(--tw-bg-opacity));
 }.bg-opacity-75{
   --tw-bg-opacity: 0.75;
 }.bg-gradient-to-r{
