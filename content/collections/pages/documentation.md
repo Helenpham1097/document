@@ -3,7 +3,7 @@ id: 5f3ec833-66d3-43ef-9f35-97f1b4b0afc5
 blueprint: pages
 title: Documentation
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1673908231
+updated_at: 1673921049
 template: documentation/index
 article:
   -
@@ -44,15 +44,19 @@ article:
     type: set
     attrs:
       values:
-        type: code
-        size: md
-        code: '<iframe width="960" height="315" src="https://www.youtube.com/embed/lHZwlzOUOZ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
-  -
-    type: set
-    attrs:
-      values:
         type: code_snippet
-        code_field: '<iframe width="960" height="315" src="https://www.youtube.com/embed/lHZwlzOUOZ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+        code_field:
+          code: |-
+            const Prism = require('prismjs');
+            const loadLanguages = require('prismjs/components/');
+            loadLanguages(['haml']);
+
+            // The code snippet you want to highlight, as a string
+            const code = `= ['hi', 'there', 'reader!'].join " "`;
+
+            // Returns a highlighted HTML string
+            const html = Prism.highlight(code, Prism.languages.haml, 'haml');
+          mode: javascript
   -
     type: paragraph
   -
