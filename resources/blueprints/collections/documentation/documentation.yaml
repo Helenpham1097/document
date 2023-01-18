@@ -17,15 +17,7 @@ sections:
           input_type: text
           antlers: false
       -
-        handle: subheader
-        field:
-          antlers: false
-          display: Subheader
-          type: textarea
-          icon: textarea
-          listable: hidden
-      -
-        import: article
+        import: docs
   sidebar:
     display: Sidebar
     fields:
@@ -44,40 +36,6 @@ sections:
           validate:
             - required
       -
-        handle: documentation
-        field:
-          type: terms
-          taxonomies:
-            - documentation
-          display: Documentation
-          mode: select
-      -
-        handle: author
-        field:
-          max_items: 1
-          mode: select
-          display: Author
-          type: users
-          icon: users
-          listable: true
-      -
-        handle: team_member
-        field:
-          max_items: 1
-          mode: default
-          create: true
-          collections:
-            - team
-          display: 'Team Member'
-          type: entries
-          icon: entries
-          listable: hidden
-          instructions_position: above
-          read_only: false
-          instructions: 'Team member to display as author'
-      -
-        import: default_image
-      -
         handle: parent
         field:
           type: entries
@@ -86,6 +44,14 @@ sections:
           max_items: 1
           listable: false
           localizable: true
+      -
+        handle: documentation
+        field:
+          type: terms
+          taxonomies:
+            - documentation
+          display: Documentation
+          mode: select
   meta:
     display: Meta
     fields:

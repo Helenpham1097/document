@@ -9,6 +9,8 @@
 @import "./base/article.css";
 @import "./utilities/wrapper.css";
 @import "./utilities/prismjs.css";
+@import "./utilities/torchlight.css";
+@import "./utilities/code.css";
 @import "./components/docs.css";
 
 /* Components */
