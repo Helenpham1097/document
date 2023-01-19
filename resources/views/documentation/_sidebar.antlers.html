@@ -14,12 +14,12 @@ nav_classes:
                     {{ nav:collection:documentation show_unpublished="true" }}
                         <li>
                             <div>
-                                <a class="{{ view:nav_classes[depth] }} {{ if is_current || is_parent }} text-purple-400 {{ /if }}" href="{{ url }}">
+                                <a class="{{ view:nav_classes[depth] }}{{ if is_current || is_parent }} text-purple-400 dark:text-purple-400 {{ /if }}" href="{{ url }}">
                                     {{ title }}
                                 </a>
                             </div>
                             {{ if children }}
-                                <ul class="{{ depth == 1 ?= 'mb-4' }}">
+                                <ul class="{{ depth == 1 ?= 'mb-4' }} {{ if is_current || is_parent }} text-purple-400 dark:text-purple-400 {{ /if }}">
                                     {{ *recursive children* }}
                                 </ul>
                             {{ /if }}

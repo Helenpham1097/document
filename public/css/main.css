@@ -4017,6 +4017,9 @@ pre code.torchlight .summary-caret{
 }.dark .dark\:text-gray-500{
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
+}.dark .dark\:text-purple-300{
+  --tw-text-opacity: 1;
+  color: rgb(207 165 255 / var(--tw-text-opacity));
 }.dark .dark\:outline-none{
   outline: 2px solid transparent;
   outline-offset: 2px;
