@@ -43,7 +43,7 @@
                         </div>
                     {{ else }}
                         {{# Item menu level 1 without nested items #}}
-                        <a class="{{ if is_current || is_parent }} dark:text-white {{/if}} text-zinc-900 font-semibold dark:text-white/30" href="{{ url }}">
+                        <a class="{{ if is_current }} dark:text-white text-purple-500 {{ else }} text-zinc-900 {{/if}} text-sm pl-6 font-semibold dark:text-white/30" href="{{ url }}">
                             <span class="font-semibold text-zinc-900 dark:text-white/30" >{{ title }}</span>
                         </a>
                     {{ /if }}
