@@ -2533,6 +2533,12 @@ pre code.torchlight .summary-caret{
 }.my-4{
   margin-top: 1rem;
   margin-bottom: 1rem;
+}.mx-10{
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}.my-1{
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
 }.mt-10{
   margin-top: 2.5rem;
 }.mb-10{
@@ -3502,6 +3508,9 @@ pre code.torchlight .summary-caret{
 }.text-green-500{
   --tw-text-opacity: 1;
   color: rgb(50 255 220 / var(--tw-text-opacity));
+}.text-purple-400{
+  --tw-text-opacity: 1;
+  color: rgb(171 98 255 / var(--tw-text-opacity));
 }.underline{
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
@@ -3999,6 +4008,15 @@ pre code.torchlight .summary-caret{
   color: rgb(161 161 170 / var(--tw-text-opacity));
 }.dark .dark\:text-white\/30{
   color: rgb(255 255 255 / 0.3);
+}.dark .dark\:text-purple-500{
+  --tw-text-opacity: 1;
+  color: rgb(135 30 255 / var(--tw-text-opacity));
+}.dark .dark\:text-gray-200{
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity));
+}.dark .dark\:text-gray-500{
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
 }.dark .dark\:outline-none{
   outline: 2px solid transparent;
   outline-offset: 2px;

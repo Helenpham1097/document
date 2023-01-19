@@ -1,10 +1,11 @@
 ---
 id: ff2a4faf-58d3-4acd-a2fa-3e6a20ef23c8
+published: false
 blueprint: documentation
 title: 'Image Guidelines'
 parent: 1be80f64-bbbf-4a8f-a9f2-53a78f6fc936
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1674165425
+updated_at: 1674165834
 ---
 This page will outline instructions for adding images to the Knowledge Base.
 

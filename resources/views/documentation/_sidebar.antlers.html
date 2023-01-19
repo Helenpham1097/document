@@ -1,73 +1,32 @@
+---
+nav_classes:
+  1: 'text-gray-800 dark:text-gray-200 font-bold text-sm'
+  2: 'text-gray-600 dark:text-gray-400 text-sm pl-2'
+  3: 'text-gray-500 dark:text-gray-500 text-sm pl-4'
+---
+
 <div class="space-y-8 lg:pointer-events-auto lg:block lg:overflow-y-auto lg:border-r lg:border-zinc-900/10 lg:dark:border-zinc-300/10 lg:px-6 xl:w-80">
     {{ partial:documentation/_theme_toggle }}
     {{ partial:documentation/_search }}
     <div class="flex flex-col justify-between">
-        <div x-data="{ open: false }" class="flex flex-col md:space-y-4 xl:space-y-0 xl:flex-col">
-            <nav :class="{' md:mt-4': open, 'hidden invisible xl:visible': !open}" class="relative flex-grow invisible xl:flex xl:justify-center xl:flex-col xl:visible" role="navigation" aria-label="Main nav">
-
-                {{ nav:collection:documentation as="posts" show_unpublished="true" }}
-                    {{ posts }}
-                        {{# Lv 1 #}}
-                        {{ if children }}
-                            <div @click.away="open = true" class="relative pl-2 mt-3" x-data="{ open: true }">
-                                {{ if is_current || is_parent }}
-                                    <div class="absolute top-0 h-full transform rounded-md -inset-x-1 bg-zinc-400/5 hover:bg-zinc-500/5 dark:bg-white/5"></div>
-                                    <div class="absolute inset-y-0 w-px left-2 bg-zinc-900/10 dark:bg-white/5"></div>
-                                    <div class="absolute w-px h-6 bg-purple-500 left-2"></div>
-                                {{ /if }}
-
-                                <button @click="open = !open" class="relative flex justify-between gap-2 py-1 pl-4 pr-3 text-sm transition text-zinc-900 dark:text-white">
-                                    <span class="{{ if is_current || is_parent }} dark:text-white {{ /if }} text-zinc-900 font-semibold dark:text-white/30">{{ title }}</span>
-                                </button>
-                                <ul
-                                    x-show="open"
-                                    :class="{'block': open, 'hidden': !open}"
-                                    x-transition:enter="xl:transition ease-out duration-100"
-                                    x-transition:enter-start="transform opacity-0 -translate-y-2"
-                                    x-transition:enter-end="transform opacity-100 translate-y-0"
-                                    x-transition:leave="transition ease-in duration-75"
-                                    x-transition:leave-start="transform opacity-100 translate-y-0"
-                                    x-transition:leave-end="transform opacity-0 translate-y-2"
-                                    class="relative hidden py-2 border-l border-transparent">
-                                    {{# Lv 2 #}}    
-                                    {{ if children }}
-                                        {{ children }}
-                                            <div class="relative py-1 ">
-                                                <a href="{{ url }}" class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white{{ if is_current || is_parent }} text-zinc-900  {{else }} text-zinc-600 {{ /if }} group" >
-                                                    <div class="pl-2 transition duration-500 ease-in-out transform group-hover:translate-x-1">
-                                                        {{ title }}
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        {{ /children }}
-                                            {{# Lv 3 #}}
-                                                {{ if children }}
-                                                {{ children }}
-                                                    <div class="relative py-1 ">
-                                                        <a href="{{ url }}" class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-8 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white{{ if is_current || is_parent }} text-zinc-900  {{else }} text-zinc-500 {{ /if }} group" >
-                                                            <div class="pl-2 transition duration-500 ease-in-out transform group-hover:translate-x-1">
-                                                                {{ title }}
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                {{ /children }}
-                                                {{ /if }}
-                                            {{# Lv 3 #}}
-                                    {{ /if }}
-                                    
-                                </ul>
+        <nav class="relative flex-grow invisible xl:flex xl:justify-center xl:flex-col xl:visible" role="navigation" aria-label="Main nav">
+                <ul class="nav">
+                    {{ nav:collection:documentation show_unpublished="true" }}
+                        <li>
+                            <div>
+                                <a class="{{ view:nav_classes[depth] }} {{ if is_current || is_parent }} text-purple-400 {{ /if }}" href="{{ url }}">
+                                    {{ title }}
+                                </a>
                             </div>
-                        {{ else }}
-                            {{# Item menu level 1 without nested items #}}
-                            <a class="{{ if is_current }} dark:text-white text-purple-500 {{ else }} text-zinc-900 {{ /if }} text-sm pl-6 font-semibold dark:text-white/30" href="{{ url }}">
-                                <span class="font-semibold text-zinc-900 dark:text-white/30" >{{ title }}</span>
-                            </a>
-                        {{ /if }}
-                    {{ /posts }}
-                {{ /nav:collection:documentation }}
-
+                            {{ if children }}
+                                <ul class="{{ depth == 1 ?= 'mb-4' }}">
+                                    {{ *recursive children* }}
+                                </ul>
+                            {{ /if }}
+                        </li>
+                    {{ /nav:collection:documentation }}
+                </ul>
             </nav>
-        </div>
     </div>
 </div>
 
