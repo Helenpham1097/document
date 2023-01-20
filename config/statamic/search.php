@@ -39,7 +39,7 @@ return [
         'documentation' => [
             'driver' => 'local',
             'searchables' => 'collection:documentation',
-            'fields' => ['title', 'article', 'taxonomy:*'],
+            'fields' => ['title', 'content', 'taxonomy:*'],
         ],
 
     ],
