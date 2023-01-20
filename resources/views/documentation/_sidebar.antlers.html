@@ -5,21 +5,21 @@ nav_classes:
   3: 'text-gray-500 dark:text-gray-500 text-sm pl-4'
 ---
 
-<div class="space-y-8 lg:pointer-events-auto lg:block lg:overflow-y-auto lg:border-r lg:border-zinc-900/10 lg:dark:border-zinc-300/10 lg:px-6 xl:w-80">
+<div class="w-1/6 space-y-8 lg:pointer-events-auto lg:block lg:overflow-y-auto lg:border-r lg:border-zinc-900/10 lg:dark:border-zinc-300/10 lg:px-6 xl:w-80">
     {{ partial:documentation/_theme_toggle }}
     {{ partial:documentation/_search }}
     <div class="flex flex-col justify-between">
         <nav class="relative flex-grow invisible xl:flex xl:justify-center xl:flex-col xl:visible" role="navigation" aria-label="Main nav">
-                <ul class="nav">
+                <ul class=" nav">
                     {{ nav:collection:documentation show_unpublished="true" }}
-                        <li>
+                        <li class="{{ if is_current || is_parent }} bg-zinc-400/5 hover:bg-zinc-500/5 dark:bg-white/5 {{ /if }}">
                             <div>
                                 <a class="{{ view:nav_classes[depth] }}{{ if is_current || is_parent }} text-purple-400 dark:text-purple-400 {{ /if }}" href="{{ url }}">
                                     {{ title }}
                                 </a>
                             </div>
                             {{ if children }}
-                                <ul class="{{ depth == 1 ?= 'mb-4' }} {{ if is_current || is_parent }} text-purple-400 dark:text-purple-400 {{ /if }}">
+                                <ul class="{{ depth == 1 ?= 'mb-8' }}">
                                     {{ *recursive children* }}
                                 </ul>
                             {{ /if }}

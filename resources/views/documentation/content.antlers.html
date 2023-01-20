@@ -1,5 +1,5 @@
 
-<main class="relative w-full max-w-2xl px-4 mx-auto space-y-16 sm:px-6 lg:px-8">
+<main class="relative w-3/6 px-4 mx-auto space-y-16 sm:px-6 lg:px-8">
     {{ partial:documentation/breadcrumbs }}
     <div class="relative flex group ">
         <div
@@ -9,7 +9,7 @@
                 <path d="m6.5 11.5-.964-.964a3.535 3.535 0 1 1 5-5l.964.964m2 2 .964.964a3.536 3.536 0 0 1-5 5L8.5 13.5m0-5 3 3"></path>
             </svg>
         </div>
-        <a class="prose no-underline dark:prose-invert " href="#{{ title | slugify }}">
+        <a class="prose no-underline dark:prose-invert" href="#{{ title | slugify }}">
             {{ partial:typography/h3 content="{{ title }}" color='text-black dark:text-white' }}
         </a>
     </div>
