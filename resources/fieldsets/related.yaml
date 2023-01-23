@@ -7,8 +7,7 @@ fields:
         docs: Docs
         articles: Articles
         pages: Pages
-      default: articles
-      display: type
+      display: Type
       type: button_group
       icon: button_group
       listable: hidden
@@ -17,7 +16,7 @@ fields:
   -
     handle: related_docs
     field:
-      max_items: 4
+      max_items: 3
       mode: default
       create: true
       collections:
@@ -29,7 +28,7 @@ fields:
       instructions_position: above
       read_only: false
       if:
-        related_docs: 'equals true'
+        type: 'equals docs'
   -
     handle: related_blog
     field:
@@ -45,7 +44,7 @@ fields:
       instructions_position: above
       read_only: false
       if:
-        related_blog: 'equals true'
+        type: 'equals articles'
   -
     handle: related_pages
     field:
@@ -61,4 +60,4 @@ fields:
       instructions_position: above
       read_only: false
       if:
-        related_pages: 'equals true'
+        type: 'equals pages'

@@ -5010,6 +5010,8 @@ pre code.torchlight .summary-caret{
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }.xl\:grid-cols-4{
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }.xl\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }.xl\:flex-col{
     flex-direction: column;
   }.xl\:justify-center{

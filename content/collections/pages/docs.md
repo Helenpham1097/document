@@ -1,9 +1,9 @@
 ---
 id: 5f3ec833-66d3-43ef-9f35-97f1b4b0afc5
-blueprint: pages
+blueprint: documentation
 title: Documentation
-updated_by: ef9ed893-3cea-4050-91d5-b333e8f9ad02
-updated_at: 1673996440
+updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
+updated_at: 1674453488
 template: documentation/index
 article:
   -
@@ -13,7 +13,7 @@ article:
     content:
       -
         type: text
-        text: 'Aliquam placerat eu enim ac faucibus.'
+        text: 'Webslice placerat eu enim ac faucibus.'
   -
     type: paragraph
     content:
@@ -23,6 +23,7 @@ article:
   -
     type: set
     attrs:
+      enabled: false
       values:
         type: buttons
         buttons:
@@ -65,4 +66,9 @@ article:
       -
         type: text
         text: 'Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
+type: docs
+related_docs:
+  - ff2a4faf-58d3-4acd-a2fa-3e6a20ef23c8
+  - e718c7b7-0d84-4d5e-9208-a1da4e1bdb12
+  - f9af4605-1a8a-449c-b932-b8f4b161d540
 ---

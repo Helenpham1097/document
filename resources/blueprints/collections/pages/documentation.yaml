@@ -27,6 +27,8 @@ sections:
             - anchor
             - code
             - codeblock
+      -
+        import: related
   sidebar:
     display: Sidebar
     fields:
@@ -35,7 +37,6 @@ sections:
         field:
           type: slug
           localizable: true
-          required: true
           validate:
             - required
             - 'unique_entry_value:{collection},{id},{site}'
