@@ -18,6 +18,7 @@ tree:
       -
         id: ad47f904-7d82-4d40-9ecf-a2a6c56931bb
         entry: 26513dc7-59f7-4673-815e-7d9ace16248b
-      -
-        id: a1f043b3-ead3-4fc6-9806-d5e0a029ba81
-        entry: 5f3ec833-66d3-43ef-9f35-97f1b4b0afc5
+  -
+    id: a1f043b3-ead3-4fc6-9806-d5e0a029ba81
+    entry: 5f3ec833-66d3-43ef-9f35-97f1b4b0afc5
+    title: Docs

@@ -3,7 +3,7 @@ id: 940c030d-5616-41b1-80df-5b9e910602a2
 blueprint: documentation
 title: 'Writing Style'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1674164011
+updated_at: 1674425789
 ---
 This will outline how documentation should be written and structured.
 
@@ -50,6 +50,6 @@ The structure of a document has a major impact on readability, searchability and
 3. H1-H5 headings are automatically linkable and can be referenced in support emails to link customers directly to relevant content.
 4. When creating lists, use [numbered lists](/everyone/guides/docs/markdown#ordered) instead of bullet lists, so points are easier to reference during a discussion.
 5. Use [Notices](/everyone/guides/docs/markdown#notices) to help important points stand out clearly.
-   > This is an example notice.
+    This is an example notice.
 6. You can also [Horizontal Rules](/everyone/guides/docs/markdown#horizontal-rules) to break up content.
   ___
