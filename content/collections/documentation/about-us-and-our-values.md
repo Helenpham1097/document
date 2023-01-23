@@ -3,7 +3,10 @@ id: 7225084d-0e33-4215-9e32-513e5690f65f
 blueprint: documentation
 title: 'About Us & Our Values'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1674163328
+updated_at: 1674442207
+related_entries:
+  - 0f018399-bb99-4dcd-b3d5-aaa070166c77
+  - 713a64b2-1201-459b-81bf-35a695981cf0
 ---
 This page will explain the first week for most people at SiteHost.
 

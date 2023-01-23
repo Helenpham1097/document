@@ -4,7 +4,7 @@ blueprint: documentation
 title: 'Image Guidelines'
 parent: 1be80f64-bbbf-4a8f-a9f2-53a78f6fc936
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1674172004
+updated_at: 1674443873
 ---
 This page will outline instructions for adding images to the Knowledge Base.
 
@@ -49,4 +49,4 @@ Note the following:
 * Resized to 500px.
 * Image description.
 
->>>>>> You can create a text link to a screenshot (even if it is not on the current page) that opens in lightbox. For example here is a text [link to the screenshot](Domains___Toggle_Auto-Renew.png?rel=lightbox) above. This was inserted using the following markdown: `[link to the screenshot](Domains___Toggle_Auto-Renew.png?rel=lightbox)`.
+You can create a text link to a screenshot (even if it is not on the current page) that opens in lightbox. For example here is a text [link to the screenshot](Domains___Toggle_Auto-Renew.png?rel=lightbox) above. This was inserted using the following markdown: `[link to the screenshot](Domains___Toggle_Auto-Renew.png?rel=lightbox)`.
