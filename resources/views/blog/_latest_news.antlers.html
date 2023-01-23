@@ -1,13 +1,12 @@
 {{# Partial template for latest news linked blog posts. Uses latest_news global #}}
 
-<hr>
 
-<section class="space-y-12 ">
+<section class="py-24 space-y-12 border-t border-t-zinc-300 dark:border-t-zinc-700 ">
     <div class="grid grid-cols-1 gap-16 lg:grid-cols-6 related-post">
 
-        <div class="col-span-4 space-y-2 lg:col-span-2">
+        <div class="col-span-4 space-y-4 lg:col-span-2">
             <h3 class="h2">{{ latest_news:header }}</h3>
-            <p class="text-base">{{ latest_news:subheader }}</p>
+            <p class=" text-zinc-700 dark:text-zinc-300">{{ latest_news:subheader }}</p>
         </div>
 
         <div class="grid grid-cols-1 col-span-4 gap-8 lg:grid-cols-2">

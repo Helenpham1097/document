@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark" lang="en"
+    x-data="{ darkMode: localStorage.getItem('dark') === 'true'} "
+    x-init="$watch('darkMode', val => localStorage.setItem('dark', val))"
+    x-bind:class="{ 'dark': darkMode }"
+>
 <head>
 {{ partial:global/page_head }}
 {{ partial:global/meta }}
 
 <link rel="stylesheet" href="/css/main.css?{{ config:app:cache_timestamp }}"/>
 </head>
-<body class="">
+<body class=" dark:bg-zinc-900">
     {{ partial:global/nav }}
         {{ template_content }}
     {{ partial:global/footer }}

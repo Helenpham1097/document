@@ -67,7 +67,7 @@ that are always displayed before the text,  this is controlled by "order-first M
         >
             <div data-aos="fade-right" data-aos-delay="300">
                 <svg
-                    class="self-end w-64 text-[#F1FBFC] fill-current"
+                    class="self-end w-64 text-[#F1FBFC] dark:text-zinc-700/20 fill-current"
                     viewBox="0 0 549 564"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +79,7 @@ that are always displayed before the text,  this is controlled by "order-first M
             </div>
             <div data-aos="fade-right" data-aos-delay="600">
                 <svg
-                    class="self-end w-64 text-[#F1F5FB] fill-current"
+                    class="self-end w-64 text-[#F1F5FB] dark:text-zinc-700/20 fill-current"
                     viewBox="0 0 549 564"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +92,7 @@ that are always displayed before the text,  this is controlled by "order-first M
             <div data-aos="fade-right" data-aos-delay="900">
                 <svg
                     data-aos="fade-left"
-                    class="self-end w-64 text-[#F1ECFD] fill-current"
+                    class="self-end w-64 text-[#F1ECFD] dark:text-zinc-700/20 fill-current"
                     viewBox="0 0 549 564"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -108,7 +108,7 @@ that are always displayed before the text,  this is controlled by "order-first M
             {{ partial:components/figure :image="default_image" cover="false" lazy="false" maxwidth="768" quality='70' }}
         </div>
         {{ /if }} {{ if highlight_textcaption | strip_tags:p }}
-        <div class="relative text-gray-400">
+        <div class="relative text-zinc-400 dark:text-zinc-600">
             {{ highlight_textcaption | strip_tags:p }}
         </div>
         {{ /if }}

@@ -6,7 +6,7 @@
     </div>
 
     <div class="relative mx-auto ">
-        <div class="absolute rounded-full opacity-25 -inset-y-1 -inset-x-8 blur-2xl bg-gradient-to-t from-purple-500/30 to-green-500"></div>
+        <div class="absolute rounded-full opacity-25 dark:opacity-60 -inset-y-1 -inset-x-8 blur-2xl bg-gradient-to-t from-purple-500/30 to-green-500 dark:from-purple-900 dark:to-green-900"></div>
         <div class="relative space-y-6 ">
             {{# if 3 images are included #}}
             {{if company }} 
@@ -14,8 +14,8 @@
                 {{ company  }}
                     {{# limit the loop to 3 images #}}
                     {{ if default_image }}
-                        <div class="max-w-[250px] px-6 py-4 overflow-hidden bg-white rounded-lg shadow-lg max-h-18 ">
-                            <figure class="object-cover object-center w-full h-full transition duration-200 delay-100 group-hover:grayscale-0 filter sm:grayscale lg:w-full lg:h-full">
+                        <div class="max-w-[250px] px-6 py-4 overflow-hidden bg-white dark:bg-zinc-300 rounded-lg shadow-lg max-h-18 ">
+                            <figure class="object-cover object-center w-full h-full transition duration-200 delay-100 group-hover:zincscale-0 filter sm:zincscale lg:w-full lg:h-full">
                                 {{ partial:global/picture :image="default_image" cover="false" lazy="false" maxwidth="300" quality='70' }}
                             </figure>
                         </div>
@@ -36,7 +36,7 @@
 
             {{ if default_image }}
                 <div class="max-w-[250px] px-6 py-4 overflow-hidden bg-white rounded-lg shadow-lg max-h-18 ">
-                    <figure class="object-cover object-center w-full h-full transition duration-200 delay-100 group-hover:grayscale-0 filter sm:grayscale lg:w-full lg:h-full">
+                    <figure class="object-cover object-center w-full h-full transition duration-200 delay-100 group-hover:zincscale-0 filter sm:zincscale lg:w-full lg:h-full">
                         {{ partial:global/picture :image="default_image" cover="false" lazy="false" maxwidth="300" quality='70' }}
                     </figure>
                 </div>
@@ -49,7 +49,7 @@
         {{ company  limit="12" offset="6" }}
             {{ if default_image }}
                 <div class="max-w-[250px] px-6 py-4 overflow-hidden bg-white rounded-lg shadow-lg max-h-18 ">
-                    <figure class="object-cover object-center w-full h-full transition duration-200 delay-200 group-hover:grayscale-0 filter sm:grayscale lg:w-full lg:h-full">
+                    <figure class="object-cover object-center w-full h-full transition duration-200 delay-200 group-hover:zincscale-0 filter sm:zincscale lg:w-full lg:h-full">
                         {{ partial:global/picture :image="default_image" cover="false" lazy="false" maxheight="69" maxwidth="184" quality='70' }}
                     </figure>
                 </div>
@@ -62,7 +62,7 @@
         {{ company  limit="18" offset="12" }}
             {{ if default_image }}
                 <div class="max-w-[250px] px-6 py-4 overflow-hidden bg-white rounded-lg shadow-lg max-h-18 ">
-                    <figure class="object-cover object-center w-full h-full transition duration-200 delay-300 group-hover:grayscale-0 filter sm:grayscale lg:w-full lg:h-full">
+                    <figure class="object-cover object-center w-full h-full transition duration-200 delay-300 group-hover:zincscale-0 filter sm:zincscale lg:w-full lg:h-full">
                         {{ partial:global/picture :image="default_image" cover="false" lazy="false" maxheight="69" maxwidth="184" quality='70' }}
                     </figure>
                 </div>

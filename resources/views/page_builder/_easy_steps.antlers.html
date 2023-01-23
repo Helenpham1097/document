@@ -1,6 +1,6 @@
 <div class="container space-y-24">
     <div class="mx-auto space-y-8 text-center md:max-w-2xl">
-        <div class="text-purple-500 slash h3">Easy to use</div>
+        <div class="text-purple-500 dark:text-green-500 slash h3">Easy to use</div>
         <h2 class="h2" data-unsp-sanitized="clean">Set up in 3 easy steps</h2>
     </div>
     <div class="grid grid-cols-1 gap-4 row-gap-12 text-left md:grid-cols-3 md:text-center md:gap-8">
@@ -10,10 +10,10 @@
 					
 					{{ if ! first }}
 					{{ if ! last }}
-					<div class="absolute bottom-0 mt-24 translate-y-full border-2 border-t-0 border-gray-300 border-dashed rounded-xl h-1/2 -inset-12">
+					<div class="absolute bottom-0 mt-24 translate-y-full border-2 border-t-0 border-dashed border-zinc-300 rounded-xl h-1/2 -inset-12">
 						<div class="relative">
-							<div class="absolute w-4 h-4 -translate-x-1/2 bg-white border border-gray-300 rounded-full"></div>
-							<div class="absolute right-0 w-4 h-4 translate-x-1/2 bg-white border border-gray-300 rounded-full"></div>
+							<div class="absolute w-4 h-4 -translate-x-1/2 bg-white border rounded-full border-zinc-300"></div>
+							<div class="absolute right-0 w-4 h-4 translate-x-1/2 bg-white border rounded-full border-zinc-300"></div>
 						</div>
 					</div>
 					{{ /if}}
@@ -23,7 +23,7 @@
 					<div class="absolute -inset-1">
 						<div class="w-full h-full mx-auto opacity-20 blur-xl filter bg-gradient-to-b from-green-500 to-purple-500 "></div>
 					</div>
-					<div class="{{ if ! first }} {{ if ! last }} -translate-y-8 {{ /if}} {{ /if}} bg-white border border-gray-100 rounded-lg aspect-h-5 aspect-w-5">
+					<div class="{{ if ! first }} {{ if ! last }} -translate-y-8 {{ /if}} {{ /if}} bg-white border border-zinc-100 rounded-lg aspect-h-5 aspect-w-5">
 						<div class="flex items-center w-full p-8 mx-auto">
 						{{ if default_image }}
 								<figure>
@@ -34,7 +34,7 @@
 					</div>
 					{{ if ! first }} {{ if ! last }}
 					<div class="w-full h-0 mx-auto text-center translate-y-8" >
-						<div class="relative w-4 h-4 mx-auto translate-y-1/2 bg-white border border-gray-300 rounded-full "></div>
+						<div class="relative w-4 h-4 mx-auto translate-y-1/2 bg-white border rounded-full border-zinc-300 "></div>
 					</div>
 					{{ /if}}
 					{{ /if}}

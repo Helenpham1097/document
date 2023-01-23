@@ -37,7 +37,7 @@ article p img {
 }
 .prose {
     p {
-        color: #425466;
+        @apply text-zinc-800 dark:text-zinc-300;
         widows: 3;
     }
 
