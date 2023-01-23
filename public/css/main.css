@@ -3756,6 +3756,9 @@ pre code.torchlight .summary-caret{
 }.hover\:bg-gray-200:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}.hover\:bg-zinc-200:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(228 228 231 / var(--tw-bg-opacity));
 }.hover\:text-purple-100:hover{
   --tw-text-opacity: 1;
   color: rgb(243 233 255 / var(--tw-text-opacity));
@@ -3811,9 +3814,15 @@ pre code.torchlight .summary-caret{
 }.focus\:bg-gray-200:focus{
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}.focus\:bg-zinc-200:focus{
+  --tw-bg-opacity: 1;
+  background-color: rgb(228 228 231 / var(--tw-bg-opacity));
 }.focus\:text-gray-900:focus{
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
+}.focus\:text-zinc-900:focus{
+  --tw-text-opacity: 1;
+  color: rgb(24 24 27 / var(--tw-text-opacity));
 }.focus\:outline-none:focus{
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -4121,6 +4130,9 @@ pre code.torchlight .summary-caret{
 }.dark .dark\:hover\:bg-zinc-900:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(24 24 27 / var(--tw-bg-opacity));
+}.dark .dark\:hover\:bg-zinc-600:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(82 82 91 / var(--tw-bg-opacity));
 }.dark .dark\:hover\:text-white:hover{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -4139,6 +4151,9 @@ pre code.torchlight .summary-caret{
 }.dark .dark\:focus\:bg-gray-600:focus{
   --tw-bg-opacity: 1;
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+}.dark .dark\:focus\:bg-zinc-600:focus{
+  --tw-bg-opacity: 1;
+  background-color: rgb(82 82 91 / var(--tw-bg-opacity));
 }.dark .dark\:focus\:text-white:focus{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
