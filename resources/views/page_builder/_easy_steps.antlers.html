@@ -10,20 +10,20 @@
 					
 					{{ if ! first }}
 					{{ if ! last }}
-					<div class="absolute bottom-0 mt-24 translate-y-full border-2 border-t-0 border-dashed border-zinc-300 rounded-xl h-1/2 -inset-12">
+					<div class="absolute bottom-0 mt-24 translate-y-full border-2 border-t-0 border-dashed border-zinc-300 dark:border-zinc-700 rounded-xl h-1/2 -inset-12">
 						<div class="relative">
-							<div class="absolute w-4 h-4 -translate-x-1/2 bg-white border rounded-full border-zinc-300"></div>
-							<div class="absolute right-0 w-4 h-4 translate-x-1/2 bg-white border rounded-full border-zinc-300"></div>
+							<div class="absolute w-4 h-4 -translate-x-1/2 bg-white border rounded-full dark:bg-zinc-700 dark:border-zinc-900 border-zinc-300"></div>
+							<div class="absolute right-0 w-4 h-4 translate-x-1/2 bg-white border rounded-full dark:bg-zinc-700 dark:border-zinc-900 border-zinc-300"></div>
 						</div>
 					</div>
 					{{ /if}}
 					{{ /if}}
 
 
-					<div class="absolute -inset-1">
-						<div class="w-full h-full mx-auto opacity-20 blur-xl filter bg-gradient-to-b from-green-500 to-purple-500 "></div>
+					<div class="absolute {{ if ! first }} {{ if ! last }} -translate-y-8 {{ /if}} {{ /if}} -inset-1">
+						<div class="w-full h-full mx-auto opacity-20 blur-xl filter bg-gradient-to-b from-green-500 to-purple-500 dark:from-zinc-900 dark:to-green-800 "></div>
 					</div>
-					<div class="{{ if ! first }} {{ if ! last }} -translate-y-8 {{ /if}} {{ /if}} bg-white border border-zinc-100 rounded-lg aspect-h-5 aspect-w-5">
+					<div class="{{ if ! first }} {{ if ! last }} -translate-y-8 {{ /if}} {{ /if}} bg-white dark:bg-slate-800 border border-zinc-100 dark:border-zinc-700 rounded-lg aspect-h-5 aspect-w-5">
 						<div class="flex items-center w-full p-8 mx-auto">
 						{{ if default_image }}
 								<figure>
@@ -34,7 +34,7 @@
 					</div>
 					{{ if ! first }} {{ if ! last }}
 					<div class="w-full h-0 mx-auto text-center translate-y-8" >
-						<div class="relative w-4 h-4 mx-auto translate-y-1/2 bg-white border rounded-full border-zinc-300 "></div>
+						<div class="relative w-4 h-4 mx-auto translate-y-1/2 bg-white border rounded-full dark:bg-zinc-700 border-zinc-300 dark:border-zinc-900 "></div>
 					</div>
 					{{ /if}}
 					{{ /if}}

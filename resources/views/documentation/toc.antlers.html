@@ -13,13 +13,41 @@
 
 
 
-<script>
+{{# <script>
     window.addEventListener("DOMContentLoaded", () => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 const id = entry.target.getAttribute("id");
                 if (entry.intersectionRatio > 0) {
                     document.querySelector(`#sidebar a[href="#${id}"]`).classList.add("text-purple-500", "dark:text-green-500");
+                } else {
+                    document.querySelector(`#sidebar a[href="#${id}"]`).classList.remove("text-purple-500", "dark:text-green-500");
+                }
+            });
+        });
+
+        // Track all sections that have an `id` applied
+        document.querySelectorAll("section[id], h2[id], h3[id]").forEach((section) => {
+            observer.observe(section);
+        });
+    });
+</script> #}}
+
+
+<script>
+    let lastId = null;
+
+    window.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                const id = entry.target.getAttribute("id");
+                if (entry.intersectionRatio > 0) {
+                    document.querySelector(`#sidebar a[href="#${id}"]`).classList.add("text-purple-500", "dark:text-green-500");
+                    if(lastId) {
+                        document.querySelector(`#sidebar a[href="#${lastId}"]`).classList.remove("font-bold");
+                    }
+                    document.querySelector(`#sidebar a[href="#${id}"]`).classList.add("font-bold");
+                    lastId = id;
                 } else {
                     document.querySelector(`#sidebar a[href="#${id}"]`).classList.remove("text-purple-500", "dark:text-green-500");
                 }

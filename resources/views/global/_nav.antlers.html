@@ -44,6 +44,8 @@
 			</a>
 			{{ /if }}
 			{{ /nav:main_menu }}
+
+			{{ partial:documentation/_theme_toggle }}
 			
 			{{# Login #}}
 			<div :class="{'block pb-3 lg:pb-0': open, 'hidden': !open}" class="flex items-center justify-center ml-8 lg:block">
