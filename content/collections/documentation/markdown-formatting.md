@@ -3,13 +3,13 @@ id: e718c7b7-0d84-4d5e-9208-a1da4e1bdb12
 blueprint: documentation
 title: 'Markdown Formatting'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1674164099
+updated_at: 1674681774
 ---
 Grav ships with built-in support for [Markdown](http://daringfireball.net/projects/markdown/) and [Markdown Extra](https://michelf.ca/projects/php-markdown/extra/). 
 
 Without further delay, let us go over the main elements of Markdown and what the resulting HTML looks like:
 
-> <i class="fa fa-bookmark"></i> Bookmark this page for easy future reference!
+> Bookmark this page for easy future reference!
 
 ## Headings
 

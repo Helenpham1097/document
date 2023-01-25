@@ -57,9 +57,9 @@ ol {
         @apply p-6;
     }
 }
-code {
+/* code {
     @apply whitespace-normal;
-}
+} */
 /* hr {
 	@apply mx-4 my-8 border-gray-200;
 } */

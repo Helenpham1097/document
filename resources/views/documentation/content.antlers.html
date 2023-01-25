@@ -14,7 +14,7 @@
             {{ partial:typography/h3 content="{{ title }}" color='text-black dark:text-white' }}
         </a>
     </div>
-    <article class="prose dark:prose-invert prose-headings:relative dark:prose-p:text-white/90 prose-purple dark:prose-cyan-500 md:pb-16">
+    <article class="prose dark:prose-invert prose-headings:relative dark:prose-pre:bg-zinc-800 prose-pre:bg-zinc-800 dark:prose-p:text-white/90 prose-purple dark:prose-cyan-500 md:pb-16">
         {{ content | toc:ids }}
     </article>
     {{ else }}

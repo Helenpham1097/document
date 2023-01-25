@@ -51,7 +51,7 @@ article p img {
             content: "";
             background-size: 12%;
             background-position: 90% 80%;
-            @apply relative p-8 mt-0 space-y-4 text-base font-normal leading-7 bg-white bg-right-bottom bg-no-repeat border shadow-xl dark:text-zinc-600 border-zinc-200 text-zinc-800 shadow-zinc-500/20 rounded-xl ;
+            @apply relative p-8 mt-0 space-y-4 text-base font-normal leading-7 bg-white bg-right-bottom bg-no-repeat border shadow-xl dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700 text-zinc-800 dark:text-zinc-200 shadow-zinc-500/20 dark:shadow-black/30 rounded-xl ;
         }
         /* Blockquotes, Tips, Notes & Warnings */
         /* ///////////////////////////////////////////// */
@@ -107,9 +107,6 @@ article p img {
             }
 
         }
-    }
-    pre {
-        @apply bg-purple-900;
     }
 }
 
