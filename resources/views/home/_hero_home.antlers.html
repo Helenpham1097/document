@@ -1,13 +1,15 @@
 {{# Partial to show the hero section of the homepage #}}
-<div class="slice-background"></div>
+{{# <div class="slice-background"></div> #}}
 {{# Partial to show the hero section of the general content pages #}}
 <div class="relative flex flex-col justify-center ">
-    <div class="container relative mx-auto">
+    <div class="container relative mx-auto max-w-7xl">
         <div class="grid items-center gap-4 py-12 md:py-24 md:grid-cols-2">
             <div class="max-w-xl space-y-6">
                 <div class="flex flex-col items-start space-y-6 lg:flex-grow">
-                    <h1 class="prose dark:prose-invert slash prose-strong:font-bold h1">{{ hero_home_title | strip_tags:p }}</h1>
-                    <div class="text-2xl text-zinc-600 dark:text-zinc-400 ">{{ hero_home_description }}</div>
+                    {{# <h1 class="prose dark:prose-invert slash prose-strong:font-bold h1">{{ hero_home_title | strip_tags:p }}</h1> #}}
+                    <h1 class="relative max-w-2xl text-5xl font-semibold text-center slash sm:text-left md:text-6xl lg:text-7xl">{{ hero_home_title | strip_tags:p }}</h1>
+                    {{# <div class="text-2xl text-zinc-600 dark:text-zinc-400 ">{{ hero_home_description }}</div> #}}
+                    <div class="space-y-6 text-xl leading-8 text-center text-gray-500 sm:text-left dark:text-gray-100 ">{{ hero_home_description }}</div>
                     
                         {{ partial:components/buttons }}
                     
@@ -46,7 +48,7 @@
                                 </g>
                             </svg>
 
-                            <svg class="absolute bottom-0 right-0 z-10 text-purple-200 translate-x-1/2 translate-y-1/3 dark:text-green-200 w-36" viewBox="0 0 273 268" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="absolute bottom-0 right-0 text-purple-200 translate-x-1/2 -z-10 translate-y-1/3 dark:text-green-200 w-36" viewBox="0 0 273 268" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0.285156 18.2178V40.862L42.2954 0H18.937L0.285156 18.2178Z" fill="currentColor"/>
                                 <path d="M0.285156 63.4978V86.142L42.2954 45.28H18.937L0.285156 63.4978Z" fill="currentColor"/>
                                 <path d="M0.285156 108.778V131.422L42.2954 90.5601H18.937L0.285156 108.778Z" fill="currentColor"/>
@@ -87,6 +89,90 @@
                         </div>
                     </div>
                 {{ /if }}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="hidden pt-12 sm:pb-20 md:pt-28">
+    
+    
+    <div class="slice-background"></div>
+    <div class="relative flex flex-col items-center px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl sm:items-start gap-y-8">
+
+        <h1 class="relative max-w-2xl text-5xl font-semibold text-center text-gray-900 slash sm:text-left md:text-6xl lg:text-7xl">{{ hero_home_title | strip_tags:p }}</h1>
+        <div class="max-w-lg space-y-6 text-xl leading-8 text-center text-gray-500 sm:w-3/5 sm:text-left dark:text-gray-100">{{ hero_home_description }}</div>
+        {{ partial:components/buttons }}
+        <div class="absolute hidden sm:block left-1/3 sm:left-1/3 md:left-1/2 lg:left-2/3">
+            <div class="transition duration-1000">
+                <figure class="relative drop-shadow-2xl">
+                    {{ partial:global/picture :image="hero_home_image" cover="false" maxheight="512" lazy="false" maxwidth="768" quality='70' }}
+                </figure>
+                <div class="absolute inset-0 h-full mx-auto max-w-screen-2xl ">
+                    <svg class="relative text-green-300 -translate-x-1/2 translate-y-1/2 dark:text-green-800 -z-10 w-36" viewBox="0 0 273 269" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <mask id="mask0_1430_25914" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="1" width="272" height="268">
+                        <rect y="1" width="272" height="268" fill="#D9D9D9"/>
+                        </mask>
+                        <g mask="url(#mask0_1430_25914)">
+                        <path d="M0 24.1049V36.668L61.7788 1H40.0188L0 24.1049Z" fill="currentColor"/>
+                        <path d="M98.9085 1L0 58.1049V70.668L120.669 1H98.9085Z" fill="currentColor"/>
+                        <path d="M157.798 1L0 92.1049V104.668L179.558 1H157.798Z" fill="currentColor"/>
+                        <path d="M216.688 1L0 126.105V138.668L238.448 1H216.688Z" fill="currentColor"/>
+                        <path d="M272 3.0656L0 160.105V172.668L272 15.6287V3.0656Z" fill="currentColor"/>
+                        <path d="M272 37.0656L0 194.105V206.668L272 49.6287V37.0656Z" fill="currentColor"/>
+                        <path d="M272 71.0656L0 228.105V240.668L272 83.6287V71.0656Z" fill="currentColor"/>
+                        <path d="M272 105.066L0 262.105V274.668L272 117.629V105.066Z" fill="currentColor"/>
+                        <path d="M272 139.066L0 296.105V308.668L272 151.629V139.066Z" fill="currentColor"/>
+                        <path d="M272 173.066L0 330.105V342.668L272 185.629V173.066Z" fill="currentColor"/>
+                        <path d="M272 207.066L0 364.105V376.668L272 219.629V207.066Z" fill="currentColor"/>
+                        <path d="M272 241.066L0 398.105V409H2.88905L272 253.629V241.066Z" fill="currentColor"/>
+                        <path d="M272 275.066L40.0188 409H61.7788L272 287.629V275.066Z" fill="currentColor"/>
+                        <path d="M272 309.066L98.9086 409H120.669L272 321.629V309.066Z" fill="currentColor"/>
+                        <path d="M272 343.066L157.798 409H179.558L272 355.629V343.066Z" fill="currentColor"/>
+                        <path d="M272 377.066L216.688 409H238.448L272 389.629V377.066Z" fill="currentColor"/>
+                        </g>
+                    </svg>
+
+                    <svg class="absolute bottom-0 right-0 text-purple-200 translate-x-1/2 -z-10 translate-y-1/3 dark:text-green-200 w-36" viewBox="0 0 273 268" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.285156 18.2178V40.862L42.2954 0H18.937L0.285156 18.2178Z" fill="currentColor"/>
+                        <path d="M0.285156 63.4978V86.142L42.2954 45.28H18.937L0.285156 63.4978Z" fill="currentColor"/>
+                        <path d="M0.285156 108.778V131.422L42.2954 90.5601H18.937L0.285156 108.778Z" fill="currentColor"/>
+                        <path d="M0.285156 154.058V176.702L42.2954 135.84H18.937L0.285156 154.058Z" fill="currentColor"/>
+                        <path d="M0.285156 199.338V221.982L42.2954 181.12H18.937L0.285156 199.338Z" fill="currentColor"/>
+                        <path d="M0.285156 244.618V267.262L42.2954 226.4H18.937L0.285156 244.618Z" fill="currentColor"/>
+                        <path d="M92.2891 18.2178V40.862L134.299 0H110.941L92.2891 18.2178Z" fill="currentColor"/>
+                        <path d="M92.2891 63.4978V86.142L134.299 45.28H110.941L92.2891 63.4978Z" fill="currentColor"/>
+                        <path d="M92.2891 108.778V131.422L134.299 90.5601H110.941L92.2891 108.778Z" fill="currentColor"/>
+                        <path d="M92.2891 154.058V176.702L134.299 135.84H110.941L92.2891 154.058Z" fill="currentColor"/>
+                        <path d="M92.2891 199.338V221.982L134.299 181.12H110.941L92.2891 199.338Z" fill="currentColor"/>
+                        <path d="M92.2891 244.618V267.262L134.299 226.4H110.941L92.2891 244.618Z" fill="currentColor"/>
+                        <path d="M184.293 18.2178V40.862L226.303 0H202.945L184.293 18.2178Z" fill="currentColor"/>
+                        <path d="M184.293 63.4978V86.142L226.303 45.28H202.945L184.293 63.4978Z" fill="currentColor"/>
+                        <path d="M184.293 108.778V131.422L226.303 90.5601H202.945L184.293 108.778Z" fill="currentColor"/>
+                        <path d="M184.293 154.058V176.702L226.303 135.84H202.945L184.293 154.058Z" fill="currentColor"/>
+                        <path d="M184.293 199.338V221.982L226.303 181.12H202.945L184.293 199.338Z" fill="currentColor"/>
+                        <path d="M184.293 244.618V267.262L226.303 226.4H202.945L184.293 244.618Z" fill="currentColor"/>
+                        <path d="M46.2666 18.2178V40.862L88.2768 0H64.9185L46.2666 18.2178Z" fill="currentColor"/>
+                        <path d="M46.2666 63.4978V86.142L88.2768 45.28H64.9185L46.2666 63.4978Z" fill="currentColor"/>
+                        <path d="M46.2666 108.778V131.422L88.2768 90.5601H64.9185L46.2666 108.778Z" fill="currentColor"/>
+                        <path d="M46.2666 154.058V176.702L88.2768 135.84H64.9185L46.2666 154.058Z" fill="currentColor"/>
+                        <path d="M46.2666 199.338V221.982L88.2768 181.12H64.9185L46.2666 199.338Z" fill="currentColor"/>
+                        <path d="M46.2666 244.618V267.262L88.2768 226.4H64.9185L46.2666 244.618Z" fill="currentColor"/>
+                        <path d="M138.271 18.2178V40.862L180.281 0H156.922L138.271 18.2178Z" fill="currentColor"/>
+                        <path d="M138.271 63.4978V86.142L180.281 45.28H156.922L138.271 63.4978Z" fill="currentColor"/>
+                        <path d="M138.271 108.778V131.422L180.281 90.5601H156.922L138.271 108.778Z" fill="currentColor"/>
+                        <path d="M138.271 154.058V176.702L180.281 135.84H156.922L138.271 154.058Z" fill="currentColor"/>
+                        <path d="M138.271 199.338V221.982L180.281 181.12H156.922L138.271 199.338Z" fill="currentColor"/>
+                        <path d="M138.271 244.618V267.262L180.281 226.4H156.922L138.271 244.618Z" fill="currentColor"/>
+                        <path d="M230.275 18.2178V40.862L272.286 0H248.927L230.275 18.2178Z" fill="currentColor"/>
+                        <path d="M230.275 63.4978V86.142L272.286 45.28H248.927L230.275 63.4978Z" fill="currentColor"/>
+                        <path d="M230.275 108.778V131.422L272.286 90.5601H248.927L230.275 108.778Z" fill="currentColor"/>
+                        <path d="M230.275 154.058V176.702L272.286 135.84H248.927L230.275 154.058Z" fill="currentColor"/>
+                        <path d="M230.275 199.338V221.982L272.286 181.12H248.927L230.275 199.338Z" fill="currentColor"/>
+                        <path d="M230.275 244.618V267.262L272.286 226.4H248.927L230.275 244.618Z" fill="currentColor"/>
+                    </svg>
+                </div>
             </div>
         </div>
     </div>

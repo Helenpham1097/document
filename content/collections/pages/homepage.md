@@ -4,7 +4,7 @@ blueprint: home
 template: general_content/index
 title: Homepage
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1667523361
+updated_at: 1674699403
 top_section:
   -
     template: /home/hero_home
@@ -20,7 +20,7 @@ top_section:
             marks:
               -
                 type: bold
-            text: Seconds
+            text: minutes
     hero_home_description:
       -
         type: paragraph
@@ -51,7 +51,7 @@ page_builder:
     Items:
       -
         template_global: /global/default_image
-        default_image: 01.gif
+        default_image: step.png
         step_title: 'Track Customers'
         step_textarea:
           -
@@ -64,7 +64,7 @@ page_builder:
         enabled: true
       -
         template_global: /global/default_image
-        default_image: 01.gif
+        default_image: step-1674699387.png
         step_title: 'Track Customers'
         step_textarea:
           -
@@ -77,7 +77,7 @@ page_builder:
         enabled: true
       -
         template_global: /global/default_image
-        default_image: 01.gif
+        default_image: step.png
         step_title: 'Track Customers'
         step_textarea:
           -

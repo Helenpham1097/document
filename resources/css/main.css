@@ -8,7 +8,7 @@
 @import "./utilities/animation.css";
 @import "./base/article.css";
 @import "./utilities/wrapper.css";
-@import "./utilities/prismjs.css";
+/* @import "./utilities/prismjs.css"; */
 @import "./utilities/code.css";
 @import "./components/docs.css";
 

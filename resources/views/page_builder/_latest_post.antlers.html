@@ -1,6 +1,6 @@
 {{# Template showing the last post from the collection of posts #}}
 
-<section class="container mx-auto space-y-8 md:space-y-8 ">
+<section class="mx-auto space-y-8  max-w-7xl md:space-y-8">
 	{{ partial:typography/h5 :content="pre-title" color='text-purple-500' }}
 	{{ partial:typography/h2 :content="title_section" color='' }}
 {{ collection:blog limit="1" paginate="false" as='posts' sort="date:desc" }}
