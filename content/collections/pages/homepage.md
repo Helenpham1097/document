@@ -4,7 +4,7 @@ blueprint: home
 template: general_content/index
 title: Homepage
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1674699403
+updated_at: 1674792589
 top_section:
   -
     template: /home/hero_home
@@ -37,7 +37,7 @@ top_section:
               -
                 type: bold
             text: '⚡ ️Get your free $5 credit upon signing up today!'
-    hero_home_image: home-img.png
+    hero_home_image: hero-preview.png
     template_global: /global/default_image
     link: '#'
     select: background
@@ -45,6 +45,31 @@ top_section:
     text: 'SIGN UP'
     type: hero_homepage
     enabled: true
+    buttons:
+      -
+        template_global: /components/buttons
+        label: 'Get started'
+        iconamic: cheveron-right
+        link_type: url
+        target_blank: false
+        url: '#'
+        button_type: button
+      -
+        template_global: /components/buttons
+        label: 'Choose plan'
+        iconamic: arrow-right
+        link_type: url
+        target_blank: false
+        url: '#'
+        button_type: secondary
+      -
+        template_global: /components/buttons
+        label: 'Terms of Service'
+        iconamic: information-circle
+        link_type: url
+        target_blank: false
+        url: '#'
+        button_type: inline
 page_builder:
   -
     template: /page_builder/easy_steps

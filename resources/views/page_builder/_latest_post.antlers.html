@@ -1,6 +1,6 @@
 {{# Template showing the last post from the collection of posts #}}
 
-<section class="mx-auto space-y-8  max-w-7xl md:space-y-8">
+<section class="mx-auto space-y-8 max-w-7xl md:space-y-8">
 	{{ partial:typography/h5 :content="pre-title" color='text-purple-500' }}
 	{{ partial:typography/h2 :content="title_section" color='' }}
 {{ collection:blog limit="1" paginate="false" as='posts' sort="date:desc" }}
@@ -29,11 +29,11 @@
 			{{ if default_image }}
 				<div class="order-first md:w-1/2 ">
 					<div class="relative hero-animation">
-						<svg class="absolute w-32 text-green-500 transition duration-700 ease-in-out transform fill-current group-hover:text-green-600 group-hover:translate-x-3 md:w-72 md:-top-6 md:-left-6" viewBox="0 0 373 363" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<svg class="absolute w-32 text-green-500 transition duration-700 ease-in-out transform fill-current dark:text-zinc-700/20 group-hover:text-green-600 group-hover:translate-x-3 md:w-72 md:-top-6 md:-left-6" viewBox="0 0 373 363" fill="none" xmlns="http://www.w3.org/2000/svg">
 
 							<path d="M0 161.839V363L373 0H165.606L0 161.839Z"/>
 						</svg>
-						<svg class="absolute w-32 text-green-500 transition duration-700 ease-in-out transform fill-current group-hover:text-green-600 group-hover:-translate-y-3 group-hover:-translate-x-3 md:w-72 md:-bottom-6 md:-right-6" viewBox="0 0 373 363" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<svg class="absolute w-32 text-green-500 transition duration-700 ease-in-out transform fill-current dark:text-zinc-700/20 group-hover:text-green-600 group-hover:-translate-y-3 group-hover:-translate-x-3 md:w-72 md:-bottom-6 md:-right-6" viewBox="0 0 373 363" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M373 201.161V-2.06527e-06L7.95594e-06 363H207.394L373 201.161Z"/>
 
 						</svg>

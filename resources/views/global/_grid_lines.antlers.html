@@ -2,7 +2,7 @@
     {{# This container creates the vertical lines of the grid, the empty
     elements allow to create the 6 internal columns and hide 3 when viewed on
     smaller screens. #}}
-    <div class="container relative py-0 h-full grid grid-flow-col grid-cols-2 gap-8 overflow-visible
+    <div class="container max-w-7xl relative py-0 h-full grid grid-flow-col grid-cols-2 gap-8 overflow-visible
         {{# {{ if grid }} grid-lines {{ /if }} #}}
         {{ if grid_number == '4'}}lg:grid-cols-4{{/if}}
         {{ if grid_number == '6'}}lg:grid-cols-6{{/if}}
