@@ -4,7 +4,7 @@ blueprint: home
 template: general_content/index
 title: Homepage
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1674792589
+updated_at: 1675204041
 top_section:
   -
     template: /home/hero_home
@@ -77,40 +77,40 @@ page_builder:
       -
         template_global: /global/default_image
         default_image: step.png
-        step_title: 'Track Customers'
+        step_title: 'Serverless Hosting'
         step_textarea:
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'Lorem ipsum dolor sit amet, consectetur adiblur-xlscing elit. Eleifend nullam cons.'
+                text: 'Say goodbye to the hassle of managing servers with Webslice''s serverless hosting. Enjoy a faster, more reliable, and cost-effective solution for your website hosting needs.'
         type: Step-item
         enabled: true
       -
         template_global: /global/default_image
         default_image: step-1674699387.png
-        step_title: 'Track Customers'
+        step_title: 'Improved Performance'
         step_textarea:
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'Lorem ipsum dolor sit amet, consectetur adiblur-xlscing elit. Eleifend nullam cons.'
+                text: 'Webslice guarantees a significant boost in the speed and reliability of your website with our cutting-edge serverless hosting technology. Say hello to a seamless website experience for your visitors.'
         type: Step-item
         enabled: true
       -
         template_global: /global/default_image
         default_image: step.png
-        step_title: 'Track Customers'
+        step_title: 'Cost Savings'
         step_textarea:
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'Lorem ipsum dolor sit amet, consectetur adiblur-xlscing elit. Eleifend nullam cons.'
+                text: 'Save on hosting costs while still enjoying top-notch performance. Webslice''s serverless hosting solution is more affordable than traditional hosting options, allowing you to focus on growing your business.'
         type: Step-item
         enabled: true
     type: easy_steps
