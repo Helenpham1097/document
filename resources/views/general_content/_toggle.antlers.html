@@ -1,13 +1,22 @@
-<div class="container flex items-center justify-center" x-data="{ toggle: '0' }">
-	<div class="mr-3 font-medium text-right text-zinc-500">Billed Yearly</div>
-	<div class="relative h-8 transition duration-200 ease-linear rounded-full w-14" :class="[toggle === '1' ? 'bg-purple-500' : 'bg-zinc-400']">
-		<label
-			for="toggle"
-			class="absolute left-0 w-8 h-8 transition duration-100 ease-linear transform bg-white border-4 rounded-full cursor-pointer"
-			:class="[toggle === '1' ? 'translate-x-full border-purple-500' : 'translate-x-0 border-zinc-400']"
-		></label>
-		{{# need the .toggle class to override the default input checkbox behaviour (inputs.css)  #}}
-		<input type="checkbox" id="toggle" name="toggle" class="w-full h-full border-none rounded-full shadow-none outline-none toggle bg-none focus:ring-0 active:outline-none focus:outline-none" @click="toggle === '0' ? toggle = '1' : toggle = '0'" />
+<div class="flex items-center space-x-2">
+	<span
+		class="text-base transition duration-200 ease-in-out text-zinc-500" x-text="pricing ? '' : 'billed monthly'"
+		:class="pricing == true ? '-translate-y-4 opacity-0 ' : ' translate-y-0 opacity-1  '"
+		>10.00
+	</span>
+	<span
+		class="text-base transition duration-200 ease-in-out text-zinc-500" x-text="pricing ? 'billed yearly' : ''"
+		:class="pricing == true ? ' translate-y-0 opacity-1 ' : ' translate-y-4 opacity-0 '"
+		>10.00
+	</span>
+	<div
+		class="w-10 h-6 p-1 ml-auto transition duration-200 ease-in-out rounded-full pointer-events-auto ring-1 ring-inset ring-black/20"
+		:class="pricing == true ? 'bg-purple-500 ' : ' bg-zinc-900/10 ring-zinc-900/5 '"
+		@click="pricing = !pricing"
+	>
+		<div
+			class="w-4 h-4 transition duration-200 ease-in-out bg-white rounded-full shadow-sm ring-1 ring-zinc-700/10"
+			:class="pricing == false ? 'translate-x-4 ' : '  '"
+		></div>
 	</div>
-	<div class="ml-3 font-medium text-zinc-500">Billed Monthly</div>
 </div>
