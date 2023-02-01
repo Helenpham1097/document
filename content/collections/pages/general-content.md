@@ -3,7 +3,7 @@ id: 26513dc7-59f7-4673-815e-7d9ace16248b
 blueprint: general_content
 title: 'General content'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1675216859
+updated_at: 1675283926
 description: Lorem
 template: general_content/index
 subheader: sdasda
@@ -242,7 +242,7 @@ page_builder:
         type: Step-item
         enabled: true
     type: tile_steps
-    enabled: true
+    enabled: false
   -
     template: /page_builder/_multiple_text_columns
     display_title_section:
@@ -505,7 +505,7 @@ page_builder:
         type: image
         enabled: true
     type: image_gallery
-    enabled: true
+    enabled: false
   -
     template: /components/section_title
     title: 'Our latest article'
@@ -518,7 +518,7 @@ page_builder:
   -
     template: /general_content/text_content
     type: text_content
-    enabled: true
+    enabled: false
     text:
       -
         type: paragraph
