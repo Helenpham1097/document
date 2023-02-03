@@ -6,6 +6,7 @@
 	{{# <div class="absolute opacity-40 -inset-1 bottom-1 bg-gradient-to-r from-purple-500 to-green-500 rounded-xl filter blur-xl"></div> #}}
 	<div class="relative py-8 border-t border-zinc-200 dark:border-zinc-800 bg-gradient-to-b from-zinc-50 to-white md:pb-8 md:p-16 dark:from-zinc-900 dark:to-zinc-800 "> 
 		<div class="container relative space-y-6 max-w-7xl md:space-y-12">
+			{{ if segment_1 }}
 			<div class="grid w-full grid-cols-2 gap-8 py-0 mx-auto md:grid-cols-2 lg:grid-cols-none lg:gap-8 lg:grid-flow-col lg:auto-col-auto md:space-y-0 sm:items-start md:justify-between"> 
 
 				{{# Hosting #}}
@@ -27,6 +28,7 @@
 				{{ /nav:footer }}
 			</div>
 			<div class="h-0.5 bg-zinc-100 dark:bg-zinc-800"></div>
+			{{ /if }}
 			<div class="flex flex-col items-center w-full mx-auto space-y-4 text-sm text-zinc-500 md:space-y-0 md:flex-row md:justify-between">
 				<span class="tracking-wide">{{ company_information:address }}</span>
 					{{# logo #}}

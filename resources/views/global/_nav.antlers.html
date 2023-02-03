@@ -20,6 +20,7 @@
 				</svg>
 			</button>
 			</div>
+			{{ if segment_1 }}
 			<nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row" role="navigation">
 			{{ nav:main_menu show_unpublished="true" }}
 			{{ if children }}
@@ -60,6 +61,7 @@
 					</a>
 			</div>
 			</nav>
+			{{ /if }}
 		</div>
 	</div>
 </div>
