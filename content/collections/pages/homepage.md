@@ -4,7 +4,7 @@ blueprint: home
 template: general_content/index
 title: Homepage
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1667523361
+updated_at: 1675207148
 top_section:
   -
     template: /home/hero_home
@@ -20,7 +20,7 @@ top_section:
             marks:
               -
                 type: bold
-            text: Seconds
+            text: minutes
     hero_home_description:
       -
         type: paragraph
@@ -37,7 +37,7 @@ top_section:
               -
                 type: bold
             text: '⚡ ️Get your free $5 credit upon signing up today!'
-    hero_home_image: home-img.png
+    hero_home_image: hero-preview.png
     template_global: /global/default_image
     link: '#'
     select: background
@@ -45,47 +45,72 @@ top_section:
     text: 'SIGN UP'
     type: hero_homepage
     enabled: true
+    buttons:
+      -
+        template_global: /components/buttons
+        label: 'Get started'
+        iconamic: cheveron-right
+        link_type: url
+        target_blank: false
+        url: '#'
+        button_type: button
+      -
+        template_global: /components/buttons
+        label: 'Choose plan'
+        iconamic: arrow-right
+        link_type: url
+        target_blank: false
+        url: '#'
+        button_type: secondary
+      -
+        template_global: /components/buttons
+        label: 'Terms of Service'
+        iconamic: information-circle
+        link_type: url
+        target_blank: false
+        url: '#'
+        button_type: inline
 page_builder:
   -
     template: /page_builder/easy_steps
     Items:
       -
         template_global: /global/default_image
-        default_image: 01.gif
-        step_title: 'Track Customers'
+        default_image: step.png
+        step_title: 'Serverless Hosting'
         step_textarea:
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'Lorem ipsum dolor sit amet, consectetur adiblur-xlscing elit. Eleifend nullam cons.'
+                text: 'Say goodbye to the hassle of managing servers with Webslice''s serverless hosting. Enjoy a faster, more reliable, and cost-effective solution for your website hosting needs.'
         type: Step-item
         enabled: true
       -
         template_global: /global/default_image
-        default_image: 01.gif
-        step_title: 'Track Customers'
+        default_image: step-1674699387.png
+        step_title: 'Improved Performance'
         step_textarea:
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'Lorem ipsum dolor sit amet, consectetur adiblur-xlscing elit. Eleifend nullam cons.'
+                text: 'Webslice guarantees a significant boost in the speed and reliability of your website with our cutting-edge serverless hosting technology. Say hello to a seamless website experience for your visitors.'
         type: Step-item
         enabled: true
       -
         template_global: /global/default_image
-        default_image: 01.gif
-        step_title: 'Track Customers'
+        default_image: step.png
+        step_title: 'Cost Savings'
         step_textarea:
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'Lorem ipsum dolor sit amet, consectetur adiblur-xlscing elit. Eleifend nullam cons.'
+                text: 'Save on hosting costs while still enjoying top-notch performance. Webslice''s serverless hosting solution is more affordable than traditional hosting options, allowing you to focus on growing your business.'
         type: Step-item
         enabled: true
     type: easy_steps
@@ -393,7 +418,7 @@ page_builder:
     alignment: center
   -
     template: /page_builder/companies_logo
-    companies_title: '1000+ Big brands trust us ddd'
+    companies_title: '1000+ Big brands trust us'
     company:
       -
         template_global: /global/default_image
@@ -439,7 +464,22 @@ page_builder:
         template_global: /global/default_image
         default_image: brand-logos/dutyfree.png
         type: companies
-        enabled: true
+        enabled: false
+      -
+        template_global: /global/default_image
+        default_image: brand-logos/asb.png
+        type: companies
+        enabled: false
+      -
+        template_global: /global/default_image
+        default_image: brand-logos/asb.png
+        type: companies
+        enabled: false
+      -
+        template_global: /global/default_image
+        default_image: brand-logos/nzonair.png
+        type: companies
+        enabled: false
     type: companies_logo
     enabled: true
   -

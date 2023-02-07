@@ -3,7 +3,7 @@ they will alternate their order, they can all line up on either side. #}}
 <section class="relative space-y-8 feature-section lg:space-y-16 {{ if background_select:value === 'stripe_background' }} pb-24 {{ /if }}">
         {{ if add_intro_features }}
 
-            <div class="container space-y-8 lg:space-y-16">
+            <div class="container space-y-8 max-w-7xl lg:space-y-16">
 
                 <div class="space-y-8 lg:w-2/6 lg:space-y-24">
                     {{ partial:typography/h2 :content="section_title" color='' }}
@@ -37,7 +37,7 @@ they will alternate their order, they can all line up on either side. #}}
             {{ if background_select:value === 'stripe_background' }}
                 <div class="absolute h-full w-[120%] transform -translate-y-1/2 top-1/2 left-1/2 opacity-20 -translate-x-1/2  -z-10 rotate-6 bg-gradient-to-r from-purple-500 to-green-400"></div>
                 <div class="absolute inset-0 h-full mx-auto -z-10 max-w-screen-2xl ">
-                    <svg class="relative text-green-300 -translate-x-full -translate-y-1/2 " width="273" height="269" viewBox="0 0 273 269" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="relative text-green-300 -translate-x-full -translate-y-1/2 dark:text-green-900 " width="273" height="269" viewBox="0 0 273 269" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <mask id="mask0_1430_25914" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="1" width="272" height="268">
                         <rect y="1" width="272" height="268" fill="#D9D9D9"/>
                         </mask>
@@ -61,7 +61,7 @@ they will alternate their order, they can all line up on either side. #}}
                         </g>
                     </svg>
 
-                    <svg class="absolute bottom-0 right-0 text-purple-200 translate-x-full translate-y-full " width="273" height="268" viewBox="0 0 273 268" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="absolute bottom-0 right-0 text-purple-200 translate-x-full translate-y-full dark:text-purple-800 " width="273" height="268" viewBox="0 0 273 268" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0.285156 18.2178V40.862L42.2954 0H18.937L0.285156 18.2178Z" fill="currentColor"/>
                         <path d="M0.285156 63.4978V86.142L42.2954 45.28H18.937L0.285156 63.4978Z" fill="currentColor"/>
                         <path d="M0.285156 108.778V131.422L42.2954 90.5601H18.937L0.285156 108.778Z" fill="currentColor"/>
@@ -105,12 +105,12 @@ they will alternate their order, they can all line up on either side. #}}
                 <div class="absolute inset-0 mx-8 my-12 transform rounded-full translate-x-1/3 opacity-20 -z-10 bg-gradient-to-r from-green-400 to-purple-500 md:mx-2 md:my-2 rotate-6 filter blur-3xl"></div>
             {{ /if }}
 
-            <div class="container grid items-start gap-8 lg:grid-cols-8 ">
+            <div class="container grid items-start gap-8 max-w-7xl lg:grid-cols-8 ">
                 {{ if highlight_features_title }}
                 <div class="flex flex-row col-span-8 space-y-4 {{ if features | count >= 4 }} lg:row-span-3 {{ else }} lg:row-span-1  {{ /if }} lg:flex-col lg:space-y-8 lg:col-span-2">
                     {{ partial:typography/h3 :content="highlight_features_title" color='' }}
                     {{ if background_select:value === 'grid_background' }}
-                        <svg class="text-purple-100" width="91" height="89" viewBox="0 0 91 89" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="text-purple-100 dark:opacity-50" width="91" height="89" viewBox="0 0 91 89" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0 12.2713V27.5241L28.2975 0H12.5636L0 12.2713Z" fill="currentColor"/>
                             <path d="M0 42.7713V58.0241L28.2975 30.5H12.5636L0 42.7713Z" fill="currentColor"/>
                             <path d="M0 73.2713V88.5241L28.2975 61H12.5636L0 73.2713Z" fill="currentColor"/>
@@ -127,7 +127,7 @@ they will alternate their order, they can all line up on either side. #}}
                 
 
                 {{ features }}
-                    <div class="col-span-8 p-4 space-y-4 bg-white border rounded-lg shadow-xl border-slate-100 lg:col-span-2 shadow-slate-500/10">
+                    <div class="col-span-8 p-4 space-y-4 bg-white border rounded-lg shadow-xl dark:bg-zinc-800 border-zinc-100 dark:border-zinc-700 lg:col-span-2 shadow-zinc-500/10 dark:shadow-black/10">
                         {{ if default_image }}
                             {{ partial:components/figure :image="default_image" remove_prose="true" cover="true" maxheight="512" lazy="false" maxwidth="768" quality='70' }}
                         {{ /if }}
@@ -136,8 +136,8 @@ they will alternate their order, they can all line up on either side. #}}
                                 {{ svg src="{{ config:iconamic:path }}/{{iconamic}}.svg" class=" {{iconamic}} w-8 h-8 stroke-current aspect-square" }}
                             </div>
                         {{ /if }}
-                        {{ partial:typography/h5 :content="title" color='text-black' }}
-                        <div class="prose prose-p:text-base">
+                        {{ partial:typography/h5 :content="title" color='text-black dark:text-zinc-200' }}
+                        <div class="prose prose-p:text-base dark:prose-invert">
                             {{ description }}
                         </div>
                     </div>

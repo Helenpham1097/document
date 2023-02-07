@@ -3,8 +3,8 @@
 		{{ partial:components/title_section }}
 
 	<div class="relative">
-		<div class="absolute h-full w-[120%] transform -translate-y-1/2 top-1/2 left-1/2 opacity-20 -translate-x-1/2  -z-10 -rotate-6 bg-gradient-to-r from-purple-500 to-green-400"></div>
-		<div class="container relative flex flex-col gap-8 space-y-8 justify-evenly md:flex-row md:space-y-0">
+		{{# <div class="absolute h-full w-[120%] transform -translate-y-1/2 top-1/2 left-1/2 opacity-20 dark:opacity-20 -translate-x-1/2  -z-10 -rotate-6 bg-gradient-to-r from-purple-500 to-green-400 dark:from-purple-500 dark:to-green-400"></div> #}}
+		<div class="container relative flex flex-col gap-8 space-y-8 max-w-7xl justify-evenly md:flex-row md:space-y-0">
 			{{ testimonial }}
 				{{ partial:components/testimonial_card }}
 			{{ /testimonial }}

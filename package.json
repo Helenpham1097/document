@@ -44,6 +44,7 @@
   },
   "keywords": [],
   "dependencies": {
-    "alpinejs": "^3.10.5"
+    "alpinejs": "^3.10.5",
+    "prismjs": "^1.29.0"
   }
 }

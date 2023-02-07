@@ -1,3 +1,4 @@
+hide: true
 order: 2
 title: Landing
 sections:
@@ -54,7 +55,6 @@ sections:
         field:
           type: slug
           localizable: true
-          required: true
           validate:
             - required
             - 'unique_entry_value:{collection},{id},{site}'

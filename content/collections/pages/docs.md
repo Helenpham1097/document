@@ -1,0 +1,74 @@
+---
+id: 5f3ec833-66d3-43ef-9f35-97f1b4b0afc5
+blueprint: documentation
+title: Documentation
+updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
+updated_at: 1674453488
+template: documentation/index
+article:
+  -
+    type: heading
+    attrs:
+      level: 2
+    content:
+      -
+        type: text
+        text: 'Webslice placerat eu enim ac faucibus.'
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod. Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam. Fusce maximus non metus ac facilisis. Sed id nunc a ante interdum efficitur.'
+  -
+    type: set
+    attrs:
+      enabled: false
+      values:
+        type: buttons
+        buttons:
+          -
+            template_global: /components/buttons
+            label: 'Sign In'
+            iconamic: academic-cap
+            link_type: url
+            target_blank: false
+            url: '#'
+            button_type: button
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        text: ' Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue. Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula. Phasellus molestie blandit erat, vitae ullamcorper ante viverra et.'
+  -
+    type: set
+    attrs:
+      values:
+        type: code_snippet
+        code_field:
+          code: |-
+            const Prism = require('prismjs');
+            const loadLanguages = require('prismjs/components/');
+            loadLanguages(['haml']);
+
+            // The code snippet you want to highlight, as a string
+            const code = `= ['hi', 'there', 'reader!'].join " "`;
+
+            // Returns a highlighted HTML string
+            const html = Prism.highlight(code, Prism.languages.haml, 'haml');
+          mode: javascript
+  -
+    type: paragraph
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        text: 'Duis ullamcorper vulputate laoreet. Suspendisse consectetur, nisi nec aliquet euismod, ligula quam fermentum ipsum, quis vulputate massa leo blandit ex. Ut tempor vulputate mauris, quis sollicitudin nibh tincidunt vitae.'
+type: docs
+related_docs:
+  - ff2a4faf-58d3-4acd-a2fa-3e6a20ef23c8
+  - e718c7b7-0d84-4d5e-9208-a1da4e1bdb12
+  - f9af4605-1a8a-449c-b932-b8f4b161d540
+---

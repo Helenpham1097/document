@@ -13,21 +13,21 @@
         class="
             focus:outline-none focus-visible:ring group focus-visible:ring-offset-2 text-base no-underline
 			{{if iconamic}}
-				pl-4 pr-3 space-x-2
+				pl-4 pr-5 space-x-2
 			{{else}}
 				px-6
 			{{/if}}
             {{ if button_type === 'inline' }}
-                inline-flex items-center text-purple-500 py-2 px-0 rounded leading-none no-underline select-none whitespace-nowrap motion-safe:transition
+                inline-flex items-center text-purple-500 hover:text-purple-800 dark:hover:text-purple-600 dark:text-green-500 py-2 px-0 leading-none no-underline select-none whitespace-nowrap motion-safe:transition
 				text-neutral decoration-purple-500 focus-visible:ring-purple-500
             {{ else }}
-                inline-flex items-center py-3 px-4 rounded leading-none no-underline select-none whitespace-nowrap motion-safe:transition
+                inline-flex items-center py-2 px-4 rounded-lg leading-none no-underline select-none whitespace-nowrap motion-safe:transition
 				{{ if button_type:value === 'secondary' }}
 				{{# Secondary button color #}}
-					border border-gray-500 bg-white text-slate-900 hover:text-white hover:bg-purple-500 hover:border-purple-400  btn
+					border border-zinc-500 bg-white text-zinc-500 hover:text-white dark:bg-zinc-800 dark:text-zinc-200 dark:hover:text-zinc-200 hover:bg-zinc-800 hover:border-zinc-400
 				{{# Main solid button #}}
 				{{ else }}
-					border border-purple-600 bg-purple-500 text-white hover:text-white hover:bg-purple-800 hover:border-purple-400 btn
+					border border-purple-600 bg-purple-500 text-white hover:bg-purple-800 hover:border-purple-400
 				{{ /if }}
             {{ /if }}
             {{ class }}
@@ -44,16 +44,16 @@
 			{{# The optional icons come from the public/icons folder thanks to the iconamic add on, and have a size variant applied with the medium_icon variable, and the color is defined by (stroke-current) the selected button variant. #}}
 			{{ if iconamic }}
 			{{# The animation of the hover transition is inside the button view applied from the group class. #}}
-				<div class="transition-transform duration-500 ease-in-out transform  {{ if button_type:value === 'button' }} group-hover:-translate-y-1 {{ /if }}">
-					{{ svg src="{{ config:iconamic:path }}/{{iconamic}}.svg" class="aspect-square {{ if medium_icon }} w-8 {{else}} w-6 {{ /if }}  stroke-current" }}
+				<div class="transition-transform duration-500 ease-in-out transform ">
+					{{ svg src="{{ config:iconamic:path }}/{{iconamic}}.svg" class="aspect-square {{ if medium_icon }} w-6 {{else}} w-4 {{ /if }}  stroke-current" }}
 				</div>
 			{{ /if }}
 
 				<span>{{ label }}</span>
 
 			{{ if button_type === 'inline' }}
-				<div class="transition duration-500 ease-in-out transform group-hover:translate-x-1">
-					<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mt-0.5 transition duration-500 ease-in-out transform translate-x-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+				<div class="transition duration-500 ease-in-out transform ">
+					<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mt-0.5 transition duration-500 ease-in-out transform " fill="none" viewBox="0 0 24 24" stroke="currentColor">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
 					</svg>
 				</div>

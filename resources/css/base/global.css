@@ -1,23 +1,6 @@
 body {
     @apply overflow-x-hidden;
 }
-
-.text-primary {
-    @apply text-purple-500;
-}
-.text-secondary {
-    @apply text-green-500;
-}
-.primary-bg {
-    @apply bg-gradient-to-r from-purple-500 to-purple-700;
-}
-.secondary-bg {
-    @apply bg-gradient-to-r from-green-400 to-green-500;
-}
-.gradient-purple-to-teal {
-    @apply bg-gradient-to-r from-purple-500 to-green-500;
-}
-
 @screen sm {
     .container {
         @apply p-4;

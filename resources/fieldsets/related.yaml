@@ -1,0 +1,63 @@
+title: Related
+fields:
+  -
+    handle: type
+    field:
+      options:
+        docs: Docs
+        articles: Articles
+        pages: Pages
+      display: Type
+      type: button_group
+      icon: button_group
+      listable: hidden
+      instructions_position: above
+      read_only: false
+  -
+    handle: related_docs
+    field:
+      max_items: 3
+      mode: default
+      create: true
+      collections:
+        - documentation
+      display: 'Related Docs'
+      type: entries
+      icon: entries
+      listable: hidden
+      instructions_position: above
+      read_only: false
+      if:
+        type: 'equals docs'
+  -
+    handle: related_blog
+    field:
+      max_items: 4
+      mode: default
+      create: true
+      collections:
+        - blog
+      display: 'Related blog'
+      type: entries
+      icon: entries
+      listable: hidden
+      instructions_position: above
+      read_only: false
+      if:
+        type: 'equals articles'
+  -
+    handle: related_pages
+    field:
+      max_items: 4
+      mode: default
+      create: true
+      collections:
+        - pages
+      display: 'Related Pages'
+      type: entries
+      icon: entries
+      listable: hidden
+      instructions_position: above
+      read_only: false
+      if:
+        type: 'equals pages'

@@ -1,73 +1,16 @@
 {{# Grid logo gallery #}}
-<section class="container mx-auto space-y-12 md:space-y-24 ">
-
-    <div class="flex flex-col items-center space-y-10 text-center">
-        {{ partial:typography/h2 :content="companies_title" color='' }}
+<section class="container mx-auto space-y-6 max-w-7xl md:space-y-12 ">
+    <div class="w-11/12 mx-auto mb-16 xl:w-2/3 lg:w-2/3 md:w-2/3 sm:mb-10">
+        {{ partial:typography/h2 class="pt-4 mb-5 text-xl font-extrabold text-center text-zinc-800 focus:outline-none xl:text-5xl md:text-3xl dark:text-white" :content="companies_title" color='' }}
     </div>
-
-    <div class="relative mx-auto ">
-        <div class="absolute rounded-full opacity-25 -inset-y-1 -inset-x-8 blur-2xl bg-gradient-to-t from-purple-500/30 to-green-500"></div>
-        <div class="relative space-y-6 ">
-            {{# if 3 images are included #}}
-            {{if company }} 
-                <div class="flex flex-wrap justify-center gap-8 ">
-                {{ company  }}
-                    {{# limit the loop to 3 images #}}
-                    {{ if default_image }}
-                        <div class="max-w-[250px] px-6 py-4 overflow-hidden bg-white rounded-lg shadow-lg max-h-18 ">
-                            <figure class="object-cover object-center w-full h-full transition duration-200 delay-100 group-hover:grayscale-0 filter sm:grayscale lg:w-full lg:h-full">
-                                {{ partial:global/picture :image="default_image" cover="false" lazy="false" maxwidth="300" quality='70' }}
-                            </figure>
-                        </div>
-                    {{ /if }}
-                {{ /company }}
-                </div>
-            {{ /if }}
+    {{if company }}
+    <div class="flex flex-wrap xl:py-16 lg:py-16 md:py-16 sm:py-16 px-15">
+        {{ company  }}
+        <div class="flex items-center justify-center w-6/12 pb-16 border-zinc-200 dark:border-zinc-700 xl:w-1/4 lg:w-1/4 md:w-1/4 xl:pb-10">
+            {{ partial:global/picture :image="default_image" class="px-12 opacity-50 dark:invert" cover="false" lazy="false" maxwidth="300" quality='70' }}
         </div>
+        {{ /company }}
     </div>
-
-        
-        
-
-{{# <div class="relative space-y-6 ">
-    {{if company | count >= 1 }} 
-        <div class="flex flex-row justify-center gap-8 ">
-        {{ company  limit="6" }}
-
-            {{ if default_image }}
-                <div class="max-w-[250px] px-6 py-4 overflow-hidden bg-white rounded-lg shadow-lg max-h-18 ">
-                    <figure class="object-cover object-center w-full h-full transition duration-200 delay-100 group-hover:grayscale-0 filter sm:grayscale lg:w-full lg:h-full">
-                        {{ partial:global/picture :image="default_image" cover="false" lazy="false" maxwidth="300" quality='70' }}
-                    </figure>
-                </div>
-            {{ /if }}
-        {{ /company }}
-        </div>
     {{ /if }}
-    {{if company | count >= 6 }}
-        <div class="flex flex-row justify-center gap-8 ">
-        {{ company  limit="12" offset="6" }}
-            {{ if default_image }}
-                <div class="max-w-[250px] px-6 py-4 overflow-hidden bg-white rounded-lg shadow-lg max-h-18 ">
-                    <figure class="object-cover object-center w-full h-full transition duration-200 delay-200 group-hover:grayscale-0 filter sm:grayscale lg:w-full lg:h-full">
-                        {{ partial:global/picture :image="default_image" cover="false" lazy="false" maxheight="69" maxwidth="184" quality='70' }}
-                    </figure>
-                </div>
-            {{ /if }}
-        {{ /company }}
-        </div>
-    {{ /if }}
-    {{if company | count >= 12 }}
-        <div class="flex flex-row justify-center gap-8 ">
-        {{ company  limit="18" offset="12" }}
-            {{ if default_image }}
-                <div class="max-w-[250px] px-6 py-4 overflow-hidden bg-white rounded-lg shadow-lg max-h-18 ">
-                    <figure class="object-cover object-center w-full h-full transition duration-200 delay-300 group-hover:grayscale-0 filter sm:grayscale lg:w-full lg:h-full">
-                        {{ partial:global/picture :image="default_image" cover="false" lazy="false" maxheight="69" maxwidth="184" quality='70' }}
-                    </figure>
-                </div>
-            {{ /if }}
-        {{ /company }}
-        </div>
-    {{ /if }}
-</div> #}}
+</section>
+            

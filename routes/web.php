@@ -26,3 +26,5 @@ Route::statamic('/blog/feed/index.xml', 'blog.feed', [
     'content_type' => 'xml',
     'layout' => 'blog/feed_layout'
 ]);
+
+Route::statamic('search', 'search');

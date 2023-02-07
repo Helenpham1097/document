@@ -1,5 +1,9 @@
 tree:
   -
+    id: 6bb84c56-00ec-4fcf-bcba-8c05e7f08b93
+    entry: cf7040f4-473b-4c14-897d-5de59ce6d833
+    title: Home
+  -
     id: 1d6b75bd-138e-4525-b155-75d3b09dab49
     entry: fee1a2b1-971c-4c72-9517-d2e6c989f49e
   -
@@ -18,3 +22,7 @@ tree:
       -
         id: ad47f904-7d82-4d40-9ecf-a2a6c56931bb
         entry: 26513dc7-59f7-4673-815e-7d9ace16248b
+  -
+    id: a1f043b3-ead3-4fc6-9806-d5e0a029ba81
+    entry: 5f3ec833-66d3-43ef-9f35-97f1b4b0afc5
+    title: Docs

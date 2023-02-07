@@ -1,10 +1,7 @@
-title: Code
+title: 'Embed code'
 fields:
   -
-    handle: size
-    field: common.size
-  -
-    handle: code
+    handle: embed_code
     field:
       antlers: false
       display: code
