@@ -1,18 +1,5 @@
 tree:
   -
-    id: 1ab64576-2363-424d-85a2-df2534a6517f
-    entry: c69d5d08-e270-4673-abce-438cfbd3c854
-    children:
-      -
-        id: a2da0025-37a5-4e94-acc4-26e9b2430b82
-        entry: 128bc187-e58c-4ccc-a5f7-587727470a54
-      -
-        id: c655d4bd-f05a-47a5-ab21-6763406069c9
-        entry: fee1a2b1-971c-4c72-9517-d2e6c989f49e
-      -
-        id: 32e184d3-6db4-4211-9176-0f4b58609e1e
-        entry: 178073b8-7594-4432-9b39-2461b487bce8
-  -
     id: 8acf1611-c953-480b-82c4-b59133d93ff9
     title: 'Who’s it for'
     url: '#'
@@ -20,4 +7,80 @@ tree:
       -
         id: e8d64a1c-94b0-4059-835e-d610593cde1c
         title: Developers
+        url: '#'
+      -
+        id: 4a11c2df-c4b1-4992-9d4a-1ba3d22617a5
+        title: Designers
+        url: '#'
+  -
+    id: 60fcf5c9-582e-4bf3-b1c2-daabb7bda4c2
+    title: Platform
+    url: '#'
+    children:
+      -
+        id: 527c52e3-9ffa-402b-b0c8-6a79da2684c9
+        title: Connect
+        url: '#'
+      -
+        id: 0c24c40b-1225-4867-98a4-267d5fcbef11
+        title: GitHub
+        url: '#'
+      -
+        id: 7050de6e-b3ad-4193-8743-190f085eebfb
+        title: Build-time
+        url: '#'
+  -
+    id: e63841ca-9c78-41db-a108-2bb7889af1df
+    title: Learn
+    url: '#'
+    children:
+      -
+        id: e1436ac0-7bf0-4e7c-bf71-b585aa881c7d
+        title: Welcome
+        url: '#'
+      -
+        id: 73610336-9cd8-4ce0-b580-f7f4cb3d8b14
+        title: 'Environment Variables'
+        url: '#'
+      -
+        id: d0374932-b7ea-4ebb-9ffd-edb3bdaf1d55
+        title: 'Site deploys'
+        url: '#'
+  -
+    id: fcc19a1c-8c73-4966-840c-9718541cabed
+    title: 'Contact us'
+    url: '#'
+    children:
+      -
+        id: ed2bfa12-8ba9-4a5e-96e1-fb0095aa1abd
+        title: Forums
+        url: '#'
+      -
+        id: dba77a7d-80b3-4abc-b53d-1ba4518209a4
+        title: 'Contact support'
+        url: '#'
+      -
+        id: 5468fc78-4028-43d9-9942-3f85a639e19d
+        title: 'Get help'
+        url: '#'
+  -
+    id: 4eaa6961-34be-407e-b82b-dee44d2b57fa
+    title: Company
+    url: '#'
+    children:
+      -
+        id: 95448ddc-0fc9-489c-b6eb-c9cb56e2cd36
+        title: Privacy
+        url: '#'
+      -
+        id: 0af0790a-4e82-44a7-8c1e-2dfa47b93b0e
+        title: Security
+        url: '#'
+      -
+        id: 4f69dd98-af8c-4e4a-a041-1c190b7fc808
+        title: Abuse
+        url: '#'
+      -
+        id: 314ef6ca-5e4f-497a-9f62-87d238b75a2e
+        title: GDPR/CCPA
         url: '#'
