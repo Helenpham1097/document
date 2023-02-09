@@ -1,10 +1,10 @@
 <button
 	:class="darkMode ? ' bg-zinc-800' : ' bg-zinc-100'"
-	class="relative flex-none transition border rounded-full shadow-sm hover:shadow border-zinc-200 text-zinc-500 "
+	class="relative flex-none transition border rounded-full shadow-sm hover:shadow border-zinc-200 dark:border-zinc-400 text-zinc-500 dark:text-zinc-200 {{ class }} "
 	@click="darkMode = !darkMode">
     <span
 		:class="darkMode ? '' : ''"
-		class="flex items-center w-6 h-6 transition bg-white rounded-full shadow-md"
+		class="flex items-center w-6 h-6 transition bg-white rounded-full shadow-md dark:bg-zinc-700"
 		aria-hidden="true">
         <svg
 			:class="darkMode ? 'hidden' : ' block'"
