@@ -14,12 +14,12 @@
 				{{# Main nav #}}
 				<div class="relative items-center hidden ml-auto lg:flex">
 					<nav class="text-sm font-semibold leading-6 text-zinc-700 dark:text-zinc-200">
-						<ul class="flex space-x-8">
+						<ul class="flex space-x-4">
 							{{ nav:main_menu show_unpublished="true" }}
 							{{ if children }}
 								<li>
 									<div @click.away="open = false" class="relative" x-data="{ open: false }">
-										<button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm text-left bg-transparent dark:bg-transparent dark:focus:text-white dark:hover:text-white dark:focus:bg-zinc-600 dark:hover:bg-zinc-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-zinc-900 focus:text-zinc-900 hover:bg-zinc-200 focus:bg-zinc-200 focus:outline-none focus:shadow-outline">
+										<button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm text-left bg-transparent dark:bg-transparent dark:focus:text-white dark:hover:text-white dark:focus:bg-zinc-600 dark:hover:bg-zinc-600 md:w-auto md:inline md:mt-0 hover:text-zinc-900 focus:text-zinc-900 hover:bg-zinc-200 focus:bg-zinc-200 focus:outline-none focus:shadow-outline">
 										<span>{{ title }}</span>
 										<svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
 											<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
@@ -34,7 +34,7 @@
 									</div>
 								{{ else }}
 								<li>
-									<a role="menuitem" class="px-4 md:px-2 flex items-center relative group py-2 mt-2 bg-transparent dark:bg-transparent text-sm dark:focus:bg-zinc-600 dark:focus:text-white {{ if is_current || is_parent }} dark:text-green-400 text-purple-500 {{ /if }} dark:hover:text-white dark:text-zinc-200 md:mt-0 md:ml-4 hover:text-zinc-900 focus:text-zinc-900 focus:bg-zinc-200 focus:outline-none focus:shadow-outline" href="{{ url }}">
+									<a role="menuitem" class="px-4 md:px-2 flex items-center relative group py-2 mt-2 bg-transparent dark:bg-transparent text-sm dark:focus:bg-zinc-600 dark:focus:text-white {{ if is_current || is_parent }} dark:text-green-400 text-purple-500 {{ /if }} dark:hover:text-white dark:text-zinc-200 md:mt-0 hover:text-zinc-900 focus:text-zinc-900 focus:bg-zinc-200 focus:outline-none focus:shadow-outline" href="{{ url }}">
 										<span class="absolute hidden md:block left-0 w-0 h-0.5 transition-all bg-purple-500 dark:bg-green-500 -bottom-3 group-hover:w-full"></span>
 										{{ title }}
 									</a>
@@ -46,7 +46,7 @@
 				</div>
 
 				<div class="flex items-center space-x-4 lg:border-l lg:pl-6 lg:ml-6 lg:border-zinc-200 lg:dark:border-zinc-800">
-					{{ partial:documentation/_theme_toggle class="hidden sm:block" }}
+					{{ partial:documentation/_theme_toggle class="hidden lg:block" }}
 					{{ partial:components/button label="Sign In" link_type="url" url="#" iconamic="user-circle" }}
 				</div>
 				{{# modal mobile menu #}}
@@ -162,13 +162,3 @@
 		</div>
 	</div>
 </div>
-
-
-
-
-
-
-
-                        {{# <button type="button" class="inline-flex justify-center w-full px-4 py-2 text-base font-medium text-white bg-red-600 border border-transparent rounded-md shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm" @click="open = false">
-                            Deactivate
-                        </button> #}}
