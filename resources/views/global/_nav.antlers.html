@@ -16,30 +16,31 @@
 					<nav class="text-sm font-semibold leading-6 text-zinc-700 dark:text-zinc-200">
 						<ul class="flex space-x-4">
 							{{ nav:main_menu show_unpublished="true" }}
-							{{ if children }}
-								<li>
-									<div @click.away="open = false" class="relative" x-data="{ open: false }">
-										<button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm text-left bg-transparent dark:bg-transparent dark:focus:text-white dark:hover:text-white dark:focus:bg-zinc-600 dark:hover:bg-zinc-600 md:w-auto md:inline md:mt-0 hover:text-zinc-900 focus:text-zinc-900 hover:bg-zinc-200 focus:bg-zinc-200 focus:outline-none focus:shadow-outline">
-										<span>{{ title }}</span>
-										<svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
-											<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-										</button>
-										<div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="right-0 w-full origin-top-right rounded-md sm:mt-2 sm:shadow-lg sm:absolute md:w-48">
-										<div class="px-2 py-2 bg-white rounded-md lg:shadow dark:bg-zinc-800">
-											{{ children }}
-											<a role="menuitem" class="block px-4 text-sm py-2 mt-2 bg-transparent dark:bg-transparent dark:hover:bg-zinc-600 dark:focus:bg-zinc-600 dark:focus:text-white dark:hover:text-white dark:text-zinc-200 md:mt-0 hover:text-zinc-900 focus:text-zinc-900 hover:bg-zinc-200 focus:bg-zinc-200 focus:outline-none focus:shadow-outline {{ if is_current || is_parent }} dark:text-green-400 text-purple-500 {{ /if }} " href="{{ url }}">{{ title }}</a>
-											{{ /children }}
+								{{ if children }}
+									<li>
+										<div @click.away="open = false" class="relative" x-data="{ open: false }">
+											<button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm text-left bg-transparent dark:bg-transparent dark:focus:text-white dark:hover:text-white dark:focus:bg-zinc-600 dark:hover:bg-zinc-600 md:w-auto md:inline md:mt-0 hover:text-zinc-900 focus:text-zinc-900 hover:bg-zinc-200 focus:bg-zinc-200 focus:outline-none focus:shadow-outline">
+												<span>{{ title }}</span>
+												<svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+													<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+												</svg>
+											</button>
+											<div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="right-0 w-full origin-top-right rounded-md sm:mt-2 sm:shadow-lg sm:absolute md:w-48">
+												<div class="px-2 py-2 bg-white rounded-md lg:shadow dark:bg-zinc-800">
+													{{ children }}
+														<a role="menuitem" class="block px-4 text-sm py-2 mt-2 bg-transparent dark:bg-transparent dark:hover:bg-zinc-600 dark:focus:bg-zinc-600 dark:focus:text-white dark:hover:text-white dark:text-zinc-200 md:mt-0 hover:text-zinc-900 focus:text-zinc-900 hover:bg-zinc-200 focus:bg-zinc-200 focus:outline-none focus:shadow-outline {{ if is_current || is_parent }} dark:text-green-400 text-purple-500 {{ /if }} " href="{{ url }}">{{ title }}</a>
+													{{ /children }}
+												</div>
+											</div>
 										</div>
-										</div>
-									</div>
-								{{ else }}
-								<li>
-									<a role="menuitem" class="px-4 md:px-2 flex items-center relative group py-2 mt-2 bg-transparent dark:bg-transparent text-sm dark:focus:bg-zinc-600 dark:focus:text-white {{ if is_current || is_parent }} dark:text-green-400 text-purple-500 {{ /if }} dark:hover:text-white dark:text-zinc-200 md:mt-0 hover:text-zinc-900 focus:text-zinc-900 focus:bg-zinc-200 focus:outline-none focus:shadow-outline" href="{{ url }}">
-										<span class="absolute hidden md:block left-0 w-0 h-0.5 transition-all bg-purple-500 dark:bg-green-500 -bottom-3 group-hover:w-full"></span>
-										{{ title }}
-									</a>
-								</li>
-							{{ /if }}            
+									{{ else }}
+										<li>
+											<a role="menuitem" class="px-4 md:px-2 flex items-center relative group py-2 mt-2 bg-transparent dark:bg-transparent text-sm dark:focus:bg-zinc-600 dark:focus:text-white {{ if is_current || is_parent }} dark:text-green-400 text-purple-500 {{ /if }} dark:hover:text-white dark:text-zinc-200 md:mt-0 hover:text-zinc-900 focus:text-zinc-900 focus:bg-zinc-200 focus:outline-none focus:shadow-outline" href="{{ url }}">
+												<span class="absolute hidden md:block left-0 w-0 h-0.5 transition-all bg-purple-500 dark:bg-green-500 -bottom-3 group-hover:w-full"></span>
+												{{ title }}
+											</a>
+										</li>
+								{{ /if }}            
 							{{ /nav:main_menu }}
 						</ul>
 					</nav>
@@ -126,14 +127,14 @@
 															x-transition:leave-start="transform opacity-100 scale-100"
 															x-transition:leave-end="transform opacity-0 scale-95"
 															class="right-0 w-full origin-top-right rounded-md sm:mt-2 lg:shadow-lg lg:absolute lg:w-48">
-														<div class="flex flex-col pt-6 pl-1 space-y-6">
-															{{ children }}
-															<a role="menuitem" class="hover:text-purple-500 {{ if is_current || is_parent }} dark:text-green-400 text-purple-500 {{ /if }} dark:hover:text-purple-400" href="{{ url }}"> {{ title }} </a>
-															{{ /children }}
-														</div>
+															<div class="flex flex-col pt-6 pl-1 space-y-6">
+																{{ children }}
+																	<a role="menuitem" class="hover:text-purple-500 {{ if is_current || is_parent }} dark:text-green-400 text-purple-500 {{ /if }} dark:hover:text-purple-400" href="{{ url }}"> {{ title }} </a>
+																{{ /children }}
+															</div>
 														</div>
 													</div>
-													{{ else }}
+												{{ else }}
 													<li>
 														<a class="hover:text-purple-500 dark:hover:text-purple-400" href="{{ url }}">{{ title }}</a>
 													</li>
@@ -145,20 +146,13 @@
 												<label for="theme" class="font-normal text-zinc-700 dark:text-zinc-400">Switch theme</label>
 												{{ partial:documentation/_theme_toggle }}
 											</div>
-											{{# {{ partial:components/button label="Sign In" link_type="url" url="#" iconamic="user-circle" }} #}}
-	
 										</div>
-									
 									</div>
-	
 								</div>
 							</div>
-	
 						</div>
 					</div>
 			</nav>
-
-
 		</div>
 	</div>
 </div>
