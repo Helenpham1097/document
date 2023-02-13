@@ -1,24 +1,19 @@
 {{# Template for a blog entry #}}
 {{ partial:snippets/scrollProgress }}
 <div class="slice-background"></div>
-<div class="container relative space-y-8 max-w-7xl lg:space-y-16">
+
+
+<div class="container relative space-y-4 max-w-7xl lg:space-y-8">
 	
-	<a href="/blog">
-		<div class="inline-flex items-center text-lg font-semibold text-purple-500 group focus-visible:outline-none focus-visible:ring focus-visible:ring-transparent active:text-sky-700 hover:text-purple-500 focus:outline-none focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:outline-dashed focus-visible:ring-offset-sitehost-blue">
-			<div class="transition duration-500 ease-in-out transform group-hover:-translate-x-2">
-				<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 transition duration-500 ease-in-out transform translate-x-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-					<path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-				</svg>
-	
-			</div>
-			Back to blog
-		</div>
-	</a>
-	<article class="relative grid grid-cols-1 pt-6 mx-auto lg:gap-16 lg:pb-6 xl:grid-cols-12 lg:pt-12">
-		{{# Header #}}
-		<div class="z-10 flex flex-col items-end col-span-6 gap-8 lg:gap-16 lg:flex-row lg:col-span-12">
+	<div class="">
+		{{ partial:components/button label="Back to blog" button_type="inline" link_type="url" class="col-span-2" url="/blog" iconamic="arrow-left" }}
+	</div>
+	<article class="relative grid grid-cols-1 mx-auto lg:gap-16 lg:pb-6 xl:grid-cols-12">
+		
+		{{# Header #}}	
+		<div class="z-10 flex flex-col items-end col-span-12 gap-8 lg:gap-16 lg:flex-row">
 			{{if default_image}}
-			<figure class="relative w-full lg:w-1/2 overflow-hidden shadow-slate-500 dark:shadow-black/20 shadow-2xl rounded-lg lg:aspect-[6/4]">
+			<figure class="relative w-full lg:w-1/2 overflow-hidden shadow-zinc-500 dark:shadow-black/20 shadow-2xl rounded-lg lg:aspect-[6/4]">
 				{{ partial:global/picture :image="default_image" cover="true" maxheight="512" lazy="false" maxwidth="768" quality='70' }}
 			</figure>
 			{{ else }}
