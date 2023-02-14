@@ -1,41 +1,5 @@
 {{# Footer #}}
 {{ partial:global/libraries }}
-{{# <footer class="relative space-y-4 ">
-	<div class="relative py-8 border-t border-zinc-200 dark:border-zinc-800 bg-gradient-to-b from-zinc-50 to-white md:pb-8 md:p-16 dark:from-zinc-900 dark:to-zinc-800 "> 
-		<div class="container relative space-y-6 max-w-7xl md:space-y-12">
-			{{ if segment_1 }}
-			<div class="grid w-full grid-cols-2 gap-8 py-0 mx-auto md:grid-cols-2 lg:grid-cols-none lg:gap-8 lg:grid-flow-col lg:auto-col-auto md:space-y-0 sm:items-start md:justify-between"> 
-				{{ nav:footer }}
-				<div class="flex flex-col w-full space-y-2 ">
-					<div class="font-bold tracking-wider dark:text-zinc-100 dark:hover:text-green-500 hover:text-purple-700 ">
-						<a href="{{ url }}">
-							{{ title }}
-						</a>
-					</div>
-					<span class="flex flex-col space-y-2 tracking-wide sm:font-light text-md">
-						{{ children }}
-						<a class="hover:text-purple-500 dark:hover:text-green-500 dark:text-zinc-100 hover:underline" href="{{ url }}">
-							{{ title }}
-						</a>
-						{{ /children }}
-					</span>
-				</div>
-				{{ /nav:footer }}
-			</div>
-			<div class="h-0.5 bg-zinc-100 dark:bg-zinc-800"></div>
-			{{ /if }}
-			<div class="flex flex-col items-center w-full mx-auto space-y-4 text-sm text-zinc-500 md:space-y-0 md:flex-row md:justify-between">
-				<span class="tracking-wide">{{ company_information:address }}</span>
-					{{ partial:global/_logo }}
-				<span class="tracking-wide"> {{ company_information:copyright }} {{ now|format:Y }} </span>
-			</div>
-		</div>
-	</div>
-</footer> #}}
-
-
-
-
 <footer class="w-full px-4 py-10 mx-auto mt-12 border-t sm:px-6 lg:px-8 border-zinc-200 dark:border-zinc-800 bg-gradient-to-b from-zinc-50 to-white md:pb-8 md:p-16 dark:from-zinc-900 dark:to-zinc-800">
 
 	<div class="container relative space-y-6 max-w-7xl md:space-y-12">
@@ -61,8 +25,8 @@
 		</div>
 	<!-- End Grid -->
 
-		<div class="pt-5 mt-5 border-t border-zinc-200 dark:border-zinc-700">
-			<div class="sm:flex sm:justify-between sm:items-center">
+		<div class="pt-5 mt-5 border-t dev border-zinc-200 dark:border-zinc-700">
+			<div class="space-y-2 sm:flex sm:space-y-0 sm:justify-between sm:items-center">
 				
 				<div class="flex items-center gap-x-3">
 					<div class="space-x-4 text-sm">
@@ -72,17 +36,19 @@
 					</div>
 				</div>
 
-				<div class="order-1 mt-3 sm:order-none lg:hidden">
+				<div class="lg:hidden">
 					{{ partial:global/_logo }}
 				</div>
 
-				<div class="hidden mt-3 lg:block">
-					<span class="text-sm tracking-wide text-zinc-500"> {{ company_information:copyright }} {{ now|format:Y }} </span>
+				<div class="hidden lg:block">
+					<span class="text-sm tracking-wide text-zinc-500">
+						{{ company_information:copyright }} {{ now|format:Y }}
+					</span>
 				</div>
 
 				<div class="flex items-center justify-between">
 				<!-- Social Brands -->
-					<div class="space-x-4">
+					<div class="flex items-center space-x-4">
 						<a class="inline-block text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-200" href="#">
 						<svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
 							<path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
