@@ -1,10 +1,10 @@
 <button
 	:class="darkMode ? ' bg-zinc-800' : ' bg-zinc-100'"
-	class="relative px-2 py-1 transition rounded-full text-zinc-500 "
+	class="relative flex-none transition border rounded-full shadow-sm hover:shadow border-zinc-200 dark:border-zinc-400 text-zinc-500 dark:text-zinc-200 {{ class }} "
 	@click="darkMode = !darkMode">
     <span
 		:class="darkMode ? '' : ''"
-		class="flex items-center w-6 h-6 transition bg-white rounded-full shadow-md"
+		class="flex items-center w-6 h-6 transition bg-white rounded-full shadow-md dark:bg-zinc-700"
 		aria-hidden="true">
         <svg
 			:class="darkMode ? 'hidden' : ' block'"
@@ -29,36 +29,3 @@
         </svg>
     </span>
 </button>
-
-{{# 
-<button
-	:class="darkMode ? ' bg-zinc-700' : ' bg-zinc-300'"
-	class="relative inline-flex py-1 ml-4 transition rounded-full text-zinc-500 w-14"
-	@click="darkMode = !darkMode">
-    <span
-		:class="darkMode ? 'translate-x-7' : 'translate-x-1'"
-		class="flex items-center w-6 h-6 transition bg-white rounded-full shadow-md"
-		aria-hidden="true">
-        <svg
-			:class="darkMode ? 'hidden' : ' block'"
-			class="w-4 h-4 mx-auto overflow-visible stroke-current"
-			alt="" aria-hidden="true"
-			viewBox="0 0 140 140">
-            <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
-                <path
-                    d="M30.625 70a39.375 39.375 0 1078.75 0 39.375 39.375 0 10-78.75 0zM70 13.125v-8.75M110.215 29.785l6.19-6.19M126.875 70h8.75M110.215 110.215l6.19 6.19M70 126.875v8.75M29.785 110.215l-6.19 6.19M13.125 70h-8.75M29.785 29.785l-6.19-6.19"
-                    stroke-width="8.749995"
-                ></path>
-            </g>
-        </svg>
-        <svg
-			:class="darkMode ? 'block' : ' hidden '"
-			class="w-4 h-4 mx-auto overflow-visible stroke-current"
-			alt=""
-			aria-hidden="true"
-			viewBox="0 0 140 140">
-            <path
-				d="M71.447 69.76A65.648 65.648 0 0025.509 7.153a65.625 65.625 0 110 125.218 65.642 65.642 0 0045.938-62.61z" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="8.749995"></path>
-        </svg>
-    </span>
-</button> #}}
