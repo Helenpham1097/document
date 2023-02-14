@@ -107,7 +107,7 @@ they will alternate their order, they can all line up on either side. #}}
 
             <div class="container grid items-start gap-8 max-w-7xl lg:grid-cols-8 ">
                 {{ if highlight_features_title }}
-                <div class="flex flex-row col-span-8 space-y-4 {{ if features | count >= 4 }} lg:row-span-3 {{ else }} lg:row-span-1  {{ /if }} lg:flex-col lg:space-y-8 lg:col-span-2">
+                <div class="flex flex-row justify-between col-span-8 space-y-4 {{ if features | count >= 4 }} lg:row-span-3 {{ else }} lg:row-span-1  {{ /if }} lg:flex-col lg:space-y-8 lg:col-span-2">
                     {{ partial:typography/h3 :content="highlight_features_title" color='' }}
                     {{ if background_select:value === 'grid_background' }}
                         <svg class="text-purple-100 dark:opacity-50" width="91" height="89" viewBox="0 0 91 89" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -127,7 +127,7 @@ they will alternate their order, they can all line up on either side. #}}
                 
 
                 {{ features }}
-                    <div class="col-span-8 p-4 space-y-4 bg-white border rounded-lg shadow-xl dark:bg-zinc-800 border-zinc-100 dark:border-zinc-700 sm:col-span-3 lg:col-span-2 shadow-zinc-500/10 dark:shadow-black/10">
+                    <div class="col-span-8 p-4 space-y-4 bg-white border rounded-lg shadow-xl dark:bg-zinc-800 border-zinc-100 dark:border-zinc-700 sm:col-span-4 lg:col-span-2 shadow-zinc-500/10 dark:shadow-black/10">
                         {{ if default_image }}
                             {{ partial:components/figure :image="default_image" remove_prose="true" cover="true" maxheight="512" lazy="false" maxwidth="768" quality='70' }}
                         {{ /if }}
