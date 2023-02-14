@@ -1,88 +1,63 @@
 {{# Template showing the last post from the collection of posts #}}
-{{ collection:blog limit="1" paginate="false" as='posts' sort="date:desc" }}
-	
-<!-- Features -->
-	<div class="px-4 py-10 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-14">
-	<div class="relative p-6 pl-0 md:pl-0 md:p-16">
-		<!-- Grid -->
-		<div class="relative z-10 lg:grid lg:grid-cols-12 lg:gap-16 lg:items-center">
-		<div class="mb-10 lg:mb-0 lg:col-span-5 lg:col-start-8 lg:order-2">
+
+{{ collection:blog limit="3" paginate="false" as='posts' sort="date:desc" }}
+	<div class="container flex flex-col items-center justify-center w-full space-y-12 max-w-7xl lg:space-y-0 lg:space-x-12 lg:flex-row" x-data="{tab: 1}">
+		<div class="hidden lg:w-1/2 md:block">
+			{{ posts }}   
+			<div class="relative space-y-6 " x-show="tab === {{ count }}">
+				<div class="absolute top-0 left-0 hidden -translate-x-20 -translate-y-1/2 md:block lg:-translate-x-12">
+					<svg class="text-green-500 dark:opacity-50" width="91" height="89" viewBox="0 0 91 89" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M0 12.2713V27.5241L28.2975 0H12.5636L0 12.2713Z" fill="currentColor"></path>
+						<path d="M0 42.7713V58.0241L28.2975 30.5H12.5636L0 42.7713Z" fill="currentColor"></path>
+						<path d="M0 73.2713V88.5241L28.2975 61H12.5636L0 73.2713Z" fill="currentColor"></path>
+						<path d="M61.9727 12.2713V27.5241L90.2702 0H74.5363L61.9727 12.2713Z" fill="currentColor"></path>
+						<path d="M61.9727 42.7713V58.0241L90.2702 30.5H74.5363L61.9727 42.7713Z" fill="currentColor"></path>
+						<path d="M61.9727 73.2713V88.5241L90.2702 61H74.5363L61.9727 73.2713Z" fill="currentColor"></path>
+						<path d="M30.9727 12.2713V27.5241L59.2702 0H43.5363L30.9727 12.2713Z" fill="currentColor"></path>
+						<path d="M30.9727 42.7713V58.0241L59.2702 30.5H43.5363L30.9727 42.7713Z" fill="currentColor"></path>
+						<path d="M30.9727 73.2713V88.5241L59.2702 61H43.5363L30.9727 73.2713Z" fill="currentColor"></path>
+					</svg>
+				</div>
+				<div
+					class="space-y-6 overflow-hidden text-xl text-gray-800 rounded-lg"
+					x-show="tab === {{ count  }}"
+					x-transition:enter="transition delay-100 duration-500 transform ease-in"
+					x-transition:enter-start="opacity-0">
+					{{ partial:global/picture :image="default_image" cover="true" maxheight="512" lazy="false" maxwidth="768" quality='70' }}
+				</div>
+			</div>
+			{{ /posts }}
+		</div>
+		<div class="relative flex flex-col justify-start space-y-6 lg:w-1/2 ">
 			{{ partial:typography/h5 :content="pre-title" color='text-purple-500 dark:text-green-500 ' }}
 			{{ partial:typography/h3 :content="title_section" color='' }}
-
-			<!-- Tab Navs -->
-			<nav class="grid gap-4 mt-5 md:mt-10" aria-label="Tabs" role="tablist">
 			{{ posts }}
-				<a href="{{ url }}" class="p-4 text-left hs-tab-active:bg-white hs-tab-active:shadow-md hs-tab-active:hover:border-transparent hover:bg-zinc-200 md:p-5 rounded-xl dark:hs-tab-active:bg-slate-900 dark:hover:bg-zinc-700 active" id="tabs-with-card-item-1" data-hs-tab="#tabs-with-card-1" aria-controls="tabs-with-card-1" role="tab">
+				<div
+					title="{{ title }}"
+					class="relative p-4 text-lg text-black border border-zinc-200 dark:border-zinc-700 sm:p-8 rounded-xl lg:w-full"
+					:class="{'z-20 transform dark:bg-zinc-800 bg-zinc-100   ': tab === {{ count }}, ' transform transition  dark:bg-zinc-900 ease-in-out ': tab !== {{ count  }}}"
+					@click.prevent="tab = {{ count  }}"
+				>
 					<span class="flex">
 						<div class="flex flex-col flex-shrink-0 w-12 leading-none text-center text-zinc-600 dark:text-zinc-400">
-							<span class="pb-2 mb-2 border-b-2 border-zinc-300 dark:border-zinc-600">{{ date iso_format="MMM" }}</span>
-							<span class="text-lg font-medium leading-none title-font">{{ date iso_format="DD" }}</span>
+							<span class="pb-2 mb-2 border-b-2 border-zinc-400 dark:border-zinc-400">
+								{{ date iso_format="MMM" }}
+							</span>
+							<span class="leading-none">
+								{{ date iso_format="DD" }}
+							</span>
 						</div>
-						<span class="ml-6 grow">
-							<span class="block text-lg font-semibold text-zinc-800 hs-tab-active:text-blue-600 dark:hs-tab-active:text-blue-500 dark:text-zinc-200">{{ title }}</span>
-							<span class="block mt-1 text-zinc-800 dark:hs-tab-active:text-zinc-200 dark:text-zinc-200"> {{ subheader }}</span>
-						</span>
+						<div class="ml-6 space-y-2 grow">
+							<div class="block text-xl font-semibold text-zinc-800 hs-tab-active:text-purple-600 dark:hs-tab-active:text-purple-500 dark:text-zinc-200">
+								{{ title }}
+							</div>
+							{{ partial:components/button label="Read more" button_type="inline" link_type="url" class="col-span-2 py-0 pl-0" url="{{ url }}" iconamic="cheveron-right" }}
+						</div>
 					</span>
-				</a>
-			{{ /posts }}
-
-			</nav>
-			<!-- End Tab Navs -->
-		</div>
-		<!-- End Col -->
-
-		<div class="lg:col-span-7">
-			<div class="relative">
-			<!-- Tab Content -->
-			<div>
-				{{ posts }}
-				<div id="tabs-with-card-1" role="tabpanel" aria-labelledby="tabs-with-card-item-1">
-					{{ partial:global/picture :image="default_image" cover="true" class='shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/[.2]' maxheight="512" lazy="false" maxwidth="768" quality='70' }}
-					{{# <img class="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/[.2]" src="https://images.unsplash.com/photo-1605629921711-2f6b00c6bbf4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&h=1220&q=80" alt="Image Description"> #}}
 				</div>
-				{{ /posts }}
-
-				<div id="tabs-with-card-2" class="hidden" role="tabpanel" aria-labelledby="tabs-with-card-item-2">
-					<img class="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/[.2]" src="https://images.unsplash.com/photo-1665686306574-1ace09918530?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&h=1220&q=80" alt="Image Description">
-				</div>
-
-				<div id="tabs-with-card-3" class="hidden" role="tabpanel" aria-labelledby="tabs-with-card-item-3">
-					{{ partial:global/picture :image="default_image" cover="true" maxheight="512" lazy="false" maxwidth="768" quality='70' }}
-					{{# <img class="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/[.2]" src="https://images.unsplash.com/photo-1598929213452-52d72f63e307?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&h=1220&q=80" alt="Image Description"> #}}
-				</div>
-			</div>
-			<!-- End Tab Content -->
-
-			<!-- SVG Element -->
-			<div class="absolute top-0 left-0 hidden -translate-x-20 -translate-y-1/2 md:block lg:-translate-x-12">
-				<svg class="text-green-500 dark:opacity-50" width="91" height="89" viewBox="0 0 91 89" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M0 12.2713V27.5241L28.2975 0H12.5636L0 12.2713Z" fill="currentColor"></path>
-					<path d="M0 42.7713V58.0241L28.2975 30.5H12.5636L0 42.7713Z" fill="currentColor"></path>
-					<path d="M0 73.2713V88.5241L28.2975 61H12.5636L0 73.2713Z" fill="currentColor"></path>
-					<path d="M61.9727 12.2713V27.5241L90.2702 0H74.5363L61.9727 12.2713Z" fill="currentColor"></path>
-					<path d="M61.9727 42.7713V58.0241L90.2702 30.5H74.5363L61.9727 42.7713Z" fill="currentColor"></path>
-					<path d="M61.9727 73.2713V88.5241L90.2702 61H74.5363L61.9727 73.2713Z" fill="currentColor"></path>
-					<path d="M30.9727 12.2713V27.5241L59.2702 0H43.5363L30.9727 12.2713Z" fill="currentColor"></path>
-					<path d="M30.9727 42.7713V58.0241L59.2702 30.5H43.5363L30.9727 42.7713Z" fill="currentColor"></path>
-					<path d="M30.9727 73.2713V88.5241L59.2702 61H43.5363L30.9727 73.2713Z" fill="currentColor"></path>
-				</svg>
-			</div>
-			<!-- End SVG Element -->
-			</div>
+				
+			{{ /posts }}			
 		</div>
-		<!-- End Col -->
-		</div>
-		<!-- End Grid -->
-
-		<!-- Background Color -->
-		<div class="absolute inset-0 grid w-full h-full grid-cols-12">
-			<div class="w-full col-span-full lg:col-span-7 lg:col-start-6 bg-zinc-100 h-5/6 sm:h-3/4 lg:h-full dark:bg-zinc-800 "></div>
-		</div>
-		<!-- End Background Color -->
+		
 	</div>
-	</div>
-	<!-- End Features -->
 {{ /collection:blog }}
-
-
