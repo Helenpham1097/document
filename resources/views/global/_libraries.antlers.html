@@ -1,10 +1,12 @@
 {{# Alpine JS #}}
-    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
-    <script
+    {{# <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script> #}}
+    {{# <script
         src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.2/cdn.js"
         crossorigin="anonymous"
         referrerpolicy="no-referrer">
-    </script>
+    </script> #}}
+<script src="/js/alpine.collapse.min.js?{{ config:app:cache_timestamp }}" defer></script>
+<script src="/js/alpine-3.10.2.js?{{ config:app:cache_timestamp }}" defer></script>
 {{# Aos scroll library #}}
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
