@@ -1,0 +1,15 @@
+{
+	"tabWidth": 2,
+	"useTabs": true,
+	"bracketSameLine": true,
+	"plugins": ["./node_modules/prettier-plugin-antlers/"],
+	"overrides": [
+		{
+			"files": ["*.antlers.html", "_*.antlers.html"],
+			"vscodeLanguageIds": ["antlers"],
+			"options": {
+				"parser": "antlers"
+			}
+		}
+	]
+}
