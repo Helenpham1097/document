@@ -15,7 +15,7 @@ that are always displayed before the text,  this is controlled by "order-first M
 
 {{# "toggle_background" allows to add or remove the background with the animated strips. #}}
 <div
-    class="container max-w-7xl flex flex-col items-center px-8 py-10 mx-auto space-y-6 space-y-reverse lg:space-x-24 sm:py-5 sm:space-y-0 sm:flex-row 
+    class="container max-w-7xl flex flex-col lg:items-center py-10 mx-auto space-y-6 space-y-reverse lg:space-x-24 sm:space-y-0 lg:flex-row 
     {{ if reverse_alignment }}
         {{ if toggle_alignment }}
             lg:space-x-reverse
@@ -31,7 +31,7 @@ that are always displayed before the text,  this is controlled by "order-first M
     {{ /if }}
     "
 >
-    <div class="space-y-6 sm:w-1/2">
+    <div class="space-y-6 lg:w-1/2">
         <div class="space-y-6">
             {{ if highlight_title }}
                 <h2 class="h2 dot">{{ highlight_title }}</h2>
@@ -45,7 +45,7 @@ that are always displayed before the text,  this is controlled by "order-first M
     </div>
 
     <div
-        class="relative sm:mx-auto sm:w-1/2
+        class="relative lg:mx-auto lg:w-1/2
     {{ if reverse_alignment }}
         {{ if toggle_alignment }}
             order-first 

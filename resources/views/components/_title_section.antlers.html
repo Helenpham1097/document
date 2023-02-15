@@ -4,7 +4,7 @@
         {{ if alignment == 'center'}} justify-center text-center {{/if}}
         {{ if alignment == 'right'}} justify-end text-right {{/if}}
     ">
-    <div class="w-3/5 space-y-8 ">
+    <div class="space-y-8 lg:w-3/5 ">
         {{ partial:typography/h5 :content="pre_title" color='{{ if toggle_color }} text-purple-500 {{ else }} text-slate-400 {{ /if }} ' }}
         {{ partial:typography/h2 :content="title" color='' }}
         {{ partial:typography/prose }}
