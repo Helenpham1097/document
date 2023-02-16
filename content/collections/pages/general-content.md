@@ -3,7 +3,7 @@ id: 26513dc7-59f7-4673-815e-7d9ace16248b
 blueprint: general_content
 title: 'General content'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1675283926
+updated_at: 1676523112
 description: Lorem
 template: general_content/index
 subheader: sdasda
@@ -444,6 +444,132 @@ page_builder:
       -
         type: column
         enabled: true
+        pricing_features_title: Professional
+        pricing_features_list:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam. Fusce maximus non metus ac facilisis. Sed id nunc a ante interdum efficitur.'
+      -
+        type: column
+        enabled: true
+        pricing_features_title: Enterprise
+        pricing_features_list:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod.'
+    type: pricing_table
+    enabled: true
+  -
+    template: /general_content/toggle
+    display_title_section:
+      -
+        template: /components/section_title
+        pre_title: Pre-title
+        title: 'Affordable for everyone'
+        textarea_field:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae.'
+        toggle_color: true
+        alignment: center
+        type: section_title
+        enabled: true
+    pricing_toggle: true
+    Items:
+      -
+        type: column
+        enabled: false
+        pricing_features_title: 'Starter plan'
+        pricing_features_list:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam. Fusce maximus non metus ac facilisis. Sed id nunc a ante interdum efficitur.'
+        buttons:
+          -
+            template_global: /components/buttons
+            label: 'Buy now'
+            link_type: url
+            target_blank: false
+            url: '#'
+            button_type: button
+      -
+        type: column
+        enabled: true
+        pricing_features_title: Professional
+        pricing_features_list:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam. Fusce maximus non metus ac facilisis. Sed id nunc a ante interdum efficitur.'
+      -
+        type: column
+        enabled: true
+        pricing_features_title: Enterprise
+        pricing_features_list:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate ultricies augue in molestie. Aliquam rhoncus ultrices euismod.'
+    type: pricing_table
+    enabled: true
+  -
+    template: /general_content/toggle
+    display_title_section:
+      -
+        template: /components/section_title
+        pre_title: Pre-title
+        title: 'Affordable for everyone'
+        textarea_field:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae.'
+        toggle_color: true
+        alignment: center
+        type: section_title
+        enabled: true
+    pricing_toggle: true
+    Items:
+      -
+        type: column
+        enabled: false
+        pricing_features_title: 'Starter plan'
+        pricing_features_list:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam. Fusce maximus non metus ac facilisis. Sed id nunc a ante interdum efficitur.'
+        buttons:
+          -
+            template_global: /components/buttons
+            label: 'Buy now'
+            link_type: url
+            target_blank: false
+            url: '#'
+            button_type: button
+      -
+        type: column
+        enabled: false
         pricing_features_title: Professional
         pricing_features_list:
           -
