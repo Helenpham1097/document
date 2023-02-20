@@ -17,3 +17,6 @@ preferences:
     -
       name: 'Documentation ‹ Collections'
       url: collections/documentation
+    -
+      name: 'Blog ‹ Collections'
+      url: collections/blog
