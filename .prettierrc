@@ -2,6 +2,7 @@
 	"tabWidth": 2,
 	"useTabs": true,
 	"bracketSameLine": true,
+	"printWidth": 600,
 	"plugins": ["./node_modules/prettier-plugin-antlers/"],
 	"overrides": [
 		{
