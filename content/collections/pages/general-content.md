@@ -6,7 +6,7 @@ updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
 updated_at: 1676523112
 description: Lorem
 template: general_content/index
-subheader: sdasda
+excerpt: sdasda
 page_builder:
   -
     template: page_builder/feature_section

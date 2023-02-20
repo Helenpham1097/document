@@ -25,10 +25,10 @@ sections:
           input_type: text
           antlers: false
       -
-        handle: subheader
+        handle: excerpt
         field:
           antlers: false
-          display: Subheader
+          display: Excerpt
           type: textarea
           icon: textarea
           listable: hidden
