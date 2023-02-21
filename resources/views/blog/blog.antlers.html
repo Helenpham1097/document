@@ -3,31 +3,35 @@
 <div class="slice-background"></div>
 
 
-<div class="container relative space-y-2 max-w-7xl lg:space-y-4">
-	{{ partial:components/button label="Back to blog" button_type="inline" link_type="url" class="col-span-2" url="/blog" iconamic="arrow-left" }}	
+<div class=" container relative space-y-2 max-w-7xl lg:space-y-4">
+	{{ partial:components/button label="Back to blog" button_type="inline" link_type="url" class="col-span-2 pr-0 pl-0 " url="/blog" iconamic="arrow-left" }}	
 	<article class="relative flex flex-col ">
 		{{# Header #}}	
-		<header class="py-12 space-y-3 max-w-[736px]">
+		<header class="lg:py-16 py-8 space-y-3 max-w-[736px]">
 			{{ partial:components/author }}
-			{{ partial:typography/h1 :content="title" color='text-zinc-800 leadi lg:text-6xl dark:text-zinc-200' }}
+			{{ partial:typography/h1 :content="title" color='text-zinc-800 lg:text-6xl dark:text-zinc-200 text-3xl sm:text-4xl tracking-tight ' }}
 		</header>
-		<div class="max-w-3xl mx-auto text-base space-y-8 sm:text-lg leading-8">
-			{{if default_image}}
-			<figure class="w-full overflow-hidden shadow-zinc-500 dark:shadow-black/20 shadow-2xl rounded-lg lg:aspect-[6/4]">
-				{{ partial:global/picture :image="default_image" cover="true" maxheight="512" lazy="false" maxwidth="768" quality='70' }}
-			</figure>
-			{{ /if }}
-
-			{{ partial:typography/excerpt :content="excerpt" }}
-			
-
-			{{# Content #}}
-			{{ page_builder scope="block" }}
-				{{ partial src="page_builder/{type}" }}
-			{{ /page_builder }}
-		</div>
-
 		
+		<div class="relative mx-auto mt-8 max-w-2xl sm:mt-12 md:mt-16 lg:block">
+			<div class="absolute -left-20 hidden h-full lg:block">
+				{{ partial:components/share }}
+			</div>
+			<div class="max-w-3xl mx-auto text-base space-y-8 sm:text-lg leading-8">
+				{{if default_image}}
+				<figure class="w-full overflow-hidden shadow-zinc-800/20 dark:shadow-black/10 shadow-2xl rounded-lg lg:aspect-[6/4]">
+					{{ partial:global/picture :image="default_image" cover="true" maxheight="512" lazy="false" maxwidth="768" quality='70' }}
+				</figure>
+				{{ /if }}
+
+				{{ partial:typography/excerpt :content="excerpt" }}
+				
+
+				{{# Content #}}
+				{{ page_builder scope="block" }}
+					{{ partial src="page_builder/{type}" }}
+				{{ /page_builder }}
+			</div>
+		</div>
 
 
 		<div class="z-20 back-to-top-wrapper">
