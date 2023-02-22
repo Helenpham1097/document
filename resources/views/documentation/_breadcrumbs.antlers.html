@@ -1,19 +1,20 @@
 
-<nav class="flex dark:text-white" aria-label="Breadcrumb">
-    <ol class="inline-flex items-center px-4 py-2 space-x-1 rounded-md backdrop-blur-sm bg-zinc-50/40 dark:bg-zinc-800/40 md:space-x-3">
-        {{ nav:breadcrumbs include_home='false' }}
 
-        <a href="#" class="inline-flex items-center text-sm font-medium text-zinc-700 hover:text-purple-600 dark:text-zinc-400 dark:hover:text-white">
+<nav class="sm:flex hidden dark:text-white" aria-label="Breadcrumb">
+    <ol class="inline-flex lg:flex-row flex-col w-full sm:w-auto items-center space-y-2 sm:space-y-0 px-4 py-2 lg:space-x-1 rounded-md backdrop-blur-sm border border-zinc-200/50 dark:border-zinc-700/50 bg-zinc-50/40 dark:bg-zinc-800/40 md:space-x-3">
+        {{ nav:breadcrumbs include_home='false' }}
+        <li class="flex items-center">
+        <a href="#" class="inline-flex items-center text-sm font-medium text-zinc-700 hover:text-purple-600 dark:text-zinc-400 dark:hover:text-green-500">
             {{ if first }}
-                <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+                <svg aria-hidden="true" class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
             {{ else }}
-            <svg g aria-hidden="true" class="w-6 h-6 text-zinc-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+            <svg g aria-hidden="true" class="w-4 h-4 flex-shrink-0 text-zinc-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
             {{ /if }}
             
             {{ if is_current }}
                 <span aria-current="page" class="ml-1 text-sm font-medium text-zinc-500 md:ml-2 dark:text-zinc-400">{{ title | safe_truncate:15:... }}</span>
             {{ else }}
-                <a href="{{ url }}" class="ml-1 text-sm font-medium text-zinc-700 hover:text-purple-600 md:ml-2 dark:text-zinc-400 dark:hover:text-white">{{ title }}</a>
+                <a href="{{ url }}" class="ml-1 text-sm font-medium text-zinc-700 hover:text-purple-600 md:ml-2 dark:text-zinc-400 dark:hover:text-green-500">{{ title }}</a>
             {{ /if }}
         </a>
         </li>
