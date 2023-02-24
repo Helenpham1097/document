@@ -7,30 +7,28 @@
 	- Link or info button for links
 #}}
 
-<div class="flex items-center space-x-2 text-xs text-zinc-600 dark:text-zinc-400">
+<div class="flex items-center space-x-2 text-xs text-zinc-400 dark:text-zinc-500">
         <div>
-            <div class="flex items-center space-x-2 text-xs text-zinc-600 dark:text-zinc-400">
+            <div class="flex items-center space-x-2 text-xs ">
                 {{ if team_member }}
-                    <figure class="object-cover w-12 h-12 overflow-hidden border rounded-full border-zinc-100">
+                    <figure class="object-cover w-8 h-8 overflow-hidden border rounded-full border-zinc-100 dark:border-zinc-500">
                         {{ partial:global/picture :image="team_member:default_image" cover="true" lazy="false" maxheight="56" maxwidth="56" quality='95' }}
                     </figure>
                 {{ else }}
-                    <figure class="object-cover w-12 h-12 overflow-hidden border rounded-full border-zinc-100 dark:border-zinc-700">
+                    <figure class="object-cover w-8 h-8 overflow-hidden border rounded-full border-zinc-100 dark:border-zinc-700">
                         {{ partial:global/picture :image="author:avatar" cover="true" lazy="false" maxheight="56" maxwidth="56" quality='95' }}
                     </figure>
                 {{ /if }}
-                <div class="flex flex-col space-x-0 space-y-0 text-sm lg:items-center lg:text-base lg:space-x-2 lg:space-y-0 lg:flex-row ">
+                <div class="flex items-center gap-3">
                     {{ if team_member }}
-                        <a href="{{team_member:url}}">
-                            <span class="truncate md:w-auto md:text-clip md:overflow-hidden">{{ team_member:title }}</span>
+                        <a href="{{ team_member:url }}">
+                            <span class="truncate md:w-auto">{{ team_member:title | safe_truncate:10:'...' }}</span>
                         </a>
                     {{ else }}
-                        {{# <a href="/authors/{{author:name | slugify }}"> #}}
-                            <span class="truncate md:w-auto md:text-clip md:overflow-hidden">{{ author:name }}</span>
-                        {{# </a> #}}
+                        <span class="truncate md:w-auto">{{ author:name }}</span>
                     {{ /if }}
-                <span class="text-zinc-400">|</span>
-                <time class="text-zinc-400">{{ date iso_format="DD MMM, YYYY" }}</time>
+                <span>/</span>
+                <time>{{ date iso_format="DD MMMM, YYYY" }}</time>
             </div>
         </div>
     </div>

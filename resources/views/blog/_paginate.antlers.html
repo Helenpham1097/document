@@ -27,7 +27,7 @@
                 {{ links:segments }}
                     {{ first }}
                         {{ if page == current_page }}
-                            <a href="{{ url }}" class="px-2 pt-3 mr-4 text-sm font-medium leading-none border-t-2 border-transparent cursor-pointer text-zinc-600 hover:text-purple-500 hover:border-purple-500"> {{ page }} </a>
+                            <a href="{{ url }}" class="px-2 pt-3 mr-4 text-sm border-purple-500 font-bold leading-none border-t-2 border-transparent cursor-pointer text-zinc-600 hover:text-purple-600 hover:border-purple-600"> {{ page }} </a>
                         {{ else }}
                             <a href="{{ url }}" class="px-2 pt-3 mr-4 text-sm font-medium leading-none border-t-2 border-transparent cursor-pointer text-zinc-600 hover:text-purple-800 hover:border-purple-500"> {{ page }} </a>
                         {{ /if }}
