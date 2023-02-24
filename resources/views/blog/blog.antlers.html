@@ -3,57 +3,31 @@
 <div class="slice-background"></div>
 
 
-<div class="container relative space-y-4 max-w-7xl lg:space-y-8">
-	
-	<div class="">
-		{{ partial:components/button label="Back to blog" button_type="inline" link_type="url" class="col-span-2" url="/blog" iconamic="arrow-left" }}
-	</div>
-	<article class="relative grid grid-cols-1 mx-auto lg:gap-16 lg:pb-6 xl:grid-cols-12">
-		
+<div class="container relative space-y-2 max-w-7xl lg:space-y-4">
+	{{ partial:components/button label="Back to blog" button_type="inline" link_type="url" class="col-span-2" url="/blog" iconamic="arrow-left" }}	
+	<article class="relative flex flex-col ">
 		{{# Header #}}	
-		<div class="z-10 flex flex-col items-end col-span-12 gap-8 lg:gap-16 lg:flex-row">
+		<header class="py-12 space-y-3 max-w-[736px]">
+			{{ partial:components/author }}
+			{{ partial:typography/h1 :content="title" color='text-zinc-800 leadi lg:text-6xl dark:text-zinc-200' }}
+		</header>
+		<div class="max-w-3xl mx-auto text-base space-y-8 sm:text-lg leading-8">
 			{{if default_image}}
-			<figure class="relative w-full lg:w-1/2 overflow-hidden shadow-zinc-500 dark:shadow-black/20 shadow-2xl rounded-lg lg:aspect-[6/4]">
+			<figure class="w-full overflow-hidden shadow-zinc-500 dark:shadow-black/20 shadow-2xl rounded-lg lg:aspect-[6/4]">
 				{{ partial:global/picture :image="default_image" cover="true" maxheight="512" lazy="false" maxwidth="768" quality='70' }}
 			</figure>
-			{{ else }}
-			<div class="hidden w-24 lg:block"></div>
 			{{ /if }}
 
-			<div class="w-full space-y-3 lg:space-y-6 lg:w-1/2">
-				{{ partial:typography/category }}
-				{{ partial:typography/h1 :content="title" color='text-zinc-800 dark:text-zinc-200' }}
-				{{ partial:typography/subheader :content="title" }}
-			</div>
+			{{ partial:typography/excerpt :content="excerpt" }}
+			
+
+			{{# Content #}}
+			{{ page_builder scope="block" }}
+				{{ partial src="page_builder/{type}" }}
+			{{ /page_builder }}
 		</div>
 
-		{{if default_image}}
-		<svg class="hidden col-span-1 translate-x-24 -translate-y-24 lg:block " width="100" height="789" viewBox="0 0 100 789" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    opacity="0.2"
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M0 0H100V441.132L0 541.132V0ZM100 454.132L0 554.132V619.711L100 519.711V454.132ZM0 632.711L100 532.711V572.843L0 672.843V632.711ZM99.1067 715.157L100 714.264V715.157H99.1067ZM100 586L0 686V726.132L100 626.132V586ZM100 767.553L99.1067 768.447H100V767.553ZM0 739L100 639V659.132L0 759.132V739ZM100 672L0 772V788.132L100 688.132V672Z"
-                    fill="url(#paint0_linear_1671_25835)"
-                />
-                <defs>
-                    <linearGradient id="paint0_linear_1671_25835" x1="100" y1="642.601" x2="-295.552" y2="522.434" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#32FFDC" />
-                        <stop offset="1" stop-color="#871EFF" />
-                    </linearGradient>
-                </defs>
-            </svg>
-		{{ /if }}
-		{{# Content #}}
-		{{ page_builder scope="block" }}
-			{{ partial src="page_builder/{type}" }}
-		{{ /page_builder }}
 		
-		{{# Sidebar #}}
-		<aside class="col-span-3 lg:space-y-2">
-			{{ partial:components/author }}
-		</aside>
-
 
 
 		<div class="z-20 back-to-top-wrapper">
@@ -63,9 +37,11 @@
             	</svg>
 			</a>
 		</div>
+
 	</article>
 
 	<div class="container">
 		{{ if {collection:count in="blog"} > 1 }} {{ partial:blog/latest_news }} {{ /if }}
 	</div>
 </div>
+

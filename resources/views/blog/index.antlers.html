@@ -11,9 +11,9 @@
         <div class="container mx-auto max-w-7xl">
             {{ collection:blog limit="6" paginate="true" taxonomy:categories:not="customer-kudos" as='posts' sort="date:desc" }}
                 {{ if posts && (get:page == "1" || !get:page) }}
-                    <div class="py-8 space-y-10 lg:pb-8 sm:space-y-20">
+                    <div class="space-y-10 lg:pb-8 sm:space-y-20">
                 {{ else }}
-                    <div class="py-8 space-y-10 lg:pb-8 sm:space-y-20">
+                    <div class="space-y-10 lg:pb-8 sm:space-y-20">
                 {{ /if }}
                 <div class="grid gap-16 mx-auto sm:grid-cols-2 lg:grid-cols-3 place-items-startgrid">
                     {{ posts }}
