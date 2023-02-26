@@ -4,29 +4,9 @@
 .prose ul > li::before {
     @apply bg-purple-500 rounded-none;
 }
-/* ::marker, */
-.prose ul ::marker {
-    @apply hidden text-purple-500 bg-purple-500;
-    content: url("data:image/svg+xml,%3Csvg width='9' height='12' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.3731 13.6668H0L2.62687 0.333496H16L13.3731 13.6668Z' fill='%23871EFF'/%3E%3C/svg%3E%0A");
+.prose ::marker {
+    @apply text-purple-500 dark:text-green-500 list-disc
 }
-.prose ol ::marker {
-    @apply hidden text-base font-bold text-purple-500;
-}
-.prose ul > li::marker,
-.prose ol > li::marker {
-    @apply hidden;
-}
-
-/* .feature-section .prose {
-    ::marker {
-        @apply hidden text-purple-500 bg-purple-500;
-        content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='12' fill='%2332FFDC'/%3E%3Cpath d='M8 12L10.8 15L16 9' stroke='%23555658' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-    }
-    li p {
-        @apply my-1;
-    }
-} */
-
 article p img {
     @apply mx-auto text-center justify-self-center;
 }
@@ -39,10 +19,6 @@ article p img {
     p {
         @apply text-zinc-800 dark:text-zinc-300;
         widows: 3;
-    }
-
-    ul > li {
-        /* @apply pl-0; */
     }
     blockquote {
         @apply p-0 border-0 ;
