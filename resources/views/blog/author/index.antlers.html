@@ -21,24 +21,19 @@
 				<p class="prose">{{ content| strip_tags:p }}</p>
 		</div>
 	</div>
-<div class="mx-auto ">
-	{{ collection:blog limit="12" team_member:contains="{id}"  paginate="true" as='posts' sort="date:desc" }}
-		{{ if posts && (get:page == "1" || !get:page) }}
-			<div class="py-8 space-y-10 lg:pb-8 sm:space-y-20">
-		{{ else }}
-			<div class="py-8 space-y-10 lg:pb-8 sm:space-y-20">
-		{{ /if }}
-		<div class="grid gap-16 mx-auto grid-cols-1 lg:grid-cols-2 place-items-startgrid {{ if {collection:count team_member:contains="{id}" in="blog"} > 12 }} {{else}} pb-6 lg:pb-12 {{ /if }} ">
+	<div class="mx-auto ">
+		{{ collection:blog limit="12" team_member:contains="{id}"  paginate="true" as='posts' sort="date:desc" }}
+			<div class="grid gap-16 mx-auto grid-cols-1 lg:grid-cols-2 place-items-startgrid {{ if posts && get:page > "1" }} pt-8 lg:pt-16 {{ /if }} {{ if {collection:count team_member:contains="{id}" in="blog"} > 12 }} {{else}} pb-6 lg:pb-12 {{ /if }} ">
 
-			{{ posts }}
-				{{ partial:blog/post }}
-			{{ /posts }}	
-		</div>
-		{{# Paginator #}}
-		{{ if {collection:count team_member:contains="{id}" in="blog"} > 12 }}
-			{{ partial:blog/paginate }}
-		{{ /if }}
-	{{ /collection:blog }}
-		</div>
+				{{ posts }}
+					{{ partial:blog/post }}
+				{{ /posts }}	
+			</div>
+			{{# Paginator #}}
+			{{ if {collection:count team_member:contains="{id}" in="blog"} > 12 }}
+				{{ partial:blog/paginate }}
+			{{ /if }}
+		{{ /collection:blog }}
+			</div>
 	</div>
-</div>
+

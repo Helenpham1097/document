@@ -1,63 +1,43 @@
 {{# Template for blog index page #}}
-{{# Check for Stickied post  #}}
-    {{ if stickied_post && (get:page == "1" || !get:page) }}
+{{# Check for Stickied post #}}
+{{ if stickied_post && (get:page == "1" || !get:page) }}
+	{{ stickied_post }}
+		{{ partial:blog/featured_post }}
+		<div class="slice-background"></div>
+	{{ /stickied_post }}
+	{{# Non-featured posts. To enable pagination set true and change limit to 6 #}}
+	<div class="container mx-auto max-w-7xl space-y-10">
+		{{ collection:blog limit="6" paginate="true" taxonomy:categories:not="customer-kudos" as='posts' sort="date:desc" }}
+			<div class="place-items-startgrid mx-auto grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+				{{ posts }}
+					{{ partial:blog/post square="false" }}
+				{{ /posts }}
+			</div>
+			{{# Paginator #}}
+			{{ if {collection:count in="blog"} > 6 }}
+				{{ partial:blog/paginate }}
+			{{ /if }}
+		{{ /collection:blog }}
+	</div>
 
-        {{ stickied_post }}
-        {{ partial:blog/featured_post }}
-        <div class="slice-background"></div>
-        {{ /stickied_post }}
-
-        {{# Non-featured posts. To enable pagination set true and change limit to 6 #}}
-        <div class="container mx-auto max-w-7xl">
-            {{ collection:blog limit="6" paginate="true" taxonomy:categories:not="customer-kudos" as='posts' sort="date:desc" }}
-                {{ if posts && (get:page == "1" || !get:page) }}
-                    <div class="space-y-10 lg:pb-8 sm:space-y-20">
-                {{ else }}
-                    <div class="space-y-10 lg:pb-8 sm:space-y-20">
-                {{ /if }}
-                <div class="grid gap-8 mx-auto sm:grid-cols-2 lg:grid-cols-3 place-items-startgrid">
-                    {{ posts }}
-                        {{ partial:blog/post square="false" }}
-                    {{ /posts }}	
-                </div>
-                {{# Paginator #}}
-                {{ if {collection:count in="blog"} > 6 }}
-                    {{ partial:blog/paginate }}
-                {{ /if }}
-            {{ /collection:blog }}
-            </div>
-        </div>
-
-
-    {{# If no stickied post use most recent post  #}}
-    {{ else }}
-
-        {{ collection:blog limit="1" paginate="false" as='posts' sort="date:desc" }}
-            {{ if posts && (get:page == "1" || !get:page) }}
-                {{ posts }}
-                    {{ partial:blog/featured_post }}
-                {{ /posts }}
-            {{ /if }}
-        {{ /collection:blog }}
-        
-        {{ collection:blog limit="6" paginate="true" as='posts' sort="date:desc" offset="1" }}
-            {{ if posts && (get:page == "1" || !get:page) }}
-                <div class="py-8 space-y-8">
-            {{ else }}
-                <div class="py-8 space-y-8 lg:pb-8 sm:space-y-16">
-            {{ /if }}
-                </div>
-            <div class="container max-w-7xl grid gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-3 place-items-startgrid">
-                {{ posts }}
-                    {{ partial:blog/post square="false" }}
-                {{ /posts }}	
-            </div>
-            <!-- Paginator -->
-            {{ if {collection:count in="blog"} > 6 }}
-                {{ partial:blog/paginate }}
-            {{ /if }}
-        {{ /collection:blog }}
-        
-    {{ /if }}
-
-
+	{{# If no stickied post use most recent post #}}
+{{ else }}
+	{{ collection:blog limit="1" paginate="false" as='posts' sort="date:desc" }}
+		{{ if posts && (get:page == "1" || !get:page) }}
+			{{ posts }}
+				{{ partial:blog/featured_post }}
+			{{ /posts }}
+		{{ /if }}
+	{{ /collection:blog }}
+	{{ collection:blog limit="6" paginate="true" as='posts' sort="date:desc" offset="1" }}
+		<div class="place-items-startgrid {{ if posts && get:page > "1" }} pt-8 lg:pt-16 {{ /if }} container grid max-w-7xl gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+			{{ posts }}
+				{{ partial:blog/post square="false" }}
+			{{ /posts }}
+		</div>
+		<!-- Paginator -->
+		{{ if {collection:count in="blog"} > 6 }}
+			{{ partial:blog/paginate }}
+		{{ /if }}
+	{{ /collection:blog }}
+{{ /if }}
