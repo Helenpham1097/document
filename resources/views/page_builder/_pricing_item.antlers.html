@@ -1,20 +1,17 @@
-<div class="relative pt-6 isolate mx-auto group">
-	
+<div class="group relative isolate mx-auto pt-6">
 	<div class="absolute right-0 z-10">
-		<div class="relative -mt-12 transition duration-200 ease-linear transform -translate-x-8 translate-y-full">
-			<div class="absolute inset-0 transform -skew-x-12 shadow-lg bg-gradient-to-r from-green-500 to-green-600"></div>
-			<div class="relative px-6 py-2 mx-auto mb-4 -mt-8 text-xs leading-relaxed font-semibold text-center text-black uppercase">Popular</div>
+		<div class="relative -mt-12 -translate-x-8 translate-y-full transform transition duration-200 ease-linear">
+			<div class="absolute inset-0 -skew-x-12 transform bg-gradient-to-r from-green-500 to-green-600 shadow-lg"></div>
+			<div class="relative mx-auto mb-4 -mt-8 px-6 py-2 text-center text-xs font-semibold uppercase leading-relaxed text-black">Popular</div>
 		</div>
 	</div>
-	
-	<div class="p-8 rounded space-y-6 bg-zinc-900 dark:bg-zinc-100">
 
-		
-		<div class="flex mt-2 items-center justify-between text-white dark:text-zinc-900">
+	<div class="space-y-6 rounded bg-zinc-900 p-8 dark:bg-zinc-100">
+		<div class="mt-2 flex items-center justify-between text-white dark:text-zinc-900">
 			<div class="text-2xl font-bold lg:text-3xl">{{ pricing_features_title }}</div>
 		</div>
 
-		<div class="flex border-y border-zinc-700 dark:border-zinc-200 p-4 -mx-4 text-white dark:text-zinc-900 flex-row items-baseline space-x-2">
+		<div class="-mx-4 flex flex-row items-baseline space-x-2 border-y border-zinc-700 p-4 text-white dark:border-zinc-200 dark:text-zinc-900">
 			<div class="flex">
 				<span class="text-5xl font-bold" x-text="pricing ? '$990' : '$99'"></span>
 				<span class="text-xl font-bold" x-text="pricing ? '.00' : '.95'"></span>
@@ -23,27 +20,27 @@
 		</div>
 
 		<p class="text-base text-white dark:text-zinc-900">{{ pricing_features_list | strip_tags:p }}</p>
-		<ul class="w-full text-zinc-100 dark:text-zinc-900 space-y-2">
-			<li class="flex text-sm leading-6 ">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 dark:text-purple-500 text-green-500 shrink-0">
+		<ul class="w-full space-y-2 text-zinc-100 dark:text-zinc-900">
+			<li class="flex text-sm leading-6">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-5 w-5 shrink-0 text-green-500 dark:text-purple-500">
 					<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
 				</svg>
 				<span class="ml-3">Live site previews with a collaboration UI for team members</span>
 			</li>
-			<li class="flex text-sm leading-6 ">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 dark:text-purple-500 text-green-500 shrink-0">
+			<li class="flex text-sm leading-6">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-5 w-5 shrink-0 text-green-500 dark:text-purple-500">
 					<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
 				</svg>
 				<span class="ml-3">Instant rollbacks to any version</span>
 			</li>
-			<li class="flex text-sm leading-6 ">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 dark:text-purple-500 text-green-500 shrink-0">
+			<li class="flex text-sm leading-6">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-5 w-5 shrink-0 text-green-500 dark:text-purple-500">
 					<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
 				</svg>
 				<span class="ml-3">Deploy static assets & dynamic serverless functions</span>
 			</li>
-			<li class="flex text-sm leading-6 ">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 dark:text-purple-500 text-green-500 shrink-0">
+			<li class="flex text-sm leading-6">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-5 w-5 shrink-0 text-green-500 dark:text-purple-500">
 					<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
 				</svg>
 				<span class="ml-3">Audit logs with full history</span>
@@ -51,9 +48,8 @@
 		</ul>
 		{{ partial:components/button label="Sign In" link_type="url" url="#" iconamic="user-circle" }}
 	</div>
-	<div class="w-11/12 h-2 mx-auto rounded-b opacity-75 bg-zinc-600 dark:text-zinc-400"></div>
-	<div class="w-10/12 h-2 mx-auto rounded-b opacity-50 bg-zinc-600 dark:text-zinc-400"></div>
-	<div class="w-9/12 h-2 mx-auto rounded-b opacity-25 bg-zinc-600 dark:text-zinc-400"></div>
-	<div class="absolute opacity-50 -z-10 inset-0 blur-3xl bg-[conic-gradient(var(--tw-gradient-stops))] dark:from-purple-500 dark:via-green-800 dark:to-purple-500">
-	</div>
+	<div class="mx-auto h-2 w-11/12 rounded-b bg-zinc-600 opacity-75 dark:text-zinc-400"></div>
+	<div class="mx-auto h-2 w-10/12 rounded-b bg-zinc-600 opacity-50 dark:text-zinc-400"></div>
+	<div class="mx-auto h-2 w-9/12 rounded-b bg-zinc-600 opacity-25 dark:text-zinc-400"></div>
+	<div class="absolute inset-0 -z-10 bg-[conic-gradient(var(--tw-gradient-stops))] opacity-50 blur-3xl dark:from-purple-500 dark:via-green-800 dark:to-purple-500"></div>
 </div>

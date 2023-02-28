@@ -1,35 +1,35 @@
 {{#
-	The button partial is used in most of the site's call to action, with the exception of the buttons in the navigation bar, footer and contact page, as these buttons have custom styles.
-
-	It has three variants:
-	- Primary or solid background button for main actions.
-	- Secondary or transparent button, for secondary actions
-	- Link or info button for links
+  The button partial is used in most of the site's call to action, with the exception of the buttons in the navigation bar, footer and contact page, as these buttons have custom styles.
+  
+  It has three variants:
+  - Primary or solid background button for main actions.
+  - Secondary or transparent button, for secondary actions
+  - Link or info button for links
 #}}
 
 <div class="flex items-center space-x-2 text-xs text-zinc-400 dark:text-zinc-500">
-        <div>
-            <div class="flex items-center space-x-2 text-xs ">
-                {{ if team_member }}
-                    <figure class="object-cover w-8 h-8 overflow-hidden border rounded-full border-zinc-100 dark:border-zinc-500">
-                        {{ partial:global/picture :image="team_member:default_image" cover="true" lazy="false" maxheight="56" maxwidth="56" quality='95' }}
-                    </figure>
-                {{ else }}
-                    <figure class="object-cover w-8 h-8 overflow-hidden border rounded-full border-zinc-100 dark:border-zinc-700">
-                        {{ partial:global/picture :image="author:avatar" cover="true" lazy="false" maxheight="56" maxwidth="56" quality='95' }}
-                    </figure>
-                {{ /if }}
-                <div class="flex items-center gap-3">
-                    {{ if team_member }}
-                        <a href="{{ team_member:url }}">
-                            <span class="truncate md:w-auto">{{ team_member:title | safe_truncate:10:'...' }}</span>
-                        </a>
-                    {{ else }}
-                        <span class="truncate md:w-auto">{{ author:name }}</span>
-                    {{ /if }}
-                <span>/</span>
-                <time>{{ date iso_format="DD MMMM, YYYY" }}</time>
-            </div>
-        </div>
-    </div>
+	<div>
+		<div class="flex items-center space-x-2 text-xs">
+			{{ if team_member }}
+				<figure class="h-8 w-8 overflow-hidden rounded-full border border-zinc-100 object-cover dark:border-zinc-500">
+					{{ partial:global/picture :image="team_member:default_image" cover="true" lazy="false" maxheight="56" maxwidth="56" quality='95' }}
+				</figure>
+			{{ else }}
+				<figure class="h-8 w-8 overflow-hidden rounded-full border border-zinc-100 object-cover dark:border-zinc-700">
+					{{ partial:global/picture :image="author:avatar" cover="true" lazy="false" maxheight="56" maxwidth="56" quality='95' }}
+				</figure>
+			{{ /if }}
+			<div class="flex items-center gap-3">
+				{{ if team_member }}
+					<a href="{{ team_member:url }}">
+						<span class="truncate md:w-auto">{{ team_member:title | safe_truncate:10:'...' }}</span>
+					</a>
+				{{ else }}
+					<span class="truncate md:w-auto">{{ author:name }}</span>
+				{{ /if }}
+				<span>/</span>
+				<time>{{ date iso_format="DD MMMM, YYYY" }}</time>
+			</div>
+		</div>
+	</div>
 </div>

@@ -1,47 +1,64 @@
-
 <!-- Recommended favicon format -->
-<link rel="icon" type="image/png" href="/img/wsico/favicon.png"/>
-<link rel="apple-touch-icon" sizes="57x57" href="/img/wsico/apple-icon-57x57.png"/>
-<link rel="apple-touch-icon" sizes="60x60" href="/img/wsico/apple-icon-60x60.png"/>
-<link rel="apple-touch-icon" sizes="72x72" href="/img/wsico/apple-icon-72x72.png"/>
-<link rel="apple-touch-icon" sizes="76x76" href="/img/wsico/apple-icon-76x76.png"/>
-<link rel="apple-touch-icon" sizes="114x114" href="/img/wsico/apple-icon-114x114.png"/>
-<link rel="apple-touch-icon" sizes="120x120" href="/img/wsico/apple-icon-120x120.png"/>
-<link rel="apple-touch-icon" sizes="144x144" href="/img/wsico/apple-icon-144x144.png"/>
-<link rel="apple-touch-icon" sizes="152x152" href="/img/wsico/apple-icon-152x152.png"/>
-<link rel="apple-touch-icon" sizes="180x180" href="/img/wsico/apple-icon-180x180.png"/>
-<link rel="icon" type="image/png" sizes="192x192" href="/img/wsico/android-icon-192x192.png"/>
-<link rel="icon" type="image/png" sizes="32x32" href="/img/wsico/favicon-32x32.png"/>
-<link rel="icon" type="image/png" sizes="96x96" href="/img/wsico/favicon-96x96.png"/>
-<link rel="icon" type="image/png" sizes="16x16" href="/img/wsico/favicon-16x16.png"/>
-<link rel="manifest" href="/img/wsico/manifest.json"/>
-<meta name="msapplication-TileColor" content="#ffffff"/>
-<meta name="msapplication-TileImage" content="/img/wsico/ms-icon-144x144.png"/>
-<meta name="theme-color" content="#ffffff"/>
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<link rel="icon" type="image/png" href="/img/wsico/favicon.png" />
+<link rel="apple-touch-icon" sizes="57x57" href="/img/wsico/apple-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="60x60" href="/img/wsico/apple-icon-60x60.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="/img/wsico/apple-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="/img/wsico/apple-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="/img/wsico/apple-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="/img/wsico/apple-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="/img/wsico/apple-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="/img/wsico/apple-icon-152x152.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/img/wsico/apple-icon-180x180.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="/img/wsico/android-icon-192x192.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/img/wsico/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="96x96" href="/img/wsico/favicon-96x96.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/img/wsico/favicon-16x16.png" />
+<link rel="manifest" href="/img/wsico/manifest.json" />
+<meta name="msapplication-TileColor" content="#ffffff" />
+<meta name="msapplication-TileImage" content="/img/wsico/ms-icon-144x144.png" />
+<meta name="theme-color" content="#ffffff" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-{{#  Open Graph / Facebook #}}
+{{# Open Graph / Facebook #}}
 <meta property="og:url" content="{{ permalink }}" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="{{ meta_title ?? title }}" />
-<meta property="og:description" content="{{ meta_description ?? Webslice – The Serverless Hosting Platform.}}" />
+<meta property="og:description" content="{{ meta_description ?? Webslice–TheServerlessHostingPlatform. }}" />
 
 {{# Twitter #}}
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content="{{ permalink }}" />
 <meta property="twitter:title" content="{{ meta_title ?? title }}" />
-<meta property="twitter:description" content="{{ meta_description ?? Webslice – The Serverless Hosting Platform.}}" />
+<meta property="twitter:description" content="{{ meta_description ?? Webslice–TheServerlessHostingPlatform. }}" />
 
 {{# shows the cover image of the articles #}}
 {{ if default_image }}
-<meta property="og:image" content="{{ default_image:permalink }}" />
-<meta property="twitter:image" content="{{ default_image:permalink }}" />
-{{# if is a page it shows the image of the hero WIP #}}
-{{ elseif {{ top_section }}{{ default_image }}{{ /top_section }} }}
-<meta property="og:image" content="{{ top_section }}{{ default_image:permalink }}{{ /top_section }}" />
-<meta property="twitter:image" content="{{ top_section }}{{ default_image:permalink }}{{ /top_section }}" />
-{{# if no image is found, the default image is displayed. #}}
-{{ else }} 
-<meta property="og:image" content="{{ placeholder_image }}{{ placeholder_image:permalink }}{{ /placeholder_image }}" />
-<meta property="twitter:image" content="{{ placeholder_image }}{{ placeholder_image:permalink }}{{ /placeholder_image }}" />
+	<meta property="og:image" content="{{ default_image:permalink }}" />
+	<meta property="twitter:image" content="{{ default_image:permalink }}" />
+	{{# if is a page it shows the image of the hero WIP #}}
+{{ elseif int_a080d8a521873int_050fad6ccbbdd22int_afd9753482727c }}
+	{{ top_section }}
+		{{ default_image:permalink }}
+	{{ /top_section }}
+	" />
+	<meta
+		property="twitter:image"
+		content="{{ top_section }}
+{{ default_image:permalink }}
+{{ /top_section }}
+" />
+	{{# if no image is found, the default image is displayed. #}}
+{{ else }}
+	<meta
+		property="og:image"
+		content="{{ placeholder_image }}
+{{ placeholder_image:permalink }}
+{{ /placeholder_image }}
+" />
+	<meta
+		property="twitter:image"
+		content="{{ placeholder_image }}
+{{ placeholder_image:permalink }}
+{{ /placeholder_image }}
+" />
 {{ /if }}

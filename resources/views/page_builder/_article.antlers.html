@@ -1,17 +1,17 @@
 {{#
-	@name Article
-	@desc The article page builder block. It extends the prose typography partial.
-    @set page.page_builder.article
+  @name Article
+  @desc The article page builder block. It extends the prose typography partial.
+  @set page.page_builder.article
 #}}
 
 <!-- /page_builder/_article.antlers.html -->
 {{# grid grid-cols-12 fluid-container #}}
 {{# grid grid-cols-1 col-span-12 col-start-2 lg:col-end-9 lg:grid-cols-10 fluid-container #}}
-<section class="grid grid-cols-1 col-span-12 col-start-2 fluid-container">
-    {{ partial:typography/prose as="article" class="contents" }}
-        {{ article }}
-            {{ partial src="components/{type}" }}
-        {{ /article }}
-    {{ /partial:typography/prose }}
+<section class="fluid-container col-span-12 col-start-2 grid grid-cols-1">
+	{{ partial:typography/prose as="article" class="contents" }}
+		{{ article }}
+			{{ partial src="components/{type}" }}
+		{{ /article }}
+	{{ /partial:typography/prose }}
 </section>
 <!-- End: /page_builder/_article.antlers.html -->

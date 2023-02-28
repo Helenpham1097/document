@@ -1,39 +1,30 @@
-
 {{#
-    The Index view is the entry point of our documentation page. It features a layout similar to that found in docs.antherls.html,
-    but with the added flexibility of being able to include unique partial content specific to this page without having to add it to all pages.
+  The Index view is the entry point of our documentation page. It features a layout similar to that found in docs.antherls.html,
+  but with the added flexibility of being able to include unique partial content specific to this page without having to add it to all pages.
 #}}
-<div class="antialiased ">
-    <div class="container relative flex flex-col lg:flex-row mx-auto antialiased max-w-7xl lg:py-14">
-
-        {{ partial:documentation/_sidebar }}
-        
-        <main class="relative w-full lg:w-3/6 pt-14 sm:pt-0 mx-auto space-y-16">
-            <div class="relative flex group ">
-                <div
-                    class="absolute block w-5 h-5 -ml-2 transition -translate-x-full translate-y-1/2 rounded-lg opacity-0 group-hover:opacity-90 group/anchor bg-zinc-50 ring-1 ring-inset ring-zinc-300 hover:ring-zinc-500 dark:bg-zinc-800 dark:ring-zinc-700 dark:hover:bg-zinc-700 dark:hover:ring-zinc-600"
-                >
-                    <svg viewBox="0 0 20 20" fill="none" stroke-linecap="round" aria-hidden="true" class="w-5 h-5 transition stroke-zinc-500 dark:stroke-zinc-400 dark:group-hover/anchor:stroke-white">
-                        <path d="m6.5 11.5-.964-.964a3.535 3.535 0 1 1 5-5l.964.964m2 2 .964.964a3.536 3.536 0 0 1-5 5L8.5 13.5m0-5 3 3"></path>
-                    </svg>
-                </div>
-                <a class="no-underline " href="#{{ title | slugify }}">
-                    {{ partial:typography/h3 content="{{ title }}" }}
-                </a>
-            </div>
-            {{ partial:typography/prose as="article" class="prose dark:prose-p:text-zinc-300 dark:prose-invert" }}
-                {{ article }}
-                    {{ partial src="components/{type}" }}
-                {{ /article }}
-            {{ /partial:typography/prose }}
-            
-            
-            <div class="my-16 xl:max-w-none">
-                {{ partial:documentation/_resources_card }}
-            </div>
-            
-        </main>
-        <div class="hidden lg:block w-1/6"></div>
-
-    </div>
+<div class="antialiased">
+	<div class="container relative mx-auto flex max-w-7xl flex-col antialiased lg:flex-row lg:py-14">
+		{{ partial:documentation/_sidebar }}
+		<main class="relative mx-auto w-full space-y-16 pt-14 sm:pt-0 lg:w-3/6">
+			<div class="group relative flex">
+				<div class="group/anchor absolute -ml-2 block h-5 w-5 -translate-x-full translate-y-1/2 rounded-lg bg-zinc-50 opacity-0 ring-1 ring-inset ring-zinc-300 transition hover:ring-zinc-500 group-hover:opacity-90 dark:bg-zinc-800 dark:ring-zinc-700 dark:hover:bg-zinc-700 dark:hover:ring-zinc-600">
+					<svg viewBox="0 0 20 20" fill="none" stroke-linecap="round" aria-hidden="true" class="dark:group-hover/anchor:stroke-white h-5 w-5 stroke-zinc-500 transition dark:stroke-zinc-400">
+						<path d="m6.5 11.5-.964-.964a3.535 3.535 0 1 1 5-5l.964.964m2 2 .964.964a3.536 3.536 0 0 1-5 5L8.5 13.5m0-5 3 3"></path>
+					</svg>
+				</div>
+				<a class="no-underline" href="#{{ title | slugify }}">
+					{{ partial:typography/h3 content="{{title}}" }}
+				</a>
+			</div>
+			{{ partial:typography/prose as="article" class="prose dark:prose-p:text-zinc-300 dark:prose-invert" }}
+				{{ article }}
+					{{ partial src="components/{type}" }}
+				{{ /article }}
+			{{ /partial:typography/prose }}
+			<div class="my-16 xl:max-w-none">
+				{{ partial:documentation/_resources_card }}
+			</div>
+		</main>
+		<div class="hidden w-1/6 lg:block"></div>
+	</div>
 </div>

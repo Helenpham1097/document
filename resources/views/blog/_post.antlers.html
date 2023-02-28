@@ -1,89 +1,82 @@
 {{# Partial template for non-featured blog posts, used in the blog index grid and related blog entries #}}
-
-
 {{ if square }}
-
-<a href="{{ url }}">
-    <article class="space-y-8 group">
-            {{ if default_image }}
-            <figure class="overflow-hidden border rounded-lg border-zinc-200 dark:border-zinc-700 bg-zinc-50 aspect-w-6 aspect-h-4 ">
-                {{ partial:global/picture :image="default_image" cover="true" maxheight="512" lazy="false" maxwidth="768" quality='70' }}
-            </figure>
-            {{ /if }}
-            <div class="flex items-start h-full">
-            <div class="flex flex-col flex-shrink-0 w-12 leading-none text-center">
-                <span class="pb-2 mb-2 border-b-2 text-zinc-500 dark:text-zinc-600 border-zinc-200 dark:border-zinc-700">{{ date iso_format="MMM" }}</span>
-                <span class="text-lg font-medium leading-none text-zinc-800 dark:text-zinc-600 title-font">{{ date iso_format="DD" }}</span>
-            </div>
-            <div class="flex-grow pl-6">
-                <h2 class="mb-1 text-xs font-medium tracking-widest text-purple-500 title-font">
-                {{ if categories }}
-                    <div class="font-medium text-purple-500 uppercase">
-                    {{ categories  limit="1" }}  {{ title }} {{ /categories }}
-                    </div>
-                    {{ else }}
-                    <div class="font-medium text-purple-500 uppercase">
-                        Article
-                    </div>
-                {{ /if }}
-                </h2>
-                <h1 class="mb-3 text-xl font-medium text-zinc-900 title-font">{{ title }}</h1>
-                <p class="mb-5 text-base">{{ excerpt | strip_tags:p | safe_truncate:90:... }}</p>
-                <div class="inline-flex items-center text-lg font-semibold text-purple-500 focus-visible:outline-none focus-visible:ring focus-visible:ring-transparent active:text-sky-700 hover:text-purple-500 focus:outline-none focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:outline-dashed focus-visible:ring-offset-sitehost-blue" >
-                        Read more
-                        <div class="transition duration-500 ease-in-out transform group-hover:translate-x-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mt-0.5 transition duration-500 ease-in-out transform translate-x-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                            </svg>
-                        </div>
-                    </div>
-            </div>
-            </div>
-        </article>
-</a>
-
+	<a href="{{ url }}">
+		<article class="group space-y-8">
+			{{ if default_image }}
+				<figure class="aspect-w-6 aspect-h-4 overflow-hidden rounded-lg border border-zinc-200 bg-zinc-50 dark:border-zinc-700">
+					{{ partial:global/picture :image="default_image" cover="true" maxheight="512" lazy="false" maxwidth="768" quality='70' }}
+				</figure>
+			{{ /if }}
+			<div class="flex h-full items-start">
+				<div class="flex w-12 flex-shrink-0 flex-col text-center leading-none">
+					<span class="mb-2 border-b-2 border-zinc-200 pb-2 text-zinc-500 dark:border-zinc-700 dark:text-zinc-600">{{ date iso_format="MMM" }}</span>
+					<span class="title-font text-lg font-medium leading-none text-zinc-800 dark:text-zinc-600">{{ date iso_format="DD" }}</span>
+				</div>
+				<div class="flex-grow pl-6">
+					<h2 class="title-font mb-1 text-xs font-medium tracking-widest text-purple-500">
+						{{ if categories }}
+							<div class="font-medium uppercase text-purple-500">
+								{{ categories limit="1" }}
+									{{ title }}
+								{{ /categories }}
+							</div>
+						{{ else }}
+							<div class="font-medium uppercase text-purple-500">Article</div>
+						{{ /if }}
+					</h2>
+					<h1 class="title-font mb-3 text-xl font-medium text-zinc-900">{{ title }}</h1>
+					<p class="mb-5 text-base">{{ excerpt | strip_tags:p | safe_truncate:90:... }}</p>
+					<div class="focus-visible:ring-offset-sitehost-blue inline-flex items-center text-lg font-semibold text-purple-500 hover:text-purple-500 focus:outline-none focus-visible:outline-none focus-visible:outline-dashed focus-visible:ring focus-visible:ring-transparent focus-visible:ring-white focus-visible:ring-offset-2 active:text-sky-700">
+						Read more
+						<div class="transform transition duration-500 ease-in-out group-hover:translate-x-2">
+							<svg xmlns="http://www.w3.org/2000/svg" class="mt-0.5 h-5 w-5 translate-x-0 transform transition duration-500 ease-in-out" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+							</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+	</a>
 {{ else }}
-
-<div>
-<a href="{{ url }}">
-    <article class="space-y-8 group">
-            {{ if default_image }}
-            <figure class="overflow-hidden border border-zinc-200 dark:border-zinc-700 rounded-lg bg-zinc-50 aspect-[6/4] ">
-                {{ partial:global/picture :image="default_image" cover="true" maxheight="512" lazy="false" maxwidth="768" quality='70' }}
-            </figure>
-            {{ /if }}
-            <div class="flex items-start h-full">
-            <div class="flex flex-col flex-shrink-0 w-12 leading-none text-center">
-                <span class="pb-2 mb-2 border-b-2 text-zinc-400 dark:text-zinc-400 border-zinc-200 dark:border-zinc-700">{{ date iso_format="MMM" }}</span>
-                <span class="text-lg font-medium leading-none text-zinc-800 dark:text-zinc-400 title-font">{{ date iso_format="DD" }}</span>
-            </div>
-            <div class="flex-grow pl-6">
-                <h2 class="mb-1 text-xs font-medium tracking-widest text-purple-500 title-font">
-                {{ if categories }}
-                    <div class="font-medium text-purple-500 uppercase">
-                    {{ categories  limit="1" }}  {{ title }} {{ /categories }}
-                    </div>
-                    {{ else }}
-                    <div class="font-medium text-purple-500 uppercase">
-                        Article
-                    </div>
-                {{ /if }}
-                </h2>
-                <h1 class="mb-3 text-xl font-medium text-zinc-900 title-font mt-2 group-hover:opacity-60 tracking-tight">{{ title }}</h1>
-                <p class="mb-5 text-base line-clamp-2">{{ excerpt | strip_tags | safe_truncate:110:... }}</p>
-                <div class="inline-flex items-center text-lg font-semibold text-purple-500 focus-visible:outline-none focus-visible:ring focus-visible:ring-transparent active:text-sky-700 hover:text-purple-500 focus:outline-none focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:outline-dashed focus-visible:ring-offset-sitehost-blue" >
-                        Read more
-                        <div class="transition duration-500 ease-in-out transform group-hover:translate-x-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mt-0.5 transition duration-500 ease-in-out transform translate-x-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                            </svg>
-                        </div>
-                    </div>
-            </div>
-            </div>
-        </article>
-</a>
-
-</div>
-
+	<div>
+		<a href="{{ url }}">
+			<article class="group space-y-8">
+				{{ if default_image }}
+					<figure class="aspect-[6/4] overflow-hidden rounded-lg border border-zinc-200 bg-zinc-50 dark:border-zinc-700">
+						{{ partial:global/picture :image="default_image" cover="true" maxheight="512" lazy="false" maxwidth="768" quality='70' }}
+					</figure>
+				{{ /if }}
+				<div class="flex h-full items-start">
+					<div class="flex w-12 flex-shrink-0 flex-col text-center leading-none">
+						<span class="mb-2 border-b-2 border-zinc-200 pb-2 text-zinc-400 dark:border-zinc-700 dark:text-zinc-400">{{ date iso_format="MMM" }}</span>
+						<span class="title-font text-lg font-medium leading-none text-zinc-800 dark:text-zinc-400">{{ date iso_format="DD" }}</span>
+					</div>
+					<div class="flex-grow pl-6">
+						<h2 class="title-font mb-1 text-xs font-medium tracking-widest text-purple-500">
+							{{ if categories }}
+								<div class="font-medium uppercase text-purple-500">
+									{{ categories limit="1" }}
+										{{ title }}
+									{{ /categories }}
+								</div>
+							{{ else }}
+								<div class="font-medium uppercase text-purple-500">Article</div>
+							{{ /if }}
+						</h2>
+						<h1 class="title-font mb-3 mt-2 text-xl font-medium tracking-tight text-zinc-900 group-hover:opacity-60">{{ title }}</h1>
+						<p class="line-clamp-2 mb-5 text-base">{{ excerpt | strip_tags | safe_truncate:110:... }}</p>
+						<div class="focus-visible:ring-offset-sitehost-blue inline-flex items-center text-lg font-semibold text-purple-500 hover:text-purple-500 focus:outline-none focus-visible:outline-none focus-visible:outline-dashed focus-visible:ring focus-visible:ring-transparent focus-visible:ring-white focus-visible:ring-offset-2 active:text-sky-700">
+							Read more
+							<div class="transform transition duration-500 ease-in-out group-hover:translate-x-2">
+								<svg xmlns="http://www.w3.org/2000/svg" class="mt-0.5 h-5 w-5 translate-x-0 transform transition duration-500 ease-in-out" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+								</svg>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+		</a>
+	</div>
 {{ /if }}
