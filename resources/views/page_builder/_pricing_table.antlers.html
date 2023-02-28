@@ -1,11 +1,10 @@
-<section class="relative w-full h-full">
-	<div class="absolute hidden w-full bg-zinc-50 dark:bg-zinc-800 lg:block h-[34rem]"></div>
-	<div class="relative px-4 py-16 mx-auto space-y-8 sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:px-8 lg:py-20" x-id="['pricing']" x-data="{pricing: false}">
-
-		<div class="max-w-xl md:mx-auto sm:text-center lg:max-w-2xl">
-			<h2 class="pt-4 mb-5 text-xl font-extrabold text-center text-zinc-800 focus:outline-none xl:text-5xl md:text-3xl dark:text-white">
+<section class="relative h-full w-full">
+	<div class="absolute hidden h-[34rem] w-full bg-zinc-50 dark:bg-zinc-800 lg:block"></div>
+	<div class="relative mx-auto space-y-8 px-4 py-16 sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:px-8 lg:py-20" x-id="['pricing']" x-data="{pricing: false}">
+		<div class="max-w-xl sm:text-center md:mx-auto lg:max-w-2xl">
+			<h2 class="mb-5 pt-4 text-center text-xl font-extrabold text-zinc-800 focus:outline-none dark:text-white md:text-3xl xl:text-5xl">
 				<span class="relative inline-block">
-					<svg viewBox="0 0 52 24" fill="currentColor" class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-zinc-400 lg:w-32 lg:-ml-24 lg:-mt-10 sm:block">
+					<svg viewBox="0 0 52 24" fill="currentColor" class="absolute top-0 left-0 z-0 -mt-8 -ml-20 hidden w-32 text-zinc-400 sm:block lg:-ml-24 lg:-mt-10 lg:w-32">
 						<defs>
 							<pattern id="2c67e949-4a23-49f7-bf27-ca140852cf21" x="0" y="0" width=".135" height=".30">
 								<circle cx="1" cy="1" r=".7"></circle>
@@ -14,43 +13,46 @@
 						<rect fill="url(#2c67e949-4a23-49f7-bf27-ca140852cf21)" width="52" height="24"></rect>
 					</svg>
 					<span class="relative">
-						{{ display_title_section }} {{ partial:typography/h2 :content="title" color='' }} {{ /display_title_section}}
+						{{ display_title_section }}
+							{{ partial:typography/h2 :content="title" color='' }}
+						{{ /display_title_section }}
 					</span>
 				</span>
 			</h2>
 			<p class="text-base text-zinc-700 dark:text-zinc-300 md:text-lg">
-				{{ display_title_section }} {{ partial:typography/prose }} {{ textarea_field }} {{ /partial:typography/prose }} {{ /display_title_section}}
+				{{ display_title_section }}
+					{{ partial:typography/prose }}
+						{{ textarea_field }}
+					{{ /partial:typography/prose }}
+				{{ /display_title_section }}
 			</p>
 		</div>
-	
+
 		<div class="mx-auto flex justify-center">
-			{{ if pricing_toggle }} {{ partial:general_content/toggle }} {{ /if }}
+			{{ if pricing_toggle }}
+				{{ partial:general_content/toggle }}
+			{{ /if }}
 		</div>
-	
-		<div
-			class="mx-auto grid gap-8 md:flex-row {{ if Items | count == 1 }} max-w-lg {{ /if }}
-			{{ if Items | count >= 4 }} grid-cols-1 antialiased lg:grid-cols-2 2xl:grid-cols-4
+
+		<div class="{{ if Items | count == 1 }} max-w-lg {{ /if }} {{ if Items | count >= 4 }} grid-cols-1 antialiased lg:grid-cols-2 2xl:grid-cols-4
 				{{ elseif Items | count >= 3 }} lg:grid-cols-3
 				{{ elseif Items | count >= 2 }} max-w-5xl md:grid-cols-2
 				{{ else }} grid-cols-1 items-center mx-auto
-			{{ /if }}"
-		>
-			{{ Items }} {{ partial:page_builder/pricing_item }} {{ /Items }}
+			{{ /if }} mx-auto grid gap-8 md:flex-row">
+			{{ Items }}
+				{{ partial:page_builder/pricing_item }}
+			{{ /Items }}
 		</div>
 	</div>
 </section>
 
-
-
-	
-
-<section class="relative w-full h-full">
-	<div class="relative px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:px-8 lg:py-20">
-		<div class="flex flex-col justify-center w-full max-w-6xl pt-8 mx-auto space-y-12 sm:space-y-0 lg:space-x-12 sm:space-x-6 md:flex-row" x-data="{tab: 1}">
-			<div class="flex {{ if Items | count == 1 }} justify-center {{ else }} justify-start {{ /if }} text-zinc-800 dark:text-white sm:space-y-6 lg:w-2/4 flex-col">
-				<h2 class="text-xl font-extrabold focus:outline-none xl:text-5xl md:text-3xl">
+<section class="relative h-full w-full">
+	<div class="relative mx-auto px-4 py-16 sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:px-8 lg:py-20">
+		<div class="mx-auto flex w-full max-w-6xl flex-col justify-center space-y-12 pt-8 sm:space-y-0 sm:space-x-6 md:flex-row lg:space-x-12" x-data="{tab: 1}">
+			<div class="{{ if Items | count == 1 }} justify-center {{ else }} justify-start {{ /if }} flex flex-col text-zinc-800 dark:text-white sm:space-y-6 lg:w-2/4">
+				<h2 class="text-xl font-extrabold focus:outline-none md:text-3xl xl:text-5xl">
 					<span class="relative inline-block">
-						<svg viewBox="0 0 52 24" fill="currentColor" class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-zinc-400 lg:w-32 lg:-ml-16 lg:-mt-10 sm:block">
+						<svg viewBox="0 0 52 24" fill="currentColor" class="absolute top-0 left-0 z-0 -mt-8 -ml-20 hidden w-32 text-zinc-400 sm:block lg:-ml-16 lg:-mt-10 lg:w-32">
 							<defs>
 								<pattern id="2c67e949-4a23-49f7-bf27-ca140852cf21" x="0" y="0" width=".135" height=".30">
 									<circle cx="1" cy="1" r=".7"></circle>
@@ -59,40 +61,46 @@
 							<rect fill="url(#2c67e949-4a23-49f7-bf27-ca140852cf21)" width="52" height="24"></rect>
 						</svg>
 						<span class="relative">
-							{{ display_title_section }} {{ partial:typography/h2 :content="title" color='' }} {{ /display_title_section}}
+							{{ display_title_section }}
+								{{ partial:typography/h2 :content="title" color='' }}
+							{{ /display_title_section }}
 						</span>
 					</span>
 				</h2>
-	
-				{{ display_title_section }} {{ partial:typography/prose }} {{ textarea_field }} {{ /partial:typography/prose }} {{ /display_title_section}} {{ if Items | count >= 2 }}
-				<div class="lg:pt-8 pt-2 space-y-6">
-					<div>Choose a pricing plan:</div>
-					<div class="space-y-3 lg:translate-x-16 sm:translate-x-8">
-						{{ Items }}
-						<div
-							class="relative px-4 py-4 transition-all duration-200 bg-white rounded-md shadow-zinc-500/10 dark:bg-zinc-800 group lg:rounded-r-none lg:rounded-l-xl lg:p-6 lg:bg-white/10 lg:ring-1 lg:ring-inset lg:ring-black/10 dark:lg:ring-white/10"
-							:class="{'sm:border-l-2 border-l-0 border-b-2 sm:border-b-0 transform sm:translate-x-2 shadow-lg border-purple-500 font-bold': tab === {{ count }}, ' shadow-none transform lg:-translate-x-2': tab !== {{ count }}}"
-						>
-							<button class="text-xl font-display dark:text-zinc-200 text-zinc-800" role="tab" type="button" @click.prevent="tab = {{ count }}">
-								{{ pricing_features_title }}
-							</button>
+
+				{{ display_title_section }}
+					{{ partial:typography/prose }}
+						{{ textarea_field }}
+					{{ /partial:typography/prose }}
+				{{ /display_title_section }}
+				{{ if Items | count >= 2 }}
+					<div class="space-y-6 pt-2 lg:pt-8">
+						<div>Choose a pricing plan:</div>
+						<div class="space-y-3 sm:translate-x-8 lg:translate-x-16">
+							{{ Items }}
+								<div class="group relative rounded-md bg-white px-4 py-4 shadow-zinc-500/10 transition-all duration-200 dark:bg-zinc-800 lg:rounded-r-none lg:rounded-l-xl lg:bg-white/10 lg:p-6 lg:ring-1 lg:ring-inset lg:ring-black/10 dark:lg:ring-white/10" :class="{'sm:border-l-2 border-l-0 border-b-2 sm:border-b-0 transform sm:translate-x-2 shadow-lg border-purple-500 font-bold': tab === {{ count }}, ' shadow-none transform lg:-translate-x-2': tab !== {{ count }}}">
+									<button class="font-display text-xl text-zinc-800 dark:text-zinc-200" role="tab" type="button" @click.prevent="tab = {{ count }}">
+										{{ pricing_features_title }}
+									</button>
+								</div>
+							{{ /Items }}
 						</div>
-						{{ /Items }}
 					</div>
-				</div>
 				{{ /if }}
 			</div>
-	
+
 			<div class="lg:w-2/4" x-id="['pricing']" x-data="{pricing: false}">
-				<div class="flex w-full mx-auto justify-items-center">
-					{{ if pricing_toggle }} {{ partial:general_content/toggle }} {{ /if }}
+				<div class="mx-auto flex w-full justify-items-center">
+					{{ if pricing_toggle }}
+						{{ partial:general_content/toggle }}
+					{{ /if }}
 				</div>
 				{{ Items }}
-				<div class="space-y-6" x-show="tab === {{ count }}">
-					<div class="space-y-6 text-xl text-gray-800" x-show="tab === {{ count }}" x-transition:enter="transition delay-100 duration-500 transform ease-in" x-transition:enter-start="opacity-90">
-						{{ partial:page_builder/_pricing_item }}
+					<div class="space-y-6" x-show="tab === {{ count }}">
+						<div class="space-y-6 text-xl text-gray-800" x-show="tab === {{ count }}" x-transition:enter="transition delay-100 duration-500 transform ease-in" x-transition:enter-start="opacity-90">
+							{{ partial:page_builder/_pricing_item }}
+						</div>
 					</div>
-				</div>
 				{{ /Items }}
 			</div>
 		</div>

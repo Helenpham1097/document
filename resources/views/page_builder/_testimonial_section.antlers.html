@@ -1,15 +1,14 @@
-
 <div class="space-y-12 md:space-y-24">
 	{{ if title_testimonial }}
-	<div class="mx-auto space-y-8 text-center md:max-w-2xl">
-		<div class="text-purple-500 h3">Testimonial</div>
-		<h2 class="h2">{{ title_testimonial }}</h2>
-		{{# <p class="excerpt">{{ testimonial_textarea | strip_tags:p }}</p> #}}
-	</div>
+		<div class="mx-auto space-y-8 text-center md:max-w-2xl">
+			<div class="h3 text-purple-500">Testimonial</div>
+			<h2 class="h2">{{ title_testimonial }}</h2>
+			{{# <p class="excerpt">{{ testimonial_textarea | strip_tags:p }}</p> #}}
+		</div>
 	{{ /if }}
 	<div class="relative">
-		<div class="absolute h-full w-[120%] transform -translate-y-1/2 top-1/2 left-1/2 opacity-20 -translate-x-1/2  -z-10 rotate-6 bg-gradient-to-r from-purple-500 to-green-400"></div>
-		<div class="container relative flex flex-col gap-8 space-y-8 max-w-7xl justify-evenly md:flex-row md:space-y-0">
+		<div class="absolute top-1/2 left-1/2 -z-10 h-full w-[120%] -translate-y-1/2 -translate-x-1/2 rotate-6 transform bg-gradient-to-r from-purple-500 to-green-400 opacity-20"></div>
+		<div class="container relative flex max-w-7xl flex-col justify-evenly gap-8 space-y-8 md:flex-row md:space-y-0">
 			{{ testimonial }}
 				{{ partial:general_content/testimonial_card }}
 			{{ /testimonial }}

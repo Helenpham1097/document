@@ -1,25 +1,14 @@
 <section class="container mx-auto max-w-7xl">
-	
-	
-	{{ if Items | count >= 4 }}
-		<div class="grid grid-cols-2 gap-8 antialiased xl:grid-cols-4">
-	{{ elseif Items | count >= 3 }}
-		<div class="grid justify-between gap-8 lg:grid-cols-3 lg:flex-row ">
-	{{ elseif Items | count >= 2 }}
-		<div class="grid max-w-5xl gap-8 mx-auto lg:grid-cols-2 lg:flex-row ">
-	{{ /if }}
-	{{ if Items | count === 1 }} 
-		<div class="grid items-center grid-cols-1 gap-8 md:flex-row ">
-	{{ /if }}
+	<div class="{{ if Items | count >= 4 }} grid grid-cols-2 gap-8 antialiased xl:grid-cols-4 {{ elseif Items | count >= 3 }} grid justify-between gap-8 lg:grid-cols-3 lg:flex-row {{ elseif Items | count >= 2 }} grid max-w-5xl gap-8 mx-auto lg:grid-cols-2 lg:flex-row {{ else }} grid items-center grid-cols-1 gap-8 md:flex-row {{ /if }}">
 		{{ Items }}
 			<div>
-				<div class="flex flex-col flex-wrap flex-1 max-w-sm p-6 mx-auto space-y-8 duration-500 transform {{ switch between='bg-purple-100 | bg-green-100 mt-24' }} shadow-xl shadow-slate-500/10 md:p-12 group rounded-xl hover:-translate-y-4">
+				<div class="{{ switch between='bg-purple-100 | bg-green-100 mt-24' }} group mx-auto flex max-w-sm flex-1 transform flex-col flex-wrap space-y-8 rounded-xl p-6 shadow-xl shadow-slate-500/10 duration-500 hover:-translate-y-4 md:p-12">
 					{{ if default_image }}
 						{{ partial:components/figure :image="default_image" remove_prose="true" cover="true" maxheight="512" lazy="false" maxwidth="768" quality='70' }}
 					{{ /if }}
 					<div class="h2">0{{ count }}.</div>
 					<div class="space-y-4">
-						<div class="space-y-4 prose dark:prose-invert ">
+						<div class="prose space-y-4 dark:prose-invert">
 							{{ partial:typography/h4 :content="step_title" }}
 							{{ step_textarea }}
 							{{ partial:components/buttons }}
@@ -28,6 +17,5 @@
 				</div>
 			</div>
 		{{ /Items }}
-		
 	</div>
 </section>

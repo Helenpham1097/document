@@ -1,63 +1,51 @@
 {{# Template showing the last post from the collection of posts #}}
-
 {{ collection:blog limit="3" paginate="false" as='posts' sort="date:desc" }}
-	<div class="container flex flex-col items-center justify-center w-full space-y-12 max-w-7xl lg:space-y-0 lg:space-x-12 lg:flex-row" x-data="{tab: 1}">
-		<div class="hidden lg:w-1/2 md:block">
-			{{ posts }}   
-			<div class="relative space-y-6 " x-show="tab === {{ count }}">
-				<div class="absolute top-0 left-0 hidden -translate-x-20 -translate-y-1/2 md:block lg:-translate-x-12">
-					<svg class="text-green-500 dark:opacity-50" width="91" height="89" viewBox="0 0 91 89" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M0 12.2713V27.5241L28.2975 0H12.5636L0 12.2713Z" fill="currentColor"></path>
-						<path d="M0 42.7713V58.0241L28.2975 30.5H12.5636L0 42.7713Z" fill="currentColor"></path>
-						<path d="M0 73.2713V88.5241L28.2975 61H12.5636L0 73.2713Z" fill="currentColor"></path>
-						<path d="M61.9727 12.2713V27.5241L90.2702 0H74.5363L61.9727 12.2713Z" fill="currentColor"></path>
-						<path d="M61.9727 42.7713V58.0241L90.2702 30.5H74.5363L61.9727 42.7713Z" fill="currentColor"></path>
-						<path d="M61.9727 73.2713V88.5241L90.2702 61H74.5363L61.9727 73.2713Z" fill="currentColor"></path>
-						<path d="M30.9727 12.2713V27.5241L59.2702 0H43.5363L30.9727 12.2713Z" fill="currentColor"></path>
-						<path d="M30.9727 42.7713V58.0241L59.2702 30.5H43.5363L30.9727 42.7713Z" fill="currentColor"></path>
-						<path d="M30.9727 73.2713V88.5241L59.2702 61H43.5363L30.9727 73.2713Z" fill="currentColor"></path>
-					</svg>
+	<div class="container flex w-full max-w-7xl flex-col items-center justify-center space-y-12 lg:flex-row lg:space-y-0 lg:space-x-12" x-data="{tab: 1}">
+		<div class="hidden md:block lg:w-1/2">
+			{{ posts }}
+				<div class="relative space-y-6" x-show="tab === {{ count }}">
+					<div class="absolute top-0 left-0 hidden -translate-x-20 -translate-y-1/2 md:block lg:-translate-x-12">
+						<svg class="text-green-500 dark:opacity-50" width="91" height="89" viewBox="0 0 91 89" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M0 12.2713V27.5241L28.2975 0H12.5636L0 12.2713Z" fill="currentColor"></path>
+							<path d="M0 42.7713V58.0241L28.2975 30.5H12.5636L0 42.7713Z" fill="currentColor"></path>
+							<path d="M0 73.2713V88.5241L28.2975 61H12.5636L0 73.2713Z" fill="currentColor"></path>
+							<path d="M61.9727 12.2713V27.5241L90.2702 0H74.5363L61.9727 12.2713Z" fill="currentColor"></path>
+							<path d="M61.9727 42.7713V58.0241L90.2702 30.5H74.5363L61.9727 42.7713Z" fill="currentColor"></path>
+							<path d="M61.9727 73.2713V88.5241L90.2702 61H74.5363L61.9727 73.2713Z" fill="currentColor"></path>
+							<path d="M30.9727 12.2713V27.5241L59.2702 0H43.5363L30.9727 12.2713Z" fill="currentColor"></path>
+							<path d="M30.9727 42.7713V58.0241L59.2702 30.5H43.5363L30.9727 42.7713Z" fill="currentColor"></path>
+							<path d="M30.9727 73.2713V88.5241L59.2702 61H43.5363L30.9727 73.2713Z" fill="currentColor"></path>
+						</svg>
+					</div>
+					<div class="space-y-6 overflow-hidden rounded-lg text-xl text-gray-800" x-show="tab === {{ count }}" x-transition:enter="transition delay-100 duration-500 transform ease-in" x-transition:enter-start="opacity-0">
+						{{ partial:global/picture :image="default_image" cover="true" maxheight="512" lazy="false" maxwidth="768" quality='70' }}
+					</div>
 				</div>
-				<div
-					class="space-y-6 overflow-hidden text-xl text-gray-800 rounded-lg"
-					x-show="tab === {{ count  }}"
-					x-transition:enter="transition delay-100 duration-500 transform ease-in"
-					x-transition:enter-start="opacity-0">
-					{{ partial:global/picture :image="default_image" cover="true" maxheight="512" lazy="false" maxwidth="768" quality='70' }}
-				</div>
-			</div>
 			{{ /posts }}
 		</div>
-		<div class="relative flex flex-col justify-start space-y-6 lg:w-1/2 ">
+		<div class="relative flex flex-col justify-start space-y-6 lg:w-1/2">
 			{{ partial:typography/h5 :content="pre-title" color='text-purple-500 dark:text-green-500 ' }}
 			{{ partial:typography/h3 :content="title_section" color='' }}
 			{{ posts }}
-				<div
-					title="{{ title }}"
-					class="relative p-4 text-lg text-black border border-zinc-200 dark:border-zinc-700 sm:p-8 rounded-xl lg:w-full"
-					:class="{'z-20 transform dark:bg-zinc-800 bg-zinc-100   ': tab === {{ count }}, ' transform transition  dark:bg-zinc-900 ease-in-out ': tab !== {{ count  }}}"
-					@click.prevent="tab = {{ count  }}"
-				>
+				<div title="{{ title }}" class="relative rounded-xl border border-zinc-200 p-4 text-lg text-black dark:border-zinc-700 sm:p-8 lg:w-full" :class="{'z-20 transform dark:bg-zinc-800 bg-zinc-100   ': tab === {{ count }}, ' transform transition  dark:bg-zinc-900 ease-in-out ': tab !== {{ count }}}" @click.prevent="tab = {{ count }}">
 					<span class="flex">
-						<div class="flex flex-col flex-shrink-0 w-12 leading-none text-center text-zinc-600 dark:text-zinc-400">
-							<span class="pb-2 mb-2 border-b-2 border-zinc-400 dark:border-zinc-400">
+						<div class="flex w-12 flex-shrink-0 flex-col text-center leading-none text-zinc-600 dark:text-zinc-400">
+							<span class="mb-2 border-b-2 border-zinc-400 pb-2 dark:border-zinc-400">
 								{{ date iso_format="MMM" }}
 							</span>
 							<span class="leading-none">
 								{{ date iso_format="DD" }}
 							</span>
 						</div>
-						<div class="ml-6 space-y-2 grow">
-							<div class="block text-xl font-semibold text-zinc-800 hs-tab-active:text-purple-600 dark:hs-tab-active:text-purple-500 dark:text-zinc-200">
+						<div class="ml-6 grow space-y-2">
+							<div class="hs-tab-active:text-purple-600 dark:hs-tab-active:text-purple-500 block text-xl font-semibold text-zinc-800 dark:text-zinc-200">
 								{{ title }}
 							</div>
-							{{ partial:components/button label="Read more" button_type="inline" link_type="url" class="col-span-2 py-0 pl-0" url="{{ url }}" iconamic="cheveron-right" }}
+							{{ partial:components/button label="Read more" button_type="inline" link_type="url" class="col-span-2 py-0 pl-0" url="{{url}}" iconamic="cheveron-right" }}
 						</div>
 					</span>
 				</div>
-				
-			{{ /posts }}			
+			{{ /posts }}
 		</div>
-		
 	</div>
 {{ /collection:blog }}

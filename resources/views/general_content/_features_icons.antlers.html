@@ -1,44 +1,29 @@
-
 {{# Price-related feature template #}}
-<section class="mx-auto space-y-12 ">
+<section class="mx-auto space-y-12">
 	{{ display_title_section }}
 		{{ partial:global/section_title }}
-	{{ /display_title_section}}
-	
-	{{ if items | count >= 4 }}
-		<div class="container grid max-w-5xl gap-8 mx-auto md:grid-cols-2">
-	{{ elseif items | count >= 3 }}
-		<div class="container grid justify-between gap-8 md:grid-cols-3 md:flex-row ">
-	{{ elseif items | count >= 2 }}
-		<div class="container grid max-w-5xl gap-8 mx-auto md:grid-cols-2 md:flex-row ">
-	{{ /if }}
-	{{ if items | count === 1 }} 
-		<div class="container grid items-center grid-cols-1 gap-8 md:flex-row ">
-	{{ /if }}
-	{{ items }}
-		<div class="w-full max-w-lg mx-auto space-y-8 ">
-
-
-			<div class="flex flex-col items-center justify-between col-span-4 space-y-4 group">
-				<div class="flex flex-row space-x-4 md:space-x-6 ">
-					{{ if feature_image}}
-					<img class="flex items-center justify-center w-12 h-12 transition duration-500 ease-in-out transform -translate-y-3 group-hover:drop-shadow-2xl group-hover:-translate-x-1 group-hover:-translate-y-4 " src="{{ feature_image }}" alt="">
-					{{ else }}
-					<div class="w-24"></div>
-					{{ /if }}
-					<div class="flex flex-col space-y-6">
-						{{ if features_columns_title }}
-							<h5 class="h3">{{ features_columns_title }}</h5>
+	{{ /display_title_section }}
+	<div class="{{ if items | count >= 4 }} max-w-5xl gap-8 mx-auto md:grid-cols-2 {{ elseif items | count >= 3 }} justify-between gap-8 md:grid-cols-3 md:flex-row {{ elseif items | count >= 2 }} max-w-5xl gap-8 mx-auto md:grid-cols-2 md:flex-row {{ elseif items | count === 1 }} items-center grid-cols-1 gap-8 md:flex-row {{ /if }} container grid">
+		{{ items }}
+			<div class="mx-auto w-full max-w-lg space-y-8">
+				<div class="group col-span-4 flex flex-col items-center justify-between space-y-4">
+					<div class="flex flex-row space-x-4 md:space-x-6">
+						{{ if feature_image }}
+							<img class="flex h-12 w-12 -translate-y-3 transform items-center justify-center transition duration-500 ease-in-out group-hover:-translate-x-1 group-hover:-translate-y-4 group-hover:drop-shadow-2xl" src="{{ feature_image }}" alt="" />
+						{{ else }}
+							<div class="w-24"></div>
 						{{ /if }}
-						{{ if features_columns_list }}
-							<div class="prose ">{{ features_columns_list }}</div>
-						{{ /if }}
+						<div class="flex flex-col space-y-6">
+							{{ if features_columns_title }}
+								<h5 class="h3">{{ features_columns_title }}</h5>
+							{{ /if }}
+							{{ if features_columns_list }}
+								<div class="prose">{{ features_columns_list }}</div>
+							{{ /if }}
+						</div>
 					</div>
 				</div>
 			</div>
-
-		</div>
-
-
-	{{ /items}}
+		{{ /items }}
+	</div>
 </section>

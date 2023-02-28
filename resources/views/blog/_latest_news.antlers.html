@@ -1,26 +1,15 @@
 {{# Partial template for latest news linked blog posts. Uses latest_news global #}}
+<section class="space-y-12 border-t border-t-zinc-300 py-24 dark:border-t-zinc-700">
+	<div class="related-post grid grid-cols-1 gap-16 lg:grid-cols-6">
+		<div class="col-span-4 space-y-4 lg:col-span-2">
+			<h3 class="h2">{{ latest_news:header }}</h3>
+			<p class="text-zinc-700 dark:text-zinc-300">{{ latest_news:excerpt }}</p>
+		</div>
 
-
-<section class="py-24 space-y-12 border-t border-t-zinc-300 dark:border-t-zinc-700 ">
-    <div class="grid grid-cols-1 gap-16 lg:grid-cols-6 related-post">
-
-        <div class="col-span-4 space-y-4 lg:col-span-2">
-            <h3 class="h2">{{ latest_news:header }}</h3>
-            <p class=" text-zinc-700 dark:text-zinc-300">{{ latest_news:excerpt }}</p>
-        </div>
-
-        <div class="grid grid-cols-1 col-span-4 gap-8 lg:grid-cols-2">
-
-        {{
-            collection:blog
-            :id:isnt="id"
-            :limit="latest_news:entries_limit"
-            sort="date:desc"
-        }}
-        
-            {{ partial:blog/post hide_author="true" hide_subheader="true" title_class="text-xl" subheader_class="text-base" square="true" }}
-        
-        {{ /collection:blog }}
-        </div>
-    </div>
+		<div class="col-span-4 grid grid-cols-1 gap-8 lg:grid-cols-2">
+			{{ collection:blog :id:isnt="id" :limit="latest_news:entries_limit" sort="date:desc" }}
+				{{ partial:blog/post hide_author="true" hide_subheader="true" title_class="text-xl" subheader_class="text-base" square="true" }}
+			{{ /collection:blog }}
+		</div>
+	</div>
 </section>

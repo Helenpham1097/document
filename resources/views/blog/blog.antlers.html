@@ -2,30 +2,26 @@
 {{ partial:snippets/scrollProgress }}
 <div class="slice-background"></div>
 
-
-<div class=" container relative space-y-2 max-w-7xl lg:space-y-4">
-	{{ partial:components/button label="Back to blog" button_type="inline" link_type="url" class="col-span-2 pr-0 pl-0 " url="/blog" iconamic="arrow-left" }}	
-	<article class="relative flex flex-col ">
-		{{# Header #}}	
-		<header class="lg:py-16 py-8 space-y-3 max-w-[736px]">
+<div class="container relative max-w-7xl space-y-2 lg:space-y-4">
+	{{ partial:components/button label="Back to blog" button_type="inline" link_type="url" class="col-span-2 pr-0 pl-0 " url="/blog" iconamic="arrow-left" }}
+	<article class="relative flex flex-col">
+		{{# Header #}}
+		<header class="max-w-[736px] space-y-3 py-8 lg:py-16">
 			{{ partial:components/author }}
 			{{ partial:typography/h1 :content="title" color='text-zinc-800 lg:text-6xl dark:text-zinc-200 text-3xl sm:text-4xl tracking-tight ' }}
 		</header>
-		
+
 		<div class="relative mx-auto mt-8 max-w-2xl sm:mt-12 md:mt-16 lg:block">
 			<div class="absolute -left-20 hidden h-full lg:block">
 				{{ partial:components/share }}
 			</div>
-			<div class="max-w-3xl mx-auto text-base space-y-8 sm:text-lg leading-8">
-				{{if default_image}}
-				<figure class="w-full overflow-hidden shadow-zinc-800/20 dark:shadow-black/10 shadow-2xl rounded-lg lg:aspect-[6/4]">
-					{{ partial:global/picture :image="default_image" cover="true" maxheight="512" lazy="false" maxwidth="768" quality='70' }}
-				</figure>
+			<div class="mx-auto max-w-3xl space-y-8 text-base leading-8 sm:text-lg">
+				{{ if default_image }}
+					<figure class="w-full overflow-hidden rounded-lg shadow-2xl shadow-zinc-800/20 dark:shadow-black/10 lg:aspect-[6/4]">
+						{{ partial:global/picture :image="default_image" cover="true" maxheight="512" lazy="false" maxwidth="768" quality='70' }}
+					</figure>
 				{{ /if }}
-
 				{{ partial:typography/excerpt :content="excerpt" }}
-				
-
 				{{# Content #}}
 				{{ page_builder scope="block" }}
 					{{ partial src="page_builder/{type}" }}
@@ -33,19 +29,18 @@
 			</div>
 		</div>
 
-
-		<div class="z-20 back-to-top-wrapper">
-			<a href="#top" class="bg-white border border-purple-200 dark:border-zinc-700 dark:bg-zinc-800 back-to-top-link" aria-label="Scroll to Top">
-				<svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                	<path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
-            	</svg>
+		<div class="back-to-top-wrapper z-20">
+			<a href="#top" class="back-to-top-link border border-purple-200 bg-white dark:border-zinc-700 dark:bg-zinc-800" aria-label="Scroll to Top">
+				<svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+					<path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
+				</svg>
 			</a>
 		</div>
-
 	</article>
 
 	<div class="container">
-		{{ if {collection:count in="blog"} > 1 }} {{ partial:blog/latest_news }} {{ /if }}
+		{{ if {collection:count in="blog"} > 1 }}
+			{{ partial:blog/latest_news }}
+		{{ /if }}
 	</div>
 </div>
-
