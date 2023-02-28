@@ -1,0 +1,20 @@
+resources/views/blog/author/index.antlers.html
+# Skipped file, Prettier changes 
+# {{ if {collection:count team_member:contains="{id}" in="blog"} > 12 }}}  to {{ if {id}806c9bfdf09c055bd8992824a0a4dc7fxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx > 12 }}}
+
+# To be replaced by feedamic
+resources/views/blog/feed.antlers.html
+
+
+# To be replaced by PhotoSwipeLightbox
+resources/views/page_builder/_image_gallery.antlers.html
+
+
+# Skipped file, Prettier changes
+# {{ unless extension === "gif" }} to {{ unless extension === n === }}
+resources/views/global/_default_image.antlers.html
+
+# When changing the layout depending on the number of items in the loop Prettier doesn't know how to solve it. A better solution needs to be found
+resources/views/page_builder/_icon_features.antlers.html
+resources/views/page_builder/_features_columns_item.antlers.html
+resources/views/page_builder/_multiple_text_columns.antlers.html
