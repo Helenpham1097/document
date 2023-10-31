@@ -2,6 +2,7 @@ admin:
   title: Admin
   permissions:
     - super
+    - 'access default site'
 editor:
   title: Editor
   permissions:
@@ -34,3 +35,4 @@ editor:
     - 'view users'
     - 'edit other authors blog entries'
     - 'edit other authors pages entries'
+    - 'access default site'
