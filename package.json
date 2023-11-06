@@ -7,7 +7,7 @@
     "doc": "doc"
   },
   "scripts": {
-    "watch": "gulp watch",
+    "build:css": "tailwind build resources/css/main.css -o public/css/main.css",
     "build:dev": "NODE_ENV=development gulp build",
     "build:prod": "NODE_ENV=production gulp build"
   },
@@ -19,7 +19,7 @@
   "license": "ISC",
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.0",
-    "@tailwindcss/forms": "^0.4.0",
+    "@tailwindcss/forms": "^0.5.6",
     "@tailwindcss/line-clamp": "^0.3.0",
     "@tailwindcss/typography": "^0.5.0",
     "autoprefixer": "^10.4.7",
