@@ -1,48 +1,93 @@
 <div class="relative z-10">
-	<div class="absolute -inset-1 rounded-xl bg-gradient-to-r from-purple-500 to-green-500 opacity-40 blur-lg filter dark:from-green-500 dark:to-purple-500 dark:opacity-20 dark:blur-2xl"></div>
+	<div class="absolute -inset-0.5 rounded-xl bg-gradient-to-r from-zinc-200/0 via-zinc-200 to-zinc-200/0 opacity-40 dark:from-zinc-500/0 dark:via-zinc-500 dark:to-zinc-500/0 dark:opacity-20"></div>
 
 	<div class="relative w-full bg-white p-4 text-zinc-700 dark:bg-zinc-900 dark:text-zinc-200">
 		<div x-data="{ open: false }" class="mx-auto flex max-w-7xl flex-row items-center justify-between">
 			{{# Logo #}}
-			<div class="flex flex-row items-center justify-between">
+			<div class="mr-12 flex flex-row items-center justify-between">
 				{{ partial:global/_logo }}
 			</div>
 
 			{{# Desktop menu #}}
-			<nav class="flex flex-grow flex-row items-center justify-end space-x-4" role="navigation">
+			<nav class="flex flex-grow flex-row items-center justify-between space-x-4" role="navigation">
 				{{# Main nav #}}
-				<div class="relative ml-auto hidden items-center lg:flex">
-					<nav class="text-sm font-semibold leading-6 text-zinc-700 dark:text-zinc-200">
-						<ul class="flex space-x-4">
-							{{ nav:main_menu show_unpublished="true" }}
-								{{ if children }}
-									<li>
-										<div @click.away="open = false" class="relative" x-data="{ open: false }">
-											<button @click="open = !open" class="focus:shadow-outline mt-2 flex w-full flex-row items-center bg-transparent px-4 py-2 text-left text-sm hover:bg-zinc-200 hover:text-zinc-900 focus:bg-zinc-200 focus:text-zinc-900 focus:outline-none dark:bg-transparent dark:hover:bg-zinc-600 dark:hover:text-white dark:focus:bg-zinc-600 dark:focus:text-white md:mt-0 md:inline md:w-auto">
+				<div class="relative hidden items-center lg:flex">
+					<nav
+						x-data="{
+	navigationMenuOpen: false,
+	navigationMenu: '',
+	navigationMenuCloseDelay: 200,
+	navigationMenuCloseTimeout: null,
+	navigationMenuLeave() {
+		let that = this;
+		this.navigationMenuCloseTimeout = setTimeout(() => {
+			that.navigationMenuClose();
+		}, this.navigationMenuCloseDelay);
+	},
+	navigationMenuReposition(navElement) {
+		this.navigationMenuClearCloseTimeout();
+		this.$refs.navigationDropdown.style.left = navElement.offsetLeft + 'px';
+		this.$refs.navigationDropdown.style.marginLeft = (navElement.offsetWidth/2) + 'px';
+	},
+	navigationMenuClearCloseTimeout(){
+		clearTimeout(this.navigationMenuCloseTimeout);
+	},
+	navigationMenuClose(){
+		this.navigationMenuOpen = false;
+		this.navigationMenu = '';
+	}
+}"
+						class="relative z-10 w-auto">
+						<div class="relative">
+							<ul class="group flex flex-1 list-none items-center space-x-1 text-zinc-700 dark:text-zinc-100">
+								{{ nav:main_menu show_unpublished="true" }}
+									{{ if children }}
+										<li>
+											<button :class="{ 'bg-zinc-100 dark:bg-zinc-800' : navigationMenu=='{{ title | slugify }}', 'hover:bg-zinc-100 dark:hover:bg-zinc-500' : navigationMenu!='{{ title | slugify }}' }" @mouseover="navigationMenuOpen=true; navigationMenuReposition($el); navigationMenu='{{ title | slugify }}'" @mouseleave="navigationMenuLeave()" class="group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:text-zinc-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:hover:text-zinc-100">
 												<span>{{ title }}</span>
-												<svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="mt-1 ml-1 inline h-4 w-4 transform transition-transform duration-200 md:-mt-1">
-													<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-												</svg>
+												<svg :class="{ '-rotate-180' : navigationMenuOpen==true && navigationMenu == '{{ title | slugify }}' }" class="relative top-[1px] ml-1 h-3 w-3 duration-300 ease-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
 											</button>
-											<div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="right-0 w-full origin-top-right rounded-md sm:absolute sm:mt-2 sm:shadow-lg md:w-48">
-												<div class="rounded-md bg-white px-2 py-2 dark:bg-zinc-800 lg:shadow">
-													{{ children }}
-														<a role="menuitem" class="focus:shadow-outline {{ if is_current || is_parent }} dark:text-green-400 text-purple-500 {{ /if }} mt-2 block bg-transparent px-4 py-2 text-sm hover:bg-zinc-200 hover:text-zinc-900 focus:bg-zinc-200 focus:text-zinc-900 focus:outline-none dark:bg-transparent dark:text-zinc-200 dark:hover:bg-zinc-600 dark:hover:text-white dark:focus:bg-zinc-600 dark:focus:text-white md:mt-0" href="{{ url }}">{{ title }}</a>
-													{{ /children }}
+										</li>
+									{{ else }}
+										<li>
+											<a href="#_" class="bg-background group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-zinc-100 hover:text-zinc-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:hover:bg-zinc-800 dark:hover:text-zinc-100">{{ title }}</a>
+										</li>
+									{{ /if }}
+								{{ /nav:main_menu }}
+							</ul>
+						</div>
+
+						<div x-ref="navigationDropdown" x-show="navigationMenuOpen" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-100" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90" @mouseover="navigationMenuClearCloseTimeout()" @mouseleave="navigationMenuLeave()" class="absolute top-0 -translate-x-1/2 translate-y-11 pt-3 duration-200 ease-out" x-cloak>
+							<div class="flex h-auto w-auto justify-center overflow-hidden rounded-md border border-zinc-200/70 bg-white shadow-sm dark:border-zinc-800/70 dark:bg-zinc-900">
+								{{ nav:main_menu show_unpublished="true" }}
+									{{ if children }}
+										<div x-show="navigationMenu == '{{ title | slugify }}'" class="flex w-full max-w-2xl items-stretch justify-center gap-x-3 p-6">
+											<div class="w-48 flex-shrink-0 rounded bg-gradient-to-br from-purple-800 to-purple-900 pt-28 pb-7">
+												<div class="relative space-y-1.5 px-7 text-white">
+													<svg xmlns="http://www.w3.org/2000/svg" class="block h-9 w-auto" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+														<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+														<path d="M12 3l8 4.5l0 9l-8 4.5l-8 -4.5l0 -9l8 -4.5" />
+														<path d="M12 12l8 -4.5" />
+														<path d="M12 12l0 9" />
+														<path d="M12 12l-8 -4.5" />
+													</svg>
+													<span class="block font-bold">Webslice</span>
+													<span class="block text-xs opacity-60">Unleash the Power of Serverless Hosting</span>
 												</div>
 											</div>
+											<div class="w-72">
+												{{ children }}
+													<a href="{{ url }}" @click="navigationMenuClose()" class="block rounded px-3.5 py-3 text-sm hover:bg-zinc-100 dark:hover:bg-zinc-800">
+														<span class="mb-1 block font-medium text-black dark:text-white">{{ title }}</span>
+														<span class="block font-light leading-5 opacity-50">Unleash the Power of Serverless Hosting</span>
+													</a>
+												{{ /children }}
+											</div>
 										</div>
-									</li>
-								{{ else }}
-									<li>
-										<a role="menuitem" class="{{ if is_current || is_parent }} dark:text-green-400 text-purple-500 {{ /if }} focus:shadow-outline group relative mt-2 flex items-center bg-transparent px-4 py-2 text-sm hover:text-zinc-900 focus:bg-zinc-200 focus:text-zinc-900 focus:outline-none dark:bg-transparent dark:text-zinc-200 dark:hover:text-white dark:focus:bg-zinc-600 dark:focus:text-white md:mt-0 md:px-2" href="{{ url }}">
-											<span class="absolute left-0 -bottom-3 hidden h-0.5 w-0 bg-purple-500 transition-all group-hover:w-full dark:bg-green-500 md:block"></span>
-											{{ title }}
-										</a>
-									</li>
-								{{ /if }}
-							{{ /nav:main_menu }}
-						</ul>
+									{{ /if }}
+								{{ /nav:main_menu }}
+							</div>
+						</div>
 					</nav>
 				</div>
 

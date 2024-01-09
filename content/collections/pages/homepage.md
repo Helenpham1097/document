@@ -4,9 +4,10 @@ blueprint: home
 template: general_content/index
 title: Homepage
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1675207148
+updated_at: 1704773564
 top_section:
   -
+    id: RzzOzBfN
     template: /home/hero_home
     hero_home_title:
       -
@@ -14,29 +15,14 @@ top_section:
         content:
           -
             type: text
-            text: 'Deploy existing websites in '
-          -
-            type: text
-            marks:
-              -
-                type: bold
-            text: minutes
+            text: 'Flexible, fast hosting for busy developers'
     hero_home_description:
       -
         type: paragraph
         content:
           -
             type: text
-            text: 'Move your existing websites onto Webslice and experience serverless hosting that is faster, more reliable and cheaper than before.'
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            marks:
-              -
-                type: bold
-            text: '⚡ ️Get your free $5 credit upon signing up today!'
+            text: 'Run what you want, how you want, without running up massive bills'
     hero_home_image: hero-preview.png
     template_global: /global/default_image
     link: '#'
@@ -47,6 +33,7 @@ top_section:
     enabled: true
     buttons:
       -
+        id: gjeb9dTC
         template_global: /components/buttons
         label: 'Get started'
         iconamic: cheveron-right
@@ -55,6 +42,7 @@ top_section:
         url: '#'
         button_type: button
       -
+        id: PrVKnxaD
         template_global: /components/buttons
         label: 'Choose plan'
         iconamic: arrow-right
@@ -62,19 +50,13 @@ top_section:
         target_blank: false
         url: '#'
         button_type: secondary
-      -
-        template_global: /components/buttons
-        label: 'Terms of Service'
-        iconamic: information-circle
-        link_type: url
-        target_blank: false
-        url: '#'
-        button_type: inline
 page_builder:
   -
+    id: ojSts665
     template: /page_builder/easy_steps
     Items:
       -
+        id: TSMZhID5
         template_global: /global/default_image
         default_image: step.png
         step_title: 'Serverless Hosting'
@@ -84,10 +66,11 @@ page_builder:
             content:
               -
                 type: text
-                text: 'Say goodbye to the hassle of managing servers with Webslice''s serverless hosting. Enjoy a faster, more reliable, and cost-effective solution for your website hosting needs.'
+                text: "Say goodbye to the hassle of managing servers with Webslice's serverless hosting. Enjoy a faster, more reliable, and cost-effective solution for your website hosting needs."
         type: Step-item
         enabled: true
       -
+        id: ke38qJ5y
         template_global: /global/default_image
         default_image: step-1674699387.png
         step_title: 'Improved Performance'
@@ -101,6 +84,7 @@ page_builder:
         type: Step-item
         enabled: true
       -
+        id: s9mJjEDm
         template_global: /global/default_image
         default_image: step.png
         step_title: 'Cost Savings'
@@ -110,12 +94,13 @@ page_builder:
             content:
               -
                 type: text
-                text: 'Save on hosting costs while still enjoying top-notch performance. Webslice''s serverless hosting solution is more affordable than traditional hosting options, allowing you to focus on growing your business.'
+                text: "Save on hosting costs while still enjoying top-notch performance. Webslice's serverless hosting solution is more affordable than traditional hosting options, allowing you to focus on growing your business."
         type: Step-item
         enabled: true
     type: easy_steps
     enabled: true
   -
+    id: haBmA96M
     template: page_builder/feature_section
     add_intro_features: true
     add_highlight_features: false
@@ -124,6 +109,7 @@ page_builder:
     section_title: 'Best features'
     columns:
       -
+        id: DoRdII8Q
         column:
           -
             type: heading
@@ -142,6 +128,7 @@ page_builder:
         type: add_columns
         enabled: true
       -
+        id: Edoi5pgD
         column:
           -
             type: heading
@@ -160,6 +147,7 @@ page_builder:
         type: add_columns
         enabled: true
       -
+        id: lpH99W0N
         column:
           -
             type: heading
@@ -178,6 +166,7 @@ page_builder:
         type: add_columns
         enabled: true
       -
+        id: 63nY4SaY
         column:
           -
             type: heading
@@ -196,6 +185,7 @@ page_builder:
         type: add_columns
         enabled: true
   -
+    id: oOWtKV6U
     template: page_builder/feature_section
     add_intro_features: false
     add_highlight_features: true
@@ -203,6 +193,7 @@ page_builder:
     highlight_features_title: 'Even more features'
     features:
       -
+        id: jp4765VF
         select_type: icon
         iconamic: chevron-double-right
         title: 'Fastest Speed'
@@ -222,6 +213,7 @@ page_builder:
         type: highlight_feature
         enabled: true
       -
+        id: TyYRtCyz
         select_type: icon
         iconamic: chevron-double-right
         title: 'Fastest Speed'
@@ -241,6 +233,7 @@ page_builder:
         type: highlight_feature
         enabled: true
       -
+        id: Zm6XOAJB
         select_type: icon
         iconamic: chevron-double-right
         title: 'Fastest Speed'
@@ -262,12 +255,14 @@ page_builder:
     type: feature_section
     enabled: true
   -
+    id: 3u3HFAnf
     template: page_builder/feature_section
     add_intro_features: false
     add_highlight_features: true
     background_select: grid_background
     features:
       -
+        id: aUJ9OFOs
         select_type: icon
         iconamic: chevron-double-right
         title: 'Fastest Speed'
@@ -287,6 +282,7 @@ page_builder:
         type: highlight_feature
         enabled: true
       -
+        id: PPzDbAXD
         select_type: icon
         iconamic: chevron-double-right
         title: 'Fastest Speed'
@@ -306,6 +302,7 @@ page_builder:
         type: highlight_feature
         enabled: true
       -
+        id: s1fPSjmj
         select_type: icon
         iconamic: chevron-double-right
         title: 'Fastest Speed'
@@ -328,9 +325,11 @@ page_builder:
     enabled: true
     highlight_features_title: '&nbsp;'
   -
+    id: fSxa3nCq
     template: /page_builder/highlight
     rows:
       -
+        id: 45yZmdNM
         highlight_title: 'We’ve helped thousands  of businesses'
         highlight_textarea:
           -
@@ -343,6 +342,7 @@ page_builder:
         default_image: color-mode-dark.png
         buttons:
           -
+            id: 0Axvpkze
             template_global: /components/buttons
             label: 'Read the documentation'
             link_type: url
@@ -352,6 +352,7 @@ page_builder:
         type: highlight-item
         enabled: true
       -
+        id: JiK1TDJw
         highlight_title: 'We’ve helped thousands  of businesses'
         highlight_textarea:
           -
@@ -364,6 +365,7 @@ page_builder:
         default_image: color-mode-dark.png
         buttons:
           -
+            id: vUP1Hf5V
             template_global: /components/buttons
             label: 'Read the documentation'
             link_type: url
@@ -378,6 +380,7 @@ page_builder:
     type: highlight
     enabled: true
   -
+    id: 3c8TZp98
     template: /components/section_title
     pre_title: Testimonials
     title: 'What our customer are saying 😍'
@@ -390,6 +393,7 @@ page_builder:
     type: testimonial
     enabled: true
   -
+    id: pMIWDHjj
     template: /components/section_title
     toggle_color: false
     faq_entries:
@@ -414,68 +418,81 @@ page_builder:
         type: paragraph
         content:
           -
-            type: hard_break
+            type: hardBreak
     alignment: center
   -
+    id: 6ZH0EOSJ
     template: /page_builder/companies_logo
     companies_title: '1000+ Big brands trust us'
     company:
       -
+        id: u5zJI6Hr
         template_global: /global/default_image
         default_image: brand-logos/nzonair.png
         type: companies
         enabled: true
       -
+        id: HBDO8EKl
         template_global: /global/default_image
         default_image: brand-logos/vector.png
         type: companies
         enabled: true
       -
+        id: EFc2OD7O
         template_global: /global/default_image
         default_image: brand-logos/nzme.png
         type: companies
         enabled: true
       -
+        id: sBAsEag3
         template_global: /global/default_image
         default_image: brand-logos/asb.png
         type: companies
         enabled: true
       -
+        id: yEL5YhNb
         template_global: /global/default_image
         default_image: brand-logos/lesmills.png
         type: companies
         enabled: true
       -
+        id: bzHcrbnw
         template_global: /global/default_image
         default_image: brand-logos/harvey.png
         type: companies
         enabled: true
       -
+        id: yq7Gijdk
         template_global: /global/default_image
         default_image: brand-logos/auckland-council.png
         type: companies
         enabled: true
       -
+        id: rWqSFkZK
         template_global: /global/default_image
         default_image: brand-logos/nzpost.png
         type: companies
         enabled: true
       -
+        id: BKbfLRdd
         template_global: /global/default_image
         default_image: brand-logos/dutyfree.png
         type: companies
         enabled: false
       -
+        id: oscIEAZz
         template_global: /global/default_image
         default_image: brand-logos/asb.png
         type: companies
         enabled: false
       -
+        id: OK6IL724
         template_global: /global/default_image
         default_image: brand-logos/asb.png
         type: companies
         enabled: false
       -
+        id: jOi0u9Y0
         template_global: /global/default_image
         default_image: brand-logos/nzonair.png
         type: companies
@@ -483,6 +500,7 @@ page_builder:
     type: companies_logo
     enabled: true
   -
+    id: hTof5hu7
     template: /page_builder/latest_post
     pre-title: 'Stay in the loop'
     title_section: 'Our latest article'

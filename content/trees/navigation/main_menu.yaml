@@ -19,6 +19,19 @@ tree:
         id: ad47f904-7d82-4d40-9ecf-a2a6c56931bb
         entry: 26513dc7-59f7-4673-815e-7d9ace16248b
   -
+    id: 28084c31-0c19-47fa-a5a4-bec274f3ab13
+    title: Dropdown
+    url: '#'
+    children:
+      -
+        id: ee32bd30-216d-481b-ac74-43380c3d72eb
+        title: 'My First awesome link'
+        url: '#'
+      -
+        id: dfc4aca5-7be9-404f-afb0-ca1492c27571
+        title: 'My Second awesome link'
+        url: '#'
+  -
     id: a1f043b3-ead3-4fc6-9806-d5e0a029ba81
     entry: 5f3ec833-66d3-43ef-9f35-97f1b4b0afc5
     title: Docs
