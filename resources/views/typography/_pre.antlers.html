@@ -1,0 +1,21 @@
+{{#
+  @name Pre-Title
+  @desc The typography Pre-Title partial to render an Pre-Title with `class`, `as`, `color` and `content` attributes.
+  @param* content The Pre-Title content.
+  @param as The wrapping element. Defaults to `Pre-Title`.
+  @param class Add custom CSS classes.
+#}}
+
+<!-- /typography/_Pre-Title.antlers.html -->
+<{{ as or 'span' }} class="{{ color or 'text-purple-500' }} {{ class }} text-xs font-medium">
+	{{ if categories }}
+		<div class="font-medium uppercase">
+			{{ categories limit="1" }}
+				{{ title }}
+			{{ /categories }}
+		</div>
+	{{ else }}
+		<div class="font-medium uppercase">Pre-Title</div>
+	{{ /if }}
+</{{ as or 'span' }}>
+<!-- End: /typography/_Pre-Title.antlers.html -->
