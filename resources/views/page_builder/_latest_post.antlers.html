@@ -1,6 +1,6 @@
 {{# Template showing the last post from the collection of posts #}}
 {{ collection:blog limit="3" paginate="false" as='posts' sort="date:desc" }}
-	<div class="container flex w-full max-w-7xl flex-col items-center justify-center space-y-12 lg:flex-row lg:space-y-0 lg:space-x-12" x-data="{tab: 1}">
+	<div class="container flex w-full flex-col items-center justify-center space-y-12 lg:flex-row lg:space-y-0 lg:space-x-12" x-data="{tab: 1}">
 		<div class="hidden md:block lg:w-1/2">
 			{{ posts }}
 				<div class="relative space-y-6" x-show="tab === {{ count }}">
@@ -17,7 +17,7 @@
 							<path d="M30.9727 73.2713V88.5241L59.2702 61H43.5363L30.9727 73.2713Z" fill="currentColor"></path>
 						</svg>
 					</div>
-					<div class="space-y-6 overflow-hidden rounded-lg text-xl text-gray-800" x-show="tab === {{ count }}" x-transition:enter="transition delay-100 duration-500 transform ease-in" x-transition:enter-start="opacity-0">
+					<div class="space-y-6 overflow-hidden rounded-lg text-xl text-zinc-800" x-show="tab === {{ count }}" x-transition:enter="transition delay-100 duration-500 transform ease-in" x-transition:enter-start="opacity-0">
 						{{ partial:global/picture :image="default_image" cover="true" maxheight="512" lazy="false" maxwidth="768" quality='70' }}
 					</div>
 				</div>

@@ -1,4 +1,4 @@
-<section class="container mx-auto max-w-7xl">
+<section class="container mx-auto">
 	<div class="{{ if Items | count >= 4 }} grid grid-cols-2 gap-8 antialiased xl:grid-cols-4 {{ elseif Items | count >= 3 }} grid justify-between gap-8 lg:grid-cols-3 lg:flex-row {{ elseif Items | count >= 2 }} grid max-w-5xl gap-8 mx-auto lg:grid-cols-2 lg:flex-row {{ else }} grid items-center grid-cols-1 gap-8 md:flex-row {{ /if }}">
 		{{ Items }}
 			<div>

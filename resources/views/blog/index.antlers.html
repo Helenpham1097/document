@@ -6,7 +6,7 @@
 		<div class="slice-background"></div>
 	{{ /stickied_post }}
 	{{# Non-featured posts. To enable pagination set true and change limit to 6 #}}
-	<div class="container mx-auto max-w-7xl space-y-10">
+	<div class="container mx-auto space-y-10">
 		{{ collection:blog limit="6" paginate="true" taxonomy:categories:not="customer-kudos" as='posts' sort="date:desc" }}
 			<div class="place-items-startgrid mx-auto grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
 				{{ posts }}

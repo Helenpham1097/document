@@ -1,9 +1,9 @@
 {{# Documentation #}}
-<section class="container mx-auto flex max-w-7xl flex-col space-y-6 space-y-reverse py-10 text-zinc-800 dark:text-zinc-100 sm:space-y-0 lg:flex-row lg:items-center lg:space-x-24">
+<section class="container mx-auto flex flex-col space-y-6 space-y-reverse text-zinc-800 dark:text-zinc-100 sm:space-y-0 lg:flex-row lg:items-center lg:space-x-24">
 	<div class="space-y-6 lg:w-1/2">
 		<div class="space-y-6">
 			{{ svg src="{{config:iconamic:path}}/{{iconamic}}.svg" class="aspect-square h-6 w-6 flex-shrink-0 stroke-current" }}
-			{{ partial:typography/h2 :content="title" class="" }}
+			{{ partial:typography/h2 :content="title" class="dot" }}
 			{{ partial:typography/p :content="description" class="" }}
 		</div>
 
@@ -16,7 +16,9 @@
 		{{ partial:typography/h5 :content="sub_title" class="pb-6" }}
 		<div class="grid grid-cols-1 gap-y-4 text-zinc-800 dark:text-zinc-200 md:grid-cols-2 lg:grid-cols-1 lg:gap-y-4">
 			{{ entry }}
-				{{ partial:components/goto class='text-green-500' }}
+				<a href="{{ url }}" target="_blank">
+					{{ partial:components/goto }}
+				</a>
 			{{ /entry }}
 		</div>
 	</div>
