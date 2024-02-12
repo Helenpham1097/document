@@ -1,0 +1,39 @@
+<section class="container relative mx-auto py-16 pt-32 lg:py-32 lg:pt-56">
+	<div class="relative hidden place-items-center md:grid">
+		{{ partial:illustration/ws_shield }}
+	</div>
+	{{ partial:typography/h2 :content="title | strip_tags:p" class='-my-1 dot py-1 lg:text-center tracking-tight sm:text-3xl lg:text-4xl' }}
+	{{ partial:typography/p :content="sub_title | strip_tags:p" class='lg:text-center lg:max-w-lg lg:mx-auto mt-3 lg:mt-5' }}
+	<div class="relative mt-16 flex flex-col gap-8 lg:grid lg:auto-rows-[3rem] lg:grid-cols-12">
+		{{ boxes }}
+			<a href="#" class="bento_box group relative col-span-6 row-span-6 flex flex-col items-center gap-8 overflow-hidden rounded-xl p-8">
+				<div class="lg:order-last">
+					<div class="relative rounded-2xl">
+						<div class="relative transition-transform duration-500 ease-in-out group-hover:-translate-y-1">
+							<span class="transition-opacity duration-500 group-hover:opacity-0">
+								{{ partial:global/picture :image="default_image" cover="true" lazy="false" maxwidth="768" quality='70' }}
+							</span>
+							<span class="absolute top-0 left-0 bg-purple-500/20 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+								{{ partial:global/picture :image="hover_default_image" cover="true" lazy="false" maxwidth="768" quality='70' }}
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="flex w-full flex-col gap-4 transition-transform duration-500 ease-in-out group-hover:-translate-y-1 lg:order-first">
+					<div class="flex items-center gap-4">
+						{{ svg src="{{config:iconamic:path}}/{{iconamic}}.svg" class="h-6 w-6 " }}
+						{{ partial:typography/h4 :content="title | strip_tags:p" class='' }}
+					</div>
+					{{ partial:typography/p :content="sub_title | strip_tags:p" class='mb-0' }}
+					<div class="flex items-center gap-1 text-purple-500 dark:text-green-500">
+						<span class="font-medium">Learn more</span>
+						<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right transition ease-in-out group-hover:translate-x-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+							<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+							<path d="M9 6l6 6l-6 6" />
+						</svg>
+					</div>
+				</div>
+			</a>
+		{{ /boxes }}
+	</div>
+</section>

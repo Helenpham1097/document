@@ -1,4 +1,4 @@
-<section class="relative h-full w-full">
+<section class="relative hidden h-full w-full">
 	<div class="absolute hidden h-[34rem] w-full bg-zinc-50 dark:bg-zinc-800 lg:block"></div>
 	<div class="relative mx-auto space-y-8 px-4 py-16 sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:px-8 lg:py-20" x-id="['pricing']" x-data="{pricing: false}">
 		<div class="max-w-xl sm:text-center md:mx-auto lg:max-w-2xl">
@@ -46,7 +46,7 @@
 	</div>
 </section>
 
-<section class="relative h-full w-full">
+<section class="relative hidden h-full w-full">
 	<div class="relative mx-auto px-4 py-16 sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:px-8 lg:py-20">
 		<div class="mx-auto flex w-full max-w-6xl flex-col justify-center space-y-12 pt-8 sm:space-y-0 sm:space-x-6 md:flex-row lg:space-x-12" x-data="{tab: 1}">
 			<div class="{{ if Items | count == 1 }} justify-center {{ else }} justify-start {{ /if }} flex flex-col text-zinc-800 dark:text-white sm:space-y-6 lg:w-2/4">
@@ -97,12 +97,87 @@
 				</div>
 				{{ Items }}
 					<div class="space-y-6" x-show="tab === {{ count }}">
-						<div class="space-y-6 text-xl text-gray-800" x-show="tab === {{ count }}" x-transition:enter="transition delay-100 duration-500 transform ease-in" x-transition:enter-start="opacity-90">
+						<div class="space-y-6 text-xl text-zinc-800" x-show="tab === {{ count }}" x-transition:enter="transition delay-100 duration-500 transform ease-in" x-transition:enter-start="opacity-90">
 							{{ partial:page_builder/_pricing_item }}
 						</div>
 					</div>
 				{{ /Items }}
 			</div>
 		</div>
+	</div>
+</section>
+
+<section class="container relative mx-auto flex flex-col gap-12 -space-y-24">
+	<div class="bg-[size:31px_31px] absolute -inset-x-24 top-0 z-[-2] h-1/2 bg-zinc-400 bg-[radial-gradient(#ffffff33_1px,#fff_1px)] dark:bg-zinc-900 dark:bg-[radial-gradient(#ffffff33_1px,#18181B_1px)]"></div>
+	<div class="relative flex space-x-6">
+		<div class="relative isolate flex flex-col items-center">
+			<svg class="z-10 fill-white stroke-zinc-300 drop-shadow-lg dark:fill-zinc-900 dark:stroke-zinc-700" width="56" height="64" viewBox="0 0 56 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+				{{# lg #}}
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M28.2562 0.810547L55.1398 16.3318V47.3743L28.2562 62.8956L1.37256 47.3743V16.3318L28.2562 0.810547Z" fill-opacity="1" fill="" stroke="" />
+				{{# md #}}
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M28.2564 6.79883L49.9542 19.3261V44.3806L28.2564 56.9078L6.55859 44.3806V19.3261L28.2564 6.79883Z" fill-opacity="0.02" fill="" stroke="" />
+				{{# sm #}}
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M28.256 12.9453L44.6302 22.399V41.3062L28.256 50.7599L11.8818 41.3062V22.399L28.256 12.9453Z" fill-opacity="0.03" fill="" stroke="" />
+			</svg>
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-medal absolute z-20 w-5 translate-y-5 stroke-current text-zinc-400 dark:text-zinc-500">
+				<path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15" />
+				<path d="M11 12 5.12 2.2" />
+				<path d="m13 12 5.88-9.8" />
+				<path d="M8 7h8" />
+				<circle cx="12" cy="17" r="5" />
+				<path d="M12 18v-2h-.5" />
+			</svg>
+			<span class="line-gradient gradient-background w-[1px] flex-1 -translate-y-1 bg-gradient-to-b from-zinc-200 to-transparent dark:from-zinc-600"></span>
+		</div>
+		<div class="flex flex-1 flex-col pb-24">
+			<div class="max-w-xl space-y-4">
+				{{ display_title_section }}
+					{{ partial:typography/h2 :content="title" color='' }}
+				{{ /display_title_section }}
+				{{ display_title_section }}
+					{{ partial:typography/prose }}
+						{{ textarea_field }}
+					{{ /partial:typography/prose }}
+				{{ /display_title_section }}
+			</div>
+		</div>
+	</div>
+
+	<div class="flex w-full flex-col content-center gap-3 text-zinc-800 dark:text-zinc-300 lg:grid lg:grid-cols-3 xl:gap-6">
+		{{ Items }}
+			<div class="{{ switch between='from-orange-500/20 | from-gray-500/20 | from-yellow-500/20' }} inset-0 rounded-[13px] bg-gradient-to-b p-0.5 dark:via-transparent dark:to-transparent">
+				<div class="{{ switch between='bronze | silver | gold' }} group relative isolate mx-auto rounded-xl bg-white p-8 dark:bg-zinc-900">
+					<div class="absolute right-0 z-10">
+						<div class="relative -mt-12 -translate-x-8 translate-y-full transform transition duration-200 ease-linear">
+							<div class="relative mx-auto mb-4 -mt-8 px-6 py-2 text-center text-xs font-semibold uppercase leading-relaxed">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide {{ switch between='text-orange-500/80 | text-gray-500/80 | text-yellow-500/80' }} lucide-gem">
+									<path d="M6 3h12l4 6-10 13L2 9Z" />
+									<path d="M11 3 8 9l4 13 4-13-3-6" />
+									<path d="M2 9h20" />
+								</svg>
+							</div>
+						</div>
+					</div>
+
+					<div class="space-y-6">
+						<div class="flex items-center justify-between">
+							<h2 class="{{ switch between='dark:from-orange-800 from-orange-700 dark:via-orange-500 via-orange-400 dark:to-orange-800 to-orange-500 | dark:from-gray-500 from-gray-700 dark:via-gray-600 via-gray-400 dark:to-gray-600 to-gray-500 | dark:from-yellow-500 from-yellow-700 dark:via-yellow-600 via-yellow-400 dark:to-yellow-800 to-yellow-500' }} bg-gradient-to-r bg-clip-text text-4xl !font-extrabold uppercase tracking-tighter !text-transparent">{{ pricing_features_title }}</h2>
+						</div>
+
+						<div class="mt-6 flex items-center space-x-3">
+							<div class="text-4xl font-extrabold" data-plan="smallTeam" data-plans-target="price">$85</div>
+							<div class="text-sm text-zinc-600 dark:text-zinc-300">/mo</div>
+						</div>
+
+						{{ partial:typography/p :content="pricing_features_list | strip_tags:p" class='text-sm' }}
+						<button
+							as="button"
+							class="preserve-3d typography-p5-medium text-buttonNew-secondary hover:text-buttonNew-secondary-hover active:text-buttonNew-secondary-active disabled:text-buttonNew-secondary-disabled border-buttonNew-secondary hover:border-buttonNew-secondary-hover active:border-buttonNew-secondary-active focus:border-buttonNew-secondary-active disabled:border-buttonNew-secondary-disabled focus:shadow-buttonNew-secondary-focus mt-auto inline-flex flex-row items-center justify-center rounded-[12px] border-[1px] px-[16px] py-[7px] shadow-none transition-all focus:bg-white active:bg-white">
+							<span class="z-1 relative">Get started</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		{{ /Items }}
 	</div>
 </section>
