@@ -49,8 +49,9 @@
 
 .path-line {
 	stroke-dasharray: 3000;
-	stroke-dashoffset: 4000;
+	stroke-dashoffset: 100;
 	animation: dash 5s linear alternate infinite;
+	/* animation: dash 1s linear infinite; */
 }
 
 @keyframes dash {
@@ -58,11 +59,11 @@
 		stroke-dashoffset: 0;
 	}
 }
-
+/* Shield animation */
 .light1,
 .light2,
 .light3 {
-	animation: radar 3s linear infinite;
+	animation: radar 4s linear infinite;
 }
 /* .light1 {
 	animation-delay: 1s;
@@ -76,5 +77,41 @@
 @keyframes radar {
 	to {
 		rotate: 360deg;
+	}
+}
+
+/* Bento title animated line */
+.gradient-background {
+	@apply bg-[linear-gradient(180deg,#E4E4E7,#E4E4E7,#E4E4E7,#7a1be6,#E4E4E7,#E4E4E7,#E4E4E7)] dark:bg-[linear-gradient(180deg,#27272a,#27272a,#27272a,#7a1be6,#27272a,#27272a,#27272a)];
+	background-size: 600% 600%;
+	animation-fill-mode: forwards;
+
+	-webkit-animation: gradientLine 4s ease infinite;
+	-moz-animation: gradientLine 4s ease infinite;
+	animation: gradientLine 4s ease infinite;
+}
+
+@-webkit-keyframes gradientLine {
+	0% {
+		background-position: 0% 100%;
+	}
+	100% {
+		background-position: 0% 0%;
+	}
+}
+@-moz-keyframes gradientLine {
+	0% {
+		background-position: 0% 100%;
+	}
+	100% {
+		background-position: 0% 0%;
+	}
+}
+@keyframes gradientLine {
+	0% {
+		background-position: 0% 100%;
+	}
+	100% {
+		background-position: 0% 0%;
 	}
 }

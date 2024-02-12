@@ -1,5 +1,5 @@
 @layer base {
-    input[type="text"],
+	input[type="text"],
     input[type="password"],
     input[type="email"],
     input[type="number"],
@@ -14,35 +14,35 @@
     select,
     select[multiple],
     textarea {
-        @apply w-full placeholder-purple-300 transition duration-500 ease-in-out transform bg-white border border-purple-200 shadow-sm focus:border-purple-300 focus:bg-purple-50 focus:ring focus:ring-purple-200 focus:ring-opacity-50;
-    }
-    input[type="checkbox"],
-    input[type="radio"] {
-        @apply text-purple-500 rounded-sm;
-    }
-    label {
-        @apply text-purple-500;
-    }
-    ::-webkit-calendar-picker-indicator {
-        @apply text-purple-500;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5 bg-purple-500 text-purple-500' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' /%3E%3C/svg%3E");
-        background-position: 96% 50%;
-    }
+		@apply w-full transform border border-purple-200 bg-white placeholder-zinc-400 shadow-sm transition duration-500 ease-in-out focus:border-purple-300 focus:bg-purple-50 focus:ring focus:ring-purple-200 focus:ring-opacity-50;
+	}
+	input[type="checkbox"],
+	input[type="radio"] {
+		@apply rounded-sm text-purple-500;
+	}
+	label {
+		@apply text-purple-500;
+	}
+	::-webkit-calendar-picker-indicator {
+		@apply text-purple-500;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5 bg-purple-500 text-purple-500' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' /%3E%3C/svg%3E");
+		background-position: 96% 50%;
+	}
 
-    /* class applies to select element itself, not a wrapper element */
-    select {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-3 w-3 bg-purple-500 text-purple-500' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E");
-        /* background-position: 98% 50%; */
-    }
+	/* class applies to select element itself, not a wrapper element */
+	select {
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-3 w-3 bg-purple-500 text-purple-500' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E");
+		/* background-position: 98% 50%; */
+	}
 }
 
 [type="checkbox"] {
-    &.toggle {
-        @apply transition duration-200 ease-in-out bg-gray-100 rounded-full bg-none;
-    }
+	&.toggle {
+		@apply rounded-full bg-gray-100 bg-none transition duration-200 ease-in-out;
+	}
 }
 [type="checkbox"]:checked {
-    &.toggle {
-        @apply transition duration-200 ease-in-out bg-purple-500 rounded-full bg-none;
-    }
+	&.toggle {
+		@apply rounded-full bg-purple-500 bg-none transition duration-200 ease-in-out;
+	}
 }
