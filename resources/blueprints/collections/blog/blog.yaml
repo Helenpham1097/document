@@ -1,110 +1,116 @@
 title: Blog
-sections:
+tabs:
   main:
     display: Main
-    fields:
+    sections:
       -
-        handle: template
-        field:
-          display: template
-          type: hidden
-          icon: hidden
-          listable: hidden
-          default: blog/blog
-      -
-        handle: title
-        field:
-          type: text
-          required: true
-          validate:
-            - required
-          display: 'Page title'
-          default: 'Blog title'
-          instructions: 'This is the title that will be displayed in the browser bar and will help you to identify it.'
-          listable: hidden
-          input_type: text
-          antlers: false
-      -
-        handle: excerpt
-        field:
-          antlers: false
-          display: Excerpt
-          type: textarea
-          icon: textarea
-          listable: hidden
-      -
-        import: page_builder
+        fields:
+          -
+            handle: template
+            field:
+              display: template
+              type: hidden
+              icon: hidden
+              listable: hidden
+              default: blog/blog
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+              display: 'Page title'
+              default: 'Blog title'
+              instructions: 'This is the title that will be displayed in the browser bar and will help you to identify it.'
+              listable: hidden
+              input_type: text
+              antlers: false
+          -
+            handle: excerpt
+            field:
+              antlers: false
+              display: Excerpt
+              type: textarea
+              icon: textarea
+              listable: hidden
+          -
+            import: page_builder
   sidebar:
     display: Sidebar
-    fields:
+    sections:
       -
-        handle: slug
-        field:
-          type: slug
-          localizable: true
-          validate:
-            - required
-            - 'unique_entry_value:{collection},{id},{site}'
-      -
-        handle: date
-        field:
-          type: date
-          required: true
-          validate:
-            - required
-      -
-        handle: categories
-        field:
-          type: terms
-          taxonomies:
-            - categories
-          display: Categories
-          mode: select
-      -
-        handle: author
-        field:
-          max_items: 1
-          mode: select
-          display: Author
-          type: users
-          icon: users
-          listable: true
-      -
-        handle: team_member
-        field:
-          max_items: 1
-          mode: default
-          create: true
-          collections:
-            - team
-          display: 'Team Member'
-          type: entries
-          icon: entries
-          listable: hidden
-          instructions_position: above
-          read_only: false
-          instructions: 'Team member to display as author'
-      -
-        import: default_image
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate:
+                - required
+                - 'unique_entry_value:{collection},{id},{site}'
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required
+          -
+            handle: categories
+            field:
+              type: terms
+              taxonomies:
+                - categories
+              display: Categories
+              mode: select
+          -
+            handle: author
+            field:
+              max_items: 1
+              mode: select
+              display: Author
+              type: users
+              icon: users
+              listable: true
+          -
+            handle: team_member
+            field:
+              max_items: 1
+              mode: default
+              create: true
+              collections:
+                - team
+              display: 'Team Member'
+              type: entries
+              icon: entries
+              listable: hidden
+              instructions_position: above
+              instructions: 'Team member to display as author'
+          -
+            import: default_image
   meta:
     display: Meta
-    fields:
+    sections:
       -
-        handle: meta_title
-        field:
-          input_type: text
-          character_limit: 60
-          antlers: false
-          display: 'Meta title'
-          type: text
-          icon: text
-          listable: hidden
-      -
-        handle: meta_description
-        field:
-          character_limit: '160'
-          antlers: false
-          display: 'Meta description'
-          type: textarea
-          icon: textarea
-          listable: hidden
+        fields:
+          -
+            handle: meta_title
+            field:
+              input_type: text
+              character_limit: 60
+              antlers: false
+              display: 'Meta title'
+              type: text
+              icon: text
+              listable: hidden
+          -
+            handle: meta_description
+            field:
+              character_limit: '160'
+              antlers: false
+              display: 'Meta description'
+              type: textarea
+              icon: textarea
+              listable: hidden

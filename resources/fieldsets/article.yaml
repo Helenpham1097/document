@@ -9,7 +9,6 @@ fields:
       icon: hidden
       listable: hidden
       instructions_position: above
-      read_only: false
   -
     handle: article
     field:
@@ -25,7 +24,7 @@ fields:
         - anchor
         - code
         - codeblock
-      save_html: true
+      save_html: false
       toolbar_mode: fixed
       link_noopener: false
       link_noreferrer: false
@@ -40,41 +39,53 @@ fields:
       replicator_preview: false
       always_show_set_button: true
       sets:
-        buttons:
-          display: Buttons
-          fields:
-            -
-              import: buttons
-        figure:
-          display: Figure
-          fields:
-            -
-              import: figure
-        pull_quote:
-          display: 'Pull quote'
-          fields:
-            -
-              import: pull_quote
-        table:
-          display: Table
-          fields:
-            -
-              import: table
-        video:
-          display: Video
-          fields:
-            -
-              import: video
-        code:
-          display: Code
-          fields:
-            -
-              import: code
-        code_snippet:
-          display: 'Code Snippet'
-          fields:
-            -
-              import: code_snippet
+        main:
+          display: Main
+          instructions: null
+          icon: null
+          sets:
+            buttons:
+              display: Buttons
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: buttons
+            figure:
+              display: Figure
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: figure
+            pull_quote:
+              display: 'Pull quote'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: pull_quote
+            table:
+              display: Table
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: table
+            video:
+              display: Video
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: video
+            code_snippet:
+              display: 'Code Snippet'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: code_snippet
       container: assets
       enable_input_rules: true
       enable_paste_rules: true
@@ -84,4 +95,8 @@ fields:
       previews: true
       antlers: false
       remove_empty_nodes: trim
-      read_only: false
+      smart_typography: false
+      inline: false
+      word_count: false
+      collapse: false
+      hide_display: false

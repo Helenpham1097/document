@@ -16,4 +16,7 @@ fields:
       icon: code
       listable: hidden
       instructions_position: above
-      read_only: false
+      visibility: visible
+      replicator_preview: true
+      antlers: false
+      hide_display: false

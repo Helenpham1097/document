@@ -4,15 +4,16 @@ blueprint: general_content
 template: general_content/index
 top_section:
   -
+    id: 7I982tN5
     template: /general_content/hero
-    hero_home_title: 'Containers without the hassle'
+    hero_home_title: 'A Faster, More Flexible Platform for Web Development'
     hero_home_description:
       -
         type: paragraph
         content:
           -
             type: text
-            text: 'Cloud Containers offer a huge amount of control for developers while still being easy to use. Whether you manage a single website or a stable of hundreds, do more on fast, up-to-date infrastructure without technical headaches.'
+            text: 'This rock-solid platform already hosts 16,000+ sites, and now it’s gone global. Flexibility that developers love, dependability that clients need, prices that managers appreciate.'
     template_global: /global/default_image
     link: '#'
     select: background
@@ -20,669 +21,487 @@ top_section:
     text: Click
     type: hero
     enabled: true
-    iconamic: academic-cap
-    default_image: color-mode-dark.png
+    iconamic: cloud
+    default_image: hero-preview.png
     buttons:
       -
+        id: 2SEK87kA
         template_global: /global/buttons
-        label: 'Contact us'
-        iconamic: mail
+        label: 'Start risk-free for 7 days'
+        iconamic: cheveron-right
         link_type: entry
         target_blank: false
         entry: fee1a2b1-971c-4c72-9517-d2e6c989f49e
         button_type: button
+      -
+        id: lro57zsk
+        template_global: /components/buttons
+        label: 'Learn more'
+        link_type: url
+        target_blank: false
+        url: '#'
+        button_type: secondary
+    pre: 'Cloud Hosting'
+    shape: paper
 title: 'Cloud Containers'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1667441458
+updated_at: 1707706024
 page_builder:
   -
-    template: /page_builder/highlight
+    id: lrftv1b6
+    type: bento_features
+    enabled: true
+    template: /general_content/bento
+    title: 'Webslice Cloud Hosting Is Built For Busy Agencies'
+    description:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Everything in the Webslice Cloud Hosting platform is designed to help you develop better websites and products, faster.'
+    item:
+      -
+        id: lrfumsnp
+        text: 'Never edit in production again - just clone and sync containers.*'
+      -
+        id: lrfund14
+        text: 'Share files and folders between containers.'
+      -
+        id: lrimhi4b
+        text: 'Easily scale server cores, RAM and storage; or disk space alone.'
+      -
+        id: lrim4v2f
+        text: 'Upgrade images in only a few seconds.'
+      -
+        id: lrimfz9z
+        text: 'Install SSL in one click.'
+      -
+        id: lrimg4ag
+        text: 'Restore from 14 days of back-ups in one click.*'
+      -
+        id: lrimgae8
+        text: 'Flick a switch to turn on powerful Simple Cache.*'
+      -
+        id: lrimgcm0
+        text: 'Track server load stats, and resource usage for every Container and server.'
+      -
+        id: lrimgit5
+        text: 'Monitor server connectivity and set up email alerts.'
+    boxes:
+      -
+        id: lrfvep60
+        text:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Pick from dozens of '
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'pre-built container images'
+              -
+                type: text
+                text: ', or build your own.'
+        type: box
+        enabled: true
+        link: '@'
+      -
+        id: lrfvew4y
+        text:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Run multiple '
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'independent environments'
+              -
+                type: text
+                text: ' without interference.'
+        type: box
+        enabled: true
+      -
+        id: lrfvf41q
+        text:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Manage '
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'all your sites'
+              -
+                type: text
+                text: ' and databases in one place.'
+        type: box
+        enabled: true
+      -
+        id: lrfvfdga
+        text:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Choose from a '
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'range of data centers'
+              -
+                type: text
+                text: ' around the world.'
+        type: box
+        enabled: true
+    bento_type: boxes
+    template_global: /global/iconamic
+    iconamic: academic-cap
+  -
+    id: lru3419g
+    template: /general_content/bento_highlight
+    reverse_alignment: false
+    toggle_alignment: true
+    type: bento_highlight
+    enabled: true
     rows:
       -
-        highlight_title: 'Run different software, CMSs, and services without interference'
-        highlight_textarea:
+        id: lrr6gp8v
+        title: 'You keep developing, we’ll keep an eye on your infrastructure'
+        textarea:
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'Making use of technologies like Docker, you can have a Container for each individual website or application, all on your own private server. This makes your hosting far more flexible by allowing each Container to run different software or services, without interfering with each other.'
-              -
-                type: hard_break
-              -
-                type: hard_break
-              -
-                type: text
-                text: "Cloud Containers are an easy, flexible and powerful hosting option. With customers already hosting CMSs like\_"
-              -
-                type: text
-                marks:
-                  -
-                    type: link
-                    attrs:
-                      href: 'http://localhost:3000/cloud-containers#'
-                      rel: null
-                      target: null
-                      title: null
-                  -
-                    type: bold
-                text: 'Craft CMS'
-              -
-                type: text
-                text: ",\_"
-              -
-                type: text
-                marks:
-                  -
-                    type: link
-                    attrs:
-                      href: 'http://localhost:3000/cloud-containers#'
-                      rel: null
-                      target: null
-                      title: null
-                  -
-                    type: bold
-                text: Silverstripe
-              -
-                type: text
-                text: ",\_"
-              -
-                type: text
-                marks:
-                  -
-                    type: link
-                    attrs:
-                      href: 'http://localhost:3000/cloud-containers#'
-                      rel: null
-                      target: null
-                      title: null
-                  -
-                    type: bold
-                text: WordPress
-              -
-                type: text
-                text: "\_and more on Cloud Containers, we know your sites will be fast, secure and scalable."
+                text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue. Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque.'
         template_global: /global/default_image
-        default_image: color-mode-dark.png
-        highlight_textcaption:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Color-mode: Dark'
-        type: highlight-item
+        label: Button
+        iconamic: cake
+        link_type: url
+        target_blank: false
+        url: '#'
+        button_type: button
+        default_image: b8f5db7682a5fb3fa938f2e26c0e855c.webp
+        type: feature_highlight-item
         enabled: true
         buttons:
           -
+            id: lrr6xz7o
             template_global: /components/buttons
-            label: 'Contact US'
-            iconamic: academic-cap
+            label: 'Start risk-free for 7 days'
             link_type: url
             target_blank: false
             url: '#'
             button_type: button
-    toggle_background: true
-    reverse_alignment: true
-    toggle_alignment: true
-    type: highlight
-    enabled: true
+        description: 'While you’re busy developing, we’re busy keeping your infrastructure up to date and secure.'
+        bentos:
+          -
+            id: lrtu5ip2
+            image: ill_3---infrastructure.svg
+            items:
+              -
+                id: lrtvn103
+                text:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Server OS patching and upgrades.'
+                url: '#'
+                type: link
+                enabled: true
+              -
+                id: lru3k6z4
+                text:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: '99.9% uptime guarantee.'
+                type: link
+                enabled: true
+              -
+                id: lru3kf1q
+                text:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Regular releases of new container images.'
+                type: link
+                enabled: true
+              -
+                id: lru3kjq7
+                text:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Container updates and maintenance.*'
+                type: link
+                enabled: true
+            type: box
+            enabled: true
+      -
+        id: lru3mrwk
+        template_global: /global/iconamic
+        title: 'Unlock more expert service and advanced features with managed cloud hosting'
+        description: 'Managed Cloud Hosting does even more to speed you up. Our expert team will monitor and manage your server 24/7/365, and your hosting will include these time-saving features:'
+        buttons:
+          -
+            id: lru3n35l
+            template_global: /components/buttons
+            label: 'Start risk-free for 7 days'
+            link_type: url
+            target_blank: false
+            url: '#'
+            button_type: inline
+        bentos:
+          -
+            id: lru3nbaf
+            image: ill_1---managed_cloud_hosting.svg
+            items:
+              -
+                id: lru3nm9g
+                text:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Simple Cache.'
+                type: link
+                enabled: true
+              -
+                id: lru3nqj8
+                text:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'One-click backup restore.'
+                type: link
+                enabled: true
+              -
+                id: lru3nyjc
+                text:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Container cloning and syncing.'
+                type: link
+                enabled: true
+              -
+                id: lru3o2ef
+                text:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Scheduled container updates.'
+                type: link
+                enabled: true
+            type: box
+            enabled: true
+        type: feature_highlight-item
+        enabled: true
   -
-    template: page_builder/feature_section
-    add_intro_features: true
-    section_title: 'Get started quickly on easy, powerful hosting'
-    columns:
-      -
-        column:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Provision a server super-fast, choose from prebuilt images'
-              -
-                type: hard_break
-              -
-                type: text
-                text: 'See it for yourself'
-          -
-            type: set
-            attrs:
-              values:
-                type: buttons
-                buttons:
-                  -
-                    template_global: /components/buttons
-                    label: 'See it for yourself'
-                    iconamic: information-circle
-                    link_type: url
-                    target_blank: false
-                    url: '#'
-                    button_type: button
-          -
-            type: paragraph
-        type: add_columns
-        enabled: true
-      -
-        column:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'As soon as you get started with Cloud Containers you’ll see how fast and '
-              -
-                type: text
-                marks:
-                  -
-                    type: link
-                    attrs:
-                      href: '#'
-                      rel: null
-                      target: null
-                      title: null
-                text: 'flexible they are'
-              -
-                type: text
-                text: '. It only takes a few minutes to launch a server, spin up a Container or two and see how much easier development can be with the right infrastructure.'
-        type: add_columns
-        enabled: true
-      -
-        column:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                marks:
-                  -
-                    type: bold
-                text: 'Provision a server super-fast'
-              -
-                type: hard_break
-              -
-                type: text
-                text: 'Choose your server specs and location, and it will be up and running in just a few clicks.'
-              -
-                type: hard_break
-              -
-                type: hard_break
-              -
-                type: text
-                marks:
-                  -
-                    type: bold
-                text: 'Choose from prebuilt images'
-              -
-                type: hard_break
-              -
-                type: text
-                text: 'Once your server’s up, it’s Container time. A range of pre-built images including PHP, Apache and Wordpress, you can just pick and go.'
-        type: add_columns
-        enabled: true
-    add_highlight_features: true
-    type: feature_section
+    id: lro5li2r
+    template: /components/section_title
+    toggle_color: false
+    type: get_started
     enabled: true
-    background_select: stripe_background
-    highlight_features_title: 'Provision a server super-fast'
-    features:
+    title: 'Get Started Today'
+    description: 'Try Cloud Hosting for seven days, and if it’s not for you we’ll refund your money back.'
+    start_type:
       -
-        select_type: icon
-        title: 'Start risk-free, never get locked in'
-        description:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Get familiar with the Webslice, the different tools it offers, and the most important features.'
-        type: highlight_feature
-        enabled: true
-        iconamic: chevron-double-right
-      -
-        select_type: icon
-        title: 'Host sites around the world'
-        description:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Get familiar with the Webslice, the different tools it offers, and the most important features.'
-        type: highlight_feature
-        enabled: true
-        iconamic: chevron-double-right
-      -
-        select_type: icon
-        title: 'BYO containers'
-        description:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Get familiar with the Webslice, the different tools it offers, and the most important features.'
-        type: highlight_feature
-        enabled: true
-        iconamic: chevron-double-right
-      -
-        select_type: icon
-        title: 'Install SSL in one click'
-        description:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Get familiar with the Webslice, the different tools it offers, and the most important features.'
-        type: highlight_feature
-        enabled: true
-        iconamic: chevron-double-right
-      -
-        select_type: icon
-        title: 'Set up DNS automatically'
-        description:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Get familiar with the Webslice, the different tools it offers, and the most important features.'
-        type: highlight_feature
-        enabled: true
-        iconamic: chevron-double-right
-      -
-        select_type: icon
-        title: 'Set and forget'
-        description:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Once you are up and running, you can have confidence that you will stay that way. Cloud Containers are stable, reliable, and run on a platform that we maintain.'
-        type: highlight_feature
-        enabled: true
-        iconamic: chevron-double-right
-  -
-    template: page_builder/feature_section
-    add_intro_features: true
-    section_title: 'Manage your hosting efficiently and without the stress'
-    columns:
-      -
-        column:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Provision a server super-fast, choose from prebuilt images'
-              -
-                type: hard_break
-              -
-                type: text
-                text: 'See it for yourself'
-          -
-            type: set
-            attrs:
-              values:
-                type: buttons
-                buttons:
-                  -
-                    template_global: /components/buttons
-                    label: 'See it for yourself'
-                    iconamic: information-circle
-                    link_type: url
-                    target_blank: false
-                    url: '#'
-                    button_type: button
-          -
-            type: paragraph
-        type: add_columns
-        enabled: true
-      -
-        column:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'As soon as you get started with Cloud Containers you’ll see how fast and flexible they are. It only takes a few minutes to launch a server, spin up a Container or two and see how much easier development can be with the right infrastructure.'
-        type: add_columns
-        enabled: true
-      -
-        column:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                marks:
-                  -
-                    type: bold
-                text: 'Provision a server super-fast'
-              -
-                type: hard_break
-              -
-                type: text
-                text: 'Choose your server specs and location, and it will be up and running in just a few clicks.'
-              -
-                type: hard_break
-              -
-                type: hard_break
-              -
-                type: text
-                marks:
-                  -
-                    type: bold
-                text: 'Choose from prebuilt images'
-              -
-                type: hard_break
-              -
-                type: text
-                text: 'Once your server’s up, it’s Container time. A range of pre-built images including PHP, Apache and Wordpress, you can just pick and go.'
-        type: add_columns
-        enabled: true
-    add_highlight_features: true
-    type: feature_section
-    enabled: true
-    section_subtitle:
-      -
-        type: paragraph
+        id: lro5rfps
+        title: 'Take a test drive'
+        description: 'To test out one or two containers on a shared server:'
         content:
           -
-            type: text
-            text: 'The Cloud Containers platform makes it easy for you to develop and manage any number of websites.'
-    background_select: gradient_background
-    highlight_features_title: 'Control changes with cloning and syncing'
-    features:
-      -
-        template_global: /global/default_image
-        title: 'Manage it all in one control panel'
-        description:
-          -
             type: paragraph
             content:
               -
                 type: text
-                text: 'Have all the tools you need to manage your servers, domain and containers with our purpose-built, easy to use control panel.'
-        type: highlight_feature
-        enabled: true
-        select_type: image
-        default_image: color-mode-dark.png
-      -
-        template_global: /global/default_image
-        default_image: color-mode-dark.png
-        title: 'See all your sites, databases and domains'
-        description:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Ditch multiple logins and enjoy the ease of having all your sites, databases and domains in one place, under one account.'
-        type: highlight_feature
-        enabled: true
-        select_type: image
-      -
-        template_global: /global/default_image
-        title: 'Track your performance and usage'
-        description:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'See server load stats, as well as bandwidth, disk, memory, and CPU usage for every Container and server, for periods from an hour to a year.'
-        type: highlight_feature
-        enabled: true
-        select_type: image
-        default_image: color-mode-dark.png
-      -
-        template_global: /global/default_image
-        default_image: color-mode-dark.png
-        title: 'Continually monitor server connectivity'
-        description:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Set up connectivity monitoring including DNS, FTP, HTTP/S, SSH and SMTP and get email alerts if anything isn’t responding.'
-        type: highlight_feature
-        enabled: true
-        select_type: image
-      -
-        template_global: /global/default_image
-        default_image: 09054a5f40e858381279a62e2ee534a7.webp
-        title: 'Cache your site the easy way'
-        description:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Remove the complexities of caching in NGINX with our powerful Simple Cache integrated directly into managed Cloud Containers.'
-        type: highlight_feature
-        enabled: true
-        select_type: image
-      -
-        select_type: image
-        default_image: bb28417eb2b2507580ab0f08bf09ea69.webp
-        title: 'Serve worldwide traffic, fast'
-        description:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Give your overseas customers a consistent, fast experience and reduce your international bandwidth usage with our CDN add-on.'
-        type: highlight_feature
-        enabled: true
-  -
-    template: page_builder/feature_section
-    section_title: 'We’ll take care of the rest so you don’t have to...'
-    section_subtitle:
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: 'While you’re building and maintaining great websites, we’re hard at work keeping the Cloud Containers platform fast and secure.'
-    template_global: /global/buttons
-    link: '#'
-    select: background
-    select_icon: none
-    text: 'See it for yourself'
-    columns:
-      -
-        column:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'While you’re building and maintaining great websites, we’re hard at work keeping the Cloud Containers platform fast and secure.'
+                text: 'Once you know that Cloud Hosting is for you, it’s easy to migrate containers onto your own server.'
           -
             type: set
             attrs:
+              id: lrzg1m7b
+              values:
+                type: step_list
+                steps:
+                  -
+                    id: lrzg1qcg
+                    text: 'Create a Webslice account.'
+                    type: step
+                    enabled: true
+                  -
+                    id: lrzg1rb3
+                    text: 'Choose Shared Cloud Hosting.'
+                    type: step
+                    enabled: true
+                  -
+                    id: lrzg1s4x
+                    text: 'Choose your pre-built container(s).'
+                    type: step
+                    enabled: true
+                  -
+                    id: lrzg1u1n
+                    text: 'Get developing!'
+                    type: step
+                    enabled: true
+          -
+            type: set
+            attrs:
+              id: lrzfjvmo
               values:
                 type: buttons
                 buttons:
                   -
+                    id: lrzfjxyk
                     template_global: /components/buttons
-                    label: 'See it for yourself'
-                    iconamic: information-circle
+                    label: 'Start risk-free for 7 days'
                     link_type: url
                     target_blank: false
                     url: '#'
                     button_type: inline
+                    attr_title: 'Start risk-free for 7 days'
           -
             type: paragraph
-        type: add_columns
+        type: start
         enabled: true
+        template_global: /global/iconamic
+        iconamic: server
       -
-        column:
+        id: lro5rs47
+        title: 'Spin up your own server'
+        description: 'To run as many containers as you like, and to build your own images, you need your own server. It only takes a couple of minutes:'
+        content:
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'While you’re building and maintaining great websites, we’re hard at work keeping the Cloud Containers platform fast and secure.'
+                text: 'Once you know that Cloud Hosting is for you, it’s easy to migrate containers onto your own server.'
           -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'We’re working with customers like you, too, offering 24/7 expert support.'
-        type: add_columns
-        enabled: false
-      -
-        column:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                marks:
+            type: set
+            attrs:
+              id: lrzg6p9y
+              values:
+                type: step_list
+                steps:
                   -
-                    type: bold
-                text: 'Get support when you need it'
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'We don’t do long wait times or outsourced support. Our team is on the job around the clock and there’s always an engineer available.'
-        type: add_columns
-        enabled: true
-      -
-        column:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                marks:
+                    id: lrzg6qra
+                    type: step
+                    enabled: true
+                    text: 'Create a Webslice account.'
                   -
-                    type: bold
-                text: 'Restore from automatic backups'
+                    id: lrzg6ri3
+                    type: step
+                    enabled: true
+                    text: 'Provision your server. You can choose from 2 cores up to 8. (Need more? Start with 8 and contact us.)'
+                  -
+                    id: lrzg6sd7
+                    type: step
+                    enabled: true
+                    text: 'Start adding containers. Choose from dozens of pre-built images or create your own Docker images using our registry and build pipeline.'
+                  -
+                    id: lrzg6sy9
+                    type: step
+                    enabled: true
+                    text: 'Get developing!'
+          -
+            type: set
+            attrs:
+              id: lrzg6uqf
+              values:
+                type: buttons
+                buttons:
+                  -
+                    id: lrzg6wod
+                    template_global: /components/buttons
+                    label: 'Start risk-free for 7 days'
+                    link_type: url
+                    target_blank: false
+                    url: '#'
+                    button_type: inline
+                    attr_title: 'Start risk-free for 7 days'
           -
             type: paragraph
-            content:
-              -
-                type: text
-                text: 'We take a daily backup of your server and store it for 14 days in a secure offsite location just in case you ever need it.'
-        type: add_columns
+        type: start
         enabled: true
-    add_highlight_features: true
-    background_select: grid_background
-    highlight_features_title: 'Supercharge your development projects'
-    features:
-      -
-        select_type: image
-        default_image: color-mode-dark.png
-        title: 'Forget about server maintenance'
-        description:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Don’t worry about patching or upgrading servers. We maintain every Cloud Container server to the same high standard, including hardware and operating system.'
-        type: highlight_feature
-        enabled: true
-      -
-        select_type: image
-        default_image: wordpress-on-aws.png
-        title: 'Run on genuinely powerful hardware'
-        description:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'We put our hardware through the grinder to ensure excellent performance and reliability. NVMe storage is standard across our whole product range.'
-        type: highlight_feature
-        enabled: true
-      -
-        select_type: image
-        default_image: b8f5db7682a5fb3fa938f2e26c0e855c.webp
-        title: 'Enjoy built-in security'
-        description:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'We keep the Cloud Container platform patched and up-to-date to stop vulnerabilities creeping in. Add Managed Services and we’re even more proactive.'
-        type: highlight_feature
-        enabled: true
-    type: feature_section
+        template_global: /global/iconamic
+        iconamic: adjustments
+  -
+    id: lrochdxy
+    template: page_builder/head_to_documentation
+    type: head_to_documentation
     enabled: true
-    add_intro_features: true
+    template_global: /global/iconamic
+    iconamic: book-open
+    title: 'Learn more about the webslice elastic hosting platform'
+    description: 'Webslice Elastic Hosting is so well documented that almost everything you could want to know is probably already covered.'
+    sub_title: 'Head to Documentation to see'
+    entry:
+      -
+        id: lrocq15l
+        text: 'The introductory Overview for developers'
+        type: new_set
+        enabled: true
+      -
+        id: lrocq8tp
+        text: 'How easy it is to Get Started'
+        type: new_set
+        enabled: true
+      -
+        id: lrocqfca
+        text: 'Info on creating and Using Containers, including images, variables, and more.'
+        type: new_set
+        enabled: true
+      -
+        id: lrocqj1k
+        text: 'How to manage Databases and permissions.'
+        type: new_set
+        enabled: true
+      -
+        id: lrocqlw5
+        text: 'How to create and manage your own Custom Images.'
+        type: new_set
+        enabled: true
     buttons:
       -
-        template_global: /global/buttons
-        label: 'See it for yourself'
+        id: lrqwq4m7
+        template_global: /components/buttons
+        label: 'Start risk-free for 7 days'
         link_type: url
-        target_blank: false
+        target_blank: true
         url: '#'
         button_type: inline
-  -
-    template: general_content/testimonial_section
-    title_testimonial: 'Developers love Cloud Containers 2'
-    testimonial_textarea:
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu.'
-    testimonial:
-      - 24221891-6df7-4106-8ee6-7e790b922d53
-      - cfd76af2-1e89-4264-b73b-1270a0a37a1a
-      - 0c7d0b62-28ea-4139-a5e5-c206ab916599
-    type: testimonial
-    enabled: true
-    title: 'What our customer are saying'
-    textarea_field:
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: 'Aliquam rhoncus ultrices euismod. Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam. Fusce maximus non metus ac facilisis. '
-    pre_title: asdas
-    toggle_color: true
-    alignment: center
-  -
-    template: /general_content/faq
-    faq_title: 'Frequently Asked Questions'
-    faq_intro_text:
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: 'Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula.'
-    faq_entries:
-      - 57c83bb4-e74d-47f9-924b-1f6ddf8c854a
-      - 236c12aa-a0ec-4e7e-8f4e-e67f29243f62
-      - ec1dbb6f-3d34-49e2-a387-c28342c8ab42
-      - a1c95fbe-5b46-427a-ab56-764bc1fa0e4d
-      - a9f9ef1a-f20a-4e06-9353-98d810fa2fe7
-      - ff4f50d5-1343-4f9f-bfd2-ded4d205c19a
-    type: faq
-    enabled: true
-    title: 'Frequently Asked Questions'
-    textarea_field:
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: 'Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque. Proin elit sem, tempus consequat lectus nec, volutpat hendrerit ligula.'
-    toggle_color: true
-    alignment: center
 ---

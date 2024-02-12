@@ -4,7 +4,7 @@ blueprint: home
 template: general_content/index
 title: Homepage
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1704773564
+updated_at: 1706578815
 top_section:
   -
     id: RzzOzBfN
@@ -50,7 +50,64 @@ top_section:
         target_blank: false
         url: '#'
         button_type: secondary
+    grid_features:
+      -
+        id: lrfrhuc3
+        iconamic: expand
+        text: Flexibility
+      -
+        id: lrfrhv51
+        iconamic: adjustments
+        text: Security
+      -
+        id: lrfrhvr5
+        iconamic: support
+        text: Support
+      -
+        id: lrfrhwd9
+        iconamic: clock
+        text: 'Optional 24/7'
+      -
+        id: lrfridoi
+        iconamic: academic-cap
+        text: 'Automated back-ups'
+      -
+        id: lrfrigs8
+        iconamic: location-marker
+        text: 'Worldwide locations'
 page_builder:
+  -
+    id: lrzox1cv
+    template: page_builder/two_options
+    title: 'There are two ways to Webslice'
+    sub_title: 'No more complications, there’s two ways make your site available to your customers.'
+    boxes:
+      -
+        id: lrzoxcmj
+        template_global: /global/default_image
+        iconamic: shippingbox
+        title: 'Webslice Containers'
+        description: 'A platform that lets you run as many independent, flexible environments as you need. One account, one server, dozens of pre-built images (or build your own), and no technical headaches. You control it all. LAUNCHING EARLY 2024.'
+        url: '#'
+        default_image: color-mode-dark.png
+        hover_template_global: /global/default_image
+        hover_default_image: color-mode-dark.png
+        type: box
+        enabled: true
+      -
+        id: lrzoyenc
+        template_global: /global/default_image
+        iconamic: shippingbox
+        title: 'Webslice Scalable'
+        description: 'PHP hosting that stretches from almost absolute zero to somewhere near infinity (but you can set your own limits). Bring your PHP apps, no modification required, and discover pay-as-you-go hosting. COMING SOON.'
+        url: '#'
+        default_image: color-mode-dark.png
+        hover_template_global: /global/default_image
+        hover_default_image: color-mode-dark.png
+        type: box
+        enabled: true
+    type: two_options
+    enabled: true
   -
     id: ojSts665
     template: /page_builder/easy_steps
@@ -98,14 +155,14 @@ page_builder:
         type: Step-item
         enabled: true
     type: easy_steps
-    enabled: true
+    enabled: false
   -
     id: haBmA96M
     template: page_builder/feature_section
     add_intro_features: true
     add_highlight_features: false
     type: feature_section
-    enabled: true
+    enabled: false
     section_title: 'Best features'
     columns:
       -
@@ -253,7 +310,7 @@ page_builder:
         type: highlight_feature
         enabled: true
     type: feature_section
-    enabled: true
+    enabled: false
   -
     id: 3u3HFAnf
     template: page_builder/feature_section
@@ -322,7 +379,7 @@ page_builder:
         type: highlight_feature
         enabled: true
     type: feature_section
-    enabled: true
+    enabled: false
     highlight_features_title: '&nbsp;'
   -
     id: fSxa3nCq
@@ -378,7 +435,7 @@ page_builder:
     reverse_alignment: true
     toggle_alignment: true
     type: highlight
-    enabled: true
+    enabled: false
   -
     id: 3c8TZp98
     template: /components/section_title
@@ -391,7 +448,7 @@ page_builder:
       - 5470de51-4f5d-4a01-81ff-afffe73f680d
       - c8b148c7-3d15-487e-acef-54c45a653adf
     type: testimonial
-    enabled: true
+    enabled: false
   -
     id: pMIWDHjj
     template: /components/section_title
@@ -404,7 +461,7 @@ page_builder:
       - a9f9ef1a-f20a-4e06-9353-98d810fa2fe7
       - ff4f50d5-1343-4f9f-bfd2-ded4d205c19a
     type: faq
-    enabled: true
+    enabled: false
     pre_title: FAQ
     title: 'Frequently Asked Questions'
     textarea_field:
@@ -498,12 +555,12 @@ page_builder:
         type: companies
         enabled: false
     type: companies_logo
-    enabled: true
+    enabled: false
   -
     id: hTof5hu7
     template: /page_builder/latest_post
     pre-title: 'Stay in the loop'
     title_section: 'Our latest article'
     type: latest_post
-    enabled: true
+    enabled: false
 ---

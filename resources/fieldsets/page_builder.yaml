@@ -5,86 +5,159 @@ fields:
     field:
       type: replicator
       localizable: true
-      collapse: true
+      collapse: false
       listable: false
       display: 'Page builder'
       instructions: 'Build your page by using various predefined content models.'
       sets:
-        article:
-          display: Article
-          instructions: 'Long form content, can be expanded with media like figures, video, quotes or tables.'
-          fields:
-            -
-              import: article
-        companies_logo:
-          display: 'Companies Logo'
-          fields:
-            -
-              import: companies_logo
-        contact_us_form:
-          display: 'Contact Us form'
-          fields:
-            -
-              import: contact_us_form
-        easy_steps:
-          display: 'Easy steps'
-          fields:
-            -
-              import: easy_steps
-        faq:
-          display: FAQ
-          fields:
-            -
-              import: faq
-        feature_section:
-          display: 'Feature Section'
-          fields:
-            -
-              import: feature_section
-        highlight:
-          display: 'Highlight Features'
-          fields:
-            -
-              import: highlight
-        image_gallery:
-          display: 'Image Gallery'
-          fields:
-            -
-              import: image_gallery
-        latest_post:
-          display: 'Latest Post'
-          fields:
-            -
-              import: latest_post
-        multiple_text_columns:
-          display: 'Multiple text columns'
-          fields:
-            -
-              import: multiple_text_columns
-        pricing_table:
-          display: 'Pricing Table'
-          fields:
-            -
-              import: pricing_table
-        testimonial:
-          display: 'Testimonial Section'
-          fields:
-            -
-              import: testimonial_section
-        text_columns:
-          display: 'Text Columns'
-          fields:
-            -
-              import: pricing_features_section
-        text_content:
-          display: 'Text Content'
-          fields:
-            -
-              import: text_content
-        tile_steps:
-          display: 'Tile steps'
-          fields:
-            -
-              import: tile_steps
+        main:
+          display: Main
+          instructions: null
+          icon: null
+          sets:
+            article:
+              display: Article
+              instructions: 'Long form content, can be expanded with media like figures, video, quotes or tables.'
+              icon: null
+              fields:
+                -
+                  import: article
+            companies_logo:
+              display: 'Companies Logo'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: companies_logo
+            contact_us_form:
+              display: 'Contact Us form'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: contact_us_form
+            easy_steps:
+              display: 'Easy steps'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: easy_steps
+            faq:
+              display: FAQ
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: faq
+            feature_section:
+              display: 'Feature Section'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: feature_section
+            highlight:
+              display: 'Highlight Features'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: highlight
+            image_gallery:
+              display: 'Image Gallery'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: image_gallery
+            latest_post:
+              display: 'Latest Post'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: latest_post
+            multiple_text_columns:
+              display: 'Multiple text columns'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: multiple_text_columns
+            pricing_table:
+              display: 'Pricing Table'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: pricing_table
+            testimonial:
+              display: 'Testimonial Section'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: testimonial_section
+            text_columns:
+              display: 'Text Columns'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: pricing_features_section
+            text_content:
+              display: 'Text Content'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: text_content
+            tile_steps:
+              display: 'Tile steps'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: tile_steps
+            bento_features:
+              display: 'Bento Features'
+              instructions: null
+              icon: dashboard-layout-3
+              fields:
+                -
+                  import: bento_features
+            get_started:
+              display: 'Get Started'
+              instructions: null
+              icon: layout-table-row-insert
+              fields:
+                -
+                  import: get_started
+            head_to_documentation:
+              display: 'Head to Documentation'
+              instructions: null
+              icon: content-book-open
+              fields:
+                -
+                  import: head_to_documentation
+            two_options:
+              display: 'Two Options'
+              instructions: null
+              icon: layout-two-columns
+              fields:
+                -
+                  import: two_options
+            bento_highlight:
+              display: 'Bento Highlight'
+              instructions: null
+              icon: dashboard-layout
+              fields:
+                -
+                  import: bento_highlight
       instructions_position: above
-      read_only: false
+      visibility: visible
+      replicator_preview: true
+      previews: true
+      fullscreen: true
+      hide_display: false

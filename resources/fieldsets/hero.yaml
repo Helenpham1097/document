@@ -9,6 +9,43 @@ fields:
       listable: hidden
       default: /general_content/hero
   -
+    handle: shape
+    field:
+      options:
+        diagonal: Diagonal
+        triangle: Triangle
+        paper: Paper
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      default: diagonal
+      type: select
+      display: 'Hero background shape'
+      icon: select
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    import: icon
+  -
+    handle: pre
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Pre-title
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
     handle: hero_home_title
     field:
       input_type: text
