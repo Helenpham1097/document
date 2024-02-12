@@ -1,9 +1,11 @@
-{{# Partial to show the hero section of the general content pages #}}
+{{# Partial to show the hero section of the home page #}}
 <div class="relative flex flex-col justify-center">
-	{{ partial:global/grid_lines grid="true" diagonal_lines="true" grid_number='6' }}
-	<div class="container relative mx-auto max-w-7xl">
-		<div class="grid items-center gap-8 py-12 md:grid-cols-2 md:py-24">
-			<div class="max-w-lg space-y-6">
+	<div class="container relative mx-auto">
+		{{ partial:global/diagonal gradient_style='absolute top-0 mx-auto w-full xl:translate-x-1/2 -translate-y-1/2' }}
+	</div>
+	<div class="container relative mx-auto">
+		<div class="grid items-center gap-4 lg:grid-cols-2 xl:gap-8 xl:py-12">
+			<div class="space-y-6">
 				{{ if categories }}
 					<h5 class="hidden flex-row items-center space-x-2 uppercase sm:flex">
 						<div class="text-purple-500">
@@ -13,22 +15,17 @@
 						</div>
 					</h5>
 				{{ /if }}
-				<div class="flex flex-col items-start space-y-6 lg:flex-grow">
-					<h1 class="relative max-w-2xl text-5xl font-bold text-zinc-900 md:text-6xl lg:text-7xl">{{ hero_home_title }}</h1>
-					<div class="text-lg text-zinc-500 dark:text-zinc-300 sm:max-w-xl md:max-w-3xl lg:max-w-4xl xl:text-xl 2xl:text-2xl">{{ hero_home_description }}</div>
-
+				<div class="flex flex-col items-start space-y-6 xl:flex-grow">
+					{{ partial:typography/pre :content="hero_home_description | strip_tags:p" }}
+					{{ partial:typography/h1 :content="hero_home_title | strip_tags:p" color='' class='text-4xl dot font-semibold md:text-5xl xl:text-6xl' }}
+					{{ partial:typography/excerpt :excerpt="hero_home_description | strip_tags:p" }}
 					<div class="flex-none">{{ partial:components/buttons }}</div>
 				</div>
 			</div>
 
-			<div class="relative order-first sm:order-none">
-				<div class="animate-blob background-animate absolute inset-0 mx-8 my-12 rotate-6 transform rounded-full bg-gradient-to-r from-purple-500 to-green-500 opacity-40 blur-3xl filter md:mx-2 md:my-2"></div>
+			<div class="relative order-first lg:order-none">
 				{{ if default_image }}
-					<div class="relative">
-						<figure class="overflow-hidden rounded-lg">
-							{{ partial:global/picture :image="default_image" cover="true" lazy="false" maxwidth="768" quality='70' }}
-						</figure>
-					</div>
+					{{ partial:global/picture :image="default_image" cover="true" lazy="false" maxwidth="768" quality='70' }}
 				{{ /if }}
 			</div>
 		</div>
