@@ -1,44 +1,133 @@
 {{# Template for a blog entry #}}
 {{ partial:snippets/scrollProgress }}
-<div class="slice-background"></div>
-
-<div class="container relative space-y-2 lg:space-y-4">
-	{{ partial:components/button label="Back to blog" button_type="inline" link_type="url" class="col-span-2 pr-0 pl-0 " url="/blog" iconamic="arrow-left" }}
-	<article class="relative flex flex-col">
-		{{# Header #}}
-		<header class="max-w-[736px] space-y-3 py-8 lg:py-16">
-			{{ partial:components/author }}
-			{{ partial:typography/h1 :content="title" color='text-zinc-800 lg:text-6xl dark:text-zinc-200 text-3xl sm:text-4xl tracking-tight ' }}
-		</header>
-
-		<div class="relative mx-auto mt-8 max-w-2xl sm:mt-12 md:mt-16 lg:block">
-			<div class="absolute -left-20 hidden h-full lg:block">
-				{{ partial:components/share }}
-			</div>
-			<div class="mx-auto max-w-3xl space-y-8 text-base leading-8 sm:text-lg">
-				{{ if default_image }}
-					<figure class="w-full overflow-hidden rounded-lg shadow-2xl shadow-zinc-800/20 dark:shadow-black/10 lg:aspect-[6/4]">
-						{{ partial:global/picture :image="default_image" cover="true" maxheight="512" lazy="false" maxwidth="768" quality='70' }}
-					</figure>
-				{{ /if }}
-				{{ partial:typography/excerpt :content="excerpt" }}
-				{{# Content #}}
-				{{ page_builder scope="block" }}
-					{{ partial src="page_builder/{type}" }}
-				{{ /page_builder }}
+<div class="container relative -z-10 my-0 mx-auto py-0">
+	{{ partial:global/diagonal gradient_style='absolute top-0 mx-auto w-full translate-x-1/2 -translate-y-1/2' }}
+</div>
+<div class="container pb-20 pt-12 lg:py-24">
+	{{# Breadcrums #}}
+	<ul class="hide-scrollbar -my-1 ml-[calc(50%-50vw)] w-screen overflow-x-auto py-1">
+		<div class="container">
+			<div class="-ml-1.5 flex text-zinc-700 dark:text-zinc-400">
+				<li class="shrink-0 text-sm">
+					<div class="flex items-center">
+						<a href="/blog" class="pl-1.5 pr-[7px] underline">Blog</a>
+						<div class="mx-[3px] text-[11px] font-medium">/</div>
+					</div>
+				</li>
+				<li class="hidden shrink-0 text-sm lg:block"><div class="px-1.5">{{ title }}</div></li>
+				<li class="shrink-0 text-sm lg:hidden"><div class="px-1.5">{{ title | safe_truncate:40:... }}</div></li>
 			</div>
 		</div>
+	</ul>
+	<div href="#top" class="mt-4">
+		{{ partial:typography/h1 :content="title" color='max-w-5xl text-3xl tracking-tight text-zinc-700 [text-wrap:balance] dark:text-zinc-100 sm:text-4xl lg:text-6xl' }}
+		<div class="mt-8 flex items-center gap-x-1 sm:mt-10 sm:gap-x-1.5">{{ partial:components/author link='true' }}</div>
+		{{ partial:components/share class='flex mt-4 lg:hidden' }}
+	</div>
 
+	{{# Content and ON THIS PAGE sidebar #}}
+	<div class="relative mt-[60px] flex flex-col gap-x-6 gap-y-[72px] lg:mt-[130px] lg:flex-row">
+		<div class="flex-1">
+			<main class="grid grid-cols-1 lg:grid-cols-10 lg:gap-x-12">
+				<div class="pb-0 lg:col-span-7 lg:pb-[60px] 2xl:col-span-6">
+					{{ if default_image }}
+						<figure class="bento_box w-full overflow-hidden rounded-lg shadow-2xl shadow-zinc-800/20 dark:shadow-black/10 lg:aspect-[6/4]">
+							{{ partial:global/picture :image="default_image" cover="true" maxheight="512" lazy="false" maxwidth="768" quality='70' }}
+						</figure>
+					{{ /if }}
+					<div id="content" class="prose prose-lg mx-auto">
+						{{ partial:typography/excerpt :content="excerpt" class='mt-12' }}
+						{{ page_builder scope="block" }}
+							{{ partial src="page_builder/{type}" }}
+						{{ /page_builder }}
+					</div>
+				</div>
+				{{# Sidebar #}}
+				<div class="hidden space-y-6 self-start lg:col-span-3 lg:col-start-8 lg:block">
+					<div class="w-full">
+						<div class="mx-auto flex w-full flex-col gap-2">
+							<div class="flex items-center gap-2 text-lg font-semibold text-zinc-800 dark:text-zinc-200">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-plus">
+									<path d="M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h8" />
+									<path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+									<path d="M19 16v6" />
+									<path d="M16 19h6" />
+								</svg>
+								Subscribe to get notify
+							</div>
+							{{ partial:components/subscribe_form }}
+						</div>
+					</div>
+					{{# TOC #}}
+					<div class="hidden w-full">
+						<div class="flex items-center gap-2 text-lg font-semibold text-zinc-800 dark:text-zinc-200">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-list">
+								<line x1="8" x2="21" y1="6" y2="6" />
+								<line x1="8" x2="21" y1="12" y2="12" />
+								<line x1="8" x2="21" y1="18" y2="18" />
+								<line x1="3" x2="3.01" y1="6" y2="6" />
+								<line x1="3" x2="3.01" y1="12" y2="12" />
+								<line x1="3" x2="3.01" y1="18" y2="18" />
+							</svg>
+							On this page
+						</div>
+						<div id="sidebar" class="px-3 lg:px-5">
+							<ol class="toc">
+								<li><a href="#">You must have a quiet, distraction free place to work from at home.</a></li>
+								<li><a href="#" class="font-bold text-purple-500 dark:text-green-300">Ensure you have a productive and healthy workspace.</a></li>
+								<li><a href="#">You must have a wired internet connection, VDSL or better.</a></li>
+								<li><a href="#">You must have a webcam, microphone and a physical VOIP phone.</a></li>
+								<li><a href="#">Confirm your plan with your manager.</a></li>
+								<li><a href="#">Working from home is a privilege not a right.</a></li>
+								<li><a href="#">Gather on Tuesdays</a></li>
+								<li><a href="#">You need to have been working here for at least three months.</a></li>
+							</ol>
+						</div>
+					</div>
+
+					{{# Related articles #}}
+					<div class="w-full">
+						<div class="flex items-center gap-2 text-lg font-semibold text-zinc-800 dark:text-zinc-200">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-newspaper">
+								<path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2" />
+								<path d="M18 14h-8" />
+								<path d="M15 18h-5" />
+								<path d="M10 6h8v4h-8V6Z" />
+							</svg>
+							Related articles
+						</div>
+						<div class="divide-y divide-zinc-200 dark:divide-zinc-800">
+							{{ collection:blog :id:isnt="id" :limit="latest_news:entries_limit" sort="date:desc" }}
+								{{ partial:blog/post square="true" }}
+							{{ /collection:blog }}
+						</div>
+					</div>
+					{{# Share #}}
+					<div class="w-full">
+						<div class="flex items-center gap-2 text-lg font-semibold text-zinc-800 dark:text-zinc-200">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2">
+								<circle cx="18" cy="5" r="3" />
+								<circle cx="6" cy="12" r="3" />
+								<circle cx="18" cy="19" r="3" />
+								<line x1="8.59" x2="15.42" y1="13.51" y2="17.49" />
+								<line x1="15.41" x2="8.59" y1="6.51" y2="10.49" />
+							</svg>
+							Share this article:
+						</div>
+						<div class="px-3 lg:px-8">
+							{{ partial:components/share class='lg:flex -ml-2 mt-1.5 hidden' }}
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
 		<div class="back-to-top-wrapper z-20">
-			<a href="#top" class="back-to-top-link border border-purple-200 bg-white dark:border-zinc-700 dark:bg-zinc-800" aria-label="Scroll to Top">
-				<svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-					<path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
-				</svg>
+			<a href="#top" class="back-to-top-link border border-zinc-300 bg-white dark:border-zinc-700 dark:bg-zinc-800" aria-label="Scroll to Top">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-up h-8 w-8"><path d="m18 15-6-6-6 6" /></svg>
 			</a>
 		</div>
-	</article>
-
-	<div class="container">
+	</div>
+	<div class="container hidden">
 		{{ if {collection:count in="blog"} > 1 }}
 			{{ partial:blog/latest_news }}
 		{{ /if }}

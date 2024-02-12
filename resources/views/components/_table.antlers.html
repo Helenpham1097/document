@@ -1,43 +1,46 @@
 {{#
-  @name Table
-  @desc The table component for sizeable content tables.
-  @set page.article.table
+    @name Table
+    @desc The table component for sizeable content tables.
+    @set page.article.table
 #}}
 
 <!-- /components/_table.antlers.html -->
-<div class="{{ if size == 'md'}} size-md {{/if}} {{ if size == 'lg'}} size-lg {{/if}} {{ if size == 'xl'}} size-xl {{/if}} {{ if size == ''}}  {{/if}} not-prose overflow-auto">
-	<table class="bg-light sm:min-w-none w-full min-w-[580px] border-collapse">
-		{{ table }}
-			{{ if first && first_row_headers }}
-				<thead>
-					<tr>
-						{{ cells }}
-							<th class="border-b border-zinc-200 bg-zinc-100 px-3 py-3 text-left text-base font-medium tracking-wider text-purple-500 dark:border-zinc-700 dark:bg-zinc-700 dark:text-green-500 xl:px-6">{{ value }}</th>
-						{{ /cells }}
-					</tr>
-				</thead>
-				<tbody></tbody>
-			{{ /if }}
-			{{ if !first && first_row_headers || !first_row_headers }}
-				{{ if first }}
-					<tbody class="box-border border-y border-zinc-200 dark:border-zinc-700"></tbody>
-				{{ /if }}
-				<tr class="box-border border-x border-zinc-200 dark:border-zinc-700">
-					{{ cells }}
-						{{ if first && first_column_headers }}
-							<th class="border-b border-zinc-200 bg-zinc-100 px-3 py-3 text-left text-base font-medium tracking-wider text-green-500 dark:border-zinc-700 dark:bg-zinc-700 dark:text-green-300 xl:px-6">{{ value }}</th>
-						{{ else }}
-							<td class="border-b border-zinc-200 px-3 py-3 text-base text-zinc-800 dark:border-zinc-700 dark:text-zinc-200 xl:px-6">{{ value }}</td>
-						{{ /if }}
-					{{ /cells }}
-				</tr>
-                {{ if last }}
-                    </tbody>
-                {{ /if }}
-			{{ /if }}
-		{{ /table }}
-	</table>
+<div
+class="{{ if size == 'md'}} size-md {{/if}} {{ if size == 'lg'}} size-lg {{/if}} {{ if size == 'xl'}} size-xl {{/if}} {{ if size == ''}}  {{/if}} not-prose overflow-auto"
+>
+    <table class="w-full bg-light border-collapse min-w-[580px] sm:min-w-none">
+        {{ table }}
+            {{ if first && first_row_headers }}
+                <thead>
+                    <tr>
+                        {{ cells }}
+                            <th class="px-3 py-3 font-bold tracking-wider text-left text-zinc-800 dark:text-zinc-200 uppercase border-b xl:px-6 dark:border-zinc-700 border-zinc-300 bg-zinc-200 dark:bg-zinc-800">{{ value }}</th>
+                        {{ /cells }}
+                    </tr>
+                </thead>
+            {{ /if }}
 
-	{{ partial:typography/caption }}
+            {{ first ?= '<tbody>' }}
+
+            {{ if !first && first_row_headers || !first_row_headers }}
+                <tr>
+                    {{ cells }}
+                        {{ if first && first_column_headers }}
+                            <th class="px-3 py-3 font-bold tracking-wider text-left text-zinc-800 dark:text-zinc-200 uppercase border-b xl:px-6 dark:border-zinc-700 border-zinc-300 bg-zinc-200 dark:bg-zinc-800">{{ value }}</th>
+                        {{ else }}
+                            <td class="px-3 py-3 border-b xl:px-6 dark:border-zinc-700 border-zinc-300 text-zinc-700 dark:text-zinc-400">{{ value }}</td>
+                        {{ /if }}
+                    {{ /cells }}
+                </tr>
+            {{ /if }}
+
+            {{ last ?= '</tbody>' }}
+        {{ /table }}
+    </table>
+
+    {{ partial:typography/caption }}
 </div>
+<!-- End: /components/_table.antlers.html -->
+
+
 <!-- End: /components/_table.antlers.html -->
