@@ -1,42 +1,42 @@
 <div class="relative z-10">
 	<div class="absolute -inset-0.5 rounded-xl bg-gradient-to-r from-zinc-200/0 via-zinc-200 to-zinc-200/0 opacity-40 dark:from-zinc-500/0 dark:via-zinc-500 dark:to-zinc-500/0 dark:opacity-20"></div>
 
-	<div class="relative w-full bg-white p-4 text-zinc-700 dark:bg-zinc-900 dark:text-zinc-200">
-		<div x-data="{ open: false }" class="mx-auto flex max-w-7xl flex-row items-center justify-between">
+	<div class="relative w-full bg-white py-4 text-zinc-700 dark:bg-zinc-900 dark:text-zinc-200 sm:py-0">
+		<div x-data="{ open: false }" class="container mx-auto flex flex-row items-center justify-between">
 			{{# Logo #}}
-			<div class="mr-12 flex flex-row items-center justify-between">
+			<div class="flex flex-row items-center justify-between xl:mr-12">
 				{{ partial:global/_logo }}
 			</div>
 
 			{{# Desktop menu #}}
-			<nav class="flex flex-grow flex-row items-center justify-between space-x-4" role="navigation">
+			<nav class="flex flex-row items-center justify-between space-x-4 xl:flex-grow" role="navigation">
 				{{# Main nav #}}
 				<div class="relative hidden items-center lg:flex">
 					<nav
 						x-data="{
-	navigationMenuOpen: false,
-	navigationMenu: '',
-	navigationMenuCloseDelay: 200,
-	navigationMenuCloseTimeout: null,
-	navigationMenuLeave() {
-		let that = this;
-		this.navigationMenuCloseTimeout = setTimeout(() => {
-			that.navigationMenuClose();
-		}, this.navigationMenuCloseDelay);
-	},
-	navigationMenuReposition(navElement) {
-		this.navigationMenuClearCloseTimeout();
-		this.$refs.navigationDropdown.style.left = navElement.offsetLeft + 'px';
-		this.$refs.navigationDropdown.style.marginLeft = (navElement.offsetWidth/2) + 'px';
-	},
-	navigationMenuClearCloseTimeout(){
-		clearTimeout(this.navigationMenuCloseTimeout);
-	},
-	navigationMenuClose(){
-		this.navigationMenuOpen = false;
-		this.navigationMenu = '';
-	}
-}"
+							navigationMenuOpen: false,
+							navigationMenu: '',
+							navigationMenuCloseDelay: 200,
+							navigationMenuCloseTimeout: null,
+							navigationMenuLeave() {
+								let that = this;
+								this.navigationMenuCloseTimeout = setTimeout(() => {
+									that.navigationMenuClose();
+								}, this.navigationMenuCloseDelay);
+							},
+							navigationMenuReposition(navElement) {
+								this.navigationMenuClearCloseTimeout();
+								this.$refs.navigationDropdown.style.left = navElement.offsetLeft + 'px';
+								this.$refs.navigationDropdown.style.marginLeft = (navElement.offsetWidth/2) + 'px';
+							},
+							navigationMenuClearCloseTimeout(){
+								clearTimeout(this.navigationMenuCloseTimeout);
+							},
+							navigationMenuClose(){
+								this.navigationMenuOpen = false;
+								this.navigationMenu = '';
+							}
+						}"
 						class="relative z-10 w-auto">
 						<div class="relative">
 							<ul class="group flex flex-1 list-none items-center space-x-1 text-zinc-700 dark:text-zinc-100">
@@ -50,7 +50,7 @@
 										</li>
 									{{ else }}
 										<li>
-											<a href="#_" class="bg-background group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-zinc-100 hover:text-zinc-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:hover:bg-zinc-800 dark:hover:text-zinc-100">{{ title }}</a>
+											<a href="{{ url }}" class="bg-background group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-zinc-100 hover:text-zinc-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:hover:bg-zinc-800 dark:hover:text-zinc-100">{{ title }}</a>
 										</li>
 									{{ /if }}
 								{{ /nav:main_menu }}
@@ -58,7 +58,7 @@
 						</div>
 
 						<div x-ref="navigationDropdown" x-show="navigationMenuOpen" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-100" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90" @mouseover="navigationMenuClearCloseTimeout()" @mouseleave="navigationMenuLeave()" class="absolute top-0 -translate-x-1/2 translate-y-11 pt-3 duration-200 ease-out" x-cloak>
-							<div class="flex h-auto w-auto justify-center overflow-hidden rounded-md border border-zinc-200/70 bg-white shadow-sm dark:border-zinc-800/70 dark:bg-zinc-900">
+							<div class="flex h-auto w-auto justify-center overflow-hidden rounded-md border border-zinc-200/70 bg-white shadow-2xl dark:border-zinc-800/70 dark:bg-zinc-900">
 								{{ nav:main_menu show_unpublished="true" }}
 									{{ if children }}
 										<div x-show="navigationMenu == '{{ title | slugify }}'" class="flex w-full max-w-2xl items-stretch justify-center gap-x-3 p-6">
@@ -91,13 +91,13 @@
 					</nav>
 				</div>
 
-				<div class="flex items-center space-x-4 lg:ml-6 lg:border-l lg:border-zinc-200 lg:pl-6 lg:dark:border-zinc-800">
+				<div class="flex items-center space-x-4 lg:border-l lg:border-zinc-200 lg:dark:border-zinc-800 xl:pl-6">
 					{{ partial:documentation/_theme_toggle class="hidden lg:block" }}
 					{{ partial:components/button label="Sign In" link_type="url" url="#" iconamic="user-circle" }}
 				</div>
 				{{# modal mobile menu #}}
 				<div id="Modal" x-data="{ open: false }" @open-me="open=true" class="block lg:hidden" @close-me="open=false">
-					<button class="inline-flex w-full justify-center px-4 py-2 text-base font-medium text-zinc-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 dark:text-zinc-200 sm:w-auto sm:text-sm" @click.prevent="open = true" aria-controls="modal">
+					<button class="inline-flex w-full justify-center p-2 text-base font-medium text-zinc-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 dark:text-zinc-200 sm:w-auto sm:text-sm" @click.prevent="open = true" aria-controls="modal">
 						<span class="sr-only">Navigation</span>
 						<svg fill="currentColor" viewBox="0 0 20 20" class="h-6 w-6">
 							<path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
