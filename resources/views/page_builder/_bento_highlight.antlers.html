@@ -1,0 +1,58 @@
+{{# Feature template in a horizontal row, as more are added from the replicator they will alternate their order, they can all line up on either side. #}}
+<section class="container isolate space-y-8 lg:space-y-32">
+	{{ rows }}
+		<div class="{{ if reverse_alignment }}
+			{{ unless toggle_alignment }}
+				sm:flex-row-reverse lg:space-x-reverse
+			{{ /unless }}
+		{{ /if }} {{ if toggle_alignment }}
+			{{ unless reverse_alignment }}
+				{{ switch between='|sm:order-last lg:space-x-reverse' }}
+			{{ /unless }}
+		{{ /if }} {{ if toggle_alignment & reverse_alignment }}
+			{{ switch between='|lg:space-x-reverse' }}
+		{{ /if }} mx-auto flex flex-col gap-8 py-10 sm:flex-row sm:py-5 lg:items-center">
+			<div class="{{ if toggle_alignment }}
+				{{ switch between='|sm:order-last' }}
+			{{ /if}} space-y-6 sm:w-1/2">
+				<div class="grid gap-4 lg:grid-cols-2">
+					{{ bentos }}
+						{{ if first }}
+							<figure class="lg:hidden">
+								{{ partial:global/picture :image="image" cover="true" lazy="false" maxwidth="768" quality='70' }}
+							</figure>
+						{{ /if }}
+						<div class="{{ if first }} lg:col-span-2 lg:pt-24 {{ /if }}bento_box relative isolate flex flex-col justify-end gap-2 overflow-hidden p-4 lg:p-8">
+							{{ if first }}
+								<figure class="absolute right-0 top-1/2 hidden translate-x-16 -translate-y-1/2 transform lg:block">
+									{{ partial:global/picture :image="image" cover="true" lazy="false" maxwidth="768" quality='70' }}
+								</figure>
+							{{ /if }}
+							{{ partial:illustration/div_grid gradient_direction='bg-gradient-to-l' grid_size='3' class='absolute top-1/2 -translate-y-1/2 left-0 right-0 mx-auto flex h-full w-full justify-between lg:h-full' }}
+							<div class="absolute inset-0 bg-gradient-to-l"></div>
+							{{ items }}
+								<a href="{{ url }}" target="_blank">
+									{{ if items | count == 1 }}
+										{{ partial:components/goto class='max-w-xs' col='true' }}
+									{{ else }}
+										{{ partial:components/goto class=' max-w-xs !items-start' col='false' }}
+									{{ /if }}
+								</a>
+							{{ /items }}
+						</div>
+					{{ /bentos }}
+				</div>
+			</div>
+			<div class="relative sm:mx-auto sm:w-1/2">
+				<div class="space-y-8">
+					<div class="space-y-4 xl:max-w-xl">
+						{{ svg src="{{config:iconamic:path}}/{{iconamic}}.svg" class="text-zinc-800 dark:text-white" }}
+						{{ partial:typography/h3 :content="title" class="dot" }}
+						{{ partial:typography/p :content="description" class="" }}
+					</div>
+					{{ partial:components/buttons }}
+				</div>
+			</div>
+		</div>
+	{{ /rows }}
+</section>
