@@ -62,27 +62,6 @@ fields:
       replicator_preview: true
       hide_display: false
   -
-    handle: bento_type
-    field:
-      options:
-        boxes: Boxes
-        col_boxes: 'Column + Boxes'
-      taggable: false
-      push_tags: false
-      multiple: false
-      clearable: false
-      searchable: true
-      cast_booleans: false
-      default: boxes
-      type: select
-      display: 'Bento Type'
-      icon: select
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      replicator_preview: true
-      hide_display: false
-  -
     handle: boxes
     field:
       collapse: false
@@ -132,21 +111,162 @@ fields:
                     visibility: visible
                     replicator_preview: true
                     hide_display: false
+                    width: 66
                 -
-                  handle: link
+                  handle: show_controls
                   field:
-                    type: link
-                    display: Link
-                    icon: link
+                    mode: toggle
+                    display: 'Show controls'
+                    type: revealer
+                    icon: revealer
+                    width: 33
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: link_type
+                  field:
+                    options:
+                      entry: Entry
+                      url: URL
+                      email: E-mail
+                      tel: Telephone
+                      asset: Asset
+                    type: button_group
+                    localizable: true
+                    default: entry
+                    listable: false
+                    display: 'Link type'
+                    replicator_preview: false
+                    width: 66
+                    if:
+                      show_controls: 'equals true'
+                -
+                  handle: target_blank
+                  field:
+                    type: toggle
+                    localizable: true
+                    width: 33
+                    listable: false
+                    display: 'Open in new window?'
+                    replicator_preview: false
+                    if:
+                      show_controls: 'equals true'
+                -
+                  handle: entry
+                  field:
+                    max_items: 1
+                    mode: default
+                    type: entries
+                    localizable: true
+                    listable: false
+                    display: Entry
+                    replicator_preview: false
+                    if:
+                      link_type: entry
+                      show_controls: 'equals true'
+                -
+                  handle: url
+                  field:
+                    placeholder: 'https://site.com'
+                    input_type: url
+                    type: text
+                    localizable: true
+                    listable: false
+                    display: URL
+                    width: 50
+                    if:
+                      link_type: url
+                      show_controls: 'equals true'
+                -
+                  handle: email
+                  field:
+                    placeholder: info@site.com
+                    input_type: email
+                    type: text
+                    localizable: true
+                    listable: false
+                    display: E-mail
+                    width: 50
+                    replicator_preview: false
+                    if:
+                      link_type: email
+                      show_controls: 'equals true'
+                -
+                  handle: tel
+                  field:
+                    placeholder: '+0 (0)12 345678'
+                    input_type: tel
+                    type: text
+                    localizable: true
+                    listable: false
+                    display: Telephone
+                    width: 50
+                    replicator_preview: false
+                    if:
+                      link_type: tel
+                      show_controls: 'equals true'
+                -
+                  handle: attr_title
+                  field:
+                    placeholder: 'Learn more'
+                    input_type: text
+                    type: text
+                    localizable: true
+                    listable: false
+                    display: Title
+                    width: 50
+                    replicator_preview: false
+                    if:
+                      show_controls: 'equals true'
+                -
+                  handle: attr_aria
+                  field:
+                    placeholder: 'Download the PDF'
+                    input_type: text
+                    type: text
+                    localizable: true
+                    listable: false
+                    display: 'Aria label'
+                    width: 50
+                    replicator_preview: false
+                    if:
+                      show_controls: 'equals true'
+                -
+                  handle: show_image
+                  field:
+                    mode: toggle
+                    type: revealer
+                    display: 'Show image'
+                    icon: revealer
                     listable: hidden
                     instructions_position: above
                     visibility: visible
                     replicator_preview: true
                     hide_display: false
+                -
+                  handle: image
+                  field:
+                    max_files: 1
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    show_set_alt: true
+                    type: assets
+                    display: Image
+                    icon: assets
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    if:
+                      show_image: 'equals true'
       type: replicator
-      display: boxes
+      display: Boxes
       icon: replicator
-      instructions: '(4 max)'
+      instructions: 'Highlight the top 4 features in bento boxes, each with an optional link and formatting options for bold and italic. (4 items max)'
       listable: hidden
       instructions_position: above
       visibility: visible
@@ -164,13 +284,14 @@ fields:
             input_type: text
             antlers: false
             type: text
-            display: Text
+            display: Title
             icon: text
             listable: hidden
             instructions_position: above
             visibility: visible
             replicator_preview: true
             hide_display: false
+            width: 33
         -
           handle: link
           field:
@@ -182,6 +303,22 @@ fields:
             visibility: visible
             replicator_preview: true
             hide_display: false
+            width: 33
+            validate:
+              - required
+        -
+          handle: target
+          field:
+            default: false
+            type: toggle
+            display: 'Open in new window?'
+            icon: toggle
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+            width: 25
       mode: table
       reorderable: true
       fullscreen: true

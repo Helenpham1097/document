@@ -7,7 +7,7 @@
     <picture>
         {{ asset :url="image" }}
             {{ if extension == 'svg' || extension == 'gif' }}
-                <img class="{{ class }}  " src="{{ url }}" alt="{{ alt }}" />
+                <img class="{{ class }}" src="{{ url }}" alt="{{ alt }}" />
             {{ else }}
                 <source
                     srcset="
@@ -32,10 +32,10 @@
                     {{ else }}
                         class="{{ class }}"
                     {{ /if }}
-                    src="{{ glide:image fit='crop_focal' {{ if maxheight }} height='{{ maxheight }}' {{ /if }} width='{{ maxwidth | multiply:2 }}' quality='{{quality}}'}}"
+                    src="{{ glide:image fit='crop_focal' {{ if maxheight }} height='{{ maxheight }}' {{ /if }} width='{{ maxwidth }}' quality='{{quality}}'}}"
                     alt="{{ alt ensure_right='.' }}"
-                    width="{{ image.width }}"
-                    height="{{ image.height }}"
+                    width="{{ maxwidth }}"
+                    height="{{ maxheight }}"
                     {{ if lazy }}
                         loading="lazy"
                     {{ /if }}

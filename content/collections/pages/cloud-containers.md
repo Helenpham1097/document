@@ -33,6 +33,7 @@ top_section:
         target_blank: false
         entry: fee1a2b1-971c-4c72-9517-d2e6c989f49e
         button_type: button
+        attr_title: 'Start risk-free for 7 days'
       -
         id: lro57zsk
         template_global: /components/buttons
@@ -45,7 +46,7 @@ top_section:
     shape: paper
 title: 'Cloud Containers'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1707706024
+updated_at: 1707864698
 page_builder:
   -
     id: lrftv1b6
@@ -64,30 +65,48 @@ page_builder:
       -
         id: lrfumsnp
         text: 'Never edit in production again - just clone and sync containers.*'
+        link: 'entry::fee1a2b1-971c-4c72-9517-d2e6c989f49e'
+        target: false
       -
         id: lrfund14
         text: 'Share files and folders between containers.'
+        target: true
+        link: '#'
       -
         id: lrimhi4b
         text: 'Easily scale server cores, RAM and storage; or disk space alone.'
+        target: false
+        link: '#'
       -
         id: lrim4v2f
         text: 'Upgrade images in only a few seconds.'
+        target: true
+        link: '#'
       -
         id: lrimfz9z
         text: 'Install SSL in one click.'
+        target: false
+        link: '#'
       -
         id: lrimg4ag
         text: 'Restore from 14 days of back-ups in one click.*'
+        target: true
+        link: '#'
       -
         id: lrimgae8
         text: 'Flick a switch to turn on powerful Simple Cache.*'
+        target: false
+        link: '#'
       -
         id: lrimgcm0
         text: 'Track server load stats, and resource usage for every Container and server.'
+        target: false
+        link: '#'
       -
         id: lrimgit5
         text: 'Monitor server connectivity and set up email alerts.'
+        target: true
+        link: '#'
     boxes:
       -
         id: lrfvep60
@@ -109,7 +128,14 @@ page_builder:
                 text: ', or build your own.'
         type: box
         enabled: true
-        link: '@'
+        link: '#'
+        label: 'Awesome link'
+        link_type: url
+        target_blank: true
+        url: 'https://sitehost.nz/'
+        attr_title: Sitehost
+        attr_aria: 'this is a Aria label'
+        image: ill_6---picked-a-region.svg
       -
         id: lrfvew4y
         text:
@@ -130,6 +156,10 @@ page_builder:
                 text: ' without interference.'
         type: box
         enabled: true
+        link_type: url
+        target_blank: false
+        url: '#1'
+        image: ill_6---picked-a-region.svg
       -
         id: lrfvf41q
         text:
@@ -150,6 +180,9 @@ page_builder:
                 text: ' and databases in one place.'
         type: box
         enabled: true
+        link_type: url
+        target_blank: false
+        url: '#2'
       -
         id: lrfvfdga
         text:
@@ -170,9 +203,12 @@ page_builder:
                 text: ' around the world.'
         type: box
         enabled: true
+        link_type: url
+        target_blank: false
+        url: '#3'
     bento_type: boxes
     template_global: /global/iconamic
-    iconamic: academic-cap
+    iconamic: cube-transparent
   -
     id: lru3419g
     template: /general_content/bento_highlight
@@ -228,6 +264,7 @@ page_builder:
                 url: '#'
                 type: link
                 enabled: true
+                target: false
               -
                 id: lru3k6z4
                 text:
@@ -239,6 +276,7 @@ page_builder:
                         text: '99.9% uptime guarantee.'
                 type: link
                 enabled: true
+                target: false
               -
                 id: lru3kf1q
                 text:
@@ -250,6 +288,7 @@ page_builder:
                         text: 'Regular releases of new container images.'
                 type: link
                 enabled: true
+                target: false
               -
                 id: lru3kjq7
                 text:
@@ -261,6 +300,7 @@ page_builder:
                         text: 'Container updates and maintenance.*'
                 type: link
                 enabled: true
+                target: false
             type: box
             enabled: true
       -
@@ -293,6 +333,7 @@ page_builder:
                         text: 'Simple Cache.'
                 type: link
                 enabled: true
+                target: false
               -
                 id: lru3nqj8
                 text:
@@ -304,6 +345,7 @@ page_builder:
                         text: 'One-click backup restore.'
                 type: link
                 enabled: true
+                target: false
               -
                 id: lru3nyjc
                 text:
@@ -315,6 +357,7 @@ page_builder:
                         text: 'Container cloning and syncing.'
                 type: link
                 enabled: true
+                target: false
               -
                 id: lru3o2ef
                 text:
@@ -326,6 +369,7 @@ page_builder:
                         text: 'Scheduled container updates.'
                 type: link
                 enabled: true
+                target: false
             type: box
             enabled: true
         type: feature_highlight-item

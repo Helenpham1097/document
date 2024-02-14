@@ -23,7 +23,7 @@ fields:
       cast_booleans: false
       default: diagonal
       type: select
-      display: 'Hero background shape'
+      display: 'Background shape'
       icon: select
       listable: hidden
       instructions_position: above
@@ -50,15 +50,19 @@ fields:
     field:
       input_type: text
       antlers: false
-      display: 'Hero Title'
+      display: Title
       type: text
       icon: text
       listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
   -
     handle: hero_home_description
     field:
       antlers: false
-      display: 'Hero Description'
+      display: Description
       always_show_set_button: false
       buttons:
         - bold
@@ -78,6 +82,16 @@ fields:
       type: bard
       icon: textarea
       listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      smart_typography: false
+      inline: false
+      word_count: false
+      remove_empty_nodes: false
+      collapse: false
+      previews: true
+      hide_display: false
   -
     import: default_image
   -

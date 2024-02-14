@@ -82,7 +82,7 @@
 
 /* Bento title animated line */
 .gradient-background {
-	@apply bg-[linear-gradient(180deg,#E4E4E7,#E4E4E7,#E4E4E7,#7a1be6,#E4E4E7,#E4E4E7,#E4E4E7)] dark:bg-[linear-gradient(180deg,#27272a,#27272a,#27272a,#7a1be6,#27272a,#27272a,#27272a)];
+	@apply bg-[linear-gradient(180deg,#E4E4E7,#E4E4E7,#E4E4E7,#7a1be6,#E4E4E7,#E4E4E7,#E4E4E7)] dark:bg-[linear-gradient(180deg,#3F3F46,#3F3F46,#3F3F46,#7a1be6,#3F3F46,#3F3F46,#3F3F46)];
 	background-size: 600% 600%;
 	animation-fill-mode: forwards;
 
