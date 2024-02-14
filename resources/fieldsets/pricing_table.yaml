@@ -9,86 +9,163 @@ fields:
       listable: hidden
       default: /page_builder/pricing_table
       instructions_position: above
-      read_only: false
   -
-    handle: display_title_section
+    handle: pricing_style
     field:
-      collapse: false
-      max_sets: 1
-      sets:
-        section_title:
-          display: 'Title Section'
-          fields:
-            -
-              import: section_title
-      display: 'Add Title Section'
-      type: replicator
-      icon: replicator
+      options:
+        medals: Medals
+        items: Items
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      default: items
+      type: select
+      display: 'Pricing Style'
+      icon: select
       listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
   -
-    import: toggle
+    import: icon
+  -
+    handle: title
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Title
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: description
+    field:
+      antlers: false
+      type: textarea
+      display: Description
+      icon: textarea
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
   -
     handle: Items
     field:
       collapse: false
       sets:
-        column:
-          display: Column
-          fields:
-            -
-              handle: template
-              field:
-                display: template
-                type: hidden
-                icon: hidden
-                listable: hidden
-            -
-              handle: pricing_features_title
-              field:
-                input_type: text
-                antlers: false
-                display: 'Pricing features title'
-                type: text
-                icon: text
-                listable: hidden
-            -
-              handle: pricing_features_subtitle
-              field:
-                input_type: text
-                antlers: false
-                display: 'Pricing features subtitle'
-                type: text
-                icon: text
-                listable: hidden
-            -
-              handle: pricing_features_list
-              field:
-                display: 'Pricing features list'
-                always_show_set_button: false
-                buttons:
-                  - bold
-                  - italic
-                  - unorderedlist
-                  - orderedlist
-                  - removeformat
-                  - anchor
-                  - table
-                save_html: false
-                toolbar_mode: fixed
-                link_noopener: false
-                link_noreferrer: false
-                target_blank: false
-                reading_time: false
-                fullscreen: false
-                allow_source: true
-                enable_input_rules: false
-                enable_paste_rules: true
-                type: bard
-                icon: list
-                listable: hidden
-            -
-              import: buttons
+        main:
+          display: Main
+          instructions: null
+          icon: null
+          sets:
+            column:
+              display: 'Pricing Item'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: template
+                  field:
+                    display: template
+                    type: hidden
+                    icon: hidden
+                    listable: hidden
+                -
+                  handle: highligh
+                  field:
+                    default: false
+                    type: toggle
+                    display: Highligh
+                    icon: toggle
+                    instructions: 'Most popular'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    width: 50
+                -
+                  handle: highligh_text
+                  field:
+                    input_type: text
+                    default: 'Most popular'
+                    antlers: false
+                    type: text
+                    display: 'Highligh text'
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    width: 50
+                    if:
+                      highligh: 'equals true'
+                -
+                  handle: title
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: Title
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: description
+                  field:
+                    antlers: false
+                    type: textarea
+                    display: Description
+                    icon: textarea
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: price
+                  field:
+                    input_type: number
+                    antlers: false
+                    type: text
+                    display: Price
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: features
+                  field:
+                    type: list
+                    display: Features
+                    icon: list
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
       display: Items
       type: replicator
       icon: replicator
       listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      previews: true
+      fullscreen: true
+      hide_display: false

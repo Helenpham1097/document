@@ -1,55 +1,82 @@
-<div class="group relative isolate mx-auto pt-6">
-	<div class="absolute right-0 z-10">
-		<div class="relative -mt-12 -translate-x-8 translate-y-full transform transition duration-200 ease-linear">
-			<div class="absolute inset-0 -skew-x-12 transform bg-gradient-to-r from-green-500 to-green-600 shadow-lg"></div>
-			<div class="relative mx-auto mb-4 -mt-8 px-6 py-2 text-center text-xs font-semibold uppercase leading-relaxed text-black">Popular</div>
-		</div>
-	</div>
-
-	<div class="space-y-6 rounded bg-zinc-900 p-8 dark:bg-zinc-100">
-		<div class="mt-2 flex items-center justify-between text-white dark:text-zinc-900">
-			<div class="text-2xl font-bold lg:text-3xl">{{ pricing_features_title }}</div>
-		</div>
-
-		<div class="-mx-4 flex flex-row items-baseline space-x-2 border-y border-zinc-700 p-4 text-white dark:border-zinc-200 dark:text-zinc-900">
-			<div class="flex">
-				<span class="text-5xl font-bold" x-text="pricing ? '$990' : '$99'"></span>
-				<span class="text-xl font-bold" x-text="pricing ? '.00' : '.95'"></span>
+{{ if pricing_style:value === 'medals' }}
+	{{# Medals style #}}
+	<div class="{{ switch between='from-orange-500/20 | from-gray-500/20 | from-yellow-500/20' }} inset-0 rounded-[13px] bg-gradient-to-b p-0.5 dark:via-transparent dark:to-transparent">
+		<div class="{{ switch between='bronze | silver | gold' }} group relative isolate mx-auto rounded-xl bg-white p-8 dark:bg-zinc-900">
+			<div class="absolute right-0 z-10">
+				<div class="relative -mt-12 -translate-x-8 translate-y-full transform transition duration-200 ease-linear">
+					<div class="relative mx-auto mb-4 -mt-8 px-6 py-2 text-center text-xs font-semibold uppercase leading-relaxed">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hard-drive {{ switch between='text-orange-500/80 | text-gray-500/80 | text-yellow-500/80' }}">
+							<line x1="22" x2="2" y1="12" y2="12" />
+							<path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z" />
+							<line x1="6" x2="6.01" y1="16" y2="16" />
+							<line x1="10" x2="10.01" y1="16" y2="16" />
+						</svg>
+					</div>
+				</div>
 			</div>
-			<span class="text-sm font-semibold" x-text="pricing ? '/month' : '/year'"></span>
+			<div class="space-y-6">
+				<div class="flex items-center justify-between">
+					<h2 class="{{ switch between='dark:from-orange-800 from-orange-700 dark:via-orange-500 via-orange-400 dark:to-orange-800 to-orange-500 | dark:from-gray-500 from-gray-700 dark:via-gray-600 via-gray-400 dark:to-gray-600 to-gray-500 | dark:from-yellow-500 from-yellow-700 dark:via-yellow-600 via-yellow-400 dark:to-yellow-800 to-yellow-500' }} bg-gradient-to-r bg-clip-text text-4xl !font-extrabold uppercase tracking-tighter !text-transparent">{{ title }}</h2>
+				</div>
+				<div class="mt-6 flex items-center space-x-3">
+					<div class="text-4xl font-extrabold" data-plan="smallTeam" data-plans-target="price">${{ price }}</div>
+					<div class="text-sm text-zinc-600 dark:text-zinc-300">/mo</div>
+				</div>
+				<div class="prose prose-sm relative flex flex-col gap-2 prose-ul:text-sm dark:prose-invert">
+					<ul>
+						{{ features }}
+							<li>{{ value }}</li>
+						{{ /features }}
+					</ul>
+				</div>
+				{{ partial:components/button label="Get Started" link_type="url" url="#" iconamic="user-circle" }}
+			</div>
 		</div>
-
-		<p class="text-base text-white dark:text-zinc-900">{{ pricing_features_list | strip_tags:p }}</p>
-		<ul class="w-full space-y-2 text-zinc-100 dark:text-zinc-900">
-			<li class="flex text-sm leading-6">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-5 w-5 shrink-0 text-green-500 dark:text-purple-500">
-					<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-				</svg>
-				<span class="ml-3">Live site previews with a collaboration UI for team members</span>
-			</li>
-			<li class="flex text-sm leading-6">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-5 w-5 shrink-0 text-green-500 dark:text-purple-500">
-					<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-				</svg>
-				<span class="ml-3">Instant rollbacks to any version</span>
-			</li>
-			<li class="flex text-sm leading-6">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-5 w-5 shrink-0 text-green-500 dark:text-purple-500">
-					<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-				</svg>
-				<span class="ml-3">Deploy static assets & dynamic serverless functions</span>
-			</li>
-			<li class="flex text-sm leading-6">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-5 w-5 shrink-0 text-green-500 dark:text-purple-500">
-					<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-				</svg>
-				<span class="ml-3">Audit logs with full history</span>
-			</li>
-		</ul>
-		{{ partial:components/button label="Sign In" link_type="url" url="#" iconamic="user-circle" }}
 	</div>
-	<div class="mx-auto h-2 w-11/12 rounded-b bg-zinc-600 opacity-75 dark:text-zinc-400"></div>
-	<div class="mx-auto h-2 w-10/12 rounded-b bg-zinc-600 opacity-50 dark:text-zinc-400"></div>
-	<div class="mx-auto h-2 w-9/12 rounded-b bg-zinc-600 opacity-25 dark:text-zinc-400"></div>
-	<div class="absolute inset-0 -z-10 bg-[conic-gradient(var(--tw-gradient-stops))] opacity-50 blur-3xl dark:from-purple-500 dark:via-green-800 dark:to-purple-500"></div>
-</div>
+{{ else }}
+	{{# Item Style #}}
+	<div>
+		<div class="relative flex flex-col gap-6 rounded-lg p-6 ring-1 ring-zinc-300 dark:ring-zinc-700">
+			{{ if highligh }}
+				<div class="absolute top-0 right-4 -translate-y-1/2 bg-white px-4 py-2 text-sm font-bold text-purple-500 dark:bg-zinc-900 dark:text-purple-400">{{ highligh_text }}</div>
+				<div class="absolute inset-0 bg-gradient-to-t from-zinc-100 via-transparent to-transparent dark:from-zinc-800"></div>
+			{{ /if }}
+			<div class="flex flex-col gap-4">
+				<div class="relative">
+					<div class="text-xl font-bold">{{ title }}</div>
+					<div class="text-base">{{ description }}</div>
+				</div>
+
+				<div class="flex items-center space-x-2">
+					<div>
+						<div class="flex items-center text-4xl font-black">
+							<span class="md:text-xl">$</span>
+							{{ price }}
+						</div>
+					</div>
+
+					<div class="text-xs font-medium">
+						/mo
+						<div class="text-xs">(NZD + GST)</div>
+					</div>
+				</div>
+				<div>
+					{{ partial:components/button label="Get Started" link_type="url" url="#" iconamic="user-circle" }}
+				</div>
+			</div>
+
+			<div class="prose prose-sm relative flex flex-col gap-2 prose-ul:text-sm dark:prose-invert">
+				<ul>
+					{{ features }}
+						<li>{{ value }}</li>
+					{{ /features }}
+				</ul>
+			</div>
+		</div>
+		{{ if highligh }}
+			<div class="mx-auto h-2 w-11/12 rounded-b bg-zinc-300 opacity-75 dark:bg-purple-700"></div>
+			<div class="mx-auto h-2 w-10/12 rounded-b bg-zinc-300 opacity-50 dark:bg-purple-700"></div>
+			<div class="mx-auto h-2 w-9/12 rounded-b bg-zinc-300 opacity-25 dark:bg-purple-700"></div>
+		{{ /if }}
+	</div>
+{{ /if }}
