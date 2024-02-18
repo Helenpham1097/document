@@ -27,10 +27,7 @@
 					{{ partial:typography/p :content="sub_title | strip_tags:p" class='mb-0' }}
 					<div class="flex items-center gap-1 text-purple-500 dark:text-green-500">
 						<span class="font-medium">Learn more</span>
-						<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right transition ease-in-out group-hover:translate-x-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-							<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-							<path d="M9 6l6 6l-6 6" />
-						</svg>
+						{{ svg src="{{config:iconamic:path}}/chevron-right.svg" class='size-4 transition ease-in-out group-hover:translate-x-1' }}
 					</div>
 				</div>
 			</a>

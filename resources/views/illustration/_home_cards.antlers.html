@@ -23,27 +23,13 @@
 				<div class="relative flex items-center justify-start gap-2">
 					<p class="text-xs font-bold text-zinc-700 dark:text-zinc-100">www.sitehost-demo.nz</p>
 					<div class="relative flex items-center justify-center gap-1 rounded-sm bg-[#32ffdc] py-1 px-2">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-3 w-3 flex-none text-zinc-900">
-							<path
-								fill-rule="evenodd"
-								d="M5 4a.75.75 0 0 1 .738.616l.252 1.388A1.25 1.25 0 0 0 6.996 7.01l1.388.252a.75.75 0 0 1 0 1.476l-1.388.252A1.25 1.25 0 0 0 5.99 9.996l-.252 1.388a.75.75 0 0 1-1.476 0L4.01 9.996A1.25 1.25 0 0 0 3.004 8.99l-1.388-.252a.75.75 0 0 1 0-1.476l1.388-.252A1.25 1.25 0 0 0 4.01 6.004l.252-1.388A.75.75 0 0 1 5 4ZM12 1a.75.75 0 0 1 .721.544l.195.682c.118.415.443.74.858.858l.682.195a.75.75 0 0 1 0 1.442l-.682.195a1.25 1.25 0 0 0-.858.858l-.195.682a.75.75 0 0 1-1.442 0l-.195-.682a1.25 1.25 0 0 0-.858-.858l-.682-.195a.75.75 0 0 1 0-1.442l.682-.195a1.25 1.25 0 0 0 .858-.858l.195-.682A.75.75 0 0 1 12 1ZM10 11a.75.75 0 0 1 .728.568.968.968 0 0 0 .704.704.75.75 0 0 1 0 1.456.968.968 0 0 0-.704.704.75.75 0 0 1-1.456 0 .968.968 0 0 0-.704-.704.75.75 0 0 1 0-1.456.968.968 0 0 0 .704-.704A.75.75 0 0 1 10 11Z"
-								clip-rule="evenodd" />
-						</svg>
-
+						{{ svg src="{{config:iconamic:path}}/sparkles.svg" class='size-3 text-zinc-900 flex-none' }}
 						<p class="text-xs font-bold text-zinc-900">Online</p>
 					</div>
 				</div>
 				<div class="relative flex gap-2 text-zinc-600 dark:text-zinc-400">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-4 w-4">
-						<path fill-rule="evenodd" d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z" clip-rule="evenodd" />
-					</svg>
-
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-4 w-4">
-						<path
-							fill-rule="evenodd"
-							d="M6.455 1.45A.5.5 0 0 1 6.952 1h2.096a.5.5 0 0 1 .497.45l.186 1.858a4.996 4.996 0 0 1 1.466.848l1.703-.769a.5.5 0 0 1 .639.206l1.047 1.814a.5.5 0 0 1-.14.656l-1.517 1.09a5.026 5.026 0 0 1 0 1.694l1.516 1.09a.5.5 0 0 1 .141.656l-1.047 1.814a.5.5 0 0 1-.639.206l-1.703-.768c-.433.36-.928.649-1.466.847l-.186 1.858a.5.5 0 0 1-.497.45H6.952a.5.5 0 0 1-.497-.45l-.186-1.858a4.993 4.993 0 0 1-1.466-.848l-1.703.769a.5.5 0 0 1-.639-.206l-1.047-1.814a.5.5 0 0 1 .14-.656l1.517-1.09a5.033 5.033 0 0 1 0-1.694l-1.516-1.09a.5.5 0 0 1-.141-.656L2.46 3.593a.5.5 0 0 1 .639-.206l1.703.769c.433-.36.928-.65 1.466-.848l.186-1.858Zm-.177 7.567-.022-.037a2 2 0 0 1 3.466-1.997l.022.037a2 2 0 0 1-3.466 1.997Z"
-							clip-rule="evenodd" />
-					</svg>
+					{{ svg src="{{config:iconamic:path}}/star.svg" class='size-4 flex-none' }}
+					{{ svg src="{{config:iconamic:path}}/cog.svg" class='size-4 flex-none' }}
 				</div>
 			</div>
 			<div class="relative flex w-full items-center justify-between gap-1">
@@ -61,13 +47,7 @@
 
 		{{# File Uploads? #}}
 		<div class="relative col-span-3 ml-12 flex gap-2 rounded-md border border-zinc-500/[0.1] bg-white/[0.9] p-4 backdrop-blur-md dark:border-white/[0.04] dark:bg-zinc-100/5">
-			<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 flex-none text-zinc-800 dark:text-zinc-100" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-				<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-				<path d="M14 3v4a1 1 0 0 0 1 1h4" />
-				<path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
-				<path d="M12 11v6" />
-				<path d="M9.5 13.5l2.5 -2.5l2.5 2.5" />
-			</svg>
+			{{ svg src="{{config:iconamic:path}}/file-up.svg" class='size-4 text-zinc-800 dark:text-zinc-100 flex-none' }}
 			<div class="relative flex flex-col gap-1 self-stretch">
 				<p class="text-xs font-bold text-zinc-700 dark:text-zinc-100">File Uploads?</p>
 				<p class="text-xs text-zinc-600 dark:text-zinc-400">By linking a Git Repository to this website then you can manage your files via Git. Changes to your Git files can automatically update your website.</p>
@@ -76,15 +56,7 @@
 
 		{{# Git Deployments? #}}
 		<div class="relative col-span-3 flex gap-2 rounded-md border border-zinc-500/[0.1] bg-white/[0.9] p-4 backdrop-blur-md dark:border-white/[0.04] dark:bg-zinc-100/5">
-			<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 flex-none text-zinc-800 dark:text-zinc-100" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-				<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-				<path d="M6 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-				<path d="M6 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-				<path d="M18 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-				<path d="M6 8l0 8" />
-				<path d="M11 6h5a2 2 0 0 1 2 2v8" />
-				<path d="M14 9l-3 -3l3 -3" />
-			</svg>
+			{{ svg src="{{config:iconamic:path}}/git-merge.svg" class='size-4 text-zinc-800 dark:text-zinc-100 flex-none' }}
 			<div class="relative flex flex-col gap-1 self-stretch">
 				<p class="text-xs font-bold text-zinc-700 dark:text-zinc-100">Git Deployments?</p>
 				<p class="text-xs text-zinc-600 dark:text-zinc-400">By linking a Git Repository to this website then you can manage your files via Git. Changes to your Git files can automatically update your website.</p>
@@ -94,31 +66,20 @@
 		{{# Card #}}
 		<div class="relative col-span-2 flex flex-col rounded-md border border-zinc-500/[0.1] bg-white/[0.9] backdrop-blur-md dark:border-white/[0.04] dark:bg-zinc-100/5">
 			<div class="flex w-full items-center gap-2 border-b border-zinc-500/[0.1] bg-white/[0.9] p-2 backdrop-blur-md dark:border-white/[0.04] dark:bg-zinc-100/5">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-4 w-4 flex-none text-zinc-800 dark:text-zinc-100">
-					<path fill-rule="evenodd" d="M2 12V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2Zm1.5-5.5V12a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5V6.5A.5.5 0 0 0 12 6H4a.5.5 0 0 0-.5.5Zm.75-1.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM7 4a.75.75 0 1 1-1.5 0A.75.75 0 0 1 7 4Zm1.25.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clip-rule="evenodd" />
-				</svg>
+				{{ svg src="{{config:iconamic:path}}/app-window.svg" class='size-4 text-zinc-800 dark:text-zinc-100 flex-none' }}
 				<p class="text-xs font-bold text-zinc-700 dark:text-zinc-100">my.demo-store.ariel.nz</p>
 			</div>
 			<div class="flex flex-col gap-1 p-2">
 				<div class="relative flex items-center justify-start gap-2">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-3 w-3 flex-none text-zinc-600 dark:text-zinc-400">
-						<path fill-rule="evenodd" d="M4.78 4.97a.75.75 0 0 1 0 1.06L2.81 8l1.97 1.97a.75.75 0 1 1-1.06 1.06l-2.5-2.5a.75.75 0 0 1 0-1.06l2.5-2.5a.75.75 0 0 1 1.06 0ZM11.22 4.97a.75.75 0 0 0 0 1.06L13.19 8l-1.97 1.97a.75.75 0 1 0 1.06 1.06l2.5-2.5a.75.75 0 0 0 0-1.06l-2.5-2.5a.75.75 0 0 0-1.06 0ZM8.856 2.008a.75.75 0 0 1 .636.848l-1.5 10.5a.75.75 0 0 1-1.484-.212l1.5-10.5a.75.75 0 0 1 .848-.636Z" clip-rule="evenodd" />
-					</svg>
+					{{ svg src="{{config:iconamic:path}}/code.svg" class='size-3 text-zinc-800 dark:text-zinc-400 flex-none' }}
 					<p class="text-xs text-zinc-600 dark:text-zinc-400">PHP 8.1</p>
 				</div>
 				<div class="relative flex items-center justify-start gap-2">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-3 w-3 flex-none text-zinc-600 dark:text-zinc-400">
-						<path
-							fill-rule="evenodd"
-							d="M7.628 1.349a.75.75 0 0 1 .744 0l1.247.712a.75.75 0 1 1-.744 1.303L8 2.864l-.875.5a.75.75 0 0 1-.744-1.303l1.247-.712ZM4.65 3.914a.75.75 0 0 1-.279 1.023L4.262 5l.11.063a.75.75 0 0 1-.744 1.302l-.13-.073A.75.75 0 0 1 2 6.25V5a.75.75 0 0 1 .378-.651l1.25-.714a.75.75 0 0 1 1.023.279Zm6.698 0a.75.75 0 0 1 1.023-.28l1.25.715A.75.75 0 0 1 14 5v1.25a.75.75 0 0 1-1.499.042l-.129.073a.75.75 0 0 1-.744-1.302l.11-.063-.11-.063a.75.75 0 0 1-.28-1.023ZM6.102 6.915a.75.75 0 0 1 1.023-.279l.875.5.875-.5a.75.75 0 0 1 .744 1.303l-.869.496v.815a.75.75 0 0 1-1.5 0v-.815l-.869-.496a.75.75 0 0 1-.28-1.024ZM2.75 9a.75.75 0 0 1 .75.75v.815l.872.498a.75.75 0 0 1-.744 1.303l-1.25-.715A.75.75 0 0 1 2 11V9.75A.75.75 0 0 1 2.75 9Zm10.5 0a.75.75 0 0 1 .75.75V11a.75.75 0 0 1-.378.651l-1.25.715a.75.75 0 0 1-.744-1.303l.872-.498V9.75a.75.75 0 0 1 .75-.75Zm-4.501 3.708.126-.072a.75.75 0 0 1 .744 1.303l-1.247.712a.75.75 0 0 1-.744 0L6.38 13.94a.75.75 0 0 1 .744-1.303l.126.072a.75.75 0 0 1 1.498 0Z"
-							clip-rule="evenodd" />
-					</svg>
+					{{ svg src="{{config:iconamic:path}}/box.svg" class='size-3 text-zinc-800 dark:text-zinc-400 flex-none' }}
 					<p class="text-xs text-zinc-600 dark:text-zinc-400">Ariel Project</p>
 				</div>
 				<div class="relative flex items-center justify-start gap-2">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-3 w-3 flex-none text-zinc-600 dark:text-zinc-400">
-						<path fill-rule="evenodd" d="m7.539 14.841.003.003.002.002a.755.755 0 0 0 .912 0l.002-.002.003-.003.012-.009a5.57 5.57 0 0 0 .19-.153 15.588 15.588 0 0 0 2.046-2.082c1.101-1.362 2.291-3.342 2.291-5.597A5 5 0 0 0 3 7c0 2.255 1.19 4.235 2.292 5.597a15.591 15.591 0 0 0 2.046 2.082 8.916 8.916 0 0 0 .189.153l.012.01ZM8 8.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" clip-rule="evenodd" />
-					</svg>
+					{{ svg src="{{config:iconamic:path}}/map-pin.svg" class='size-3 text-zinc-800 dark:text-zinc-400 flex-none' }}
 					<p class="text-xs text-zinc-600 dark:text-zinc-400">Sydney, Australia</p>
 				</div>
 			</div>
@@ -127,58 +88,35 @@
 		{{# Card #}}
 		<div class="relative col-span-2 flex flex-col rounded-md border border-zinc-500/[0.1] bg-white/[0.9] backdrop-blur-md dark:border-white/[0.04] dark:bg-zinc-100/5">
 			<div class="flex w-full items-center gap-2 border-b border-zinc-500/[0.1] bg-white/[0.9] p-2 backdrop-blur-md dark:border-white/[0.04] dark:bg-zinc-100/5">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-4 w-4 flex-none text-zinc-800 dark:text-zinc-100">
-					<path
-						fill-rule="evenodd"
-						d="M6.455 1.45A.5.5 0 0 1 6.952 1h2.096a.5.5 0 0 1 .497.45l.186 1.858a4.996 4.996 0 0 1 1.466.848l1.703-.769a.5.5 0 0 1 .639.206l1.047 1.814a.5.5 0 0 1-.14.656l-1.517 1.09a5.026 5.026 0 0 1 0 1.694l1.516 1.09a.5.5 0 0 1 .141.656l-1.047 1.814a.5.5 0 0 1-.639.206l-1.703-.768c-.433.36-.928.649-1.466.847l-.186 1.858a.5.5 0 0 1-.497.45H6.952a.5.5 0 0 1-.497-.45l-.186-1.858a4.993 4.993 0 0 1-1.466-.848l-1.703.769a.5.5 0 0 1-.639-.206l-1.047-1.814a.5.5 0 0 1 .14-.656l1.517-1.09a5.033 5.033 0 0 1 0-1.694l-1.516-1.09a.5.5 0 0 1-.141-.656L2.46 3.593a.5.5 0 0 1 .639-.206l1.703.769c.433-.36.928-.65 1.466-.848l.186-1.858Zm-.177 7.567-.022-.037a2 2 0 0 1 3.466-1.997l.022.037a2 2 0 0 1-3.466 1.997Z"
-						clip-rule="evenodd" />
-				</svg>
+				{{ svg src="{{config:iconamic:path}}/settings.svg" class='size-4 text-zinc-800 dark:text-zinc-100 flex-none' }}
 				<p class="text-xs font-bold text-zinc-700 dark:text-zinc-100">Summary</p>
 			</div>
 			<div class="flex gap-4 p-2">
 				<div class="flex flex-col gap-1">
 					<div class="relative flex items-center justify-start gap-2">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-3 w-3 flex-none text-zinc-600 dark:text-zinc-400">
-							<path fill-rule="evenodd" d="M4.78 4.97a.75.75 0 0 1 0 1.06L2.81 8l1.97 1.97a.75.75 0 1 1-1.06 1.06l-2.5-2.5a.75.75 0 0 1 0-1.06l2.5-2.5a.75.75 0 0 1 1.06 0ZM11.22 4.97a.75.75 0 0 0 0 1.06L13.19 8l-1.97 1.97a.75.75 0 1 0 1.06 1.06l2.5-2.5a.75.75 0 0 0 0-1.06l-2.5-2.5a.75.75 0 0 0-1.06 0ZM8.856 2.008a.75.75 0 0 1 .636.848l-1.5 10.5a.75.75 0 0 1-1.484-.212l1.5-10.5a.75.75 0 0 1 .848-.636Z" clip-rule="evenodd" />
-						</svg>
+						{{ svg src="{{config:iconamic:path}}/code.svg" class='size-3 text-zinc-800 dark:text-zinc-400 flex-none' }}
 						<p class="text-xs text-zinc-600 dark:text-zinc-400">PHP 8.1</p>
 					</div>
 					<div class="relative flex items-center justify-start gap-2">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-3 w-3 flex-none text-zinc-600 dark:text-zinc-400">
-							<path d="M6 6v4h4V6H6Z" />
-							<path fill-rule="evenodd" d="M5.75 1a.75.75 0 0 0-.75.75V3a2 2 0 0 0-2 2H1.75a.75.75 0 0 0 0 1.5H3v.75H1.75a.75.75 0 0 0 0 1.5H3v.75H1.75a.75.75 0 0 0 0 1.5H3a2 2 0 0 0 2 2v1.25a.75.75 0 0 0 1.5 0V13h.75v1.25a.75.75 0 0 0 1.5 0V13h.75v1.25a.75.75 0 0 0 1.5 0V13a2 2 0 0 0 2-2h1.25a.75.75 0 0 0 0-1.5H13v-.75h1.25a.75.75 0 0 0 0-1.5H13V6.5h1.25a.75.75 0 0 0 0-1.5H13a2 2 0 0 0-2-2V1.75a.75.75 0 0 0-1.5 0V3h-.75V1.75a.75.75 0 0 0-1.5 0V3H6.5V1.75A.75.75 0 0 0 5.75 1ZM11 4.5a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V5a.5.5 0 0 1 .5-.5h6Z" clip-rule="evenodd" />
-						</svg>
-
+						{{ svg src="{{config:iconamic:path}}/cpu.svg" class='size-3 text-zinc-800 dark:text-zinc-400 flex-none' }}
 						<p class="text-xs text-zinc-600 dark:text-zinc-400">1769 MB</p>
 					</div>
 					<div class="relative flex items-center justify-start gap-2">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-3 w-3 flex-none text-zinc-600 dark:text-zinc-400">
-							<path fill-rule="evenodd" d="m7.539 14.841.003.003.002.002a.755.755 0 0 0 .912 0l.002-.002.003-.003.012-.009a5.57 5.57 0 0 0 .19-.153 15.588 15.588 0 0 0 2.046-2.082c1.101-1.362 2.291-3.342 2.291-5.597A5 5 0 0 0 3 7c0 2.255 1.19 4.235 2.292 5.597a15.591 15.591 0 0 0 2.046 2.082 8.916 8.916 0 0 0 .189.153l.012.01ZM8 8.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" clip-rule="evenodd" />
-						</svg>
+						{{ svg src="{{config:iconamic:path}}/map-pin.svg" class='size-3 text-zinc-800 dark:text-zinc-400 flex-none' }}
 						<p class="text-xs text-zinc-600 dark:text-zinc-400">SawFS</p>
 					</div>
 				</div>
 				<div class="flex flex-col gap-1">
 					<div class="relative flex items-center justify-start gap-2">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-3 w-3 flex-none text-zinc-600 dark:text-zinc-400">
-							<path fill-rule="evenodd" d="M4.78 4.97a.75.75 0 0 1 0 1.06L2.81 8l1.97 1.97a.75.75 0 1 1-1.06 1.06l-2.5-2.5a.75.75 0 0 1 0-1.06l2.5-2.5a.75.75 0 0 1 1.06 0ZM11.22 4.97a.75.75 0 0 0 0 1.06L13.19 8l-1.97 1.97a.75.75 0 1 0 1.06 1.06l2.5-2.5a.75.75 0 0 0 0-1.06l-2.5-2.5a.75.75 0 0 0-1.06 0ZM8.856 2.008a.75.75 0 0 1 .636.848l-1.5 10.5a.75.75 0 0 1-1.484-.212l1.5-10.5a.75.75 0 0 1 .848-.636Z" clip-rule="evenodd" />
-						</svg>
+						{{ svg src="{{config:iconamic:path}}/code.svg" class='size-3 text-zinc-800 dark:text-zinc-400 flex-none' }}
 						<p class="text-xs text-zinc-600 dark:text-zinc-400">PHP 8.1</p>
 					</div>
 					<div class="relative flex items-center justify-start gap-2">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-3 w-3 flex-none text-zinc-600 dark:text-zinc-400">
-							<path
-								fill-rule="evenodd"
-								d="M7.628 1.349a.75.75 0 0 1 .744 0l1.247.712a.75.75 0 1 1-.744 1.303L8 2.864l-.875.5a.75.75 0 0 1-.744-1.303l1.247-.712ZM4.65 3.914a.75.75 0 0 1-.279 1.023L4.262 5l.11.063a.75.75 0 0 1-.744 1.302l-.13-.073A.75.75 0 0 1 2 6.25V5a.75.75 0 0 1 .378-.651l1.25-.714a.75.75 0 0 1 1.023.279Zm6.698 0a.75.75 0 0 1 1.023-.28l1.25.715A.75.75 0 0 1 14 5v1.25a.75.75 0 0 1-1.499.042l-.129.073a.75.75 0 0 1-.744-1.302l.11-.063-.11-.063a.75.75 0 0 1-.28-1.023ZM6.102 6.915a.75.75 0 0 1 1.023-.279l.875.5.875-.5a.75.75 0 0 1 .744 1.303l-.869.496v.815a.75.75 0 0 1-1.5 0v-.815l-.869-.496a.75.75 0 0 1-.28-1.024ZM2.75 9a.75.75 0 0 1 .75.75v.815l.872.498a.75.75 0 0 1-.744 1.303l-1.25-.715A.75.75 0 0 1 2 11V9.75A.75.75 0 0 1 2.75 9Zm10.5 0a.75.75 0 0 1 .75.75V11a.75.75 0 0 1-.378.651l-1.25.715a.75.75 0 0 1-.744-1.303l.872-.498V9.75a.75.75 0 0 1 .75-.75Zm-4.501 3.708.126-.072a.75.75 0 0 1 .744 1.303l-1.247.712a.75.75 0 0 1-.744 0L6.38 13.94a.75.75 0 0 1 .744-1.303l.126.072a.75.75 0 0 1 1.498 0Z"
-								clip-rule="evenodd" />
-						</svg>
-
+						{{ svg src="{{config:iconamic:path}}/box.svg" class='size-3 text-zinc-800 dark:text-zinc-400 flex-none' }}
 						<p class="text-xs text-zinc-600 dark:text-zinc-400">Ariel Project</p>
 					</div>
 					<div class="relative flex items-center justify-start gap-2">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-3 w-3 flex-none text-zinc-600 dark:text-zinc-400">
-							<path d="M3 3.5A1.5 1.5 0 0 1 4.5 2h1.879a1.5 1.5 0 0 1 1.06.44l1.122 1.12A1.5 1.5 0 0 0 9.62 4H11.5A1.5 1.5 0 0 1 13 5.5v1H3v-3ZM3.081 8a1.5 1.5 0 0 0-1.423 1.974l1 3A1.5 1.5 0 0 0 4.081 14h7.838a1.5 1.5 0 0 0 1.423-1.026l1-3A1.5 1.5 0 0 0 12.919 8H3.081Z" />
-						</svg>
+						{{ svg src="{{config:iconamic:path}}/folder.svg" class='size-3 text-zinc-800 dark:text-zinc-400 flex-none' }}
 						<p class="text-xs text-zinc-600 dark:text-zinc-400">public</p>
 					</div>
 				</div>
@@ -188,9 +126,7 @@
 		{{# Card #}}
 		<div class="relative col-span-2 flex flex-col rounded-md border border-zinc-500/[0.1] bg-white/[0.9] backdrop-blur-md dark:border-white/[0.04] dark:bg-zinc-100/5">
 			<div class="flex w-full items-center gap-2 border-b border-zinc-500/[0.1] bg-white/[0.9] p-2 backdrop-blur-md dark:border-white/[0.04] dark:bg-zinc-100/5">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-4 w-4 flex-none text-zinc-800 dark:text-zinc-100">
-					<path d="M8.372 1.349a.75.75 0 0 0-.744 0l-4.81 2.748L8 7.131l5.182-3.034-4.81-2.748ZM14 5.357 8.75 8.43v6.005l4.872-2.784A.75.75 0 0 0 14 11V5.357ZM7.25 14.435V8.43L2 5.357V11c0 .27.144.518.378.651l4.872 2.784Z" />
-				</svg>
+				{{ svg src="{{config:iconamic:path}}/box.svg" class='size-4 text-zinc-800 dark:text-zinc-100 flex-none' }}
 				<p class="text-xs font-bold text-zinc-700 dark:text-zinc-100">Summary</p>
 			</div>
 			<div class="grid grid-cols-2 gap-2 divide-x divide-zinc-500 p-2 text-zinc-100">

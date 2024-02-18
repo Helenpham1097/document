@@ -1,10 +1,10 @@
 {{# Template for blog post pagination #}}
 {{ paginate }}
-	<ul class="pagination [&>li>a]bg-purple-500 container mx-auto flex w-full items-center justify-center gap-4 text-sm [&>li>a]:px-2 [&>li>a]:py-1 [&>li>a]:text-zinc-500 hover:[&>li>a]:text-white">
+	<ul class="pagination [&>li>a]bg-purple-500 container mx-auto flex w-full items-center justify-center gap-4 text-sm [&>li>a]:px-2 [&>li>a]:py-1 [&>li>a]:text-zinc-500 hover:[&>li>a]:text-white dark:hover:[&>li>a]:text-zinc-500">
 		{{ if prev_page }}
 			<li>
 				<a class="flex items-center gap-2" href="{{ prev_page }}">
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left inline-block"><path d="m15 18-6-6 6-6" /></svg>
+					{{ svg src="{{config:iconamic:path}}/chevron-left.svg" class='size-4 text-zinc-800 dark:text-zinc-100 flex-none' }}
 					<p class="mr-3 text-sm font-medium leading-none">Previous</p>
 				</a>
 			</li>
@@ -44,7 +44,7 @@
 			<li>
 				<a class="flex items-center gap-2" href="{{ next_page }}">
 					<p class="mr-3 text-sm font-medium leading-none">Next</p>
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide size-6 lucide-chevron-right inline-block"><path d="m9 18 6-6-6-6" /></svg>
+					{{ svg src="{{config:iconamic:path}}/chevron-right.svg" class='size-4 text-zinc-800 dark:text-zinc-100 flex-none' }}
 				</a>
 			</li>
 		{{ else }}

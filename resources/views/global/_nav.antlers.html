@@ -45,7 +45,9 @@
 										<li>
 											<button :class="{ 'bg-zinc-100 dark:bg-zinc-800' : navigationMenu=='{{ title | slugify }}', 'hover:bg-zinc-100 dark:hover:bg-zinc-500' : navigationMenu!='{{ title | slugify }}' }" @mouseover="navigationMenuOpen=true; navigationMenuReposition($el); navigationMenu='{{ title | slugify }}'" @mouseleave="navigationMenuLeave()" class="group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:text-zinc-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:hover:text-zinc-100">
 												<span>{{ title }}</span>
-												<svg :class="{ '-rotate-180' : navigationMenuOpen==true && navigationMenu == '{{ title | slugify }}' }" class="relative top-[1px] ml-1 h-3 w-3 duration-300 ease-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+												<span class="ml-2 duration-300 ease-out" :class="{ '-rotate-180' : navigationMenuOpen==true && navigationMenu == '{{ title | slugify }}' }">
+													{{ svg src="{{config:iconamic:path}}/chevron-down.svg" class='size-3' }}
+												</span>
 											</button>
 										</li>
 									{{ else }}
@@ -93,7 +95,7 @@
 
 				<div class="flex items-center space-x-4 lg:border-l lg:border-zinc-200 lg:dark:border-zinc-800 xl:pl-6">
 					{{ partial:documentation/_theme_toggle class="hidden lg:block" }}
-					{{ partial:components/button label="Sign In" link_type="url" url="#" iconamic="user-circle" }}
+					{{ partial:components/button label="Sign In" link_type="url" url="#" iconamic="circle-user" }}
 				</div>
 				{{# modal mobile menu #}}
 				<div id="Modal" x-data="{ open: false }" @open-me="open=true" class="block lg:hidden" @close-me="open=false">

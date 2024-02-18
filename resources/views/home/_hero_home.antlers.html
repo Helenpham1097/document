@@ -20,8 +20,8 @@
                         {{ partial:typography/excerpt :excerpt="hero_home_description | strip_tags:p" class='text-pretty' }}
                         <ul class="flex max-w-2xl flex-wrap gap-4 text-base">
                             {{ grid_features }}
-                            <li class="flex items-center gap-1">
-                                {{ svg src="{{ config:iconamic:path }}/{{iconamic}}.svg" class="aspect-square w-6" }}
+                            <li class="flex items-center gap-2">
+                                {{ svg src="{{ config:iconamic:path }}/{{iconamic}}.svg" class="size-4" }}
                                 <span>{{ text }}</span>
                             </li>
                             {{ /grid_features }}
