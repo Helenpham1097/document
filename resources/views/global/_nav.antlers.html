@@ -66,22 +66,22 @@
 										<div x-show="navigationMenu == '{{ title | slugify }}'" class="flex w-full max-w-2xl items-stretch justify-center gap-x-3 p-6">
 											<div class="w-48 flex-shrink-0 rounded bg-gradient-to-br from-purple-800 to-purple-900 pt-28 pb-7">
 												<div class="relative space-y-1.5 px-7 text-white">
-													<svg xmlns="http://www.w3.org/2000/svg" class="block h-9 w-auto" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-														<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-														<path d="M12 3l8 4.5l0 9l-8 4.5l-8 -4.5l0 -9l8 -4.5" />
-														<path d="M12 12l8 -4.5" />
-														<path d="M12 12l0 9" />
-														<path d="M12 12l-8 -4.5" />
-													</svg>
-													<span class="block font-bold">Webslice</span>
-													<span class="block text-xs opacity-60">Unleash the Power of Serverless Hosting</span>
+													{{ if iconamic }}
+														<div class="transition duration-500 ease-in-out transform group-hover:translate-x-1">
+															{{ svg src="{{ config:iconamic:path }}/{{iconamic}}.svg" class="size-9" }}
+														</div>
+													{{ /if }}
+													<span class="block font-bold">{{ title }}</span>
+													<span class="block text-xs opacity-60">{{ page_description }}</span>
 												</div>
 											</div>
 											<div class="w-72">
 												{{ children }}
 													<a href="{{ url }}" @click="navigationMenuClose()" class="block rounded px-3.5 py-3 text-sm hover:bg-zinc-100 dark:hover:bg-zinc-800">
 														<span class="mb-1 block font-medium text-black dark:text-white">{{ title }}</span>
-														<span class="block font-light leading-5 opacity-50">Unleash the Power of Serverless Hosting</span>
+														{{ if page_description }}
+															<span class="block font-light leading-5 opacity-50">{{ page_description }}</span>
+														{{ /if}}
 													</a>
 												{{ /children }}
 											</div>
@@ -98,13 +98,15 @@
 					{{ partial:components/button label="Sign In" link_type="url" url="#" iconamic="circle-user" }}
 				</div>
 				{{# modal mobile menu #}}
-				<div id="Modal" x-data="{ open: false }" @open-me="open=true" class="block lg:hidden" @close-me="open=false">
+				<div id="Modal" x-data="{ open: false }" @open-me="open=true" class="block  lg:hidden" @close-me="open=false">
 					<button class="inline-flex w-full justify-center p-2 text-base font-medium text-zinc-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 dark:text-zinc-200 sm:w-auto sm:text-sm" @click.prevent="open = true" aria-controls="modal">
 						<span class="sr-only">Navigation</span>
-						<svg fill="currentColor" viewBox="0 0 20 20" class="h-6 w-6">
-							<path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
-							<path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-						</svg>
+						<span x-show="!open">
+							{{ svg src="{{config:iconamic:path}}/menu.svg" class='size-9' }}
+						</span>
+						<span x-show="open">
+							{{ svg src="{{config:iconamic:path}}/x.svg" class='size-9' }}
+						</span>
 					</button>
 
 					{{# Modal #}}
@@ -125,40 +127,47 @@
 									x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
 									x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
 									x-description="Modal panel, show/hide based on modal state."
-									class="absolute top-4 right-4 transform overflow-hidden rounded-lg bg-white p-6 text-left text-base font-semibold shadow-xl transition-all dark:bg-zinc-800 sm:w-full sm:max-w-lg"
+									class="absolute top-4 right-4 transform overflow-hidden rounded-lg bg-white p-6 text-left font-semibold shadow-xl transition-all dark:bg-zinc-800 sm:w-full sm:max-w-sm"
 									@click.away="open = false">
+									{{# Close menu #}}
 									<button @click="open = !open" type="button" class="absolute top-5 right-5 flex h-8 w-8 items-center justify-center text-zinc-500 hover:text-zinc-600 dark:text-zinc-400 dark:hover:text-zinc-300" tabindex="0">
 										<span class="sr-only">Close navigation</span>
-										<svg viewBox="0 0 10 10" class="h-2.5 w-2.5 overflow-visible" aria-hidden="true"><path d="M0 0L10 10M10 0L0 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+										{{ svg src="{{config:iconamic:path}}/x.svg" class='size-9' }}
 									</button>
-									<ul class="space-y-6">
+									{{# Close menu #}}
+									<ul class="divide-y mt-10 dark:divide-zinc-700 divide-zinc-300 ">
 										{{ nav:main_menu show_unpublished="true" }}
 											{{ if children }}
 												<div @click.away="open = false" class="relative" x-data="{ open: false }">
-													<button @click="open = !open" class="hover:text-purple-500 dark:hover:text-purple-400">
+													<button @click="open = !open" class="hover:text-purple-500 rounded w-full px-3.5 py-3  hover:bg-zinc-100 dark:hover:bg-zinc-800 dark:hover:text-purple-400 flex gap-2">
 														<span>{{ title }}</span>
-														<svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="mt-1 ml-1 inline h-4 w-4 transform transition-transform duration-200 md:-mt-1">
-															<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-														</svg>
+														<div class="duration-300 transform transition-transform ease-out" :class="{'rotate-180': open, 'rotate-0': !open}">
+															{{ svg src="{{config:iconamic:path}}/chevron-down.svg" class='size-5 inline ' }}
+														</div>
 													</button>
-													<div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="right-0 w-full origin-top-right rounded-md sm:mt-2 lg:absolute lg:w-48 lg:shadow-lg">
-														<div class="flex flex-col space-y-6 pt-6 pl-1">
+													<div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="right-0 w-full origin-top-right rounded-md lg:absolute lg:w-48 lg:shadow-lg">
+														<div class="flex flex-col ">
 															{{ children }}
-																<a role="menuitem" class="{{ if is_current || is_parent }} dark:text-green-400 text-purple-500 {{ /if }} hover:text-purple-500 dark:hover:text-purple-400" href="{{ url }}">{{ title }}</a>
+																<a role="menuitem" class="{{ if is_current || is_parent }} dark:text-green-400 text-purple-500 {{ /if }} block rounded px-3.5 py-3  hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:text-purple-500 dark:hover:text-purple-400" href="{{ url }}">
+																	{{ title }}
+																	{{ if page_description }}
+																		<span class="block mt-1 text-base leading-5 opacity-50">{{ page_description }}</span>
+																{{ /if}}
+																</a>
 															{{ /children }}
 														</div>
 													</div>
 												</div>
 											{{ else }}
 												<li>
-													<a class="hover:text-purple-500 dark:hover:text-purple-400" href="{{ url }}">{{ title }}</a>
+													<a class="hover:text-purple-500 block rounded px-3.5 py-3  hover:bg-zinc-100 dark:hover:bg-zinc-700 dark:hover:text-purple-400" href="{{ url }}">{{ title }}</a>
 												</li>
 											{{ /if }}
 										{{ /nav:main_menu }}
 									</ul>
 									<div class="mt-6 space-y-6 border-t border-zinc-200 pt-6 dark:border-zinc-200/10">
 										<div class="flex items-center justify-between">
-											<label for="theme" class="font-normal text-zinc-700 dark:text-zinc-400">Switch theme</label>
+											<label for="theme" class="text-zinc-700 dark:text-zinc-400">Switch theme</label>
 											{{ partial:documentation/_theme_toggle }}
 										</div>
 									</div>

@@ -10,7 +10,10 @@ tree:
     entry: 178073b8-7594-4432-9b39-2461b487bce8
   -
     id: 4d0b3f4e-f4c7-4697-8e6a-1fbd217272fe
-    title: 'Example pages'
+    title: Products
+    data:
+      page_description: 'Our awesome products'
+      iconamic: container
     children:
       -
         id: b978a602-a52e-4fb5-8c87-ed30cfd7de29
@@ -20,20 +23,19 @@ tree:
         entry: 1e33d247-bf25-42a4-b455-b47eb8dcf557
   -
     id: 28084c31-0c19-47fa-a5a4-bec274f3ab13
-    title: Dropdown
-    url: '#'
+    title: 'Example pages'
+    data:
+      page_description: 'Some example pages'
+      iconamic: boom-box
     children:
       -
         id: ad47f904-7d82-4d40-9ecf-a2a6c56931bb
         entry: 26513dc7-59f7-4673-815e-7d9ace16248b
       -
-        id: ee32bd30-216d-481b-ac74-43380c3d72eb
-        title: 'My First awesome link'
-        url: '#'
-      -
-        id: dfc4aca5-7be9-404f-afb0-ca1492c27571
-        title: 'My Second awesome link'
-        url: '#'
+        id: cef3271b-1e10-4b43-8850-ddded1fb9cc5
+        title: 'Another page'
+        data:
+          page_description: null
   -
     id: a1f043b3-ead3-4fc6-9806-d5e0a029ba81
     entry: 5f3ec833-66d3-43ef-9f35-97f1b4b0afc5

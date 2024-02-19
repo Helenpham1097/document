@@ -1,77 +1,82 @@
+hide: true
 order: 1
 title: Pages
-sections:
+tabs:
   main:
     display: Main
-    fields:
+    sections:
       -
-        handle: title
-        field:
-          type: text
-          required: true
-          validate:
-            - required
-      -
-        handle: description
-        field:
-          input_type: text
-          antlers: false
-          display: Description
-          type: text
-          icon: text
-          listable: hidden
-      -
-        handle: article
-        field: article.article
-        config:
-          buttons:
-            - h1
-            - h2
-            - bold
-            - italic
-            - unorderedlist
-            - orderedlist
-            - quote
-            - removeformat
-            - anchor
-            - code
-            - codeblock
-      -
-        handle: template
-        field:
-          hide_partials: true
-          display: Template
-          type: template
-          icon: template
-          listable: hidden
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: description
+            field:
+              input_type: text
+              antlers: false
+              display: Description
+              type: text
+              icon: text
+              listable: hidden
+          -
+            handle: article
+            field: article.article
+            config:
+              buttons:
+                - h1
+                - h2
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - quote
+                - removeformat
+                - anchor
+                - code
+                - codeblock
+          -
+            handle: template
+            field:
+              hide_partials: true
+              display: Template
+              type: template
+              icon: template
+              listable: hidden
   sidebar:
     display: Sidebar
-    fields:
+    sections:
       -
-        handle: slug
-        field:
-          type: slug
-          localizable: true
-          validate:
-            - required
-            - 'unique_entry_value:{collection},{id},{site}'
-      -
-        handle: parent
-        field:
-          type: entries
-          collections:
-            - pages
-          max_items: 1
-          listable: false
-          localizable: true
-      -
-        handle: stickied_post
-        field:
-          max_items: 1
-          mode: default
-          collections:
-            - blog
-          display: 'Stickied Post'
-          type: entries
-          icon: entries
-          listable: hidden
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate:
+                - required
+                - 'unique_entry_value:{collection},{id},{site}'
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true
+          -
+            handle: stickied_post
+            field:
+              max_items: 1
+              mode: default
+              collections:
+                - blog
+              display: 'Stickied Post'
+              type: entries
+              icon: entries
+              listable: hidden

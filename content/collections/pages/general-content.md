@@ -3,7 +3,7 @@ id: 26513dc7-59f7-4673-815e-7d9ace16248b
 blueprint: general_content
 title: 'General content'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1707886670
+updated_at: 1708313348
 description: Lorem
 template: general_content/index
 excerpt: sdasda
@@ -444,4 +444,5 @@ top_section:
         entry: 128bc187-e58c-4ccc-a5f7-587727470a54
         button_type: secondary
     shape: diagonal
+page_description: 'This is the page description.'
 ---

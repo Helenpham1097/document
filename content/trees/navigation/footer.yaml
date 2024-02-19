@@ -69,6 +69,9 @@ tree:
     url: '#'
     children:
       -
+        id: 0571a048-e10a-49b1-b014-82a9f7b995f5
+        entry: 79c35c26-5009-4dbd-b647-d4f24eb357bb
+      -
         id: 95448ddc-0fc9-489c-b6eb-c9cb56e2cd36
         title: Privacy
         url: '#'
