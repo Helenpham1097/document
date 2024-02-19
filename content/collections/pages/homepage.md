@@ -4,7 +4,7 @@ blueprint: home
 template: general_content/index
 title: Homepage
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1706578815
+updated_at: 1707974454
 top_section:
   -
     id: RzzOzBfN
@@ -36,7 +36,7 @@ top_section:
         id: gjeb9dTC
         template_global: /components/buttons
         label: 'Get started'
-        iconamic: cheveron-right
+        iconamic: arrow-right-circle
         link_type: url
         target_blank: false
         url: '#'
@@ -45,7 +45,7 @@ top_section:
         id: PrVKnxaD
         template_global: /components/buttons
         label: 'Choose plan'
-        iconamic: arrow-right
+        iconamic: chevron-right
         link_type: url
         target_blank: false
         url: '#'
@@ -57,23 +57,23 @@ top_section:
         text: Flexibility
       -
         id: lrfrhv51
-        iconamic: adjustments
+        iconamic: lock
         text: Security
       -
         id: lrfrhvr5
-        iconamic: support
+        iconamic: headphones
         text: Support
       -
         id: lrfrhwd9
-        iconamic: clock
+        iconamic: clock-3
         text: 'Optional 24/7'
       -
         id: lrfridoi
-        iconamic: academic-cap
+        iconamic: timer-reset
         text: 'Automated back-ups'
       -
         id: lrfrigs8
-        iconamic: location-marker
+        iconamic: map-pin
         text: 'Worldwide locations'
 page_builder:
   -
@@ -85,7 +85,7 @@ page_builder:
       -
         id: lrzoxcmj
         template_global: /global/default_image
-        iconamic: shippingbox
+        iconamic: box
         title: 'Webslice Containers'
         description: 'A platform that lets you run as many independent, flexible environments as you need. One account, one server, dozens of pre-built images (or build your own), and no technical headaches. You control it all. LAUNCHING EARLY 2024.'
         url: '#'
@@ -97,7 +97,7 @@ page_builder:
       -
         id: lrzoyenc
         template_global: /global/default_image
-        iconamic: shippingbox
+        iconamic: expand
         title: 'Webslice Scalable'
         description: 'PHP hosting that stretches from almost absolute zero to somewhere near infinity (but you can set your own limits). Bring your PHP apps, no modification required, and discover pay-as-you-go hosting. COMING SOON.'
         url: '#'

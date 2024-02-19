@@ -6,7 +6,6 @@ fields:
       default: page_builder/head_to_documentation
       type: hidden
       display: template
-      icon: hidden
       listable: hidden
       instructions_position: above
       visibility: visible
@@ -21,7 +20,6 @@ fields:
       antlers: false
       type: text
       display: Title
-      icon: text
       listable: hidden
       instructions_position: above
       visibility: visible
@@ -33,7 +31,6 @@ fields:
       antlers: false
       type: textarea
       display: Description
-      icon: textarea
       listable: hidden
       instructions_position: above
       visibility: visible
@@ -48,7 +45,6 @@ fields:
       antlers: false
       type: text
       display: 'Sub Title'
-      icon: text
       listable: hidden
       instructions_position: above
       visibility: visible
@@ -66,8 +62,8 @@ fields:
           instructions: null
           icon: null
           sets:
-            new_set:
-              display: 'New Set'
+            entry:
+              display: Entry
               instructions: null
               icon: null
               fields:
@@ -78,7 +74,6 @@ fields:
                     antlers: false
                     type: text
                     display: Text
-                    icon: text
                     listable: hidden
                     instructions_position: above
                     visibility: visible
@@ -90,7 +85,6 @@ fields:
                   field:
                     type: link
                     display: URL
-                    icon: link
                     listable: hidden
                     instructions_position: above
                     visibility: visible
@@ -98,8 +92,7 @@ fields:
                     hide_display: false
                     width: 50
       type: replicator
-      display: Entry
-      icon: replicator
+      display: Entrys
       listable: hidden
       instructions_position: above
       visibility: visible

@@ -5,7 +5,6 @@ fields:
     field:
       display: template
       type: hidden
-      icon: hidden
       listable: hidden
       default: /general_content/hero
   -
@@ -24,7 +23,6 @@ fields:
       default: diagonal
       type: select
       display: 'Background shape'
-      icon: select
       listable: hidden
       instructions_position: above
       visibility: visible
@@ -39,7 +37,6 @@ fields:
       antlers: false
       type: text
       display: Pre-title
-      icon: text
       listable: hidden
       instructions_position: above
       visibility: visible
@@ -52,7 +49,6 @@ fields:
       antlers: false
       display: Title
       type: text
-      icon: text
       listable: hidden
       instructions_position: above
       visibility: visible
@@ -80,7 +76,6 @@ fields:
       enable_input_rules: false
       enable_paste_rules: true
       type: bard
-      icon: textarea
       listable: hidden
       instructions_position: above
       visibility: visible
@@ -93,6 +88,23 @@ fields:
       previews: true
       hide_display: false
   -
-    import: default_image
+    handle: dark_image
+    field:
+      max_files: 1
+      mode: list
+      container: assets
+      folder: illustrations
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: true
+      type: assets
+      display: Image
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
   -
     import: buttons

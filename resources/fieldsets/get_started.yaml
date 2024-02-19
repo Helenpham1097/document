@@ -6,7 +6,6 @@ fields:
       default: /page_builder/get_started
       type: hidden
       display: template
-      icon: hidden
       listable: hidden
       instructions_position: above
       visibility: visible
@@ -19,7 +18,6 @@ fields:
       antlers: false
       type: text
       display: Title
-      icon: text
       listable: hidden
       instructions_position: above
       visibility: visible
@@ -31,7 +29,6 @@ fields:
       antlers: false
       type: textarea
       display: Description
-      icon: textarea
       listable: hidden
       instructions_position: above
       visibility: visible
@@ -50,7 +47,7 @@ fields:
           icon: null
           sets:
             start:
-              display: Start
+              display: 'Tab Item'
               instructions: null
               icon: favorite-star
               fields:
@@ -63,7 +60,6 @@ fields:
                     antlers: false
                     type: text
                     display: Title
-                    icon: text
                     listable: hidden
                     instructions_position: above
                     visibility: visible
@@ -75,7 +71,6 @@ fields:
                     antlers: false
                     type: textarea
                     display: Description
-                    icon: textarea
                     listable: hidden
                     instructions_position: above
                     visibility: visible
@@ -114,7 +109,6 @@ fields:
                     previews: true
                     type: bard
                     display: Content
-                    icon: bard
                     listable: hidden
                     instructions_position: above
                     visibility: visible
@@ -177,8 +171,7 @@ fields:
                               -
                                 import: buttons
       type: replicator
-      display: 'Start type'
-      icon: replicator
+      display: 'Start Tabs'
       listable: hidden
       instructions_position: above
       visibility: visible
