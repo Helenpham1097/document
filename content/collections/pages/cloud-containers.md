@@ -22,13 +22,12 @@ top_section:
     type: hero
     enabled: true
     iconamic: cloud
-    default_image: hero-preview.png
     buttons:
       -
         id: 2SEK87kA
         template_global: /global/buttons
         label: 'Start risk-free for 7 days'
-        iconamic: cheveron-right
+        iconamic: chevron-right
         link_type: entry
         target_blank: false
         entry: fee1a2b1-971c-4c72-9517-d2e6c989f49e
@@ -44,9 +43,11 @@ top_section:
         button_type: secondary
     pre: 'Cloud Hosting'
     shape: paper
+    dark_image: illustrations/cloud-containers.png
+    light_image: illustrations/cloud-containers.png
 title: 'Cloud Containers'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1707864698
+updated_at: 1708313390
 page_builder:
   -
     id: lrftv1b6
@@ -229,7 +230,7 @@ page_builder:
                 text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue. Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque.'
         template_global: /global/default_image
         label: Button
-        iconamic: cake
+        iconamic: align-end-vertical
         link_type: url
         target_blank: false
         url: '#'
@@ -442,7 +443,7 @@ page_builder:
         type: start
         enabled: true
         template_global: /global/iconamic
-        iconamic: server
+        iconamic: server-crash
       -
         id: lro5rs47
         title: 'Spin up your own server'
@@ -502,7 +503,7 @@ page_builder:
         type: start
         enabled: true
         template_global: /global/iconamic
-        iconamic: adjustments
+        iconamic: server
   -
     id: lrochdxy
     template: page_builder/head_to_documentation
@@ -517,27 +518,27 @@ page_builder:
       -
         id: lrocq15l
         text: 'The introductory Overview for developers'
-        type: new_set
+        type: entry
         enabled: true
       -
         id: lrocq8tp
         text: 'How easy it is to Get Started'
-        type: new_set
+        type: entry
         enabled: true
       -
         id: lrocqfca
         text: 'Info on creating and Using Containers, including images, variables, and more.'
-        type: new_set
+        type: entry
         enabled: true
       -
         id: lrocqj1k
         text: 'How to manage Databases and permissions.'
-        type: new_set
+        type: entry
         enabled: true
       -
         id: lrocqlw5
         text: 'How to create and manage your own Custom Images.'
-        type: new_set
+        type: entry
         enabled: true
     buttons:
       -
@@ -548,4 +549,5 @@ page_builder:
         target_blank: true
         url: '#'
         button_type: inline
+page_description: 'A Faster, More Flexible Platform for Web Development.'
 ---

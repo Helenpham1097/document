@@ -38,9 +38,11 @@ top_section:
         button_type: secondary
     type: hero
     enabled: true
+    dark_image: illustrations/expand.png
+    light_image: illustrations/expand.png
 title: 'Webslice Scalable'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1707706107
+updated_at: 1708313380
 page_builder:
   -
     id: lrzoffkv
@@ -91,6 +93,7 @@ page_builder:
                         text: .
                 type: link
                 enabled: true
+                target: false
             type: box
             enabled: true
           -
@@ -116,6 +119,7 @@ page_builder:
                         text: ' as you need, all in one place.'
                 type: link
                 enabled: true
+                target: false
             type: box
             enabled: true
           -
@@ -141,6 +145,7 @@ page_builder:
                         text: ' around the world.'
                 type: link
                 enabled: true
+                target: false
             type: box
             enabled: true
     reverse_alignment: true
@@ -186,6 +191,7 @@ page_builder:
                         text: 'Once you’ve picked an AWS region, you won’t need to think about servers, or serverless, or any other infrastructure again. We’ll take care of all that while you develop great websites.'
                 type: link
                 enabled: true
+                target: false
             type: box
             enabled: true
     reverse_alignment: true
@@ -205,32 +211,33 @@ page_builder:
         id: lrzor64b
         text: 'The introductory Overview for developers'
         url: '#'
-        type: new_set
+        type: entry
         enabled: true
       -
         id: lrzord4z
         text: 'How easy it is to Get Started'
         url: '#'
-        type: new_set
+        type: entry
         enabled: true
       -
         id: lrzorjxj
         text: 'Info on creating and Using Containers, including images, variables, and more.'
         url: '#'
-        type: new_set
+        type: entry
         enabled: true
       -
         id: lrzorufc
         text: 'How to manage Databases and permissions.'
         url: '#'
-        type: new_set
+        type: entry
         enabled: true
       -
         id: lrzorxhn
         text: 'How to create and manage your own Custom Images.'
         url: '#'
-        type: new_set
+        type: entry
         enabled: true
     type: head_to_documentation
     enabled: true
+page_description: 'Stretch but never break with incredibly scalable hosting.'
 ---
