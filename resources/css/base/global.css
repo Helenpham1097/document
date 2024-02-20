@@ -1,33 +1,33 @@
 body {
-    @apply overflow-x-hidden;
+	@apply overflow-x-hidden;
 }
 @screen sm {
-    .container {
-        @apply p-4;
-    }
+	.container {
+		@apply p-4;
+	}
 }
 
 /* Smooth Scroll */
 @media screen and (prefers-reduced-motion: no-preference) {
-    html,
-    body {
-        scroll-behavior: smooth;
-    }
+	html,
+	body {
+		scroll-behavior: smooth;
+	}
 }
 
 /* Back to top link */
 .back-to-top-wrapper {
-    @apply absolute right-6 sm:right-12 -bottom-0.5;
-    top: 100vh;
+	@apply absolute right-6 -bottom-0.5 sm:right-12;
+	top: 100vh;
 }
 .back-to-top-link {
-    @apply sticky inline-block no-underline transition duration-500 ease-in-out transform scale-100;
-    top: calc(100vh - 5rem);
-    &:hover,
-    &:focus {
-        @apply scale-125;
-    }
-    &:focus {
-        @apply outline-none;
-    }
+	@apply sticky inline-block scale-100 transform no-underline transition duration-500 ease-in-out;
+	top: calc(100vh - 5rem);
+	&:hover,
+	&:focus {
+		@apply scale-125;
+	}
+	&:focus {
+		@apply outline-none;
+	}
 }

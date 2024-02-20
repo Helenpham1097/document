@@ -30,7 +30,6 @@
         {{ /if }}
     {{else}}
         {{ if toggle_alignment }}
-            empty
         {{ else }}
             {{ switch between='empty | lg:space-x-reverse' }}
         {{ /if }}
@@ -38,7 +37,7 @@
 	<div class="space-y-6 lg:w-1/2">
 		<div class="space-y-6">
 			{{ if highlight_title }}
-				<h2 class="h2 dot">{{ highlight_title }}</h2>
+				{{ partial:typography/h2 :content="highlight_title" color='dot' }}
 			{{ /if }}
 			{{ partial:typography/prose }}
 				{{ highlight_textarea }}
@@ -85,9 +84,7 @@
 			</div>
 		{{ /if }}
 		{{ if highlight_textcaption | strip_tags:p }}
-			<div class="relative text-zinc-400 dark:text-zinc-600">
-				{{ highlight_textcaption | strip_tags:p }}
-			</div>
+			{{ partial:typography/caption :caption='highlight_textcaption' }}
 		{{ /if }}
 	</div>
 </div>
