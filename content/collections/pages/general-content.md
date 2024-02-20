@@ -3,7 +3,7 @@ id: 26513dc7-59f7-4673-815e-7d9ace16248b
 blueprint: general_content
 title: 'General content'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1708313348
+updated_at: 1708318818
 description: Lorem
 template: general_content/index
 excerpt: sdasda
@@ -207,7 +207,7 @@ page_builder:
     title: 'Elevate Your Online Presence with Tailored Hosting Solutions'
     description: 'Discover the perfect cloud hosting tier for your needs. From essential features to premium performance, we have tailored solutions to elevate your online presence. Choose the tier that fits your goals and unlock the power of the cloud today.'
     template_global: /global/iconamic
-    iconamic: beach
+    iconamic: palmtree
     pricing_style: items
   -
     id: lsla6ty3
@@ -408,13 +408,13 @@ page_builder:
     title: 'Elevate Your Online Presence with Tailored Hosting Solutions'
     description: 'Discover the perfect cloud hosting tier for your needs. From essential features to premium performance, we have tailored solutions to elevate your online presence. Choose the tier that fits your goals and unlock the power of the cloud today.'
     template_global: /global/iconamic
-    iconamic: cdn
+    iconamic: medal
     pricing_style: medals
 top_section:
   -
     id: D4astuOi
     template: /general_content/hero
-    hero_home_title: 'Hero general content page'
+    hero_home_title: 'Sections Showcase'
     template_global: /global/default_image
     type: hero
     enabled: true
@@ -444,5 +444,7 @@ top_section:
         entry: 128bc187-e58c-4ccc-a5f7-587727470a54
         button_type: secondary
     shape: diagonal
+    iconamic: layout-dashboard
+    pre: Examples
 page_description: 'This is the page description.'
 ---

@@ -6,7 +6,7 @@ top_section:
   -
     id: lrzod0rt
     template: /general_content/hero
-    shape: diagonal
+    shape: paper
     template_global: /global/default_image
     iconamic: expand
     pre: 'Elastic Hosting'
@@ -40,9 +40,9 @@ top_section:
     enabled: true
     dark_image: illustrations/expand.png
     light_image: illustrations/expand.png
-title: 'Webslice Scalable'
+title: Serverless
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1708313380
+updated_at: 1708391127
 page_builder:
   -
     id: lrzoffkv
@@ -240,4 +240,6 @@ page_builder:
     type: head_to_documentation
     enabled: true
 page_description: 'Stretch but never break with incredibly scalable hosting.'
+meta_title: 'Webslice page title'
+meta_description: 'Scalable hosting shrinks your bills in quiet times and keeps your website fast and available in the busiest periods.'
 ---

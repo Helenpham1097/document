@@ -42,12 +42,12 @@ top_section:
         url: '#'
         button_type: secondary
     pre: 'Cloud Hosting'
-    shape: paper
+    shape: triangle
     dark_image: illustrations/cloud-containers.png
     light_image: illustrations/cloud-containers.png
-title: 'Cloud Containers'
+title: Containers
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1708313390
+updated_at: 1708391156
 page_builder:
   -
     id: lrftv1b6
@@ -550,4 +550,6 @@ page_builder:
         url: '#'
         button_type: inline
 page_description: 'A Faster, More Flexible Platform for Web Development.'
+meta_title: 'Cloud Hosting from Webslice'
+meta_description: 'Fast, flexible cloud hosting for web developers. Run multiple dev platforms, work faster, and spend less time managing servers.'
 ---

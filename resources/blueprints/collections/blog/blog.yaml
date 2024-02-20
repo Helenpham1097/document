@@ -3,70 +3,60 @@ tabs:
   main:
     display: Main
     sections:
-      -
-        fields:
-          -
-            handle: template
+      - fields:
+          - handle: template
             field:
               display: template
               type: hidden
               icon: hidden
               listable: hidden
               default: blog/blog
-          -
-            handle: title
+          - handle: title
             field:
               type: text
               required: true
               validate:
                 - required
-              display: 'Page title'
-              default: 'Blog title'
-              instructions: 'This is the title that will be displayed in the browser bar and will help you to identify it.'
+              display: "Page title"
+              default: "Blog title"
+              instructions: "This is the title that will be displayed in the browser bar and will help you to identify it."
               listable: hidden
               input_type: text
               antlers: false
-          -
-            handle: excerpt
+          - handle: excerpt
             field:
               antlers: false
               display: Excerpt
               type: textarea
               icon: textarea
               listable: hidden
-          -
-            import: page_builder
+          - import: page_builder
   sidebar:
     display: Sidebar
     sections:
-      -
-        fields:
-          -
-            handle: slug
+      - fields:
+          - handle: slug
             field:
               type: slug
               localizable: true
               validate:
                 - required
-                - 'unique_entry_value:{collection},{id},{site}'
-          -
-            handle: date
+                - "unique_entry_value:{collection},{id},{site}"
+          - handle: date
             field:
               type: date
               required: true
               default: now
               validate:
                 - required
-          -
-            handle: categories
+          - handle: categories
             field:
               type: terms
               taxonomies:
                 - categories
               display: Categories
               mode: select
-          -
-            handle: author
+          - handle: author
             field:
               max_items: 1
               mode: select
@@ -74,43 +64,38 @@ tabs:
               type: users
               icon: users
               listable: true
-          -
-            handle: team_member
+          - handle: team_member
             field:
               max_items: 1
               mode: default
               create: true
               collections:
                 - team
-              display: 'Team Member'
+              display: "Team Member"
               type: entries
               icon: entries
               listable: hidden
               instructions_position: above
-              instructions: 'Team member to display as author'
-          -
-            import: default_image
+              instructions: "Team member to display as author"
+          - import: default_image
   meta:
     display: Meta
     sections:
-      -
-        fields:
-          -
-            handle: meta_title
+      - fields:
+          - handle: meta_title
             field:
               input_type: text
               character_limit: 60
               antlers: false
-              display: 'Meta title'
+              display: "Meta title"
               type: text
               icon: text
               listable: hidden
-          -
-            handle: meta_description
+          - handle: meta_description
             field:
-              character_limit: '160'
+              character_limit: "160"
               antlers: false
-              display: 'Meta description'
+              display: "Meta description"
               type: textarea
               icon: textarea
               listable: hidden
