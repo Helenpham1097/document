@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d88e759ce31a8cd78ddea156e3934a4f",
+    "content-hash": "436a25a9ac3bdc02a6a7296d4195088e",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -8367,6 +8367,59 @@
                 }
             ],
             "time": "2023-10-28T23:31:00+00:00"
+        },
+        {
+            "name": "teamnovu/statamic-images-missing-alt",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/teamnovu/statamic-images-missing-alt.git",
+                "reference": "b2a8099d9ae933f4a60a261835b39caa2fe8848a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/teamnovu/statamic-images-missing-alt/zipball/b2a8099d9ae933f4a60a261835b39caa2fe8848a",
+                "reference": "b2a8099d9ae933f4a60a261835b39caa2fe8848a",
+                "shasum": ""
+            },
+            "require": {
+                "statamic/cms": "^4.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.13"
+            },
+            "type": "library",
+            "extra": {
+                "statamic": {
+                    "name": "Statamic Images Missing Alt",
+                    "description": "Addon to list all images with no alt text on your Statamic dashboard."
+                },
+                "laravel": {
+                    "providers": [
+                        "Teamnovu\\StatamicImagesMissingAlt\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Teamnovu\\StatamicImagesMissingAlt\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tom Diggelmann"
+                }
+            ],
+            "description": "Addon to list all images with no alt text on your Statamic dashboard.",
+            "support": {
+                "email": "developers@novu.ch",
+                "source": "https://github.com/teamnovu/statamic-images-missing-alt/tree/v1.0.2"
+            },
+            "time": "2023-10-10T13:00:30+00:00"
         },
         {
             "name": "thecodingmachine/safe",

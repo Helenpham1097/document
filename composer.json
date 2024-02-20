@@ -17,7 +17,8 @@
         "laravel/tinker": "^2.0",
         "mitydigital/iconamic": "^1.0",
         "statamic/cms": "^4.0",
-        "statamic/ssg": "^2.0"
+        "statamic/ssg": "^2.0",
+        "teamnovu/statamic-images-missing-alt": "^1.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.6",
