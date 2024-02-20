@@ -21,13 +21,13 @@ ol {
 	text-rendering: optimizeLegibility;
 }
 .h1 {
-	@apply text-4xl font-bold md:text-6xl 2xl:text-7xl;
+	@apply text-4xl font-bold md:text-6xl;
 }
 .h2 {
-	@apply text-3xl font-semibold md:text-5xl 2xl:text-6xl;
+	@apply text-3xl font-bold 2xl:text-5xl;
 }
 .h3 {
-	@apply text-xl font-medium sm:text-2xl;
+	@apply text-xl font-medium sm:text-5xl;
 }
 .h4 {
 	@apply text-xl font-medium md:text-2xl;
