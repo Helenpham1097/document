@@ -7,6 +7,20 @@ preferences:
   collections:
     pages:
       after_save: continue_editing
+    blog:
+      columns:
+        - title
+        - slug
+        - date
+        - author
+        - status
+    team:
+      columns:
+        - title
+        - default_image
+        - slug
+        - team
+        - status
   favorites:
     -
       name: 'Pages ‹ Collections'

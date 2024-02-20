@@ -1,0 +1,13 @@
+nav:
+  reorder: true
+  sections:
+    top_level: '@inherit'
+    shortcuts:
+      action: '@create'
+      display: Shortcuts
+      items:
+        'content::collections::blog':
+          action: '@alias'
+          display: 'Blog articles'
+        'content::collections::pages': '@alias'
+        'tools::utilities::cache': '@alias'

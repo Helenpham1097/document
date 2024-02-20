@@ -1,5 +1,9 @@
 title: 'Site Information'
 data:
-  name: 'Webslice Serverless Hosting'
+  name: Webslice
   url: 'https://webslice.com'
   keywords: 'Serverless, hosting, .nz, web hosting, hosting, cloud hosting, hosting nz'
+  campaign_monitor_id: 92D4C54F0FEC16E5ADC2B1904DE9ED1A8B0C7F95E470273A3AFE7B83D22421725B72DC4A83D6A13A1B13F7F68BA8B499B59C222F2FFFA7C58BD4C707EBCCB890
+  email: hello@webslice.nz
+  login: 'https://console.webslice.com/login'
+  sign_up: 'https://console.webslice.com/register'
