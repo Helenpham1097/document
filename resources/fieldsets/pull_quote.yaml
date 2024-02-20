@@ -1,4 +1,4 @@
-title: 'Pull quote'
+title: 'Pull Quote'
 fields:
   -
     handle: size
@@ -33,7 +33,5 @@ fields:
       antlers: false
       display: Quote
       type: bard
-      icon: bard
       listable: hidden
       instructions_position: above
-      read_only: false

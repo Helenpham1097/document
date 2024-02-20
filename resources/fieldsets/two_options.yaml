@@ -6,7 +6,6 @@ fields:
       default: page_builder/two_options
       type: hidden
       display: template
-      icon: hidden
       listable: hidden
       instructions_position: above
       visibility: visible
@@ -19,7 +18,6 @@ fields:
       antlers: false
       type: text
       display: Title
-      icon: text
       listable: hidden
       instructions_position: above
       visibility: visible
@@ -30,8 +28,7 @@ fields:
     field:
       antlers: false
       type: textarea
-      display: 'Sub Title'
-      icon: textarea
+      display: Sub-title
       listable: hidden
       instructions_position: above
       visibility: visible
@@ -63,7 +60,6 @@ fields:
                     antlers: false
                     type: text
                     display: Title
-                    icon: text
                     listable: hidden
                     instructions_position: above
                     visibility: visible
@@ -75,7 +71,6 @@ fields:
                     antlers: false
                     type: textarea
                     display: Description
-                    icon: textarea
                     listable: hidden
                     instructions_position: above
                     visibility: visible
@@ -86,20 +81,63 @@ fields:
                   field:
                     type: link
                     display: URL
-                    icon: link
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    width: 50
+                -
+                  handle: text_link
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: 'Text Link'
+                    width: 50
                     listable: hidden
                     instructions_position: above
                     visibility: visible
                     replicator_preview: true
                     hide_display: false
                 -
-                  import: default_image
+                  handle: image
+                  field:
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    show_set_alt: true
+                    type: assets
+                    display: Image
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    max_files: 1
                 -
-                  import: default_image
-                  prefix: hover_
+                  handle: image_hover
+                  field:
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    show_set_alt: true
+                    type: assets
+                    display: 'Image hover'
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    max_files: 1
       type: replicator
       display: Boxes
-      icon: replicator
       listable: hidden
       instructions_position: above
       visibility: visible

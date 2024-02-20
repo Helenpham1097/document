@@ -1,4 +1,4 @@
-title: docs
+title: Docs
 fields:
   -
     handle: content
@@ -11,10 +11,8 @@ fields:
       antlers: false
       display: Content
       type: markdown
-      icon: markdown
       listable: hidden
       instructions_position: above
-      read_only: false
   -
     handle: related_entries
     field:
@@ -25,7 +23,5 @@ fields:
         - documentation
       display: 'Related Entries'
       type: entries
-      icon: entries
       listable: hidden
       instructions_position: above
-      read_only: false

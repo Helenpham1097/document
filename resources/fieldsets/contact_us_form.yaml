@@ -1,10 +1,9 @@
-title: 'Contact Us form'
+title: 'Contact Us Form'
 fields:
   -
     handle: template
     field:
       display: template
       type: hidden
-      icon: hidden
       listable: hidden
       default: /forms/contact_us

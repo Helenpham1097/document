@@ -4,85 +4,104 @@ blueprint: general_content
 template: general_content/index
 top_section:
   -
+    id: HBiR3QKt
     template: /general_content/hero
-    hero_home_title: 'About Us'
+    hero_home_title: 'Webslice: Who We Are'
     hero_home_description:
       -
         type: paragraph
         content:
           -
             type: text
-            text: 'Aliquam rhoncus ultrices euismod. Morbi auctor scelerisque lacus, nec vehicula eros tempus at. Vestibulum scelerisque finibus leo ac aliquam. Fusce maximus non metus ac facilisis.'
+            text: 'Webslice’s international ambitions have grown out of two decades of success at the bottom of the world.'
     template_global: /global/default_image
     default_image: about-us/team.jpg
     type: hero
     enabled: true
+    shape: diagonal
+    dark_image: shared-office-space.jpeg
 title: 'About Us'
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1667509848
+updated_at: 1708404065
 page_builder:
   -
-    template: page_builder/product/feature_section
-    add_intro_features: true
-    add_highlight_features: false
-    type: feature_section
-    enabled: true
-    section_title: 'We love the nuts and bolts of web hosting | We love PHP'
+    id: lstu1l0i
+    template: /general_content/_multiple_text_columns
+    display_title_section:
+      -
+        id: lstu1ool
+        center_title_title: 'We’re Experienced'
+        type: section_title
+        enabled: true
     columns:
       -
-        column:
+        id: lstu1w14
+        text:
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'We’re a small group of web hosting nerds who noticed something back in the 2010s when serverless infrastructure muscled its way onto the scene. It was an exciting, valuable evolution in hosting technology but we also saw some serious limitations.'
-        type: add_columns
+                text: 'Webslice may be new, but we have a lot of history behind us. Webslice grew out of SiteHost, which was founded in 2004 and is now the largest locally-owned hosting company in New Zealand.'
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: "Seeing how web developers and agencies could work faster and more efficiently, SiteHost developed a new platform in 2016. Since then that platform, known as Cloud Containers, has evolved to host over 16,000 websites. Most of them sit on servers in SiteHost's own data center."
+        type: column
         enabled: true
       -
-        column:
+        id: lstu2716
+        text:
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'Serverless web hosting promises website owners and developers near-limitless scalability up and down, dramatic cuts to costs, and lets them forget all about servers. While your site handles any level of traffic and your hosting bills take a downward dive, you can just focus on what your website does for your customers. Cool!'
-        type: add_columns
-        enabled: true
-      -
-        column:
+                text: 'With Webslice Cloud Hosting, we’re taking this robust, well-supported and battle-hardened hosting platform to the world. Running out of a network of global data centers, Webslice Cloud Hosting is launching with seven years of development and innovation built in.'
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'But the real-world web, and most of its developers, were being left behind. Turns out this serverless stuff was built for technical teams with a deep understanding of web services. It didn’t suit the millions of websites, stores and blogs that already make up the bulk of the world wide web. It also didn’t suit a lot of the languages and technologies that will fuel the web development of the future. In particular, PHP sites (including sites on CMSs like WordPress and Craft) weren’t easy to take serverless. Some of our industry peers said it was basically impossible.'
-        type: add_columns
+                text: 'The same smart team has also been working with newer technology to bring a brand new, scalable hosting platform to the world. Webslice Scalable will have years of testing and lessons built into it from day one.'
+        type: column
         enabled: true
+    type: multiple_text_columns
+    enabled: true
   -
+    id: FbFyqlag
     template: /page_builder/highlight
     rows:
       -
-        highlight_title: 'We understand that most people don’t love the nuts and bolts of web hosting'
+        id: Oyru8g4U
+        highlight_title: 'We Work In Your World'
         highlight_textarea:
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'This problem bugged us. Even if it wasn’t literally impossible to put a new PHP project or an existing WordPress site live on serverless infrastructure, the complications were bad enough to stop almost anyone from trying.'
+                text: "We’re realists - we build tools and platforms for things as they are.\_"
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'Businesses, developers and agencies have enough to worry about without learning new web hosting paradigms and fiddling around in AWS.'
+                text: 'Developers are busy enough without having to grapple within the bounds of a rigid platform. You don’t want tools that tell you how to do your job, so we give you tools that you can use in your own ways.'
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'So while the rest of the web hosting industry ignored this problem, we quietly went to work.'
+                text: 'Standardization is never perfect. As much as you wish that every project ran on the exact same stack, it’s always more complicated than that. This is why we let you choose from dozens of pre-built images, and run as many different environments as you need.'
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Languages and frameworks never stay still, but most of today’s websites are built in PHP. We’re not here to reinvent the internet. We’re here to make it easier to run the stacks that already work for you.'
         template_global: /global/default_image
         default_image: about-us/2d34429616f83487ec069ebd911356db.webp
         highlight_textcaption:
@@ -95,32 +114,33 @@ page_builder:
         type: highlight-item
         enabled: true
       -
-        highlight_title: 'We love a challenge'
+        id: TWqxZylm
+        highlight_title: 'We Have An Eye On The Future'
         highlight_textarea:
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'This is why we decided to make Webslice - a platform that non-experts can use to put everyday PHP websites live on serverless infrastructure. No-one else with our level of technical expertise seemed interested enough in today’s developers and websites.'
+                text: 'You can’t be as nerdy as we are without naturally gravitating towards interesting new technologies. And every now and then, we find something robust and revolutionary enough to seriously work with.'
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'Or maybe everyone else was scared off by the size of the challenge.'
+                text: 'The balance we strike is between supporting real-world web developers and adopting new innovations when there’s a big enough, genuinely obtainable, pay-off in store.'
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'We knew it wouldn’t be easy. We knew it would mean developing a brand new file system, amongst much else. It literally took us years to turn our original vision into reality.'
+                text: 'Serverless infrastructure, for example, emerged with a bang of excitement but some serious limitations. The upsides - like near-limitless scalability, dramatically lower costs, and less thinking about servers - are massive. But the downsides - things like massive learning curves and poor suitability to PHP - were serious, too.'
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'As far as we know, there’s nothing else in the world like Webslice.'
+                text: "So we quietly went to work. Webslice Scalable will bring the elastic, cost-effective benefits to PHP developers (and others) without requiring you to learn any new paradigms or redesign your workflows. We’ve solved the problems so you can win the prizes.\_"
         template_global: /global/default_image
         default_image: about-us/c8dfd769f4b2c76ecc3222bedf6bd6e1.webp
         highlight_textcaption:
@@ -147,63 +167,12 @@ page_builder:
                 text: Operations
         type: highlight-item
         enabled: true
-      -
-        highlight_title: 'Our web hosting chops go way back'
-        highlight_textarea:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'When we built Webslice we were leaning on decades of experience. The '
-              -
-                type: text
-                marks:
-                  -
-                    type: link
-                    attrs:
-                      href: 'https://docs.google.com/document/d/177DjzGLALVJk3F39qbcahbYOiSdUTtEepwQ2S4y2C0g/edit#'
-                      rel: null
-                      target: null
-                      title: null
-                text: 'Webslice team'
-              -
-                type: text
-                text: ' is part of '
-              -
-                type: text
-                marks:
-                  -
-                    type: link
-                    attrs:
-                      href: 'https://docs.google.com/document/d/177DjzGLALVJk3F39qbcahbYOiSdUTtEepwQ2S4y2C0g/edit#'
-                      rel: null
-                      target: null
-                      title: null
-                text: 'SiteTech Group'
-              -
-                type: text
-                text: ', which was founded by brothers Nathan and Quintin Russ in 2004. SiteTech is a collection of businesses that focus on infrastructure. We operate data centres, register domains, and manage hosting and other cloud-based solutions.'
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'We’re a proud New Zealand company with global ambitions for Webslice.'
-        template_global: /global/default_image
-        default_image: about-us/b59a3e521a070fd532a000228128afc0.webp
-        highlight_textcaption:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'SiteTech HQ'
-        type: highlight-item
-        enabled: true
-    toggle_background: false
-    reverse_alignment: false
+    toggle_background: true
+    reverse_alignment: true
     toggle_alignment: false
     type: highlight
     enabled: true
+page_description: 'Webslice’s international ambitions have grown out of two decades of success at the bottom of the world.'
+meta_title: 'About Us'
+meta_description: 'Webslice’s international ambitions have grown out of two decades of success at the bottom of the world.'
 ---

@@ -1,11 +1,10 @@
-title: 'Multiple text columns'
+title: 'Multiple Text Columns'
 fields:
   -
     handle: template
     field:
       display: template
       type: hidden
-      icon: hidden
       listable: hidden
       default: /general_content/_multiple_text_columns
   -
@@ -29,7 +28,6 @@ fields:
                 listable: hidden
       display: 'Add Title Section'
       type: replicator
-      icon: replicator
       listable: hidden
   -
     handle: columns
@@ -55,7 +53,5 @@ fields:
                   - anchor
       display: Columns
       type: replicator
-      icon: replicator
       listable: hidden
       instructions_position: above
-      read_only: false

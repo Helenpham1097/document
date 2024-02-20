@@ -1,15 +1,13 @@
-title: Tile steps
+title: 'Tile Steps'
 fields:
   -
     handle: template
     field:
       display: template
       type: hidden
-      icon: hidden
       listable: hidden
       default: /page_builder/tile_steps
       instructions_position: above
-      read_only: false
   -
     handle: Items
     field:
@@ -58,6 +56,5 @@ fields:
               import: buttons
       display: 'Add tile'
       type: replicator
-      icon: replicator
       listable: hidden
       instructions: 'Add steps horizontally, alternating the colour and position and adding the number in ascending order.'
