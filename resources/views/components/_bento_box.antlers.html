@@ -1,0 +1,30 @@
+{{ if text }}
+	<{{ as or 'a' }}
+		{{ slot:attributes }}
+		class="bento_box group/illus {{ class }} relative isolate flex flex-1 flex-col-reverse justify-between overflow-hidden bg-white dark:bg-zinc-900 sm:flex-row"
+		{{ if link_type == 'entry'}} href="{{ entry:url }}" {{ /if }}
+		{{ if link_type == 'url'}} href="{{ url }}"{{ /if }}
+		{{ if link_type == 'email'}} href="mailto:{{ email | obfuscate_email }}"{{ /if }}
+		{{ if link_type == 'tel'}} href="tel:{{ tel }}"{{ /if }}
+		{{ target_blank ?= 'rel="noopener" target="_blank"' }}
+		{{ attr_title ?= 'title="{{ attr_title }}"' }}
+		{{ attr_aria ?= 'aria-label="{{ attr_aria }}"' }}>
+		{{ partial:illustration/div_grid class='absolute left-0 right-0 mx-auto flex h-full w-full justify-between lg:h-full' }}
+		{{ slot }}
+		<div class="{{ content_class }} relative z-10 space-y-2 p-8">
+			<div class="{{ class }} {{ if col }} flex-col {{ /if }} group relative flex gap-1">
+				{{# icon animation #}}
+				<div class="relative h-6 w-6 flex-none text-purple-500 dark:text-green-500">
+					<div class="absolute translate-y-0 text-2xl opacity-100 transition duration-300 group-hover:-translate-y-4 group-hover:opacity-0">
+						{{ svg src="{{config:iconamic:path}}/goto.svg" class=" stroke-purple-700 transition-colors duration-300 group-hover:stroke-purple-900 dark:fill-white/10 dark:stroke-green-700 dark:group-hover:fill-purple-300/10 dark:group-hover:stroke-green-400" }}
+					</div>
+					<div class="absolute -translate-y-4 text-2xl opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+						{{ svg src="{{config:iconamic:path}}/document-text" class=" stroke-purple-700 transition-colors duration-300 group-hover:stroke-purple-900 dark:fill-white/10 dark:stroke-green-700 dark:group-hover:fill-purple-300/10 dark:group-hover:stroke-green-400" }}
+					</div>
+				</div>
+				{{# icon animation #}}
+				<p class="text-zinc-700 dark:text-zinc-200">{{ text | strip_tags:p }}</p>
+			</div>
+		</div>
+	</{{ as or 'a' }}>
+{{ /if }}

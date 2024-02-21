@@ -1,0 +1,14 @@
+{{# This view allows us to display in the dropdown menu the svg files included in the public/icons folder and exported from the Figma SiteHost Website / Styleguide file.
+The path used for Iconamic is defined in config/iconamic.php. #}}
+
+{{ if iconamic }}
+	{{# The animation of the hover transition is inside the button view applied from the group class. #}}
+	<div class="transition duration-500 ease-in-out transform group-hover:translate-x-1">
+		{{ svg src="{{ config:iconamic:path }}/{{iconamic}}.svg" class="aspect-square {{ if medium_icon }} w-8 {{else}} w-6 {{ /if }}  stroke-current" }}
+	</div>
+{{ /if }}
+
+{{# From Figma we use the SVG Export plugin to compress and optimize the file, plus we add the option to modify the Hexadecimal color and replacing it with currentColor as stroke this allows us to use the container text color class as the stroke color. #}}
+
+{{# SVG Export
+https://www.figma.com/community/plugin/814345141907543603 #}}

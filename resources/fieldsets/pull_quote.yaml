@@ -1,0 +1,37 @@
+title: 'Pull Quote'
+fields:
+  -
+    handle: size
+    field: common.size
+  -
+    handle: author
+    field:
+      input_type: text
+      type: text
+      localizable: true
+      listable: hidden
+      display: Author
+  -
+    handle: quote
+    field:
+      always_show_set_button: false
+      buttons:
+        - bold
+        - italic
+        - removeformat
+        - anchor
+      save_html: false
+      toolbar_mode: fixed
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      reading_time: false
+      fullscreen: true
+      allow_source: true
+      enable_input_rules: true
+      enable_paste_rules: true
+      antlers: false
+      display: Quote
+      type: bard
+      listable: hidden
+      instructions_position: above

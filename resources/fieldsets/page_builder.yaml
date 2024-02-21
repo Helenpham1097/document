@@ -1,0 +1,93 @@
+title: 'Page Builder'
+fields:
+  -
+    handle: page_builder
+    field:
+      type: replicator
+      localizable: true
+      collapse: false
+      listable: false
+      display: 'Page builder'
+      instructions: 'Build your page by using various predefined content models.'
+      sets:
+        main:
+          display: Main
+          instructions: null
+          icon: null
+          sets:
+            article:
+              display: Article
+              instructions: 'Markdown content, can be expanded with media like figures, video, quotes or tables.'
+              icon: text-formatting-shadow-text
+              fields:
+                -
+                  import: article
+            contact_us_form:
+              display: 'Contact form'
+              instructions: null
+              icon: phone-contact-phonebook
+              fields:
+                -
+                  import: contact_us_form
+            highlight:
+              display: 'Highlight Features'
+              instructions: null
+              icon: text-formatting-wrap-image-left
+              fields:
+                -
+                  import: highlight
+            multiple_text_columns:
+              display: 'Multiple text columns'
+              instructions: null
+              icon: layout-table-column-insert
+              fields:
+                -
+                  import: multiple_text_columns
+            pricing_table:
+              display: 'Pricing Table'
+              instructions: null
+              icon: money-cash-bill
+              fields:
+                -
+                  import: pricing_table
+            bento_features:
+              display: 'Bento Features'
+              instructions: null
+              icon: dashboard-layout-3
+              fields:
+                -
+                  import: bento_features
+            get_started:
+              display: 'Get Started'
+              instructions: null
+              icon: layout-table-row-insert
+              fields:
+                -
+                  import: get_started
+            head_to_documentation:
+              display: 'Head to Documentation'
+              instructions: null
+              icon: content-book-open
+              fields:
+                -
+                  import: head_to_documentation
+            two_options:
+              display: 'Two Options'
+              instructions: null
+              icon: layout-two-columns
+              fields:
+                -
+                  import: two_options
+            bento_highlight:
+              display: 'Bento Highlight'
+              instructions: null
+              icon: dashboard-layout
+              fields:
+                -
+                  import: bento_highlight
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      previews: true
+      fullscreen: true
+      hide_display: false

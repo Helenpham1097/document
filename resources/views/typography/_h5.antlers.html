@@ -1,0 +1,12 @@
+{{#
+  @name h5
+  @desc The typography h5 partial to render an h5 with `class`, `as`, `color` and `content` attributes.
+  @param* content The h5 content.
+  @param as The wrapping element. Defaults to `h5`.
+  @param color Set a custom text color utility. Falls back to `text-neutral`.
+  @param class Add custom CSS classes.
+#}}
+
+<!-- /typography/_h5.antlers.html -->
+<{{ as or 'h5' }} class="h5 {{ color or 'text-zinc-800 dark:text-zinc-200' }} {{ class }}">{{ content | nl2br }}</{{ as or 'h5' }}>
+<!-- End: /typography/_h5.antlers.html -->

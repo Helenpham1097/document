@@ -1,0 +1,90 @@
+{{#
+  This section allows to alternate the order of the elements starting with the
+  text on the left and the image on the right, the next section in the loop has
+  the image on the right and the text on the left. "reverse_alignment" allows you
+  to reverse the order of these elements.
+#}}
+
+{{#
+  "toggle_alignment" aligns the images to the left. Combined with reverse_alignment
+  aligns all images to the right.
+#}}
+
+{{#
+  The spacing between columns (space-x-24) separates the containers in the order
+  they are set in the code, when exchanged with "order-first" added  by "reverse_alignment"
+  or "toggle_alignment" we must reverse this spacing with space-x-reverse.
+#}}
+
+{{#
+  On top of all this, the mobile version must not alternate the order of the images
+  that are always displayed before the text,  this is controlled by "order-first MD:order-last".
+#}}
+
+{{# "toggle_background" allows to add or remove the background with the animated strips. #}}
+<div class="{{ if reverse_alignment }}
+        {{ if toggle_alignment }}
+            lg:space-x-reverse
+        {{ else }}
+            {{ switch between='lg:space-x-reverse | empty' }}
+        {{ /if }}
+    {{else}}
+        {{ if toggle_alignment }}
+        {{ else }}
+            {{ switch between='empty | lg:space-x-reverse' }}
+        {{ /if }}
+    {{ /if }} container mx-auto flex flex-col space-y-6 space-y-reverse py-10 sm:space-y-0 lg:flex-row lg:items-center lg:space-x-24">
+	<div class="space-y-6 lg:w-1/2">
+		<div class="space-y-6">
+			{{ if highlight_title }}
+				{{ partial:typography/h2 :content="highlight_title" color='dot' }}
+			{{ /if }}
+			{{ partial:typography/prose }}
+				{{ highlight_textarea }}
+			{{ /partial:typography/prose }}
+		</div>
+		{{ partial:components/buttons }}
+	</div>
+
+	<div class="{{ if reverse_alignment }}
+        {{ if toggle_alignment }}
+            order-first 
+        {{ else }}
+            {{ switch between='order-first | order-first md:order-last' }}
+        {{ /if }}
+    {{else}}
+        {{ if toggle_alignment }}
+            order-first md:order-last
+        {{ else }}
+            {{ switch between='order-first md:order-last | order-first' }}
+        {{ /if }}
+    {{ /if }} relative lg:mx-auto lg:w-1/2">
+		{{ if toggle_background }}
+			<div class="absolute right-0 flex translate-x-10 -translate-y-10 -space-x-6 opacity-90">
+				<div data-aos="fade-right" data-aos-delay="300">
+					<svg class="w-64 self-end fill-current text-zinc-300/20 dark:text-zinc-700/20" viewBox="0 0 549 564" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M304.108 0L-0.000494035 0L548.77 564V250.407L304.108 0Z" />
+					</svg>
+				</div>
+				<div data-aos="fade-right" data-aos-delay="600">
+					<svg class="w-64 self-end fill-current text-zinc-300/20 dark:text-zinc-700/20" viewBox="0 0 549 564" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M304.108 0L-0.000494035 0L548.77 564V250.407L304.108 0Z" />
+					</svg>
+				</div>
+				<div data-aos="fade-right" data-aos-delay="900">
+					<svg data-aos="fade-left" class="w-64 self-end fill-current text-zinc-300/20 dark:text-zinc-700/20" viewBox="0 0 549 564" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M304.108 0L-0.000494035 0L548.77 564V250.407L304.108 0Z" />
+					</svg>
+				</div>
+			</div>
+		{{ /if }}
+		{{ if default_image }}
+			<div class="relative">
+				{{ partial:components/figure :image="default_image" cover="false" lazy="false" maxwidth="768" quality='70' }}
+			</div>
+		{{ /if }}
+		{{ if highlight_textcaption | strip_tags:p }}
+			{{ partial:typography/caption :caption='highlight_textcaption' }}
+		{{ /if }}
+	</div>
+</div>

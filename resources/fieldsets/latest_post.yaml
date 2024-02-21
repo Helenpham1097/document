@@ -1,0 +1,22 @@
+title: 'Latest Post'
+fields:
+  -
+    handle: template
+    field:
+      display: template
+      type: hidden
+      icon: hidden
+      listable: hidden
+      default: /page_builder/latest_post
+      instructions_position: above
+      read_only: false
+  -
+    handle: pre-title
+    field: section_title.pre_title
+    config:
+      width: 100
+  -
+    handle: title_section
+    field: section_title.title
+    config:
+      width: 100

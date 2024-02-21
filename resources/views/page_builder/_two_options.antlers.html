@@ -1,0 +1,36 @@
+<section class="container relative mx-auto py-16 pt-32 lg:py-32 lg:pt-56">
+	<div class="relative hidden place-items-center md:grid">
+		{{ partial:illustration/ws_shield }}
+	</div>
+	{{ partial:typography/h2 :content="title | strip_tags:p" class='-my-1 dot py-1 lg:text-center tracking-tight' }}
+	{{ partial:typography/p :content="sub_title | strip_tags:p" class='lg:text-center lg:max-w-lg lg:mx-auto mt-4 lg:mt-8' }}
+	<div class="relative mt-16 flex flex-col gap-8 lg:grid lg:auto-rows-[3.5rem] lg:grid-cols-12">
+		{{ boxes }}
+			<a href="{{ url }}" class="bento_box group relative col-span-6 row-span-6 flex flex-col items-center gap-16 overflow-hidden rounded-xl p-16">
+				<div class="lg:order-last">
+					<div class="relative rounded-2xl">
+						<div class="relative transition-transform duration-500 ease-in-out group-hover:-translate-y-1">
+							<span class="transition-opacity duration-500 group-hover:opacity-0">
+								{{ partial:global/picture :image="image" cover="true" lazy="false" maxwidth="670" maxheight='447' quality='70' }}
+							</span>
+							<span class="absolute top-0 left-0 bg-purple-500/20 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+								{{ partial:global/picture :image="image_hover" cover="true" lazy="false" maxwidth="670" maxheight='447' quality='70' }}
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="flex w-full flex-col gap-4 transition-transform duration-500 ease-in-out group-hover:-translate-y-1 lg:order-first">
+					<div class="flex items-center gap-4">
+						{{ svg src="{{config:iconamic:path}}/{{iconamic}}.svg" class="size-8 " }}
+						{{ partial:typography/h3 :content="title | strip_tags:p" class='' }}
+					</div>
+					<p class="text-zinc-700 dark:text-zinc-400">{{ description }}</p>
+					<div class="flex items-center gap-1 text-purple-500 dark:text-green-500">
+						<span class="font-medium">{{ text_link }}</span>
+						{{ svg src="{{config:iconamic:path}}/chevron-right.svg" class='size-4 transition ease-in-out group-hover:translate-x-1' }}
+					</div>
+				</div>
+			</a>
+		{{ /boxes }}
+	</div>
+</section>

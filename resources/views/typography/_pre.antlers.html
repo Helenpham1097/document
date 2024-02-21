@@ -1,0 +1,20 @@
+{{#
+  @name Pre-Title
+  @desc The typography Pre-Title partial to render an Pre-Title with `class`, `as`, `color` and `content` attributes.
+  @param* content The Pre-Title content.
+  @param as The wrapping element. Defaults to `Pre-Title`.
+  @param class Add custom CSS classes.
+#}}
+
+<!-- /typography/_pre.antlers.html -->
+{{ if pre }}
+<{{ as or 'span' }} class="{{ color or 'text-purple-500' }} {{ class }} text-xs font-medium">
+	<div class="flex items-center gap-3 rounded-full border border-zinc-200 dark:border-zinc-800 bg-zinc-100 bg-white/10 p-0.5 pr-4 text-zinc-500 dark:text-zinc-200 dark:bg-zinc-100/10">
+		<span class="h-7 rounded-2xl bg-purple-500 p-1.5 py-0.5 align-middle text-white">
+			{{ svg src="{{ config:iconamic:path }}/{{iconamic}}.svg" class="aspect-square {{ if medium_icon }} w-6 {{else}} w-4 {{ /if }} stroke-current" }}
+		</span>
+		<div class="flex font-bold items-center">{{ pre }}</div>
+	</div>
+</{{ as or 'span' }}>
+{{ /if }}
+<!-- End: /typography/_pre.antlers.html -->

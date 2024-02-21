@@ -1,0 +1,11 @@
+<button :class="darkMode ? ' bg-zinc-800' : ' bg-zinc-100'" class="{{ class }} relative flex-none rounded-full border border-zinc-200 text-zinc-500 shadow-sm transition hover:shadow dark:border-zinc-600 dark:text-zinc-200" @click="darkMode = !darkMode">
+	<span :class="darkMode ? '' : ''" class="flex h-6 w-6 items-center rounded-full bg-white shadow-md transition dark:bg-zinc-700" aria-hidden="true">
+		<span :class="darkMode ? 'hidden' : ' block'" class="size-4 mx-auto">
+			{{ svg src="{{config:iconamic:path}}/sun.svg" class='size-4 mx-auto' }}
+		</span>
+		<span :class="darkMode ? 'block' : ' hidden '" class="size-4 mx-auto">
+			{{ svg src="{{config:iconamic:path}}/moon.svg" class='size-4 mx-auto' }}
+			{{# }} #}}
+		</span>
+	</span>
+</button>

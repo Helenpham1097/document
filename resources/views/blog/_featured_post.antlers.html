@@ -1,29 +1,45 @@
 {{# Partial template for the featured blog post on blog index page #}}
-
-<section class="container mx-auto mt-6 sm:mt-18 featured-blog">
-<div class="flex flex-col items-center justify-center py-4 space-x-0 sm:space-x-reverse sm:space-x-8 md:flex-row md:py-10">
-    <div class="w-full pr-4 space-y-6 md:w-1/2">
-        {{ if categories }}
-            <div class="flex-row items-center hidden space-x-2 sm:flex ">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-500 " fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5a1.99 1.99 0 011.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
-                <div class="text-purple-500">{{ categories  limit="1" }}  {{ title }} {{ /categories }}</div>
-            </div>
-        {{ /if }}
-        <a href="{{ url }}" class="flex flex-col items-center space-y-6 lg:flex-grow md:items-start">
-            <h1 class="">{{ title }}</h1>
-            <p class="excerpt"> {{ subheader }}</p>
-            <span class="inline-flex items-center cta"> Learn More </span>
-        </a>
-    </div>
-        
-        <div class="order-first md:w-1/2 md:pl-4">
-            <div class="relative illustration-element">
-                <div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg shadow-lg right aspect-w-6 aspect-h-4 group-hover:shadow-2xl">
-                    <a href="{{ url }}">
-                        {{ partial:global/default_image }}
-                    </a>
-                </div>
-            </div>
-        </div>
-</div>
-</section>
+<article class="container relative mx-auto flex flex-col justify-center py-8 lg:py-16">
+	<a href="{{ url }}">
+		<div class="group group grid gap-x-8 rounded-xl lg:grid-cols-3 lg:place-items-end">
+			{{ if default_image }}
+				<figure class="relative overflow-hidden rounded-lg md:rounded-xl lg:col-span-2">
+					{{ partial:global/picture :image="default_image" cover="false" maxheight="512" lazy="false" maxwidth="768" quality='70' }}
+				</figure>
+			{{ /if }}
+			<div class="mt-3 space-y-4 lg:mt-0">
+				<span class="inline-block rounded bg-purple-50 px-2 py-1 text-xs font-medium tracking-widest text-purple-500 dark:bg-purple-500 dark:text-zinc-100">
+					{{ if categories }}
+						<div class="font-medium uppercase text-purple-500 dark:text-purple-100">
+							{{ categories limit="1" }}
+								{{ title }}
+							{{ /categories }}
+						</div>
+					{{ else }}
+						<div class="font-medium uppercase text-purple-500 dark:text-purple-100">Article</div>
+					{{ /if }}
+				</span>
+				<h1 class="text-3xl font-semibold tracking-tight group-hover:opacity-70 lg:text-5xl lg:leading-tight">{{ title }}</h1>
+				{{ if excerpt }}
+					<p class="text-xl text-zinc-500 dark:text-zinc-400 lg:text-xl">{{ excerpt | strip_tags | safe_truncate:200:... }}</p>
+				{{ /if }}
+				<div class="mt-auto mb-4 flex w-full flex-wrap items-center pb-4">
+					<span class="mr-3 inline-flex items-center space-x-2 py-1 pr-3 text-sm leading-none text-zinc-400">
+						{{ if team_member }}
+							<figure class="h-8 w-8 overflow-hidden rounded-full border border-zinc-200 object-cover dark:border-zinc-700">
+								{{ partial:global/picture :image="team_member:default_image" cover="true" maxheight="44" lazy="false" maxwidth="44" quality='70' }}
+							</figure>
+							<span class="truncate md:w-auto md:overflow-hidden md:text-clip">{{ team_member:title }}</span>
+						{{ else }}
+							<figure class="h-8 w-8 overflow-hidden rounded-full border border-zinc-200 object-cover dark:border-zinc-700">
+								{{ partial:global/picture :image="author:avatar" cover="true" maxheight="44" lazy="false" maxwidth="44" quality='70' }}
+							</figure>
+							<span class="truncate md:w-auto md:overflow-hidden md:text-clip">{{ author:name }}</span>
+						{{ /if }}
+						<span>/ {{ date iso_format="DD MMM, YYYY" }}</span>
+					</span>
+				</div>
+			</div>
+		</div>
+	</a>
+</article>

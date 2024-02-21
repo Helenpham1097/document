@@ -1,0 +1,58 @@
+---
+nav_classes:
+  '1': 'text-zinc-800 dark:text-zinc-200 font-bold text-sm'
+  '2': 'text-zinc-600 dark:text-zinc-400 text-sm sm:pl-2'
+  '3': 'text-zinc-500 dark:text-zinc-500 text-sm sm:pl-4'
+---
+
+<div class="top-2 mt-8 flex-col space-y-8 sm:sticky sm:mt-0 sm:w-2/6 sm:pt-2 sm:pb-6 lg:pointer-events-auto lg:block lg:h-[calc(100vh-5rem)] lg:w-1/6 lg:overflow-y-auto lg:border-r lg:border-zinc-900/10 lg:px-6 lg:dark:border-zinc-300/10 xl:w-80">
+	{{ partial:documentation/search }}
+	<div x-id="['side']" class="flex flex-col justify-between">
+		<nav class="invisibles relative flex-grow xl:visible xl:flex xl:flex-col xl:justify-center" role="navigation" aria-label="Main nav">
+			{{# Desktop nav #}}
+			<ul class="nav hidden sm:block">
+				{{ nav:collection:documentation show_unpublished="true" }}
+					<li class="{{ if is_current }}  border-l-2 border-purple-300  {{ /if }}">
+						<a class="{{ view:nav_classes[depth] }}{{ if is_current || is_parent }} text-purple-400 dark:text-purple-400 {{ /if }}" href="{{ url }}">
+							{{ title }}
+						</a>
+						{{ if children }}
+							<ul class="{{ depth == 1 ?= 'mb-4' }}">
+								{{ *recursive children* }}
+							</ul>
+						{{ /if }}
+					</li>
+				{{ /nav:collection:documentation }}
+			</ul>
+			{{# mobile nav #}}
+			<ul class="nav sm:hidden" x-data="{ top: false }">
+				<div @click="top = ! top" class="flex w-full items-center justify-between rounded-lg border border-zinc-300 bg-zinc-50 p-2.5 text-sm text-zinc-900 focus:border-blue-500 focus:ring-blue-500 dark:border-zinc-600 dark:bg-zinc-700 dark:text-white dark:placeholder-zinc-400 dark:focus:border-blue-500 dark:focus:ring-blue-500">
+					<span>{{ title }}</span>
+					<svg width="24" height="24" fill="none" aria-hidden="true"><path d="M12 6v.01M12 12v.01M12 18v.01M12 7a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm0 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm0 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+				</div>
+				<div x-show="top" x-collapse.duration.500ms class="text-sm text-black dark:text-white lg:col-span-3">
+					<div class="mx-auto max-w-4xl rounded-lg border border-zinc-200 bg-white shadow-2xl shadow-zinc-500/30 dark:border-zinc-700 dark:bg-zinc-800 dark:shadow-black/30">
+						{{ nav:collection:documentation show_unpublished="true" }}
+							<div class="{{ if last }}  {{ else }} border-b {{ /if }} relative border-zinc-200 dark:border-zinc-700" x-data="{ expanded: false }">
+								{{ if !children }}
+									<a class="block w-full px-5 py-5 text-purple-500 dark:text-green-500" href="{{ url }}">
+										{{ title }}
+									</a>
+								{{ else }}
+									<div class="px-5 py-5" @click="expanded = ! expanded">
+										{{ title }}
+										<div class="text-zinc-800 dark:text-zinc-500" x-show="expanded" x-collapse.duration.500ms>
+											<a href="{{ url }}">
+												{{ *recursive children* }}
+											</a>
+										</div>
+									</div>
+								{{ /if }}
+							</div>
+						{{ /nav:collection:documentation }}
+					</div>
+				</div>
+			</ul>
+		</nav>
+	</div>
+</div>

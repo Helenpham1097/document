@@ -1,0 +1,60 @@
+{{#
+	The button partial is used in most of the site's call to action, with the exception of the buttons in the navigation bar, footer and contact page, as these buttons have custom styles.
+
+	It has three variants:
+	- Primary or solid background button for main actions.
+	- Secondary or transparent button, for secondary actions
+	- Link or info button for links
+#}}
+
+{{ if label }}
+    <{{ as or 'a' }}
+        {{ slot:attributes }}
+        class="
+            focus:outline-none focus-visible:ring group no-underline relative
+			{{if iconamic}}
+				pr-4 pl-5 space-x-2
+			{{else}}
+				{{ if iconamic }}
+				px-6
+				{{ /if }}
+			{{/if}}
+            {{ if button_type === 'inline' }}
+                inline-flex items-center text-purple-500 hover:text-purple-800 dark:hover:text-purple-600 dark:text-green-500 py-2 px-0 leading-none no-underline select-none whitespace-nowrap motion-safe:transition
+				text-neutral decoration-purple-500 focus-visible:ring-purple-500
+            {{ else }}
+				primary-action-button
+                inline-flex items-center motion-safe:transition
+				{{ if button_type:value === 'secondary' }}
+				{{# Secondary button color #}}
+					dark:bg-zinc-800  bg-white border dark:border-white/10 border-zinc-500/20 dark:text-zinc-200
+					shadow-md lg:shadow-xl shadow-black/20 dark:shadow-black/40 hover:shadow-lg 
+				{{# Main solid button #}}
+				{{ else }}
+					text-white bg-gradient-to-b from-purple-500 to-purple-600
+					hover:text-white hover:bg-gradient-to-b hover:from-purple-500 hover:to-purple-500
+					active:text-white active:bg-gradient-to-b active:from-purple-700 active:to-purple-800
+					shadow-md lg:shadow-xl shadow-black/20 dark:shadow-black/40 hover:shadow-lg 
+				{{ /if }}
+            {{ /if }}
+            {{ class }}
+			"
+			{{ if link_type == 'url'}} href="{{ url }}" {{ /if }}
+			{{ if link_type == 'entry'}} href="{{ entry:url }}" {{ /if }}
+			{{ if link_type == 'url'}} href="{{ url }}"{{ /if }}
+			{{ if link_type == 'email'}} href="mailto:{{ email | obfuscate_email }}"{{ /if }}
+			{{ if link_type == 'tel'}} href="tel:{{ tel }}"{{ /if }}
+			{{ target_blank ?= 'rel="noopener" target="_blank"' }}
+			{{ attr_title ?= 'title="{{ attr_title }}"' }}
+			{{ attr_aria ?= 'aria-label="{{ attr_aria }}"' }}
+			>
+			{{# The optional icons come from the public/icons folder thanks to the iconamic add on, and have a size variant applied with the medium_icon variable, and the color is defined by (stroke-current) the selected button variant. #}}
+			<span>{{ label }}</span>
+			{{ if iconamic }}
+			{{# The animation of the hover transition is inside the button view applied from the group class. #}}
+				<div class="transition-transform duration-500 ease-in-out transform ">
+					{{ svg src="{{ config:iconamic:path }}/{{iconamic}}.svg" class="aspect-square {{ if medium_icon }} w-4 {{else}} w-4 {{ /if }}  stroke-current" }}
+				</div>
+			{{ /if }}
+    </{{ as or 'a' }}>
+{{ /if }}

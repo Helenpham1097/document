@@ -1,0 +1,47 @@
+<div class="container relative -z-10 my-0 mx-auto py-0">
+	{{ partial:global/diagonal gradient_style='absolute top-0 mx-auto w-full translate-x-1/2 -translate-y-1/2' }}
+</div>
+<div class="container relative pt-6 space-y-4  lg:space-y-12 lg:pt-12 ">
+	
+	<div class="-ml-1.5 dark:text-zinc-300 text-zinc-500 flex">
+		<fiv class="shrink-0 text-sm">
+			<div class="flex items-center">
+				<a class="rounded pl-1.5 dark:text-purple-500 text-purple-500 pr-[7px]" href="/blog">Blog</a>
+				<div class="mx-[3px] text-[11px] font-medium">/</div>
+				<div class="mx-[3px] font-medium">author</div>
+				<div class="mx-[3px] text-[11px] font-medium">/</div>
+			</div>
+		</fiv>
+		<div class="shrink-0 text-sm">
+			<div class="px-1.5">{{ title }}</div>
+		</div>
+	</div>
+
+
+	<div class="flex flex-col gap-6 p-8 lg:flex-row lg:w-2/3 lg:gap-12">
+		<div class="flex flex-col space-x-6 lg:flex-row ">
+			<figure class="w-24 h-24 overflow-hidden rounded-full shadow-xl ">
+				{{ partial:global/picture :image="default_image" cover="true" lazy="false" maxheight="150" maxwidth="150" quality='70' }}
+			</figure>
+		</div>
+		<div class="relative flex flex-col space-y-4 ">
+				{{ partial:typography/h3 :content="title" color='text-zinc-800 max-w-5xl [text-wrap:balance] dark:text-zinc-200 tracking-tight ' }}
+				{{ partial:typography/h4 :content="team:label" color='text-zinc-800 max-w-5xl [text-wrap:balance] dark:text-zinc-200 tracking-tight ' }}
+				<p class="prose dark:prose-invert">{{ content| strip_tags:p }}</p>
+		</div>
+	</div>
+	<div class="grid gap-6 md:gap-6 lg:grid-cols-12">
+			{{ collection:blog limit="12" team_member:contains="{id}"  paginate="true" as='posts' sort="date:desc" }}
+			{{ posts }}
+				{{ partial:blog/post square="false" class='' }}
+			{{ /posts }}
+			{{# Paginator #}}
+			<div class="lg:col-span-12">
+				{{ if {collection:count in="blog"} > 6 }}
+					{{ partial:blog/paginate }}
+				{{ /if }}
+			</div>
+		{{ /collection:blog }}
+	</div>
+</div>
+

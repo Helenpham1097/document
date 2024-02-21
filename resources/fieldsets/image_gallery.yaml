@@ -7,7 +7,9 @@ fields:
       type: hidden
       icon: hidden
       listable: hidden
-      default: /general_content/image_gallery
+      default: /page_builder/image_gallery
+      instructions_position: above
+      read_only: false
   -
     handle: display_title_section
     field:
@@ -44,3 +46,5 @@ fields:
       type: replicator
       icon: replicator
       listable: hidden
+      instructions: 'Gallery supports up to 6 images. A single image will take the full width of the column. 2 and 3 images will divide their width in equal parts of the column width more than 4 will be displayed in rows of 2'
+      max_sets: 6

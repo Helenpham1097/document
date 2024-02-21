@@ -1,0 +1,37 @@
+<div class="relative flex min-h-[calc(100vh-80px)] flex-col justify-center overflow-hidden">
+	{{# <img src="/img/beams.jpg" alt="" class="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 max-w-none" width="1308" /> #}}
+	{{# <div class="absolute inset-0 bg-[url(/img/grid.svg)] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div> #}}
+	<div class="slice-background"></div>
+	<div class="relative bg-white px-6 pt-10 pb-8 shadow-2xl shadow-purple-500/20 ring-1 ring-zinc-900/5 dark:bg-zinc-800 dark:shadow-green-500/20 sm:mx-auto sm:max-w-3xl sm:rounded-lg sm:px-10">
+		<div class="mx-auto max-w-xl">
+			<div class="space-y-6 text-base leading-7">
+				{{ partial:typography/h1 :content="header" class="font-bold" color='' }}
+				{{ partial:typography/h4 :content="content" class="font-light " color=' text-zinc-600' }}
+				{{ partial:typography/p :content="sign_up_prompt" color=' text-zinc-600 dark:text-zinc-200 ' }}
+				<form id="subForm" class="js-cm-form" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="2BE4EF332AA2E32596E38B640E9056191E5F40F1FB285C0CD21B6B146E520F1531993D0F1174162641D0BA4283C4FEFB1ECF1874B92EE30E3662BA692DB1B874">
+					<div class="flex w-full max-w-xl flex-col justify-between space-y-4 text-center md:flex-row md:space-y-0 md:space-x-4">
+						<input id="fieldEmail" name="cm-sidkdy-sidkdy" type="email" class="js-cm-email-input" placeholder="your@email.com" required />
+						<span class="pointer-events-none absolute top-0 right-0 flex h-full w-10 items-center justify-center text-center text-zinc-600"></span>
+						<button type="submit" class="text-md group inline-flex flex-none items-center bg-purple-500 px-8 py-4 font-semibold text-white hover:bg-purple-800 hover:text-purple-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-purple-900">
+							Notify Me
+							<div class="transform transition duration-500 ease-in-out">
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 translate-x-2 transform text-white transition duration-500 ease-in-out group-hover:text-purple-100" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+								</svg>
+							</div>
+						</button>
+					</div>
+				</form>
+				<script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
+				<div class="mt-4 text-red-500" style="display: none">Invalid email address</div>
+			</div>
+		</div>
+	</div>
+</div>
+{{#
+  <style>
+  nav {
+  display: none !important;
+  }
+  </style>
+#}}

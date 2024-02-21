@@ -1,0 +1,43 @@
+{{#
+    Single Faq template, brings Faqs from the Faq collection, more can be added from the replicator.
+    Clicking changes the item status to "selected" + {{index}} loop number and changes the inline style by adding the height of the content with "x-bind:style".
+#}}
+
+<section class="px-4 py-10 mx-auto container sm:px-6 lg:px-8 lg:py-14">
+    <div class="grid gap-10 lg:grid-cols-5">
+
+        <div class="space-y-8 lg:col-span-2 ">
+                
+            {{ partial:typography/h5 :content="pre_title" color='{{ if toggle_color }} text-purple-500 {{ else }} text-zinc-400 {{ /if }} ' }}
+            {{ partial:typography/h2 :content="title" color='' }}
+            {{ partial:typography/prose }}
+                {{ textarea_field }}    
+            {{ /partial:typography/prose }}
+    
+        </div>
+        
+
+        <div class="lg:col-span-3">
+            <div class="max-w-4xl mx-auto bg-white border rounded-lg shadow-2xl dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700 shadow-zinc-500/30 dark:shadow-black/30" itemscope itemtype="https://schema.org/FAQPage">
+            {{ faq_entries }}
+                <div class="relative {{ if last }}  {{ else }} border-b {{ /if }} border-zinc-200 dark:border-zinc-700" x-data="{ expanded: false }" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="w-full text-left" @click="expanded = ! expanded">
+                        <div class="flex flex-row items-center justify-between p-5">
+                            {{ partial:typography/h5 :content="title" color='' }}
+                            <svg stroke="currentColor" class="flex-none w-6 h-6 ml-4 transition-transform duration-200 transform" :class="{'text-purple-500 rotate-180 dark:text-green-500': expanded, 'text-zinc-300 rotate-0': !expanded}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 9L12 16L5 9" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </button>
+                    <div x-show="expanded" x-collapse.duration.500ms itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div class="px-5 pb-5 prose prose-purple max-w-none" itemprop="text">
+                            {{ answer }}
+                        </div>
+                    </div>
+                </div>
+            {{ /faq_entries }}
+        </div>
+        </div>
+    </div>
+</section>
+

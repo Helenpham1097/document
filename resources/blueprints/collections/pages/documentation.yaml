@@ -1,0 +1,63 @@
+hide: true
+order: 2
+title: Documentation
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: article
+        field: article.article
+        config:
+          buttons:
+            - h1
+            - h2
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - quote
+            - removeformat
+            - anchor
+            - code
+            - codeblock
+      -
+        import: related
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+          validate:
+            - required
+            - 'unique_entry_value:{collection},{id},{site}'
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - pages
+          max_items: 1
+          listable: false
+          localizable: true
+      -
+        handle: stickied_post
+        field:
+          max_items: 1
+          mode: default
+          collections:
+            - blog
+          display: 'Stickied Post'
+          type: entries
+          icon: entries
+          listable: hidden

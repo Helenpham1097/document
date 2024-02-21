@@ -1,0 +1,15 @@
+{{# Grid logo gallery #}}
+<section class="container mx-auto space-y-6 md:space-y-12">
+	<div class="mx-auto mb-16 w-11/12 sm:mb-10 md:w-2/3 lg:w-2/3 xl:w-2/3">
+		{{ partial:typography/h2 class="pt-4 mb-5 text-xl font-extrabold text-center text-zinc-800 focus:outline-none xl:text-5xl md:text-3xl dark:text-white" :content="companies_title" color='' }}
+	</div>
+	{{ if company }}
+		<div class="px-15 flex flex-wrap sm:py-16">
+			{{ company }}
+				<div class="flex w-1/2 items-center justify-center border-zinc-200 pb-8 dark:border-zinc-700 md:w-1/4 lg:pb-10">
+					{{ partial:global/picture :image="default_image" class="px-6 opacity-50 lg:px-12 dark:invert" cover="false" lazy="false" maxwidth="300" quality='70' }}
+				</div>
+			{{ /company }}
+		</div>
+	{{ /if }}
+</section>

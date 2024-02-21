@@ -1,0 +1,27 @@
+title: Docs
+fields:
+  -
+    handle: content
+    field:
+      restrict: false
+      automatic_line_breaks: true
+      automatic_links: false
+      escape_markup: false
+      smartypants: false
+      antlers: false
+      display: Content
+      type: markdown
+      listable: hidden
+      instructions_position: above
+  -
+    handle: related_entries
+    field:
+      max_items: 2
+      mode: default
+      create: true
+      collections:
+        - documentation
+      display: 'Related Entries'
+      type: entries
+      listable: hidden
+      instructions_position: above

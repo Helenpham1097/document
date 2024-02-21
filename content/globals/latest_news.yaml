@@ -1,6 +1,6 @@
 title: 'Latest News'
 data:
   header: 'Latest News'
-  subheader: 'Occasionally we find time to write about what we''ve been working on, lessons we''ve learnt or just something interesting we have found.'
+  excerpt: 'Occasionally we find time to write about what we''ve been working on, lessons we''ve learnt or just something interesting we have found.'
   link_text: 'Learn More'
-  entries_limit: 3
+  entries_limit: '2'

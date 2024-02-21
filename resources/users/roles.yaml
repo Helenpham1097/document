@@ -2,6 +2,7 @@ admin:
   title: Admin
   permissions:
     - super
+    - 'access default site'
 editor:
   title: Editor
   permissions:
@@ -32,3 +33,6 @@ editor:
     - 'rename assets assets'
     - 'delete assets assets'
     - 'view users'
+    - 'edit other authors blog entries'
+    - 'edit other authors pages entries'
+    - 'access default site'

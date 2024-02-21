@@ -1,5 +1,9 @@
-{{ top_section }} {{ partial:{{ template }} }} {{ /top_section }}
-<div class="general-content">
-{{ sections }} {{ partial:{{ template }} }} {{ /sections }}
+{{# Template for the pages #}}
+{{ top_section }}
+	{{ partial:{{template}} }}
+{{ /top_section }}
+<div class="space-y-24 pb-12 lg:pb-24">
+	{{ page_builder scope="block" }}
+		{{ partial src="page_builder/{type}" }}
+	{{ /page_builder }}
 </div>
-{{ button_section }} {{ partial:{{ template }} }} {{ /button_section }}

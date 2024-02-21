@@ -1,45 +1,47 @@
 {{# Partial template for non-featured blog posts, used in the blog index grid and related blog entries #}}
-
-<a class="post" href="{{ url }}">
-    <div class="flex flex-col space-y-6 group ">
-        <div class="relative w-full">
-            <div class="relative flex flex-col items-center">
-                <div class="inset-0 w-full overflow-hidden transition duration-500 ease-in-out transform rounded-lg shadow-lg group-hover:shadow-2xl aspect-w-8 aspect-h-5">
-                    {{ partial:global/default_image }}
-                </div>
-            </div>
-        </div>
-        <h3> {{ title }} </h3>
-        <div class="flex flex-row sm:space-x-4 ">
-            <div class="flex items-center space-x-2">
-                {{ if author:avatar }}
-                <img class="w-8 h-8 rounded-full" src="{{ author:avatar }}" alt="Avatar of {{ author:name }}" />
-                {{ else }}
-                <img class="w-8 h-8 rounded-full " src="{{ placeholder_image:placeholder_avatar }}" alt="Avatar of {{ author:name }}" />
-                <div> {{ author:name }} </div>
-                {{ /if }}
-            </div>
-            <div class="flex items-center space-x-2 ">
-                <svg class="hidden w-5 h-5 sm:block " fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <span class="block"> {{ date iso_format="DD-MM-YYYY" }} </span>
-            </div>
-            <div>
-            </div>
-        </div>
-
-        {{ if subheader }}
-            <p>{{ subheader | truncate:140 }}</p>
-        {{ /if }}
-
-        <div class="inline-flex ">
-            <div class="relative inline-flex items-center group">
-                <span href="{{ url }}" class="inline-flex items-center cta">
-                    {{ latest_news:link_text }}
-                </span>
-            </div>
-        </div>
-
-    </div>
-</a>
+{{ if square }}
+	<a class="group flex flex-col gap-y-5 p-3 text-zinc-800 lg:p-8" href="{{ url }}">
+		<div class="{{ switch between=' | lg:order-first' }} relative flex flex-col">
+			<div>
+				<div class="mb-2 text-sm font-medium leading-none text-purple-500 dark:text-green-500">
+					<span>
+						{{ if categories }}
+							{{ categories limit="1" }}
+								{{ title }}
+							{{ /categories }}
+						{{ else }}
+							Category
+						{{ /if }}
+					</span>
+				</div>
+				<h2 class="before:top-sm relative mb-2 font-semibold leading-tight text-zinc-800 before:absolute before:-left-3 before:-top-px before:h-6 before:w-px before:bg-purple-500 dark:text-zinc-200 dark:before:bg-green-500 lg:before:-left-8 lg:before:w-1">{{ title }}</h2>
+				<p class="mb-4 text-sm text-zinc-700 dark:text-zinc-400">{{ excerpt }}</p>
+			</div>
+		</div>
+	</a>
+{{ else }}
+	<a class="{{ switch between='lg:col-span-5 | lg:col-span-4 | lg:col-span-3 | lg:col-span-3 | lg:col-span-4 | lg:col-span-5' }} {{ container_class }} group isolate flex flex-col gap-y-5 rounded-lg bg-white p-3 text-zinc-800 dark:bg-zinc-900 lg:p-8" href="{{ url }}">
+		{{ slot }}
+		<div class="h-full w-full overflow-hidden rounded-lg object-cover">
+			{{ partial:global/picture :image="default_image" cover="true" lazy="false" maxwidth="768" quality='70' }}
+		</div>
+		<div class="{{if flip}} {{ switch between=' | lg:order-first' }} {{/if}} flex flex-col">
+			<div>
+				<div class="mb-2 text-sm font-medium leading-none text-purple-500 dark:text-green-500">
+					<span>
+						{{ if categories }}
+							{{ categories limit="1" }}
+								{{ title }}
+							{{ /categories }}
+						{{ else }}
+							Category
+						{{ /if }}
+					</span>
+				</div>
+				<h2 class="before:top-sm relative mb-2 text-xl font-semibold leading-tight before:absolute before:-left-3 before:-top-px before:h-6 before:w-px before:bg-purple-500 dark:before:bg-green-500 lg:before:-left-8 lg:before:w-1">{{ title }}</h2>
+				<p class="mb-4 text-base text-zinc-700 dark:text-zinc-400">{{ excerpt }}</p>
+			</div>
+			{{ partial:components/author link='false' }}
+		</div>
+	</a>
+{{ /if }}

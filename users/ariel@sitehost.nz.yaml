@@ -2,11 +2,4 @@ name: Ariel
 super: true
 avatar: profile.png
 id: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-password_hash: $2y$10$Ucx2mXh3HGB37J7svNACVO7RvbXUYeLdG7Lquz0uZ8tlxAwmdMdLy
-preferences:
-  collections:
-    pages:
-      after_save: continue_editing
-  assets:
-    assets:
-      mode: table
+password_hash: $2y$10$DTbt3uYz9RmfbE2pL5VPcuqmWW4mqhY78oqoB.jU.x5sw7ykH6EJy

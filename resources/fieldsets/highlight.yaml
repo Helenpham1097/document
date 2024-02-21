@@ -7,7 +7,9 @@ fields:
       type: hidden
       icon: hidden
       listable: hidden
-      default: /general_content/highlight
+      default: /page_builder/highlight
+      instructions_position: above
+      read_only: false
   -
     handle: rows
     field:
@@ -32,8 +34,12 @@ fields:
                 display: Textarea
                 always_show_set_button: false
                 buttons:
+                  - h3
+                  - h4
+                  - h5
                   - bold
                   - italic
+                  - unorderedlist
                   - removeformat
                   - anchor
                   - table

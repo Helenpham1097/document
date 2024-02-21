@@ -1,40 +1,35 @@
-{{# Partial to show the hero section of the homepage #}}
-<!-- <div class="absolute top-0 w-full lines"></div> -->
-<!-- <div class="absolute w-full my-12 sm:my-0 h-1/2 sm:h-2/3 light-purple"></div> -->
-<div class="slice-bg"></div>
-
-{{# Partial template for the featured blog post on blog index page #}}
-
-<section class="container mx-auto my-6 sm:my-24">
-    <div class="flex flex-col items-center justify-center py-4 space-x-0 space-y-8 space-y-reverse sm:space-y-0 sm:space-x-8 md:flex-row md:py-10">
-        <div class="w-full pr-4 space-y-6 md:w-1/2">
-            {{ if categories }}
-                <div class="flex-row items-center hidden space-x-2 sm:flex ">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-500 " fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5a1.99 1.99 0 011.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
-                    <div class="text-purple-500">{{ categories  limit="1" }}  {{ title }} {{ /categories }}</div>
+{{# Partial to show the hero section of the homepage #}} {{#
+<div class="slice-background"></div>
+#}} {{# Partial to show the hero section of the general content pages #}}
+<div class="relative flex flex-col justify-center">
+    <div class="container relative mx-auto ">
+		{{ partial:global/diagonal gradient_style='absolute top-0 mx-auto w-full translate-x-1/2 -translate-y-1/2' }}
+	</div>
+    <div class="relative container mx-auto ">
+        <div class="relative mx-auto grid w-full max-w-none grid-cols-1 items-center gap-6 py-6 lg:grid-cols-4 lg:py-24">
+            <div class="col-span-1 md:col-span-2 md:space-y-2 lg:order-last">
+                <div class="relative z-0 w-full">
+                    {{ partial:illustration/_home_cards }}
                 </div>
-            {{ /if }}
-            <div class="flex flex-col items-center space-y-6 lg:flex-grow md:items-start">
-                <h1 class="">{{ hero_home_title }}</h1>
-                <div class="excerpt"> {{ hero_home_description }}</div>
-                <!-- Form -->
-                <form action="" method="post" id="revue-form" name="revue-form" target="_blank" class="flex flex-col justify-between w-full max-w-xl space-y-4 text-center md:flex-row md:space-y-0 md:space-x-4">
-                    <input type="email" class="flex-1" placeholder="john@example.com" />
-                    <div class="flex-none">
-                        {{ partial:global/buttons }}
-                    </div>
-                </form>
             </div>
-        </div>
-        <div class="order-first md:w-1/2 sm:order-last ">
-            <div class="illustration-element">
-			{{ if default_image }}
-                <div class="inset-0 flex items-center justify-center overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg shadow-lg left aspect-w-6 aspect-h-4 group-hover:shadow-2xl">
-                    {{ partial:global/default_image }}
-                </div>
-			{{ /if }}
+            <div class="col-span-1 space-y-16 md:col-span-2 md:space-y-12">
+                <div class="flex flex-col items-start space-y-6 lg:flex-grow">
+                    {{ partial:typography/h1 :content="hero_home_title | strip_tags:p" color='' class=' text-4xl dot font-semibold md:text-5xl lg:text-6xl  font-semibold [text-wrap:balance]' }}
 
+                    <div class="space-y-6 text-xl text-zinc-500 dark:text-zinc-300">
+                        {{ partial:typography/excerpt :excerpt="hero_home_description | strip_tags:p" class='text-pretty' }}
+                        <ul class="flex max-w-2xl flex-wrap gap-4 text-base">
+                            {{ grid_features }}
+                            <li class="flex items-center gap-2">
+                                {{ svg src="{{ config:iconamic:path }}/{{iconamic}}.svg" class="size-4" }}
+                                <span>{{ text }}</span>
+                            </li>
+                            {{ /grid_features }}
+                        </ul>
+                    </div>
+                    {{ partial:components/buttons }}
+                </div>
             </div>
         </div>
     </div>
-</section>
+</div>

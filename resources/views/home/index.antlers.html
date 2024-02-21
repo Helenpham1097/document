@@ -1,0 +1,12 @@
+{{# Template for the pages #}}
+{{ top_section }}
+	{{ partial:{{template}} }}
+{{ /top_section }}
+<div class="space-y-12 md:space-y-24">
+	{{ sections }}
+		{{ partial:{{template}} }}
+	{{ /sections }}
+</div>
+{{ button_section }}
+	{{ partial:{{template}} }}
+{{ /button_section }}

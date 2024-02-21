@@ -1,0 +1,49 @@
+.bento_box {
+	/* Gradients from partial options */
+	/* bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] */
+	/* bg-gradient-to-l */
+
+	@apply transition-all duration-500 ease-in-out;
+
+	/* Light */
+	/* ------- */
+	/* background color // background hover */
+	@apply bg-[radial-gradient(69.96%_25.89%_at_50%_100%,#D7D7D7_3%,rgba(39,39,39,0)_100%)];
+	@apply dark:bg-[radial-gradient(122%_100%_at_32%_0,#3F3F46_0,rgba(63,63,63,.18)_32%,rgba(63,63,63,0)_51%),radial-gradient(91%_43%_at_50%_0,#18181B_21%,rgba(24,24,24,0)_100%),radial-gradient(69.96%_25.89%_at_50%_100%,#27272A_23%,rgba(39,39,39,0)_100%)];
+	/* border // border hover */
+	@apply border border-zinc-200 hover:border-zinc-300;
+	/* Box styles */
+	@apply rounded-xl shadow-xl shadow-black/20  hover:shadow-2xl;
+	/* Text-style */
+	@apply text-zinc-800;
+
+	/* Dark */
+	/* ------- */
+	/* background color // background hover */
+	@apply hover:bg-[radial-gradient(69.96%_25.89%_at_50%_100%,#D7D7D7_13%,rgba(39,39,39,0)_100%)];
+	@apply hover:dark:bg-[radial-gradient(122%_100%_at_35%_0,#3F3F46_0,rgba(63,63,63,.18)_32%,rgba(63,63,63,0)_51%),radial-gradient(91%_43%_at_50%_0,#18181B_21%,rgba(24,24,24,0)_100%),radial-gradient(69.96%_25.89%_at_50%_100%,#27272A_23%,rgba(39,39,39,0)_100%)];
+
+	/* border // border hover */
+	@apply dark:border-zinc-800 hover:dark:border-zinc-700/20;
+	/* Box styles */
+	@apply dark:shadow-black/30;
+	/* Text-style */
+	@apply dark:text-white;
+}
+
+.glow-green {
+	@apply bg-[radial-gradient(46.99%_43.05%_at_2.58%_100%,_rgba(225,_225,_225,_0.4)_0,_transparent_100%),_radial-gradient(55.18%_55.16%_at_12.42%_-3.42%,_rgba(46,_46,_46,_0.01)_0,_transparent_100%)];
+	@apply dark:bg-[radial-gradient(46.99%_43.05%_at_2.58%_100%,_rgba(46,_48,_56,_0.4)_0,_transparent_100%),_radial-gradient(55.18%_55.16%_at_12.42%_-3.42%,_rgba(50,_255,_220,_0.3)_0,_transparent_100%)];
+}
+
+.bronze {
+	background-image: radial-gradient(150% 70% at 150% -6%, rgba(255, 166, 0, 0.3) 0, transparent 100%);
+}
+
+.silver {
+	background-image: radial-gradient(150% 70% at 150% -6%, rgba(169, 223, 241, 0.3) 0, transparent 100%);
+}
+
+.gold {
+	background-image: radial-gradient(150% 70% at 150% -6%, rgba(255, 230, 0, 0.3) 0, transparent 100%);
+}

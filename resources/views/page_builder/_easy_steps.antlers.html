@@ -1,0 +1,43 @@
+<div class="container mx-auto flex translate-y-0 flex-col px-4 pt-24 pb-4 opacity-100 transition duration-700 sm:px-6 sm:pb-8 md:pb-12 lg:px-8 lg:pb-20">
+	<div class="flex flex-col justify-center">
+		<!---->
+		<h2 class="max-w-lg pb-6 text-3xl font-semibold text-zinc-900 sm:max-w-xl md:max-w-3xl md:text-4xl lg:max-w-4xl lg:text-5xl">
+			Unleash the Power of
+			<span class="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">Serverless Hosting</span>
+			with Webslice
+		</h2>
+		<p class="text-lg text-zinc-500 sm:max-w-xl md:max-w-3xl lg:max-w-4xl xl:text-xl 2xl:text-2xl">
+			Take your online presence to the next level with Webslice and discover the advantage of
+			<strong>serverless hosting</strong>
+			. Enjoy a faster, more reliable, and cost-effective solution for your website hosting needs.
+		</p>
+		<!---->
+	</div>
+	<!---->
+	<div class="grid grid-cols-1 gap-8 pt-16 sm:grid-cols-2 lg:grid-cols-3">
+		{{ Items }}
+			<div class="group rounded-md">
+				<div class="flex h-full w-full flex-col justify-between overflow-hidden bg-white shadow-none ring-1 ring-zinc-200 hover:bg-white hover:ring-2 dark:bg-zinc-900/50 dark:ring-zinc-800 hover:dark:bg-zinc-900 sm:rounded-xl">
+					<div class="flex items-center justify-center border-b border-none border-zinc-200 bg-zinc-800 px-4 pt-5 sm:px-6">
+						{{ if default_image }}
+							<figure>
+								{{ partial:global/picture :image="default_image" :class='hidden h-full rounded-md dark:block' cover="true" maxheight="512" lazy="false" maxwidth="768" quality='70' }}
+							</figure>
+						{{ /if }}
+					</div>
+					<div class="px-4 pt-4 pb-5 sm:p-6">
+						<!---->
+						<div class="flex flex-col gap-y-4">
+							<!---->
+							<header class="text-xl font-semibold text-zinc-900 dark:text-zinc-100">{{ step_title }}</header>
+							<p class="text-zinc-500 dark:text-zinc-200">{{ step_textarea | strip_tags:p }}</p>
+							<!---->
+						</div>
+					</div>
+					<!---->
+				</div>
+			</div>
+		{{ /Items }}
+	</div>
+	<!---->
+</div>

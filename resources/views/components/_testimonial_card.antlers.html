@@ -1,0 +1,23 @@
+<div class="flex flex-row items-start lg:max-w-md">
+	<div class="{{ switch between='lg:mt-0 | lg:mt-24 | lg:mt-48' }} relative space-y-4 rounded-xl border border-zinc-500/10 bg-white p-8 shadow-xl shadow-zinc-500/30 dark:border-zinc-400/10 dark:bg-zinc-800 dark:shadow-black/10">
+		<div class="relative space-y-4">
+			<p class="prose dark:prose-invert">{{ quote | strip_tags:p }}</p>
+			{{ partial:components/buttons }}
+		</div>
+		<svg class="absolute bottom-4 right-4 h-28 w-28 text-purple-100 dark:text-zinc-700/30" viewBox="0 0 33 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M19.0353 27.9398C23.362 26.9131 26.5886 24.8598 28.7153 21.7798C30.9153 18.6265 32.0153 14.6665 32.0153 9.89981V0.549805H21.2353V13.7498H26.1853C26.0386 16.0965 25.3786 18.0765 24.2053 19.6898C23.1053 21.3031 21.382 22.4031 19.0353 22.9898V27.9398ZM0.665283 27.9398C4.91862 26.9131 8.10862 24.8598 10.2353 21.7798C12.4353 18.6265 13.5353 14.6665 13.5353 9.89981V0.549805H2.86528V13.7498H7.81528C7.59528 16.0965 6.89861 18.0765 5.72528 19.6898C4.62528 21.3031 2.93862 22.4031 0.665283 22.9898V27.9398Z" fill="CurrentColor" />
+		</svg>
+		<hr class="my-8 h-px w-1/2 border-0 bg-zinc-200 dark:bg-zinc-700" />
+		<div class="relative flex items-center justify-between space-x-4">
+			<div>
+				<div class="text-base font-semibold text-zinc-900 dark:text-zinc-300">{{ name }}</div>
+				<div class="text-base text-zinc-600 dark:text-zinc-300">{{ position }}</div>
+			</div>
+			{{ if default_image }}
+				<div class="aspect-square h-16 w-16 overflow-hidden rounded-full border-4 border-purple-500 bg-white shadow-2xl dark:border-purple-500">
+					{{ partial:global/default_image }}
+				</div>
+			{{ /if }}
+		</div>
+	</div>
+</div>

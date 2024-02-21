@@ -1,0 +1,110 @@
+title: Hero
+fields:
+  -
+    handle: template
+    field:
+      display: template
+      type: hidden
+      listable: hidden
+      default: /general_content/hero
+  -
+    handle: shape
+    field:
+      options:
+        diagonal: Diagonal
+        triangle: Triangle
+        paper: Paper
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      default: diagonal
+      type: select
+      display: 'Background shape'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    import: icon
+  -
+    handle: pre
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Pre-title
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: hero_home_title
+    field:
+      input_type: text
+      antlers: false
+      display: Title
+      type: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: hero_home_description
+    field:
+      antlers: false
+      display: Description
+      always_show_set_button: false
+      buttons:
+        - bold
+        - italic
+        - removeformat
+        - anchor
+      save_html: false
+      toolbar_mode: fixed
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      reading_time: false
+      fullscreen: false
+      allow_source: true
+      enable_input_rules: false
+      enable_paste_rules: true
+      type: bard
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      smart_typography: false
+      inline: false
+      word_count: false
+      remove_empty_nodes: false
+      collapse: false
+      previews: true
+      hide_display: false
+  -
+    handle: dark_image
+    field:
+      max_files: 1
+      mode: list
+      container: assets
+      folder: illustrations
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: true
+      type: assets
+      display: Image
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    import: buttons

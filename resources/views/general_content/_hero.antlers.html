@@ -1,0 +1,22 @@
+{{# Partial to show the hero section of the home page #}}
+<div class="relative flex flex-col justify-center">
+	<div class="container relative mx-auto">
+		{{ partial:global/diagonal gradient_style='absolute top-0 mx-auto w-full xl:translate-x-1/2 -translate-y-1/2' }}
+	</div>
+	<div class="container relative mx-auto">
+		<div class="grid items-center gap-4 lg:grid-cols-2 xl:gap-8 xl:py-12">
+			<div class="space-y-6">
+				<div class="flex flex-col items-start space-y-6 xl:flex-grow">
+					{{ partial:typography/pre :content="hero_home_description | strip_tags:p" }}
+					{{ partial:typography/h1 :content="hero_home_title | strip_tags:p" }}
+					{{ partial:typography/excerpt :excerpt="hero_home_description | strip_tags:p" }}
+					<div class="flex-none">{{ partial:components/buttons }}</div>
+				</div>
+			</div>
+
+			<div class="relative order-first lg:order-none">
+				{{ partial:global/picture :image="dark_image" cover="true" lazy="false" maxwidth="736" quality='70' }}
+			</div>
+		</div>
+	</div>
+</div>

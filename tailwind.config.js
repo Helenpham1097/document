@@ -1,14 +1,32 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-    future: {
-        // removeDeprecatedGapUtilities: true,
-        // purgeLayersByDefault: true,
-    },
-    purge: [
-        './resources/**/*.antlers.html',
+    darkMode: 'class',
+    content: [
+        './resources/**/*.html',
         './resources/**/*.blade.php',
         './content/**/*.md'
+    ],
+  // Classes generated according to the number of elements in the view and that are not generated automatically because they are dynamic content.
+    safelist: [
+        'grid-cols-1',
+        'grid-cols-2',
+        'sm:grid-cols-2',
+        'lg:grid-cols-2',
+        'grid-cols-3',
+        'sm:grid-cols-3',
+        'lg:grid-cols-3',
+        'grid-cols-4',
+        'sm:grid-cols-4',
+        'lg:grid-cols-4',
+        'grid-cols-5',
+        'sm:grid-cols-5',
+        'lg:grid-cols-5',
+        'grid-cols-6',
+        'sm:grid-cols-6',
+        'lg:grid-cols-6',
+        'row-span-2',
+        'space-x-reverse'
     ],
     theme: {
         container: {
@@ -45,44 +63,27 @@ module.exports = {
                     '800': '#1e9984',
                     '900': '#197d6c'
                 },
-                gold: {
-                    light: '#ddbf5f',
-                    base: '#d4af37',
-                    dark: '#aa8c2c'
-                },
             },
             typography: (theme) => ({
                 DEFAULT: {
                     css: {
-                        h2: {
-                            fontWeight: '700',
-                            color: theme('colors.gray.900'),
-                        },
-                        a: {
-                            'text-decoration': 'none',
-                            '&:hover': {
-                                'text-decoration': 'underline',
-                            }
-                        },
-
                         ul: {
                             li: {
                                 'padding-left': '96',
                             }
                         },
+                        '.not-prose': {
+                            margin: '2rem 0 !important',
+                        }
                     },
                 },
             }),
         },
     },
-    variants: {
-        extend: {
-            // ...
-            translate: ['active', 'group-hover'],
-        },
-    },
     plugins: [
-        require('@tailwindcss/typography'),
+        require('@tailwindcss/typography')({
+        modifiers: [],
+        }),
         require('@tailwindcss/forms'),
         require('@tailwindcss/aspect-ratio'),
     ],

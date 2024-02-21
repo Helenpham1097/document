@@ -1,42 +1,6 @@
-:root {
-	color: var(--black);
-	--width: 100vw;
-	--full-width: 100vw;
-	--width: 100vw;
-	--full-width: 100vw;
-	--angle: -10deg;
-	--magic-number: 0.5;
-	--skew-padding: calc(var(--width) * var(--magic-number));
-	--height: 100vh;
-	--primary: rgba(135, 30, 255);
-	--secondary: rgba(50, 255, 220);
-	--black: #555658;
-	--secondary-bg: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
-	@media (min-width: 42em) {
-		--width: 42rem;
-	}
-}
-
 body {
 	@apply overflow-x-hidden;
 }
-
-.text-primary {
-	color: var(--primary);
-}
-.text-secondary {
-	color: var(--secondary);
-}
-.primary-bg {
-	background: linear-gradient(90deg, var(--primary) 0%, #6d00eb 100%);
-}
-.secondary-bg {
-	background: linear-gradient(-90deg, var(--secondary) 0%, #66ffe5 100%);
-}
-.gradient-purple-to-teal {
-	background: var(--secondary-bg);
-}
-
 @screen sm {
 	.container {
 		@apply p-4;
@@ -53,11 +17,11 @@ body {
 
 /* Back to top link */
 .back-to-top-wrapper {
-	@apply absolute right-6 sm:right-12 -bottom-0.5;
+	@apply absolute right-6 -bottom-0.5 sm:right-12;
 	top: 100vh;
 }
 .back-to-top-link {
-	@apply sticky inline-block no-underline transition duration-500 ease-in-out transform scale-100;
+	@apply sticky inline-block scale-100 transform no-underline transition duration-500 ease-in-out;
 	top: calc(100vh - 5rem);
 	&:hover,
 	&:focus {

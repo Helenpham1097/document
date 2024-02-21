@@ -1,0 +1,115 @@
+hide: true
+order: 2
+title: 'Home Blueprint'
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: template
+        field:
+          display: template
+          type: hidden
+          icon: hidden
+          listable: hidden
+          default: home/index
+      -
+        handle: top_section
+        field:
+          collapse: true
+          sets:
+            hero_homepage:
+              display: 'Hero Homepage'
+              fields:
+                -
+                  import: hero_home
+          display: 'Top Section'
+          type: replicator
+          icon: replicator
+          listable: hidden
+          max_sets: 2
+          default:
+            -
+              type: hero_general_content
+              enabled: true
+              hero_general_content_title: 'General Content Title'
+              hero_general_content_textarea: 'Serverless is the future of hosting. We’re building a brand new serverless platform from the ground up for your existing websites and applications so you get all the serverless benefits without the pain.'
+              hero_general_content_image: placeholder-image.jpg
+          instructions_position: above
+          read_only: false
+      -
+        import: page_builder
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+          validate:
+            - required
+            - 'unique_entry_value:{collection},{id},{site}'
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+          display: 'Page Title'
+          default: 'General Content Title'
+          instructions: 'This is the title that will be displayed in the browser bar and will help you to identify it.'
+          listable: hidden
+          input_type: text
+          antlers: false
+      -
+        handle: page_description
+        field:
+          antlers: false
+          display: 'Page Description'
+          type: textarea
+          icon: textarea
+          instructions: 'Description shown in the main navigation'
+          listable: hidden
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - pages
+          max_items: 1
+          listable: false
+          localizable: true
+      -
+        handle: categories
+        field:
+          mode: select
+          taxonomies:
+            - categories
+          display: Categories
+          type: terms
+          icon: taxonomy
+          listable: hidden
+  meta:
+    display: Meta
+    fields:
+      -
+        handle: meta_title
+        field:
+          input_type: text
+          character_limit: 60
+          antlers: false
+          display: 'Meta title'
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: meta_description
+        field:
+          character_limit: '160'
+          antlers: false
+          display: 'Meta Description'
+          type: textarea
+          icon: textarea
+          listable: hidden

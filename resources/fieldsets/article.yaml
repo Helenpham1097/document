@@ -1,0 +1,102 @@
+title: Article
+fields:
+  -
+    handle: template
+    field:
+      default: /page_builder/_article
+      display: template
+      type: hidden
+      icon: hidden
+      listable: hidden
+      instructions_position: above
+  -
+    handle: article
+    field:
+      buttons:
+        - h1
+        - h2
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - quote
+        - removeformat
+        - anchor
+        - code
+        - codeblock
+      save_html: false
+      toolbar_mode: fixed
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      reading_time: true
+      fullscreen: true
+      allow_source: true
+      type: bard
+      localizable: true
+      listable: hidden
+      display: Article
+      replicator_preview: false
+      always_show_set_button: true
+      sets:
+        main:
+          display: Main
+          instructions: null
+          icon: null
+          sets:
+            buttons:
+              display: Buttons
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: buttons
+            figure:
+              display: Figure
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: figure
+            pull_quote:
+              display: 'Pull quote'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: pull_quote
+            table:
+              display: Table
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: table
+            video:
+              display: Video
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: video
+            code_snippet:
+              display: 'Code Snippet'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: code_snippet
+      container: assets
+      enable_input_rules: true
+      enable_paste_rules: true
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      previews: true
+      antlers: false
+      remove_empty_nodes: trim
+      smart_typography: false
+      inline: false
+      word_count: false
+      collapse: false
+      hide_display: false

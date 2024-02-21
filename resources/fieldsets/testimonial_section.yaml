@@ -1,0 +1,27 @@
+title: 'Testimonial Section'
+fields:
+  -
+    handle: template
+    field:
+      default: page_builder/testimonial_section
+      display: template
+      type: hidden
+      icon: hidden
+      listable: hidden
+      instructions_position: above
+      read_only: false
+  -
+    import: section_title
+  -
+    handle: testimonial
+    field:
+      max_items: 3
+      mode: default
+      create: true
+      collections:
+        - testimonial
+      display: Testimonial
+      type: entries
+      icon: entries
+      listable: hidden
+      instructions_position: above

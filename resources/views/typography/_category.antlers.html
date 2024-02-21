@@ -1,0 +1,22 @@
+{{#
+  @name h2
+  @desc The typography h2 partial to render an h2 with `class`, `as`, `color` and `content` attributes.
+  @param* content The h2 content.
+  @param as The wrapping element. Defaults to `h2`.
+  @param color Set a custom text color utility. Falls back to `text-neutral`.
+  @param class Add custom CSS classes.
+#}}
+
+<!-- /typography/_h2.antlers.html -->
+<{{ as or 'span' }} class="{{ color or 'text-purple-500' }} {{ class }} inline-block rounded bg-purple-50 px-2 py-1 text-xs font-medium tracking-widest text-purple-500">
+	{{ if categories }}
+		<div class="font-medium uppercase text-purple-500">
+			{{ categories limit="1" }}
+				{{ title }}
+			{{ /categories }}
+		</div>
+	{{ else }}
+		<div class="font-medium uppercase text-purple-500">Article</div>
+	{{ /if }}
+</{{ as or 'span' }}>
+<!-- End: /typography/_h2.antlers.html -->
