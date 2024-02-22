@@ -88,7 +88,7 @@ fields:
       previews: true
       hide_display: false
   -
-    handle: dark_image
+    handle: image
     field:
       max_files: 1
       mode: list

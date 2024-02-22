@@ -8,3 +8,4 @@ data:
   login: 'https://console.webslice.com/login'
   sign_up: 'https://console.webslice.com/register'
   favicon: site_assets/fav.png
+  site_image: opengraph.jpg

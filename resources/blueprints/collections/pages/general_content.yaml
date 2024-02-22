@@ -55,7 +55,7 @@ tabs:
                       button_type: secondary
                   type: hero
                   enabled: true
-                  dark_image: illustrations/expand.png
+                  image: illustrations/expand.png
 
           - import: page_builder
   sidebar:
