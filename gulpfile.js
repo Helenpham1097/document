@@ -7,6 +7,7 @@ const imagemin = require("gulp-imagemin");
 const newer = require("gulp-newer");
 const plumber = require("gulp-plumber");
 const postcss = require("gulp-postcss");
+const rename = require("gulp-rename");
 const uglify = require("gulp-uglify");
 const concat = require("gulp-concat");
 
@@ -19,16 +20,18 @@ if (process.env.NODE_ENV === "production") {
 		return gulp.src("./resources/css/main.css").pipe(plumber()).pipe(postcss()).pipe(gulp.dest("public/css"));
 	}
 
-	// function scripts() {
-	//    return gulp
-	//       .src('./resources/js/**/*.js')
-	//       .pipe(plumber())
-	//       .pipe(concat('main.js'))
-	//       .pipe(uglify())
-	//       .pipe(gulp.dest('public/js'))
-	// }
+	function scripts() {
+		return gulp
+			.src("./resources/js/*.js")
+			.pipe(plumber())
+			.pipe(concat("main.js"))
+			.pipe(gulp.dest("public/js"))
+			.pipe(rename({ suffix: ".min" }))
+			.pipe(uglify())
+			.pipe(gulp.dest("public/js"));
+	}
 
-	const build = gulp.series(clean, gulp.parallel(styles));
+	const build = gulp.series(clean, gulp.parallel(styles, scripts));
 	// export tasks
 	exports.build = build;
 } else {
@@ -71,27 +74,28 @@ if (process.env.NODE_ENV === "production") {
 		return gulp.src("./resources/css/main.css").pipe(plumber()).pipe(postcss()).pipe(gulp.dest("public/css")).pipe(browsersync.stream());
 	}
 
-	// function scripts() {
-	//    return gulp
-	//       .src('./resources/js/**/*.js')
-	//       .pipe(plumber())
-	//       .pipe(concat('main.js'))
-	//       .pipe(uglify())
-	//       .pipe(gulp.dest('public/js'))
-	//       .pipe(browsersync.stream());
-	// }
+	function scripts() {
+		return gulp
+			.src("./resources/js/*.js")
+			.pipe(plumber())
+			.pipe(concat("main.js"))
+			.pipe(rename({ suffix: ".min" }))
+			.pipe(uglify())
+			.pipe(gulp.dest("public/js"))
+			.pipe(browsersync.stream());
+	}
 
 	// Watch files
 	function watchFiles() {
 		gulp.watch("./resources/views/**/*", gulp.series(styles, html));
 		gulp.watch("./resources/css/**/*", styles);
-		// gulp.watch("./resources/js/**/*", scripts);
+		gulp.watch("./resources/js/**/*", scripts);
 		gulp.watch("./resources/img/**/*", images);
 		gulp.series(browserSyncReload);
 	}
 
 	// define complex tasks
-	const build = gulp.series(clean, gulp.parallel(html, styles, images));
+	const build = gulp.series(clean, gulp.parallel(html, styles, images, scripts));
 	const watch = gulp.parallel(watchFiles, browserSync);
 
 	// export tasks
