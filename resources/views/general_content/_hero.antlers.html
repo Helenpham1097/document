@@ -4,7 +4,7 @@
 		{{ partial:global/diagonal gradient_style='absolute top-0 mx-auto w-full xl:translate-x-1/2 -translate-y-1/2' }}
 	</div>
 	<div class="container relative mx-auto">
-		<div class="grid items-center gap-4 lg:grid-cols-2 xl:gap-8 xl:py-12">
+		<div class="grid items-center gap-4 py-6 lg:grid-cols-2 xl:gap-8 xl:py-12">
 			<div class="space-y-6">
 				<div class="flex flex-col items-start space-y-6 xl:flex-grow">
 					{{ partial:typography/pre :content="hero_home_description | strip_tags:p" }}
@@ -14,8 +14,14 @@
 				</div>
 			</div>
 
-			<div class="relative order-first lg:order-none">
-				{{ partial:global/picture :image="dark_image" cover="true" lazy="false" maxwidth="736" quality='70' }}
+			<div class="relative">
+				{{ if image }}
+					<picture>
+						<source media="(max-width: 640px)" srcset="{{ glide:image width='600' height='450' quality='90' format='webp' }} 1x, {{ glide:image width='600' height='450' quality='90' format='webp' }} 2x" />
+						<source media="(min-width: 641px) and (max-width: 768px)" srcset="{{ glide:image width='736' height='552' quality='90' format='webp' }} 1x, {{ glide:image width='736' height='552' quality='90' format='webp' }} 2x" />
+						<img class="h-full w-full object-cover" src="{{ glide:image quality='90' width='736' height='556' format='webp' }}" srcset="{{ glide:image quality='90' width='736' height='556' format='webp' }} 1x, {{ glide:image width='736' height='552' quality='90' format='webp' }} 2x" alt="{{ image.alt ?: image }}" decoding="sync" width="736" height="556" />
+					</picture>
+				{{ /if }}
 			</div>
 		</div>
 	</div>

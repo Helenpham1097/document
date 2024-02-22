@@ -24,7 +24,7 @@
 						{{ /if }}
 						<div class="{{ if first }} lg:col-span-2 lg:pt-24 {{ /if }}bento_box relative isolate flex flex-col justify-end gap-2 overflow-hidden p-4 lg:p-8">
 							{{ if first }}
-								<figure class="absolute right-0 top-1/2 hidden translate-x-16 -translate-y-1/2 transform lg:block">
+								<figure class="absolute right-0 top-1/2 hidden -translate-y-1/2 translate-x-16 transform lg:block">
 									{{ partial:global/picture :image="image" cover="true" lazy="false" maxwidth="768" quality='70' }}
 								</figure>
 							{{ /if }}
@@ -47,7 +47,7 @@
 				<div class="space-y-8">
 					<div class="space-y-4 xl:max-w-xl">
 						{{ svg src="{{config:iconamic:path}}/{{iconamic}}.svg" class="text-zinc-700 dark:text-zinc-400" }}
-						{{ partial:typography/h3 :content="title" }}
+						{{ partial:typography/h2 :content="title" }}
 						{{ partial:typography/p :content="description" }}
 					</div>
 					{{ partial:components/buttons }}

@@ -7,7 +7,7 @@
     <picture>
         {{ asset :url="image" }}
             {{ if extension == 'svg' || extension == 'gif' }}
-                <img class="{{ class }}" src="{{ url }}" alt="{{ alt }}" />
+                <img class="{{ class }}" src="{{ url }}" alt="{{ alt }}" height='{{ height }}' width='{{ width }}'  />
             {{ else }}
                 <source
                     srcset="

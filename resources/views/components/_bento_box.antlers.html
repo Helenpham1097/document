@@ -14,12 +14,12 @@
 		<div class="{{ content_class }} relative z-10 space-y-2 p-8">
 			<div class="{{ class }} {{ if col }} flex-col {{ /if }} group relative flex gap-1">
 				{{# icon animation #}}
-				<div class="relative h-6 w-6 flex-none text-purple-500 dark:text-green-500">
-					<div class="absolute translate-y-0 text-2xl opacity-100 transition duration-300 group-hover:-translate-y-4 group-hover:opacity-0">
-						{{ svg src="{{config:iconamic:path}}/goto.svg" class=" stroke-purple-700 transition-colors duration-300 group-hover:stroke-purple-900 dark:fill-white/10 dark:stroke-green-700 dark:group-hover:fill-purple-300/10 dark:group-hover:stroke-green-400" }}
+				<div class="size-7 relative flex-none text-purple-500 dark:text-green-500">
+					<div class="absolute translate-y-0 opacity-100 transition duration-300 group-hover:-translate-y-4 group-hover:opacity-0">
+						{{ svg src="{{config:iconamic:path}}/arrow-up-right.svg" class=" stroke-purple-700 size-6 transition-colors duration-300 group-hover:stroke-purple-900 dark:fill-white/10 dark:stroke-green-700 dark:group-hover:fill-purple-300/10 dark:group-hover:stroke-green-400" }}
 					</div>
-					<div class="absolute -translate-y-4 text-2xl opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-						{{ svg src="{{config:iconamic:path}}/document-text" class=" stroke-purple-700 transition-colors duration-300 group-hover:stroke-purple-900 dark:fill-white/10 dark:stroke-green-700 dark:group-hover:fill-purple-300/10 dark:group-hover:stroke-green-400" }}
+					<div class="absolute -translate-y-4 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+						{{ svg src="{{config:iconamic:path}}/book-check" class=" stroke-purple-700 size-6 transition-colors duration-300 group-hover:stroke-purple-900 dark:fill-white/10 dark:stroke-green-700 dark:group-hover:fill-purple-300/10 dark:group-hover:stroke-green-400" }}
 					</div>
 				</div>
 				{{# icon animation #}}

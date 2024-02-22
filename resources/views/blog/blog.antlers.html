@@ -1,13 +1,13 @@
 {{# Template for a blog entry #}}
 {{ partial:snippets/scrollProgress }}
-<div class="container relative -z-10 my-0 mx-auto py-0">
+<div class="container relative -z-10 mx-auto my-0 py-0">
 	{{ partial:global/diagonal gradient_style='absolute top-0 mx-auto w-full translate-x-1/2 -translate-y-1/2' }}
 </div>
 <div class="container pb-20 pt-12 lg:py-24">
 	{{# Breadcrums #}}
-	<ul class="hide-scrollbar -my-1 ml-[calc(50%-50vw)] w-screen overflow-x-auto py-1">
+	<div class="-my-1 ml-[calc(50%-50vw)] w-screen overflow-x-auto py-1">
 		<div class="container">
-			<div class="-ml-1.5 flex text-zinc-700 dark:text-zinc-400">
+			<ul class="-ml-1.5 flex text-zinc-700 dark:text-zinc-400">
 				<li class="shrink-0 text-sm">
 					<div class="flex items-center">
 						<a href="/blog" class="pl-1.5 pr-[7px] underline">Blog</a>
@@ -16,11 +16,11 @@
 				</li>
 				<li class="hidden shrink-0 text-sm lg:block"><div class="px-1.5">{{ title }}</div></li>
 				<li class="shrink-0 text-sm lg:hidden"><div class="px-1.5">{{ title | safe_truncate:40:... }}</div></li>
-			</div>
+			</ul>
 		</div>
-	</ul>
+	</div>
 	<div href="#top" class="mt-4">
-		{{ partial:typography/h1 :content="title" color='max-w-5xl text-3xl tracking-tight text-zinc-700 [text-wrap:balance] dark:text-zinc-100 sm:text-4xl lg:text-6xl' }}
+		{{ partial:typography/h1 :content="title" color='max-w-5xl text-3xl tracking-tight [text-wrap:balance] sm:text-4xl lg:text-6xl' }}
 		<div class="mt-8 flex items-center gap-x-1 sm:mt-10 sm:gap-x-1.5">{{ partial:components/author link='true' }}</div>
 		{{ partial:components/share class='flex mt-4 lg:hidden' }}
 	</div>
@@ -32,7 +32,11 @@
 				<div class="pb-0 lg:col-span-7 lg:pb-[60px] 2xl:col-span-6">
 					{{ if default_image }}
 						<figure class="bento_box w-full overflow-hidden rounded-lg shadow-2xl shadow-zinc-800/20 dark:shadow-black/10 lg:aspect-[6/4]">
-							{{ partial:global/picture :image="default_image" cover="true" maxheight="512" lazy="false" maxwidth="768" quality='70' }}
+							<picture>
+								<source media="(max-width: 640px)" srcset="{{ glide:default_image width='600' height='450' quality='90' format='webp' }} 1x, {{ glide:default_image width='600' height='450' quality='90' format='webp' }} 2x" />
+								<source media="(min-width: 641px) and (max-width: 768px)" srcset="{{ glide:default_image width='736' height='552' quality='90' format='webp' }} 1x, {{ glide:default_image width='736' height='552' quality='90' format='webp' }} 2x" />
+								<img class="h-full w-full object-cover" src="{{ glide:default_image quality='90' width='736' height='556' format='webp' }}" srcset="{{ glide:default_image quality='90' width='736' height='556' format='webp' }} 1x, {{ glide:default_image width='736' height='552' quality='90' format='webp' }} 2x" alt="{{ default_image.alt ?: default_image }}" decoding="sync" width="736" height="556" />
+							</picture>
 						</figure>
 					{{ /if }}
 					<div id="content" class="prose prose-lg mx-auto">
