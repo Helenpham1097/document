@@ -1,11 +1,57 @@
-<button :class="darkMode ? ' bg-zinc-800' : ' bg-zinc-100'" class="{{ class }} relative flex-none rounded-full border border-zinc-200 text-zinc-500 shadow-sm transition hover:shadow dark:border-zinc-600 dark:text-zinc-200" @click="darkMode = !darkMode">
-	<span :class="darkMode ? '' : ''" class="flex h-6 w-6 items-center rounded-full bg-white shadow-md transition dark:bg-zinc-700" aria-hidden="true">
-		<span :class="darkMode ? 'hidden' : ' block'" class="size-4 mx-auto">
-			{{ svg src="{{config:iconamic:path}}/sun.svg" class='size-4 mx-auto' }}
+<script>
+	// Ensure that localStorage.theme is defined
+	if (!localStorage.theme) {
+		localStorage.theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+	}
+
+	// On page load or when changing themes, best to add inline in `head` to avoid FOUC
+	if (localStorage.theme === "dark" || (window.matchMedia("(prefers-color-scheme: dark)").matches && localStorage.theme !== "light")) {
+		document.documentElement.classList.add("dark");
+		document.documentElement.style.colorScheme = "dark";
+	} else {
+		document.documentElement.classList.remove("dark");
+		document.documentElement.style.colorScheme = "";
+	}
+</script>
+<script>
+	// Defines the initial icon of the theme based on checking localStorage.theme and prefers-color-scheme. Then toggle the svg icons base on their ID.
+	if (localStorage.theme === "dark" || (window.matchMedia("(prefers-color-scheme: dark)").matches && localStorage.theme !== "light")) {
+		document.querySelector("#svg-moon").classList.add("hidden");
+		document.querySelector("#svg-sun").classList.remove("hidden");
+	} else {
+		document.querySelector("#svg-moon").classList.remove("hidden");
+		document.querySelector("#svg-sun").classList.add("hidden");
+	}
+</script>
+
+<div class="hidden items-center lg:flex">
+	<button
+		class="{{ class }} relative flex items-center space-x-2 rounded-full border border-zinc-200 p-2 text-zinc-500 shadow-sm transition hover:shadow dark:border-zinc-400 dark:text-zinc-200 lg:flex-none lg:space-x-0 lg:p-0"
+		x-data="{
+            toggle: () => {
+                if (localStorage.theme === 'dark' || document.documentElement.classList.contains('dark')) {
+                    localStorage.theme = 'light';
+                    document.documentElement.classList.remove('dark');
+                    document.documentElement.style.colorScheme = '';
+                    document.querySelector('#svg-sun').classList.add('hidden');
+                    document.querySelector('#svg-moon').classList.remove('hidden');
+                } else {
+                    localStorage.theme = 'dark';
+                    document.documentElement.classList.add('dark');
+                    document.documentElement.style.colorScheme = 'dark';
+                    document.querySelector('#svg-sun').classList.remove('hidden');
+                    document.querySelector('#svg-moon').classList.add('hidden');
+                }
+            },
+        }"
+		@click="toggle">
+		<span class="flex h-6 w-6 items-center rounded-full bg-white transition dark:bg-zinc-700 lg:shadow-md" aria-hidden="true">
+			{{# {# Sun icon #} #}}
+			{{ svg src="{{config:iconamic:path}}/sun.svg" id="svg-sun" class='size-4 mx-auto' }}
+			{{# {# Moon icon #} #}}
+			{{ svg src="{{config:iconamic:path}}/moon.svg" id="svg-moon" class='size-4 mx-auto' }}
 		</span>
-		<span :class="darkMode ? 'block' : ' hidden '" class="size-4 mx-auto">
-			{{ svg src="{{config:iconamic:path}}/moon.svg" class='size-4 mx-auto' }}
-			{{# }} #}}
-		</span>
-	</span>
-</button>
+		<div id="moon" class="lg:hidden">Light</div>
+		<div id="sun" class="lg:hidden">Dark</div>
+	</button>
+</div>
