@@ -21,7 +21,7 @@
 		</div>
 		<div class="-space-y-12">
 			{{# Header section #}}
-			<div class="relative flex space-x-10">
+			<div class="relative flex space-x-4 xl:space-x-10">
 				<div class="relative isolate flex flex-col items-center">
 					{{# Hexagon Icon #}}
 					<svg class="z-10 drop-shadow-lg" width="56" height="64" viewBox="0 0 56 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -29,7 +29,7 @@
 						<path fill-rule="evenodd" class="fill-purple-500/20" clip-rule="evenodd" d="M28.2564 6.79883L49.9542 19.3261V44.3806L28.2564 56.9078L6.55859 44.3806V19.3261L28.2564 6.79883Z" />
 						<path fill-rule="evenodd" class="fill-purple-500/80" clip-rule="evenodd" d="M28.256 12.9453L44.6302 22.399V41.3062L28.256 50.7599L11.8818 41.3062V22.399L28.256 12.9453Z" />
 					</svg>
-					<div class="size-12 absolute inset-0 animate-pulse bg-green-500 blur-xl dark:bg-purple-500"></div>
+					<div class="absolute inset-0 size-12 animate-pulse bg-green-500 blur-xl dark:bg-purple-500"></div>
 					{{# Inner Icon #}}
 					{{ svg src="{{config:iconamic:path}}/{{iconamic}}.svg" class=" translate-y-5 absolute z-20 w-5 text-purple-100 dark:text-purple-100 stroke-current" }}
 					{{# Gradient Line #}}
@@ -77,16 +77,16 @@
 					<{{ as or 'a' }} href="{{ link }}" title="{{ text }}" {{ if target }} rel="noopener" target="_blank" {{/if}} class="group/illus">
 						<div class="group flex gap-1">
 							{{# icon animation #}}
-							<div class="size-6 relative flex-none text-purple-500 dark:text-green-500">
+							<div class="relative size-6 flex-none text-purple-500 dark:text-green-500">
 								<div class="absolute translate-y-0 text-2xl opacity-100 transition duration-300 group-hover:-translate-y-4 group-hover:opacity-0">
 									{{ svg src="{{config:iconamic:path}}/arrow-up-right" class=" size-6  stroke-purple-700 transition-colors duration-300 group-hover:stroke-purple-900 dark:fill-white/10 dark:stroke-green-700 dark:group-hover:fill-purple-300/10 dark:group-hover:stroke-green-400" }}
 								</div>
-								<div class="size-6 absolute -translate-y-4 text-2xl opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+								<div class="absolute size-6 -translate-y-4 text-2xl opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
 									{{ svg src="{{config:iconamic:path}}/book-check" class=" stroke-purple-700 transition-colors duration-300 group-hover:stroke-purple-900 dark:fill-white/10 dark:stroke-green-700 dark:group-hover:fill-purple-300/10 dark:group-hover:stroke-green-400" }}
 								</div>
 							</div>
 							{{# icon animation #}}
-							<p class="text-zinc-700 dark:text-zinc-200">{{ text | strip_tags:p }}</p>
+							<div class="text-zinc-700 dark:text-zinc-200">{{ text | strip_tags:p }}</div>
 						</div>
 					</{{ as or 'a' }}>
 				{{ /if }}

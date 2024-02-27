@@ -1,10 +1,10 @@
 {{# Template for blog post pagination #}}
 {{ paginate }}
-	<ul class="pagination [&>li>a]bg-purple-500 container mx-auto flex w-full items-center justify-center gap-4 text-sm [&>li>a]:px-2 [&>li>a]:py-1 [&>li>a]:text-zinc-500 hover:[&>li>a]:text-white dark:hover:[&>li>a]:text-zinc-500">
+	<ul class="pagination [&>li>a]bg-purple-500 container mx-auto flex w-full items-center justify-center gap-4 text-sm [&>li>a]:px-2 [&>li>a]:py-1 [&>li>a]:text-purple-500 hover:[&>li>a]:text-purple-700 hover:[&>li>a]:underline dark:[&>li>a]:text-green-500 dark:hover:[&>li>a]:text-green-700">
 		{{ if prev_page }}
 			<li>
 				<a class="flex items-center gap-2" href="{{ prev_page }}">
-					{{ svg src="{{config:iconamic:path}}/chevron-left.svg" class='size-4 text-zinc-800 dark:text-zinc-100 flex-none' }}
+					{{ svg src="{{config:iconamic:path}}/chevron-left.svg" class='size-4  flex-none' }}
 					<p class="mr-3 text-sm font-medium leading-none">Previous</p>
 				</a>
 			</li>
@@ -14,7 +14,7 @@
 		{{ links:segments }}
 			{{ first }}
 				{{ if page == current_page }}
-					<li class="active text-purple-500"><span>{{ page }}</span></li>
+					<li class="active text-zinc-700 dark:text-zinc-400"><span>{{ page }}</span></li>
 				{{ else }}
 					<li><a href="{{ url }}">{{ page }}</a></li>
 				{{ /if }}
@@ -44,7 +44,7 @@
 			<li>
 				<a class="flex items-center gap-2" href="{{ next_page }}">
 					<p class="mr-3 text-sm font-medium leading-none">Next</p>
-					{{ svg src="{{config:iconamic:path}}/chevron-right.svg" class='size-4 text-zinc-800 dark:text-zinc-100 flex-none' }}
+					{{ svg src="{{config:iconamic:path}}/chevron-right.svg" class='size-4  flex-none' }}
 				</a>
 			</li>
 		{{ else }}
