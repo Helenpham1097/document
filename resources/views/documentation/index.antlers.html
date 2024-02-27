@@ -6,14 +6,12 @@
 	<div class="container relative mx-auto flex flex-col antialiased lg:flex-row lg:py-14">
 		{{ partial:documentation/_sidebar }}
 		<main class="relative mx-auto w-full space-y-16 pt-14 sm:pt-0 lg:w-3/6">
-			<div class="group relative flex">
-				<div class="group/anchor absolute -ml-2 block h-5 w-5 -translate-x-full translate-y-1/2 rounded-lg bg-zinc-50 opacity-0 ring-1 ring-inset ring-zinc-300 transition hover:ring-zinc-500 group-hover:opacity-90 dark:bg-zinc-800 dark:ring-zinc-700 dark:hover:bg-zinc-700 dark:hover:ring-zinc-600">
-					<svg viewBox="0 0 20 20" fill="none" stroke-linecap="round" aria-hidden="true" class="dark:group-hover/anchor:stroke-white h-5 w-5 stroke-zinc-500 transition dark:stroke-zinc-400">
-						<path d="m6.5 11.5-.964-.964a3.535 3.535 0 1 1 5-5l.964.964m2 2 .964.964a3.536 3.536 0 0 1-5 5L8.5 13.5m0-5 3 3"></path>
-					</svg>
+			<div class="group relative flex items-center">
+				<div class="group/anchor absolute -left-3 block -translate-x-full rounded-lg bg-zinc-50 p-1 opacity-0 ring-1 ring-inset ring-zinc-300 transition group-hover:opacity-90 dark:bg-zinc-800 dark:ring-zinc-700 dark:hover:bg-zinc-700 dark:hover:ring-zinc-600">
+					{{ svg src="{{config:iconamic:path}}/link-2.svg" class='size-4 text-zinc-800 dark:text-zinc-100 ' }}
 				</div>
-				<a class="no-underline" href="#{{ title | slugify }}">
-					{{ partial:typography/h3 content="{{title}}" }}
+				<a class="" href="#{{ title | slugify }}">
+					{{ partial:typography/h2 content="{{title}}" }}
 				</a>
 			</div>
 			{{ partial:typography/prose as="article" class="prose dark:prose-p:text-zinc-300 dark:prose-invert" }}

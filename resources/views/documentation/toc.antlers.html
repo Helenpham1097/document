@@ -1,11 +1,9 @@
-<aside class="sticky top-2 hidden h-[calc(100vh-5rem)] w-1/6 flex-col overflow-y-auto pt-2 pb-6 lg:flex" id="table-of-contents">
-	<div class="flex items-center space-x-4 pb-4 pl-5 pr-2 text-sm font-bold text-zinc-800 dark:text-white">
-		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
-			<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
-		</svg>
-		<span>ON THIS PAGE</span>
+<aside class="sticky top-[calc(10vh-1rem)] hidden h-[calc(100vh-5rem)] w-1/6 flex-col overflow-y-auto pb-6 lg:flex" id="table-of-contents">
+	<div class="flex items-center space-x-2 pb-4 font-bold text-zinc-800 dark:text-zinc-200">
+		<span>On this page</span>
+		{{ svg src="{{config:iconamic:path}}/list-tree.svg" class='size-4  text-zinc-800 dark:text-zinc-100 flex-none' }}
 	</div>
-	<div id="sidebar" class="px-4">
+	<div id="sidebar" class="pl-0">
 		{{ content | toc }}
 	</div>
 </aside>
