@@ -1,6 +1,6 @@
 {{# Partial to show the hero section of the home page #}}
 <div class="relative flex flex-col justify-center">
-	<div class="container relative mx-auto">
+	<div class="container relative mx-auto hidden xl:block">
 		{{ partial:global/diagonal gradient_style='absolute top-0 mx-auto w-full xl:translate-x-1/2 -translate-y-1/2' }}
 	</div>
 	<div class="container relative mx-auto">
@@ -14,14 +14,21 @@
 				</div>
 			</div>
 
-			<div class="relative">
-				{{ if image }}
+			<div class="relative order-first lg:order-last">
+				{{ image }}
 					<picture>
-						<source media="(max-width: 640px)" srcset="{{ glide:image width='600' height='450' quality='90' format='webp' }} 1x, {{ glide:image width='600' height='450' quality='90' format='webp' }} 2x" />
-						<source media="(min-width: 641px) and (max-width: 768px)" srcset="{{ glide:image width='736' height='552' quality='90' format='webp' }} 1x, {{ glide:image width='736' height='552' quality='90' format='webp' }} 2x" />
-						<img class="h-full w-full object-cover" src="{{ glide:image quality='90' width='736' height='556' format='webp' }}" srcset="{{ glide:image quality='90' width='736' height='556' format='webp' }} 1x, {{ glide:image width='736' height='552' quality='90' format='webp' }} 2x" alt="{{ image.alt ?: image }}" decoding="sync" width="736" height="556" />
+						<img fetchpriority="high" style="aspect-ratio: 4/3 auto;"
+							src="{{ glide src='{{ url }}' width='736' quality='90' format='webp' }}"
+							srcset="{{ glide src='{{ url }}' width='280' quality='90' format='webp' }} 280w,
+								{{ glide src='{{ url }}' width='480' quality='90' format='webp' }} 480w,
+								{{ glide src='{{ url }}' width='560' quality='90' format='webp' }} 560w,
+								{{ glide src='{{ url }}' width='840' quality='90' format='webp' }} 840w,
+								{{ glide src='{{ url }}' width='960' quality='90' format='webp' }} 960w,
+								{{ glide src='{{ url }}' width='1440' quality='90' format='webp' }} 1440w"
+							sizes="(min-width: 768px) 840px, 87.5vw"
+							width="{{ width }}" height="{{ height }}" alt="{{ alt ensure_right='.' }}" />
 					</picture>
-				{{ /if }}
+				{{ /image }}
 			</div>
 		</div>
 	</div>
