@@ -26,8 +26,8 @@ top_section:
       -
         id: 2SEK87kA
         template_global: /global/buttons
-        label: 'Start risk-free for 7 days'
-        iconamic: chevron-right
+        label: 'Start Risk-Free for 7 Days'
+        iconamic: chevrons-right
         link_type: entry
         target_blank: false
         entry: fee1a2b1-971c-4c72-9517-d2e6c989f49e
@@ -36,38 +36,49 @@ top_section:
       -
         id: lro57zsk
         template_global: /components/buttons
-        label: 'Learn more'
+        label: 'Read Documentation'
         link_type: url
         target_blank: false
         url: '#'
         button_type: secondary
-    pre: 'Cloud Hosting'
+        iconamic: file
+    pre: 'Webslice Containers'
     shape: triangle
     dark_image: illustrations/cloud-containers.png
     light_image: illustrations/cloud-containers.png
 title: Containers
-updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1708391156
+updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
+updated_at: 1709517345
 page_builder:
   -
     id: lrftv1b6
     type: bento_features
     enabled: true
     template: /general_content/bento
-    title: 'Webslice Cloud Hosting Is Built For Busy Agencies'
+    title: 'Webslice Containers Are Built For Busy Agencies'
     description:
       -
         type: paragraph
         content:
           -
             type: text
-            text: 'Everything in the Webslice Cloud Hosting platform is designed to help you develop better websites and products, faster.'
+            text: 'Everything about Webslice Containers is designed to help you develop better websites and products, faster.'
     item:
       -
         id: lrfumsnp
-        text: 'Never edit in production again - just clone and sync containers.*'
+        text: 'Never edit in production again - just clone and sync containers. (Managed servers only.)'
         link: 'entry::fee1a2b1-971c-4c72-9517-d2e6c989f49e'
         target: false
+      -
+        id: lrimgae8
+        text: 'Flick a switch to turn on powerful Simple Cache. (Managed servers only.)'
+        target: false
+        link: '#'
+      -
+        id: lrimg4ag
+        text: 'Restore from 14 days of back-ups in one click.  (Managed servers only.)'
+        target: true
+        link: '#'
       -
         id: lrfund14
         text: 'Share files and folders between containers.'
@@ -89,18 +100,8 @@ page_builder:
         target: false
         link: '#'
       -
-        id: lrimg4ag
-        text: 'Restore from 14 days of back-ups in one click.*'
-        target: true
-        link: '#'
-      -
-        id: lrimgae8
-        text: 'Flick a switch to turn on powerful Simple Cache.*'
-        target: false
-        link: '#'
-      -
         id: lrimgcm0
-        text: 'Track server load stats, and resource usage for every Container and server.'
+        text: 'Track server load stats, and resource usage for every container and server.'
         target: false
         link: '#'
       -
@@ -382,23 +383,17 @@ page_builder:
     type: get_started
     enabled: true
     title: 'Get Started Today'
-    description: 'Try Cloud Hosting for seven days, and if it’s not for you we’ll refund your money back.'
+    description: 'You can get started on Webslice Containers now. Try it out for seven days with our risk-free money back guarantee.'
     start_type:
       -
         id: lro5rfps
-        title: 'Take a test drive'
+        title: 'Take a test drive.'
         description: 'To test out one or two containers on a shared server:'
         content:
           -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Once you know that Cloud Hosting is for you, it’s easy to migrate containers onto your own server.'
-          -
             type: set
             attrs:
-              id: lrzg1m7b
+              id: ltc6zy3j
               values:
                 type: step_list
                 steps:
@@ -409,12 +404,12 @@ page_builder:
                     enabled: true
                   -
                     id: lrzg1rb3
-                    text: 'Choose Shared Cloud Hosting.'
+                    text: "Select 'Shared Cloud Hosting'."
                     type: step
                     enabled: true
                   -
                     id: lrzg1s4x
-                    text: 'Choose your pre-built container(s).'
+                    text: 'Choose from our selection of pre-built containers.'
                     type: step
                     enabled: true
                   -
@@ -422,6 +417,12 @@ page_builder:
                     text: 'Get developing!'
                     type: step
                     enabled: true
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: "Once you're sure that Webslice Containers are for you, it’s easy to migrate containers onto your own server."
           -
             type: set
             attrs:
@@ -432,12 +433,12 @@ page_builder:
                   -
                     id: lrzfjxyk
                     template_global: /components/buttons
-                    label: 'Start risk-free for 7 days'
+                    label: 'Create Your Account Now'
                     link_type: url
                     target_blank: false
                     url: '#'
-                    button_type: inline
-                    attr_title: 'Start risk-free for 7 days'
+                    button_type: button
+                    attr_title: 'Create Your Account Now'
           -
             type: paragraph
         type: start
@@ -446,19 +447,13 @@ page_builder:
         iconamic: server-crash
       -
         id: lro5rs47
-        title: 'Spin up your own server'
-        description: 'To run as many containers as you like, and to build your own images, you need your own server. It only takes a couple of minutes:'
+        title: 'Spin up your own server.'
+        description: 'Then you can run as many containers as you like, and build your own images. It only takes a couple of minutes:'
         content:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Once you know that Cloud Hosting is for you, it’s easy to migrate containers onto your own server.'
           -
             type: set
             attrs:
-              id: lrzg6p9y
+              id: ltc9jmeh
               values:
                 type: step_list
                 steps:
@@ -483,6 +478,12 @@ page_builder:
                     enabled: true
                     text: 'Get developing!'
           -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: "Once you're sure that Webslice Containers are for you, it's quick and easy to scale up."
+          -
             type: set
             attrs:
               id: lrzg6uqf
@@ -492,12 +493,13 @@ page_builder:
                   -
                     id: lrzg6wod
                     template_global: /components/buttons
-                    label: 'Start risk-free for 7 days'
+                    label: 'Create Your Account Now'
                     link_type: url
                     target_blank: false
                     url: '#'
-                    button_type: inline
-                    attr_title: 'Start risk-free for 7 days'
+                    button_type: button
+                    attr_title: 'Create Your Account Now'
+                    iconamic: chevrons-right
           -
             type: paragraph
         type: start
@@ -511,8 +513,8 @@ page_builder:
     enabled: true
     template_global: /global/iconamic
     iconamic: book-open
-    title: 'Learn more about the webslice elastic hosting platform'
-    description: 'Webslice Elastic Hosting is so well documented that almost everything you could want to know is probably already covered.'
+    title: 'How Webslice Containers Work'
+    description: 'After years of development, Webslice Containers are thoroughly documented. Almost anything you could want to know is probably already covered.'
     sub_title: 'Head to Documentation to see'
     entry:
       -
@@ -549,6 +551,97 @@ page_builder:
         target_blank: true
         url: '#'
         button_type: inline
+  -
+    id: ltc9sxxe
+    template: /page_builder/pricing_table
+    pricing_style: items
+    template_global: /global/iconamic
+    title: 'Packages and Pricing'
+    description: 'Choose a server size, then spin up as many containers as you like.'
+    Items:
+      -
+        id: ltc9uurb
+        highligh: false
+        title: '1 Core'
+        description: 'Test out the platform with a small project.'
+        price: 30
+        features:
+          - '1 core'
+          - '1GB RAM'
+          - '5GB storage (NVMe)'
+          - '2 containers (recommended max)'
+          - 'Automatic backups (14 days)'
+          - '2TB bandwidth'
+          - 'Free SSL'
+        type: column
+        enabled: true
+      -
+        id: ltc9x9oi
+        highligh: false
+        title: '2 Cores'
+        description: 'Multiple websites or apps - perfect for small agencies.'
+        price: 70
+        features:
+          - '2 cores'
+          - '2GB RAM'
+          - '20GB storage (NVMe)'
+          - '~20 containers (recommended max)'
+          - 'Automatic backups (14 days)'
+          - '2TB bandwidth'
+          - 'Free SSL'
+        type: column
+        enabled: true
+      -
+        id: ltca3uje
+        highligh: true
+        title: '4 Cores'
+        description: 'Higher-traffic websites or apps, mid-sized agencies.'
+        price: 100
+        features:
+          - '4 cores'
+          - '4GB RAM'
+          - '40GB storage (NVMe)'
+          - '~40 containers (recommended max)'
+          - 'Automatic backups (14 days)'
+          - '2TB bandwidth'
+          - 'Free SSL'
+        type: column
+        enabled: true
+        highligh_text: 'Most Popular'
+      -
+        id: ltca54nc
+        highligh: false
+        title: '6 Cores'
+        description: 'Multiple high-traffic sites or apps, fast-growing agencies.'
+        price: 160
+        features:
+          - '6 cores'
+          - '6GB RAM'
+          - '60GB storage (NVMe)'
+          - '~60 containers (recommended max)'
+          - 'Automatic backups (14 days)'
+          - '2TB bandwidth'
+          - 'Free SSL'
+        type: column
+        enabled: true
+      -
+        id: ltca5ndb
+        highligh: false
+        title: '8 Cores'
+        description: 'Larger agencies or very busy, mission-critical sites.'
+        price: 180
+        features:
+          - '8 cores'
+          - '8GB RAM'
+          - '80GB storage (NVMe)'
+          - '~100 containers (recommended max)'
+          - 'Automatic backups (14 days)'
+          - '2TB bandwidth'
+          - 'Free SSL'
+        type: column
+        enabled: true
+    type: pricing_table
+    enabled: true
 page_description: 'A Faster, More Flexible Platform for Web Development.'
 meta_title: 'Cloud Hosting from Webslice'
 meta_description: 'Fast, flexible cloud hosting for web developers. Run multiple dev platforms, work faster, and spend less time managing servers.'
