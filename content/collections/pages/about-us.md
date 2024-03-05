@@ -6,23 +6,25 @@ top_section:
   -
     id: HBiR3QKt
     template: /general_content/hero
-    hero_home_title: 'Webslice: Who We Are'
+    hero_home_title: "Hi, We're the Webslice Team"
     hero_home_description:
       -
         type: paragraph
         content:
           -
             type: text
-            text: 'Webslice’s international ambitions have grown out of two decades of success at the bottom of the world.'
+            text: "After two decades of success on our home turf we've got the experience, the technology, and the ambition to bring better hosting to the rest of the world."
     template_global: /global/default_image
     default_image: about-us/team.jpg
     type: hero
     enabled: true
     shape: diagonal
     dark_image: shared-office-space.jpeg
+    iconamic: users
+    pre: 'About Us'
 title: 'About Us'
-updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1708404065
+updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
+updated_at: 1709612878
 page_builder:
   -
     id: lstu1l0i
@@ -42,13 +44,13 @@ page_builder:
             content:
               -
                 type: text
-                text: 'Webslice may be new, but we have a lot of history behind us. Webslice grew out of SiteHost, which was founded in 2004 and is now the largest locally-owned hosting company in New Zealand.'
+                text: 'Webslice may be new, but we have a lot of history behind us. We grew out of SiteHost, which was founded in 2004 and is now the largest locally-owned hosting company in New Zealand.'
           -
             type: paragraph
             content:
               -
                 type: text
-                text: "Seeing how web developers and agencies could work faster and more efficiently, SiteHost developed a new platform in 2016. Since then that platform, known as Cloud Containers, has evolved to host over 16,000 websites. Most of them sit on servers in SiteHost's own data center."
+                text: "We've always wanted to help web developers and agencies work faster and more efficiently. So in 2016 we launched a new platform known as Cloud Containers. Since then, it's evolved to host over 16,000 websites. Most of those sit on servers in SiteHost's own data center."
         type: column
         enabled: true
       -
@@ -59,13 +61,41 @@ page_builder:
             content:
               -
                 type: text
-                text: 'With Webslice Cloud Hosting, we’re taking this robust, well-supported and battle-hardened hosting platform to the world. Running out of a network of global data centers, Webslice Cloud Hosting is launching with seven years of development and innovation built in.'
+                text: 'With '
+              -
+                type: text
+                marks:
+                  -
+                    type: link
+                    attrs:
+                      href: 'statamic://entry::321f3638-6149-4686-a430-c179ad55fcbe'
+                      rel: noopener
+                      target: null
+                      title: null
+                text: 'Webslice Containers'
+              -
+                type: text
+                text: ', we’re taking this robust, well-supported and battle-hardened hosting platform to the world. Running in a global network of data centers, Webslice Containers launched in 2024 with seven years of development and innovation built in.'
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'The same smart team has also been working with newer technology to bring a brand new, scalable hosting platform to the world. Webslice Scalable will have years of testing and lessons built into it from day one.'
+                text: 'The same smart team has also been working with newer technology to bring a brand new, scalable hosting platform to the world. '
+              -
+                type: text
+                marks:
+                  -
+                    type: link
+                    attrs:
+                      href: 'statamic://entry::1e33d247-bf25-42a4-b455-b47eb8dcf557'
+                      rel: noopener
+                      target: null
+                      title: null
+                text: 'Webslice Serverless'
+              -
+                type: text
+                text: ' will have years of testing and lessons built into it from day one.'
         type: column
         enabled: true
     type: multiple_text_columns
@@ -83,25 +113,34 @@ page_builder:
             content:
               -
                 type: text
-                text: "We’re realists - we build tools and platforms for things as they are.\_"
+                text: 'We’re not here to reinvent the internet. We’re here to make it easier to run the stacks that already work for you.'
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'Developers are busy enough without having to grapple within the bounds of a rigid platform. You don’t want tools that tell you how to do your job, so we give you tools that you can use in your own ways.'
+                text: "You're not here to fit into rigid platforms. Tools shouldn't tell you how to do your job, so we make things that can flex to the way that you like to work. You can see that in both our platforms:"
           -
-            type: paragraph
+            type: bulletList
             content:
               -
-                type: text
-                text: 'Standardization is never perfect. As much as you wish that every project ran on the exact same stack, it’s always more complicated than that. This is why we let you choose from dozens of pre-built images, and run as many different environments as you need.'
-          -
-            type: paragraph
-            content:
+                type: listItem
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: "Standardization is never perfect. You might wish that every project ran on the exact same stack, but it’s always more complicated. So we've pre-built dozens of container images, and you can run as many different environments as you need."
               -
-                type: text
-                text: 'Languages and frameworks never stay still, but most of today’s websites are built in PHP. We’re not here to reinvent the internet. We’re here to make it easier to run the stacks that already work for you.'
+                type: listItem
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: "While languages and frameworks never stay still, most of today’s websites are built in PHP. That's why Webslice Serverless is PHP-first platform."
         template_global: /global/default_image
         default_image: about-us/2d34429616f83487ec069ebd911356db.webp
         highlight_textcaption:
@@ -122,25 +161,33 @@ page_builder:
             content:
               -
                 type: text
-                text: 'You can’t be as nerdy as we are without naturally gravitating towards interesting new technologies. And every now and then, we find something robust and revolutionary enough to seriously work with.'
+                text: 'You can’t be as nerdy as us without gravitating towards interesting new technology. Every now and then our curiosity leads us to something original and valuable. Then the serious work begins.'
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'The balance we strike is between supporting real-world web developers and adopting new innovations when there’s a big enough, genuinely obtainable, pay-off in store.'
+                text: "It takes balance to support today's web developers while adopting new innovations. Serverless infrastructure, for example, emerged with an exciting bang but some serious limitations. Upsides like massive scalability, much lower costs, and less thinking about servers are huge. But there are serious downsides, like big learning curves and barriers to PHP."
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'Serverless infrastructure, for example, emerged with a bang of excitement but some serious limitations. The upsides - like near-limitless scalability, dramatically lower costs, and less thinking about servers - are massive. But the downsides - things like massive learning curves and poor suitability to PHP - were serious, too.'
-          -
-            type: paragraph
-            content:
+                text: "So we're bringing the futuristic promises of serverless tech into the real world. "
               -
                 type: text
-                text: "So we quietly went to work. Webslice Scalable will bring the elastic, cost-effective benefits to PHP developers (and others) without requiring you to learn any new paradigms or redesign your workflows. We’ve solved the problems so you can win the prizes.\_"
+                marks:
+                  -
+                    type: link
+                    attrs:
+                      href: 'statamic://entry::1e33d247-bf25-42a4-b455-b47eb8dcf557'
+                      rel: null
+                      target: null
+                      title: null
+                text: 'Webslice Serverless'
+              -
+                type: text
+                text: " is for PHP developers (and others) who don't want to change paradigms or redesign workflows. We solve problems so you can win prizes.\_"
         template_global: /global/default_image
         default_image: about-us/c8dfd769f4b2c76ecc3222bedf6bd6e1.webp
         highlight_textcaption:
