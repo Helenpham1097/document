@@ -8,14 +8,15 @@
                     localStorage.theme = 'light';
                     document.documentElement.classList.remove('dark');
                     document.documentElement.style.colorScheme = '';
-                    document.querySelector('#svg-sun').classList.add('hidden');
-                    document.querySelector('#svg-moon').classList.remove('hidden');
+                    document.querySelector('#svg-moon').classList.toggle('hidden', false);
+                    document.querySelector('#svg-sun').classList.toggle('hidden', true);
+
                 } else {
                     localStorage.theme = 'dark';
                     document.documentElement.classList.add('dark');
                     document.documentElement.style.colorScheme = 'dark';
-                    document.querySelector('#svg-sun').classList.remove('hidden');
-                    document.querySelector('#svg-moon').classList.add('hidden');
+                    document.querySelector('#svg-moon').classList.toggle('hidden', true);
+                    document.querySelector('#svg-sun').classList.toggle('hidden', false);
                 }
             },
         }"
