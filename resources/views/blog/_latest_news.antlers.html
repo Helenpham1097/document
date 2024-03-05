@@ -7,9 +7,13 @@
 		</div>
 
 		<div class="col-span-4 grid grid-cols-1 gap-8 lg:grid-cols-2">
-			{{ collection:blog :id:isnt="id" :limit="latest_news:entries_limit" sort="date:desc" }}
-				{{ partial:blog/post hide_author="true" hide_subheader="true" title_class="text-xl" subheader_class="text-base" square="true" }}
-			{{ /collection:blog }}
+			{{ if related_posts }}
+					{{ partial:blog/post hide_author="true" hide_subheader="true" title_class="text-xl" subheader_class="text-base" square="true" }}
+				{{else}}
+					{{ collection:blog :id:isnt="id" :limit="latest_news:entries_limit" sort="date:desc" }}
+						{{ partial:blog/post hide_author="true" hide_subheader="true" title_class="text-xl" subheader_class="text-base" square="true" }}
+					{{ /collection:blog }}
+			{{ /if }}
 		</div>
 	</div>
 </section>

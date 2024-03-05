@@ -1,6 +1,6 @@
 {{# Template for a blog entry #}}
 {{ partial:snippets/scrollProgress }}
-<div class="container relative -z-10 mx-auto my-0 py-0">
+<div class="container relative -z-10 hidden xl:block mx-auto my-0 py-0">
 	{{ partial:global/diagonal gradient_style='absolute top-0 mx-auto w-full translate-x-1/2 -translate-y-1/2' }}
 </div>
 <div class="container pb-20 pt-12 lg:py-24">
@@ -51,71 +51,34 @@
 					<div class="w-full">
 						<div class="mx-auto flex w-full flex-col gap-2">
 							<div class="flex items-center gap-2 text-lg font-semibold text-zinc-800 dark:text-zinc-200">
-								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-plus">
-									<path d="M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h8" />
-									<path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-									<path d="M19 16v6" />
-									<path d="M16 19h6" />
-								</svg>
+								{{ svg src="{{config:iconamic:path}}/mail-plus.svg" class='size-4 flex-none' }}
 								Subscribe to get notify
 							</div>
 							{{ partial:components/subscribe_form }}
 						</div>
 					</div>
-					{{# TOC #}}
-					<div class="hidden w-full">
-						<div class="flex items-center gap-2 text-lg font-semibold text-zinc-800 dark:text-zinc-200">
-							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-list">
-								<line x1="8" x2="21" y1="6" y2="6" />
-								<line x1="8" x2="21" y1="12" y2="12" />
-								<line x1="8" x2="21" y1="18" y2="18" />
-								<line x1="3" x2="3.01" y1="6" y2="6" />
-								<line x1="3" x2="3.01" y1="12" y2="12" />
-								<line x1="3" x2="3.01" y1="18" y2="18" />
-							</svg>
-							On this page
-						</div>
-						<div id="sidebar" class="px-3 lg:px-5">
-							<ol class="toc">
-								<li><a href="#">You must have a quiet, distraction free place to work from at home.</a></li>
-								<li><a href="#" class="font-bold text-purple-500 dark:text-green-300">Ensure you have a productive and healthy workspace.</a></li>
-								<li><a href="#">You must have a wired internet connection, VDSL or better.</a></li>
-								<li><a href="#">You must have a webcam, microphone and a physical VOIP phone.</a></li>
-								<li><a href="#">Confirm your plan with your manager.</a></li>
-								<li><a href="#">Working from home is a privilege not a right.</a></li>
-								<li><a href="#">Gather on Tuesdays</a></li>
-								<li><a href="#">You need to have been working here for at least three months.</a></li>
-							</ol>
-						</div>
-					</div>
-
 					{{# Related articles #}}
 					<div class="w-full">
 						<div class="flex items-center gap-2 text-lg font-semibold text-zinc-800 dark:text-zinc-200">
-							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-newspaper">
-								<path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2" />
-								<path d="M18 14h-8" />
-								<path d="M15 18h-5" />
-								<path d="M10 6h8v4h-8V6Z" />
-							</svg>
+							{{ svg src="{{config:iconamic:path}}/newspaper.svg" class='size-4 flex-none' }}
 							Related articles
 						</div>
 						<div class="divide-y divide-zinc-200 dark:divide-zinc-800">
-							{{ collection:blog :id:isnt="id" :limit="latest_news:entries_limit" sort="date:desc" }}
-								{{ partial:blog/post square="true" }}
-							{{ /collection:blog }}
+							{{ if related_posts }}
+								{{ related_posts }}
+									{{ partial:blog/post hide_author="true" hide_subheader="true" title_class="text-xl" subheader_class="text-base" square="true" }}
+								{{ /related_posts }}
+								{{else}}
+									{{ collection:blog :id:isnt="id" :limit="latest_news:entries_limit" sort="date:desc" }}
+										{{ partial:blog/post hide_author="true" hide_subheader="true" title_class="text-xl" subheader_class="text-base" square="true" }}
+									{{ /collection:blog }}
+							{{ /if }}
 						</div>
 					</div>
 					{{# Share #}}
 					<div class="w-full">
 						<div class="flex items-center gap-2 text-lg font-semibold text-zinc-800 dark:text-zinc-200">
-							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2">
-								<circle cx="18" cy="5" r="3" />
-								<circle cx="6" cy="12" r="3" />
-								<circle cx="18" cy="19" r="3" />
-								<line x1="8.59" x2="15.42" y1="13.51" y2="17.49" />
-								<line x1="15.41" x2="8.59" y1="6.51" y2="10.49" />
-							</svg>
+							{{ svg src="{{config:iconamic:path}}/share-2.svg" class='size-4 flex-none' }}
 							Share this article:
 						</div>
 						<div class="px-3 lg:px-8">
@@ -131,9 +94,21 @@
 			</a>
 		</div>
 	</div>
-	<div class="container hidden">
-		{{ if {collection:count in="blog"} > 1 }}
-			{{ partial:blog/latest_news }}
-		{{ /if }}
+	<div class="lg:hidden mt-24">
+		<div class="flex items-center gap-2 text-2xl font-semibold text-zinc-800 dark:text-zinc-200">
+			{{ svg src="{{config:iconamic:path}}/newspaper.svg" class='size-4 flex-none' }}
+			Related articles
+		</div>
+		<div class="divide-y divide-zinc-200 dark:divide-zinc-800">
+			{{ if related_posts }}
+				{{ related_posts }}
+					{{ partial:blog/post hide_author="true" hide_subheader="true" title_class="text-xl" subheader_class="text-base" square="true" }}
+				{{ /related_posts }}
+				{{else}}
+					{{ collection:blog :id:isnt="id" :limit="latest_news:entries_limit" sort="date:desc" }}
+						{{ partial:blog/post hide_author="true" hide_subheader="true" title_class="text-xl" subheader_class="text-base" square="true" }}
+					{{ /collection:blog }}
+			{{ /if }}
+		</div>
 	</div>
 </div>
