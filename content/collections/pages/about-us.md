@@ -24,7 +24,7 @@ top_section:
     pre: 'About Us'
 title: 'About Us'
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1709612878
+updated_at: 1709615536
 page_builder:
   -
     id: lstu1l0i
@@ -119,7 +119,7 @@ page_builder:
             content:
               -
                 type: text
-                text: "You're not here to fit into rigid platforms. Tools shouldn't tell you how to do your job, so we make things that can flex to the way that you like to work. You can see that in both our platforms:"
+                text: "You're not here to fit into rigid platforms. Tools should flex to the way that you work. You can see that in both our platforms:"
           -
             type: bulletList
             content:
@@ -131,7 +131,21 @@ page_builder:
                     content:
                       -
                         type: text
-                        text: "Standardization is never perfect. You might wish that every project ran on the exact same stack, but it’s always more complicated. So we've pre-built dozens of container images, and you can run as many different environments as you need."
+                        text: "Standardization is never perfect. Different projects need to run on different stacks. So we've pre-built dozens of images for "
+                      -
+                        type: text
+                        marks:
+                          -
+                            type: link
+                            attrs:
+                              href: 'statamic://entry::321f3638-6149-4686-a430-c179ad55fcbe'
+                              rel: null
+                              target: null
+                              title: null
+                        text: 'Webslice Containers'
+                      -
+                        type: text
+                        text: ', where you can run as many different environments as you need.'
               -
                 type: listItem
                 content:
@@ -140,7 +154,21 @@ page_builder:
                     content:
                       -
                         type: text
-                        text: "While languages and frameworks never stay still, most of today’s websites are built in PHP. That's why Webslice Serverless is PHP-first platform."
+                        text: "While languages and frameworks never stay still, most of today’s websites are built in PHP. That's why "
+                      -
+                        type: text
+                        marks:
+                          -
+                            type: link
+                            attrs:
+                              href: 'statamic://entry::1e33d247-bf25-42a4-b455-b47eb8dcf557'
+                              rel: null
+                              target: null
+                              title: null
+                        text: 'Webslice Serverless'
+                      -
+                        type: text
+                        text: ' is PHP-first platform.'
         template_global: /global/default_image
         default_image: about-us/2d34429616f83487ec069ebd911356db.webp
         highlight_textcaption:
@@ -161,19 +189,19 @@ page_builder:
             content:
               -
                 type: text
-                text: 'You can’t be as nerdy as us without gravitating towards interesting new technology. Every now and then our curiosity leads us to something original and valuable. Then the serious work begins.'
+                text: "We're nerdy so we gravitate towards interesting new technology. When our curiosity finds something original and valuable, the serious work begins."
           -
             type: paragraph
             content:
               -
                 type: text
-                text: "It takes balance to support today's web developers while adopting new innovations. Serverless infrastructure, for example, emerged with an exciting bang but some serious limitations. Upsides like massive scalability, much lower costs, and less thinking about servers are huge. But there are serious downsides, like big learning curves and barriers to PHP."
+                text: "It takes balance to support today's web developers while adopting new innovations. Serverless infrastructure, for example, emerged with an exciting bang but serious limitations. On the plus side: Massive scalability, much lower costs, and less thinking about servers are huge. But big learning curves and barriers to PHP are major issues."
           -
             type: paragraph
             content:
               -
                 type: text
-                text: "So we're bringing the futuristic promises of serverless tech into the real world. "
+                text: "So we're bringing the futuristic promises of serverless tech to you. "
               -
                 type: text
                 marks:
