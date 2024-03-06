@@ -34,7 +34,12 @@
 			<div class="isolate w-auto -space-y-[1px] text-zinc-800 dark:text-zinc-300">
 				<div class="relative -z-10 mx-auto flex flex-col justify-center gap-8 rounded-b-lg bg-gradient-to-b from-zinc-300 via-transparent to-transparent p-4 pt-6 dark:from-zinc-700 lg:gap-12 lg:rounded-lg lg:p-10 lg:pt-10">
 					<div class="absolute inset-[1px] rounded-b-lg bg-gradient-to-b from-white via-white to-transparent dark:from-zinc-900 dark:via-zinc-900 lg:rounded-lg"></div>
-					<div class="lg:grid-cols-{{ Items | count }} grid grid-cols-1 gap-8">
+					{{# <div class="lg:grid-cols-{{ Items | count }} grid grid-cols-1 gap-8">
+						{{ Items }}
+							{{ partial:page_builder/_pricing_item popular='true' }}
+						{{ /Items }}
+					</div> #}}
+					<div class="{{ if Items | count < 5 }} lg:grid-cols-{{ Items | count }} {{ else }} lg:grid-cols-{{ Items | count | divide:2 | ceil }} {{ /if }} grid grid-cols-1 gap-8">
 						{{ Items }}
 							{{ partial:page_builder/_pricing_item popular='true' }}
 						{{ /Items }}
