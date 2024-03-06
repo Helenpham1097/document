@@ -3,8 +3,8 @@ id: cf7040f4-473b-4c14-897d-5de59ce6d833
 blueprint: home
 template: general_content/index
 title: Homepage
-updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1708390447
+updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
+updated_at: 1709689693
 top_section:
   -
     id: RzzOzBfN
@@ -36,7 +36,7 @@ top_section:
         id: gjeb9dTC
         template_global: /components/buttons
         label: 'Get started'
-        iconamic: arrow-right-circle
+        iconamic: chevrons-right
         link_type: url
         target_blank: false
         url: '#'
@@ -106,5 +106,126 @@ page_builder:
         image: color-mode-dark.png
         image_hover: photo-1620287341056-49a2f1ab2fdc.jpeg
     type: two_options
+    enabled: true
+  -
+    id: ltf4w1hv
+    template: /general_content/_multiple_text_columns
+    display_title_section:
+      -
+        id: ltf4w2tv
+        center_title_title: Testimonials
+        type: section_title
+        enabled: true
+    columns:
+      -
+        id: ltf4w6fq
+        text:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: '"I love this platform"'
+          -
+            type: bulletList
+            content:
+              -
+                type: listItem
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Name, position.'
+        type: column
+        enabled: true
+      -
+        id: ltf4wl5f
+        text:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: '"WordPress is my favourite thing, and this is my favourite hosting."'
+          -
+            type: bulletList
+            content:
+              -
+                type: listItem
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Name, position.'
+        type: column
+        enabled: true
+      -
+        id: ltf4x5w9
+        text:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: '"Here''s a third thing about the Containers platform."'
+          -
+            type: bulletList
+            content:
+              -
+                type: listItem
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Name, position.'
+        type: column
+        enabled: true
+    type: multiple_text_columns
+    enabled: true
+  -
+    id: ltf4xz31
+    template: /page_builder/highlight
+    rows:
+      -
+        id: ltf4y011
+        highlight_title: "We're really smart and reliable"
+        highlight_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: "Be confident that we'll do good things, and support you and you do great things."
+        template_global: /global/default_image
+        default_image: default-avatar-1636583202.png
+        highlight_textcaption:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: '^^ 99.5% uptime, shown in graphic form'
+        buttons:
+          -
+            id: ltf4zdxk
+            template_global: /components/buttons
+            label: 'Read About Us'
+            iconamic: chevron-right-circle
+            link_type: entry
+            target_blank: false
+            entry: 128bc187-e58c-4ccc-a5f7-587727470a54
+            button_type: button
+        type: highlight-item
+        enabled: true
+    toggle_background: false
+    reverse_alignment: false
+    toggle_alignment: false
+    type: highlight
     enabled: true
 ---

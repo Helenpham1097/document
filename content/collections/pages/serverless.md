@@ -43,7 +43,7 @@ top_section:
     light_image: illustrations/expand.png
 title: Serverless
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1709688954
+updated_at: 1709691051
 page_builder:
   -
     id: lrzoffkv
@@ -378,7 +378,7 @@ page_builder:
         type: column
         enabled: true
     type: multiple_text_columns
-    enabled: false
+    enabled: true
   -
     id: ltf3e54y
     template: /general_content/_multiple_text_columns

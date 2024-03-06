@@ -6,7 +6,7 @@ top_section:
   -
     id: 7I982tN5
     template: /general_content/hero
-    hero_home_title: 'A Faster, More Flexible Platform for Web Development'
+    hero_home_title: 'Faster Websites, Fewer Worries'
     hero_home_description:
       -
         type: paragraph
@@ -48,14 +48,14 @@ top_section:
     light_image: illustrations/cloud-containers.png
 title: Containers
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1709606490
+updated_at: 1709697069
 page_builder:
   -
     id: lrftv1b6
     type: bento_features
     enabled: true
     template: /general_content/bento
-    title: 'Webslice Containers Are Built For Busy Agencies'
+    title: 'Busy agencies work faster on Webslice Containers'
     description:
       -
         type: paragraph
@@ -127,7 +127,7 @@ page_builder:
                 text: 'pre-built container images'
               -
                 type: text
-                text: ', or build your own.'
+                text: .
         type: box
         enabled: true
         link: '#'
@@ -193,16 +193,16 @@ page_builder:
             content:
               -
                 type: text
-                text: 'Choose from a '
+                text: 'Stay close to your users with a '
               -
                 type: text
                 marks:
                   -
                     type: bold
-                text: 'range of data centers'
+                text: 'range global locations'
               -
                 type: text
-                text: ' around the world.'
+                text: .
         type: box
         enabled: true
         link_type: url
@@ -217,73 +217,12 @@ page_builder:
     toggle_color: false
     type: get_started
     enabled: true
-    title: 'Get Started Today'
+    title: 'Get started today'
     description: 'You can get started on Webslice Containers now. Try it out for seven days with our risk-free money back guarantee.'
     start_type:
       -
-        id: lro5rfps
-        title: 'Take a test drive.'
-        description: 'To test out one or two containers on a shared server:'
-        content:
-          -
-            type: set
-            attrs:
-              id: ltc6zy3j
-              values:
-                type: step_list
-                steps:
-                  -
-                    id: lrzg1qcg
-                    text: 'Create a Webslice account.'
-                    type: step
-                    enabled: true
-                  -
-                    id: lrzg1rb3
-                    text: "Select 'Shared Cloud Hosting'."
-                    type: step
-                    enabled: true
-                  -
-                    id: lrzg1s4x
-                    text: 'Choose from our selection of pre-built containers.'
-                    type: step
-                    enabled: true
-                  -
-                    id: lrzg1u1n
-                    text: 'Get developing!'
-                    type: step
-                    enabled: true
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: "Once you're sure that Webslice Containers are for you, it’s easy to migrate containers onto your own server."
-          -
-            type: set
-            attrs:
-              id: lrzfjvmo
-              values:
-                type: buttons
-                buttons:
-                  -
-                    id: lrzfjxyk
-                    template_global: /components/buttons
-                    label: 'Create Your Account Now'
-                    link_type: url
-                    target_blank: false
-                    url: '#'
-                    button_type: button
-                    attr_title: 'Create Your Account Now'
-                    iconamic: chevrons-right
-          -
-            type: paragraph
-        type: start
-        enabled: true
-        template_global: /global/iconamic
-        iconamic: server-crash
-      -
         id: lro5rs47
-        title: 'Spin up your own server.'
+        title: 'Create your account and spin up a server (5 mins)'
         description: 'Then you can run as many containers as you like, and build your own images. It only takes a couple of minutes:'
         content:
           -
@@ -342,6 +281,67 @@ page_builder:
         enabled: true
         template_global: /global/iconamic
         iconamic: server
+      -
+        id: lro5rfps
+        title: 'Get your first site live (10 mins)'
+        description: 'Image, files, go'
+        content:
+          -
+            type: set
+            attrs:
+              id: ltc6zy3j
+              values:
+                type: step_list
+                steps:
+                  -
+                    id: lrzg1qcg
+                    text: 'Create a Webslice account.'
+                    type: step
+                    enabled: true
+                  -
+                    id: lrzg1rb3
+                    text: "Select 'Shared Cloud Hosting'."
+                    type: step
+                    enabled: true
+                  -
+                    id: lrzg1s4x
+                    text: 'Choose from our selection of pre-built containers.'
+                    type: step
+                    enabled: true
+                  -
+                    id: lrzg1u1n
+                    text: 'Get developing!'
+                    type: step
+                    enabled: true
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: "Once you're sure that Webslice Containers are for you, it’s easy to migrate containers onto your own server."
+          -
+            type: set
+            attrs:
+              id: lrzfjvmo
+              values:
+                type: buttons
+                buttons:
+                  -
+                    id: lrzfjxyk
+                    template_global: /components/buttons
+                    label: 'Create Your Account Now'
+                    link_type: url
+                    target_blank: false
+                    url: '#'
+                    button_type: button
+                    attr_title: 'Create Your Account Now'
+                    iconamic: chevrons-right
+          -
+            type: paragraph
+        type: start
+        enabled: true
+        template_global: /global/iconamic
+        iconamic: server-crash
   -
     id: ltc9sxxe
     template: /page_builder/pricing_table
@@ -353,7 +353,7 @@ page_builder:
       -
         id: ltc9uurb
         highligh: false
-        title: 25GB
+        title: 1GB
         description: 'Test out the platform with a small project.'
         price: 10
         features:
@@ -368,7 +368,7 @@ page_builder:
       -
         id: ltc9x9oi
         highligh: false
-        title: 50GB
+        title: 2GB
         description: 'Small-mid sized agencies.'
         price: 23
         features:
@@ -383,15 +383,15 @@ page_builder:
       -
         id: ltca3uje
         highligh: true
-        title: 80GB
+        title: 4GB
         description: 'Two cores for higher performance.'
         price: 43
         features:
           - '4GB RAM'
           - '2 cores'
           - '80GB storage'
-          - 'Automatic backups'
           - '2TB bandwidth'
+          - 'Automatic backups'
           - 'Free SSL'
         type: column
         enabled: true
@@ -399,7 +399,7 @@ page_builder:
       -
         id: ltca54nc
         highligh: false
-        title: 160GB
+        title: 8GB
         description: 'Run 100+ containers on one server.'
         price: 82
         features:
@@ -414,7 +414,7 @@ page_builder:
       -
         id: ltca5ndb
         highligh: false
-        title: 320GB
+        title: 16GB
         description: 'Big agencies running busy sites.'
         price: 153
         features:
@@ -429,7 +429,7 @@ page_builder:
       -
         id: ltdgzq4n
         highligh: false
-        title: 640GB
+        title: 32GB
         description: 'Still not enough? Just ask for more.'
         price: 288
         features:
