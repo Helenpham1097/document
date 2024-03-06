@@ -14,4 +14,7 @@ npm-debug.log
 yarn-error.log
 .DS_Store
 .idea/
+/public/css/main.css
+/public/js/main.js
+public/js/main.min.js
 public/css/main.css

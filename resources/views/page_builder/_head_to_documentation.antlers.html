@@ -12,12 +12,16 @@
 		</div>
 	</div>
 
-	<div class="relative lg:mx-auto lg:w-1/2">
-		{{ partial:typography/h4 :content="sub_title" class="pb-6" }}
+	<div class="relative space-y-4 lg:mx-auto lg:w-1/2">
+		{{ partial:typography/h4 :content="sub_title" class="text-zinc-800 dark:text-zinc-200" }}
 		<div class="grid grid-cols-1 gap-y-2 text-zinc-800 dark:text-zinc-200 md:grid-cols-2 lg:grid-cols-1">
 			{{ entry }}
-				<a href="{{ url }}" target="_blank">
-					{{ partial:components/goto }}
+				<a href="{{ url }}" class="group flex items-start gap-2 text-purple-500 dark:text-green-500" target="_blank">
+					<div class="size-7 relative mt-0.5 flex-none">
+						{{ svg src="{{config:iconamic:path}}/arrow-up-right.svg" class=" size-6 absolute translate-y-0 opacity-100 transition duration-300 group-hover:-translate-y-4 group-hover:opacity-0" }}
+						{{ svg src="{{config:iconamic:path}}/book-check" class=" size-6 absolute -translate-y-4 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100" }}
+					</div>
+					<p class="">{{ text }}</p>
 				</a>
 			{{ /entry }}
 		</div>

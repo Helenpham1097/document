@@ -15,10 +15,13 @@
         "jonassiewertsen/statamic-live-search": "^1.5",
         "laravel/framework": "^9.0",
         "laravel/tinker": "^2.0",
+        "mitydigital/feedamic": "^2.3",
         "mitydigital/iconamic": "^1.0",
+        "mitydigital/sitemapamic": "^2.3",
         "statamic/cms": "^4.0",
         "statamic/ssg": "^2.0",
-        "teamnovu/statamic-images-missing-alt": "^1.0"
+        "teamnovu/statamic-images-missing-alt": "^1.0",
+        "teamnovu/statamic-unused-assets": "^2.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.6",

@@ -1,19 +1,19 @@
-<div class="relative">
+<div class="relative hidden lg:block">
 	<div class="left-0 grid grid-cols-6 items-start justify-end gap-3 drop-shadow-xl">
 		{{# Project Color #}}
 		<div class="relative col-span-4 col-start-3 flex flex-col gap-2 rounded-md border border-zinc-500/[0.1] bg-white/[0.9] p-4 backdrop-blur-md dark:border-white/[0.04] dark:bg-zinc-100/5">
 			<p class="text-xs font-bold text-zinc-900 dark:text-zinc-100">Project Color</p>
 			<div class="relative flex w-full justify-between gap-1">
-				<div class="h-6 w-6 rounded-sm bg-[#0c60d1]"></div>
-				<div class="h-6 w-6 rounded-sm bg-[#42a5f5]"></div>
-				<div class="h-6 w-6 rounded-sm bg-[#2ac5da]"></div>
-				<div class="h-6 w-6 rounded-sm bg-[#21c671]"></div>
-				<div class="h-6 w-6 rounded-sm bg-[#ffbd1d]"></div>
-				<div class="h-6 w-6 rounded-sm bg-[#ff8b0d]"></div>
-				<div class="h-6 w-6 rounded-sm bg-[#f14840]"></div>
-				<div class="h-6 w-6 rounded-sm bg-[#ea168b]"></div>
-				<div class="h-6 w-6 rounded-sm bg-[#855ea3]"></div>
-				<div class="h-6 w-6 rounded-sm bg-[#795648]"></div>
+				<div class="size-6 rounded-sm bg-[#0c60d1]"></div>
+				<div class="size-6 rounded-sm bg-[#42a5f5]"></div>
+				<div class="size-6 rounded-sm bg-[#2ac5da]"></div>
+				<div class="size-6 rounded-sm bg-[#21c671]"></div>
+				<div class="size-6 rounded-sm bg-[#ffbd1d]"></div>
+				<div class="size-6 rounded-sm bg-[#ff8b0d]"></div>
+				<div class="size-6 rounded-sm bg-[#f14840]"></div>
+				<div class="size-6 rounded-sm bg-[#ea168b]"></div>
+				<div class="size-6 rounded-sm bg-[#855ea3]"></div>
+				<div class="size-6 rounded-sm bg-[#795648]"></div>
 			</div>
 		</div>
 
@@ -22,7 +22,7 @@
 			<div class="flex items-center justify-between self-stretch">
 				<div class="relative flex items-center justify-start gap-2">
 					<p class="text-xs font-bold text-zinc-700 dark:text-zinc-100">www.sitehost-demo.nz</p>
-					<div class="relative flex items-center justify-center gap-1 rounded-sm bg-[#32ffdc] py-1 px-2">
+					<div class="relative flex items-center justify-center gap-1 rounded-sm bg-[#32ffdc] px-2 py-1">
 						{{ svg src="{{config:iconamic:path}}/sparkles.svg" class='size-3 text-zinc-900 flex-none' }}
 						<p class="text-xs font-bold text-zinc-900">Online</p>
 					</div>
@@ -142,3 +142,5 @@
 		</div>
 	</div>
 </div>
+
+<div class="relative flex flex-col gap-4 lg:hidden">Small screes content</div>

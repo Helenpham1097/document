@@ -1,7 +1,8 @@
-data: {  }
-size: 516667
-last_modified: 1708303013
-width: 1076
+data:
+  alt: 'Cloud Containers'
+size: 519410
+last_modified: 1708566685
+width: 1194
 height: 812
 mime_type: image/png
 duration: null

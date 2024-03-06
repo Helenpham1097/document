@@ -7,7 +7,7 @@
 				{{ partial:typography/p :content="description | strip_tags:p" class=' mt-3 lg:mt-5' }}
 			</div>
 			{{ if start_type | count >= 2 }}
-				<div class="flex flex-col gap-3 md:flex-row xl:flex-col ">
+				<div role="tablist" class="flex flex-col gap-3 md:flex-row xl:flex-col ">
 					{{ start_type }}
 						<div class="relative transition-all text-zinc-800 dark:text-zinc-200 max-w-2xl flex cursor-pointer gap-3 rounded-lg pr-24 p-6" :class="{'bg-zinc-100 dark:bg-zinc-800 ring-zinc-300 dark:ring-zinc-700 ring-1 xl:translate-x-24': tab === {{ count }}, 'bg-white dark:bg-zinc-900 xl:translate-x-32': tab !== {{ count }}}" role="tab" type="button" @click.prevent="tab = {{ count }}" >
 							{{ svg src="{{config:iconamic:path}}/{{iconamic}}.svg" class=" h-5 w-5 flex-shrink-0" }}
@@ -35,7 +35,7 @@
 								{{ steps }}
 									<div class="flex items-center gap-4">
 										<div class="rounded-md border-2 border-green-600 px-3 py-1 font-bold dark:border-green-500 dark:text-zinc-100">{{ count }}</div>
-										<div class="py-2 font-bold text-zinc-800 dark:text-zinc-200">{{ text }}</div>
+										<div class="py-2  text-zinc-800 dark:text-zinc-200">{{ text }}</div>
 									</div>
 								{{ /steps }}
 							</div>

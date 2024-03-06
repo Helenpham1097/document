@@ -2,19 +2,39 @@
 <section class="container isolate space-y-8 lg:space-y-32">
 	{{ rows }}
 		<div class="{{ if reverse_alignment }}
-			{{ unless toggle_alignment }}
-				sm:flex-row-reverse lg:space-x-reverse
-			{{ /unless }}
-		{{ /if }} {{ if toggle_alignment }}
-			{{ unless reverse_alignment }}
-				{{ switch between='|sm:order-last lg:space-x-reverse' }}
-			{{ /unless }}
-		{{ /if }} {{ if toggle_alignment & reverse_alignment }}
-			{{ switch between='|lg:space-x-reverse' }}
-		{{ /if }} mx-auto flex flex-col gap-16 py-10 sm:flex-row sm:py-5 lg:items-center xl:gap-32">
-			<div class="{{ if toggle_alignment }}
-				{{ switch between='|sm:order-last' }}
-			{{ /if}} space-y-6 sm:w-1/2">
+        {{ if toggle_alignment }}
+            lg:space-x-reverse 
+        {{ else }}
+            {{ switch between='lg:space-x-reverse | empty' }}
+        {{ /if }}
+    {{else}}
+        {{ if toggle_alignment }}
+        {{ else }}
+            {{ switch between='empty | lg:space-x-reverse' }}
+        {{ /if }}
+    {{ /if }} container mx-auto flex flex-col space-y-6 space-y-reverse py-10 sm:space-y-0 lg:flex-row lg:items-center lg:space-x-24">
+			<div class="space-y-6 lg:w-1/2">
+				<div class="space-y-4 xl:max-w-xl">
+					{{ svg src="{{config:iconamic:path}}/{{iconamic}}.svg" class="text-zinc-700 dark:text-zinc-400" }}
+					{{ partial:typography/h2 :content="title" }}
+					{{ partial:typography/p :content="description" }}
+				</div>
+				{{ partial:components/buttons }}
+			</div>
+
+			<div class="{{ if reverse_alignment }}
+        {{ if toggle_alignment }}
+            order-first 
+        {{ else }}
+            {{ switch between='order-first | order-first md:order-last' }}
+        {{ /if }}
+    {{else}}
+        {{ if toggle_alignment }}
+            order-first md:order-last
+        {{ else }}
+            {{ switch between='order-first md:order-last | order-first' }}
+        {{ /if }}
+    {{ /if }} relative lg:mx-auto lg:w-1/2">
 				<div class="grid gap-4 lg:grid-cols-2">
 					{{ bentos }}
 						{{ if first }}
@@ -24,7 +44,7 @@
 						{{ /if }}
 						<div class="{{ if first }} lg:col-span-2 lg:pt-24 {{ /if }}bento_box relative isolate flex flex-col justify-end gap-2 overflow-hidden p-4 lg:p-8">
 							{{ if first }}
-								<figure class="absolute right-0 top-1/2 hidden translate-x-16 -translate-y-1/2 transform lg:block">
+								<figure class="absolute right-0 top-1/2 hidden -translate-y-1/2 translate-x-16 transform lg:block">
 									{{ partial:global/picture :image="image" cover="true" lazy="false" maxwidth="768" quality='70' }}
 								</figure>
 							{{ /if }}
@@ -41,16 +61,6 @@
 							{{ /items }}
 						</div>
 					{{ /bentos }}
-				</div>
-			</div>
-			<div class="relative sm:mx-auto sm:w-1/2">
-				<div class="space-y-8">
-					<div class="space-y-4 xl:max-w-xl">
-						{{ svg src="{{config:iconamic:path}}/{{iconamic}}.svg" class="text-zinc-700 dark:text-zinc-400" }}
-						{{ partial:typography/h3 :content="title" }}
-						{{ partial:typography/p :content="description" }}
-					</div>
-					{{ partial:components/buttons }}
 				</div>
 			</div>
 		</div>

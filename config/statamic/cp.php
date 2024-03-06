@@ -54,6 +54,12 @@ return [
             'limit' => 10, // Default: 5 – The number of images to display in the widget.
             'width' => 50, // Default: 100 – The size of the widget.
         ],
+        [
+            'type' => 'unused-assets', // Required
+            'limit' => 300, // Default: 300 – The number of images to display from the widget.
+            'width' => 50, // Default: 100 – The size of the widget.
+            'excluded_paths' => [], // Example: ['assets/myFolder/'] - Default: [] – The paths to exclude from the search.
+        ],
     ],
 
     /*

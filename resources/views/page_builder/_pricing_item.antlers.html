@@ -1,11 +1,11 @@
 {{ if pricing_style:value === 'medals' }}
 	{{# Medals style #}}
-	<div class="{{ switch between='from-orange-500/20 | from-gray-500/20 | from-yellow-500/20' }} inset-0 rounded-[13px] bg-gradient-to-b p-0.5 dark:via-transparent dark:to-transparent">
+	<div class="{{ switch between='from-orange-500/80 | dark:from-gray-300/80 from-gray-500/80 | from-yellow-500/80' }} inset-0 rounded-[13px] bg-gradient-to-b p-0.5 dark:via-transparent dark:to-transparent">
 		<div class="{{ switch between='bronze | silver | gold' }} group relative isolate mx-auto rounded-xl bg-white p-8 dark:bg-zinc-900">
 			<div class="absolute right-0 z-10">
 				<div class="relative -mt-12 -translate-x-8 translate-y-full transform transition duration-200 ease-linear">
-					<div class="relative mx-auto mb-4 -mt-8 px-6 py-2 text-center text-xs font-semibold uppercase leading-relaxed">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hard-drive {{ switch between='text-orange-500/80 | text-gray-500/80 | text-yellow-500/80' }}">
+					<div class="relative mx-auto -mt-8 mb-4 px-6 py-2 text-center text-xs font-semibold uppercase leading-relaxed">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hard-drive {{ switch between='text-orange-500/80 |  text-gray-500/80 dark:text-gray-300/80 | text-yellow-500/80' }}">
 							<line x1="22" x2="2" y1="12" y2="12" />
 							<path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z" />
 							<line x1="6" x2="6.01" y1="16" y2="16" />
@@ -19,10 +19,10 @@
 					<h2 class="{{ switch between='dark:from-orange-800 from-orange-700 dark:via-orange-500 via-orange-400 dark:to-orange-800 to-orange-500 | dark:from-gray-500 from-gray-700 dark:via-gray-600 via-gray-400 dark:to-gray-600 to-gray-500 | dark:from-yellow-500 from-yellow-700 dark:via-yellow-600 via-yellow-400 dark:to-yellow-800 to-yellow-500' }} bg-gradient-to-r bg-clip-text text-4xl !font-extrabold uppercase tracking-tighter !text-transparent">{{ title }}</h2>
 				</div>
 				<div class="mt-6 flex items-center space-x-3">
-					<div class="text-4xl font-extrabold" data-plan="smallTeam" data-plans-target="price">${{ price }}</div>
+					<div class="text-4xl font-extrabold">${{ price }}</div>
 					<div class="text-sm text-zinc-600 dark:text-zinc-300">/mo</div>
 				</div>
-				<div class="prose prose-sm relative flex flex-col gap-2 prose-ul:text-sm dark:prose-invert">
+				<div class="{{ switch between='marker:text-orange-500/80 | dark:marker:text-gray-300/80 marker:text-gray-500/80 | marker:text-yellow-500/80' }} prose prose-sm relative flex flex-col gap-2 dark:prose-invert prose-ul:text-sm">
 					<ul>
 						{{ features }}
 							<li>{{ value }}</li>
@@ -38,7 +38,7 @@
 	<div>
 		<div class="relative flex flex-col gap-6 rounded-lg p-6 ring-1 ring-zinc-300 dark:ring-zinc-700">
 			{{ if highligh }}
-				<div class="absolute top-0 right-4 -translate-y-1/2 bg-white px-4 py-2 text-sm font-bold text-purple-500 dark:bg-zinc-900 dark:text-purple-400">{{ highligh_text }}</div>
+				<div class="absolute right-4 top-0 -translate-y-1/2 bg-white px-4 py-2 text-sm font-bold text-purple-500 dark:bg-zinc-900 dark:text-purple-400">{{ highligh_text }}</div>
 				<div class="absolute inset-0 bg-gradient-to-t from-zinc-100 via-transparent to-transparent dark:from-zinc-800"></div>
 			{{ /if }}
 			<div class="flex flex-col gap-4">
@@ -48,16 +48,14 @@
 				</div>
 
 				<div class="flex items-center space-x-2">
-					<div>
-						<div class="flex items-center text-4xl font-black">
-							<span class="md:text-xl">$</span>
-							{{ price }}
-						</div>
+					<div class="flex items-center text-4xl font-black">
+						<span class="md:text-xl">$</span>
+						{{ price }}
 					</div>
 
 					<div class="text-xs font-medium">
 						/mo
-						<div class="text-xs">(NZD + GST)</div>
+						<div class="text-xs">{{ currency_values:currency }}</div>
 					</div>
 				</div>
 				<div>
@@ -65,7 +63,7 @@
 				</div>
 			</div>
 
-			<div class="prose prose-sm relative flex flex-col gap-2 prose-ul:text-sm dark:prose-invert">
+			<div class="prose prose-sm relative flex flex-col gap-2 dark:prose-invert prose-ul:text-sm">
 				<ul>
 					{{ features }}
 						<li>{{ value }}</li>
