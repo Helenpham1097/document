@@ -85,6 +85,27 @@ fields:
               fields:
                 -
                   import: bento_highlight
+            cta_form:
+              display: 'CTA Form'
+              instructions: null
+              icon: mail-sign-at
+              fields:
+                -
+                  import: cta_form
+            testimonial_section:
+              display: 'Testimonial Section'
+              instructions: null
+              icon: user-multiple
+              fields:
+                -
+                  import: testimonial_section
+            metrics_section:
+              display: 'Metrics Section'
+              instructions: null
+              icon: money-graph-bar-increase
+              fields:
+                -
+                  import: metrics_section
       instructions_position: above
       visibility: visible
       replicator_preview: true

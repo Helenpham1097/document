@@ -1,17 +1,18 @@
-<div class="space-y-12 md:space-y-24">
-	{{ if title_testimonial }}
-		<div class="mx-auto space-y-8 text-center md:max-w-2xl">
-			<div class="h3 text-purple-500">Testimonial</div>
-			<h2 class="h2">{{ title_testimonial }}</h2>
-			{{# <p class="excerpt">{{ testimonial_textarea | strip_tags:p }}</p> #}}
-		</div>
+<section class="relative border-b border-r border-[f0f0f0] dark:border-[#424243]">
+	{{ if bg_pattern }}
+		<div class="absolute inset-0 -z-10 h-full w-full bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem] dark:bg-[linear-gradient(to_right,#424243_1px,transparent_1px),linear-gradient(to_bottom,#424243_1px,transparent_1px)]"></div>
 	{{ /if }}
-	<div class="relative">
-		<div class="absolute top-1/2 left-1/2 -z-10 h-full w-[120%] -translate-y-1/2 -translate-x-1/2 rotate-6 transform bg-gradient-to-r from-purple-500 to-green-400 opacity-20"></div>
-		<div class="container relative flex flex-col justify-evenly gap-8 space-y-8 md:flex-row md:space-y-0">
-			{{ testimonial }}
-				{{ partial:general_content/testimonial_card }}
-			{{ /testimonial }}
+	<div class="container relative mx-auto py-12">
+		<div>
+			<p class="mt-12 text-4xl font-semibold tracking-tighter text-zinc-900 dark:text-zinc-100 lg:text-5xl [&>strong]:block [&>strong]:font-semibold [&>strong]:text-purple-500 dark:[&>strong]:text-green-500">
+				{{ title | strip_tags:p }}
+			</p>
 		</div>
+
+		<ul role="list" class="mx-auto mt-12 grid max-w-xl grid-cols-1 gap-6 sm:gap-4 lg:max-w-none lg:grid-cols-3">
+			{{ testimonial }}
+				{{ partial:components/testimonial_card :image="default_image" cover="false" maxheight="56" lazy="false" maxwidth="56" quality='70' }}
+			{{ /testimonial }}
+		</ul>
 	</div>
-</div>
+</section>
