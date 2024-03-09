@@ -4,7 +4,7 @@ blueprint: home
 template: general_content/index
 title: Homepage
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1709689693
+updated_at: 1710023578
 top_section:
   -
     id: RzzOzBfN
@@ -15,14 +15,14 @@ top_section:
         content:
           -
             type: text
-            text: 'Flexible, fast hosting for busy developers'
+            text: 'Flexible, fast web hosting for busy developers'
     hero_home_description:
       -
         type: paragraph
         content:
           -
             type: text
-            text: 'Run what you want, how you want, without running up massive bills'
+            text: "Web hosting platforms for today's agencies. "
     hero_home_image: hero-preview.png
     template_global: /global/default_image
     link: '#'
@@ -35,76 +35,68 @@ top_section:
       -
         id: gjeb9dTC
         template_global: /components/buttons
-        label: 'Get started'
+        label: 'Join Webslice now'
         iconamic: chevrons-right
         link_type: url
         target_blank: false
-        url: '#'
+        url: 'https://webslice.com/register'
         button_type: button
-      -
-        id: PrVKnxaD
-        template_global: /components/buttons
-        label: 'Choose plan'
-        iconamic: chevron-right
-        link_type: url
-        target_blank: false
-        url: '#'
-        button_type: secondary
     grid_features:
       -
         id: lrfrhuc3
         iconamic: expand
         text: Flexibility
       -
+        id: lrfrigs8
+        iconamic: globe
+        text: 'Worldwide locations'
+      -
         id: lrfrhv51
         iconamic: lock
         text: Security
       -
         id: lrfrhvr5
-        iconamic: headphones
-        text: Support
+        iconamic: messages-square
+        text: '24/7 Support'
       -
         id: lrfrhwd9
-        iconamic: clock-3
-        text: 'Optional 24/7'
+        iconamic: shield-plus
+        text: 'Management Options'
       -
         id: lrfridoi
         iconamic: timer-reset
         text: 'Automated back-ups'
-      -
-        id: lrfrigs8
-        iconamic: map-pin
-        text: 'Worldwide locations'
 page_builder:
   -
     id: lrzox1cv
     template: page_builder/two_options
     title: 'There are two ways to Webslice'
-    sub_title: 'No more complications, there’s two ways make your site available to your customers.'
+    sub_title: "Choose your hosting technology - containers or serverless - and see how we've made it made easy to use, developer-friendly, fast, and flexible."
     boxes:
       -
         id: lrzoxcmj
         template_global: /global/default_image
-        iconamic: box
+        iconamic: boxes
         title: 'Webslice Containers'
-        description: 'A platform that lets you run as many independent, flexible environments as you need. One account, one server, dozens of pre-built images (or build your own), and no technical headaches. You control it all. LAUNCHING EARLY 2024.'
+        description: 'Join over 16,000 websites on a platform that lets you run as many independent, flexible environments as you need. One account, your own servers, dozens of pre-built images, and no technical headaches. You control it all.'
         url: 'entry::321f3638-6149-4686-a430-c179ad55fcbe'
         type: box
         enabled: true
-        text_link: 'Learn more'
+        text_link: 'See Webslice Containers'
         image: color-mode-dark.png
         image_hover: default-optimized.jpg
       -
         id: lrzoyenc
         template_global: /global/default_image
         iconamic: expand
-        title: 'Webslice Scalable'
-        description: 'PHP hosting that stretches from almost absolute zero to somewhere near infinity (but you can set your own limits). Bring your PHP apps, no modification required, and discover pay-as-you-go hosting. COMING SOON.'
+        title: 'Webslice Serverless'
+        description: "Finally, serverless hosting that's PHP-friendly, easy to use, and simple to set up. Webslice Serverless is truly elastic hosting that stays fast when you’re busy, and shrinks bills in quiet times. Register for the Public Beta now."
         type: box
         enabled: true
-        text_link: 'Coming Soon'
+        text_link: 'See Webslice Serverless'
         image: color-mode-dark.png
         image_hover: photo-1620287341056-49a2f1ab2fdc.jpeg
+        url: 'entry::1e33d247-bf25-42a4-b455-b47eb8dcf557'
     type: two_options
     enabled: true
   -
@@ -113,7 +105,7 @@ page_builder:
     display_title_section:
       -
         id: ltf4w2tv
-        center_title_title: Testimonials
+        center_title_title: 'Thousands of happy customers'
         type: section_title
         enabled: true
     columns:
@@ -125,19 +117,19 @@ page_builder:
             content:
               -
                 type: text
-                text: '"I love this platform"'
+                text: '"If there is a problem with the hardware or environment I don’t need to wake up to deal with it. This used to be a significant point of stress for me and made it hard to go away on trips. So I would say peace of mind is one of the biggest factors."'
           -
-            type: bulletList
+            type: paragraph
             content:
               -
-                type: listItem
-                content:
+                type: text
+                marks:
                   -
-                    type: paragraph
-                    content:
-                      -
-                        type: text
-                        text: 'Name, position.'
+                    type: bold
+                text: 'Karl von Randow'
+              -
+                type: text
+                text: ', Co-founder, Cactuslab'
         type: column
         enabled: true
       -
@@ -148,19 +140,19 @@ page_builder:
             content:
               -
                 type: text
-                text: '"WordPress is my favourite thing, and this is my favourite hosting."'
+                text: '"As Silverstripe experts, we have a range of small to large clients and are always looking to add value. Our move to you has put our Silverstripe websites on fast, reliable infrastructure, with the confidence knowing everything will be kept up to date and secure. Support has incredible response times and often go above and beyond."'
           -
-            type: bulletList
+            type: paragraph
             content:
               -
-                type: listItem
-                content:
+                type: text
+                marks:
                   -
-                    type: paragraph
-                    content:
-                      -
-                        type: text
-                        text: 'Name, position.'
+                    type: bold
+                text: 'Joe L.'
+              -
+                type: text
+                text: ', Senior Developer, PS/Digital'
         type: column
         enabled: true
       -
@@ -171,19 +163,21 @@ page_builder:
             content:
               -
                 type: text
-                text: '"Here''s a third thing about the Containers platform."'
+                text: '"We have hundreds of containers on multiple servers. Their uptime is amazing - I can''t recall us having a hardware-related outage over the past 4 years we have used them for our hosting."'
+              -
+                type: hardBreak
+              -
+                type: text
+                text: ★★★★★
           -
-            type: bulletList
+            type: paragraph
             content:
               -
-                type: listItem
-                content:
+                type: text
+                marks:
                   -
-                    type: paragraph
-                    content:
-                      -
-                        type: text
-                        text: 'Name, position.'
+                    type: bold
+                text: 'Andrew Mahon'
         type: column
         enabled: true
     type: multiple_text_columns
@@ -194,14 +188,14 @@ page_builder:
     rows:
       -
         id: ltf4y011
-        highlight_title: "We're really smart and reliable"
+        highlight_title: 'An experienced, smart, and reliable team'
         highlight_textarea:
           -
             type: paragraph
             content:
               -
                 type: text
-                text: "Be confident that we'll do good things, and support you and you do great things."
+                text: "Hosting platforms from a team that's been in the industry for over 20 years. We have thousands of happy customers, one of the highest-rated Support Teams you'll find anywhere, and the technical expertise to take a lot of stress off your shoulders. With Webslice on your side you can spend more time building great things for your clients, and less time worrying about servers and infrastructure."
         template_global: /global/default_image
         default_image: default-avatar-1636583202.png
         highlight_textcaption:
@@ -216,7 +210,7 @@ page_builder:
             id: ltf4zdxk
             template_global: /components/buttons
             label: 'Read About Us'
-            iconamic: chevron-right-circle
+            iconamic: users-round
             link_type: entry
             target_blank: false
             entry: 128bc187-e58c-4ccc-a5f7-587727470a54
@@ -228,4 +222,69 @@ page_builder:
     toggle_alignment: false
     type: highlight
     enabled: true
+  -
+    id: ltkmwpih
+    template: /general_content/_multiple_text_columns
+    columns:
+      -
+        id: ltkmwwnu
+        text:
+          -
+            type: heading
+            attrs:
+              level: 3
+            content:
+              -
+                type: text
+                text: 20+
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: "years' experience"
+        type: column
+        enabled: true
+      -
+        id: ltkmxa4l
+        text:
+          -
+            type: heading
+            attrs:
+              level: 3
+            content:
+              -
+                type: text
+                text: 97%
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'customer satisfaction'
+        type: column
+        enabled: true
+      -
+        id: ltkmxlx1
+        text:
+          -
+            type: heading
+            attrs:
+              level: 3
+            content:
+              -
+                type: text
+                text: '16,000+'
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'sites hosting today'
+        type: column
+        enabled: true
+    type: multiple_text_columns
+    enabled: true
+meta_title: 'Webslice - Web hosting for busy developers'
+meta_description: 'Webslice Containers and Webslice Serverless are fast, flexible, global hosting platforms for web developers and agencies. Start a risk-free trial today.'
 ---

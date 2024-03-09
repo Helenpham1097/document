@@ -4,28 +4,33 @@ blueprint: general_content
 template: general_content/index
 top_section:
   -
+    id: swwS5Koq
     template: /general_content/hero
-    hero_home_title: 'Contact Us'
+    hero_home_title: "Let's Talk About Your Hosting"
     hero_home_description:
       -
         type: paragraph
         content:
           -
             type: text
-            text: 'We are always happy to answer any questions you have, help solve problems you might be facing, or even just have a chat.'
+            text: 'Ask us anything about Webslice Containers, Webslice Serverless, and how they give you more time to focus on web development.'
     template_global: /global/default_image
     type: hero
     enabled: true
+    shape: diagonal
+    iconamic: messages-square
+    pre: 'Contact Us'
 sections:
   -
     template: /forms/contact_us
     type: contact_us_form
     enabled: true
 title: 'Contact Us'
-updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1667437965
+updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
+updated_at: 1709764696
 page_builder:
   -
+    id: GEJpqBAy
     template: general_content/feature_section
     add_intro_features: false
     add_highlight_features: true
@@ -82,7 +87,7 @@ page_builder:
                 text: "PO Box 11859\L Ellerslie"
               -
                 type: text
-                text: " \L"
+                text: null
               -
                 type: text
                 marks:
@@ -91,7 +96,7 @@ page_builder:
                 text: 'Auckland 1542'
               -
                 type: text
-                text: " \L"
+                text: null
               -
                 type: text
                 marks:
@@ -136,4 +141,7 @@ page_builder:
         enabled: true
     type: feature_section
     enabled: true
+meta_title: 'Contact Us - Webslice'
+meta_description: 'Webslice email address and contact form. Talk to us about web hosting on our Webslice Container platform or Webslice Serverless.'
+page_description: 'Scalable hosting shrinks your bills in quiet times and keeps your website fast and available in the busiest periods.'
 ---

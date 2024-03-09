@@ -43,7 +43,7 @@ top_section:
     light_image: illustrations/expand.png
 title: Serverless
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1709691051
+updated_at: 1709865921
 page_builder:
   -
     id: lrzoffkv
@@ -53,7 +53,7 @@ page_builder:
         id: lrzofjxj
         template_global: /global/iconamic
         iconamic: expand
-        title: 'Fast when you’re busy, cheap when it’s quiet'
+        title: 'Stays fast when you’re busy, shrinks bills in quiet times'
         description: |-
           The Webslice Serverless platform gives you easy access to truly elastic hosting. Serve any number of instances of your site or app at any time. You set the parameters, then Webslice Serverless dials resources up and down as traffic arrives.
 
@@ -153,6 +153,83 @@ page_builder:
     reverse_alignment: true
     toggle_alignment: false
     type: bento_highlight
+    enabled: true
+  -
+    id: lti1ioc0
+    template: /general_content/bento_highlight
+    rows:
+      -
+        id: lti1ipt2
+        template_global: /global/iconamic
+        iconamic: arrow-up-narrow-wide
+        title: 'Title #4'
+        description: 'Description of things that are good.'
+        buttons:
+          -
+            id: lti1lpdf
+            template_global: /components/buttons
+            label: 'Register For Public Beta'
+            iconamic: chevrons-right
+            link_type: url
+            target_blank: false
+            url: '#'
+            button_type: button
+        bentos:
+          -
+            id: lti1mbq7
+            items:
+              -
+                id: lti1mdcf
+                text:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Link 1'
+                target: false
+                type: link
+                enabled: true
+              -
+                id: lti1mhf2
+                text:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Link 2'
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Link 2.5'
+                target: false
+                type: link
+                enabled: true
+            type: box
+            enabled: true
+        type: feature_highlight-item
+        enabled: true
+    reverse_alignment: false
+    toggle_alignment: false
+    type: bento_highlight
+    enabled: true
+  -
+    id: lti1px32
+    template: /general_content/bento
+    template_global: /global/iconamic
+    iconamic: arrow-up-narrow-wide
+    title: 'Bento features title'
+    description:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: "Here's a description in a Bento Features section."
+    type: bento_features
     enabled: true
   -
     id: ltf1pkxq
@@ -475,6 +552,6 @@ page_builder:
     type: pricing_table
     enabled: false
 page_description: 'Stretch but never break with incredibly scalable hosting.'
-meta_title: 'Webslice page title'
-meta_description: 'Scalable hosting shrinks your bills in quiet times and keeps your website fast and available in the busiest periods.'
+meta_title: 'Webslice Serverless web hosting - Elastic, PHP ready, easy'
+meta_description: 'Webslice Serverless is an easy-to-use, fully elastic hosting platform shrinks your bills in quiet times and keeps your website fast and available in the busiest periods.'
 ---

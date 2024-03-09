@@ -1,0 +1,1031 @@
+---
+id: 321f3638-6149-4686-a430-c179ad55fcbe
+blueprint: general_content
+template: general_content/index
+top_section:
+  -
+    id: 7I982tN5
+    template: /general_content/hero
+    hero_home_title: 'Faster Websites, Fewer Worries'
+    hero_home_description:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Flexibility that developers love, dependability that clients need, prices that managers appreciate. This rock-solid platform already hosts 16,000+ sites, and now it’s gone global.'
+    template_global: /global/default_image
+    link: '#'
+    select: background
+    select_icon: chevron-left
+    text: Click
+    type: hero
+    enabled: true
+    iconamic: cloud
+    buttons:
+      -
+        id: 2SEK87kA
+        template_global: /global/buttons
+        label: 'Start risk-free for 7 days'
+        iconamic: chevrons-right
+        link_type: url
+        target_blank: false
+        button_type: button
+        attr_title: 'Start risk-free for 7 days'
+        url: '#'
+      -
+        id: lro57zsk
+        template_global: /components/buttons
+        label: 'Read Documentation'
+        link_type: url
+        target_blank: false
+        url: '#'
+        button_type: secondary
+        iconamic: file
+    pre: 'Webslice Containers'
+    shape: triangle
+    image: illustrations/cloud-containers.png
+title: Containers
+updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
+updated_at: 1709866043
+page_builder:
+  -
+    id: lthzqzrb
+    template: /general_content/_multiple_text_columns
+    columns:
+      -
+        id: lthzr15o
+        text:
+          -
+            type: heading
+            attrs:
+              level: 3
+            content:
+              -
+                type: text
+                text: '16,000+'
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'containers hosted.'
+        type: column
+        enabled: true
+      -
+        id: lthzr1l0
+        text:
+          -
+            type: heading
+            attrs:
+              level: 3
+            content:
+              -
+                type: text
+                text: 97%
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'customer satisfaction rate.'
+        type: column
+        enabled: true
+      -
+        id: lthzr0p3
+        text:
+          -
+            type: heading
+            attrs:
+              level: 3
+            content:
+              -
+                type: text
+                text: 99.9%
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'uptime guarantee.'
+        type: column
+        enabled: true
+    type: multiple_text_columns
+    enabled: true
+  -
+    id: lrftv1b6
+    type: bento_features
+    enabled: true
+    template: /general_content/bento
+    title: 'Busy agencies work faster on Webslice Containers'
+    description:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Everything about Webslice Containers is designed to help you develop better websites and products, faster.'
+    item:
+      -
+        id: lrfumsnp
+        text: 'Clone/sync containers, leaving production untouched.*'
+        link: 'entry::fee1a2b1-971c-4c72-9517-d2e6c989f49e'
+        target: false
+      -
+        id: lrimg4ag
+        text: 'Restore from 14 days of back-ups in one click.*'
+        target: true
+        link: '#'
+      -
+        id: lrimgae8
+        text: 'Flick a switch to turn on powerful Simple Cache.*'
+        target: false
+        link: '#'
+      -
+        id: lrfund14
+        text: 'Share files and folders between containers.'
+        target: true
+        link: '#'
+      -
+        id: lrimhi4b
+        text: "Easily scale servers' RAM and storage."
+        target: false
+        link: '#'
+      -
+        id: lrim4v2f
+        text: 'Upgrade images in only a few seconds.'
+        target: true
+        link: '#'
+      -
+        id: lrimfz9z
+        text: 'Install SSL in one click.'
+        target: false
+        link: '#'
+      -
+        id: lrimgcm0
+        text: 'Track the resource usage of every container and server.'
+        target: false
+        link: '#'
+      -
+        id: lrimgit5
+        text: 'Monitor server connectivity and set up email alerts.'
+        target: true
+        link: '#'
+    boxes:
+      -
+        id: lrfvep60
+        text:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Pick from dozens of '
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'pre-built container images'
+              -
+                type: text
+                text: ', all maintained by our team.'
+        type: box
+        enabled: true
+        link: '#'
+        label: 'Awesome link'
+        link_type: url
+        target_blank: true
+        url: 'https://sitehost.nz/'
+        attr_title: Sitehost
+        attr_aria: 'this is a Aria label'
+        image: ill_6---picked-a-region.svg
+      -
+        id: lrfvew4y
+        text:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Run multiple '
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'independent environments'
+              -
+                type: text
+                text: ' on your own server without interference.'
+        type: box
+        enabled: true
+        link_type: url
+        target_blank: false
+        url: '#1'
+        image: ill_6---picked-a-region.svg
+      -
+        id: lrfvf41q
+        text:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Manage '
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'all your sites'
+              -
+                type: text
+                text: ' and databases through the Webslice Console.'
+        type: box
+        enabled: true
+        link_type: url
+        target_blank: false
+        url: '#2'
+      -
+        id: lrfvfdga
+        text:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Stay close to your customers through our '
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'range of global locations'
+              -
+                type: text
+                text: .
+        type: box
+        enabled: true
+        link_type: url
+        target_blank: false
+        url: '#3'
+    bento_type: boxes
+    template_global: /global/iconamic
+    iconamic: cube-transparent
+  -
+    id: lthspiex
+    template: /general_content/_multiple_text_columns
+    columns:
+      -
+        id: lthspk1j
+        text:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: italic
+                text: '*Add Managed Services to access these enhanced developer tools'
+        type: column
+        enabled: true
+      -
+        id: lthsr8ce
+        type: column
+        enabled: true
+    type: multiple_text_columns
+    enabled: true
+  -
+    id: lthukf6c
+    template: /page_builder/highlight
+    rows:
+      -
+        id: lthukghp
+        highlight_title: 'Manage your hosting through a friendly, powerful console'
+        highlight_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'The Webslice Console puts a heap of control at your fingertips. Create and manage containers and servers, track current performance, assign users, and much more. It all happens in one place.'
+        template_global: /global/default_image
+        default_image: placeholders-to-delete/webslice-console-screen.png
+        type: highlight-item
+        enabled: true
+      -
+        id: lthuqphm
+        highlight_title: 'Use simple controls to make big changes'
+        highlight_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: "Webslice lets you do big things in a few seconds flat. It's a very quick job to enable SSL, switch on CDN or Simple Cache, or make a number of other choices that speed up your work and your websites."
+        template_global: /global/default_image
+        default_image: placeholders-to-delete/webslice-console-screen-2.png
+        type: highlight-item
+        enabled: true
+    toggle_background: false
+    reverse_alignment: false
+    toggle_alignment: false
+    type: highlight
+    enabled: true
+  -
+    id: lthty540
+    template: /page_builder/pricing_table
+    pricing_style: items
+    template_global: /global/iconamic
+    iconamic: boxes
+    title: 'Packages and Pricing'
+    description: 'Choose a server size, then spin up as many containers as you like.'
+    Items:
+      -
+        id: lthtyp4v
+        highligh: false
+        title: 1GB
+        description: 'Test out the platform with a small project.'
+        price: 10
+        features:
+          - '1GB RAM'
+          - '1 core'
+          - '25GB storage'
+          - '1TB bandwidth'
+          - 'Automatic backups'
+          - 'Free SSL'
+        type: column
+        enabled: true
+      -
+        id: lthtzuj0
+        highligh: false
+        title: 2GB
+        description: 'Small-mid sized agencies.'
+        price: 23
+        features:
+          - '2GB RAM'
+          - '1 core'
+          - '50GB storage'
+          - '2TB bandwidth'
+          - 'Automatic backups'
+          - 'Free SSL'
+        type: column
+        enabled: true
+      -
+        id: lthtztjh
+        highligh: true
+        title: 4GB
+        description: 'Two cores for higher performance.'
+        price: 43
+        features:
+          - '4GB RAM'
+          - '2 cores'
+          - '80GB storage'
+          - '2TB bandwidth'
+          - 'Automatic backups'
+          - 'Free SSL'
+        type: column
+        enabled: true
+        highligh_text: 'Most popular'
+      -
+        id: lthtzsji
+        highligh: false
+        title: 8GB
+        description: 'Run 100+ containers on one server.'
+        price: 82
+        features:
+          - '8GB RAM'
+          - '4 cores'
+          - '160GB storage'
+          - '5TB bandwidth'
+          - 'Automatic backups'
+          - 'Free SSL'
+        type: column
+        enabled: true
+      -
+        id: lthtzrk6
+        highligh: false
+        title: 16GB
+        description: 'Big agencies running busy sites.'
+        price: 153
+        features:
+          - '16GB RAM'
+          - '6 cores'
+          - '320GB storage'
+          - '8TB bandwidth'
+          - 'Automatic backups'
+          - 'Free SSL'
+        type: column
+        enabled: true
+      -
+        id: lthtzqex
+        highligh: false
+        title: 32GB
+        description: 'Still not enough? Just ask for more.'
+        price: 288
+        features:
+          - '32GB RAM'
+          - '8 cores'
+          - '640GB storage'
+          - '16TB bandwidth'
+          - 'Automatic backups'
+          - 'Free SSL'
+        type: column
+        enabled: true
+    type: pricing_table
+    enabled: true
+  -
+    id: lro5li2r
+    template: /components/section_title
+    toggle_color: false
+    type: get_started
+    enabled: true
+    title: 'Get your first site live today'
+    description: 'Try Webslice Containers for seven days, and if it’s not for you we’ll refund your money.'
+    start_type:
+      -
+        id: lro5rfps
+        title: 'Build your infrastructure (10 mins).'
+        description: 'Set up your Webslice account, server(s) and containers.'
+        content:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Joining Webslice is quick, easy, and risk-free. See how quickly you can set up a new stack by following these three steps:'
+          -
+            type: set
+            attrs:
+              id: lrzg1m7b
+              values:
+                type: step_list
+                steps:
+                  -
+                    id: lrzg1qcg
+                    text: 'Create a Webslice account.'
+                    type: step
+                    enabled: true
+                  -
+                    id: lrzg1rb3
+                    text: 'Provision your server for as little as $10/mo.'
+                    type: step
+                    enabled: true
+                  -
+                    id: lrzg1s4x
+                    text: 'Start adding containers, choosing from dozens of ready-to-go images.'
+                    type: step
+                    enabled: true
+          -
+            type: set
+            attrs:
+              id: lrzfjvmo
+              values:
+                type: buttons
+                buttons:
+                  -
+                    id: lrzfjxyk
+                    template_global: /components/buttons
+                    label: ' Create account now'
+                    link_type: url
+                    target_blank: false
+                    url: '#'
+                    button_type: button
+                    attr_title: ' Create account now'
+                    iconamic: chevrons-right
+        type: start
+        enabled: true
+        template_global: /global/iconamic
+        iconamic: server-crash
+      -
+        id: lro5rs47
+        title: 'Upload your files via SSH/SFTP (5 mins).'
+        description: "You'll be ready to go in a just a few minutes."
+        type: start
+        enabled: true
+        template_global: /global/iconamic
+        iconamic: upload-cloud
+        content:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: "The fastest way to try to your new Webslice Containers is by copying an existing site into a web container. Here's how."
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: ' '
+          -
+            type: set
+            attrs:
+              id: lrzg6p9y
+              values:
+                type: step_list
+                steps:
+                  -
+                    id: lrzg6qra
+                    type: step
+                    enabled: true
+                    text: 'SSH/SFTP into your web container’s `/public` directory.'
+                  -
+                    id: lrzg6sd7
+                    type: step
+                    enabled: true
+                    text: 'Upload your website files.'
+                  -
+                    id: lrzg6sy9
+                    type: step
+                    enabled: true
+                    text: 'Want to go live to the world? Update your DNS, and that’s it!'
+          -
+            type: set
+            attrs:
+              id: lrzg6uqf
+              values:
+                type: buttons
+                buttons:
+                  -
+                    id: lrzg6wod
+                    template_global: /components/buttons
+                    label: 'Create account now'
+                    link_type: url
+                    target_blank: false
+                    url: '#'
+                    button_type: button
+                    attr_title: 'Create account now'
+                    iconamic: chevrons-right
+  -
+    id: lru3419g
+    template: /general_content/bento_highlight
+    reverse_alignment: false
+    toggle_alignment: false
+    type: bento_highlight
+    enabled: true
+    rows:
+      -
+        id: lrr6gp8v
+        title: 'Focus on code, and leave the infrastructure to us'
+        textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue. Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque.'
+        template_global: /global/default_image
+        label: Button
+        iconamic: server-cog
+        link_type: url
+        target_blank: false
+        url: '#'
+        button_type: button
+        default_image: b8f5db7682a5fb3fa938f2e26c0e855c.webp
+        type: feature_highlight-item
+        enabled: true
+        buttons:
+          -
+            id: lrr6xz7o
+            template_global: /components/buttons
+            label: 'Start risk-free for 7 days'
+            link_type: url
+            target_blank: false
+            url: '#'
+            button_type: button
+            iconamic: chevrons-right
+        description: 'Our experts are always working to keep servers and networks up to date and secure. You can just focus on developing great things.'
+        bentos:
+          -
+            id: lrtu5ip2
+            image: ill_3---infrastructure.svg
+            items:
+              -
+                id: lrtvn103
+                text:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Server OS patching and upgrades.'
+                url: '#'
+                type: link
+                enabled: true
+                target: false
+              -
+                id: lru3k6z4
+                text:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: '99.9% uptime guarantee.'
+                type: link
+                enabled: true
+                target: false
+              -
+                id: lru3kf1q
+                text:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Regular releases of new container images.'
+                type: link
+                enabled: true
+                target: false
+              -
+                id: lru3kjq7
+                text:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Managed Services add container updates and maintenance.'
+                type: link
+                enabled: true
+                target: false
+            type: box
+            enabled: true
+      -
+        id: lru3mrwk
+        template_global: /global/iconamic
+        title: 'Add Managed Services and Advanced Developer Tools'
+        description: 'Managed Cloud Hosting does even more to speed you up. Our expert team will monitor and manage your server 24/7/365, and your hosting will include these time-saving features:'
+        buttons:
+          -
+            id: lru3n35l
+            template_global: /components/buttons
+            label: 'Read more about Managed Services'
+            link_type: entry
+            target_blank: false
+            button_type: secondary
+            iconamic: chevron-right
+            entry: c983d54d-1d7e-434f-b789-ea74e7737653
+        bentos:
+          -
+            id: lru3nbaf
+            image: ill_1---managed_cloud_hosting.svg
+            items:
+              -
+                id: lru3nm9g
+                text:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Simple Cache.'
+                type: link
+                enabled: true
+                target: false
+              -
+                id: lru3nqj8
+                text:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'One-click backup restore.'
+                type: link
+                enabled: true
+                target: false
+              -
+                id: lru3nyjc
+                text:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Container cloning and syncing.'
+                type: link
+                enabled: true
+                target: false
+              -
+                id: lru3o2ef
+                text:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Scheduled container updates.'
+                type: link
+                enabled: true
+                target: false
+            type: box
+            enabled: true
+        type: feature_highlight-item
+        enabled: false
+        iconamic: wrench
+  -
+    id: lthtgf5l
+    template: /general_content/_multiple_text_columns
+    display_title_section:
+      -
+        id: lthtiwi5
+        center_title_title: "Here's why 16,000+ websites already run on our containers"
+        type: section_title
+        enabled: true
+    columns:
+      -
+        id: lthtiqim
+        text:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: '"Running Craft CMS websites on your solid managed containerised platform allows us to concentrate on building without having to worry about managing backups, server upgrades and software upgrades. It’s reliable, secure and cost effective."'
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Mark Collister'
+              -
+                type: text
+                text: ', Director, The Fold'
+        type: column
+        enabled: true
+      -
+        id: lthtikhg
+        text:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: '"We like having full control of containers and direct access to code. Ultimately we have more control compared to other hosting providers. You guys actually listen to feedback, too."'
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Carey Liu'
+              -
+                type: text
+                text: ', Lead Developer, Central Station'
+        type: column
+        enabled: true
+      -
+        id: lthtitib
+        text:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: '"Being able to run different versions of PHP for example, or different container setups, is a really great advantage for us. There are other providers who have similar options, but they won’t be able to give us the required performance you provide. Honestly, I don’t think that anyone is doing containers like you guys do."'
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Alex Osborn'
+              -
+                type: text
+                text: ', Technical Lead, RIVER'
+        type: column
+        enabled: true
+    type: multiple_text_columns
+    enabled: true
+  -
+    id: lthz8oal
+    template: /general_content/bento_highlight
+    reverse_alignment: false
+    toggle_alignment: false
+    type: bento_highlight
+    enabled: true
+    rows:
+      -
+        id: lrr6gp8v
+        title: 'Focus on code, and leave the infrastructure to us'
+        textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue. Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque.'
+        template_global: /global/default_image
+        label: Button
+        iconamic: server-cog
+        link_type: url
+        target_blank: false
+        url: '#'
+        button_type: button
+        default_image: b8f5db7682a5fb3fa938f2e26c0e855c.webp
+        type: feature_highlight-item
+        enabled: false
+        buttons:
+          -
+            id: lrr6xz7o
+            template_global: /components/buttons
+            label: 'Start risk-free for 7 days'
+            link_type: url
+            target_blank: false
+            url: '#'
+            button_type: button
+            iconamic: chevrons-right
+        description: 'Our experts are always working to keep servers and networks up to date and secure. You can just focus on developing great things.'
+        bentos:
+          -
+            id: lrtu5ip2
+            image: ill_3---infrastructure.svg
+            items:
+              -
+                id: lrtvn103
+                text:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Server OS patching and upgrades.'
+                url: '#'
+                type: link
+                enabled: true
+                target: false
+              -
+                id: lru3k6z4
+                text:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: '99.9% uptime guarantee.'
+                type: link
+                enabled: true
+                target: false
+              -
+                id: lru3kf1q
+                text:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Regular releases of new container images.'
+                type: link
+                enabled: true
+                target: false
+              -
+                id: lru3kjq7
+                text:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Managed Services add container updates and maintenance.'
+                type: link
+                enabled: true
+                target: false
+            type: box
+            enabled: true
+      -
+        id: lru3mrwk
+        template_global: /global/iconamic
+        title: 'Add Managed Services and time-saving features'
+        description: "Optional Managed Services speed you up even more. Our expert team monitor and manage your server and containers, you get broader access to Support when you need it, and you'll find more time-saving features in the Webslice Console."
+        buttons:
+          -
+            id: lru3n35l
+            template_global: /components/buttons
+            label: 'Read more about Managed Services'
+            link_type: entry
+            target_blank: false
+            button_type: secondary
+            iconamic: chevron-right
+            entry: c983d54d-1d7e-434f-b789-ea74e7737653
+        bentos:
+          -
+            id: lru3nbaf
+            image: ill_1---managed_cloud_hosting.svg
+            items:
+              -
+                id: lru3nm9g
+                text:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Simple Cache.'
+                type: link
+                enabled: true
+                target: false
+              -
+                id: lru3nqj8
+                text:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'One-click backup restore.'
+                type: link
+                enabled: true
+                target: false
+              -
+                id: lru3nyjc
+                text:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Container cloning and syncing.'
+                type: link
+                enabled: true
+                target: false
+              -
+                id: lru3o2ef
+                text:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Scheduled container updates.'
+                type: link
+                enabled: true
+                target: false
+            type: box
+            enabled: true
+        type: feature_highlight-item
+        enabled: true
+        iconamic: wrench
+  -
+    id: lrochdxy
+    template: page_builder/head_to_documentation
+    type: head_to_documentation
+    enabled: true
+    template_global: /global/iconamic
+    iconamic: file
+    title: 'Learn How Webslice Containers Work'
+    description: 'After years of development, Webslice Containers are thoroughly documented. Almost anything you could want to know is probably already covered.'
+    sub_title: 'Head to Documentation to see:'
+    entry:
+      -
+        id: lrocq15l
+        text: 'The introductory overview for developers.'
+        type: entry
+        enabled: true
+      -
+        id: lrocq8tp
+        text: 'How easy it is to get started.'
+        type: entry
+        enabled: true
+      -
+        id: lrocqfca
+        text: 'How to create and manage containers.'
+        type: entry
+        enabled: true
+      -
+        id: lrocqj1k
+        text: 'How to manage databases and permissions.'
+        type: entry
+        enabled: true
+      -
+        id: lrocqlw5
+        text: "How easy it is to swap a container's image."
+        type: entry
+        enabled: true
+      -
+        id: ltgosedh
+        text: 'And much, much more...'
+        type: entry
+        enabled: true
+    buttons:
+      -
+        id: lrqwq4m7
+        template_global: /components/buttons
+        link_type: url
+        target_blank: true
+        url: '#'
+        button_type: button
+page_description: 'A Faster, More Flexible Platform for Web Development.'
+meta_title: 'Webslice Containers - Fast, Flexible, Global Web Hosting'
+meta_description: 'Run multiple dev platforms, work faster, and spend less time managing servers with Webslice Containers. Fast, flexible and powerful hosting for web developers.'
+---

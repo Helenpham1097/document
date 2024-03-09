@@ -8,14 +8,14 @@ top_section:
     shape: diagonal
     iconamic: expand
     pre: 'Managed Services'
-    hero_home_title: 'You Have Great Hosting, Now Add a Dedicated Professional Team'
+    hero_home_title: 'Work Even Faster, With Fewer Things to Worry About'
     hero_home_description:
       -
         type: paragraph
         content:
           -
             type: text
-            text: "Add Managed Services to your Webslice hosting and we'll take care a lot of the things that can cause sleepless nights. You'll start working faster, too, by unlocking advanced features for developers."
+            text: 'Stop worrying about server monitoring and maintenance. Get quicker, broader access to our 24/7 Support Team. And access time-saving features on your hosting platform.'
     buttons:
       -
         id: lrzodtof
@@ -25,10 +25,11 @@ top_section:
         target_blank: false
         button_type: button
         entry: 178073b8-7594-4432-9b39-2461b487bce8
+        iconamic: chevrons-right
       -
         id: lrzodymc
         template_global: /components/buttons
-        label: 'Sign Up Now'
+        label: 'Join Webslice Now'
         link_type: url
         target_blank: false
         url: '#'
@@ -39,11 +40,11 @@ top_section:
     template: /general_content/hero
     template_global: /global/iconamic
 title: 'Managed Services'
-page_description: 'Scalable hosting shrinks your bills in quiet times and keeps your website fast and available in the busiest periods.'
-meta_title: 'Webslice page title'
-meta_description: 'Scalable hosting shrinks your bills in quiet times and keeps your website fast and available in the busiest periods.'
+page_description: 'Monitoring, incident response, time-saving tools, broader 24/7 support.'
+meta_title: 'Managed Services - Webslice web hosting'
+meta_description: 'Add Managed Services to Webslice hosting for time-saving developer tools, broader 24/7 technical support, and server management including incident response.'
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1709506813
+updated_at: 1709779043
 page_builder:
   -
     id: lt81rapn
@@ -72,13 +73,68 @@ page_builder:
         iconamic: signal-high
         description: 'With Managed Services 2, you get more ways to directly access our Support Team, and a higher SLA every time you do.'
     type: two_options
+    enabled: false
+  -
+    id: ltginaij
+    template: /page_builder/highlight
+    rows:
+      -
+        id: ltgincl4
+        highlight_title: 'No more responding to incidents and alerts'
+        highlight_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: "Every Webslice server is automatically monitored, and every Webslice customer can receive incident alerts. That's a handy way to let you know when you need to check up on something yourself. "
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: "With Managed Services we take care of the response for you. A lot of the time, things are solved before you'd even notice an issue."
+        template_global: /global/default_image
+        default_image: bb28417eb2b2507580ab0f08bf09ea69.webp
+        type: highlight-item
+        enabled: true
+      -
+        id: ltgjb41x
+        highlight_title: 'Even higher standards of 24/7 support'
+        highlight_textarea:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: "Our Support Team is smart, highly rated by customers, and quick to act. If you're ever in a jam, this is your first point of call. With Managed Services you'll have more ways to contact us, more expertise to rely on, and with Premium services even a customized SLA."
+        template_global: /global/default_image
+        default_image: photo-1601933973783-43cf8a7d4c5f.jpeg
+        type: highlight-item
+        enabled: true
+      -
+        id: ltgip6ay
+        highlight_title: Time-saving
+        template_global: /global/default_image
+        type: highlight-item
+        enabled: false
+      -
+        id: ltgipldn
+        highlight_title: 'Enhanced developer tools'
+        template_global: /global/default_image
+        type: highlight-item
+        enabled: false
+    toggle_background: false
+    reverse_alignment: false
+    toggle_alignment: true
+    type: highlight
     enabled: true
   -
     id: lt81flzj
     template: page_builder/head_to_documentation
     template_global: /global/iconamic
     iconamic: wrench
-    title: 'Enhanced Developer Tools'
+    title: 'Time-saving developer tools'
     description: 'When you add Managed Services to your Webslice Containers, you unlock tools that supercharge your productivity.'
     entry:
       -
@@ -164,45 +220,9 @@ page_builder:
             enabled: true
         type: feature_highlight-item
         enabled: false
-      -
-        id: lt812n3x
-        template_global: /global/iconamic
-        title: 'Management Feature 2'
-        type: feature_highlight-item
-        enabled: true
     reverse_alignment: false
     toggle_alignment: false
     type: bento_highlight
-    enabled: false
-  -
-    id: lt7yeh9b
-    template: /general_content/bento
-    template_global: /global/iconamic
-    iconamic: wrench
-    title: Maintenance
-    description:
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: "I've been working on this stuff for way too long, and the biggest problem is that I genuinely do not know what managed vs unmanaged serverless hosting would look like. Advanced Developer Tools? Support SLA? Any difference in maintenance?"
-    type: bento_features
-    enabled: true
-  -
-    id: lt7yk05k
-    template: /general_content/bento
-    template_global: /global/iconamic
-    iconamic: activity-square
-    title: 'A Second Thing'
-    description:
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: 'With a paragraph to describe it and everything. Things go on.'
-    type: bento_features
     enabled: false
   -
     id: lt82em9t
@@ -211,36 +231,134 @@ page_builder:
     template_global: /global/iconamic
     iconamic: list-checks
     title: 'Managed Services - Packages and Pricing'
-    description: "Two tiers of Managed Services. Save yourself time and stress, or go Advanced if you're running mission critical assets."
     Items:
+      -
+        id: ltgdxyl3
+        highligh: false
+        title: Standard
+        description: 'Every Webslice customer has access to 24/7 support and platform monitoring.'
+        price: 0
+        features:
+          - 'Support access: Community and email'
+          - 'Support coverage: Platform only'
+          - 'Monitoring: Receive automatic alerts'
+          - 'Standard support SLA'
+        type: column
+        enabled: true
       -
         id: lt82h1tl
         highligh: true
-        highligh_text: 'Most popular'
-        title: 'Managed Services 1'
-        description: 'Free yourself from lot of the fiddly infrastructural stuff, and deliver more for your clients instead.'
-        price: 200
+        highligh_text: Recommended
+        title: Business
+        description: 'More proactive services, broader support, and advanced platform features.'
+        price: 50
         features:
-          - 'Schedule automatic image updates'
-          - 'Unlock enhanced developer tools'
-          - 'Proactive monitoring and incident response'
+          - 'Support access: Add live chat'
+          - 'Full support coverage: Platform + application support'
+          - 'Monitoring: Proactive incident response'
+          - 'Standard support SLA'
+          - 'Webslice Containers: Add enhanced developer tools (automatic image updates, container cloning, caching and more)'
         type: column
         enabled: true
       -
         id: lt82hdtb
-        highligh: true
-        highligh_text: 'The finest service'
-        title: 'Managed Services 2'
-        description: 'Add in our very highest levels of personalized service.'
-        price: 600
+        highligh: false
+        title: Premium
+        description: 'All Business-tier services and developer tools, plus the highest level of 24/7 support.'
+        price: 350
         features:
-          - 'Everything from Managed Service 1'
-          - "Our Support Team's fastest SLA every time you contact us"
-          - 'More ways to access support'
-          - 'Top priority access to our expertise'
-          - 'Support for managing your applications, not just your infrastructure'
+          - 'Support access: Add video and phone'
+          - 'Full support coverage: Platform + application support'
+          - 'Monitoring: Proactive incident response'
+          - 'Premium, customisable support SLA'
+          - 'Webslice Containers: Enhanced developer tools'
         type: column
         enabled: true
     type: pricing_table
+    enabled: true
+    description: "No matter what Webslice hosting platform you're on, and no matter what size hosting package you have, you can add either level of Managed Services."
+  -
+    id: ltgkxmzq
+    template: /general_content/_multiple_text_columns
+    display_title_section:
+      -
+        id: ltgkxq03
+        center_title_title: 'Save time and worry less, like these happy customers'
+        type: section_title
+        enabled: true
+    columns:
+      -
+        id: ltgl9p1e
+        text:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: '"Running websites on your solid, managed, containerised platform allows us to concentrate on building without having to worry about managing backups, server upgrades and software upgrades. It’s reliable, secure and cost effective."'
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Mark Collister, '
+              -
+                type: text
+                text: 'Director, The Fold'
+        type: column
+        enabled: true
+      -
+        id: ltgkzqji
+        text:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: '"You''ve allowed us to focus a lot less on hosting and more on design & dev which means we can offer more to our clients in return. We love your containers!"'
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Dan H.'
+              -
+                type: text
+                text: ', Punctuate'
+        type: column
+        enabled: true
+      -
+        id: ltgky6ju
+        text:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: '"As we grew we were self-hosting some services which are now hosted by you (and others). Having someone else feeding and watering the servers is one less maintenance task we no longer need worry about."'
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: '- '
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Rob I.'
+              -
+                type: text
+                text: ', AAE'
+        type: column
+        enabled: true
+    type: multiple_text_columns
     enabled: true
 ---
