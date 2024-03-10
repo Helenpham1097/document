@@ -1,10 +1,10 @@
-<section class="relative border-b border-r border-[f0f0f0] dark:border-[#424243]">
+<section class="relative overflow-hidden border-b border-r border-[f0f0f0] dark:border-[#424243]">
 	{{ if bg_pattern }}
 		<div class="absolute inset-0 -z-10 h-full w-full bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem] dark:bg-[linear-gradient(to_right,#424243_1px,transparent_1px),linear-gradient(to_bottom,#424243_1px,transparent_1px)]"></div>
 	{{ /if }}
 	<div class="container relative mx-auto py-12">
 		<div>
-			<p class="mt-12 text-4xl font-semibold tracking-tighter text-zinc-900 dark:text-zinc-100 lg:text-5xl [&>strong]:block [&>strong]:font-semibold [&>strong]:text-purple-500 dark:[&>strong]:text-green-500">
+			<p class="h2 mt-12 max-w-xl text-zinc-800 dark:text-zinc-200 [&>strong]:block [&>strong]:text-purple-500 dark:[&>strong]:text-green-500">
 				{{ title | strip_tags:p }}
 			</p>
 		</div>

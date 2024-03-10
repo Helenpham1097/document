@@ -46,25 +46,25 @@
 			<div class="my-12 grid gap-4 md:grid-cols-2 lg:my-16 lg:grid-rows-2 xl:grid-cols-3">
 				{{# Bento #1 #}}
 				{{ boxes limit='1' }}
-					{{ partial:components/bento_box class='lg:row-span-2 xl:col-span-1 md:col-span-2' }}
+					{{ partial:components/bento_box class='xl:row-span-2 xl:col-span-1 lg:col-span-2' }}
 						{{ partial:global/picture :image="image" cover="true" class='xl:absolute lg:w-1/2 xl:w-full bottom-0 px-8 xl:group-hover/illus:translate-y-10 group-hover/illus:transition ease-in-out duration-200 xl:translate-y-12' lazy="true" quality='70' maxwidth="425" maxheight="260" }}
 					{{ /partial:components/bento_box }}
 				{{ /boxes }}
 				{{# /Bento #2 #}}
 				{{ boxes offset='1' limit='1' }}
-					{{ partial:components/bento_box content_class='content-end order-first' class='md:col-span-2 ' }}
+					{{ partial:components/bento_box content_class='content-end order-first' class='lg:col-span-2 ' }}
 						{{ partial:global/picture :image="image" cover="true" class='translate-x-4 duration-200 ease-in-out group-hover/illus:transition overflow-hidden xl:group-hover/illus:-translate-y-6 ' lazy="true" quality='70' maxwidth="375" maxheight="239" }}
 					{{ /partial:components/bento_box }}
 				{{ /boxes }}
 				{{# /Bento #3 #}}
 				{{ boxes offset='2' limit='1' }}
-					{{ partial:components/bento_box content_class='content-end order-first' class='md:col-span-1 lg:col-start-2 xl:row-start-2' }}
+					{{ partial:components/bento_box content_class='content-end order-first' class='lg:col-span-1 xl:col-start-2 xl:row-start-2' }}
 						{{ partial:global/picture :image="image" cover="true" class='duration-200 ease-in-out group-hover/illus:transition overflow-hidden xl:group-hover/illus:-translate-y-6 ' lazy="true" quality='70' maxwidth="420" maxheight="256" }}
 					{{ /partial:components/bento_box }}
 				{{ /boxes }}
 				{{# /Bento #4 #}}
 				{{ boxes offset='3' limit='1' }}
-					{{ partial:components/bento_box content_class='content-end order-first' class='md:col-span-1 lg:col-start-3 xl:row-start-2' }}
+					{{ partial:components/bento_box content_class='content-end order-first' class='lg:col-span-1 xl:col-start-3 xl:row-start-2' }}
 						{{ partial:global/picture :image="image" cover="true" class='content-center duration-200 ease-in-out group-hover/illus:transition overflow-hidden xl:group-hover/illus:-translate-y-6 ' lazy="true" quality='70' maxwidth="420" maxheight="256" }}
 					{{ /partial:components/bento_box }}
 				{{ /boxes }}
