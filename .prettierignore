@@ -18,3 +18,7 @@ resources/views/page_builder/_features_columns_item.antlers.html
 resources/views/general_content/_features_columns.antlers.html
 resources/views/components/_table.antlers.html
 resources/views/page_builder/_multiple_text_columns.antlers.html
+
+
+**/*.md
+**/*.yaml

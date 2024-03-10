@@ -1,11 +1,11 @@
-title: 'Testimonial Section'
+title: 'CTA - Form'
 fields:
   -
     handle: template
     field:
-      default: /page_builder/testimonial_section
-      display: template
+      default: /page_builder/cta_form
       type: hidden
+      display: template
       listable: hidden
       instructions_position: above
       visibility: visible
@@ -14,9 +14,34 @@ fields:
   -
     handle: title
     field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Title
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: description
+    field:
+      antlers: false
+      type: textarea
+      display: Description
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: form_caption
+    field:
       buttons:
         - bold
+        - italic
         - removeformat
+        - anchor
       smart_typography: false
       save_html: false
       inline: false
@@ -36,34 +61,9 @@ fields:
       collapse: false
       previews: true
       type: bard
-      display: Title
+      display: 'Form caption'
       listable: hidden
       instructions_position: above
       visibility: visible
       replicator_preview: true
       hide_display: false
-      width: 66
-  -
-    handle: bg_pattern
-    field:
-      default: true
-      type: toggle
-      display: 'Background Pattern'
-      width: 33
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      replicator_preview: true
-      hide_display: false
-  -
-    handle: testimonial
-    field:
-      max_items: 3
-      mode: default
-      create: true
-      collections:
-        - testimonial
-      display: Testimonial
-      type: entries
-      listable: hidden
-      instructions_position: above

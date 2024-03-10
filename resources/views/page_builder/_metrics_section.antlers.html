@@ -1,0 +1,25 @@
+<section class="relative overflow-hidden py-24">
+	{{ if bg_pattern }}
+		<div class="absolute inset-0 -z-10 rotate-180 rounded-2xl bg-[repeating-linear-gradient(-45deg,_rgba(10,10,10,_0.15),_rgba(10,10,10,_0.15)_1px,_transparent_1px,_transparent_6px)] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] [background-size:8px_8px] dark:bg-[repeating-linear-gradient(-45deg,_rgba(255,255,255,_0.15),_rgba(255,255,255,_0.15)_1px,_transparent_1px,_transparent_6px)]"></div>
+	{{ /if }}
+	<div class="container relative mx-auto flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-24">
+		<div class="flex-none">
+			<p class="h2 text-zinc-800 dark:text-zinc-200  [&>strong]:block 	[&>strong]:text-purple-500 dark:[&>strong]:text-green-500">
+				{{ title | strip_tags:p }}
+			</p>
+		</div>
+		<div class="grid gap-6 sm:grid-cols-2 w-full md:grid-cols-{{ metric_items | count }}">
+			{{ metric_items }}
+				<div class="rounded-3xl border bg-zinc-50 p-2 dark:border-zinc-700 dark:bg-zinc-800">
+					<figure class="relative flex h-full flex-col justify-between rounded-2xl border bg-white p-6 shadow-lg dark:border-zinc-700 dark:bg-zinc-800">
+						{{ svg src="{{config:iconamic:path}}/{{iconamic}}.svg" class='size-8 mb-6' }}
+						<div class="flex flex-col gap-2">
+							<div class="font-mono text-4xl font-black">{{ title }}</div>
+							<div class="text-xs text-zinc-600 dark:text-zinc-400 [&>strong]:text-zinc-800 dark:[&>strong]:text-white">{{ description | strip_tags:p }}</div>
+						</div>
+					</figure>
+				</div>
+			{{ /metric_items }}
+		</div>
+	</div>
+</section>

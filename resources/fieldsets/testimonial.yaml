@@ -5,11 +5,9 @@ fields:
     field:
       display: template
       type: hidden
-      icon: hidden
       listable: hidden
       default: general_content/_small_side_testimonial
       instructions_position: above
-      read_only: false
   -
     handle: quote
     field:
@@ -32,28 +30,18 @@ fields:
       enable_paste_rules: true
       display: Quote
       type: bard
-      icon: bard
       listable: hidden
-  -
-    import: buttons
-  -
-    handle: name
-    field:
-      type: text
-      validate:
-        - required
-      display: Name
-      listable: hidden
-      input_type: text
-      antlers: false
   -
     handle: position
     field:
       input_type: text
       antlers: false
-      display: 'Position or Twitter handle'
       type: text
-      icon: text
+      display: Position
       listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
   -
     import: default_image

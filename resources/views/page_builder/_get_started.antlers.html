@@ -26,7 +26,7 @@
 				{{ partial:general_content/toggle }}
 			{{ /if }}
 			{{ start_type }}
-				<div x-show="tab === {{ count }}" x-transition:enter="transition delay-100 duration-500 transform ease-in" x-transition:enter-start="opacity-90 ">
+				<div x-show="tab === {{ count }}" x-transition:enter="transition delay-100 duration-500 transform ease-in" x-transition:enter-start="opacity-90" class="space-y-4">
 					{{ content }}
 						{{ if type == "text" }}
 							{{ partial:typography/p :content="text | strip_tags:p" class=' ' }}

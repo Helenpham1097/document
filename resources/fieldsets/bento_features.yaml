@@ -6,7 +6,6 @@ fields:
       default: /general_content/bento
       type: hidden
       display: template
-      icon: hidden
       listable: hidden
       instructions_position: above
       visibility: visible
@@ -21,7 +20,6 @@ fields:
       antlers: false
       type: text
       display: Title
-      icon: text
       listable: hidden
       instructions_position: above
       visibility: visible
@@ -55,7 +53,6 @@ fields:
       previews: true
       type: bard
       display: Description
-      icon: bard
       listable: hidden
       instructions_position: above
       visibility: visible
@@ -105,7 +102,6 @@ fields:
                     previews: true
                     type: bard
                     display: Text
-                    icon: bard
                     listable: hidden
                     instructions_position: above
                     visibility: visible
@@ -118,7 +114,6 @@ fields:
                     mode: toggle
                     display: 'Show controls'
                     type: revealer
-                    icon: revealer
                     width: 33
                     listable: hidden
                     instructions_position: above
@@ -237,7 +232,6 @@ fields:
                     mode: toggle
                     type: revealer
                     display: 'Show image'
-                    icon: revealer
                     listable: hidden
                     instructions_position: above
                     visibility: visible
@@ -255,7 +249,6 @@ fields:
                     show_set_alt: true
                     type: assets
                     display: Image
-                    icon: assets
                     listable: hidden
                     instructions_position: above
                     visibility: visible
@@ -265,15 +258,12 @@ fields:
                       show_image: 'equals true'
       type: replicator
       display: Boxes
-      icon: replicator
       instructions: 'Highlight the top 4 features in bento boxes, each with an optional link and formatting options for bold and italic. (4 items max)'
       listable: hidden
       instructions_position: above
       visibility: visible
       replicator_preview: true
       hide_display: false
-      if:
-        bento_type: 'equals boxes'
   -
     handle: item
     field:
@@ -285,7 +275,6 @@ fields:
             antlers: false
             type: text
             display: Title
-            icon: text
             listable: hidden
             instructions_position: above
             visibility: visible
@@ -297,7 +286,6 @@ fields:
           field:
             type: link
             display: Link
-            icon: link
             listable: hidden
             instructions_position: above
             visibility: visible
@@ -312,7 +300,6 @@ fields:
             default: false
             type: toggle
             display: 'Open in new window?'
-            icon: toggle
             listable: hidden
             instructions_position: above
             visibility: visible
@@ -324,11 +311,41 @@ fields:
       fullscreen: true
       type: grid
       display: Item
-      icon: grid
       listable: hidden
       instructions_position: above
       visibility: visible
       replicator_preview: true
       hide_display: false
-      if:
-        bento_type: 'equals boxes'
+  -
+    handle: footer
+    field:
+      buttons:
+        - bold
+        - italic
+        - removeformat
+        - anchor
+      smart_typography: false
+      save_html: false
+      inline: false
+      toolbar_mode: fixed
+      reading_time: false
+      word_count: false
+      fullscreen: true
+      allow_source: true
+      enable_input_rules: true
+      enable_paste_rules: true
+      remove_empty_nodes: false
+      antlers: false
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      always_show_set_button: false
+      collapse: false
+      previews: true
+      type: bard
+      display: Footer
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
