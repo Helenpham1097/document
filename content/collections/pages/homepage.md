@@ -4,7 +4,7 @@ blueprint: home
 template: general_content/index
 title: Homepage
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1710023578
+updated_at: 1710127038
 top_section:
   -
     id: RzzOzBfN
@@ -68,6 +68,89 @@ top_section:
         text: 'Automated back-ups'
 page_builder:
   -
+    id: ltmc25t2
+    template: /general_content/_multiple_text_columns
+    display_title_section:
+      -
+        id: ltmc2b1y
+        center_title_title: "It's about time"
+        type: section_title
+        enabled: true
+    columns:
+      -
+        id: ltmc27j2
+        text:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'How much time and energy could your web development agency save if you never had to worry about hosting again? With that stress gone, what could you achieve?'
+        type: column
+        enabled: true
+      -
+        id: ltmc29wq
+        text:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Run every site and app on a global hosting platform built for developers. Robust infrastructure, and a feature-packed console that values your time as much as you do.'
+        type: column
+        enabled: true
+    type: multiple_text_columns
+    enabled: true
+  -
+    id: ltmabjhc
+    template: /general_content/bento_highlight
+    rows:
+      -
+        id: ltmabkt6
+        template_global: /global/iconamic
+        title: 'Powerful enough for all your clients, flexible enough for all your tech stacks (Bento HL)'
+        description: "Host every website you work on through one platform. Powerful enough to power today's busiest agencies, and flexible enough to handle all the tech stacks you need to host."
+        bentos:
+          -
+            id: ltmaby73
+            type: box
+            enabled: true
+        type: feature_highlight-item
+        enabled: true
+    reverse_alignment: false
+    toggle_alignment: false
+    type: bento_highlight
+    enabled: false
+  -
+    id: ltma5cim
+    template: /general_content/bento
+    template_global: /global/iconamic
+    title: "Today's developers need powerful Web Hosting (Bento Features)"
+    description:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: "Imagine hosting all the websites you work on through one platform. Powerful enough to power today's busiest agencies, and flexible enough to handle all the tech stacks you need to host."
+    boxes:
+      -
+        id: ltma5dzu
+        text:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Here is a box 1'
+        link_type: entry
+        target_blank: false
+        type: box
+        enabled: true
+        image: placeholders-to-delete/webslice-console-screen-2.png
+    type: bento_features
+    enabled: false
+  -
     id: lrzox1cv
     template: page_builder/two_options
     title: 'There are two ways to Webslice'
@@ -98,6 +181,89 @@ page_builder:
         image_hover: photo-1620287341056-49a2f1ab2fdc.jpeg
         url: 'entry::1e33d247-bf25-42a4-b455-b47eb8dcf557'
     type: two_options
+    enabled: true
+  -
+    id: ltmbmkx8
+    template: /page_builder/metrics_section
+    bg_pattern: false
+    metric_items:
+      -
+        id: ltmbmntf
+        template_global: /global/iconamic
+        iconamic: boxes
+        title: 16k
+        description:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'websites hosted'
+        type: item
+        enabled: true
+      -
+        id: ltmbmzi8
+        template_global: /global/iconamic
+        iconamic: thumbs-up
+        title: 97%
+        description:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'customer satisfaction'
+        type: item
+        enabled: true
+      -
+        id: ltmbncl1
+        template_global: /global/iconamic
+        iconamic: users-round
+        title: 20+
+        description:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: "years' experience"
+        type: item
+        enabled: true
+      -
+        id: ltmbrxue
+        template_global: /global/iconamic
+        iconamic: messages-square
+        title: 24/7
+        description:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Support Team'
+        type: item
+        enabled: false
+    type: metrics_section
+    enabled: true
+    title:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Hosting from a reliable, experienced supplier.'
+  -
+    id: ltmais9b
+    template: /page_builder/testimonial_section
+    title:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Thousands of happy customers'
+    bg_pattern: true
+    type: testimonial_section
     enabled: true
   -
     id: ltf4w1hv
@@ -221,69 +387,6 @@ page_builder:
     reverse_alignment: false
     toggle_alignment: false
     type: highlight
-    enabled: true
-  -
-    id: ltkmwpih
-    template: /general_content/_multiple_text_columns
-    columns:
-      -
-        id: ltkmwwnu
-        text:
-          -
-            type: heading
-            attrs:
-              level: 3
-            content:
-              -
-                type: text
-                text: 20+
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: "years' experience"
-        type: column
-        enabled: true
-      -
-        id: ltkmxa4l
-        text:
-          -
-            type: heading
-            attrs:
-              level: 3
-            content:
-              -
-                type: text
-                text: 97%
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'customer satisfaction'
-        type: column
-        enabled: true
-      -
-        id: ltkmxlx1
-        text:
-          -
-            type: heading
-            attrs:
-              level: 3
-            content:
-              -
-                type: text
-                text: '16,000+'
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'sites hosting today'
-        type: column
-        enabled: true
-    type: multiple_text_columns
     enabled: true
 meta_title: 'Webslice - Web hosting for busy developers'
 meta_description: 'Webslice Containers and Webslice Serverless are fast, flexible, global hosting platforms for web developers and agencies. Start a risk-free trial today.'

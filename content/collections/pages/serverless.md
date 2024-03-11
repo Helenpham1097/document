@@ -10,14 +10,14 @@ top_section:
     template_global: /global/default_image
     iconamic: expand
     pre: 'Webslice Serverless'
-    hero_home_title: 'Stretch But Never Break With Incredibly Scalable Hosting'
+    hero_home_title: 'Incredibly Scalable Hosting Without the Complications'
     hero_home_description:
       -
         type: paragraph
         content:
           -
             type: text
-            text: "Finally, a serverless hosting platform that's easy to use, PHP-friendly, and incredibly elastic."
+            text: "Finally, a serverless hosting platform that's easy to use, PHP-friendly, and fully elastic."
     buttons:
       -
         id: lrzodtof
@@ -43,7 +43,7 @@ top_section:
     light_image: illustrations/expand.png
 title: Serverless
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1709865921
+updated_at: 1710114349
 page_builder:
   -
     id: lrzoffkv
@@ -150,9 +150,119 @@ page_builder:
                 target: false
             type: box
             enabled: true
-    reverse_alignment: true
+    reverse_alignment: false
     toggle_alignment: false
     type: bento_highlight
+    enabled: true
+  -
+    id: ltm39uaj
+    template: /page_builder/highlight
+    rows:
+      -
+        id: ltm3jra3
+        highlight_title: 'Easily monitor and manage your serverless sites'
+        highlight_textarea:
+          -
+            type: bulletList
+            content:
+              -
+                type: listItem
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Track performance and resource usage.'
+              -
+                type: listItem
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: "Change your sites' maximum and minimum concurrency."
+              -
+                type: listItem
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Select and change PHP versions.'
+              -
+                type: listItem
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Manage team members.'
+        template_global: /global/default_image
+        default_image: placeholders-to-delete/webslice-console-screen-2.png
+        type: highlight-item
+        enabled: true
+      -
+        id: ltm3koj8
+        highlight_title: 'Save time with features like these'
+        highlight_textarea:
+          -
+            type: bulletList
+            content:
+              -
+                type: listItem
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'One-click SSL.'
+              -
+                type: listItem
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Automatic backups.'
+              -
+                type: listItem
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Create and manage databases.'
+              -
+                type: listItem
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Store and re-use build and release scripts.'
+        template_global: /global/default_image
+        default_image: placeholders-to-delete/webslice-console-screen.png
+        type: highlight-item
+        enabled: true
+    toggle_background: false
+    reverse_alignment: false
+    toggle_alignment: true
+    type: highlight
+    enabled: true
+  -
+    id: ltm54hwa
+    template: /page_builder/cta_form
+    title: 'Register for the Public Beta'
+    description: "Join a select group of developers who will soon see what's possible with Webslice Serverless."
+    type: cta_form
     enabled: true
   -
     id: lti1ioc0
@@ -210,12 +320,16 @@ page_builder:
                 enabled: true
             type: box
             enabled: true
+          -
+            id: ltm39lbf
+            type: box
+            enabled: true
         type: feature_highlight-item
         enabled: true
     reverse_alignment: false
     toggle_alignment: false
     type: bento_highlight
-    enabled: true
+    enabled: false
   -
     id: lti1px32
     template: /general_content/bento
@@ -230,7 +344,7 @@ page_builder:
             type: text
             text: "Here's a description in a Bento Features section."
     type: bento_features
-    enabled: true
+    enabled: false
   -
     id: ltf1pkxq
     template: /page_builder/get_started
@@ -258,7 +372,7 @@ page_builder:
         type: start
         enabled: true
     type: get_started
-    enabled: true
+    enabled: false
   -
     id: lrzokns4
     template: /general_content/bento_highlight
@@ -440,7 +554,7 @@ page_builder:
             content:
               -
                 type: text
-                text: "But if you go serverless without stitching together dozens of web services for yourself, and without changing your development routines, there's a lot to gain."
+                text: "But now you can go serverless without stitching together dozens of web services for yourself, and without changing your development routines. There's a lot to gain."
         type: column
         enabled: true
       -
@@ -500,14 +614,14 @@ page_builder:
         type: column
         enabled: true
     type: multiple_text_columns
-    enabled: true
+    enabled: false
   -
     id: lrzoqogi
     template: page_builder/head_to_documentation
     template_global: /global/iconamic
     iconamic: book-open
     title: 'Learn more about Webslice Serverless'
-    description: 'Check out the Webslice Serverless documention to get familiar with the platform before your Public Beta invitation arrives.'
+    description: 'Get familiar with the platform before your Public Beta invitation arrives. Check out the Webslice Serverless documentation now.'
     sub_title: 'Head to Documentation to see:'
     entry:
       -
