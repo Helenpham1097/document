@@ -1,27 +1,26 @@
 @layer base {
 	input[type="text"],
-    input[type="password"],
-    input[type="email"],
-    input[type="number"],
-    input[type="url"],
-    input[type="date"],
-    input[type="datetime-local"],
-    input[type="month"],
-    input[type="week"],
-    input[type="time"],
-    /* input[type="search"], */
-    input[type="tel"],
-    select,
-    select[multiple],
-    textarea {
-		@apply w-full transform border border-purple-200 bg-white placeholder-zinc-400 shadow-sm transition duration-500 ease-in-out focus:border-purple-300 focus:bg-purple-50 focus:ring focus:ring-purple-200 focus:ring-opacity-50;
+	input[type="password"],
+	input[type="email"],
+	input[type="number"],
+	input[type="url"],
+	input[type="date"],
+	input[type="datetime-local"],
+	input[type="month"],
+	input[type="week"],
+	input[type="time"],
+	input[type="tel"],
+	select,
+	select[multiple],
+	textarea {
+		@apply w-full rounded-md border border-purple-200 bg-white placeholder-zinc-400 focus:border-purple-300 focus:bg-purple-50 focus:ring focus:ring-purple-200 focus:ring-opacity-50 dark:border-green-200 dark:text-zinc-800;
 	}
 	input[type="checkbox"],
 	input[type="radio"] {
 		@apply rounded-sm text-purple-500;
 	}
 	label {
-		@apply text-purple-500;
+		@apply text-purple-500 dark:text-green-500;
 	}
 	::-webkit-calendar-picker-indicator {
 		@apply text-purple-500;

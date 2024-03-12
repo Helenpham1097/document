@@ -1,57 +1,52 @@
-<section class="container max-w-3xl">
-	{{ form:contact_us }}
-		{{ if success }}
-			<div class="my-8 rounded-md bg-green-500 p-2 text-white shadow-sm">
-				<h5 class="text-white">Thank you for getting in touch!</h5>
-				<p>We appreciate you contacting us. One of our staff will be in touch with you soon! Have a great day!</p>
-			</div>
-		{{ /if }}
-		<div class="grid grid-cols-6 gap-6">
-			{{ fields }}
-				{{ if first || count == 2 }}
-					<div class="col-span-6 sm:col-span-3">
-						<label for="contact-{{ handle }}" class="">{{ display }}</label>
-						<input value="{{ old }}" type="text" name="{{ handle }}" id="contact-{{ handle }}" class="" />
-						{{ if error }}
-							<p class="mt-2 text-sm text-red-300">{{ error }}</p>
-						{{ /if }}
-					</div>
-				{{ elseif handle == 'comment' }}
-					<div class="col-span-6">
-						<label for="contact-{{ handle }}" class="">{{ display }}</label>
-						<div class="mt-1">
-							<textarea name="{{ handle }}" id="contact-{{ handle }}" rows="3" class="" placeholder="Message...">{{ old }}</textarea>
-							{{ if error }}
-								<p class="mt-2 text-sm text-red-300">{{ error }}</p>
-							{{ /if }}
-						</div>
-						<p class="mt-2 text-sm text-zinc-500">Let us know how we can help.</p>
-					</div>
-				{{ else }}
-					<div class="col-span-6 sm:col-span-6">
-						<label for="contact-{{ handle }}" class="">{{ display }}</label>
-						<input value="{{ old }}" type="text" name="{{ handle }}" id="contact-{{ handle }}" class="" />
-						{{ if error }}
-							<p class="mt-2 text-sm text-red-300">{{ error }}</p>
-						{{ /if }}
-					</div>
-				{{ /if }}
-			{{ /fields }}
-			<div class="col-span-6 sm:col-span-6">
-				{{ captcha }}
-				{{ if error:captcha }}
-					<p class="mt-2 text-sm text-red-300">{{ error:captcha }}</p>
-				{{ /if }}
-			</div>
+{{ form:contact_us }}
+	{{ if success }}
+		<div class="mb-8 rounded-md bg-green-500 p-4 text-zinc-800">
+			<div class="text-xl font-bold">Thank you for getting in touch!</div>
+			<p>We appreciate you contacting us. One of our staff will be in touch with you soon! Have a great day!</p>
 		</div>
+	{{ /if }}
+	<div class="grid grid-cols-6 gap-6">
+		{{ fields }}
+			{{ if first || count == 2 }}
+				<div class="col-span-6 sm:col-span-3">
+					<label for="contact-{{ handle }}" class="">{{ display }}</label>
+					<input value="{{ old }}" type="text" name="{{ handle }}" id="contact-{{ handle }}" class="" />
+					{{ if error }}
+						<p class="mt-2 text-sm text-red-500">{{ error }}</p>
+					{{ /if }}
+				</div>
+			{{ elseif handle == 'comment' }}
+				<div class="col-span-6">
+					<label for="contact-{{ handle }}" class="">{{ display }}</label>
 
-		<button type="submit" onclick="gtag('event', 'click', {'event_category': 'button', 'event_label': 'Contact Form Submit'})" class="{{ if select:value === 'background-secondary' }} text-black bg-green-500 hover:bg-green-600 hover:text-black focus-visible:ring-offset-green-900 {{ else }} text-white bg-purple-500 hover:bg-purple-800 hover:text-purple-100 focus-visible:ring-offset-purple-900 {{ /if }} text-md group inline-flex items-center px-8 py-4 font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2">
-			Submit
-			<div class="transform transition duration-500 ease-in-out">
-				<svg xmlns="http://www.w3.org/2000/svg" class="{{ if select:value === 'background-secondary' }} text-black group-hover:text-green-900 {{ else}} text-white group-hover:text-purple-100 {{ /if}} h-5 w-5 translate-x-2 transform transition duration-500 ease-in-out" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-				</svg>
-			</div>
-		</button>
-	{{ /form:contact_us }}
-</section>
+					<textarea name="{{ handle }}" id="contact-{{ handle }}" rows="3" class="" placeholder="Message...">{{ old }}</textarea>
+					{{ if error }}
+						<p class="mt-2 text-sm text-red-500">{{ error }}</p>
+					{{ /if }}
+					<p class="mt-2 text-sm text-zinc-500">Let us know how we can help.</p>
+				</div>
+			{{ else }}
+				<div class="col-span-6 sm:col-span-6">
+					<label for="contact-{{ handle }}" class="">{{ display }}</label>
+					<input value="{{ old }}" type="text" name="{{ handle }}" id="contact-{{ handle }}" class="" />
+					{{ if error }}
+						<p class="mt-2 text-sm text-red-500">{{ error }}</p>
+					{{ /if }}
+				</div>
+			{{ /if }}
+		{{ /fields }}
+		<div class="col-span-6 sm:col-span-6">
+			{{ captcha }}
+			{{ if error:captcha }}
+				<p class="mt-2 text-sm text-red-500">{{ error:captcha }}</p>
+			{{ /if }}
+		</div>
+	</div>
+
+	<button type="submit" onclick="gtag('event', 'click', {'event_category': 'button', 'event_label': 'Contact Form Submit'})" class="primary-action-button group relative inline-flex items-center space-x-2 bg-gradient-to-b from-purple-500 to-purple-600 pl-5 pr-4 text-white no-underline shadow-md shadow-black/20 hover:bg-gradient-to-b hover:from-purple-500 hover:to-purple-500 hover:text-white hover:shadow-lg focus:outline-none focus-visible:ring active:bg-gradient-to-b active:from-purple-700 active:to-purple-800 active:text-white motion-safe:transition dark:shadow-black/40 lg:shadow-xl">
+		<span>Submit</span>
+		<svg xmlns="http://www.w3.org/2000/svg" class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+		</svg>
+	</button>
+{{ /form:contact_us }}
