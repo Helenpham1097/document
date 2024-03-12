@@ -4,7 +4,7 @@ blueprint: home
 template: general_content/index
 title: Homepage
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1710127038
+updated_at: 1710131930
 top_section:
   -
     id: RzzOzBfN
@@ -185,12 +185,12 @@ page_builder:
   -
     id: ltmbmkx8
     template: /page_builder/metrics_section
-    bg_pattern: false
+    bg_pattern: true
     metric_items:
       -
         id: ltmbmntf
         template_global: /global/iconamic
-        iconamic: boxes
+        iconamic: monitor-smartphone
         title: 16k
         description:
           -
@@ -251,103 +251,7 @@ page_builder:
         content:
           -
             type: text
-            text: 'Hosting from a reliable, experienced supplier.'
-  -
-    id: ltmais9b
-    template: /page_builder/testimonial_section
-    title:
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: 'Thousands of happy customers'
-    bg_pattern: true
-    type: testimonial_section
-    enabled: true
-  -
-    id: ltf4w1hv
-    template: /general_content/_multiple_text_columns
-    display_title_section:
-      -
-        id: ltf4w2tv
-        center_title_title: 'Thousands of happy customers'
-        type: section_title
-        enabled: true
-    columns:
-      -
-        id: ltf4w6fq
-        text:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: '"If there is a problem with the hardware or environment I don’t need to wake up to deal with it. This used to be a significant point of stress for me and made it hard to go away on trips. So I would say peace of mind is one of the biggest factors."'
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                marks:
-                  -
-                    type: bold
-                text: 'Karl von Randow'
-              -
-                type: text
-                text: ', Co-founder, Cactuslab'
-        type: column
-        enabled: true
-      -
-        id: ltf4wl5f
-        text:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: '"As Silverstripe experts, we have a range of small to large clients and are always looking to add value. Our move to you has put our Silverstripe websites on fast, reliable infrastructure, with the confidence knowing everything will be kept up to date and secure. Support has incredible response times and often go above and beyond."'
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                marks:
-                  -
-                    type: bold
-                text: 'Joe L.'
-              -
-                type: text
-                text: ', Senior Developer, PS/Digital'
-        type: column
-        enabled: true
-      -
-        id: ltf4x5w9
-        text:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: '"We have hundreds of containers on multiple servers. Their uptime is amazing - I can''t recall us having a hardware-related outage over the past 4 years we have used them for our hosting."'
-              -
-                type: hardBreak
-              -
-                type: text
-                text: ★★★★★
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                marks:
-                  -
-                    type: bold
-                text: 'Andrew Mahon'
-        type: column
-        enabled: true
-    type: multiple_text_columns
-    enabled: true
+            text: 'Our experience adds up.'
   -
     id: ltf4xz31
     template: /page_builder/highlight
@@ -361,16 +265,9 @@ page_builder:
             content:
               -
                 type: text
-                text: "Hosting platforms from a team that's been in the industry for over 20 years. We have thousands of happy customers, one of the highest-rated Support Teams you'll find anywhere, and the technical expertise to take a lot of stress off your shoulders. With Webslice on your side you can spend more time building great things for your clients, and less time worrying about servers and infrastructure."
+                text: "We've been in the industry for over 20 years. Today we have thousands of happy customers, one of the highest-rated Support Teams you'll find anywhere, and the technical expertise to take a lot of stress off your shoulders. With Webslice on your side you can spend more time building great things for your clients, and less time worrying about servers and infrastructure."
         template_global: /global/default_image
-        default_image: default-avatar-1636583202.png
-        highlight_textcaption:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: '^^ 99.5% uptime, shown in graphic form'
+        default_image: about-us/team-dec-23.jpg
         buttons:
           -
             id: ltf4zdxk
@@ -380,7 +277,7 @@ page_builder:
             link_type: entry
             target_blank: false
             entry: 128bc187-e58c-4ccc-a5f7-587727470a54
-            button_type: button
+            button_type: secondary
         type: highlight-item
         enabled: true
     toggle_background: false
@@ -388,6 +285,23 @@ page_builder:
     toggle_alignment: false
     type: highlight
     enabled: true
+  -
+    id: ltmais9b
+    template: /page_builder/testimonial_section
+    title:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Join thousands of happy customers'
+    bg_pattern: true
+    type: testimonial_section
+    enabled: true
+    testimonial:
+      - 9f75c212-eda7-496e-83bc-495c704572f1
+      - b3ea2c50-bb47-48f9-8642-655b5b3bc0dd
+      - 7eb7fbac-9430-4592-8a85-bd89b65acc40
 meta_title: 'Webslice - Web hosting for busy developers'
 meta_description: 'Webslice Containers and Webslice Serverless are fast, flexible, global hosting platforms for web developers and agencies. Start a risk-free trial today.'
 ---

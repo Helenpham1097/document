@@ -28,12 +28,12 @@ top_section:
         iconamic: mail
         link_type: email
         target_blank: false
-        email: support@sitehost.nz
+        email: hello@sitehost.nz
         button_type: secondary
 title: Domains
 page_description: 'Register or transfer domains to Webslice for powerful bulk domain management tools, competitive pricing, reliable DNS, and professional service.'
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1709967793
+updated_at: 1710275091
 meta_title: 'Domain name registration, transfer, management'
 meta_description: 'Register or transfer domains to Webslice for powerful bulk domain management tools, competitive pricing, reliable DNS, and professional service.'
 page_builder:
@@ -77,11 +77,11 @@ page_builder:
                   -
                     type: link
                     attrs:
-                      href: 'mailto:support@webslice.com'
+                      href: 'mailto:hello@webslice.com'
                       rel: noopener
                       target: null
                       title: null
-                text: support@webslice.com
+                text: hello@webslice.com
               -
                 type: text
                 text: .

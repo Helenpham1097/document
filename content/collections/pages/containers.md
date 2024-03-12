@@ -26,7 +26,7 @@ top_section:
       -
         id: 2SEK87kA
         template_global: /global/buttons
-        label: 'Start risk-free for 7 days'
+        label: 'Start risk-free'
         iconamic: chevrons-right
         link_type: url
         target_blank: false
@@ -47,71 +47,8 @@ top_section:
     image: illustrations/cloud-containers.png
 title: Containers
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1709866043
+updated_at: 1710130350
 page_builder:
-  -
-    id: lthzqzrb
-    template: /general_content/_multiple_text_columns
-    columns:
-      -
-        id: lthzr15o
-        text:
-          -
-            type: heading
-            attrs:
-              level: 3
-            content:
-              -
-                type: text
-                text: '16,000+'
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'containers hosted.'
-        type: column
-        enabled: true
-      -
-        id: lthzr1l0
-        text:
-          -
-            type: heading
-            attrs:
-              level: 3
-            content:
-              -
-                type: text
-                text: 97%
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'customer satisfaction rate.'
-        type: column
-        enabled: true
-      -
-        id: lthzr0p3
-        text:
-          -
-            type: heading
-            attrs:
-              level: 3
-            content:
-              -
-                type: text
-                text: 99.9%
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'uptime guarantee.'
-        type: column
-        enabled: true
-    type: multiple_text_columns
-    enabled: true
   -
     id: lrftv1b6
     type: bento_features
@@ -272,7 +209,73 @@ page_builder:
         url: '#3'
     bento_type: boxes
     template_global: /global/iconamic
-    iconamic: cube-transparent
+    iconamic: fast-forward
+    footer:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            marks:
+              -
+                type: italic
+            text: '*Add Managed Services to access these time-saving tools'
+  -
+    id: ltmdxmo7
+    template: /page_builder/metrics_section
+    bg_pattern: true
+    metric_items:
+      -
+        id: ltmdykxt
+        template_global: /global/iconamic
+        iconamic: monitor-smartphone
+        title: 16k
+        description:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'websites hosted'
+        type: item
+        enabled: true
+      -
+        id: ltmdykns
+        template_global: /global/iconamic
+        iconamic: terminal-square
+        title: 50+
+        description:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'pre-built container images'
+        type: item
+        enabled: true
+      -
+        id: ltmdyjvr
+        template_global: /global/iconamic
+        iconamic: globe
+        title: '8'
+        description:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'global locations'
+        type: item
+        enabled: true
+    type: metrics_section
+    enabled: true
+    title:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'The numbers behind Webslice Containers'
   -
     id: lthspiex
     template: /general_content/_multiple_text_columns
@@ -436,6 +439,11 @@ page_builder:
         enabled: true
     type: pricing_table
     enabled: true
+    start_type:
+      -
+        content: '[null,null,{"attrs":{"values":{"buttons":[{"show_controls":false}]}}}]'
+      -
+        content: '[null,null,null,{"attrs":{"values":{"buttons":[{"show_controls":false}]}}}]'
   -
     id: lro5li2r
     template: /components/section_title
@@ -559,6 +567,13 @@ page_builder:
                     button_type: button
                     attr_title: 'Create account now'
                     iconamic: chevrons-right
+    rows:
+      -
+        buttons:
+          - {  }
+      -
+        buttons:
+          - {  }
   -
     id: lru3419g
     template: /general_content/bento_highlight
@@ -728,85 +743,21 @@ page_builder:
         enabled: false
         iconamic: wrench
   -
-    id: lthtgf5l
-    template: /general_content/_multiple_text_columns
-    display_title_section:
+    id: ltmf199l
+    template: /page_builder/testimonial_section
+    title:
       -
-        id: lthtiwi5
-        center_title_title: "Here's why 16,000+ websites already run on our containers"
-        type: section_title
-        enabled: true
-    columns:
-      -
-        id: lthtiqim
-        text:
+        type: paragraph
+        content:
           -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: '"Running Craft CMS websites on your solid managed containerised platform allows us to concentrate on building without having to worry about managing backups, server upgrades and software upgrades. It’s reliable, secure and cost effective."'
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                marks:
-                  -
-                    type: bold
-                text: 'Mark Collister'
-              -
-                type: text
-                text: ', Director, The Fold'
-        type: column
-        enabled: true
-      -
-        id: lthtikhg
-        text:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: '"We like having full control of containers and direct access to code. Ultimately we have more control compared to other hosting providers. You guys actually listen to feedback, too."'
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                marks:
-                  -
-                    type: bold
-                text: 'Carey Liu'
-              -
-                type: text
-                text: ', Lead Developer, Central Station'
-        type: column
-        enabled: true
-      -
-        id: lthtitib
-        text:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: '"Being able to run different versions of PHP for example, or different container setups, is a really great advantage for us. There are other providers who have similar options, but they won’t be able to give us the required performance you provide. Honestly, I don’t think that anyone is doing containers like you guys do."'
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                marks:
-                  -
-                    type: bold
-                text: 'Alex Osborn'
-              -
-                type: text
-                text: ', Technical Lead, RIVER'
-        type: column
-        enabled: true
-    type: multiple_text_columns
+            type: text
+            text: 'Agencies love Webslice Containers'
+    bg_pattern: true
+    testimonial:
+      - 85bf0248-4d5f-41ca-b370-38994540c388
+      - 8ad0420a-a37a-44ad-8b1a-2366ad17f110
+      - 93fa4ff4-a89b-4d51-8c02-1f54a0280152
+    type: testimonial_section
     enabled: true
   -
     id: lthz8oal
@@ -976,6 +927,8 @@ page_builder:
         type: feature_highlight-item
         enabled: true
         iconamic: wrench
+    buttons:
+      - {  }
   -
     id: lrochdxy
     template: page_builder/head_to_documentation

@@ -8,8 +8,8 @@ sections:
     type: contact_us_form
     enabled: true
 title: "Let's Talk About Your Hosting"
-updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1710203262
+updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
+updated_at: 1710280789
 meta_title: 'Contact Us - Webslice'
 meta_description: 'Webslice email address and contact form. Talk to us about web hosting on our Webslice Container platform or Webslice Serverless.'
 page_description: 'Scalable hosting shrinks your bills in quiet times and keeps your website fast and available in the busiest periods.'
@@ -55,4 +55,34 @@ cards:
     link_text: 'View more'
     active: true
     url: '#'
+  -
+    id: ltowku4d
+    active: false
+    template_global: /global/iconamic
+    iconamic: map-pin
+    title: 'Office address'
+    description:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: '44 Olive Road'
+          -
+            type: hardBreak
+          -
+            type: text
+            text: Penrose
+          -
+            type: hardBreak
+          -
+            type: text
+            text: 'Auckland 1061'
+          -
+            type: hardBreak
+          -
+            type: text
+            text: 'New Zealand'
+    type: card
+    enabled: false
 ---

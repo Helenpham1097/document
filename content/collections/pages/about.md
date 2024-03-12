@@ -24,7 +24,7 @@ top_section:
     iconamic: users-round
 title: 'About Us'
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1709966291
+updated_at: 1710146285
 page_builder:
   -
     id: lstu1l0i
@@ -101,68 +101,61 @@ page_builder:
     type: multiple_text_columns
     enabled: true
   -
-    id: lti2kyr7
-    template: /general_content/_multiple_text_columns
-    columns:
+    id: ltmoof6t
+    template: /page_builder/metrics_section
+    bg_pattern: true
+    metric_items:
       -
-        id: lti2l0sa
-        text:
-          -
-            type: heading
-            attrs:
-              level: 3
-            content:
-              -
-                type: text
-                text: 20+
+        id: ltmoooc0
+        template_global: /global/iconamic
+        iconamic: calendar
+        title: 20+
+        description:
           -
             type: paragraph
             content:
               -
                 type: text
                 text: 'years in business'
-        type: column
+        type: item
         enabled: true
       -
-        id: lti2l2l3
-        text:
-          -
-            type: heading
-            attrs:
-              level: 3
-            content:
-              -
-                type: text
-                text: 97%
+        id: ltmophsn
+        template_global: /global/iconamic
+        iconamic: thumbs-up
+        title: 97%
+        description:
           -
             type: paragraph
             content:
               -
                 type: text
                 text: 'customer satisfaction rate'
-        type: column
+        type: item
         enabled: true
       -
-        id: lti2l3vf
-        text:
-          -
-            type: heading
-            attrs:
-              level: 3
-            content:
-              -
-                type: text
-                text: '16,000+'
+        id: ltmoqe0b
+        template_global: /global/iconamic
+        iconamic: boxes
+        title: 16k
+        description:
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'containers hosted today'
-        type: column
+                text: 'containers hosted'
+        type: item
         enabled: true
-    type: multiple_text_columns
+    type: metrics_section
     enabled: true
+    title:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'The numbers so far...'
   -
     id: FbFyqlag
     template: /page_builder/highlight
@@ -307,6 +300,23 @@ page_builder:
     toggle_alignment: false
     type: highlight
     enabled: true
+  -
+    id: ltmgipei
+    template: /page_builder/testimonial_section
+    bg_pattern: true
+    testimonial:
+      - 7eb7fbac-9430-4592-8a85-bd89b65acc40
+      - 9ad65c84-3f9a-4a7c-a379-a39d94af051b
+      - dbada8e3-4d1a-4aa5-aa87-f0317e85e9e2
+    type: testimonial_section
+    enabled: true
+    title:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'The things people say about us...'
   -
     id: lti2qxfw
     template: /general_content/_multiple_text_columns
@@ -564,6 +574,14 @@ page_builder:
         image_hover: placeholders-to-delete/webslice-console-screen-2.png
     type: two_options
     enabled: false
+    rows:
+      -
+        buttons:
+          - {  }
+          - {  }
+      -
+        buttons:
+          - {  }
   -
     id: lti3mo31
     template: /page_builder/highlight

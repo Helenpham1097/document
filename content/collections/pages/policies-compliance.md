@@ -286,10 +286,10 @@ page_builder:
                     text: 'Terms & Conditions'
     type: article
     enabled: true
-title: 'Policies Compliance'
+title: 'Policies & Compliance'
 page_description: 'Policies and certifications from Webslice. GDPR, security, compliance and more.'
-meta_title: 'Webslice page title'
+meta_title: 'Policies, privacy and compliance'
 meta_description: 'Policies and certifications from Webslice. GDPR, security, compliance and more.'
-updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1709680763
+updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
+updated_at: 1710279590
 ---

@@ -43,7 +43,7 @@ top_section:
     light_image: illustrations/expand.png
 title: Serverless
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1710114349
+updated_at: 1710146772
 page_builder:
   -
     id: lrzoffkv
@@ -264,115 +264,6 @@ page_builder:
     description: "Join a select group of developers who will soon see what's possible with Webslice Serverless."
     type: cta_form
     enabled: true
-  -
-    id: lti1ioc0
-    template: /general_content/bento_highlight
-    rows:
-      -
-        id: lti1ipt2
-        template_global: /global/iconamic
-        iconamic: arrow-up-narrow-wide
-        title: 'Title #4'
-        description: 'Description of things that are good.'
-        buttons:
-          -
-            id: lti1lpdf
-            template_global: /components/buttons
-            label: 'Register For Public Beta'
-            iconamic: chevrons-right
-            link_type: url
-            target_blank: false
-            url: '#'
-            button_type: button
-        bentos:
-          -
-            id: lti1mbq7
-            items:
-              -
-                id: lti1mdcf
-                text:
-                  -
-                    type: paragraph
-                    content:
-                      -
-                        type: text
-                        text: 'Link 1'
-                target: false
-                type: link
-                enabled: true
-              -
-                id: lti1mhf2
-                text:
-                  -
-                    type: paragraph
-                    content:
-                      -
-                        type: text
-                        text: 'Link 2'
-                  -
-                    type: paragraph
-                    content:
-                      -
-                        type: text
-                        text: 'Link 2.5'
-                target: false
-                type: link
-                enabled: true
-            type: box
-            enabled: true
-          -
-            id: ltm39lbf
-            type: box
-            enabled: true
-        type: feature_highlight-item
-        enabled: true
-    reverse_alignment: false
-    toggle_alignment: false
-    type: bento_highlight
-    enabled: false
-  -
-    id: lti1px32
-    template: /general_content/bento
-    template_global: /global/iconamic
-    iconamic: arrow-up-narrow-wide
-    title: 'Bento features title'
-    description:
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: "Here's a description in a Bento Features section."
-    type: bento_features
-    enabled: false
-  -
-    id: ltf1pkxq
-    template: /page_builder/get_started
-    title: 'Public Beta opens soon'
-    description: 'Register now to be one of the first developers on Webslice Serverless. Invitations will be sent in the first half of 2024.'
-    start_type:
-      -
-        id: ltf1ro4g
-        template_global: /global/iconamic
-        iconamic: mail
-        title: 'Register Now.'
-        description: 'Add yourself to the email list today.'
-        content:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Can we have an email-collection form on this page?'
-        type: start
-        enabled: true
-      -
-        id: ltf1u45p
-        template_global: /global/iconamic
-        type: start
-        enabled: true
-    type: get_started
-    enabled: false
   -
     id: lrzokns4
     template: /general_content/bento_highlight
