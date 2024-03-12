@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  deploy:
+  build:
     runs-on: [ self-hosted, large ]
     timeout-minutes: 20
     steps:
@@ -15,12 +15,12 @@ jobs:
       # Add our SSH key into ssh agent to authenticate with our Cloud Container server
       - uses: webfactory/ssh-agent@v0.9.0
         with:
-        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-     - name: Setup Node
-       uses: actions/setup-node@v4
-       with:
-         node-version: '18'
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -47,11 +47,11 @@ jobs:
         run: >
           rsync -avrc --delete --exclude-from=ci-exclude.txt
           -e 'ssh -o StrictHostKeyChecking=no'
-          ./ "$PROD_SSH_USER"@$PROD_SERVER:"$DEPLOY_PATH"
+          ./ "${{ vars.PROD_SSH_USER }}"@${{ vars.PROD_SERVER }}:"${{ vars.DEPLOY_PATH }}"
 
       - name: Warn the cache
         run: >
-          ssh -o StrictHostKeyChecking=no "$PROD_SSH_USER"@$PROD_SERVER
+          ssh -o StrictHostKeyChecking=no "${{ vars.PROD_SSH_USER }}"@${{ vars.PROD_SERVER }}
           "cd /container/application &&
-          sed -i "s/CACHE_TIMESTAMP=.*/CACHE_TIMESTAMP=$release/g" .env &&
+          sed -i "s/CACHE_TIMESTAMP=.*/CACHE_TIMESTAMP=${{ github.sha }}/g" .env &&
           php please static:warm"
