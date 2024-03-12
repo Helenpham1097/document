@@ -9,8 +9,8 @@
 
 <!-- /typography/_caption.antlers.html -->
 {{ if caption }}
-	<{{ as or 'span' }} class="{{ color or 'text-zinc-700 dark:text-zinc-400' }} {{ class }} mt-2 block text-sm">
-		{{ caption }}
+	<{{ as or 'span' }} class="{{ color or 'text-zinc-700 dark:text-zinc-400' }} {{ class }} block text-center text-sm">
+		{{ caption | strip_tags:p }}
 	</{{ as or 'span' }}>
 {{ /if }}
 <!-- End: /typography/_caption.antlers.html -->

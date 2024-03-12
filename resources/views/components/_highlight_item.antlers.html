@@ -60,7 +60,7 @@
         {{ /if }}
     {{ /if }} relative lg:mx-auto lg:w-1/2">
 		{{ if toggle_background }}
-			<div class="absolute right-0 flex translate-x-10 -translate-y-10 -space-x-6 opacity-90">
+			<div class="absolute right-0 flex -translate-y-10 translate-x-10 -space-x-6 opacity-90">
 				<div data-aos="fade-right" data-aos-delay="300">
 					<svg class="w-64 self-end fill-current text-zinc-300/20 dark:text-zinc-700/20" viewBox="0 0 549 564" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M304.108 0L-0.000494035 0L548.77 564V250.407L304.108 0Z" />
@@ -79,12 +79,11 @@
 			</div>
 		{{ /if }}
 		{{ if default_image }}
-			<div class="relative">
-				{{ partial:components/figure :image="default_image" cover="false" lazy="false" maxwidth="768" quality='70' }}
+			<div class="relative {{ if border }}space-y-8{{ /if }}">
+				{{ partial:components/figure :image="default_image_dark" class="hidden dark:block {{ if border }} border-2 shadow-2xl shadow-purple-500  border-purple-600 ring-[10px] ring-purple-500/30 rounded-xl {{ /if }}" }}
+				{{ partial:components/figure :image="default_image" class="dark:hidden block  {{ if border }} border-2 shadow-2xl  border-purple-600/50 ring-[10px] ring-purple-500/30 rounded-xl {{ /if }}" }}
+				{{ partial:typography/caption caption="{{highlight_textcaption}}" }}
 			</div>
-		{{ /if }}
-		{{ if highlight_textcaption | strip_tags:p }}
-			{{ partial:typography/caption :caption='highlight_textcaption' }}
 		{{ /if }}
 	</div>
 </div>
