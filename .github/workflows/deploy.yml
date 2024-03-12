@@ -7,75 +7,51 @@ on:
 
 jobs:
   deploy:
+    runs-on: [ self-hosted, large ]
     timeout-minutes: 20
-    runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
-# Commented out to speed up the build pipeline as the gulp image optimization is taking too long.
-# We will just commit the optimized assets to the repository.
-#      - name: Setup Node
-#        uses: actions/setup-node@v2
-#        with:
-#          node-version: '12'
-#
-#      - name: Install NPM dependencies
-#        run: npm install
-#
-#      - name: Generate optimized assets
-#        run: gulp
+      # Add our SSH key into ssh agent to authenticate with our Cloud Container server
+      - uses: webfactory/ssh-agent@v0.9.0
+        with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+     - name: Setup Node
+       uses: actions/setup-node@v4
+       with:
+         node-version: '18'
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '7.4'
+          php-version: '8.3'
 
       - name: Install Composer dependencies
-        run: composer install --no-progress --prefer-dist --optimize-autoloader
+        run: composer install --no-interaction --no-progress --prefer-dist --optimize-autoloader
 
-      - name: Generate static site
-        env:
-          APP_KEY: ${{ secrets.APP_KEY }}
-        run: php please ssg:generate
+      - name: Install NPM dependencies
+        run: npm ci --cache .npm --prefer-offline
 
-      - name: Wait for previous workflows to complete (prevent race condition)
-        uses: softprops/turnstyle@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build Statamic site
+        run: npm run build:prod
 
-#      - name: Deploy to Webslice
-#        uses: peaceiris/actions-gh-pages@v3
-#        with:
-#          github_token: ${{ secrets.GITHUB_TOKEN }}
-#          publish_dir: ./storage/app/static
-#          destination_dir: public
-
-      - name: Deploy to S3
-        uses: jakejarvis/s3-sync-action@master
-        with:
-          args: --acl public-read --follow-symlinks --delete
-        env:
-          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: 'ap-southeast-2'
-          SOURCE_DIR: './storage/app/static'
-
-#      - name: Invalidate CloudFront cache
-#        uses: chetan/invalidate-cloudfront-action@master
-#        env:
-#          DISTRIBUTION: ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION }}
-#          PATHS: '/*'
-#          AWS_REGION: 'ap-southeast-2'
-#          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-#          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-
-      - name: Purge Cloudflare cache
-        env:
-          ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
-          TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}
+      - name: Clear artisan cache and cache route
         run: |
-          curl -X POST "https://api.cloudflare.com/client/v4/zones/$ZONE/purge_cache" \
-               -H "Authorization: Bearer $TOKEN" \
-               -H "Content-Type: application/json" \
-               --data '{"purge_everything":true}'
+          php artisan cache:clear
+          php artisan route:clear
+          php artisan route:cache
+          php please stache:refresh
+
+      - name: Rsync files
+        run: >
+          rsync -avrc --delete --exclude-from=ci-exclude.txt
+          -e 'ssh -o StrictHostKeyChecking=no'
+          ./ "$PROD_SSH_USER"@$PROD_SERVER:"$DEPLOY_PATH"
+
+      - name: Warn the cache
+        run: >
+          ssh -o StrictHostKeyChecking=no "$PROD_SSH_USER"@$PROD_SERVER
+          "cd /container/application &&
+          sed -i "s/CACHE_TIMESTAMP=.*/CACHE_TIMESTAMP=$release/g" .env &&
+          php please static:warm"
