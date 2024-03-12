@@ -1,7 +1,8 @@
 title: 'Contact Us'
 email:
   -
-    to: sales@myhost.nz
-    from: "{{ name }} <{{ email }}>"
-    reply_to: "{{ email }}"
+    id: CHAZVNeZ
+    to: hello@webslice.com
+    from: '{{ name }} <{{ email }}>'
+    reply_to: '{{ email }}'
     subject: '{{ subject ?? "Website Contact" }}'
