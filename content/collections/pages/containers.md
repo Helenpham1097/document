@@ -32,7 +32,7 @@ top_section:
         target_blank: false
         button_type: button
         attr_title: 'Start risk-free for 7 days'
-        url: '#'
+        url: 'https://console.webslice.com/register'
       -
         id: lro57zsk
         template_global: /components/buttons
@@ -47,7 +47,7 @@ top_section:
     image: illustrations/cloud-containers.png
 title: Containers
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1710285102
+updated_at: 1710301344
 page_builder:
   -
     id: lrftv1b6
@@ -294,6 +294,7 @@ page_builder:
         default_image: placeholders-to-delete/webslice-console-screen.png
         type: highlight-item
         enabled: true
+        border: false
       -
         id: lthuqphm
         highlight_title: 'Use simple controls to make big changes'
@@ -308,6 +309,7 @@ page_builder:
         default_image: placeholders-to-delete/webslice-console-screen-2.png
         type: highlight-item
         enabled: true
+        border: false
     toggle_background: false
     reverse_alignment: false
     toggle_alignment: false
@@ -475,7 +477,7 @@ page_builder:
                     label: ' Create account now'
                     link_type: url
                     target_blank: false
-                    url: '#'
+                    url: 'https://console.webslice.com/register'
                     button_type: button
                     attr_title: ' Create account now'
                     iconamic: chevrons-right
@@ -539,7 +541,7 @@ page_builder:
                     label: 'Create account now'
                     link_type: url
                     target_blank: false
-                    url: '#'
+                    url: 'https://console.webslice.com/register'
                     button_type: button
                     attr_title: 'Create account now'
                     iconamic: chevrons-right
@@ -585,7 +587,7 @@ page_builder:
             label: 'Start risk-free for 7 days'
             link_type: url
             target_blank: false
-            url: '#'
+            url: 'https://console.webslice.com/register'
             button_type: button
             iconamic: chevrons-right
         description: 'Our experts are always working to keep servers and networks up to date and secure. You can just focus on developing great things.'

@@ -375,7 +375,7 @@ page_builder:
         content:
           -
             type: text
-            text: "(iv) you and your End Users' wrongful or negligent acts or omission in connection with its performance of any SiteHost Service; "
+            text: "(iv) you and your End Users' wrongful or negligent acts or omission in connection with its performance of any Webslice Service; "
       -
         type: paragraph
         content:
@@ -495,9 +495,9 @@ page_builder:
     enabled: true
 title: 'Data Processor Agreement'
 parent: 554e8ede-cfaa-435a-978c-7759b2c9c1ee
-meta_title: 'Webslice page title'
-meta_description: 'Scalable hosting shrinks your bills in quiet times and keeps your website fast and available in the busiest periods.'
+meta_title: 'Data Processor Agreement - Webslice'
+meta_description: 'The Data Processor Agreement (DPA) lays out the obligations for us and our customers.'
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1710292329
+updated_at: 1710298955
 page_description: 'Scalable hosting shrinks your bills in quiet times and keeps your website fast and available in the busiest periods.'
 ---

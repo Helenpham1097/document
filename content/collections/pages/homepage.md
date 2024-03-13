@@ -4,7 +4,7 @@ blueprint: home
 template: general_content/index
 title: Homepage
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1710131930
+updated_at: 1710301111
 top_section:
   -
     id: RzzOzBfN
@@ -122,35 +122,6 @@ page_builder:
     type: bento_highlight
     enabled: false
   -
-    id: ltma5cim
-    template: /general_content/bento
-    template_global: /global/iconamic
-    title: "Today's developers need powerful Web Hosting (Bento Features)"
-    description:
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: "Imagine hosting all the websites you work on through one platform. Powerful enough to power today's busiest agencies, and flexible enough to handle all the tech stacks you need to host."
-    boxes:
-      -
-        id: ltma5dzu
-        text:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Here is a box 1'
-        link_type: entry
-        target_blank: false
-        type: box
-        enabled: true
-        image: placeholders-to-delete/webslice-console-screen-2.png
-    type: bento_features
-    enabled: false
-  -
     id: lrzox1cv
     template: page_builder/two_options
     title: 'There are two ways to Webslice'
@@ -251,7 +222,15 @@ page_builder:
         content:
           -
             type: text
-            text: 'Our experience adds up.'
+            text: 'See how well'
+          -
+            type: hardBreak
+          -
+            type: text
+            marks:
+              -
+                type: bold
+            text: 'our experience adds up.'
   -
     id: ltf4xz31
     template: /page_builder/highlight
@@ -280,6 +259,7 @@ page_builder:
             button_type: secondary
         type: highlight-item
         enabled: true
+        border: false
     toggle_background: false
     reverse_alignment: false
     toggle_alignment: false

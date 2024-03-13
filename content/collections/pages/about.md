@@ -24,7 +24,7 @@ top_section:
     iconamic: users-round
 title: 'About Us'
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1710285208
+updated_at: 1710298759
 page_builder:
   -
     id: lstu1l0i

@@ -185,12 +185,10 @@ page_builder:
                       -
                         type: link
                         attrs:
-                          href: '#'
+                          href: 'statamic://entry::c478339d-09f9-4ef4-a728-afc4430e7b03'
                           rel: null
                           target: null
                           title: null
-                      -
-                        type: bold
                     text: 'Privacy and Anti-Corruption Policy'
                   -
                     type: text
@@ -224,12 +222,10 @@ page_builder:
                       -
                         type: link
                         attrs:
-                          href: '#'
+                          href: 'statamic://entry::adf2e9b3-5556-4b3f-a473-22c2642bf1c8'
                           rel: null
                           target: null
                           title: null
-                      -
-                        type: bold
                     text: 'Terms & Conditions'
     type: article
     enabled: true
@@ -238,5 +234,5 @@ page_description: 'Policies and certifications from Webslice. GDPR, security, co
 meta_title: 'Policies, privacy and compliance'
 meta_description: 'Policies and certifications from Webslice. GDPR, security, compliance and more.'
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1710292422
+updated_at: 1710299172
 ---

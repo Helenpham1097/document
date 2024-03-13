@@ -25,7 +25,7 @@ parent: 554e8ede-cfaa-435a-978c-7759b2c9c1ee
 meta_title: 'Privacy Policy - Webslice'
 meta_description: 'Webslice is serious about your data and your privacy. This policy is informed by GDPR.'
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1710283919
+updated_at: 1710300733
 page_builder:
   -
     id: ltoxlxar
@@ -350,11 +350,11 @@ page_builder:
               -
                 type: link
                 attrs:
-                  href: 'https://www.windcave.com/'
+                  href: 'https://eway.io/'
                   rel: null
                   target: null
                   title: null
-            text: Windcave
+            text: Eway
           -
             type: text
             text: .
