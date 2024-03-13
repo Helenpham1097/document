@@ -50,5 +50,12 @@
 				{{ /nav:footer }}
 			</div>
 		</div>
+		<div class="relative mt-8 py-4">
+			<div class="absolute inset-0 rounded-xl bg-gradient-to-r from-zinc-100/0 via-zinc-100 to-zinc-100/0 opacity-40 dark:from-zinc-700/0 dark:via-zinc-700 dark:to-zinc-700/0 dark:opacity-20"></div>
+			<div class="flex items-center justify-center gap-1 text-center text-xs">
+				{{ svg src="{{config:iconamic:path}}/map-pin.svg" class='size-3' }}
+				<span>{{ company_information:address }}</span>
+			</div>
+		</div>
 	</div>
 </footer>
