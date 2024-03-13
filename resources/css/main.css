@@ -35,3 +35,6 @@
 .dev * {
 	@apply border border-red-500/30 bg-red-500/20;
 }
+.dark {
+	color-scheme: dark;
+}
