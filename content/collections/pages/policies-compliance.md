@@ -32,57 +32,27 @@ page_builder:
         content:
           -
             type: text
-            marks:
-              -
-                type: bold
             text: Security
       -
         type: paragraph
         content:
           -
             type: text
-            text: 'We go to great lengths to protect our facilities, infrastructure, data and customers. We follow industry best practices and are regularly audited by third parties to keep us on our toes. We also practice responsible disclosure and encourage others to do the same. You can read more about this in our Security Statement.'
-      -
-        type: bulletList
-        content:
+            text: 'We go to great lengths to protect our facilities, infrastructure, data and customers. We follow industry best practices and are regularly audited by third parties to keep us on our toes. We also practice responsible disclosure and encourage others to do the same. You can read more about this in our '
           -
-            type: listItem
-            content:
+            type: text
+            marks:
               -
-                type: paragraph
-                content:
-                  -
-                    type: text
-                    marks:
-                      -
-                        type: link
-                        attrs:
-                          href: '#'
-                          rel: null
-                          target: null
-                          title: null
-                      -
-                        type: bold
-                    text: Infrastructure
+                type: link
+                attrs:
+                  href: 'statamic://entry::94127328-e90f-4492-a6c0-09ad1ebf685f'
+                  rel: null
+                  target: null
+                  title: null
+            text: 'Security Statement'
           -
-            type: listItem
-            content:
-              -
-                type: paragraph
-                content:
-                  -
-                    type: text
-                    marks:
-                      -
-                        type: link
-                        attrs:
-                          href: '#'
-                          rel: null
-                          target: null
-                          title: null
-                      -
-                        type: bold
-                    text: 'Security Statement'
+            type: text
+            text: .
       -
         type: paragraph
         content:
@@ -97,29 +67,21 @@ page_builder:
         content:
           -
             type: text
-            text: 'Alongside our general security practices we have also completed certain compliance processes and certifications to give you peace-of-mind and make your procurement process easier.'
-      -
-        type: bulletList
-        content:
+            text: 'Alongside our general security practices we have also completed certain '
           -
-            type: listItem
-            content:
+            type: text
+            marks:
               -
-                type: paragraph
-                content:
-                  -
-                    type: text
-                    marks:
-                      -
-                        type: link
-                        attrs:
-                          href: '#'
-                          rel: null
-                          target: null
-                          title: null
-                      -
-                        type: bold
-                    text: 'Compliance & Certifications'
+                type: link
+                attrs:
+                  href: 'statamic://entry::a19ecebd-8c09-4d53-8e8e-3890425459b6'
+                  rel: null
+                  target: null
+                  title: null
+            text: 'compliance processes and certifications'
+          -
+            type: text
+            text: ' to give you peace-of-mind and make your procurement process easier.'
       -
         type: heading
         attrs:
@@ -127,9 +89,6 @@ page_builder:
         content:
           -
             type: text
-            marks:
-              -
-                type: bold
             text: GDPR
       -
         type: paragraph
@@ -158,12 +117,10 @@ page_builder:
                       -
                         type: link
                         attrs:
-                          href: '#'
+                          href: 'statamic://entry::56e5dfac-32cc-41a8-b7ce-1ee01a310dd6'
                           rel: null
                           target: null
                           title: null
-                      -
-                        type: bold
                     text: 'Privacy Policy'
           -
             type: listItem
@@ -177,12 +134,10 @@ page_builder:
                       -
                         type: link
                         attrs:
-                          href: '#'
+                          href: 'statamic://entry::fb72c199-aa92-4c87-a1e5-30ed06b2c106'
                           rel: null
                           target: null
                           title: null
-                      -
-                        type: bold
                     text: 'Data Processing Agreement'
       -
         type: heading
@@ -191,9 +146,6 @@ page_builder:
         content:
           -
             type: text
-            marks:
-              -
-                type: bold
             text: Privacy
       -
         type: paragraph
@@ -216,12 +168,10 @@ page_builder:
                       -
                         type: link
                         attrs:
-                          href: '#'
+                          href: 'statamic://entry::56e5dfac-32cc-41a8-b7ce-1ee01a310dd6'
                           rel: null
                           target: null
                           title: null
-                      -
-                        type: bold
                     text: 'Privacy Policy'
           -
             type: listItem
@@ -252,9 +202,6 @@ page_builder:
         content:
           -
             type: text
-            marks:
-              -
-                type: bold
             text: Terms
       -
         type: paragraph
@@ -291,5 +238,5 @@ page_description: 'Policies and certifications from Webslice. GDPR, security, co
 meta_title: 'Policies, privacy and compliance'
 meta_description: 'Policies and certifications from Webslice. GDPR, security, compliance and more.'
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1710279590
+updated_at: 1710292422
 ---

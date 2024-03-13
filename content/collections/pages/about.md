@@ -24,7 +24,7 @@ top_section:
     iconamic: users-round
 title: 'About Us'
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1710146285
+updated_at: 1710285208
 page_builder:
   -
     id: lstu1l0i
@@ -317,87 +317,6 @@ page_builder:
           -
             type: text
             text: 'The things people say about us...'
-  -
-    id: lti2qxfw
-    template: /general_content/_multiple_text_columns
-    columns:
-      -
-        id: lti2r6mg
-        text:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: '"We have hundreds of containers on multiple servers. Their uptime is amazing - I can''t recall us having a hardware-related outage over the past 4 years we have used them for our hosting."'
-              -
-                type: hardBreak
-              -
-                type: text
-                text: ★★★★★
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                marks:
-                  -
-                    type: bold
-                text: 'Andrew Mahon'
-        type: column
-        enabled: true
-      -
-        id: lti2r5bs
-        text:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: '"By far the most reliable and competent hosting company we have used."'
-              -
-                type: hardBreak
-              -
-                type: text
-                text: ★★★★★
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                marks:
-                  -
-                    type: bold
-                text: 'Andy D.'
-        type: column
-        enabled: true
-      -
-        id: lti2r80m
-        text:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: '"As a website development company, we''ve used a number of hosting and domain management companies over the last 20 years and this is without a doubt the best we''ve ever encountered."'
-              -
-                type: hardBreak
-              -
-                type: text
-                text: ★★★★★
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                marks:
-                  -
-                    type: bold
-                text: 'Slice of Pie'
-        type: column
-        enabled: true
-    type: multiple_text_columns
-    enabled: true
   -
     id: lti2qpzv
     template: /page_builder/highlight

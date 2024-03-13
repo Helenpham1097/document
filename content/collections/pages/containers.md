@@ -47,7 +47,7 @@ top_section:
     image: illustrations/cloud-containers.png
 title: Containers
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1710130350
+updated_at: 1710285102
 page_builder:
   -
     id: lrftv1b6
@@ -276,30 +276,6 @@ page_builder:
           -
             type: text
             text: 'The numbers behind Webslice Containers'
-  -
-    id: lthspiex
-    template: /general_content/_multiple_text_columns
-    columns:
-      -
-        id: lthspk1j
-        text:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                marks:
-                  -
-                    type: italic
-                text: '*Add Managed Services to access these enhanced developer tools'
-        type: column
-        enabled: true
-      -
-        id: lthsr8ce
-        type: column
-        enabled: true
-    type: multiple_text_columns
-    enabled: true
   -
     id: lthukf6c
     template: /page_builder/highlight
