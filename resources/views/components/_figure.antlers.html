@@ -5,17 +5,8 @@
 #}}
 
 <!-- /components/_figure.antlers.html -->
-<figure
-    class=" 
-        {{# not-prose #}}
-        {{ if remove_prose == 'true'}} {{else}} not-prose {{/if}}
-        {{ if size == 'md'}} size-md {{/if}}
-        {{ if size == 'lg'}} size-lg {{/if}}
-        {{ if size == 'xl'}} size-xl {{/if}}
-        {{ if size == ''}}  {{/if}}
-    "
->
-    {{ partial:components/picture
+<figure>
+    {{ partial:global/picture
         :image="image"
         cover="true"
         lazy="false"

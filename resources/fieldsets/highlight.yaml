@@ -5,97 +5,148 @@ fields:
     field:
       display: template
       type: hidden
-      icon: hidden
       listable: hidden
       default: /page_builder/highlight
       instructions_position: above
-      read_only: false
   -
     handle: rows
     field:
       collapse: false
       sets:
-        highlight-item:
-          display: Feature
-          fields:
-            -
-              handle: highlight_title
-              field:
-                input_type: text
-                antlers: false
-                display: Title
-                type: text
-                icon: text
-                listable: hidden
-            -
-              handle: highlight_textarea
-              field:
-                antlers: false
-                display: Textarea
-                always_show_set_button: false
-                buttons:
-                  - h3
-                  - h4
-                  - h5
-                  - bold
-                  - italic
-                  - unorderedlist
-                  - removeformat
-                  - anchor
-                  - table
-                save_html: false
-                toolbar_mode: fixed
-                link_noopener: false
-                link_noreferrer: false
-                target_blank: false
-                reading_time: false
-                fullscreen: false
-                allow_source: true
-                enable_input_rules: false
-                enable_paste_rules: true
-                type: bard
-                icon: textarea
-                listable: hidden
-            -
-              import: default_image
-            -
-              handle: highlight_textcaption
-              field:
-                input_type: text
-                antlers: false
-                display: TextCaption
-                always_show_set_button: false
-                buttons:
-                  - bold
-                  - italic
-                  - removeformat
-                  - anchor
-                save_html: false
-                toolbar_mode: fixed
-                link_noopener: false
-                link_noreferrer: false
-                target_blank: false
-                reading_time: false
-                fullscreen: false
-                allow_source: true
-                enable_input_rules: false
-                enable_paste_rules: true
-                type: bard
-                icon: text
-                listable: hidden
-                character_limit: 100
-            -
-              import: buttons
+        main:
+          display: Main
+          instructions: null
+          icon: null
+          sets:
+            highlight-item:
+              display: Feature
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: highlight_title
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Title
+                    type: text
+                    listable: hidden
+                -
+                  handle: highlight_textarea
+                  field:
+                    antlers: false
+                    display: Textarea
+                    always_show_set_button: false
+                    buttons:
+                      - h3
+                      - h4
+                      - h5
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - removeformat
+                      - anchor
+                      - table
+                    save_html: false
+                    toolbar_mode: fixed
+                    link_noopener: false
+                    link_noreferrer: false
+                    target_blank: false
+                    reading_time: false
+                    fullscreen: false
+                    allow_source: true
+                    enable_input_rules: false
+                    enable_paste_rules: true
+                    type: bard
+                    listable: hidden
+                -
+                  handle: border
+                  field:
+                    default: false
+                    type: toggle
+                    display: Border
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: default_image
+                  field:
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    show_set_alt: true
+                    type: assets
+                    display: 'Light Image'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    max_files: 1
+                    width: 50
+                -
+                  handle: default_image_dark
+                  field:
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    show_set_alt: true
+                    type: assets
+                    display: 'Dark image'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    max_files: 1
+                    width: 50
+                -
+                  handle: highlight_textcaption
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: TextCaption
+                    always_show_set_button: false
+                    buttons:
+                      - bold
+                      - italic
+                      - removeformat
+                      - anchor
+                    save_html: false
+                    toolbar_mode: fixed
+                    link_noopener: false
+                    link_noreferrer: false
+                    target_blank: false
+                    reading_time: false
+                    fullscreen: false
+                    allow_source: true
+                    enable_input_rules: false
+                    enable_paste_rules: true
+                    type: bard
+                    listable: hidden
+                    character_limit: 100
+                -
+                  import: buttons
       display: Rows
       type: replicator
-      icon: replicator
       listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      previews: true
+      fullscreen: true
+      hide_display: false
   -
     handle: toggle_background
     field:
       display: 'Toggle Background'
       type: toggle
-      icon: toggle
       listable: hidden
       width: 33
       instructions: 'Add a coloured background to the feature, the image will look flat.'
@@ -104,7 +155,6 @@ fields:
     field:
       display: 'Reverse Alignment'
       type: toggle
-      icon: toggle
       listable: hidden
       width: 33
       instructions: 'Alternate the order of the features, from right to left or vice versa.'
@@ -113,7 +163,6 @@ fields:
     field:
       display: 'Toggle alignment'
       type: toggle
-      icon: toggle
       listable: hidden
       width: 33
       instructions: 'Align all features to the left or right.'
