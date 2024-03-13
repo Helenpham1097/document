@@ -1,9 +1,10 @@
 <section class="relative h-full w-full py-12 px-6 lg:px-24 lg:py-24">
-	<div class="bg-[size:24px_24px] absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+	
+	<div class="absolute inset-0 -z-10 rounded-2xl bg-[repeating-linear-gradient(-45deg,_rgba(10,10,10,_0.15),_rgba(10,10,10,_0.15)_1px,_transparent_1px,_transparent_6px)] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] [background-size:8px_8px] dark:bg-[repeating-linear-gradient(-45deg,_rgba(255,255,255,_0.15),_rgba(255,255,255,_0.15)_1px,_transparent_1px,_transparent_6px)]"></div>
 	<div class="container relative mx-auto flex flex-col gap-6 xl:flex-row" x-data="{tab: 1}">
 		<div class="{{ if start_type | count == 1 }} justify-center {{ else }} justify-start {{ /if }} space-y-12 xl:w-1/2">
 			<div class="max-w-xl">
-				{{ partial:typography/h2 :content="title | strip_tags:p" class=' bg-gradient-to-tr dark:from-green-500 from-purple-700 dark:to-purple-800 to-green-500 bg-clip-text !text-transparent' }}
+				{{ partial:typography/h2 :content="title | strip_tags:p" class=' ' }}
 				{{ partial:typography/p :content="description | strip_tags:p" class=' mt-3 lg:mt-5' }}
 			</div>
 			{{ if start_type | count >= 2 }}

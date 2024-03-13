@@ -3,7 +3,7 @@
 	/* bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] */
 	/* bg-gradient-to-l */
 
-	@apply transition-all duration-500 ease-in-out;
+	/* @apply transition-all duration-500 ease-in-out; */
 
 	/* Light */
 	/* ------- */
@@ -13,7 +13,7 @@
 	/* border // border hover */
 	@apply border border-zinc-200 hover:border-zinc-300;
 	/* Box styles */
-	@apply rounded-xl shadow-xl shadow-black/20  hover:shadow-2xl;
+	@apply rounded-xl shadow-xl shadow-black/20 hover:shadow-2xl;
 	/* Text-style */
 	@apply text-zinc-800;
 
