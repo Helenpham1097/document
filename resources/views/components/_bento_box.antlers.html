@@ -1,18 +1,9 @@
 {{ if text }}
-	<{{ as or 'a' }}
-		{{ slot:attributes }}
-		class="bento_box group/illus {{ class }} relative isolate flex flex-1 flex-col-reverse justify-between overflow-hidden bg-white dark:bg-zinc-900 sm:flex-row"
-		{{ if link_type == 'entry'}} href="{{ entry:url }}" {{ /if }}
-		{{ if link_type == 'url'}} href="{{ url }}"{{ /if }}
-		{{ if link_type == 'email'}} href="mailto:{{ email | obfuscate_email }}"{{ /if }}
-		{{ if link_type == 'tel'}} href="tel:{{ tel }}"{{ /if }}
-		{{ target_blank ?= 'rel="noopener" target="_blank"' }}
-		{{ attr_title ?= 'title="{{ attr_title }}"' }}
-		{{ attr_aria ?= 'aria-label="{{ attr_aria }}"' }}>
+	<{{ as or 'a' }} {{ slot:attributes }} class="bento_box group/illus {{ class }} relative isolate overflow-hidden bg-white dark:bg-zinc-900" {{ if link_type == 'entry'}} href="{{ entry:url }}" {{ /if }} {{ if link_type == 'url'}} href="{{ url }}"{{ /if }} {{ if link_type == 'email'}} href="mailto:{{ email | obfuscate_email }}"{{ /if }} {{ if link_type == 'tel'}} href="tel:{{ tel }}"{{ /if }} {{ target_blank ?= 'rel="noopener" target="_blank"' }} {{ attr_title ?= 'title="{{ attr_title }}"' }} {{ attr_aria ?= 'aria-label="{{ attr_aria }}"' }}>
 		{{ partial:illustration/div_grid class='absolute left-0 right-0 mx-auto flex h-full w-full justify-between lg:h-full' }}
 		{{ slot }}
 		<div class="{{ content_class }} relative z-10 space-y-2 p-4 xl:p-8">
-			<div class="{{ class }} {{ if col }} flex-col {{ /if }} group relative flex gap-1">
+			<div class="group relative flex flex-col gap-1">
 				{{# icon animation #}}
 				<div class="relative size-7 flex-none text-purple-500 dark:text-green-500">
 					<div class="absolute translate-y-0 opacity-100 transition duration-500 ease-out group-hover:-translate-y-4 group-hover:opacity-0">

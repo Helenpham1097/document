@@ -19,12 +19,12 @@ top_section:
     type: hero
     enabled: true
     shape: diagonal
-    image: about-us/team-dec-23.jpg
+    image: about-us/about-us.png
     pre: 'About Us'
     iconamic: users-round
 title: 'About Us'
-updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1710298759
+updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
+updated_at: 1710387572
 page_builder:
   -
     id: lstu1l0i
@@ -229,6 +229,7 @@ page_builder:
         default_image: about-us/2d34429616f83487ec069ebd911356db.webp
         type: highlight-item
         enabled: true
+        border: false
       -
         id: TWqxZylm
         highlight_title: 'Your aspirations fuel our curiosity'
@@ -269,6 +270,7 @@ page_builder:
         default_image: about-us/rafters.jpg
         type: highlight-item
         enabled: true
+        border: false
       -
         id: lthoijq4
         highlight_title: 'Your productivity is our yardstick'
@@ -295,6 +297,7 @@ page_builder:
         type: highlight-item
         enabled: false
         default_image: about-us/c8dfd769f4b2c76ecc3222bedf6bd6e1.webp
+        border: false
     toggle_background: true
     reverse_alignment: true
     toggle_alignment: false
@@ -390,6 +393,7 @@ page_builder:
         default_image: about-us/2d34429616f83487ec069ebd911356db.webp
         type: highlight-item
         enabled: false
+        border: false
       -
         id: TWqxZylm
         highlight_title: 'Your aspirations fuel our curiosity'
@@ -430,6 +434,7 @@ page_builder:
         default_image: about-us/rafters.jpg
         type: highlight-item
         enabled: false
+        border: false
       -
         id: lthoijq4
         highlight_title: 'Your productivity is our yardstick'
@@ -456,6 +461,7 @@ page_builder:
         type: highlight-item
         enabled: true
         default_image: about-us/c8dfd769f4b2c76ecc3222bedf6bd6e1.webp
+        border: false
     toggle_background: true
     reverse_alignment: true
     toggle_alignment: false
@@ -581,6 +587,7 @@ page_builder:
             button_type: secondary
         type: highlight-item
         enabled: true
+        border: false
       -
         id: lti3mxec
         highlight_title: 'Webslice Serverless'
@@ -604,6 +611,7 @@ page_builder:
             button_type: button
         type: highlight-item
         enabled: false
+        border: false
     toggle_background: false
     reverse_alignment: false
     toggle_alignment: false

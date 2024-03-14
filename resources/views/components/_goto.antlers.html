@@ -1,5 +1,5 @@
-<div class="{{ class }} {{ if col }} flex-col {{ /if }} group relative flex gap-1">
-	<div class="relative h-6 w-6 flex-none text-purple-500 dark:text-green-500">
+<div class="{{ class }} {{ if col }} flex-col {{ /if }} group relative flex gap-4">
+	<div class="relative h-4 w-4 flex-none text-purple-500 dark:text-green-500">
 		<div class="absolute translate-y-0 text-2xl opacity-100 transition duration-300 group-hover:-translate-y-4 group-hover:opacity-0">
 			{{ svg src="{{config:iconamic:path}}/arrow-up-right" class=" stroke-purple-700 transition-colors duration-300 group-hover:stroke-purple-900 dark:fill-white/10 dark:stroke-green-700 dark:group-hover:fill-purple-300/10 dark:group-hover:stroke-green-400" }}
 		</div>
@@ -7,5 +7,5 @@
 			{{ svg src="{{config:iconamic:path}}/book-check" class=" stroke-purple-700 transition-colors duration-300 group-hover:stroke-purple-900 dark:fill-white/10 dark:stroke-green-700 dark:group-hover:fill-purple-300/10 dark:group-hover:stroke-green-400" }}
 		</div>
 	</div>
-	<p class="text-sm text-zinc-700 dark:text-zinc-400">{{ text }}</p>
+	<p class="text-base text-zinc-700 dark:text-zinc-200">{{ text | strip_tags:p }}</p>
 </div>

@@ -44,10 +44,10 @@ top_section:
         iconamic: file
     pre: 'Webslice Containers'
     shape: triangle
-    image: illustrations/cloud-containers.png
+    image: illustrations/container-cover.png
 title: Containers
-updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1710301344
+updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
+updated_at: 1710387297
 page_builder:
   -
     id: lrftv1b6
@@ -136,7 +136,7 @@ page_builder:
         url: 'https://sitehost.nz/'
         attr_title: Sitehost
         attr_aria: 'this is a Aria label'
-        image: ill_6---picked-a-region.svg
+        image: illustrations/container-images.png
       -
         id: lrfvew4y
         text:
@@ -160,7 +160,7 @@ page_builder:
         link_type: url
         target_blank: false
         url: '#1'
-        image: ill_6---picked-a-region.svg
+        image: illustrations/enviroments.png
       -
         id: lrfvf41q
         text:
@@ -291,10 +291,11 @@ page_builder:
                 type: text
                 text: 'The Webslice Console puts a heap of control at your fingertips. Create and manage containers and servers, track current performance, assign users, and much more. It all happens in one place.'
         template_global: /global/default_image
-        default_image: placeholders-to-delete/webslice-console-screen.png
+        default_image: console/console-overview-light.png
         type: highlight-item
         enabled: true
-        border: false
+        border: true
+        default_image_dark: console/console-overview-dark.png
       -
         id: lthuqphm
         highlight_title: 'Use simple controls to make big changes'
@@ -306,10 +307,11 @@ page_builder:
                 type: text
                 text: "Webslice lets you do big things in a few seconds flat. It's a very quick job to enable SSL, switch on CDN or Simple Cache, or make a number of other choices that speed up your work and your websites."
         template_global: /global/default_image
-        default_image: placeholders-to-delete/webslice-console-screen-2.png
+        default_image: console/console-settings-light.png
         type: highlight-item
         enabled: true
-        border: false
+        border: true
+        default_image_dark: console/console-settings-dark.png
     toggle_background: false
     reverse_alignment: false
     toggle_alignment: false
@@ -594,7 +596,7 @@ page_builder:
         bentos:
           -
             id: lrtu5ip2
-            image: ill_3---infrastructure.svg
+            image: illustrations/ill_3---infrastructure.png
             items:
               -
                 id: lrtvn103
@@ -665,7 +667,7 @@ page_builder:
         bentos:
           -
             id: lru3nbaf
-            image: ill_1---managed_cloud_hosting.svg
+            image: illustrations/ill_1---managed_cloud_hosting.png
             items:
               -
                 id: lru3nm9g
@@ -779,7 +781,7 @@ page_builder:
         bentos:
           -
             id: lrtu5ip2
-            image: ill_3---infrastructure.svg
+            image: illustrations/ill_1---managed_cloud_hosting.png
             items:
               -
                 id: lrtvn103
@@ -850,7 +852,7 @@ page_builder:
         bentos:
           -
             id: lru3nbaf
-            image: ill_1---managed_cloud_hosting.svg
+            image: illustrations/ill_1---managed_cloud_hosting.png
             items:
               -
                 id: lru3nm9g

@@ -41,9 +41,10 @@ top_section:
     enabled: true
     dark_image: illustrations/expand.png
     light_image: illustrations/expand.png
+    image: illustrations/serverless-cover.png
 title: Serverless
-updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1710146772
+updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
+updated_at: 1710387453
 page_builder:
   -
     id: lrzoffkv
@@ -73,7 +74,7 @@ page_builder:
         bentos:
           -
             id: lrzoheru
-            image: ill_5---connect-your-github.svg
+            image: illustrations/ill_5---connect-your-github.png
             items:
               -
                 id: lrzohm07
@@ -202,9 +203,11 @@ page_builder:
                         type: text
                         text: 'Manage team members.'
         template_global: /global/default_image
-        default_image: placeholders-to-delete/webslice-console-screen-2.png
+        default_image: console/console-settings-light.png
         type: highlight-item
         enabled: true
+        border: true
+        default_image_dark: console/console-settings-dark.png
       -
         id: ltm3koj8
         highlight_title: 'Save time with features like these'
@@ -249,9 +252,11 @@ page_builder:
                         type: text
                         text: 'Store and re-use build and release scripts.'
         template_global: /global/default_image
-        default_image: placeholders-to-delete/webslice-console-screen.png
+        default_image: console/console-overview-light.png
         type: highlight-item
         enabled: true
+        border: true
+        default_image_dark: console/console-overview-dark.png
     toggle_background: false
     reverse_alignment: false
     toggle_alignment: true
@@ -291,7 +296,7 @@ page_builder:
         bentos:
           -
             id: lrzoheru
-            image: ill_6---picked-a-region.svg
+            image: illustrations/ill_6---picked-a-region.png
             items:
               -
                 id: lrzohm07
