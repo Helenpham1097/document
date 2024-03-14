@@ -1,63 +1,17 @@
-<svg class="{{ gradient_style }}" xmlns="http://www.w3.org/2000/svg" width="1585" height="1411" fill="none">
-	<g filter="url(#agrad_shape)" opacity=".3">
-		<path fill="#4CB7A3" d="M399.516 718.508c134.739-166.041 364.773-250.735 513.795-189.17 149.019 61.565 160.599 246.076 25.859 412.116C804.43 1107.5 574.396 1192.19 425.375 1130.62c-149.021-61.56-160.599-246.071-25.859-412.112Z" />
-	</g>
-	<g filter="url(#bgrad_shape)" opacity=".2">
-		<path fill="#871EFF" d="M1289.63 379.848c-128.66-89.614-584.847-64.695-803.041 71.46-218.188 136.155-290.765 319.175-162.102 408.789 128.668 89.613 409.854 51.884 628.048-84.27C1170.73 639.673 1418.3 469.461 1289.63 379.848Z" />
-	</g>
-	<g filter="url(#cgrad_shape)" opacity=".3">
-		<path fill="#871EFF" d="M675.922 351.503C574.51 117.095 413.99 389.509 422.494 578.125c8.501 188.615 165.825 345.104 351.393 349.527 185.567 4.421 309.533-.177 301.033-188.792-8.51-188.615-297.587-152.947-398.998-387.357Z" />
-	</g>
-	<g filter="url(#dgrad_shape)" opacity=".4">
-		<path fill="url(#egrad_shape)" d="M1043.76 560.065c-230.537-124.169-164.729 71.742-356.571-175.068-191.842-246.811-225.342 402.35-91.397 517.482 133.946 115.131 298.046 182.071 509.278 46.419 211.23-135.649 72.64-273.7-61.31-388.833Z" />
-	</g>
-	<g filter="url(#fgrad_shape)" opacity=".5">
-		<path fill="url(#ggrad_shape)" d="M1321.81 513.724c-207.46 10.948-844.821-32.966-821.876 154.819 22.947 187.783 364.68 394.207 572.146 383.257 207.47-10.94 46.12-170.074 23.17-357.858-22.94-187.784 60.45-102.759 226.56-180.218Z" />
-	</g>
-	<defs>
-		<filter id="agrad_shape" width="1247.54" height="1161.46" x="45.572" y="249.25" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
-			<feFlood flood-opacity="0" result="BackgroundImageFix" />
-			<feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-			<feGaussianBlur result="effect1_foregroundBlur_139_9727" stdDeviation="130" />
-		</filter>
-		<filter id="bgrad_shape" width="1584.17" height="1101.67" x=".842" y="67.061" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
-			<feFlood flood-opacity="0" result="BackgroundImageFix" />
-			<feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-			<feGaussianBlur result="effect1_foregroundBlur_139_9727" stdDeviation="130" />
-		</filter>
-		<filter id="cgrad_shape" width="1173.16" height="1187.73" x="162.169" y=".818" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
-			<feFlood flood-opacity="0" result="BackgroundImageFix" />
-			<feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-			<feGaussianBlur result="effect1_foregroundBlur_139_9727" stdDeviation="130" />
-		</filter>
-		<filter id="dgrad_shape" width="1218.98" height="1214.86" x="254.839" y="69.469" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
-			<feFlood flood-opacity="0" result="BackgroundImageFix" />
-			<feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-			<feGaussianBlur result="effect1_foregroundBlur_139_9727" stdDeviation="130" />
-		</filter>
-		<filter id="fgrad_shape" width="1342.48" height="1058.5" x="239.33" y="253.724" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
-			<feFlood flood-opacity="0" result="BackgroundImageFix" />
-			<feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-			<feGaussianBlur result="effect1_foregroundBlur_139_9727" stdDeviation="130" />
-		</filter>
-		<linearGradient id="egrad_shape" x1="1121" x2="768.081" y1="1031.21" y2="483.476" gradientUnits="userSpaceOnUse">
-			<stop offset=".198" stop-color="#32FFDC" />
-			<stop offset="1" stop-color="#871EFF" />
-		</linearGradient>
-		<linearGradient id="ggrad_shape" x1="1538.62" x2="566.832" y1="504.638" y2="918.56" gradientUnits="userSpaceOnUse">
-			<stop stop-color="#871EFF" />
-			<stop offset="1" stop-color="#32FFDC" />
-		</linearGradient>
-	</defs>
-</svg>
-{{ if shape }}
-	{{ if shape:value === 'diagonal' }}
+<div class="relative">
+	<div class="absolute right-0 h-[500px] w-[800px] -translate-y-1/3 translate-x-1/3 -skew-y-[15deg] rounded-full bg-gradient-to-r from-transparent to-purple-500/50 blur-[128px]"></div>
+	<div class="absolute right-0 h-[500px] w-[800px] -translate-y-1/2 translate-x-1/2 -skew-y-[15deg] rounded-full bg-gradient-to-r from-transparent to-green-500/50 blur-[128px]"></div>
+	{{ if shape }}
+		{{ if shape:value === 'diagonal' }}
+			{{ partial:illustration/hero_diagonal class='absolute top-0 left-1/2 transform -translate-x-1/2 ' }}
+		{{ elseif shape:value === 'triangle' }}
+			{{ partial:illustration/hero_triangle class='absolute mx-auto w-full translate-x-1/2' }}
+		{{ elseif shape:value === 'paper' }}
+			{{ partial:illustration/hero_paper class='absolute top-0 mx-auto w-full ' }}
+		{{ elseif shape:value === 'square' }}
+			{{ partial:illustration/hero_square class='absolute mx-auto w-full -translate-y-12 translate-x-1/2' }}
+		{{ /if }}
+	{{ else }}
 		{{ partial:illustration/hero_diagonal class='absolute top-0 left-1/2 transform -translate-x-1/2 ' }}
-	{{ elseif shape:value === 'triangle' }}
-		{{ partial:illustration/hero_triangle class='absolute top-0 mx-auto w-full translate-x-1/2 -translate-y-1/2' }}
-	{{ elseif shape:value === 'paper' }}
-		{{ partial:illustration/hero_paper class='absolute top-0 mx-auto w-full translate-x-1/4 -translate-y-1/3' }}
 	{{ /if }}
-{{ else }}
-	{{ partial:illustration/hero_diagonal class='absolute top-0 left-1/2 transform -translate-x-1/2 ' }}
-{{ /if }}
+</div>
