@@ -10,9 +10,9 @@
     {{else}}
         {{ if toggle_alignment }}
         {{ else }}
-            {{ switch between='empty | lg:space-x-reverse' }}
+            {{ switch between=' | lg:space-x-reverse' }}
         {{ /if }}
-    {{ /if }} container mx-auto flex flex-col space-y-6 space-y-reverse py-10 sm:space-y-0 lg:flex-row lg:items-center lg:space-x-24">
+    {{ /if }} mx-auto flex flex-col space-y-6 space-y-reverse py-10 sm:space-y-0 lg:flex-row lg:items-center lg:space-x-24">
 			<div class="space-y-6 lg:w-1/2">
 				<div class="space-y-4 xl:max-w-xl">
 					{{ svg src="{{config:iconamic:path}}/{{iconamic}}.svg" class="text-zinc-700 dark:text-zinc-400" }}
@@ -37,28 +37,24 @@
     {{ /if }} relative lg:mx-auto lg:w-1/2">
 				<div class="grid gap-4 lg:grid-cols-2">
 					{{ bentos }}
-						{{ if first }}
-							<figure class="lg:hidden">
-								{{ partial:global/picture :image="image" cover="true" lazy="false" maxwidth="768" quality='70' }}
-							</figure>
-						{{ /if }}
-						<div class="{{ if first }} lg:col-span-2 lg:pt-24 {{ /if }}bento_box relative isolate flex flex-col justify-end gap-2 overflow-hidden p-4 lg:p-8">
+						<div class="{{ if first }} lg:col-span-2  {{ /if }}bento_box {{ if image }} px-4 lg:px-8 lg:py-4 {{ else }} p-4 lg:p-8 {{ /if }} relative isolate flex flex-col-reverse items-center justify-end gap-2 overflow-hidden lg:flex-row">
+							{{ partial:illustration/div_grid }}
+							<div class="{{ if image }} lg:w-1/2 {{ /if }} flex flex-col gap-2">
+								{{ items }}
+									<a href="{{ url }}" target="_blank">
+										{{ if items | count == 1 }}
+											{{ partial:components/goto class='max-w-xs' col='true' }}
+										{{ else }}
+											{{ partial:components/goto class=' max-w-xs !items-start' col='false' }}
+										{{ /if }}
+									</a>
+								{{ /items }}
+							</div>
 							{{ if first }}
-								<figure class="absolute right-0 top-1/2 hidden -translate-y-1/2 translate-x-16 transform lg:block">
-									{{ partial:global/picture :image="image" cover="true" lazy="false" maxwidth="768" quality='70' }}
-								</figure>
+								<div class="lg:w-1/2">
+									{{ partial:global/picture :image="image" lazy="false" maxwidth="768" quality='70' }}
+								</div>
 							{{ /if }}
-							{{ partial:illustration/div_grid gradient_direction='bg-gradient-to-l' grid_size='3' class='absolute top-1/2 -translate-y-1/2 left-0 right-0 mx-auto flex h-full w-full justify-between lg:h-full' }}
-							<div class="absolute inset-0 bg-gradient-to-l"></div>
-							{{ items }}
-								<a href="{{ url }}" target="_blank">
-									{{ if items | count == 1 }}
-										{{ partial:components/goto class='max-w-xs' col='true' }}
-									{{ else }}
-										{{ partial:components/goto class=' max-w-xs !items-start' col='false' }}
-									{{ /if }}
-								</a>
-							{{ /items }}
 						</div>
 					{{ /bentos }}
 				</div>
