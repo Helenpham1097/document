@@ -37,17 +37,25 @@
     {{ /if }} relative lg:mx-auto lg:w-1/2">
 				<div class="grid gap-4 lg:grid-cols-2">
 					{{ bentos }}
-						<div class="{{ if first }} lg:col-span-2  {{ /if }}bento_box {{ if image }} px-4 lg:px-8 lg:py-4 {{ else }} p-4 lg:p-8 {{ /if }} relative isolate flex flex-col-reverse items-center justify-end gap-2 overflow-hidden lg:flex-row">
+						<div class="{{ if first }} lg:col-span-2  {{ /if }}bento_box {{ if image }} px-4 lg:px-8 py-4 {{ else }} p-4 lg:p-8 {{ /if }} relative isolate flex flex-col-reverse items-center justify-end gap-2 overflow-hidden lg:flex-row">
 							{{ partial:illustration/div_grid }}
 							<div class="{{ if image }} lg:w-1/2 {{ /if }} flex flex-col gap-2">
 								{{ items }}
-									<a href="{{ url }}" target="_blank">
+									{{ if url }}
+										<a href="{{ url }}" {{ if target }} target="_blank" {{ /if }}>
+											{{ if items | count == 1 }}
+												{{ partial:components/goto class='max-w-xs' col='true' }}
+											{{ else }}
+												{{ partial:components/goto class='max-w-xs !items-start' col='false' }}
+											{{ /if }}
+										</a>
+									{{ else }}
 										{{ if items | count == 1 }}
 											{{ partial:components/goto class='max-w-xs' col='true' }}
 										{{ else }}
-											{{ partial:components/goto class=' max-w-xs !items-start' col='false' }}
+											{{ partial:components/goto class='max-w-xs !items-start' col='false' }}
 										{{ /if }}
-									</a>
+									{{ /if }}
 								{{ /items }}
 							</div>
 							{{ if first }}

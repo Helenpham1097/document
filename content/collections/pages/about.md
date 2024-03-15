@@ -296,7 +296,7 @@ page_builder:
         template_global: /global/default_image
         type: highlight-item
         enabled: false
-        default_image: about-us/c8dfd769f4b2c76ecc3222bedf6bd6e1.webp
+        default_image: about-us/srivats-working.jpg
         border: false
     toggle_background: true
     reverse_alignment: true
@@ -460,7 +460,7 @@ page_builder:
         template_global: /global/default_image
         type: highlight-item
         enabled: true
-        default_image: about-us/c8dfd769f4b2c76ecc3222bedf6bd6e1.webp
+        default_image: about-us/srivats-working.jpg
         border: false
     toggle_background: true
     reverse_alignment: true

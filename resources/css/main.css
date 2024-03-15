@@ -29,6 +29,12 @@
 	opacity: 0;
 }
 
+html,
+body {
+	position: relative;
+	overflow-x: hidden;
+}
+
 .dev * {
 	@apply border border-red-500/30 bg-red-500/20;
 }

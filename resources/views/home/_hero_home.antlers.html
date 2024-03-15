@@ -1,11 +1,11 @@
 {{# Partial to show the hero section of the homepage #}}
 <div class="relative flex flex-col justify-center">
-	<div class="container relative hidden xl:block mx-auto">
+	<div class="container relative mx-auto hidden xl:block">
 		{{ partial:global/diagonal gradient_style='absolute top-0 mx-auto w-full lg:translate-x-1/2 -translate-y-1/3' }}
 	</div>
 	<div class="container relative mx-auto">
-		<div class="relative mx-auto grid w-full max-w-none grid-cols-1 items-center gap-12 py-12 lg:grid-cols-4 lg:py-24">
-			<div class="order-last col-span-1 md:col-span-2 md:space-y-2">
+		<div class="relative mx-auto grid w-full max-w-none grid-cols-1 items-center gap-6 pb-12 pt-6 lg:grid-cols-4 lg:gap-12 lg:py-24">
+			<div class="col-span-1 md:col-span-2 md:space-y-2 lg:order-last">
 				<div class="relative z-0 w-full">
 					{{ partial:illustration/_home_cards }}
 				</div>
@@ -13,9 +13,9 @@
 			<div class="col-span-1 space-y-16 md:col-span-2 md:space-y-12">
 				<div class="flex flex-col items-start space-y-6 lg:flex-grow">
 					{{ partial:typography/h1 :content="hero_home_title | strip_tags:p" color='' class=' text-4xl dot md:text-5xl lg:text-6xl  [text-wrap:balance]' }}
-					<div class="space-y-6 text-xl text-zinc-500 dark:text-zinc-300">
+					<div class="space-y-3 text-xl text-zinc-500 dark:text-zinc-300 lg:space-y-6">
 						{{ partial:typography/excerpt :excerpt="hero_home_description | strip_tags:p" class='text-pretty' }}
-						<ul class="flex max-w-2xl flex-wrap gap-4 text-base">
+						<ul class="flex max-w-2xl flex-wrap gap-2 text-base lg:gap-4">
 							{{ grid_features }}
 								<li class="flex items-center gap-2">
 									{{ svg src="{{config:iconamic:path}}/{{iconamic}}.svg" class="size-4" }}
