@@ -8,25 +8,10 @@ tree:
     entry: 1e33d247-bf25-42a4-b455-b47eb8dcf557
     title: Serverless
   -
-    id: a1f043b3-ead3-4fc6-9806-d5e0a029ba81
-    entry: 5f3ec833-66d3-43ef-9f35-97f1b4b0afc5
-    title: Docs
-    data:
-      page_description: 'Webslice Knowledge Base'
-      iconamic: book-marked
-    children:
-      -
-        id: 8b2c0bf9-5fde-4ea2-963d-42028b3e0025
-        title: Containers
-        url: '#'
-        data:
-          page_description: null
-      -
-        id: 23adb7fd-5cb4-4aaf-ba8b-9ee7666ee060
-        title: Serverless
-        url: '#'
-        data:
-          page_description: null
+    id: b5f911c0-c53a-4ded-a7e0-03d31fbeca77
+    entry: c983d54d-1d7e-434f-b789-ea74e7737653
+    title: 'Support & Management'
   -
-    id: 1d6b75bd-138e-4525-b155-75d3b09dab49
-    entry: fee1a2b1-971c-4c72-9517-d2e6c989f49e
+    id: edf1c1f9-1534-4183-bdc4-a52b346f161c
+    title: Docs
+    url: /docs
