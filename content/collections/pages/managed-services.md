@@ -32,7 +32,7 @@ top_section:
         label: 'Join Webslice Now'
         link_type: url
         target_blank: false
-        url: '#'
+        url: 'https://console.webslice.com/register'
         button_type: secondary
     type: hero
     enabled: true
@@ -44,7 +44,7 @@ page_description: 'Monitoring, incident response, time-saving tools, broader 24/
 meta_title: 'Managed Services - Webslice web hosting'
 meta_description: 'Add Managed Services to Webslice hosting for time-saving developer tools, broader 24/7 technical support, and server management including incident response.'
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1710457850
+updated_at: 1710478100
 page_builder:
   -
     id: lt81rapn
@@ -146,16 +146,19 @@ page_builder:
         text: 'Clone and overwrite containers.'
         type: entry
         enabled: true
+        url: /docs/containers/features/cloning-overwriting/
       -
         id: lt81hxem
         text: 'Control caching, or switch on Simple Cache.'
         type: entry
         enabled: true
+        url: /docs/containers/features/caching/
       -
         id: lt81i1vf
         text: 'Schedule automated image updates.'
         type: entry
         enabled: true
+        url: /docs/containers/features/swapping-images/
     type: head_to_documentation
     enabled: true
   -

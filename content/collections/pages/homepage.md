@@ -4,7 +4,7 @@ blueprint: home
 template: general_content/index
 title: Homepage
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1710301111
+updated_at: 1710477633
 top_section:
   -
     id: RzzOzBfN
@@ -39,7 +39,7 @@ top_section:
         iconamic: chevrons-right
         link_type: url
         target_blank: false
-        url: 'https://webslice.com/register'
+        url: 'https://console.webslice.com/register'
         button_type: button
     grid_features:
       -

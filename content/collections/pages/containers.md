@@ -39,15 +39,15 @@ top_section:
         label: 'Read Documentation'
         link_type: url
         target_blank: false
-        url: '#'
+        url: /docs/containers/getting-started/
         button_type: secondary
         iconamic: file
     pre: 'Webslice Containers'
     shape: triangle
     image: illustrations/container-cover.png
 title: Containers
-updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1710387297
+updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
+updated_at: 1710477521
 page_builder:
   -
     id: lrftv1b6
@@ -66,48 +66,48 @@ page_builder:
       -
         id: lrfumsnp
         text: 'Clone/sync containers, leaving production untouched.*'
-        link: 'entry::fee1a2b1-971c-4c72-9517-d2e6c989f49e'
-        target: false
+        link: /docs/containers/features/cloning-overwriting/
+        target: true
       -
         id: lrimg4ag
         text: 'Restore from 14 days of back-ups in one click.*'
         target: true
-        link: '#'
+        link: /docs/containers/features/backup-restore/
       -
         id: lrimgae8
         text: 'Flick a switch to turn on powerful Simple Cache.*'
-        target: false
-        link: '#'
+        target: true
+        link: /docs/containers/features/caching/
       -
         id: lrfund14
         text: 'Share files and folders between containers.'
         target: true
-        link: '#'
+        link: /docs/containers/volumes/overview/
       -
         id: lrimhi4b
-        text: "Easily scale servers' RAM and storage."
-        target: false
-        link: '#'
+        text: 'Easily upgrade servers specs.'
+        target: true
+        link: /docs/containers/getting-started/
       -
         id: lrim4v2f
         text: 'Upgrade images in only a few seconds.'
         target: true
-        link: '#'
+        link: /docs/containers/features/swapping-images/
       -
         id: lrimfz9z
         text: 'Install SSL in one click.'
-        target: false
-        link: '#'
+        target: true
+        link: /docs/containers/features/ssl/
       -
         id: lrimgcm0
         text: 'Track the resource usage of every container and server.'
-        target: false
-        link: '#'
+        target: true
+        link: /docs/containers/features/metrics/
       -
         id: lrimgit5
-        text: 'Monitor server connectivity and set up email alerts.'
+        text: 'Monitor server load, bandwidth, CPU and memory.'
         target: true
-        link: '#'
+        link: /docs/containers/getting-started/
     boxes:
       -
         id: lrfvep60
@@ -133,9 +133,7 @@ page_builder:
         label: 'Awesome link'
         link_type: url
         target_blank: true
-        url: 'https://sitehost.nz/'
-        attr_title: Sitehost
-        attr_aria: 'this is a Aria label'
+        url: /docs/containers/features/creating-a-container/
         image: illustrations/container-images.png
       -
         id: lrfvew4y
@@ -159,7 +157,7 @@ page_builder:
         enabled: true
         link_type: url
         target_blank: false
-        url: '#1'
+        url: /docs/containers/getting-started/
         image: illustrations/enviroments.png
       -
         id: lrfvf41q
@@ -183,7 +181,7 @@ page_builder:
         enabled: true
         link_type: url
         target_blank: false
-        url: '#2'
+        url: /docs/containers/databases/overview/
       -
         id: lrfvfdga
         text:
@@ -206,7 +204,7 @@ page_builder:
         enabled: true
         link_type: url
         target_blank: false
-        url: '#3'
+        url: /docs
     bento_type: boxes
     template_global: /global/iconamic
     iconamic: fast-forward
@@ -774,7 +772,7 @@ page_builder:
             label: 'Start risk-free for 7 days'
             link_type: url
             target_blank: false
-            url: '#'
+            url: 'https://console.webslice.com/register'
             button_type: button
             iconamic: chevrons-right
         description: 'Our experts are always working to keep servers and networks up to date and secure. You can just focus on developing great things.'
@@ -865,7 +863,8 @@ page_builder:
                         text: 'Simple Cache.'
                 type: link
                 enabled: true
-                target: false
+                target: true
+                url: /docs/containers/features/caching/
               -
                 id: lru3nqj8
                 text:
@@ -877,7 +876,8 @@ page_builder:
                         text: 'One-click backup restore.'
                 type: link
                 enabled: true
-                target: false
+                target: true
+                url: /docs/containers/features/backup-restore/
               -
                 id: lru3nyjc
                 text:
@@ -889,7 +889,8 @@ page_builder:
                         text: 'Container cloning and syncing.'
                 type: link
                 enabled: true
-                target: false
+                target: true
+                url: /docs/containers/features/cloning-overwriting/
               -
                 id: lru3o2ef
                 text:
@@ -901,7 +902,8 @@ page_builder:
                         text: 'Scheduled container updates.'
                 type: link
                 enabled: true
-                target: false
+                target: true
+                url: /docs/containers/features/swapping-images/
             type: box
             enabled: true
         type: feature_highlight-item
@@ -925,39 +927,37 @@ page_builder:
         text: 'The introductory overview for developers.'
         type: entry
         enabled: true
+        url: /docs/containers/getting-started/
       -
         id: lrocq8tp
         text: 'How easy it is to get started.'
         type: entry
         enabled: true
+        url: /docs/containers/getting-started/
       -
         id: lrocqfca
         text: 'How to create and manage containers.'
         type: entry
         enabled: true
+        url: /docs/containers/features/creating-a-container/
       -
         id: lrocqj1k
         text: 'How to manage databases and permissions.'
         type: entry
         enabled: true
+        url: /docs/containers/databases/overview/
       -
         id: lrocqlw5
         text: "How easy it is to swap a container's image."
         type: entry
         enabled: true
+        url: /docs/containers/features/swapping-images/
       -
         id: ltgosedh
         text: 'And much, much more...'
         type: entry
         enabled: true
-    buttons:
-      -
-        id: lrqwq4m7
-        template_global: /components/buttons
-        link_type: url
-        target_blank: true
-        url: '#'
-        button_type: button
+        url: /docs
 page_description: 'A Faster, More Flexible Platform for Web Development.'
 meta_title: 'Webslice Containers - Fast, Flexible, Global Web Hosting'
 meta_description: 'Run multiple dev platforms, work faster, and spend less time managing servers with Webslice Containers. Fast, flexible and powerful hosting for web developers.'

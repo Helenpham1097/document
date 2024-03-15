@@ -25,7 +25,7 @@ top_section:
         label: 'Register For Public Beta'
         link_type: url
         target_blank: false
-        url: '#'
+        url: '#publicbeta'
         button_type: button
         iconamic: chevrons-right
       -
@@ -35,7 +35,7 @@ top_section:
         iconamic: file
         link_type: url
         target_blank: false
-        url: '#'
+        url: /docs/serverless/overview/
         button_type: secondary
     type: hero
     enabled: true
@@ -43,8 +43,8 @@ top_section:
     light_image: illustrations/expand.png
     image: illustrations/serverless-cover.png
 title: Serverless
-updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1710387453
+updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
+updated_at: 1710476322
 page_builder:
   -
     id: lrzoffkv
@@ -66,7 +66,7 @@ page_builder:
             label: 'Register For Public Beta'
             link_type: url
             target_blank: false
-            url: '#'
+            url: '#publicbeta'
             button_type: secondary
             iconamic: chevrons-right
         type: feature_highlight-item
@@ -288,7 +288,7 @@ page_builder:
             label: 'Register for Public Beta'
             link_type: url
             target_blank: false
-            url: '#'
+            url: '#publicbeta'
             button_type: secondary
             iconamic: chevrons-right
         type: feature_highlight-item
@@ -394,7 +394,7 @@ page_builder:
             label: 'Start risk-free for 7 days'
             link_type: url
             target_blank: false
-            url: '#'
+            url: 'https://console.webslice.com/'
             button_type: inline
         type: feature_highlight-item
         enabled: false
@@ -523,43 +523,34 @@ page_builder:
       -
         id: lrzor64b
         text: 'The introductory overview for developers'
-        url: '#'
+        url: /docs/serverless
         type: entry
         enabled: true
       -
         id: lrzord4z
         text: 'Getting started'
-        url: '#'
+        url: /docs/serverless/
         type: entry
         enabled: true
       -
         id: lrzorjxj
         text: 'Setting maximum and minimum parameters'
-        url: '#'
+        url: /docs/serverless/
         type: entry
         enabled: true
       -
         id: lrzorufc
         text: 'Importing PHP sites'
-        url: '#'
+        url: /docs/serverless/
         type: entry
         enabled: true
       -
         id: lrzorxhn
         text: 'Estimating your hosting bills'
-        url: '#'
+        url: /docs/serverless/
         type: entry
         enabled: true
     type: head_to_documentation
-    enabled: true
-  -
-    id: ltevn6sn
-    template: /page_builder/pricing_table
-    pricing_style: items
-    template_global: /global/iconamic
-    iconamic: boxes
-    title: 'Packages and Pricing'
-    type: pricing_table
     enabled: false
 page_description: 'Stretch but never break with incredibly scalable hosting.'
 meta_title: 'Webslice Serverless web hosting - Elastic, PHP ready, easy'
