@@ -1,5 +1,5 @@
 {{#
-    https://1902.studio/journal/responsive-images-with-statamic-tailwind-and-glide
+    https://1{{quality}}2.studio/journal/responsive-images-with-statamic-tailwind-and-glide
 #}}
 
 {{# /global/_picture.antlers.html #}}
@@ -9,22 +9,6 @@
             {{ if extension == 'svg' || extension == 'gif' }}
                 <img class="{{ class }}" src="{{ url }}" alt="{{ alt }}" height='{{ height }}' width='{{ width }}'  />
             {{ else }}
-                <source
-                    srcset="
-                        {{ glide:image fit='crop_focal' {{ if maxheight }} height='{{ maxheight }}' {{ /if }} width='{{ maxwidth }}' quality='{{quality}}' format='webp'}} 1x,
-                        {{ glide:image fit='crop_focal' {{ if maxheight }} height='{{ maxheight | multiply:2 }}'  {{ /if }} width='{{ maxwidth | multiply:2 }}' quality='{{quality}}' format='webp'}} 2x,
-                        "
-                    sizes="{{ sizes }}"
-                    type="image/webp"
-                >
-                <source
-                    srcset="
-                        {{ glide:image fit='crop_focal' {{ if maxheight }} height='{{ maxheight }}' {{ /if }} width='{{ maxwidth }}' quality='{{quality}}' }} 1x,
-                        {{ glide:image fit='crop_focal' {{ if maxheight }} height='{{ maxheight | multiply:2 }}'  {{ /if }} width='{{ maxwidth | multiply:2 }}' quality='{{quality}}'}} 2x,
-                        "
-                    sizes="{{ sizes }}"
-                    type="{{ image.mime_type }}"
-                >
                 <img
                     {{ if cover }}
                         class="object-cover  w-full h-full {{ class }}"
@@ -33,12 +17,17 @@
                         class="{{ class }}"
                     {{ /if }}
                     src="{{ glide:image fit='crop_focal' {{ if maxheight }} height='{{ maxheight }}' {{ /if }} width='{{ maxwidth }}' quality='{{quality}}'}}"
+                    srcset="
+                    {{ glide:image width='280' quality='{{quality}}' format='webp' }} 280w,
+                    {{ glide:image width='480' quality='{{quality}}' format='webp' }} 480w,
+                    {{ glide:image width='560' quality='{{quality}}' format='webp' }} 560w,
+                    {{ glide:image width='840' quality='{{quality}}' format='webp' }} 840w,
+                    {{ glide:image width='960' quality='{{quality}}' format='webp' }} 960w,
+                    "
                     alt="{{ alt ensure_right='.' }}"
                     width="{{ maxwidth }}"
                     height="{{ maxheight }}"
-                    {{ if lazy }}
-                        loading="lazy"
-                    {{ /if }}
+                    {{ if lazy }} loading="lazy" {{ /if }}
                 >
             {{ /if }}
         {{ /asset }}

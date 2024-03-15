@@ -17,16 +17,15 @@
 			<div class="relative order-first lg:order-last">
 				{{ image }}
 					<picture>
-						<img fetchpriority="high" style="aspect-ratio: 4/3 auto;"
-							src="{{ glide src='{{ url }}' width='736' quality='90' format='webp' }}"
-							srcset="{{ glide src='{{ url }}' width='280' quality='90' format='webp' }} 280w,
-								{{ glide src='{{ url }}' width='480' quality='90' format='webp' }} 480w,
-								{{ glide src='{{ url }}' width='560' quality='90' format='webp' }} 560w,
-								{{ glide src='{{ url }}' width='840' quality='90' format='webp' }} 840w,
-								{{ glide src='{{ url }}' width='960' quality='90' format='webp' }} 960w,
-								{{ glide src='{{ url }}' width='1440' quality='90' format='webp' }} 1440w"
+						<img
+							fetchpriority="high"
+							style="aspect-ratio: 4/3 auto"
+							src="{{ glide src='{{url}}' width='736' quality='90' format='webp' }}"
+							srcset="{{ glide src='{{url}}' width='280' quality='90' format='webp' }} 280w, {{ glide src='{{url}}' width='480' quality='90' format='webp' }} 480w, {{ glide src='{{url}}' width='560' quality='90' format='webp' }} 560w, {{ glide src='{{url}}' width='840' quality='90' format='webp' }} 840w, {{ glide src='{{url}}' width='960' quality='90' format='webp' }} 960w, {{ glide src='{{url}}' width='1440' quality='90' format='webp' }} 1440w"
 							sizes="(min-width: 768px) 840px, 87.5vw"
-							width="{{ width }}" height="{{ height }}" alt="{{ alt ensure_right='.' }}" />
+							width="{{ width }}"
+							height="{{ height }}"
+							alt="{{ alt ensure_right='.' }}" />
 					</picture>
 				{{ /image }}
 			</div>
