@@ -1,5 +1,5 @@
 {{ if text }}
-	<{{ as or 'a' }} {{ slot:attributes }} class="bento_box group/illus {{ class }} relative isolate overflow-hidden bg-white dark:bg-zinc-900" {{ if link_type == 'entry'}} href="{{ entry:url }}" {{ /if }} {{ if link_type == 'url'}} href="{{ url }}"{{ /if }} {{ if link_type == 'email'}} href="mailto:{{ email | obfuscate_email }}"{{ /if }} {{ if link_type == 'tel'}} href="tel:{{ tel }}"{{ /if }} {{ target_blank ?= 'rel="noopener" target="_blank"' }} {{ attr_title ?= 'title="{{ attr_title }}"' }} {{ attr_aria ?= 'aria-label="{{ attr_aria }}"' }}>
+	<{{ as or 'a' }} {{ slot:attributes }} class="bento_box group/illus {{ class }} relative isolate overflow-hidden bg-white dark:bg-zinc-900" {{ if link_type == 'entry'}} href="{{ entry:url }}" {{ /if }} {{ if link_type == 'url'}} href="{{ url }}"{{ /if }} {{ if link_type == 'email'}} href="mailto:{{ email | obfuscate_email }}"{{ /if }} {{ if link_type == 'tel'}} href="tel:{{ tel }}"{{ /if }} {{ if target_blank }} rel="noopener" target="_blank" {{ /if }} {{ if attr_title }} title="{{ attr_title }}" {{ /if }} {{ if attr_aria }} aria-label="{{ attr_aria }}" {{ /if }}>
 		{{ partial:illustration/div_grid class='absolute left-0 right-0 mx-auto flex h-full w-full justify-between lg:h-full' }}
 		{{ slot }}
 		<div class="{{ content_class }} relative z-10 space-y-2 p-4 xl:p-8">

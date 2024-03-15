@@ -44,9 +44,10 @@
 			{{ if link_type == 'url'}} href="{{ url }}"{{ /if }}
 			{{ if link_type == 'email'}} href="mailto:{{ email | obfuscate_email }}"{{ /if }}
 			{{ if link_type == 'tel'}} href="tel:{{ tel }}"{{ /if }}
-			{{# {{ target_blank ?= 'rel="noopener" target="_blank"' }}
-			{{ attr_title ?= 'title="{{ attr_title }}"' }}
-			{{ attr_aria ?= 'aria-label="{{ attr_aria }}"' }} #}}
+			{{ if target_blank }} rel="noopener" target="_blank" {{ /if }}
+			{{ if attr_title }} title="{{ attr_title }}" {{ /if }}
+			{{ if attr_aria }} aria-label="{{ attr_aria }}" {{ /if }}
+
 			>
 			{{# The optional icons come from the public/icons folder thanks to the iconamic add on, and have a size variant applied with the medium_icon variable, and the color is defined by (stroke-current) the selected button variant. #}}
 			<span>{{ label }}</span>
