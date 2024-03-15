@@ -29,7 +29,7 @@
 						{{ /features }}
 					</ul>
 				</div>
-				{{ partial:components/button label="Get Started" link_type="url" url="#" iconamic="user-circle" }}
+				{{ partial:components/button label="Get Started" link_type="url" url="{{url ?? site_information:login}}" iconamic="user-circle" }}
 			</div>
 		</div>
 	</div>
@@ -59,7 +59,7 @@
 					</div>
 				</div>
 				<div>
-					{{ partial:components/button label="Get Started" link_type="url" url="#" iconamic="user-circle" }}
+					{{ partial:components/button label="Get Started" link_type="url" url="{{url ?? site_information:login}}" iconamic="user-circle" }}
 				</div>
 			</div>
 
