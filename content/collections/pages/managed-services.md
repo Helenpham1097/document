@@ -44,7 +44,7 @@ page_description: 'Monitoring, incident response, time-saving tools, broader 24/
 meta_title: 'Managed Services - Webslice web hosting'
 meta_description: 'Add Managed Services to Webslice hosting for time-saving developer tools, broader 24/7 technical support, and server management including incident response.'
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1709779043
+updated_at: 1710457850
 page_builder:
   -
     id: lt81rapn
@@ -98,6 +98,7 @@ page_builder:
         default_image: bb28417eb2b2507580ab0f08bf09ea69.webp
         type: highlight-item
         enabled: true
+        border: false
       -
         id: ltgjb41x
         highlight_title: 'Even higher standards of 24/7 support'
@@ -112,18 +113,21 @@ page_builder:
         default_image: photo-1601933973783-43cf8a7d4c5f.jpeg
         type: highlight-item
         enabled: true
+        border: false
       -
         id: ltgip6ay
         highlight_title: Time-saving
         template_global: /global/default_image
         type: highlight-item
         enabled: false
+        border: false
       -
         id: ltgipldn
         highlight_title: 'Enhanced developer tools'
         template_global: /global/default_image
         type: highlight-item
         enabled: false
+        border: false
     toggle_background: false
     reverse_alignment: false
     toggle_alignment: true
@@ -278,87 +282,20 @@ page_builder:
     enabled: true
     description: "No matter what Webslice hosting platform you're on, and no matter what size hosting package you have, you can add either level of Managed Services."
   -
-    id: ltgkxmzq
-    template: /general_content/_multiple_text_columns
-    display_title_section:
+    id: ltruaxvo
+    template: /page_builder/testimonial_section
+    title:
       -
-        id: ltgkxq03
-        center_title_title: 'Save time and worry less, like these happy customers'
-        type: section_title
-        enabled: true
-    columns:
-      -
-        id: ltgl9p1e
-        text:
+        type: paragraph
+        content:
           -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: '"Running websites on your solid, managed, containerised platform allows us to concentrate on building without having to worry about managing backups, server upgrades and software upgrades. It’s reliable, secure and cost effective."'
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                marks:
-                  -
-                    type: bold
-                text: 'Mark Collister, '
-              -
-                type: text
-                text: 'Director, The Fold'
-        type: column
-        enabled: true
-      -
-        id: ltgkzqji
-        text:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: '"You''ve allowed us to focus a lot less on hosting and more on design & dev which means we can offer more to our clients in return. We love your containers!"'
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                marks:
-                  -
-                    type: bold
-                text: 'Dan H.'
-              -
-                type: text
-                text: ', Punctuate'
-        type: column
-        enabled: true
-      -
-        id: ltgky6ju
-        text:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: '"As we grew we were self-hosting some services which are now hosted by you (and others). Having someone else feeding and watering the servers is one less maintenance task we no longer need worry about."'
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: '- '
-              -
-                type: text
-                marks:
-                  -
-                    type: bold
-                text: 'Rob I.'
-              -
-                type: text
-                text: ', AAE'
-        type: column
-        enabled: true
-    type: multiple_text_columns
+            type: text
+            text: 'Save time and worry less, like these happy customers'
+    bg_pattern: true
+    testimonial:
+      - 85bf0248-4d5f-41ca-b370-38994540c388
+      - 4d1154e8-e6b1-4efb-8e2f-a2deb59d0fab
+      - cf8f6cdf-5ddb-4e23-9892-4c31827cd046
+    type: testimonial_section
     enabled: true
 ---
