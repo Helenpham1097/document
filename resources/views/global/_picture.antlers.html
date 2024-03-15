@@ -24,9 +24,9 @@
                     {{ glide:image width='840' quality='{{quality}}' format='webp' }} 840w,
                     {{ glide:image width='960' quality='{{quality}}' format='webp' }} 960w,
                     "
-                    alt="{{ alt ensure_right='.' }}"
-                    width="{{ maxwidth }}"
-                    height="{{ maxheight }}"
+                    alt="{{ alt ?? title }}"
+                    width="{{ maxwidth ?? width }}"
+                    height="{{ maxheight ?? height }}"
                     {{ if lazy }} loading="lazy" {{ /if }}
                 >
             {{ /if }}

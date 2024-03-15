@@ -117,8 +117,9 @@
                 </div>
 
                 <div class="lg:flex items-center space-x-6 lg:border-l hidden lg:border-zinc-200 lg:dark:border-zinc-800 xl:pl-6">
-                    {{ partial:documentation/theme_toggle }} {{ partial:components/button label="Login" button_type='inline' link_type="url" url="{{ site_information:login }}" }} {{ partial:components/button label="Sign up" class="!py-1.5
-                    !pl-3 !pr-1.5" button_type='secondary' link_type="url" url="{{ site_information:sign_up }}" iconamic="chevron-right" }}
+                    {{ partial:global/theme_toggle }}
+                    {{ partial:components/button label="Login" button_type='inline' link_type="url" url="{{ site_information:login }}" }}
+                    {{ partial:components/button label="Sign up" class="!py-1.5 !pl-3 !pr-1.5" button_type='secondary' link_type="url" url="{{ site_information:sign_up }}" iconamic="chevron-right" }}
                 </div>
                 {{# modal mobile menu #}}
                 <div id="Modal" x-data="{ open: false }" @open-me="open=true" class="block lg:hidden" @close-me="open=false">
@@ -236,6 +237,11 @@
                                         {{ else }}
                                         <li>
                                             <a class="hover:text-purple-500 {{ if page_description }} items-start {{ else }} items-center {{ /if}} rounded py-3 flex gap-2 text-xl" href="{{ url }}">
+                                                {{ if iconamic }}
+                                                <div class="flex size-10 min-w-10 shrink-0 items-center justify-center rounded-lg">
+                                                    {{ svg src="{{config:iconamic:path}}/{{iconamic}}.svg" class="size-5 flex-none" }}
+                                                </div>
+                                                {{ /if }}
                                                 <div>
                                                     {{ title }} {{ if page_description }}
                                                     <span class="block mt-1 text-xs opacity-50">{{ page_description | safe_truncate:60:'...' }}</span>
@@ -245,39 +251,40 @@
                                         </li>
                                         {{ /if }} {{ /nav:main_menu }}
                                     </ul>
-                                    
-                                    {{ partial:components/button label="Login" class='pb-6 text-xl ' button_type='inline' link_type="url" url="{{ site_information:login }}" }}
-                                    
-                                    <div class="space-y-6 border-t border-zinc-200 pt-6 flex justify-end dark:border-zinc-200/10">
+                                    {{ partial:components/button label="Login" class="" button_type='inline' link_type="url" url="{{ site_information:login }}" }}
+                                    <div class="flex items-center">
                                         <button
-                                                    aria-label="Theme toggle"
-                                                    class="{{ class }} relative flex items-center space-x-2 rounded-full border border-zinc-200 p-2 text-zinc-500 shadow-sm transition hover:shadow dark:border-zinc-600 dark:text-zinc-200 lg:flex-none lg:space-x-0 lg:p-0"
-                                                    x-data="{
-                                                        toggle: () => {
-                                                            if (localStorage.theme === 'dark' || document.documentElement.classList.contains('dark')) {
-                                                                localStorage.theme = 'light';
-                                                                document.documentElement.classList.remove('dark');
-                                                                document.documentElement.style.colorScheme = '';
-                                                                document.querySelector('#svg-moon').classList.toggle('hidden', false);
-                                                                document.querySelector('#svg-sun').classList.toggle('hidden', true);
-                                            
-                                                            } else {
-                                                                localStorage.theme = 'dark';
-                                                                document.documentElement.classList.add('dark');
-                                                                document.documentElement.style.colorScheme = 'dark';
-                                                                document.querySelector('#svg-moon').classList.toggle('hidden', true);
-                                                                document.querySelector('#svg-sun').classList.toggle('hidden', false);
-                                                            }
-                                                        },
-                                                    }"
-                                                    @click="toggle">
-                                                    <span class="flex h-6 w-6 items-center rounded-full bg-white transition dark:bg-zinc-700 lg:shadow-md">
-                                                        {{ svg src="{{config:iconamic:path}}/sun.svg" id="svg-sun" class='size-4 mx-auto' }}
-                                                        {{ svg src="{{config:iconamic:path}}/moon.svg" id="svg-moon" class='size-4 mx-auto' }}
-                                                    </span>
-                                                    <span>Switch theme</span>
-                                                </button>
+                                            aria-label="Theme toggle"
+                                            class="{{ class }} relative flex items-center space-x-2 rounded-full border border-zinc-200 p-2 text-zinc-500 shadow-sm transition hover:shadow dark:border-zinc-600 dark:text-zinc-200 lg:flex-none lg:space-x-0 lg:p-0"
+                                            x-data="{
+                                                    toggle: () => {
+                                                        if (localStorage.theme === 'dark' || document.documentElement.classList.contains('dark')) {
+                                                            localStorage.theme = 'light';
+                                                            document.documentElement.classList.remove('dark');
+                                                            document.documentElement.style.colorScheme = '';
+                                                            document.querySelector('#svg-sm-moon').classList.toggle('hidden', false);
+                                                            document.querySelector('#svg-sm-sun').classList.toggle('hidden', true);
+                                    
+                                                        } else {
+                                                            localStorage.theme = 'dark';
+                                                            document.documentElement.classList.add('dark');
+                                                            document.documentElement.style.colorScheme = 'dark';
+                                                            document.querySelector('#svg-sm-moon').classList.toggle('hidden', true);
+                                                            document.querySelector('#svg-sm-sun').classList.toggle('hidden', false);
+                                                        }
+                                                    },
+                                                }"
+                                            @click="toggle">
+                                            {{ slot }}
+                                            <span class="flex h-6 w-6 items-center rounded-full bg-white transition dark:bg-zinc-700 lg:shadow-md">
+                                                {{# {# Sun icon #} #}}
+                                                {{ svg src="{{config:iconamic:path}}/sun.svg" id="svg-sm-sun" class='size-4 mx-auto' }}
+                                                {{# {# Moon icon #} #}}
+                                                {{ svg src="{{config:iconamic:path}}/moon.svg" id="svg-sm-moon" class='size-4 mx-auto' }}
+                                            </span>
+                                        </button>
                                     </div>
+                                    
                                 </div>
                             </div>
                         </div>
