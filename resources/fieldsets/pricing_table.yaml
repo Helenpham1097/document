@@ -5,7 +5,6 @@ fields:
     field:
       display: template
       type: hidden
-      icon: hidden
       listable: hidden
       default: /page_builder/pricing_table
       instructions_position: above
@@ -24,7 +23,6 @@ fields:
       default: items
       type: select
       display: 'Pricing Style'
-      icon: select
       listable: hidden
       instructions_position: above
       visibility: visible
@@ -39,7 +37,6 @@ fields:
       antlers: false
       type: text
       display: Title
-      icon: text
       listable: hidden
       instructions_position: above
       visibility: visible
@@ -51,7 +48,6 @@ fields:
       antlers: false
       type: textarea
       display: Description
-      icon: textarea
       listable: hidden
       instructions_position: above
       visibility: visible
@@ -77,7 +73,6 @@ fields:
                   field:
                     display: template
                     type: hidden
-                    icon: hidden
                     listable: hidden
                 -
                   handle: highligh
@@ -85,7 +80,6 @@ fields:
                     default: false
                     type: toggle
                     display: Highligh
-                    icon: toggle
                     instructions: 'Most popular'
                     listable: hidden
                     instructions_position: above
@@ -101,7 +95,6 @@ fields:
                     antlers: false
                     type: text
                     display: 'Highligh text'
-                    icon: text
                     listable: hidden
                     instructions_position: above
                     visibility: visible
@@ -117,7 +110,6 @@ fields:
                     antlers: false
                     type: text
                     display: Title
-                    icon: text
                     listable: hidden
                     instructions_position: above
                     visibility: visible
@@ -129,7 +121,6 @@ fields:
                     antlers: false
                     type: textarea
                     display: Description
-                    icon: textarea
                     listable: hidden
                     instructions_position: above
                     visibility: visible
@@ -142,7 +133,16 @@ fields:
                     antlers: false
                     type: text
                     display: Price
-                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: url
+                  field:
+                    type: link
+                    display: Url
                     listable: hidden
                     instructions_position: above
                     visibility: visible
@@ -153,7 +153,6 @@ fields:
                   field:
                     type: list
                     display: Features
-                    icon: list
                     listable: hidden
                     instructions_position: above
                     visibility: visible
@@ -161,7 +160,6 @@ fields:
                     hide_display: false
       display: Items
       type: replicator
-      icon: replicator
       listable: hidden
       instructions_position: above
       visibility: visible
