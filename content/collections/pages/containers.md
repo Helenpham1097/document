@@ -47,7 +47,7 @@ top_section:
     image: illustrations/container-cover.png
 title: Containers
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1710477521
+updated_at: 1710479253
 page_builder:
   -
     id: lrftv1b6
@@ -374,7 +374,7 @@ page_builder:
         id: lthtzsji
         highligh: false
         title: 8GB
-        description: 'Run 100+ containers on one server.'
+        description: 'Run up to 80 containers on one server.'
         price: 82
         features:
           - '8GB RAM'
