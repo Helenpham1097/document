@@ -52,11 +52,16 @@
 						<span class="md:text-xl">$</span>
 						{{ price }}
 					</div>
-
-					<div class="text-xs font-medium">
-						/mo
-						<div class="text-xs">{{ currency_values:currency }}</div>
-					</div>
+					{{ if price_detail }}
+						<div class="[&>p]:text-xs">
+							{{ price_detail }}
+						</div>
+					{{ else }}
+						<div class="text-xs">
+							/mo
+							<div class="text-xs">{{ currency_values:currency }}</div>
+						</div>
+					{{ /if }}
 				</div>
 				<div>
 					{{ partial:components/button label="Get Started" link_type="url" url="{{url ?? site_information:login}}" iconamic="user-circle" }}
