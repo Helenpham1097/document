@@ -44,10 +44,10 @@ top_section:
         iconamic: file
     pre: 'Webslice Containers'
     shape: triangle
-    image: illustrations/container-cover.png
+    image: illustrations/container-cover-1710730424.png
 title: Containers
-updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1710479253
+updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
+updated_at: 1710733628
 page_builder:
   -
     id: lrftv1b6
@@ -289,11 +289,11 @@ page_builder:
                 type: text
                 text: 'The Webslice Console puts a heap of control at your fingertips. Create and manage containers and servers, track current performance, assign users, and much more. It all happens in one place.'
         template_global: /global/default_image
-        default_image: console/console-overview-light.png
+        default_image: console/containers-overview-light.png
         type: highlight-item
         enabled: true
         border: true
-        default_image_dark: console/console-overview-dark.png
+        default_image_dark: console/containers-overview-dark.png
       -
         id: lthuqphm
         highlight_title: 'Use simple controls to make big changes'
@@ -305,11 +305,11 @@ page_builder:
                 type: text
                 text: "Webslice lets you do big things in a few seconds flat. It's a very quick job to enable SSL, switch on CDN or Simple Cache, or make a number of other choices that speed up your work and your websites."
         template_global: /global/default_image
-        default_image: console/console-settings-light.png
+        default_image: console/containers-settings-light.png
         type: highlight-item
         enabled: true
         border: true
-        default_image_dark: console/console-settings-dark.png
+        default_image_dark: console/containers-settings-dark.png
     toggle_background: false
     reverse_alignment: false
     toggle_alignment: false
@@ -594,7 +594,7 @@ page_builder:
         bentos:
           -
             id: lrtu5ip2
-            image: illustrations/ill_3---infrastructure.png
+            image: illustrations/ill_3---infrastructure-1710732832.png
             items:
               -
                 id: lrtvn103
