@@ -44,7 +44,7 @@ top_section:
     image: illustrations/serverless-cover.png
 title: Serverless
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1710731894
+updated_at: 1710793437
 page_builder:
   -
     id: lrzoffkv
@@ -203,11 +203,11 @@ page_builder:
                         type: text
                         text: 'Manage team members.'
         template_global: /global/default_image
-        default_image: console/containers-settings-light.png
+        default_image: console/serverless-settings-light.png
         type: highlight-item
         enabled: true
         border: true
-        default_image_dark: console/containers-settings-dark.png
+        default_image_dark: console/serverless-settings-dark.png
       -
         id: ltm3koj8
         highlight_title: 'Save time with features like these'
@@ -252,11 +252,11 @@ page_builder:
                         type: text
                         text: 'Store and re-use build and release scripts.'
         template_global: /global/default_image
-        default_image: console/containers-overview-light.png
+        default_image: console/serverless-overview-light.png
         type: highlight-item
         enabled: true
         border: true
-        default_image_dark: console/containers-overview-dark.png
+        default_image_dark: console/serverless-overview-dark.png
     toggle_background: false
     reverse_alignment: false
     toggle_alignment: true
