@@ -1,5 +1,21 @@
 tree:
   -
+    id: 26e22c9e-4121-4f75-8885-23e7fa6e3775
+    title: Products
+    children:
+      -
+        id: dcba9bcf-7f03-420a-be48-5778b197d388
+        entry: 321f3638-6149-4686-a430-c179ad55fcbe
+      -
+        id: d3602fca-b651-4c0d-956b-c9f0f5b06536
+        entry: 1e33d247-bf25-42a4-b455-b47eb8dcf557
+      -
+        id: 6f6371a7-aa24-4016-beb8-7e9397f1aa10
+        entry: c983d54d-1d7e-434f-b789-ea74e7737653
+      -
+        id: 0571a048-e10a-49b1-b014-82a9f7b995f5
+        entry: 79c35c26-5009-4dbd-b647-d4f24eb357bb
+  -
     id: e63841ca-9c78-41db-a108-2bb7889af1df
     title: Learn
     url: '#'
@@ -8,24 +24,18 @@ tree:
         id: fd5f9e2f-52d0-4a6b-a073-723d020c0b13
         entry: 5f3ec833-66d3-43ef-9f35-97f1b4b0afc5
   -
-    id: fcc19a1c-8c73-4966-840c-9718541cabed
-    title: 'Contact us'
-    url: '#'
-    children:
-      -
-        id: bf87c535-2680-485b-a396-a9dd5eb92a54
-        entry: 178073b8-7594-4432-9b39-2461b487bce8
-  -
     id: 4eaa6961-34be-407e-b82b-dee44d2b57fa
     title: Company
     url: '#'
     children:
       -
-        id: 0571a048-e10a-49b1-b014-82a9f7b995f5
-        entry: 79c35c26-5009-4dbd-b647-d4f24eb357bb
-      -
         id: 13bae7f3-68f3-4e82-b7cf-a5f33e212ab5
         entry: 128bc187-e58c-4ccc-a5f7-587727470a54
+        title: About
+      -
+        id: bf87c535-2680-485b-a396-a9dd5eb92a54
+        entry: 178073b8-7594-4432-9b39-2461b487bce8
+        title: Contact
       -
         id: 34ddf1de-05c7-4f34-8002-579d5c710a91
         entry: 554e8ede-cfaa-435a-978c-7759b2c9c1ee
