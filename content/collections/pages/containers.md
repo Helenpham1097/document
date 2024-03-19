@@ -47,7 +47,7 @@ top_section:
     image: illustrations/container-cover-1710730424.png
 title: Containers
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1710733628
+updated_at: 1710813310
 page_builder:
   -
     id: lrftv1b6
@@ -289,11 +289,11 @@ page_builder:
                 type: text
                 text: 'The Webslice Console puts a heap of control at your fingertips. Create and manage containers and servers, track current performance, assign users, and much more. It all happens in one place.'
         template_global: /global/default_image
-        default_image: console/containers-overview-light.png
+        default_image: console/containers-overview-light-1710813223.png
         type: highlight-item
         enabled: true
         border: true
-        default_image_dark: console/containers-overview-dark.png
+        default_image_dark: console/containers-overview-dark-1710813244.png
       -
         id: lthuqphm
         highlight_title: 'Use simple controls to make big changes'
@@ -305,11 +305,11 @@ page_builder:
                 type: text
                 text: "Webslice lets you do big things in a few seconds flat. It's a very quick job to enable SSL, switch on CDN or Simple Cache, or make a number of other choices that speed up your work and your websites."
         template_global: /global/default_image
-        default_image: console/containers-settings-light.png
+        default_image: console/containers-settings-light-1710813278.png
         type: highlight-item
         enabled: true
         border: true
-        default_image_dark: console/containers-settings-dark.png
+        default_image_dark: console/containers-settings-dark-1710813297.png
     toggle_background: false
     reverse_alignment: false
     toggle_alignment: false
