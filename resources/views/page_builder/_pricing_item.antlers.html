@@ -36,10 +36,10 @@
 {{ else }}
 	{{# Item Style #}}
 	<div>
-		<div class="relative flex flex-col gap-6 rounded-lg p-6 ring-1 ring-zinc-300 dark:ring-zinc-700">
+		<div class="relative isolate flex flex-col gap-6 rounded-lg p-6 ring-1 ring-zinc-300 dark:ring-zinc-700">
 			{{ if highligh }}
 				<div class="absolute right-4 top-0 -translate-y-1/2 bg-white px-4 py-2 text-sm font-bold text-purple-500 dark:bg-zinc-900 dark:text-purple-400">{{ highligh_text }}</div>
-				<div class="absolute inset-0 bg-gradient-to-t from-zinc-100 via-transparent to-transparent dark:from-zinc-800"></div>
+				<div class="absolute inset-0 -z-10 bg-gradient-to-t from-zinc-100 via-transparent to-transparent dark:from-zinc-800"></div>
 			{{ /if }}
 			<div class="flex flex-col gap-4">
 				<div class="relative">
