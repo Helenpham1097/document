@@ -1,6 +1,7 @@
-data: {  }
+data:
+  alt: 'Webslice - team rafting'
 size: 543200
-last_modified: 1709845973
+last_modified: 1710103027
 width: 1200
 height: 800
 mime_type: image/jpeg

@@ -1,6 +1,7 @@
-data: {  }
+data:
+  alt: 'Webslice console overview - darkmode'
 size: 438949
-last_modified: 1710819792
+last_modified: 1710820697
 width: 2520
 height: 1890
 mime_type: image/png

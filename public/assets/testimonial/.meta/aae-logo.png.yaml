@@ -1,6 +1,7 @@
-data: {  }
+data:
+  alt: 'Australasian Audio Engineering  logo'
 size: 22747
-last_modified: 1710457819
+last_modified: 1710469882
 width: 470
 height: 470
 mime_type: image/png

@@ -1,6 +1,7 @@
-data: {  }
+data:
+  alt: 'Webslice - serverless overview dark'
 size: 354633
-last_modified: 1710793210
+last_modified: 1710802560
 width: 2520
 height: 1890
 mime_type: image/png

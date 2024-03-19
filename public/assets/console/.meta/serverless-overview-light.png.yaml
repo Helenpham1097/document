@@ -1,6 +1,7 @@
-data: {  }
+data:
+  alt: 'Webslice console serverless, overview - light mode'
 size: 348986
-last_modified: 1710793218
+last_modified: 1710802560
 width: 2520
 height: 1890
 mime_type: image/png

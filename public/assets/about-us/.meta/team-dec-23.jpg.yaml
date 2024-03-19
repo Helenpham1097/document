@@ -1,6 +1,7 @@
-data: {  }
+data:
+  alt: 'Webslice - Team 2023'
 size: 360162
-last_modified: 1709845729
+last_modified: 1710103027
 width: 1200
 height: 600
 mime_type: image/jpeg

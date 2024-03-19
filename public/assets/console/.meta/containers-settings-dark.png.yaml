@@ -1,6 +1,7 @@
-data: {  }
+data:
+  alt: 'Webslice - Containers settings dark.'
 size: 486359
-last_modified: 1710733616
+last_modified: 1710813426
 width: 2520
 height: 1890
 mime_type: image/png
