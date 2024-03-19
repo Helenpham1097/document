@@ -1,6 +1,7 @@
-data: {  }
+data:
+  alt: 'AD - avatar'
 size: 9672
-last_modified: 1710132386
+last_modified: 1710293590
 width: 178
 height: 178
 mime_type: image/png

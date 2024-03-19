@@ -1,6 +1,7 @@
-data: {  }
+data:
+  alt: 'Webslice console containers, overview - dark mode'
 size: 438949
-last_modified: 1710813244
+last_modified: 1710818213
 width: 2520
 height: 1890
 mime_type: image/png

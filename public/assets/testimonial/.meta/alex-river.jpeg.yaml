@@ -1,6 +1,7 @@
-data: {  }
+data:
+  alt: 'Alex Osborn - Technical Lead, RIVER'
 size: 34330
-last_modified: 1710130086
+last_modified: 1710293590
 width: 276
 height: 276
 mime_type: image/jpeg

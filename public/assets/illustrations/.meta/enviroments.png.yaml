@@ -1,4 +1,5 @@
-data: {  }
+data:
+  alt: 'Web, Applications, and Integrated Containers'
 size: 110488
 last_modified: 1710732374
 width: 616

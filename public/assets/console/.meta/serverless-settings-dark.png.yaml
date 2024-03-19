@@ -1,6 +1,7 @@
-data: {  }
+data:
+  alt: 'Webslice console serverless, settings - dark mode'
 size: 509853
-last_modified: 1710793225
+last_modified: 1710802560
 width: 2520
 height: 1890
 mime_type: image/png

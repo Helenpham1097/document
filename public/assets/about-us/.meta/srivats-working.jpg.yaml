@@ -1,6 +1,7 @@
-data: {  }
+data:
+  alt: 'Webslice - team working.jpg'
 size: 69905
-last_modified: 1710460035
+last_modified: 1710469882
 width: 800
 height: 439
 mime_type: image/jpeg

@@ -3,8 +3,8 @@ id: cf7040f4-473b-4c14-897d-5de59ce6d833
 blueprint: home
 template: general_content/index
 title: Homepage
-updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1710477633
+updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
+updated_at: 1710820108
 top_section:
   -
     id: RzzOzBfN
@@ -137,8 +137,8 @@ page_builder:
         type: box
         enabled: true
         text_link: 'See Webslice Containers'
-        image: color-mode-dark.png
-        image_hover: default-optimized.jpg
+        image: containers-overview-dark.png
+        image_hover: console/containers-overview-light-1710813223.png
       -
         id: lrzoyenc
         template_global: /global/default_image
@@ -148,8 +148,8 @@ page_builder:
         type: box
         enabled: true
         text_link: 'See Webslice Serverless'
-        image: color-mode-dark.png
-        image_hover: photo-1620287341056-49a2f1ab2fdc.jpeg
+        image: console/serverless-overview-dark.png
+        image_hover: console/serverless-overview-light.png
         url: 'entry::1e33d247-bf25-42a4-b455-b47eb8dcf557'
     type: two_options
     enabled: true
@@ -246,7 +246,7 @@ page_builder:
                 type: text
                 text: "We've been in the industry for over 20 years. Today we have thousands of happy customers, one of the highest-rated Support Teams you'll find anywhere, and the technical expertise to take a lot of stress off your shoulders. With Webslice on your side you can spend more time building great things for your clients, and less time worrying about servers and infrastructure."
         template_global: /global/default_image
-        default_image: about-us/team-dec-23.jpg
+        default_image: about-us/webslice-team.jpg
         buttons:
           -
             id: ltf4zdxk

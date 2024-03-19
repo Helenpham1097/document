@@ -1,6 +1,7 @@
-data: {  }
+data:
+  alt: 'Webslice console containers, settings - light mode'
 size: 484982
-last_modified: 1710813278
+last_modified: 1710818213
 width: 2520
 height: 1890
 mime_type: image/png

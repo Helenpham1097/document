@@ -1,6 +1,7 @@
-data: {  }
+data:
+  alt: 'Webslice containers settings light.'
 size: 468756
-last_modified: 1710733559
+last_modified: 1710793705
 width: 2520
 height: 1890
 mime_type: image/png
