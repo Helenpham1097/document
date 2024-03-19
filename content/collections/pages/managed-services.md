@@ -18,22 +18,23 @@ top_section:
             text: 'Stop worrying about server monitoring and maintenance. Get quicker, broader access to our 24/7 Support Team. And access time-saving features on your hosting platform.'
     buttons:
       -
-        id: lrzodtof
-        template_global: /components/buttons
-        label: 'Request Managed Services'
-        link_type: entry
-        target_blank: false
-        button_type: button
-        entry: 178073b8-7594-4432-9b39-2461b487bce8
-        iconamic: chevrons-right
-      -
         id: lrzodymc
         template_global: /components/buttons
-        label: 'Join Webslice Now'
+        label: 'Join Webslice'
         link_type: url
         target_blank: false
         url: 'https://console.webslice.com/register'
+        button_type: button
+        iconamic: chevrons-right
+      -
+        id: ltxslzeb
+        template_global: /components/buttons
+        label: 'Login to Add Services now'
+        link_type: url
+        target_blank: false
+        url: 'https://console.webslice.com/login'
         button_type: secondary
+        iconamic: chevron-right
     type: hero
     enabled: true
     dark_image: illustrations/expand.png
@@ -44,7 +45,7 @@ page_description: 'Monitoring, incident response, time-saving tools, broader 24/
 meta_title: 'Managed Services - Webslice web hosting'
 meta_description: 'Add Managed Services to Webslice hosting for time-saving developer tools, broader 24/7 technical support, and server management including incident response.'
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1710478100
+updated_at: 1710822827
 page_builder:
   -
     id: lt81rapn
@@ -139,7 +140,7 @@ page_builder:
     template_global: /global/iconamic
     iconamic: wrench
     title: 'Time-saving developer tools'
-    description: 'When you add Managed Services to your Webslice Containers, you unlock tools that supercharge your productivity.'
+    description: 'When you add Business or Premium Services to your Webslice Containers, you unlock tools that supercharge your productivity.'
     entry:
       -
         id: lt81htdt
@@ -154,11 +155,17 @@ page_builder:
         enabled: true
         url: /docs/containers/features/caching/
       -
+        id: ltxsilxr
+        text: 'One-click backup restore'
+        url: /docs/containers/features/backup-restore/
+        type: entry
+        enabled: true
+      -
         id: lt81i1vf
         text: 'Schedule automated image updates.'
         type: entry
         enabled: true
-        url: /docs/containers/features/swapping-images/
+        url: /docs/containers/features/auto-updates/
     type: head_to_documentation
     enabled: true
   -
@@ -176,11 +183,6 @@ page_builder:
             id: lt815lhm
             template_global: /components/buttons
             label: 'Start With Webslice Now'
-            iconamic: chevrons-right
-            link_type: entry
-            target_blank: false
-            entry: 128bc187-e58c-4ccc-a5f7-587727470a54
-            button_type: button
         bentos:
           -
             id: lt812uva
@@ -232,6 +234,161 @@ page_builder:
     type: bento_highlight
     enabled: false
   -
+    id: ltxpm6yo
+    template: /page_builder/pricing_table
+    pricing_style: items
+    template_global: /global/iconamic
+    Items:
+      -
+        id: ltxqadj8
+        highligh: false
+        title: Standard
+        description: 'Platform support for every customer, every container, and every server.'
+        price: 0
+        type: column
+        enabled: true
+        price_detail:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: ' '
+        features:
+          - 'Support Method: Community & email'
+          - 'Support Coverage: Platform Only'
+          - 'Monitoring: Self-managed'
+          - 'SLA: Standard'
+      -
+        id: ltxpqrz4
+        highligh: true
+        highligh_text: 'Most popular'
+        title: Business
+        description: 'More proactive services, broader support, and advanced platform features.'
+        price: 50
+        price_detail:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: '+ $2.50 per container (USD, monthly)'
+        type: column
+        enabled: true
+        features:
+          - 'Support Method: Standard + Live Chat'
+          - 'Support Coverage: Platform & App'
+          - 'Monitoring: 24x7 Monitoring & Response'
+          - 'SLA: Standard'
+          - 'Container Feature: Automatic Image Updates'
+          - 'Container Feature: Cloning & Sync'
+          - 'Container Feature: Simple Cache'
+          - 'Container Feature: One-Click Backup Restore'
+      -
+        id: ltxpm8fq
+        highligh: false
+        title: Premium
+        description: 'All Business-tier services and developer tools, plus the highest level of 24/7 support.'
+        price: 350
+        price_detail:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: '+ $5 per container (USD, monthly)'
+        type: column
+        enabled: true
+        features:
+          - 'Support Method: Business + Phone'
+          - 'Support Coverage: Platform & App'
+          - 'Monitoring: 24x7 Monitoring & Response'
+          - 'SLA: Premium & Customisable'
+          - 'Container Feature: Automatic Image Updates'
+          - 'Container Feature: Cloning & Sync'
+          - 'Container Feature: Simple Cache'
+          - 'Container Feature: One-Click Backup Restore'
+    type: pricing_table
+    enabled: true
+    iconamic: list-checks
+    title: 'Managed services - Packages and pricing'
+    description: 'Your selected services will apply across your whole team and all the servers and containers that you run. To add Managed Services, log into Webslice and head to your team settings.'
+  -
+    id: ltxrr6i7
+    template: /general_content/_multiple_text_columns
+    display_title_section:
+      -
+        id: ltxrr7mt
+        center_title_title: 'Platform support vs Application support'
+        type: section_title
+        enabled: true
+    columns:
+      -
+        id: ltxrsudq
+        text:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'What would you like our Support Team to help you with? '
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Platform support'
+              -
+                type: text
+                text: ' is free and available to everyone. By adding Business or Premium Services, you and your team can also access '
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Application support'
+              -
+                type: text
+                text: '. This broadens the range of issues that our Support Team can help you with.'
+        type: column
+        enabled: true
+      -
+        id: ltxrudjf
+        text:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Platform support'
+              -
+                type: text
+                text: " covers your Webslice platform. We'll help solve issues affecting your servers, containers and our network. We'll also answer questions about the Webslice Console's functions and features. This support does not cover anything running inside your Containers."
+        type: column
+        enabled: true
+      -
+        id: ltxrwj31
+        text:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Application support'
+              -
+                type: text
+                text: " covers parts of the software that run in your Containers, and more advanced technical questions. While we won't write or debug code for you, we'll answer questions about performance issues, crashes, or why your website may have stopped working."
+        type: column
+        enabled: true
+    type: multiple_text_columns
+    enabled: true
+  -
     id: lt82em9t
     template: /page_builder/pricing_table
     pricing_style: items
@@ -282,7 +439,7 @@ page_builder:
         type: column
         enabled: true
     type: pricing_table
-    enabled: true
+    enabled: false
     description: "No matter what Webslice hosting platform you're on, and no matter what size hosting package you have, you can add either level of Managed Services."
   -
     id: ltruaxvo

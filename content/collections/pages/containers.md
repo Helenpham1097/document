@@ -46,8 +46,8 @@ top_section:
     shape: triangle
     image: illustrations/container-cover-1710730424.png
 title: Containers
-updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1710813310
+updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
+updated_at: 1710814761
 page_builder:
   -
     id: lrftv1b6
@@ -364,7 +364,7 @@ page_builder:
           - '4GB RAM'
           - '2 cores'
           - '80GB storage'
-          - '2TB bandwidth'
+          - '4TB bandwidth'
           - 'Automatic backups'
           - 'Free SSL'
         type: column
