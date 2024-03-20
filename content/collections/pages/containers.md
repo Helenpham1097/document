@@ -47,7 +47,7 @@ top_section:
     image: illustrations/container-cover-1710730424.png
 title: Containers
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1710814761
+updated_at: 1710896018
 page_builder:
   -
     id: lrftv1b6
@@ -204,7 +204,7 @@ page_builder:
         enabled: true
         link_type: url
         target_blank: false
-        url: /docs
+        url: /docs/containers/servers/locations
     bento_type: boxes
     template_global: /global/iconamic
     iconamic: fast-forward
@@ -334,6 +334,7 @@ page_builder:
           - '1GB RAM'
           - '1 core'
           - '25GB storage'
+          - '1 Container'
           - '1TB bandwidth'
           - 'Automatic backups'
           - 'Free SSL'
@@ -349,6 +350,7 @@ page_builder:
           - '2GB RAM'
           - '1 core'
           - '50GB storage'
+          - '10 Containers'
           - '2TB bandwidth'
           - 'Automatic backups'
           - 'Free SSL'
@@ -364,6 +366,7 @@ page_builder:
           - '4GB RAM'
           - '2 cores'
           - '80GB storage'
+          - '20 Containers'
           - '4TB bandwidth'
           - 'Automatic backups'
           - 'Free SSL'
@@ -380,6 +383,7 @@ page_builder:
           - '8GB RAM'
           - '4 cores'
           - '160GB storage'
+          - '40 Containers'
           - '5TB bandwidth'
           - 'Automatic backups'
           - 'Free SSL'
@@ -395,6 +399,7 @@ page_builder:
           - '16GB RAM'
           - '6 cores'
           - '320GB storage'
+          - '80 Containers'
           - '8TB bandwidth'
           - 'Automatic backups'
           - 'Free SSL'
@@ -410,6 +415,7 @@ page_builder:
           - '32GB RAM'
           - '8 cores'
           - '640GB storage'
+          - '100 Containers'
           - '16TB bandwidth'
           - 'Automatic backups'
           - 'Free SSL'
@@ -605,7 +611,7 @@ page_builder:
                       -
                         type: text
                         text: 'Server OS patching and upgrades.'
-                url: '#'
+                url: /docs/containers/servers/overview
                 type: link
                 enabled: true
                 target: false
@@ -632,7 +638,8 @@ page_builder:
                         text: 'Regular releases of new container images.'
                 type: link
                 enabled: true
-                target: false
+                target: true
+                url: /docs/containers/features/swapping-images/
               -
                 id: lru3kjq7
                 text:
@@ -645,6 +652,7 @@ page_builder:
                 type: link
                 enabled: true
                 target: false
+                url: 'entry::c983d54d-1d7e-434f-b789-ea74e7737653'
             type: box
             enabled: true
       -
@@ -678,7 +686,8 @@ page_builder:
                         text: 'Simple Cache.'
                 type: link
                 enabled: true
-                target: false
+                target: true
+                url: /docs/containers/features/caching/
               -
                 id: lru3nqj8
                 text:
@@ -690,7 +699,8 @@ page_builder:
                         text: 'One-click backup restore.'
                 type: link
                 enabled: true
-                target: false
+                target: true
+                url: /docs/containers/features/backup-restore/
               -
                 id: lru3nyjc
                 text:
@@ -702,7 +712,8 @@ page_builder:
                         text: 'Container cloning and syncing.'
                 type: link
                 enabled: true
-                target: false
+                target: true
+                url: /docs/containers/features/cloning-overwriting/
               -
                 id: lru3o2ef
                 text:
@@ -714,7 +725,8 @@ page_builder:
                         text: 'Scheduled container updates.'
                 type: link
                 enabled: true
-                target: false
+                target: true
+                url: /docs/containers/features/auto-updates/
             type: box
             enabled: true
         type: feature_highlight-item
@@ -927,7 +939,7 @@ page_builder:
         text: 'The introductory overview for developers.'
         type: entry
         enabled: true
-        url: /docs/containers/getting-started/
+        url: /docs/containers/overview
       -
         id: lrocq8tp
         text: 'How easy it is to get started.'

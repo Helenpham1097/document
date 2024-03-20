@@ -45,36 +45,8 @@ page_description: 'Monitoring, incident response, time-saving tools, broader 24/
 meta_title: 'Managed Services - Webslice web hosting'
 meta_description: 'Add Managed Services to Webslice hosting for time-saving developer tools, broader 24/7 technical support, and server management including incident response.'
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1710822827
+updated_at: 1710881987
 page_builder:
-  -
-    id: lt81rapn
-    template: page_builder/two_options
-    title: 'Managed Services'
-    sub_title: 'Two levels to choose from. Are you here to save time and stress, or to protect mission critical assets?'
-    boxes:
-      -
-        id: lt81sex0
-        template_global: /global/iconamic
-        title: 'Our Expertise, Your Infrastructure'
-        description: 'With Managed Services 1, our team takes responsibility for a lot of infrastructure maintenance and management.'
-        image: cube.png
-        image_hover: aws-diagram.png
-        type: box
-        enabled: true
-        iconamic: signal-medium
-      -
-        id: lt81spdc
-        template_global: /global/iconamic
-        title: 'Add Next Level Support'
-        url: '#'
-        text_link: 'Contact Us?'
-        type: box
-        enabled: true
-        iconamic: signal-high
-        description: 'With Managed Services 2, you get more ways to directly access our Support Team, and a higher SLA every time you do.'
-    type: two_options
-    enabled: false
   -
     id: ltginaij
     template: /page_builder/highlight
@@ -88,7 +60,7 @@ page_builder:
             content:
               -
                 type: text
-                text: "Every Webslice server is automatically monitored, and every Webslice customer can receive incident alerts. That's a handy way to let you know when you need to check up on something yourself. "
+                text: "Every Webslice server is automatically monitored, and every Webslice customer can review up-to-date performance metrics. That's a handy way to know when you need to check up on something yourself. "
           -
             type: paragraph
             content:
@@ -168,71 +140,6 @@ page_builder:
         url: /docs/containers/features/auto-updates/
     type: head_to_documentation
     enabled: true
-  -
-    id: lt812bbp
-    template: /general_content/bento_highlight
-    rows:
-      -
-        id: lt812ck8
-        template_global: /global/iconamic
-        iconamic: wrench
-        title: 'Bento Highlight Box'
-        description: 'Bento highlight desc. When you add Managed Services to your Webslice Containers, you unlock tools that supercharge your productivity.'
-        buttons:
-          -
-            id: lt815lhm
-            template_global: /components/buttons
-            label: 'Start With Webslice Now'
-        bentos:
-          -
-            id: lt812uva
-            items:
-              -
-                id: lt812xow
-                text:
-                  -
-                    type: paragraph
-                    content:
-                      -
-                        type: text
-                        text: 'Clone and overwrite containers.'
-                url: '#'
-                target: true
-                type: link
-                enabled: true
-              -
-                id: lt8138yn
-                text:
-                  -
-                    type: paragraph
-                    content:
-                      -
-                        type: text
-                        text: 'Control caching, or switch on Simple Cache.'
-                url: '#'
-                target: true
-                type: link
-                enabled: true
-              -
-                id: lt813lip
-                text:
-                  -
-                    type: paragraph
-                    content:
-                      -
-                        type: text
-                        text: 'Schedule automated image updates.'
-                target: false
-                type: link
-                enabled: true
-            type: box
-            enabled: true
-        type: feature_highlight-item
-        enabled: false
-    reverse_alignment: false
-    toggle_alignment: false
-    type: bento_highlight
-    enabled: false
   -
     id: ltxpm6yo
     template: /page_builder/pricing_table
@@ -388,59 +295,6 @@ page_builder:
         enabled: true
     type: multiple_text_columns
     enabled: true
-  -
-    id: lt82em9t
-    template: /page_builder/pricing_table
-    pricing_style: items
-    template_global: /global/iconamic
-    iconamic: list-checks
-    title: 'Managed Services - Packages and Pricing'
-    Items:
-      -
-        id: ltgdxyl3
-        highligh: false
-        title: Standard
-        description: 'Every Webslice customer has access to 24/7 support and platform monitoring.'
-        price: 0
-        features:
-          - 'Support access: Community and email'
-          - 'Support coverage: Platform only'
-          - 'Monitoring: Receive automatic alerts'
-          - 'Standard support SLA'
-        type: column
-        enabled: true
-      -
-        id: lt82h1tl
-        highligh: true
-        highligh_text: Recommended
-        title: Business
-        description: 'More proactive services, broader support, and advanced platform features.'
-        price: 50
-        features:
-          - 'Support access: Add live chat'
-          - 'Full support coverage: Platform + application support'
-          - 'Monitoring: Proactive incident response'
-          - 'Standard support SLA'
-          - 'Webslice Containers: Add enhanced developer tools (automatic image updates, container cloning, caching and more)'
-        type: column
-        enabled: true
-      -
-        id: lt82hdtb
-        highligh: false
-        title: Premium
-        description: 'All Business-tier services and developer tools, plus the highest level of 24/7 support.'
-        price: 350
-        features:
-          - 'Support access: Add video and phone'
-          - 'Full support coverage: Platform + application support'
-          - 'Monitoring: Proactive incident response'
-          - 'Premium, customisable support SLA'
-          - 'Webslice Containers: Enhanced developer tools'
-        type: column
-        enabled: true
-    type: pricing_table
-    enabled: false
-    description: "No matter what Webslice hosting platform you're on, and no matter what size hosting package you have, you can add either level of Managed Services."
   -
     id: ltruaxvo
     template: /page_builder/testimonial_section
