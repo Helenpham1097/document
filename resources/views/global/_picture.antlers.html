@@ -1,5 +1,5 @@
 {{#
-    https://1{{quality}}2.studio/journal/responsive-images-with-statamic-tailwind-and-glide
+    https://1{{quality ?? '80'}}'}}2.studio/journal/responsive-images-with-statamic-tailwind-and-glide
 #}}
 
 {{# /global/_picture.antlers.html #}}
@@ -16,14 +16,16 @@
                     {{ else }}
                         class="{{ class }}"
                     {{ /if }}
-                    src="{{ glide:image fit='crop_focal' {{ if maxheight }} height='{{ maxheight }}' {{ /if }} width='{{ maxwidth }}' quality='{{quality}}'}}"
+                    {{ if (environment !== 'production') }} data-img="w-{{ maxwidth ?? width }} h-{{ maxheight ?? height }} q-{{quality ?? '80'}}" {{ /if }}
+                    src="{{ glide:image fit='crop_focal' {{ if maxheight }} height='{{ maxheight ?? height }}' {{ /if }} width='{{ maxwidth ?? width }}' quality='{{quality ?? '80'}}'}}"
                     srcset="
-                    {{ glide:image width='280' quality='{{quality}}' format='webp' }} 280w,
-                    {{ glide:image width='480' quality='{{quality}}' format='webp' }} 480w,
-                    {{ glide:image width='560' quality='{{quality}}' format='webp' }} 560w,
-                    {{ glide:image width='840' quality='{{quality}}' format='webp' }} 840w,
-                    {{ glide:image width='960' quality='{{quality}}' format='webp' }} 960w,
+                    {{ glide:image width='280' quality='{{quality ?? '80'}}'}}' format='webp' }} 280w,
+                    {{ glide:image width='480' quality='{{quality ?? '80'}}'}}' format='webp' }} 480w,
+                    {{ glide:image width='560' quality='{{quality ?? '80'}}'}}' format='webp' }} 560w,
+                    {{ glide:image width='840' quality='{{quality ?? '80'}}'}}' format='webp' }} 840w,
+                    {{ glide:image width='960' quality='{{quality ?? '80'}}'}}' format='webp' }} 960w,
                     "
+                    sizes="(min-width: 768px) 840px, 87.5vw"
                     alt="{{ alt ?? title }}"
                     width="{{ maxwidth ?? width }}"
                     height="{{ maxheight ?? height }}"
