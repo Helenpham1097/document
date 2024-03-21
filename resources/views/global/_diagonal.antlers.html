@@ -1,10 +1,10 @@
 <div class="relative">
 	{{# Color gradients #}}
-	<div class="absolute right-0 h-[500px] w-[800px] -translate-y-1/3 translate-x-1/3 -skew-y-[15deg] rounded-full bg-gradient-to-r from-transparent to-purple-500/50 blur-[128px]"></div>
-	<div class="absolute right-0 h-[500px] w-[800px] -translate-y-1/2 translate-x-1/2 -skew-y-[15deg] rounded-full bg-gradient-to-r from-transparent to-green-500/50 blur-[128px]"></div>
+	<div class="absolute right-0 h-[500px] w-[800px] -translate-y-1/3 translate-x-1/3 -skew-y-[15deg] rounded-full bg-gradient-to-r from-transparent to-green-500/50 blur-[128px] dark:to-purple-500/50 dark:blur-[128px]"></div>
+	<div class="absolute right-0 h-[500px] w-[800px] -translate-y-1/2 translate-x-1/2 -skew-y-[15deg] rounded-full bg-gradient-to-r from-transparent to-purple-200/90 blur-[128px] dark:to-green-500/50 dark:blur-[128px]"></div>
 	{{ if shape }}
 		{{ if shape:value === 'diagonal' }}
-			{{ partial:illustration/hero_diagonal class='absolute hidden xl:block  ' }}
+			{{ partial:illustration/hero_diagonal class='absolute hidden xl:flex  ' }}
 		{{ elseif shape:value === 'triangle' }}
 			{{ partial:illustration/hero_triangle class='absolute hidden xl:block mx-auto w-full translate-x-1/2' }}
 		{{ elseif shape:value === 'paper' }}
@@ -13,6 +13,6 @@
 			{{ partial:illustration/hero_square class='absolute hidden xl:block mx-auto w-full -translate-y-12 translate-x-1/2' }}
 		{{ /if }}
 	{{ else }}
-		{{ partial:illustration/hero_diagonal class='absolute hidden xl:block  ' }}
+		{{ partial:illustration/hero_diagonal class='absolute hidden xl:flex  ' }}
 	{{ /if }}
 </div>
