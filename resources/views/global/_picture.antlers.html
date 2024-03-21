@@ -17,7 +17,7 @@
                         class="{{ class }}"
                     {{ /if }}
                     {{ if (environment !== 'production') }} data-img="w-{{ maxwidth ?? width }} h-{{ maxheight ?? height }} q-{{quality ?? '80'}}" {{ /if }}
-                    src="{{ glide:image fit='crop_focal' {{ if maxheight }} height='{{ maxheight ?? height }}' {{ /if }} width='{{ maxwidth ?? width }}' quality='{{quality ?? '80'}}'}}"
+                    src="{{ glide:image fit='crop_focal' format='webp' {{ if maxheight }} height='{{ maxheight ?? height }}' {{ /if }} width='{{ maxwidth ?? width }}' quality='{{quality ?? '80'}}'}}"
                     srcset="
                     {{ glide:image width='280' quality='{{quality ?? '80'}}'}}' format='webp' }} 280w,
                     {{ glide:image width='480' quality='{{quality ?? '80'}}'}}' format='webp' }} 480w,
