@@ -1,4 +1,4 @@
-<section class="relative overflow-hidden py-24">
+<section class="relative overflow-hidden pb-12 xl:py-24">
 	{{ if bg_pattern }}
 		<div class="absolute inset-0 -z-10 rotate-180 rounded-2xl bg-[repeating-linear-gradient(-45deg,_rgba(10,10,10,_0.15),_rgba(10,10,10,_0.15)_1px,_transparent_1px,_transparent_6px)] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] [background-size:8px_8px] dark:bg-[repeating-linear-gradient(-45deg,_rgba(255,255,255,_0.15),_rgba(255,255,255,_0.15)_1px,_transparent_1px,_transparent_6px)]"></div>
 	{{ /if }}
@@ -8,7 +8,7 @@
 				{{ title | strip_tags:p }}
 			</p>
 		</div>
-		<div class="grid gap-6 sm:grid-cols-2 w-full md:grid-cols-{{ metric_items | count }}">
+		<div class="grid gap-6  w-full md:grid-cols-{{ metric_items | count }}">
 			{{ metric_items }}
 				<div class="rounded-3xl border bg-zinc-50 p-2 dark:border-zinc-700 text-zinc-800 dark:text-zinc-200 dark:bg-zinc-800">
 					<figure class="relative flex h-full flex-col justify-between rounded-2xl border bg-white p-6 shadow-lg dark:border-zinc-700 dark:bg-zinc-800">

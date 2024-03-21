@@ -21,7 +21,6 @@
 }
 
 .primary-action-button:after {
-	/* box-shadow: 0 0 #000019, 0 9px 21px #000019fa, 0 37px 37px #000019d9, 0 84px 50px #00001980, 0 149px 60px #00001926, 0 233px 65px #00001905, 0 -3px #49023933 inset; */
 	content: "";
 	position: absolute;
 	top: 0;

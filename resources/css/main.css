@@ -9,39 +9,25 @@
 @import "./utilities/animation.css";
 @import "./base/article.css";
 @import "./utilities/wrapper.css";
-@import "./utilities/code.css";
-@import "./components/docs.css";
 @import "./components/bento.css";
-
 /* Components */
-@import "./components/cover.css";
-@import "./components/hero.css";
-
 @import "tailwindcss/utilities";
-
-/* * {
-	border: 1px solid rgba(100, 0, 0, 0.5);
-} */
-
 /* Browser-Sync notification */
 #__bs_notify__ {
 	display: none;
 	opacity: 0;
 }
-
 html,
 body {
 	position: relative;
 	overflow-x: hidden;
 }
-
 .dev * {
 	@apply border border-red-500/30 bg-red-500/20;
 }
 .dark {
 	color-scheme: dark;
 }
-
 /* CSS Hardware Acceleration */
 .cssha {
 	-webkit-backface-visibility: hidden;

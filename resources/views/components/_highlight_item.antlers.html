@@ -18,7 +18,7 @@
 
 {{#
   On top of all this, the mobile version must not alternate the order of the images
-  that are always displayed before the text,  this is controlled by "order-first MD:order-last".
+  that are always displayed before the text,  this is controlled by "order-first lg:order-last".
 #}}
 
 {{# "toggle_background" allows to add or remove the background with the animated strips. #}}
@@ -33,7 +33,7 @@
         {{ else }}
             {{ switch between=' | lg:space-x-reverse' }}
         {{ /if }}
-    {{ /if }} container mx-auto flex flex-col space-y-6 space-y-reverse py-10 sm:space-y-0 lg:flex-row lg:items-center lg:space-x-24">
+    {{ /if }} container mx-auto flex flex-col gap-6 space-y-reverse py-10 sm:space-y-0 lg:flex-row lg:items-center lg:gap-24">
 	<div class="space-y-6 lg:w-1/2">
 		<div class="space-y-6">
 			{{ if highlight_title }}
@@ -50,13 +50,13 @@
         {{ if toggle_alignment }}
             order-first 
         {{ else }}
-            {{ switch between='order-first | order-first md:order-last' }}
+            {{ switch between='order-first | order-first lg:order-last' }}
         {{ /if }}
     {{else}}
         {{ if toggle_alignment }}
-            order-first md:order-last
+            order-first lg:order-last
         {{ else }}
-            {{ switch between='order-first md:order-last | order-first' }}
+            {{ switch between='order-first lg:order-last | order-first' }}
         {{ /if }}
     {{ /if }} relative lg:mx-auto lg:w-1/2">
 		{{ if toggle_background }}
@@ -81,13 +81,11 @@
 		{{ if default_image }}
 			<div class="relative {{ if border }}space-y-8{{ /if }}">
 				{{ if default_image_dark && default_image }}
-					{{ partial:components/figure :image="default_image_dark" class="hidden dark:block {{ if border }} border-2 shadow-2xl shadow-purple-500  border-purple-600 ring-[10px] ring-purple-500/30 rounded-xl {{ /if }}" }}
-					{{ partial:components/figure :image="default_image" class="dark:hidden block  {{ if border }} border-2 shadow-2xl  border-purple-600/50 ring-[10px] ring-purple-500/30 rounded-xl {{ /if }}" }}
+					{{ partial:components/figure quality="90" cover="true" maxwidth="704" lazy="true" :image="default_image_dark" class="hidden dark:block {{ if border }} border-2 shadow-2xl shadow-purple-500  border-purple-600 ring-[10px] ring-purple-500/30 rounded-xl {{ /if }}" }}
+					{{ partial:components/figure quality="90" cover="true" maxwidth="704" lazy="true" :image="default_image" class="dark:hidden block  {{ if border }} border-2 shadow-2xl  border-purple-600/50 ring-[10px] ring-purple-500/30 rounded-xl {{ /if }}" }}
 				{{ else }}
-					{{ partial:components/figure :image="default_image" class="{{ if border }} border-2 shadow-2xl  border-purple-600/50 ring-[10px] ring-purple-500/30 rounded-xl {{ /if }}" }}
+					{{ partial:components/figure quality="90" cover="true" maxwidth="704" lazy="true" :image="default_image" class="{{ if border }} border-2 shadow-2xl  border-purple-600/50 ring-[10px] ring-purple-500/30 rounded-xl {{ /if }}" }}
 				{{ /if }}
-				
-				
 				{{ partial:typography/caption caption="{{highlight_textcaption}}" }}
 			</div>
 		{{ /if }}
