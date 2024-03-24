@@ -4,7 +4,7 @@
 	<div class="container relative mx-auto flex flex-col gap-6 xl:flex-row" x-data="{tab: 1}">
 		<div class="{{ if start_type | count == 1 }} justify-center {{ else }} justify-start {{ /if }} space-y-12 xl:w-1/2">
 			<div class="max-w-xl">
-				{{ partial:typography/h2 :content="title | strip_tags:p" class=' ' }}
+				{{ partial:typography/h2 :content="title | strip_tags:p" class=' dot' }}
 				{{ partial:typography/p :content="description | strip_tags:p" class=' mt-3 lg:mt-5' }}
 			</div>
 			{{ if start_type | count >= 2 }}
