@@ -18,6 +18,7 @@
         "mitydigital/feedamic": "^2.3",
         "mitydigital/iconamic": "^1.0",
         "mitydigital/sitemapamic": "^2.3",
+        "rias/statamic-redirect": "^3.6",
         "statamic/cms": "^4.0",
         "statamic/ssg": "^2.0",
         "teamnovu/statamic-images-missing-alt": "^1.0",
