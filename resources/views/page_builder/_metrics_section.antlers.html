@@ -8,7 +8,7 @@
 				{{ title | strip_tags:p }}
 			</p>
 		</div>
-		<div class="grid gap-6  w-full md:grid-cols-{{ metric_items | count }}">
+		<div class="grid md:gap-6 gap-2 w-full md:grid-cols-{{ metric_items | count }}">
 			{{ metric_items }}
 				<div class="rounded-3xl border bg-zinc-50 p-2 dark:border-zinc-700 text-zinc-800 dark:text-zinc-50 dark:bg-zinc-800">
 					<figure class="relative flex h-full flex-col justify-between rounded-2xl border bg-white p-6 shadow-lg dark:border-zinc-700 dark:bg-zinc-800">
