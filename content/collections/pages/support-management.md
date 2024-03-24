@@ -7,15 +7,15 @@ top_section:
     id: mjO2sFpK
     shape: diagonal
     iconamic: expand
-    pre: 'Managed Services'
-    hero_home_title: 'Work Even Faster, With Fewer Things to Worry About'
+    pre: 'Support & Management'
+    hero_home_title: 'Work even faster, with fewer things to worry about'
     hero_home_description:
       -
         type: paragraph
         content:
           -
             type: text
-            text: 'Stop worrying about server monitoring and maintenance. Get quicker, broader access to our 24/7 Support Team. And access time-saving features on your hosting platform.'
+            text: 'Stop worrying about server monitoring and maintenance. Get quicker, broader access to our 24/7 support team. And access time-saving features on your hosting platform.'
     buttons:
       -
         id: lrzodymc
@@ -40,12 +40,12 @@ top_section:
     dark_image: illustrations/expand.png
     template: /general_content/hero
     template_global: /global/iconamic
-title: 'Managed Services'
+title: 'Support & Management'
 page_description: 'Monitoring, incident response, time-saving tools, broader 24/7 support.'
 meta_title: 'Managed Services - Webslice web hosting'
 meta_description: 'Add Managed Services to Webslice hosting for time-saving developer tools, broader 24/7 technical support, and server management including incident response.'
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1710881987
+updated_at: 1711317410
 page_builder:
   -
     id: ltginaij
@@ -60,13 +60,7 @@ page_builder:
             content:
               -
                 type: text
-                text: "Every Webslice server is automatically monitored, and every Webslice customer can review up-to-date performance metrics. That's a handy way to know when you need to check up on something yourself. "
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: "With Managed Services we take care of the response for you. A lot of the time, things are solved before you'd even notice an issue."
+                text: "If your most important website goes down at 3am, who's getting out of bed? When we're monitoring your servers and containers, we'll also respond to incidents like outages or excess load. Whether it's the middle of the night or it's your busiest day of the year, we're on the job. Things are often solved before you'd even notice an issue."
         template_global: /global/default_image
         default_image: bb28417eb2b2507580ab0f08bf09ea69.webp
         type: highlight-item
@@ -81,25 +75,11 @@ page_builder:
             content:
               -
                 type: text
-                text: "Our Support Team is smart, highly rated by customers, and quick to act. If you're ever in a jam, this is your first point of call. With Managed Services you'll have more ways to contact us, more expertise to rely on, and with Premium services even a customized SLA."
+                text: "With Business or Premium Support and Management you'll have more and faster ways to contact our support team. When you do, you'll be able to get help not only with your hosting platform, but also the applications that you're running on it. You can even have customized SLA if your business needs one."
         template_global: /global/default_image
         default_image: photo-1601933973783-43cf8a7d4c5f.jpeg
         type: highlight-item
         enabled: true
-        border: false
-      -
-        id: ltgip6ay
-        highlight_title: Time-saving
-        template_global: /global/default_image
-        type: highlight-item
-        enabled: false
-        border: false
-      -
-        id: ltgipldn
-        highlight_title: 'Enhanced developer tools'
-        template_global: /global/default_image
-        type: highlight-item
-        enabled: false
         border: false
     toggle_background: false
     reverse_alignment: false
@@ -112,7 +92,7 @@ page_builder:
     template_global: /global/iconamic
     iconamic: wrench
     title: 'Time-saving developer tools'
-    description: 'When you add Business or Premium Services to your Webslice Containers, you unlock tools that supercharge your productivity.'
+    description: 'When you add Business or Premium Support and Management to your Webslice Containers, you unlock tools that supercharge your productivity.'
     entry:
       -
         id: lt81htdt
@@ -149,7 +129,7 @@ page_builder:
       -
         id: ltxqadj8
         highligh: false
-        title: Standard
+        title: 'Standard tier'
         description: 'Platform support for every customer, every container, and every server.'
         price: 0
         type: column
@@ -162,7 +142,7 @@ page_builder:
                 type: text
                 text: ' '
         features:
-          - 'Support Method: Community & email'
+          - 'Support Method: Community & Email'
           - 'Support Coverage: Platform Only'
           - 'Monitoring: Self-managed'
           - 'SLA: Standard'
@@ -170,7 +150,7 @@ page_builder:
         id: ltxpqrz4
         highligh: true
         highligh_text: 'Most popular'
-        title: Business
+        title: 'Business tier'
         description: 'More proactive services, broader support, and advanced platform features.'
         price: 50
         price_detail:
@@ -194,8 +174,8 @@ page_builder:
       -
         id: ltxpm8fq
         highligh: false
-        title: Premium
-        description: 'All Business-tier services and developer tools, plus the highest level of 24/7 support.'
+        title: 'Premium tier'
+        description: 'Get all Business tier services and developer tools, plus the highest level of 24/7 support.'
         price: 350
         price_detail:
           -
@@ -218,8 +198,8 @@ page_builder:
     type: pricing_table
     enabled: true
     iconamic: list-checks
-    title: 'Managed services - Packages and pricing'
-    description: 'Your selected services will apply across your whole team and all the servers and containers that you run. To add Managed Services, log into Webslice and head to your team settings.'
+    title: 'Packages & pricing'
+    description: 'Your selected services will apply across your whole team and all the servers and containers that you run. To upgrade your Support & Management, log into Webslice and head to your team settings.'
   -
     id: ltxrr6i7
     template: /general_content/_multiple_text_columns
@@ -238,7 +218,7 @@ page_builder:
             content:
               -
                 type: text
-                text: 'What would you like our Support Team to help you with? '
+                text: 'What would you like our support team to help you with? '
               -
                 type: text
                 marks:
@@ -247,7 +227,7 @@ page_builder:
                 text: 'Platform support'
               -
                 type: text
-                text: ' is free and available to everyone. By adding Business or Premium Services, you and your team can also access '
+                text: ' is free and available to everyone. Business and Premium tier customers can also access '
               -
                 type: text
                 marks:
@@ -256,7 +236,7 @@ page_builder:
                 text: 'Application support'
               -
                 type: text
-                text: '. This broadens the range of issues that our Support Team can help you with.'
+                text: '. This broadens the range of issues that our support team can help you with.'
         type: column
         enabled: true
       -

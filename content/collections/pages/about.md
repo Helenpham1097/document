@@ -6,7 +6,7 @@ top_section:
   -
     id: HBiR3QKt
     template: /general_content/hero
-    hero_home_title: "Hi, We're the Webslice Team"
+    hero_home_title: "Hi, we're the Webslice team"
     hero_home_description:
       -
         type: paragraph
@@ -23,8 +23,8 @@ top_section:
     pre: 'About Us'
     iconamic: users-round
 title: 'About Us'
-updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1710387572
+updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
+updated_at: 1711077724
 page_builder:
   -
     id: lstu1l0i
@@ -137,7 +137,7 @@ page_builder:
         id: ltmoqe0b
         template_global: /global/iconamic
         iconamic: boxes
-        title: 16k
+        title: '16,000+'
         description:
           -
             type: paragraph
@@ -155,7 +155,15 @@ page_builder:
         content:
           -
             type: text
-            text: 'The numbers so far...'
+            marks:
+              -
+                type: bold
+            text: 'Webslice by the numbers'
+          -
+            type: hardBreak
+          -
+            type: text
+            text: '(so far...)'
   -
     id: FbFyqlag
     template: /page_builder/highlight
@@ -280,7 +288,7 @@ page_builder:
             content:
               -
                 type: text
-                text: 'We measure our own success by how effectively you get things done on our hosting platforms. Every hour of every day, our Support Team puts this into action.'
+                text: 'We measure our own success by how effectively you get things done on our hosting platforms. Every hour of every day, our team puts this into action.'
           -
             type: paragraph
             content:
@@ -450,13 +458,7 @@ page_builder:
             content:
               -
                 type: text
-                text: "When you open a ticket or email us, we answer in hours rather than days. Then we work on the problem until we know it's solved. The ultimate measure of our success is whether you work are free to work on the things that matter most to your clients."
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: "Every time you deal with us, we will always make sure that we got things right, and that you're all good to go."
+                text: "When you open a ticket or email us, we answer in hours (or minutes) rather than days. Then we work on the problem until we know it's solved. The ultimate measure of our success is whether you are free to work on the things that matter most to your clients."
         template_global: /global/default_image
         type: highlight-item
         enabled: true
@@ -513,7 +515,7 @@ page_builder:
     rows:
       -
         id: lti3mpz4
-        highlight_title: 'Your options: Compare our two great hosting platforms'
+        highlight_title: 'Compare our two great hosting platforms'
         highlight_textarea:
           -
             type: paragraph

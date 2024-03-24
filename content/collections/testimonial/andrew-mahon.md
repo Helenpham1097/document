@@ -17,7 +17,7 @@ quote:
         text: ★★★★★
 template_global: /global/default_image
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1710131494
-position: 'Agency director'
+updated_at: 1711069725
+position: 'Agency Director'
 default_image: default-avatar.png
 ---

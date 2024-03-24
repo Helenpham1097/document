@@ -6,7 +6,7 @@ top_section:
   -
     id: 7I982tN5
     template: /general_content/hero
-    hero_home_title: 'Faster Websites, Fewer Worries'
+    hero_home_title: 'Focus on websites, leave the infrastructure to us'
     hero_home_description:
       -
         type: paragraph
@@ -21,12 +21,12 @@ top_section:
     text: Click
     type: hero
     enabled: true
-    iconamic: cloud
+    iconamic: boxes
     buttons:
       -
         id: 2SEK87kA
         template_global: /global/buttons
-        label: 'Start risk-free'
+        label: 'Start Risk-Free'
         iconamic: chevrons-right
         link_type: url
         target_blank: false
@@ -47,21 +47,21 @@ top_section:
     image: illustrations/container-cover-1710730424.png
 title: Containers
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1710896018
+updated_at: 1711083421
 page_builder:
   -
     id: lrftv1b6
     type: bento_features
     enabled: true
     template: /general_content/bento
-    title: 'Busy agencies work faster on Webslice Containers'
+    title: 'Smart agencies work better on Webslice Containers'
     description:
       -
         type: paragraph
         content:
           -
             type: text
-            text: 'Everything about Webslice Containers is designed to help you develop better websites and products, faster.'
+            text: 'We make it easier for you to develop and maintain better websites and products.'
     item:
       -
         id: lrfumsnp
@@ -108,6 +108,26 @@ page_builder:
         text: 'Monitor server load, bandwidth, CPU and memory.'
         target: true
         link: /docs/containers/getting-started/
+      -
+        id: lu24osy2
+        text: 'Access regular releases of new images.'
+        link: /docs/containers/features/swapping-images
+        target: true
+      -
+        id: lu24otds
+        text: 'Leave server OS patching and upgrades to us.'
+        link: /docs/containers/servers/overview
+        target: true
+      -
+        id: lu24otu0
+        text: 'Enjoy a 99.9% uptime guarantee.'
+        link: /docs
+        target: true
+      -
+        id: lu24oufs
+        text: 'Get container auto-updates and maintenance.*'
+        link: /docs/containers/features/auto-updates/
+        target: true
     boxes:
       -
         id: lrfvep60
@@ -207,7 +227,7 @@ page_builder:
         url: /docs/containers/servers/locations
     bento_type: boxes
     template_global: /global/iconamic
-    iconamic: fast-forward
+    iconamic: lightbulb
     footer:
       -
         type: paragraph
@@ -217,7 +237,26 @@ page_builder:
             marks:
               -
                 type: italic
-            text: '*Add Managed Services to access these time-saving tools'
+            text: '*Add '
+          -
+            type: text
+            marks:
+              -
+                type: link
+                attrs:
+                  href: 'statamic://entry::c983d54d-1d7e-434f-b789-ea74e7737653'
+                  rel: null
+                  target: null
+                  title: null
+              -
+                type: italic
+            text: 'Managed Services'
+          -
+            type: text
+            marks:
+              -
+                type: italic
+            text: ' to access these time-saving tools and services'
   -
     id: ltmdxmo7
     template: /page_builder/metrics_section
@@ -227,7 +266,7 @@ page_builder:
         id: ltmdykxt
         template_global: /global/iconamic
         iconamic: monitor-smartphone
-        title: 16k
+        title: '16,000+'
         description:
           -
             type: paragraph
@@ -273,7 +312,15 @@ page_builder:
         content:
           -
             type: text
-            text: 'The numbers behind Webslice Containers'
+            text: 'Why join us? '
+          -
+            type: text
+            marks:
+              -
+                type: bold
+            text: 'Count the reasons.'
+          -
+            type: hardBreak
   -
     id: lthukf6c
     template: /page_builder/highlight
@@ -287,7 +334,7 @@ page_builder:
             content:
               -
                 type: text
-                text: 'The Webslice Console puts a heap of control at your fingertips. Create and manage containers and servers, track current performance, assign users, and much more. It all happens in one place.'
+                text: 'The Webslice Console puts a huge amount of control at your fingertips. Create and manage containers, servers and databases, track current performance, assign users, and much more. It all happens in one place.'
         template_global: /global/default_image
         default_image: console/containers-overview-light-1710813223.png
         type: highlight-item
@@ -303,7 +350,7 @@ page_builder:
             content:
               -
                 type: text
-                text: "Webslice lets you do big things in a few seconds flat. It's a very quick job to enable SSL, switch on CDN or Simple Cache, or make a number of other choices that speed up your work and your websites."
+                text: "Webslice lets you do big things in a few seconds flat. It's a very quick job to enable SSL or Simple Cache, upgrade an image, or make a number of other choices that speed up your work and your websites."
         template_global: /global/default_image
         default_image: console/containers-settings-light-1710813278.png
         type: highlight-item
@@ -321,22 +368,21 @@ page_builder:
     pricing_style: items
     template_global: /global/iconamic
     iconamic: boxes
-    title: 'Packages and Pricing'
-    description: 'Choose a server size, then spin up as many containers as you like.'
+    title: 'Packages & Pricing'
+    description: 'Choose a server size, then start spinning up containers. You can always upgrade your server later, or ask us for a larger plan.'
     Items:
       -
         id: lthtyp4v
         highligh: false
         title: 1GB
-        description: 'Test out the platform with a small project.'
+        description: 'Test the platform or run a static site.'
         price: 10
         features:
+          - '1 Core'
           - '1GB RAM'
-          - '1 core'
-          - '25GB storage'
-          - '1 Container'
-          - '1TB bandwidth'
-          - 'Automatic backups'
+          - '25GB Storage'
+          - '1TB Bandwidth'
+          - 'Automatic Backups'
           - 'Free SSL'
         type: column
         enabled: true
@@ -344,15 +390,14 @@ page_builder:
         id: lthtzuj0
         highligh: false
         title: 2GB
-        description: 'Small-mid sized agencies.'
+        description: 'Suits one or two small projects.'
         price: 23
         features:
+          - '1 Core'
           - '2GB RAM'
-          - '1 core'
-          - '50GB storage'
-          - '10 Containers'
-          - '2TB bandwidth'
-          - 'Automatic backups'
+          - '50GB Storage'
+          - '2TB Bandwidth'
+          - 'Automatic Backups'
           - 'Free SSL'
         type: column
         enabled: true
@@ -360,15 +405,14 @@ page_builder:
         id: lthtztjh
         highligh: true
         title: 4GB
-        description: 'Two cores for higher performance.'
+        description: 'Entry-level for serious agencies.'
         price: 43
         features:
+          - '2 Cores'
           - '4GB RAM'
-          - '2 cores'
-          - '80GB storage'
-          - '20 Containers'
-          - '4TB bandwidth'
-          - 'Automatic backups'
+          - '80GB Storage'
+          - '4TB Bandwidth'
+          - 'Automatic Backups'
           - 'Free SSL'
         type: column
         enabled: true
@@ -377,31 +421,29 @@ page_builder:
         id: lthtzsji
         highligh: false
         title: 8GB
-        description: 'Run up to 80 containers on one server.'
         price: 82
         features:
+          - '4 Cores'
           - '8GB RAM'
-          - '4 cores'
-          - '160GB storage'
-          - '40 Containers'
-          - '5TB bandwidth'
-          - 'Automatic backups'
+          - '160GB Storage'
+          - '5TB Bandwidth'
+          - 'Automatic Backups'
           - 'Free SSL'
         type: column
         enabled: true
+        description: 'Four cores for higher performance.'
       -
         id: lthtzrk6
         highligh: false
         title: 16GB
-        description: 'Big agencies running busy sites.'
+        description: 'Large agencies running busy sites.'
         price: 153
         features:
+          - '6 Cores'
           - '16GB RAM'
-          - '6 cores'
-          - '320GB storage'
-          - '80 Containers'
-          - '8TB bandwidth'
-          - 'Automatic backups'
+          - '320GB Storage'
+          - '8TB Bandwidth'
+          - 'Automatic Backups'
           - 'Free SSL'
         type: column
         enabled: true
@@ -409,15 +451,14 @@ page_builder:
         id: lthtzqex
         highligh: false
         title: 32GB
-        description: 'Still not enough? Just ask for more.'
+        description: 'For big sites with big demands.'
         price: 288
         features:
+          - '8 Cores'
           - '32GB RAM'
-          - '8 cores'
-          - '640GB storage'
-          - '100 Containers'
-          - '16TB bandwidth'
-          - 'Automatic backups'
+          - '640GB Storage'
+          - '16TB Bandwidth'
+          - 'Automatic Backups'
           - 'Free SSL'
         type: column
         enabled: true
@@ -435,7 +476,7 @@ page_builder:
     type: get_started
     enabled: true
     title: 'Get your first site live today'
-    description: 'Try Webslice Containers for seven days, and if it’s not for you we’ll refund your money.'
+    description: "Try Webslice Containers for seven days, and if it’s not for you don't worry - it's on us."
     start_type:
       -
         id: lro5rfps
@@ -467,7 +508,7 @@ page_builder:
                     enabled: true
                   -
                     id: lrzg1s4x
-                    text: 'Start adding containers, choosing from dozens of ready-to-go images.'
+                    text: 'Add your first container, choosing from our ready-to-go images.'
                     type: step
                     enabled: true
           -
@@ -480,7 +521,7 @@ page_builder:
                   -
                     id: lrzfjxyk
                     template_global: /components/buttons
-                    label: ' Create account now'
+                    label: ' Create Account Now'
                     link_type: url
                     target_blank: false
                     url: 'https://console.webslice.com/register'
@@ -523,7 +564,7 @@ page_builder:
                     id: lrzg6qra
                     type: step
                     enabled: true
-                    text: 'SSH/SFTP into your web container’s `/public` directory.'
+                    text: 'SSH/SFTP into your web container’s /public directory.'
                   -
                     id: lrzg6sd7
                     type: step
@@ -544,7 +585,7 @@ page_builder:
                   -
                     id: lrzg6wod
                     template_global: /components/buttons
-                    label: 'Create account now'
+                    label: 'Create Account Now'
                     link_type: url
                     target_blank: false
                     url: 'https://console.webslice.com/register'
@@ -559,7 +600,7 @@ page_builder:
         buttons:
           - {  }
   -
-    id: lru3419g
+    id: lthz8oal
     template: /general_content/bento_highlight
     reverse_alignment: false
     toggle_alignment: false
@@ -567,104 +608,15 @@ page_builder:
     enabled: true
     rows:
       -
-        id: lrr6gp8v
-        title: 'Focus on code, and leave the infrastructure to us'
-        textarea:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue. Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque.'
-        template_global: /global/default_image
-        label: Button
-        iconamic: server-cog
-        link_type: url
-        target_blank: false
-        url: '#'
-        button_type: button
-        default_image: b8f5db7682a5fb3fa938f2e26c0e855c.webp
-        type: feature_highlight-item
-        enabled: true
-        buttons:
-          -
-            id: lrr6xz7o
-            template_global: /components/buttons
-            label: 'Start risk-free for 7 days'
-            link_type: url
-            target_blank: false
-            url: 'https://console.webslice.com/register'
-            button_type: button
-            iconamic: chevrons-right
-        description: 'Our experts are always working to keep servers and networks up to date and secure. You can just focus on developing great things.'
-        bentos:
-          -
-            id: lrtu5ip2
-            image: illustrations/ill_3---infrastructure-1710732832.png
-            items:
-              -
-                id: lrtvn103
-                text:
-                  -
-                    type: paragraph
-                    content:
-                      -
-                        type: text
-                        text: 'Server OS patching and upgrades.'
-                url: /docs/containers/servers/overview
-                type: link
-                enabled: true
-                target: false
-              -
-                id: lru3k6z4
-                text:
-                  -
-                    type: paragraph
-                    content:
-                      -
-                        type: text
-                        text: '99.9% uptime guarantee.'
-                type: link
-                enabled: true
-                target: false
-              -
-                id: lru3kf1q
-                text:
-                  -
-                    type: paragraph
-                    content:
-                      -
-                        type: text
-                        text: 'Regular releases of new container images.'
-                type: link
-                enabled: true
-                target: true
-                url: /docs/containers/features/swapping-images/
-              -
-                id: lru3kjq7
-                text:
-                  -
-                    type: paragraph
-                    content:
-                      -
-                        type: text
-                        text: 'Managed Services add container updates and maintenance.'
-                type: link
-                enabled: true
-                target: false
-                url: 'entry::c983d54d-1d7e-434f-b789-ea74e7737653'
-            type: box
-            enabled: true
-      -
         id: lru3mrwk
         template_global: /global/iconamic
-        title: 'Add Managed Services and Advanced Developer Tools'
-        description: 'Managed Cloud Hosting does even more to speed you up. Our expert team will monitor and manage your server 24/7/365, and your hosting will include these time-saving features:'
+        title: 'Add Support & Management for another productivity boost'
+        description: 'Two tiers of Support & Management speed you up even more. Start using powerful, time-saving features in the Webslice Console. Leave round-the-clock infrastructure monitoring and incident response to us. And get broader, faster access to our support team.'
         buttons:
           -
             id: lru3n35l
             template_global: /components/buttons
-            label: 'Read more about Managed Services'
+            label: 'See Support & Management'
             link_type: entry
             target_blank: false
             button_type: secondary
@@ -726,12 +678,84 @@ page_builder:
                 type: link
                 enabled: true
                 target: true
-                url: /docs/containers/features/auto-updates/
+                url: /docs/containers/features/swapping-images/
+            type: box
+            enabled: true
+          -
+            id: lu26gi4q
+            items:
+              -
+                id: lu26gjht
+                text:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Proactive monitoring of servers and containers.'
+                target: false
+                type: link
+                enabled: true
+              -
+                id: lu26gz9v
+                text:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: '24/7 response to outages or excessive load.'
+                target: false
+                type: link
+                enabled: true
+            type: box
+            enabled: true
+          -
+            id: lu26mtsg
+            items:
+              -
+                id: lu26ne0o
+                text:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Broader support covers your platform and application.'
+                target: false
+                type: link
+                enabled: true
+              -
+                id: lu26ns74
+                text:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'More ways to contact us.'
+                target: false
+                type: link
+                enabled: true
+              -
+                id: lu26ny1k
+                text:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Customize your own support SLA.'
+                target: false
+                type: link
+                enabled: true
             type: box
             enabled: true
         type: feature_highlight-item
-        enabled: false
+        enabled: true
         iconamic: wrench
+    buttons:
+      - {  }
   -
     id: ltmf199l
     template: /page_builder/testimonial_section
@@ -750,188 +774,14 @@ page_builder:
     type: testimonial_section
     enabled: true
   -
-    id: lthz8oal
-    template: /general_content/bento_highlight
-    reverse_alignment: false
-    toggle_alignment: false
-    type: bento_highlight
-    enabled: true
-    rows:
-      -
-        id: lrr6gp8v
-        title: 'Focus on code, and leave the infrastructure to us'
-        textarea:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Aliquam placerat eu enim ac faucibus. Donec ac diam congue, lobortis magna nec, fermentum arcu. Ut ornare enim at elit molestie congue. Nullam commodo bibendum accumsan. Morbi luctus mauris ac fringilla scelerisque.'
-        template_global: /global/default_image
-        label: Button
-        iconamic: server-cog
-        link_type: url
-        target_blank: false
-        url: '#'
-        button_type: button
-        default_image: b8f5db7682a5fb3fa938f2e26c0e855c.webp
-        type: feature_highlight-item
-        enabled: false
-        buttons:
-          -
-            id: lrr6xz7o
-            template_global: /components/buttons
-            label: 'Start risk-free for 7 days'
-            link_type: url
-            target_blank: false
-            url: 'https://console.webslice.com/register'
-            button_type: button
-            iconamic: chevrons-right
-        description: 'Our experts are always working to keep servers and networks up to date and secure. You can just focus on developing great things.'
-        bentos:
-          -
-            id: lrtu5ip2
-            image: illustrations/ill_1---managed_cloud_hosting.png
-            items:
-              -
-                id: lrtvn103
-                text:
-                  -
-                    type: paragraph
-                    content:
-                      -
-                        type: text
-                        text: 'Server OS patching and upgrades.'
-                url: '#'
-                type: link
-                enabled: true
-                target: false
-              -
-                id: lru3k6z4
-                text:
-                  -
-                    type: paragraph
-                    content:
-                      -
-                        type: text
-                        text: '99.9% uptime guarantee.'
-                type: link
-                enabled: true
-                target: false
-              -
-                id: lru3kf1q
-                text:
-                  -
-                    type: paragraph
-                    content:
-                      -
-                        type: text
-                        text: 'Regular releases of new container images.'
-                type: link
-                enabled: true
-                target: false
-              -
-                id: lru3kjq7
-                text:
-                  -
-                    type: paragraph
-                    content:
-                      -
-                        type: text
-                        text: 'Managed Services add container updates and maintenance.'
-                type: link
-                enabled: true
-                target: false
-            type: box
-            enabled: true
-      -
-        id: lru3mrwk
-        template_global: /global/iconamic
-        title: 'Add Managed Services and time-saving features'
-        description: "Optional Managed Services speed you up even more. Our expert team monitor and manage your server and containers, you get broader access to Support when you need it, and you'll find more time-saving features in the Webslice Console."
-        buttons:
-          -
-            id: lru3n35l
-            template_global: /components/buttons
-            label: 'Read more about Managed Services'
-            link_type: entry
-            target_blank: false
-            button_type: secondary
-            iconamic: chevron-right
-            entry: c983d54d-1d7e-434f-b789-ea74e7737653
-        bentos:
-          -
-            id: lru3nbaf
-            image: illustrations/ill_1---managed_cloud_hosting.png
-            items:
-              -
-                id: lru3nm9g
-                text:
-                  -
-                    type: paragraph
-                    content:
-                      -
-                        type: text
-                        text: 'Simple Cache.'
-                type: link
-                enabled: true
-                target: true
-                url: /docs/containers/features/caching/
-              -
-                id: lru3nqj8
-                text:
-                  -
-                    type: paragraph
-                    content:
-                      -
-                        type: text
-                        text: 'One-click backup restore.'
-                type: link
-                enabled: true
-                target: true
-                url: /docs/containers/features/backup-restore/
-              -
-                id: lru3nyjc
-                text:
-                  -
-                    type: paragraph
-                    content:
-                      -
-                        type: text
-                        text: 'Container cloning and syncing.'
-                type: link
-                enabled: true
-                target: true
-                url: /docs/containers/features/cloning-overwriting/
-              -
-                id: lru3o2ef
-                text:
-                  -
-                    type: paragraph
-                    content:
-                      -
-                        type: text
-                        text: 'Scheduled container updates.'
-                type: link
-                enabled: true
-                target: true
-                url: /docs/containers/features/swapping-images/
-            type: box
-            enabled: true
-        type: feature_highlight-item
-        enabled: true
-        iconamic: wrench
-    buttons:
-      - {  }
-  -
     id: lrochdxy
     template: page_builder/head_to_documentation
     type: head_to_documentation
     enabled: true
     template_global: /global/iconamic
     iconamic: file
-    title: 'Learn How Webslice Containers Work'
-    description: 'After years of development, Webslice Containers are thoroughly documented. Almost anything you could want to know is probably already covered.'
+    title: 'Learn how Webslice Containers work'
+    description: 'Webslice Containers are thoroughly documented. Have a look and see how many of your questions are already answered.'
     sub_title: 'Head to Documentation to see:'
     entry:
       -

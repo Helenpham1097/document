@@ -3,8 +3,8 @@ id: cf7040f4-473b-4c14-897d-5de59ce6d833
 blueprint: home
 template: general_content/index
 title: Homepage
-updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1710820108
+updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
+updated_at: 1711069628
 top_section:
   -
     id: RzzOzBfN
@@ -222,7 +222,7 @@ page_builder:
         content:
           -
             type: text
-            text: 'See how well'
+            text: 'See how well our'
           -
             type: hardBreak
           -
@@ -230,7 +230,7 @@ page_builder:
             marks:
               -
                 type: bold
-            text: 'our experience adds up.'
+            text: 'experience adds up.'
   -
     id: ltf4xz31
     template: /page_builder/highlight
@@ -244,7 +244,7 @@ page_builder:
             content:
               -
                 type: text
-                text: "We've been in the industry for over 20 years. Today we have thousands of happy customers, one of the highest-rated Support Teams you'll find anywhere, and the technical expertise to take a lot of stress off your shoulders. With Webslice on your side you can spend more time building great things for your clients, and less time worrying about servers and infrastructure."
+                text: "We've been in the industry for over 20 years. We have thousands of happy customers, one of the highest-rated support teams you'll find anywhere, and the technical expertise to take a lot of stress off your shoulders. With Webslice on your side you can spend more time building great things for your clients, and less time worrying about servers and infrastructure."
         template_global: /global/default_image
         default_image: about-us/webslice-team.jpg
         buttons:
@@ -274,7 +274,7 @@ page_builder:
         content:
           -
             type: text
-            text: 'Join thousands of happy customers'
+            text: 'Join thousands of happy customers like these'
     bg_pattern: true
     type: testimonial_section
     enabled: true

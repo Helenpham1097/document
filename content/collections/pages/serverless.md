@@ -10,14 +10,14 @@ top_section:
     template_global: /global/default_image
     iconamic: expand
     pre: 'Webslice Serverless'
-    hero_home_title: 'Incredibly Scalable Hosting Without the Complications'
+    hero_home_title: 'Incredibly scalable hosting without the complications'
     hero_home_description:
       -
         type: paragraph
         content:
           -
             type: text
-            text: "Finally, a serverless hosting platform that's easy to use, PHP-friendly, and fully elastic."
+            text: "Finally, a serverless hosting platform that's easy to use, friendly to PHP and dynamic sites, and fully elastic."
     buttons:
       -
         id: lrzodtof
@@ -43,8 +43,8 @@ top_section:
     light_image: illustrations/expand.png
     image: illustrations/serverless-cover.png
 title: Serverless
-updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1710793437
+updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
+updated_at: 1711074916
 page_builder:
   -
     id: lrzoffkv
@@ -346,7 +346,7 @@ page_builder:
                         text: 'serverless PHP stacks, including WordPress'
                       -
                         type: text
-                        text: ', without static rendering or any other hassles.'
+                        text: ', without static site requirements or other hassles.'
                 target: false
                 type: link
                 enabled: true
