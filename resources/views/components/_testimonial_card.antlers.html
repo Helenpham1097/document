@@ -1,12 +1,12 @@
 <li class="rounded-3xl border bg-zinc-50 p-2 dark:border-zinc-700 dark:bg-zinc-800">
 	<figure class="relative flex h-full flex-col justify-between rounded-2xl border bg-white p-6 shadow-lg dark:border-zinc-700 dark:bg-zinc-800">
 		<blockquote class="relative">
-			<p class="text-base text-zinc-500 dark:text-zinc-200">{{ quote | strip_tags:p }}</p>
+			<p class="text-base text-zinc-600 dark:text-zinc-200">{{ quote | strip_tags:p }}</p>
 		</blockquote>
 		<figcaption class="relative mt-6 flex items-center justify-between border-t border-zinc-100 pt-6 dark:border-zinc-700">
 			<div>
 				<div class="font-medium text-zinc-900 dark:text-zinc-200">{{ title }}</div>
-				<div class="mt-1 text-sm text-zinc-500 dark:text-zinc-300">{{ position }}</div>
+				<div class="mt-1 text-sm text-zinc-600 dark:text-zinc-300">{{ position }}</div>
 			</div>
 			<div class="overflow-hidden rounded-full">
 				{{ partial:global/picture :image="default_image" cover="true" lazy="true" maxwidth="56" maxheight="56" quality='70' }}
