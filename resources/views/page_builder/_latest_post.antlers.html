@@ -1,10 +1,10 @@
 {{# Template showing the last post from the collection of posts #}}
 {{ collection:blog limit="3" paginate="false" as='posts' sort="date:desc" }}
-	<div class="container flex w-full flex-col items-center justify-center space-y-12 lg:flex-row lg:space-y-0 lg:space-x-12" x-data="{tab: 1}">
+	<div class="container flex w-full flex-col items-center justify-center space-y-12 lg:flex-row lg:space-x-12 lg:space-y-0" x-data="{tab: 1}">
 		<div class="hidden md:block lg:w-1/2">
 			{{ posts }}
 				<div class="relative space-y-6" x-show="tab === {{ count }}">
-					<div class="absolute top-0 left-0 hidden -translate-x-20 -translate-y-1/2 md:block lg:-translate-x-12">
+					<div class="absolute left-0 top-0 hidden -translate-x-20 -translate-y-1/2 md:block lg:-translate-x-12">
 						<svg class="text-green-500 dark:opacity-50" width="91" height="89" viewBox="0 0 91 89" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M0 12.2713V27.5241L28.2975 0H12.5636L0 12.2713Z" fill="currentColor"></path>
 							<path d="M0 42.7713V58.0241L28.2975 30.5H12.5636L0 42.7713Z" fill="currentColor"></path>
@@ -38,7 +38,7 @@
 							</span>
 						</div>
 						<div class="ml-6 grow space-y-2">
-							<div class="hs-tab-active:text-purple-600 dark:hs-tab-active:text-purple-500 block text-xl font-semibold text-zinc-800 dark:text-zinc-200">
+							<div class="hs-tab-active:text-purple-600 dark:hs-tab-active:text-purple-500 block text-xl font-semibold text-zinc-800 dark:text-zinc-50">
 								{{ title }}
 							</div>
 							{{ partial:components/button label="Read more" button_type="inline" link_type="url" class="col-span-2 py-0 pl-0" url="{{url}}" iconamic="cheveron-right" }}

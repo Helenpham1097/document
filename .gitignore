@@ -18,3 +18,4 @@ yarn-error.log
 /public/js/main.js
 public/js/main.min.js
 public/css/main.css
+public/glide-cache/

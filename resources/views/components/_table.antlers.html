@@ -14,7 +14,7 @@ class="{{ if size == 'md'}} size-md {{/if}} {{ if size == 'lg'}} size-lg {{/if}}
                 <thead>
                     <tr>
                         {{ cells }}
-                            <th class="px-3 py-3 font-bold tracking-wider text-left text-zinc-800 dark:text-zinc-200 uppercase border-b xl:px-6 dark:border-zinc-700 border-zinc-300 bg-zinc-200 dark:bg-zinc-800">{{ value }}</th>
+                            <th class="px-3 py-3 font-bold tracking-wider text-left text-zinc-800 dark:text-zinc-50 uppercase border-b xl:px-6 dark:border-zinc-700 border-zinc-300 bg-zinc-200 dark:bg-zinc-800">{{ value }}</th>
                         {{ /cells }}
                     </tr>
                 </thead>
@@ -26,7 +26,7 @@ class="{{ if size == 'md'}} size-md {{/if}} {{ if size == 'lg'}} size-lg {{/if}}
                 <tr>
                     {{ cells }}
                         {{ if first && first_column_headers }}
-                            <th class="px-3 py-3 font-bold tracking-wider text-left text-zinc-800 dark:text-zinc-200 uppercase border-b xl:px-6 dark:border-zinc-700 border-zinc-300 bg-zinc-200 dark:bg-zinc-800">{{ value }}</th>
+                            <th class="px-3 py-3 font-bold tracking-wider text-left text-zinc-800 dark:text-zinc-50 uppercase border-b xl:px-6 dark:border-zinc-700 border-zinc-300 bg-zinc-200 dark:bg-zinc-800">{{ value }}</th>
                         {{ else }}
                             <td class="px-3 py-3 border-b xl:px-6 dark:border-zinc-700 border-zinc-300 text-zinc-700 dark:text-zinc-400">{{ value }}</td>
                         {{ /if }}

@@ -1,6 +1,6 @@
 {{# Template for a blog entry #}}
 {{ partial:snippets/scrollProgress }}
-<div class="container relative -z-10 hidden xl:block mx-auto my-0 py-0">
+<div class="container relative -z-10 mx-auto my-0 hidden py-0 xl:block">
 	{{ partial:global/diagonal gradient_style='absolute top-0 mx-auto w-full translate-x-1/2 -translate-y-1/2' }}
 </div>
 <div class="container pb-20 pt-12 lg:py-24">
@@ -50,7 +50,7 @@
 				<div class="hidden space-y-6 self-start lg:col-span-3 lg:col-start-8 lg:block">
 					<div class="w-full">
 						<div class="mx-auto flex w-full flex-col gap-2">
-							<div class="flex items-center gap-2 text-lg font-semibold text-zinc-800 dark:text-zinc-200">
+							<div class="flex items-center gap-2 text-lg font-semibold text-zinc-800 dark:text-zinc-50">
 								{{ svg src="{{config:iconamic:path}}/mail-plus.svg" class='size-4 flex-none' }}
 								Subscribe to get notify
 							</div>
@@ -59,7 +59,7 @@
 					</div>
 					{{# Related articles #}}
 					<div class="w-full">
-						<div class="flex items-center gap-2 text-lg font-semibold text-zinc-800 dark:text-zinc-200">
+						<div class="flex items-center gap-2 text-lg font-semibold text-zinc-800 dark:text-zinc-50">
 							{{ svg src="{{config:iconamic:path}}/newspaper.svg" class='size-4 flex-none' }}
 							Related articles
 						</div>
@@ -68,16 +68,16 @@
 								{{ related_posts }}
 									{{ partial:blog/post hide_author="true" hide_subheader="true" title_class="text-xl" subheader_class="text-base" square="true" }}
 								{{ /related_posts }}
-								{{else}}
-									{{ collection:blog :id:isnt="id" :limit="latest_news:entries_limit" sort="date:desc" }}
-										{{ partial:blog/post hide_author="true" hide_subheader="true" title_class="text-xl" subheader_class="text-base" square="true" }}
-									{{ /collection:blog }}
+							{{ else }}
+								{{ collection:blog :id:isnt="id" :limit="latest_news:entries_limit" sort="date:desc" }}
+									{{ partial:blog/post hide_author="true" hide_subheader="true" title_class="text-xl" subheader_class="text-base" square="true" }}
+								{{ /collection:blog }}
 							{{ /if }}
 						</div>
 					</div>
 					{{# Share #}}
 					<div class="w-full">
-						<div class="flex items-center gap-2 text-lg font-semibold text-zinc-800 dark:text-zinc-200">
+						<div class="flex items-center gap-2 text-lg font-semibold text-zinc-800 dark:text-zinc-50">
 							{{ svg src="{{config:iconamic:path}}/share-2.svg" class='size-4 flex-none' }}
 							Share this article:
 						</div>
@@ -94,8 +94,8 @@
 			</a>
 		</div>
 	</div>
-	<div class="lg:hidden mt-24">
-		<div class="flex items-center gap-2 text-2xl font-semibold text-zinc-800 dark:text-zinc-200">
+	<div class="mt-24 lg:hidden">
+		<div class="flex items-center gap-2 text-2xl font-semibold text-zinc-800 dark:text-zinc-50">
 			{{ svg src="{{config:iconamic:path}}/newspaper.svg" class='size-4 flex-none' }}
 			Related articles
 		</div>
@@ -104,10 +104,10 @@
 				{{ related_posts }}
 					{{ partial:blog/post hide_author="true" hide_subheader="true" title_class="text-xl" subheader_class="text-base" square="true" }}
 				{{ /related_posts }}
-				{{else}}
-					{{ collection:blog :id:isnt="id" :limit="latest_news:entries_limit" sort="date:desc" }}
-						{{ partial:blog/post hide_author="true" hide_subheader="true" title_class="text-xl" subheader_class="text-base" square="true" }}
-					{{ /collection:blog }}
+			{{ else }}
+				{{ collection:blog :id:isnt="id" :limit="latest_news:entries_limit" sort="date:desc" }}
+					{{ partial:blog/post hide_author="true" hide_subheader="true" title_class="text-xl" subheader_class="text-base" square="true" }}
+				{{ /collection:blog }}
 			{{ /if }}
 		</div>
 	</div>

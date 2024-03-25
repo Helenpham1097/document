@@ -1,4 +1,4 @@
-<section class="container overflow-hidden relative mx-auto pt-12 lg:pt-24">
+<section class="container relative mx-auto pt-12 lg:pt-24">
 	<div class="-space-y-6 lg:-space-y-12">
 		<div class="absolute -inset-x-24 top-0 z-[-2] h-1/2 bg-zinc-400 bg-[radial-gradient(#ffffff33_1px,#fff_1px)] bg-[size:31px_31px] dark:bg-zinc-900 dark:bg-[radial-gradient(#ffffff33_1px,#18181B_1px)]"></div>
 		<div class="relative flex space-x-4 xl:space-x-10">
@@ -9,15 +9,15 @@
 					<path fill-rule="evenodd" class="fill-purple-500/20" clip-rule="evenodd" d="M28.2564 6.79883L49.9542 19.3261V44.3806L28.2564 56.9078L6.55859 44.3806V19.3261L28.2564 6.79883Z" />
 					<path fill-rule="evenodd" class="fill-purple-500/80" clip-rule="evenodd" d="M28.256 12.9453L44.6302 22.399V41.3062L28.256 50.7599L11.8818 41.3062V22.399L28.256 12.9453Z" />
 				</svg>
-				<div class="absolute inset-0 size-12 animate-pulse bg-green-500 blur-xl dark:bg-purple-500"></div>
+				<div class="absolute translate-x-3 translate-y-4 blur-xl inset-0 size-9 animate-pulse  bg-green-500  dark:bg-purple-500"></div>
 				{{# Inner Icon #}}
-				{{ svg src="{{config:iconamic:path}}/{{iconamic}}.svg" class=" translate-y-5 absolute z-20 w-5 text-purple-100 dark:text-purple-100 stroke-current" }}
+				{{ svg src="{{config:iconamic:path}}/{{iconamic}}.svg" class="translate-y-5 absolute z-20 w-5 text-purple-100 dark:text-purple-100 stroke-current" }}
 				{{# Gradient Line #}}
 				<span class="line-gradient gradient-background w-[1px] flex-1 -translate-y-1"></span>
 			</div>
-			<div class="flex flex-1 flex-col pb-24">
+			<div class="flex flex-1 flex-col pb-12 lg:pb-24">
 				<div class="max-w-xl space-y-4">
-					{{ partial:typography/h2 :content="title | strip_tags:p" }}
+					{{ partial:typography/h2 :content="title | strip_tags:p" class='h2 dot' }}
 					{{ partial:typography/p :content="description | strip_tags:p" }}
 				</div>
 			</div>
@@ -32,14 +32,14 @@
 		{{ else }}
 			{{# Item Style #}}
 			<div class="isolate w-auto -space-y-[1px] text-zinc-800 dark:text-zinc-300">
-				<div class="relative -z-10 mx-auto flex flex-col justify-center gap-8 rounded-b-lg bg-gradient-to-b from-zinc-300 via-transparent to-transparent p-4 pt-6 dark:from-zinc-700 lg:gap-12 lg:rounded-lg lg:p-10 lg:pt-10">
-					<div class="absolute inset-[1px] rounded-b-lg bg-gradient-to-b from-white via-white to-transparent dark:from-zinc-900 dark:via-zinc-900 lg:rounded-lg"></div>
+				<div class="relative -z-10 mx-auto flex flex-col justify-center gap-8 rounded-b-lg bg-gradient-to-b from-zinc-300 via-transparent to-transparent p-4 dark:from-zinc-700 lg:gap-12 rounded-lg lg:p-10">
+					<div class="absolute inset-[1px] rounded-b-lg bg-gradient-to-b from-white via-white to-transparent dark:from-zinc-900 dark:via-zinc-900 rounded-lg"></div>
 					{{# <div class="lg:grid-cols-{{ Items | count }} grid grid-cols-1 gap-8">
 						{{ Items }}
 							{{ partial:page_builder/_pricing_item popular='true' }}
 						{{ /Items }}
 					</div> #}}
-					<div class="{{ if Items | count < 5 }} lg:grid-cols-{{ Items | count }} {{ else }} lg:grid-cols-{{ Items | count | divide:2 | ceil }} {{ /if }} grid grid-cols-1 gap-8">
+					<div class="{{ if Items | count < 5 }} lg:grid-cols-{{ Items | count }} {{ else }} lg:grid-cols-{{ Items | count | divide:2 | ceil }} {{ /if }} grid grid-cols-1 lg:gap-8 gap-4">
 						{{ Items }}
 							{{ partial:page_builder/_pricing_item popular='true' }}
 						{{ /Items }}
