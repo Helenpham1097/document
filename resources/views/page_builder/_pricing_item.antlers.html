@@ -71,7 +71,7 @@
 			<div class="{{ if highligh }} prose-li:text-white marker:text-white {{ /if}} prose prose-sm relative flex flex-col gap-2 dark:prose-invert prose-ul:text-sm">
 				<ul class="list-none">
 					{{ features }}
-						<li class="list {{ if highligh }} before:invert {{/if}} ">{{ value }}</li>
+						<li class="list before:absolute before:size-4 before:mt-0.5 before:content-[''] before:bg-[url(/assets/check-circle.svg)] before:-translate-x-full before:-ml-2.5 before:transform before:bg-no-repeat before:bg-center before:dark:invert before:bg-cover {{ if highligh }} before:invert {{/if}} ">{{ value }}</li>
 					{{ /features }}
 				</ul>
 			</div>
@@ -83,3 +83,5 @@
 		{{ /if }}
 	</div>
 {{ /if }}
+
+
