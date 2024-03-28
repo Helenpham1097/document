@@ -46,14 +46,6 @@ ol {
 		content: "";
 	}
 }
-.list {
-	@apply relative;
-	&::before {
-		@apply absolute size-4 mt-0.5 -translate-x-full -ml-2.5 transform bg-no-repeat bg-center dark:invert bg-cover bg-[url('../icons/check-circle.svg')] ;
-		content: "";
-	}
-}
-
 @screen md {
 	pre {
 		@apply p-6;
