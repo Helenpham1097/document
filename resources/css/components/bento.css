@@ -9,11 +9,11 @@
 	/* ------- */
 	/* background color // background hover */
 	@apply bg-[radial-gradient(69.96%_25.89%_at_50%_100%,#D7D7D7_3%,rgba(39,39,39,0)_100%)];
-	@apply dark:bg-[radial-gradient(122%_100%_at_32%_0,#3F3F46_0,rgba(63,63,63,.18)_32%,rgba(63,63,63,0)_51%),radial-gradient(91%_43%_at_50%_0,#18181B_21%,rgba(24,24,24,0)_100%),radial-gradient(69.96%_25.89%_at_50%_100%,#27272A_23%,rgba(39,39,39,0)_100%)];
+	@apply dark:bg-[radial-gradient(122%_100%_at_32%_0,#26262B_0,rgba(63,63,63,.18)_32%,rgba(63,63,63,0)_51%),radial-gradient(91%_43%_at_50%_0,#18181B_21%,rgba(24,24,24,0)_100%)];
 	/* border // border hover */
-	@apply border border-zinc-200 hover:border-zinc-300;
+	@apply border rounded-lg border-zinc-200 hover:border-zinc-300;
 	/* Box styles */
-	@apply rounded-xl shadow-xl shadow-black/20 hover:shadow-2xl;
+	@apply  shadow-xl hover:shadow-lg transition-shadow shadow-black/20 hover:shadow-black/30;
 	/* Text-style */
 	@apply text-zinc-800;
 
@@ -21,12 +21,10 @@
 	/* ------- */
 	/* background color // background hover */
 	@apply hover:bg-[radial-gradient(69.96%_25.89%_at_50%_100%,#D7D7D7_13%,rgba(39,39,39,0)_100%)];
-	@apply hover:dark:bg-[radial-gradient(122%_100%_at_35%_0,#3F3F46_0,rgba(63,63,63,.18)_32%,rgba(63,63,63,0)_51%),radial-gradient(91%_43%_at_50%_0,#18181B_21%,rgba(24,24,24,0)_100%),radial-gradient(69.96%_25.89%_at_50%_100%,#27272A_23%,rgba(39,39,39,0)_100%)];
+	@apply hover:dark:bg-[radial-gradient(122%_100%_at_35%_0,#26262B_0,rgba(63,63,63,.18)_32%,rgba(63,63,63,0)_51%),radial-gradient(91%_43%_at_50%_0,#18181B_21%,rgba(24,24,24,0)_100%)];
 
 	/* border // border hover */
 	@apply dark:border-zinc-800 hover:dark:border-zinc-700/20;
-	/* Box styles */
-	@apply dark:shadow-black/30;
 	/* Text-style */
 	@apply dark:text-white;
 }

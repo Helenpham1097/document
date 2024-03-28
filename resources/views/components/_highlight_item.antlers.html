@@ -33,7 +33,7 @@
         {{ else }}
             {{ switch between=' | lg:space-x-reverse' }}
         {{ /if }}
-    {{ /if }} container mx-auto flex flex-col gap-6 space-y-reverse py-10 sm:space-y-0 lg:flex-row lg:items-center lg:gap-24">
+    {{ /if }}  mx-auto flex flex-col gap-6 space-y-reverse sm:space-y-0 lg:flex-row lg:items-center lg:gap-24">
 	<div class="space-y-6 lg:w-1/2">
 		<div class="space-y-6">
 			{{ if highlight_title }}
@@ -81,10 +81,10 @@
 		{{ if default_image }}
 			<div class="relative {{ if border }}space-y-8{{ /if }}">
 				{{ if default_image_dark && default_image }}
-					{{ partial:components/figure quality="90" cover="true" maxwidth="704" lazy="true" :image="default_image_dark" class="hidden dark:block {{ if border }} border-2 shadow-2xl shadow-purple-500  border-purple-600 ring-[10px] ring-purple-500/30 rounded-xl {{ /if }}" }}
-					{{ partial:components/figure quality="90" cover="true" maxwidth="704" lazy="true" :image="default_image" class="dark:hidden block  {{ if border }} border-2 shadow-2xl  border-purple-600/50 ring-[10px] ring-purple-500/30 rounded-xl {{ /if }}" }}
+					{{ partial:components/figure cover="true" maxwidth="704" lazy="true" :image="default_image_dark" class="hidden dark:block {{ if border }} border-2 shadow-2xl shadow-purple-500  border-purple-600 ring-[8px] ring-purple-500/30 rounded-xl {{ /if }}" }}
+					{{ partial:components/figure cover="true" maxwidth="704" lazy="true" :image="default_image" class="dark:hidden block  {{ if border }} border-2 shadow-2xl  border-purple-600/40 ring-[8px] ring-purple-500/30 rounded-xl {{ /if }}" }}
 				{{ else }}
-					{{ partial:components/figure quality="90" cover="true" maxwidth="704" lazy="true" :image="default_image" class="{{ if border }} border-2 shadow-2xl  border-purple-600/50 ring-[10px] ring-purple-500/30 rounded-xl {{ /if }}" }}
+					{{ partial:components/figure cover="true" maxwidth="704" lazy="true" :image="default_image" class="rounded-lg aspect-[6/4] border ring-[8px] shadow-2xl dark:border-zinc-700/50 ring-zinc-500/10 dark:ring-zinc-800 {{ if border }} shadow-2xl  border-purple-600/50 ring-[8px] ring-purple-500/30 rounded-xl {{ /if }}" }}
 				{{ /if }}
 				{{ partial:typography/caption caption="{{highlight_textcaption}}" }}
 			</div>

@@ -6,13 +6,14 @@
 			{{ partial:typography/h3 :content="title" class="dot" }}
 			{{ partial:typography/p :content="description" }}
 		</div>
-
-		<div class="flex flex-wrap gap-3">
-			{{ partial:components/buttons }}
-		</div>
+		{{ if buttons }}
+			<div class="flex flex-wrap gap-3">
+				{{ partial:components/buttons }}
+			</div>
+		{{ /if }}
 	</div>
 
-	<div class="relative space-y-4 lg:mx-auto lg:w-1/2">
+	<div class="relative space-y-6 lg:mx-auto lg:w-1/2">
 		{{ partial:typography/h4 :content="sub_title" class="text-zinc-800 dark:text-zinc-50" }}
 		<div class="grid grid-cols-1 gap-y-2 text-zinc-800 dark:text-zinc-50 md:grid-cols-2 lg:grid-cols-1">
 			{{ entry }}
