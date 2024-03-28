@@ -36,10 +36,10 @@
 {{ else }}
 	{{# Item Style #}}
 	<div>
-		<div class="relative isolate flex flex-col gap-6 rounded-lg p-6 ring-1 ring-zinc-300 dark:ring-zinc-700">
+		<div class="dark:ring-zinc-700{{ if highligh }} text-white {{ /if}} relative isolate flex flex-col gap-6 rounded-lg p-6 ring-1 ring-zinc-300">
 			{{ if highligh }}
-				<div class="absolute right-4 top-0 -translate-y-1/2 bg-white px-4 py-2 text-sm font-bold text-purple-500 dark:bg-zinc-900 dark:text-purple-400">{{ highligh_text }}</div>
-				<div class="absolute inset-0 -z-10 bg-gradient-to-t from-zinc-100 via-transparent to-transparent dark:from-zinc-800"></div>
+				<div class="absolute right-6 top-0 -translate-y-1/2 bg-white px-4 py-2 text-sm font-bold text-purple-500 ring-2 ring-purple-400 dark:bg-zinc-900 dark:text-purple-100">{{ highligh_text }}</div>
+				<div class="absolute inset-0 -z-10 rounded-lg bg-gradient-to-t from-purple-500 via-purple-500 to-purple-400"></div>
 			{{ /if }}
 			<div class="flex flex-col gap-4">
 				<div class="relative">
@@ -64,22 +64,22 @@
 					{{ /if }}
 				</div>
 				<div>
-					{{ partial:components/button label="Get Started" link_type="url" url="{{url ?? site_information:login}}" iconamic="user-circle" }}
+					{{ partial:components/button label="Get Started" link_type="url" class="{{ if highligh }} from-white to-white text-zinc-800 dark:text-white  dark:from-black dark:to-black {{ /if }}" url="{{url ?? site_information:login}}" iconamic="" }}
 				</div>
 			</div>
 
-			<div class="prose prose-sm relative flex flex-col gap-2 dark:prose-invert prose-ul:text-sm">
-				<ul>
+			<div class="{{ if highligh }} prose-li:text-white marker:text-white {{ /if}} prose prose-sm relative flex flex-col gap-2 dark:prose-invert prose-ul:text-sm">
+				<ul class="list-none">
 					{{ features }}
-						<li>{{ value }}</li>
+						<li class="list {{ if highligh }} before:invert {{/if}} ">{{ value }}</li>
 					{{ /features }}
 				</ul>
 			</div>
 		</div>
 		{{ if highligh }}
-			<div class="mx-auto h-2 w-11/12 rounded-b bg-zinc-300 opacity-75 dark:bg-purple-700"></div>
-			<div class="mx-auto h-2 w-10/12 rounded-b bg-zinc-300 opacity-50 dark:bg-purple-700"></div>
-			<div class="mx-auto h-2 w-9/12 rounded-b bg-zinc-300 opacity-25 dark:bg-purple-700"></div>
+			<div class="mx-auto h-2 w-11/12 rounded-b bg-purple-300 opacity-75 dark:bg-purple-700"></div>
+			<div class="mx-auto h-2 w-10/12 rounded-b bg-purple-300 opacity-50 dark:bg-purple-700"></div>
+			<div class="mx-auto h-2 w-9/12 rounded-b bg-purple-300 opacity-25 dark:bg-purple-700"></div>
 		{{ /if }}
 	</div>
 {{ /if }}
