@@ -1,6 +1,5 @@
 <section class="relative h-full w-full py-12 px-6 lg:px-24 lg:py-24">
-	
-	<div class="absolute inset-0 -z-10 rounded-2xl bg-[repeating-linear-gradient(-45deg,_rgba(10,10,10,_0.15),_rgba(10,10,10,_0.15)_1px,_transparent_1px,_transparent_6px)] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] [background-size:8px_8px] dark:bg-[repeating-linear-gradient(-45deg,_rgba(255,255,255,_0.15),_rgba(255,255,255,_0.15)_1px,_transparent_1px,_transparent_6px)]"></div>
+	<div class="absolute inset-0 -z-10 rounded-lg bg-[repeating-linear-gradient(-45deg,_rgba(10,10,10,_0.15),_rgba(10,10,10,_0.15)_1px,_transparent_1px,_transparent_6px)] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] [background-size:8px_8px] dark:bg-[repeating-linear-gradient(-45deg,_rgba(255,255,255,_0.15),_rgba(255,255,255,_0.15)_1px,_transparent_1px,_transparent_6px)]"></div>
 	<div class="md:container relative mx-auto flex flex-col gap-6 xl:flex-row" x-data="{tab: 1}">
 		<div class="{{ if start_type | count == 1 }} justify-center {{ else }} justify-start {{ /if }} space-y-12 xl:w-1/2">
 			<div class="max-w-xl">
@@ -10,11 +9,13 @@
 			{{ if start_type | count >= 2 }}
 				<div role="tablist" class="flex flex-col gap-3 md:flex-row xl:flex-col ">
 					{{ start_type }}
-						<div class="relative transition-all text-zinc-800 dark:text-zinc-50 max-w-2xl flex cursor-pointer gap-3 rounded-lg pr-24 p-6" :class="{'bg-zinc-100 dark:bg-zinc-800 ring-zinc-300 dark:ring-zinc-700 ring-1 xl:translate-x-24': tab === {{ count }}, 'bg-white dark:bg-zinc-900 xl:translate-x-32': tab !== {{ count }}}" role="tab" type="button" @click.prevent="tab = {{ count }}" >
-							{{ svg src="{{config:iconamic:path}}/{{iconamic}}.svg" class=" h-5 w-5 flex-shrink-0" }}
-							<span>
-								<div class="inline font-extrabold">{{ title }}</div>
-								<div class="inline">{{ description }}</div>
+						<div class="relative transition-all text-zinc-800 dark:text-zinc-50  ring-1 lg:max-w-2xl flex flex-col lg:flex-row cursor-pointer lg:gap-6 lg:p-6 gap-4 p-4 rounded-lg lg:pr-24 "
+							:class="{' xl:translate-x-32 ring-green-700 bg-green-100 dark:bg-[#00332A] dark:ring-[#00997F]/50': tab === {{ count }}, 'ring-zinc-300 bg-zinc-50 dark:bg-zinc-800 dark:ring-zinc-700 xl:translate-x-44': tab !== {{ count }}}"
+							role="tab" type="button" @click.prevent="tab = {{ count }}" >
+							{{ svg src="{{config:iconamic:path}}/{{iconamic}}.svg" class=" size-6 flex-shrink-0" }}
+							<span class="flex flex-col">
+								<div class="font-extrabold">{{ title }}</div>
+								<div class="text-zinc-600 dark:text-zinc-300">{{ description }}</div>
 							</span>
 						</div>
 					{{ /start_type }}
@@ -22,7 +23,7 @@
 			{{ /if }}
 		</div>
 
-		<div class="relative isolate rounded-xl border border-zinc-300 bg-white p-8 pb-4 shadow-2xl shadow-purple-500/10 dark:border-zinc-700 dark:bg-zinc-900 dark:shadow-green-500/10 xl:w-1/2 xl:p-16 xl:pb-8" x-id="['start']" x-data="{start: false}">
+		<div class="relative isolate rounded-lg 2xl:mt-32 border border-zinc-300 bg-white p-8 shadow-2xl shadow-purple-500/10 dark:border-zinc-700 dark:bg-zinc-900 dark:shadow-green-500/10 xl:w-1/2 xl:p-16" x-id="['start']" x-data="{start: false}">
 			{{ if start_toggle }}
 				{{ partial:general_content/toggle }}
 			{{ /if }}

@@ -1,11 +1,13 @@
-<section class="container relative mx-auto py-16 lg:py-32">
-	{{ partial:typography/h2 :content="title | strip_tags:p" class='-my-1 dot py-1 lg:text-center tracking-tight' }}
-	{{ partial:typography/p :content="sub_title | strip_tags:p" class='lg:text-center lg:max-w-lg lg:mx-auto mt-4 lg:mt-8' }}
+<section class="container relative">
+	<div class="flex flex-col gap-6 lg:text-center lg:max-w-lg lg:mx-auto">
+		{{ partial:typography/h2 :content="title | strip_tags:p" class='dot lg:text-center tracking-tight' }}
+		{{ partial:typography/p :content="sub_title | strip_tags:p" class='' }}
+	</div>
 	<div class="relative mt-16 flex flex-col gap-8 lg:grid lg:auto-rows-[3.5rem] lg:grid-cols-12">
 		{{ boxes }}
-			<a href="{{ url }}" class="bento_box group relative col-span-6 row-span-6 flex flex-col items-center gap-8 overflow-hidden rounded-xl p-4 lg:p-16 xl:gap-16">
+			<a href="{{ url }}" class="bento_box group relative col-span-6 row-span-6 flex flex-col items-center gap-8 overflow-hidden rounded-lg p-4 lg:p-16 xl:gap-16">
 				<div class="lg:order-last">
-					<div class="relative rounded-2xl overflow-hidden">
+					<div class="relative rounded-lg overflow-hidden">
 						<div class="relative transition-transform duration-500 ease-in-out group-hover:-translate-y-1">
 							<span class="transition-opacity duration-500 group-hover:opacity-0">
 								{{ partial:global/picture :image="image" cover="true" lazy="false" maxwidth="606" maxheight='404' quality='70' }}
@@ -20,18 +22,17 @@
 					<div class="flex items-center gap-4">
 						<div class="group relative size-14">
 							<div class="absolute inset-x-5 bottom-0 h-2 dark:bg-purple-500 opacity-50 blur-md"></div>
-							<div class="relative size-14 overflow-hidden rounded-xl dark:border-2 border dark:border-purple-500 border-zinc-200 bg-gradient-to-b from-zinc-50 to-zinc-100 p-px shadow-lg shadow-black/5 dark:from-zinc-700 dark:to-[#171C23]">
+							<div class="relative size-14 overflow-hidden rounded-lg dark:border-2 border dark:border-purple-500 border-zinc-200 bg-gradient-to-b from-zinc-50 to-zinc-100 p-px shadow-lg shadow-black/5 dark:from-zinc-700 dark:to-[#171C23]">
 								<div class="absolute inset-x-4 -bottom-2 h-4 bg-zinc-200 dark:bg-purple-500 blur-md dark:opacity-80"></div>
 								<div class="bg-gradient-radial relative flex h-full w-full items-center justify-center rounded-[15px] from-white to-zinc-100 dark:from-[#393C45] dark:to-[#171C23]">
 									<div class="absolute inset-x-4 -bottom-2 h-4 transform dark:bg-purple-300 bg-zinc-300 blur-lg duration-300 ease-in-out group-hover:translate-y-6 group-hover:bg-purple-500 dark:opacity-80"></div>
 									{{ svg src="{{config:iconamic:path}}/{{iconamic}}.svg" class="size-6" }}
-									
 								</div>
 							</div>
 						</div>
 						{{ partial:typography/h3 :content="title | strip_tags:p" class=' text-xl lg:text-2xl font-bold ' }}
 					</div>
-					{{ partial:typography/p :content="description | strip_tags:p" class='' }}
+					{{ partial:typography/p :content="description | strip_tags:p" class='[text-wrap:pretty]' }}
 					<div class="flex items-center gap-1 text-purple-500 dark:text-green-500">
 						<span class="font-medium">{{ text_link }}</span>
 						{{ svg src="{{config:iconamic:path}}/chevron-right.svg" class='size-4 transition ease-in-out group-hover:translate-x-1' }}

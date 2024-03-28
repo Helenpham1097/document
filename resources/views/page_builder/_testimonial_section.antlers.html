@@ -2,14 +2,14 @@
 	{{ if bg_pattern }}
 		<div class="absolute inset-0 -z-10 rotate-180 rounded-2xl bg-[repeating-linear-gradient(-45deg,_rgba(10,10,10,_0.15),_rgba(10,10,10,_0.15)_1px,_transparent_1px,_transparent_6px)] [background-size:8px_8px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] dark:bg-[repeating-linear-gradient(-45deg,_rgba(255,255,255,_0.15),_rgba(255,255,255,_0.15)_1px,_transparent_1px,_transparent_6px)]"></div>
 	{{ /if }}
-	<div class="container relative mx-auto py-12">
-		<div>
-			<p class="h2 mt-12 max-w-xl text-zinc-800 dark:text-zinc-50 [&>strong]:block [&>strong]:text-purple-500 dark:[&>strong]:text-green-500">
+	<div class="container relative mx-auto flex flex-col gap-12 pb-12 lg:pb-24">
+		
+			<h3 class="h2 dot max-w-2xl text-zinc-800 dark:text-zinc-50 [&>strong]:block [&>strong]:text-purple-500 dark:[&>strong]:text-green-500">
 				{{ title | strip_tags:p }}
-			</p>
-		</div>
+			</h3>
+		
 
-		<ul role="list" class="mx-auto mt-12 grid max-w-xl grid-cols-1 gap-6 sm:gap-4 lg:max-w-none lg:grid-cols-3">
+		<ul role="list" class="mx-auto grid max-w-xl grid-cols-1 gap-6 sm:gap-4 lg:max-w-none lg:grid-cols-3">
 			{{ testimonial }}
 				{{ partial:components/testimonial_card :image="default_image" cover="false" maxheight="56" lazy="false" maxwidth="56" quality='70' }}
 			{{ /testimonial }}

@@ -1,9 +1,6 @@
 .prose ol > li::before {
 	@apply text-purple-500;
 }
-.prose ul > li::before {
-	@apply rounded-none bg-purple-500;
-}
 .prose ::marker {
 	@apply list-disc text-purple-500 dark:text-green-500;
 }
