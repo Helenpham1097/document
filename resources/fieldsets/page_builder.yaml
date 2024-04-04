@@ -106,6 +106,13 @@ fields:
               fields:
                 -
                   import: metrics_section
+            comparison_table:
+              display: 'Comparison Table'
+              instructions: null
+              icon: layout-display-split-quarters
+              fields:
+                -
+                  import: table
       instructions_position: above
       visibility: visible
       replicator_preview: true

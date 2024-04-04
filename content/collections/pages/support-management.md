@@ -21,20 +21,10 @@ top_section:
         id: lrzodymc
         template_global: /components/buttons
         label: 'Join Webslice'
-        link_type: url
-        target_blank: false
-        url: 'https://console.webslice.com/register'
-        button_type: button
-        iconamic: chevrons-right
       -
         id: ltxslzeb
         template_global: /components/buttons
         label: 'Login to Add Services now'
-        link_type: url
-        target_blank: false
-        url: 'https://console.webslice.com/login'
-        button_type: secondary
-        iconamic: chevron-right
     type: hero
     enabled: true
     dark_image: illustrations/expand.png
@@ -45,7 +35,7 @@ page_description: 'Monitoring, incident response, time-saving tools, broader 24/
 meta_title: 'Managed Services - Webslice web hosting'
 meta_description: 'Add Managed Services to Webslice hosting for time-saving developer tools, broader 24/7 technical support, and server management including incident response.'
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1711317410
+updated_at: 1712198646
 page_builder:
   -
     id: ltginaij
@@ -196,10 +186,113 @@ page_builder:
           - 'Container Feature: Simple Cache'
           - 'Container Feature: One-Click Backup Restore'
     type: pricing_table
-    enabled: true
+    enabled: false
     iconamic: list-checks
     title: 'Packages & pricing'
     description: 'Your selected services will apply across your whole team and all the servers and containers that you run. To upgrade your Support & Management, log into Webslice and head to your team settings.'
+  -
+    id: luklb15h
+    pricing_header:
+      -
+        id: luklb5n0
+        highligh: false
+        title: Standard
+        description: 'Platform support for every customer, every container, and every server.'
+        price: '0'
+        price_detail:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: ' '
+        type: price
+        enabled: true
+        url: 'https://console.webslice.com/login'
+      -
+        id: luklggyf
+        highligh: true
+        highligh_text: Recommended
+        title: Business
+        description: 'More proactive services, broader support, and advanced platform features.'
+        price: '50'
+        price_detail:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: '+ $2.50 per container (USD, monthly)'
+        type: price
+        enabled: true
+        url: 'https://console.webslice.com/login'
+      -
+        id: luklgn1z
+        highligh: false
+        title: Premium
+        description: 'Get all Business tier services and developer tools, plus the highest level of 24/7 support'
+        price: '350'
+        price_detail:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: '+ $5 per container (USD, monthly)'
+        type: price
+        enabled: true
+        url: 'https://console.webslice.com/login'
+    table:
+      -
+        cells:
+          - 'Support Method'
+          - 'Community & Email'
+          - 'Standard + Live Chat'
+          - 'Business + Phone'
+      -
+        cells:
+          - 'Support Coverage'
+          - 'Platform Only'
+          - 'Platform & App'
+          - 'Platform & App'
+      -
+        cells:
+          - Monitoring
+          - Self-managed
+          - '24x7 Monitoring & Response'
+          - '24x7 Monitoring & Response'
+      -
+        cells:
+          - SLA
+          - Standard
+          - Standard
+          - 'Premium & Customisable'
+      -
+        cells:
+          - 'Automatic Container Updates'
+          - '-'
+          - tick
+          - tick
+      -
+        cells:
+          - 'Container Cloning & Sync'
+          - '-'
+          - tick
+          - tick
+      -
+        cells:
+          - 'Simple Cache'
+          - '-'
+          - tick
+          - tick
+      -
+        cells:
+          - 'One-Click Backup Restore'
+          - '-'
+          - tick
+          - tick
+    type: comparison_table
+    enabled: true
   -
     id: ltxrr6i7
     template: /general_content/_multiple_text_columns
