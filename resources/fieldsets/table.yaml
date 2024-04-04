@@ -1,34 +1,141 @@
 title: Table
 fields:
   -
-    handle: size
-    field: common.size
-  -
-    handle: first_row_headers
+    handle: pricing_header
     field:
-      display: First row as header
-      type: toggle
-      icon: toggle
+      collapse: false
+      previews: true
+      fullscreen: true
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          instructions: null
+          icon: null
+          sets:
+            price:
+              display: Price
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: highligh
+                  field:
+                    default: false
+                    type: toggle
+                    display: Highligh
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: highligh_text
+                  field:
+                    input_type: text
+                    default: 'Most popular'
+                    antlers: false
+                    type: text
+                    display: 'Highligh text'
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    if:
+                      highligh: 'equals true'
+                -
+                  handle: title
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: Title
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: description
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: Description
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: price
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: Price
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: price_detail
+                  field:
+                    buttons:
+                      - bold
+                      - removeformat
+                    smart_typography: false
+                    save_html: false
+                    inline: false
+                    toolbar_mode: fixed
+                    reading_time: false
+                    word_count: false
+                    fullscreen: true
+                    allow_source: true
+                    enable_input_rules: true
+                    enable_paste_rules: true
+                    remove_empty_nodes: false
+                    antlers: false
+                    link_noopener: false
+                    link_noreferrer: false
+                    target_blank: false
+                    always_show_set_button: false
+                    collapse: false
+                    previews: true
+                    type: bard
+                    display: 'Price detail'
+                    instructions: 'Optional field, if this field is empty, "/mo + currency" is displayed.'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: url
+                  field:
+                    type: link
+                    display: url
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+      type: replicator
+      display: 'Pricing Header'
       listable: hidden
-      width: 50
-      instructions: 'Show the first row as header and give it a header styling.'
-      instructions_position: below
-  -
-    handle: first_column_headers
-    field:
-      display: First column as header
-      type: toggle
-      icon: toggle
-      listable: hidden
-      width: 50
-      instructions: 'Show the first column as header and give it a header styling.'
-      instructions_position: below
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      max_sets: 4
   -
     handle: table
     field:
       display: Table
       type: table
-      icon: table
       localizable: true
       listable: hidden
   -

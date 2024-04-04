@@ -1,0 +1,146 @@
+{{#
+  Price comparison tables
+  
+  These tables have several variants in order to display them correctly depending on the number of items being listed as well as varying the layout for smaller screens.
+  To achieve this we count the number of items defined by pricing_header and define some classes if the number of items if greater than X.
+  
+  To create the vertical lines and also to be able to highlight the most popular column, a grid containing an empty div plus X divs depending on the number of items is added under the table.
+  This is because when entering the values in CP as a table they are added horizontally in rows.
+#}}
+
+<section class="container mx-auto">
+	{{# Desktop #}}
+	<div class="grid-cols-{{ pricing_header | count | + :1 }} relative isolate hidden grid-cols-1 text-zinc-700 dark:text-zinc-200 lg:grid">
+		{{# This create the vertical lines and also to be able to highlight the most popular column, a grid containing an empty div plus X divs depending on the number of items is added under the table. #}}
+		<div class="grid-cols-{{ pricing_header | count | + :1 }} col-span-{{ pricing_header | count }} [&>div]:bg-red-500/2s0 absolute inset-0 grid divide-x divide-zinc-300 dark:divide-zinc-700">
+			<div class="relative col-span-1 overflow-hidden">
+				<div class="ani_overlap relative inset-0 flex -translate-y-1/3 translate-x-1/4 -skew-x-[-45deg] scale-y-[-1] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_10%,transparent_100%)]">
+					<div class="h-[400px] w-full bg-gradient-to-r from-zinc-900/10 to-transparent dark:from-white/10"></div>
+					<div class="h-[400px] w-full bg-gradient-to-r from-zinc-900/10 to-transparent dark:from-white/10"></div>
+					<div class="h-[400px] w-full bg-gradient-to-r from-zinc-900/10 to-transparent dark:from-white/10"></div>
+					<div class="h-[400px] w-full bg-gradient-to-r from-zinc-900/10 to-transparent dark:from-white/10"></div>
+					<div class="h-[400px] w-full bg-gradient-to-r from-zinc-900/10 to-transparent dark:from-white/10"></div>
+				</div>
+			</div>
+			{{ pricing_header }}
+				<div class="{{ if highligh }} ring-purple-500 -m-0.5 z-10 shadow-2xl rounded-lg ring {{ /if }} bg-white dark:bg-zinc-900"></div>
+			{{ /pricing_header }}
+		</div>
+		<div class="grid-cols-{{ pricing_header | count }} col-span-{{ pricing_header | count }} relative z-10 grid lg:col-start-2">
+			{{ pricing_header }}
+				<div class="{{ if pricing_header | count > 4 }} p-4 {{ else }} p-8 {{ /if }} relative flex flex-col justify-between gap-4">
+					{{ if highligh }}
+						<div class="absolute -top-1 right-6 -translate-y-1/2 bg-purple-500 px-2 py-0.5 text-sm font-bold text-purple-100 ring ring-purple-500 dark:bg-zinc-900 dark:text-purple-100">{{ highligh_text }}</div>
+					{{ /if }}
+					<div class="relative">
+						<div class="text-xl font-bold text-purple-500 dark:text-green-500">{{ title }}</div>
+						<div class="text-base">{{ description }}</div>
+					</div>
+					{{# If a personalised text is added to price_detail and is also in a grid of more than 4 it is displayed under the value #}}
+					<div class="{{ if pricing_header | count > 5 && price_detail}}flex-col{{ else }} items-center flex-row {{ /if }} flex space-x-2">
+						<div class="flex items-center text-4xl font-black">
+							<span class="md:text-xl">$</span>
+							{{ price }}
+						</div>
+						{{ if price_detail }}
+							<div class="[&>p]:text-xs">
+								{{ price_detail }}
+							</div>
+						{{ else }}
+							<div class="text-xs">
+								/mo
+								<div class="text-xs">{{ currency_values:currency }}</div>
+							</div>
+						{{ /if }}
+					</div>
+					{{ partial:components/button label="Get Started" link_type="url" class="w-fit" url="{{url ?? site_information:login}}" iconamic="" }}
+				</div>
+			{{ /pricing_header }}
+		</div>
+		{{# Table values are added horizontally in rows. #}}
+		<div class="grid-cols-{{ pricing_header | count | + :1 }} col-span-{{ pricing_header | count | + :1 }} relative z-10 grid grid-flow-row divide-y divide-zinc-300 dark:divide-zinc-700 [&>.thead]:place-self-end [&>div]:flex [&>div]:items-center">
+			{{ table }}
+				{{ cells }}
+					<div class="{{ if pricing_header | count > 4 }}px-4 py-2 text-sm{{ else }}px-8 py-3{{ /if }} {{ if first }}font-bold flex text-right w-fit thead justify-end{{ /if }}">
+						{{# If the value entered into the table contains a "tick" it is displayed as a check icon. #}}
+						{{ if value | contains:tick }}
+							<span class="rounded-full bg-green-500 p-0.5">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-4 text-green-900">
+									<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+									<path d="m9 11 3 3L22 4" />
+								</svg>
+							</span>
+						{{ else }}
+							{{ value | markdown | strip_tags:p }}
+						{{ /if }}
+					</div>
+				{{ /cells }}
+			{{ /table }}
+		</div>
+	</div>
+
+	{{# Mobile #}}
+	<div class="flex flex-col gap-16 text-zinc-700 dark:text-zinc-200 lg:hidden">
+		<div class="{{ if pricing_header | count < 4 }} md:grid-cols-{{ pricing_header | count }} {{else}} sm:grid-cols-2 {{ /if }} grid gap-8">
+			{{# The mobile version move the title, button, price and price descriptions from the table prices. #}}
+			{{ pricing_header }}
+				<div class="{{ if highligh }} border-purple-500 -m-4 p-4 rounded-lg border-2 {{ /if }} flex flex-col justify-between gap-4">
+					<div class="relative flex flex-col gap-2">
+						{{ if highligh }}
+							<div class="absolute -right-2 -mt-2 w-fit -translate-y-full bg-white px-3 text-sm font-bold text-purple-500 dark:bg-zinc-900 dark:text-white">{{ highligh_text }}</div>
+						{{ /if }}
+						<div class="font-bold text-purple-500 dark:text-green-500">{{ title }}</div>
+						<div class="text-base">{{ description }}</div>
+					</div>
+					{{# If a personalised text is added to price_detail and is also in a grid of more than 3 it is displayed under the value #}}
+					<div class="{{ if pricing_header | count > 3 && price_detail}}flex-col{{ else }} items-center flex-row {{ /if }} flex gap-2">
+						<div class="flex items-center text-4xl font-black">
+							<span class="md:text-xl">$</span>
+							{{ price }}
+						</div>
+						{{ if price_detail }}
+							<div class="[&>p]:text-xs">
+								{{ price_detail }}
+							</div>
+						{{ else }}
+							<div class="text-xs">
+								/mo
+								<div class="text-xs">{{ currency_values:currency }}</div>
+							</div>
+						{{ /if }}
+					</div>
+					<div class="flex gap-4">
+						{{ partial:components/button label="Get Started" link_type="url" class="w-fit" url="{{url ?? site_information:login}}" }}
+					</div>
+				</div>
+			{{ /pricing_header }}
+		</div>
+		<div class="flex flex-col gap-1">
+			{{# The table uses only the title of each price item. #}}
+			<div class="grid-cols-{{ pricing_header | count | + :1 }} grid gap-1">
+				<div></div>
+				{{ pricing_header }}
+					<div class="text-right text-xs text-purple-500 dark:text-green-500">{{ title }}</div>
+				{{ /pricing_header }}
+			</div>
+			<div class="grid-cols-{{ pricing_header | count | + :1 }} col-span-{{ pricing_header | count | + :1 }} relative grid auto-cols-fr auto-rows-fr divide-y divide-zinc-300 text-xs dark:divide-zinc-700 [&>div]:flex [&>div]:items-center [&>div]:py-1 md:[&>div]:py-2">
+				{{ table }}
+					{{ cells }}
+						<div class="{{ if first }}font-semibold {{ else }} justify-end text-right {{ /if }}">
+							{{ if value | contains:tick }}
+								<span class="rounded-full bg-green-500 p-0.5">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-4 text-green-900">
+										<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+										<path d="m9 11 3 3L22 4" />
+									</svg>
+								</span>
+							{{ else }}
+								{{ value | markdown | strip_tags:p }}
+							{{ /if }}
+						</div>
+					{{ /cells }}
+				{{ /table }}
+			</div>
+		</div>
+	</div>
+</section>
