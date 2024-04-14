@@ -4,7 +4,7 @@ blueprint: home
 template: general_content/index
 title: Homepage
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1711069628
+updated_at: 1712879998
 top_section:
   -
     id: RzzOzBfN
@@ -22,7 +22,7 @@ top_section:
         content:
           -
             type: text
-            text: "Web hosting platforms for today's agencies. "
+            text: 'How much time and energy could you save if you never had to worry about hosting again?'
     hero_home_image: hero-preview.png
     template_global: /global/default_image
     link: '#'
@@ -100,7 +100,7 @@ page_builder:
         type: column
         enabled: true
     type: multiple_text_columns
-    enabled: true
+    enabled: false
   -
     id: ltmabjhc
     template: /general_content/bento_highlight
@@ -124,8 +124,8 @@ page_builder:
   -
     id: lrzox1cv
     template: page_builder/two_options
-    title: 'There are two ways to Webslice'
-    sub_title: "Choose your hosting technology - containers or serverless - and see how we've made it made easy to use, developer-friendly, fast, and flexible."
+    title: "Webslice. It's about time"
+    sub_title: 'Choose containers or serverless technology and see how easy, fast, and flexible it can be. Both our global platforms are built on robust infrastructure, with a feature-packed console that values your time as much as you do.'
     boxes:
       -
         id: lrzoxcmj
