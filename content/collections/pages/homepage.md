@@ -3,8 +3,8 @@ id: cf7040f4-473b-4c14-897d-5de59ce6d833
 blueprint: home
 template: general_content/index
 title: Homepage
-updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1711069628
+updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
+updated_at: 1713216531
 top_section:
   -
     id: RzzOzBfN
@@ -22,7 +22,7 @@ top_section:
         content:
           -
             type: text
-            text: "Web hosting platforms for today's agencies. "
+            text: 'How much time and energy could you save if you never had to worry about hosting again?'
     hero_home_image: hero-preview.png
     template_global: /global/default_image
     link: '#'
@@ -100,7 +100,7 @@ page_builder:
         type: column
         enabled: true
     type: multiple_text_columns
-    enabled: true
+    enabled: false
   -
     id: ltmabjhc
     template: /general_content/bento_highlight
@@ -124,32 +124,28 @@ page_builder:
   -
     id: lrzox1cv
     template: page_builder/two_options
-    title: 'There are two ways to Webslice'
-    sub_title: "Choose your hosting technology - containers or serverless - and see how we've made it made easy to use, developer-friendly, fast, and flexible."
+    title: "Webslice. It's about time"
+    sub_title: 'Choose containers or serverless technology and see how easy, fast, and flexible it can be. Both our global platforms are built on robust infrastructure, with a feature-packed console that values your time as much as you do.'
     boxes:
       -
         id: lrzoxcmj
         template_global: /global/default_image
-        iconamic: boxes
+        iconamic: ws-containers
         title: 'Webslice Containers'
         description: 'Join over 16,000 websites on a platform that lets you run as many independent, flexible environments as you need. One account, your own servers, dozens of pre-built images, and no technical headaches. You control it all.'
         url: 'entry::321f3638-6149-4686-a430-c179ad55fcbe'
         type: box
         enabled: true
         text_link: 'See Webslice Containers'
-        image: containers-overview-dark.png
-        image_hover: console/containers-overview-light-1710813223.png
       -
         id: lrzoyenc
         template_global: /global/default_image
-        iconamic: expand
+        iconamic: ws-serverless
         title: 'Webslice Serverless'
         description: "Finally, serverless hosting that's PHP-friendly, easy to use, and simple to set up. Webslice Serverless is truly elastic hosting that stays fast when you’re busy, and shrinks bills in quiet times. Register for the Public Beta now."
         type: box
         enabled: true
         text_link: 'See Webslice Serverless'
-        image: console/serverless-overview-dark.png
-        image_hover: console/serverless-overview-light.png
         url: 'entry::1e33d247-bf25-42a4-b455-b47eb8dcf557'
     type: two_options
     enabled: true

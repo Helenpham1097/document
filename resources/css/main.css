@@ -20,7 +20,7 @@
 html,
 body {
 	position: relative;
-	overflow-x: hidden;
+	@apply overflow-x-clip;
 }
 .dev * {
 	@apply border border-red-500/30 bg-red-500/20;
