@@ -14,10 +14,9 @@
 			<ol class="flex flex-col justify-around gap-1 md:mx-auto xl:flex-row xl:items-center xl:gap-8" aria-label="registration progress">
 				{{ steps }}
 					<li class="relative flex items-start gap-4 pb-6 text-sm" aria-label="checkout">
-						{{ if !last }}
-							<div class="absolute left-3 block h-full w-0.5 bg-zinc-300 dark:bg-zinc-700"></div>
-						{{ /if }}
-						<span class="relative z-10 flex size-6 flex-shrink-0 items-center justify-center rounded-full bg-green-700 font-bold text-zinc-100 outline outline-2 outline-offset-2 outline-green-700 dark:bg-green-600 dark:text-zinc-800 dark:outline-green-600">
+						<div class="absolute left-3 block h-full w-0.5 bg-zinc-300 dark:bg-zinc-700"></div>
+
+						<span x-data="{ show: false }" x-intersect="setTimeout = show" x-init="setTimeout(() => show = true, 1000 * {{ count }})" :class="{ 'bg-zinc-700 text-zinc-100 outline-zinc-700': !show, 'bg-green-500 text-zinc-800 outline-green-500': show }" class="relative z-10 flex size-6 flex-shrink-0 items-center justify-center rounded-full font-bold text-zinc-100 outline outline-2 outline-offset-2 transition-colors dark:text-zinc-800">
 							{{ count }}
 						</span>
 						<div class="relative flex flex-none flex-col">
@@ -28,8 +27,16 @@
 				{{ /steps }}
 			</ol>
 			<div class="relative flex items-center">
-				<span class="hidden h-0.5 w-full bg-zinc-300 dark:bg-zinc-700 xl:ml-3 xl:block" aria-hidden="true"></span>
-				{{# <div class="absolute flex size-8 items-center justify-center rounded-full border border-zinc-700 dark:border-zinc-600 dark:bg-zinc-800 lg:right-0">🏁</div> #}}
+				<div x-data="{ progress: 0, interval: null }" x-init="() => { interval = setInterval(() => { progress < 100 ? progress += 1 : clearInterval(interval); }, 1); }" class="w-full translate-x-3">
+					<div class="relative mb-2 flex h-[3px] overflow-clip rounded-full bg-zinc-300 dark:bg-zinc-700">
+						<div x-bind:style="'width: ' + progress + '%; transition: 3s;'" class="left-0 top-0 h-full bg-gradient-to-br from-purple-400 to-purple-800"></div>
+						<div x-bind:style="'width: ' + progress + '%; transition: 3s; transition-delay: 3s;'" class="left-0 top-0 h-full bg-gradient-to-br from-purple-400 to-purple-800"></div>
+					</div>
+					<div class="flex">
+						<div class="w-1/2 text-sm text-zinc-500">10 min</div>
+						<div class="w-1/2 text-sm text-zinc-500">5 min</div>
+					</div>
+				</div>
 			</div>
 		</div>
 
