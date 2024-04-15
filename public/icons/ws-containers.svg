@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82 93" class="stroke-current	size-12">
+  <!-- Y up back -->
+  <path class="path path_opa_ico" stroke="currentColor" fill="none" stroke-linejoin="bevel" stroke-width="3" d="m1.23 68.743 39.678-22.908L40.94 2" />
+  <!-- up right back -->
+  <path class="path path_opa_ico" stroke="currentColor" fill="none" stroke-miterlimit="16" stroke-width="3" d="M80.65 68.743 40.97 45.835 40.94 2" />
+  <!-- cube center -->
+  <path class="path fill_invert_ico path_ico" stroke="currentColor" fill="currentColor"  stroke-width="3" d="m17.48 32.653 23.46-13.545L64.4 32.653v27.09L40.94 73.288 17.48 59.743v-27.09Z" />
+  <!-- cube out -->
+  <path class="path path_ico fill_none_ico" stroke="currentColor" fill="currentColor" stroke-width="3" d="M2.05 23.679 40.94 1.226l38.89 22.453v44.905L40.94 91.037 2.05 68.584V23.679Z" />
+  <!-- Y big -->
+  <path class="path path_ico" stroke="currentColor" stroke-width="3" d="M79.633 23.978 40.855 46.33m0 0-.001 44.814m.001-44.814L2.048 23.926" />
+</svg>

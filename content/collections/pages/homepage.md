@@ -3,8 +3,8 @@ id: cf7040f4-473b-4c14-897d-5de59ce6d833
 blueprint: home
 template: general_content/index
 title: Homepage
-updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1712879998
+updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
+updated_at: 1713160792
 top_section:
   -
     id: RzzOzBfN
@@ -130,7 +130,7 @@ page_builder:
       -
         id: lrzoxcmj
         template_global: /global/default_image
-        iconamic: boxes
+        iconamic: ws-containers
         title: 'Webslice Containers'
         description: 'Join over 16,000 websites on a platform that lets you run as many independent, flexible environments as you need. One account, your own servers, dozens of pre-built images, and no technical headaches. You control it all.'
         url: 'entry::321f3638-6149-4686-a430-c179ad55fcbe'
@@ -142,7 +142,7 @@ page_builder:
       -
         id: lrzoyenc
         template_global: /global/default_image
-        iconamic: expand
+        iconamic: ws-serverless
         title: 'Webslice Serverless'
         description: "Finally, serverless hosting that's PHP-friendly, easy to use, and simple to set up. Webslice Serverless is truly elastic hosting that stays fast when you’re busy, and shrinks bills in quiet times. Register for the Public Beta now."
         type: box

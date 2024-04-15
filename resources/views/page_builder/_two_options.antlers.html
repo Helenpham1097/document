@@ -1,46 +1,64 @@
-<section class="container relative">
-	<div class="flex flex-col gap-6 lg:text-center lg:max-w-lg lg:mx-auto">
-		{{ partial:typography/h2 :content="title | strip_tags:p" class='dot lg:text-center tracking-tight' }}
-		{{ partial:typography/p :content="sub_title | strip_tags:p" class='' }}
-	</div>
-	<div class="relative mt-16 flex flex-col gap-8 lg:grid lg:auto-rows-[3.5rem] lg:grid-cols-12">
-		{{ boxes }}
-			<a href="{{ url }}" class="bento_box group relative col-span-6 row-span-6 flex flex-col items-center gap-8 overflow-hidden rounded-lg p-4 lg:p-16 xl:gap-16">
-				<div class="lg:order-last">
-					<div class="relative rounded-lg overflow-hidden">
-						<div class="relative transition-transform duration-500 ease-in-out group-hover:-translate-y-1">
-							<span class="transition-opacity duration-500 group-hover:opacity-0">
-								{{ partial:global/picture :image="image" cover="true" lazy="false" maxwidth="606" maxheight='404' quality='70' }}
-							</span>
-							<span class="absolute left-0 top-0 bg-purple-500/20 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-								{{ partial:global/picture :image="image_hover" cover="true" lazy="false" maxwidth="606" maxheight='404' quality='70' }}
-							</span>
-						</div>
-					</div>
+<section class="container relative mx-auto ">
+	<div class="-space-y-6 lg:-space-y-12">
+		<div class="absolute scroll_watcher translate-x-1/2 flex w-full skew-x-[45deg] scale-x-[-1] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_10%,transparent_100%)]">
+			<div class="h-[420px] w-[640px] bg-gradient-to-r from-zinc-600/20 to-transparent dark:from-white/10"></div>
+			<div class="h-[420px] w-[640px] bg-gradient-to-r from-zinc-600/20 to-transparent dark:from-white/10"></div>
+			<div class="h-[420px] w-[640px] bg-gradient-to-r from-zinc-600/20 to-transparent dark:from-white/10"></div>
+			<div class="h-[420px] w-[640px] bg-gradient-to-r from-zinc-600/20 to-transparent dark:from-white/10"></div>
+			<div class="h-[420px] w-[640px] bg-gradient-to-r from-zinc-600/20 to-transparent dark:from-white/10"></div>
+			<div class="h-[420px] hidden lg:block w-[640px] bg-gradient-to-r from-zinc-600/20 to-transparent dark:from-white/10"></div>
+			<div class="h-[420px] hidden lg:block w-[640px] bg-gradient-to-r from-zinc-600/20 to-transparent dark:from-white/10"></div>
+			
+		</div>
+		<div class="relative flex space-x-4 xl:space-x-10">
+			<div class="relative isolate flex flex-col items-center">
+				{{# Hexagon Icon #}}
+				<svg class="z-10 drop-shadow-lg" width="56" height="64" viewBox="0 0 56 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" class="fill-purple-500/20" clip-rule="evenodd" d="M28.2562 0.810547L55.1398 16.3318V47.3743L28.2562 62.8956L1.37256 47.3743V16.3318L28.2562 0.810547Z" />
+					<path fill-rule="evenodd" class="fill-purple-500/20" clip-rule="evenodd" d="M28.2564 6.79883L49.9542 19.3261V44.3806L28.2564 56.9078L6.55859 44.3806V19.3261L28.2564 6.79883Z" />
+					<path fill-rule="evenodd" class="fill-purple-500/80" clip-rule="evenodd" d="M28.256 12.9453L44.6302 22.399V41.3062L28.256 50.7599L11.8818 41.3062V22.399L28.256 12.9453Z" />
+				</svg>
+				<div class="absolute inset-0 size-9 translate-x-3 translate-y-4 animate-pulse bg-green-500 blur-xl dark:bg-purple-500"></div>
+				{{# Inner Icon #}}
+				{{ svg src="{{config:iconamic:path}}/sparkles.svg" class="translate-y-5 absolute z-20 w-5 text-purple-100 dark:text-purple-100 stroke-current" }}
+				{{# Gradient Line #}}
+				<span class="line-gradient gradient-background w-[1px] flex-1 -translate-y-1"></span>
+			</div>
+			<div class="flex flex-1 flex-col pb-12 lg:pb-24">
+				<div class="max-w-xl space-y-4">
+					{{ partial:typography/h2 :content="title | strip_tags:p" class='lg:text-5xl' }}
+					{{ partial:typography/p :content="sub_title | strip_tags:p" class='' }}
 				</div>
-				<div class="flex w-full flex-col gap-4 transition-transform duration-500 ease-in-out group-hover:-translate-y-1 lg:order-first">
-					<div class="flex items-center gap-4">
-						<div class="group relative size-14">
-							<div class="absolute inset-x-5 bottom-0 h-2 dark:bg-purple-500 opacity-50 blur-md"></div>
-							<div class="relative size-14 overflow-hidden rounded-lg dark:border-2 border dark:border-purple-500 border-zinc-200 bg-gradient-to-b from-zinc-50 to-zinc-100 p-px shadow-lg shadow-black/5 dark:from-zinc-700 dark:to-[#171C23]">
-								<div class="absolute inset-x-4 -bottom-2 h-4 bg-zinc-200 dark:bg-purple-500 blur-md dark:opacity-80"></div>
-								<div class="bg-gradient-radial relative flex h-full w-full items-center justify-center rounded-[15px] from-white to-zinc-100 dark:from-[#393C45] dark:to-[#171C23]">
-									<div class="absolute inset-x-4 -bottom-2 h-4 transform dark:bg-purple-300 bg-zinc-300 blur-lg duration-300 ease-in-out group-hover:translate-y-6 group-hover:bg-purple-500 dark:opacity-80"></div>
-									{{ svg src="{{config:iconamic:path}}/{{iconamic}}.svg" class="size-6" }}
+			</div>
+		</div>
+
+		{{# Item Style #}}
+		<div class="isolate w-auto -space-y-[1px] text-zinc-800 dark:text-zinc-300">
+			<div class="relative -z-10 mx-auto flex flex-col justify-center gap-8 rounded-lg rounded-b-lg bg-gradient-to-b from-zinc-300 via-transparent to-transparent p-4 dark:from-zinc-700 lg:gap-12 lg:px-24 lg:py-8">
+				<div class="absolute inset-[1px] rounded-lg rounded-b-lg bg-gradient-to-b from-white via-white to-transparent dark:from-zinc-900 dark:via-zinc-900"></div>
+				<div class="relative gap-6 lg:gap-24 grid lg:grid-cols-2">
+					{{ boxes }}
+						<div class="xl:col-span-1 py-4 flex gap-4 flex-col">
+							<div class="svg-icon relative flex-none w-fit">
+								<div class="absolute inset-2 blur-md rounded-full {{ switch between=' bg-purple-500 | bg-green-500 ' }}"></div>
+								{{ svg src='{{ config:iconamic:path }}/{{ iconamic }}.svg' class='size-14 relative' }}
+							</div>
+							<div class="flex flex-col gap-8">
+								<div class="text-zinc-200 flex flex-col gap-4 {{ switch between=' [&>*.dot:after]:bg-purple-500 | [&>*.dot:after]:bg-green-500 ' }} ">
+									{{ partial:typography/h3 :content="title | strip_tags:p" class=' text-xl lg:text-4xl relative dot after:absolute after:bottom-0 after:mb-2 after:ml-1 after:size-2 after:-skew-x-6 after:transform' }}
+									{{ partial:typography/p :content='description | strip_tags:p' class='[text-wrap:pretty]' }}
 								</div>
+								{{ if first }}
+								{{ partial:components/button label="{{ text_link }}" link_type="url" button_type="custom" iconamic='chevron-right'  class="w-fit " url="{{ url }}" }}
+								{{ else }}
+								{{ partial:components/button label="{{ text_link }}" link_type="url" button_type="custom" iconamic='chevron-right'
+									class="w-fit !from-green-500 !to-green-600 hover:from-green-400 hover:to-green-600 dark:from-green-500 dark:to-green-700 text-zinc-800 hover:text-zinc-900" url="{{ url }}" }}
+								{{/if }}
 							</div>
 						</div>
-						{{ partial:typography/h3 :content="title | strip_tags:p" class=' text-xl lg:text-2xl font-bold ' }}
-					</div>
-					{{ partial:typography/p :content="description | strip_tags:p" class='[text-wrap:pretty]' }}
-					<div class="flex items-center gap-1 text-purple-500 dark:text-green-500">
-						<span class="font-medium">{{ text_link }}</span>
-						{{ svg src="{{config:iconamic:path}}/chevron-right.svg" class='size-4 transition ease-in-out group-hover:translate-x-1' }}
-					</div>
+					{{ /boxes }}
 				</div>
-			</a>
-		{{ /boxes }}
+			</div>
+		</div>
 	</div>
 </section>
-
-
