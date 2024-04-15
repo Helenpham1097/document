@@ -100,42 +100,6 @@ fields:
                     visibility: visible
                     replicator_preview: true
                     hide_display: false
-                -
-                  handle: image
-                  field:
-                    mode: list
-                    container: assets
-                    restrict: false
-                    allow_uploads: true
-                    show_filename: true
-                    show_set_alt: true
-                    type: assets
-                    display: Image
-                    width: 50
-                    listable: hidden
-                    instructions_position: above
-                    visibility: visible
-                    replicator_preview: true
-                    hide_display: false
-                    max_files: 1
-                -
-                  handle: image_hover
-                  field:
-                    mode: list
-                    container: assets
-                    restrict: false
-                    allow_uploads: true
-                    show_filename: true
-                    show_set_alt: true
-                    type: assets
-                    display: 'Image hover'
-                    width: 50
-                    listable: hidden
-                    instructions_position: above
-                    visibility: visible
-                    replicator_preview: true
-                    hide_display: false
-                    max_files: 1
       type: replicator
       display: Boxes
       listable: hidden

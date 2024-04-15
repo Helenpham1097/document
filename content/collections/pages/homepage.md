@@ -4,7 +4,7 @@ blueprint: home
 template: general_content/index
 title: Homepage
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1713160792
+updated_at: 1713216531
 top_section:
   -
     id: RzzOzBfN
@@ -137,8 +137,6 @@ page_builder:
         type: box
         enabled: true
         text_link: 'See Webslice Containers'
-        image: containers-overview-dark.png
-        image_hover: console/containers-overview-light-1710813223.png
       -
         id: lrzoyenc
         template_global: /global/default_image
@@ -148,8 +146,6 @@ page_builder:
         type: box
         enabled: true
         text_link: 'See Webslice Serverless'
-        image: console/serverless-overview-dark.png
-        image_hover: console/serverless-overview-light.png
         url: 'entry::1e33d247-bf25-42a4-b455-b47eb8dcf557'
     type: two_options
     enabled: true
