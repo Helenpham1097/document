@@ -10,40 +10,25 @@
 			{{ partial:components/buttons class='xl:hidden block' }}
 		</div>
 
-		<div class="w-full max-xl:flex max-xl:justify-center max-xl:gap-8 md:w-1/2 xl:w-auto">
-			<div class="flex flex-col text-right text-sm text-zinc-500 xl:hidden">
-				<div class="flex h-[39%] items-end">10 min</div>
-				<div class="flex h-[50%] items-end">+5 min</div>
-			</div>
-			<ol class="scroll_timeline flex flex-col justify-around gap-1 xl:mx-auto xl:flex-row xl:items-center xl:gap-8">
+		<div class="relative isolate w-full max-xl:flex max-xl:flex-col max-xl:justify-center md:w-1/2 xl:w-auto">
+			<div class="line absolute inset-0 hidden w-full flex-col lg:items-center xl:flex xl:flex-row">
 				{{ steps }}
-					<li class="relative flex items-start gap-4 pb-6 text-sm [&>div.line_b]:hidden">
-						<div class="line_b absolute left-3 block h-full w-0.5 bg-zinc-300 dark:bg-zinc-700"></div>
-
-						<span class="relative z-10 flex size-6 flex-shrink-0 items-center justify-center rounded-full bg-green-500 font-bold text-zinc-800 outline outline-2 outline-offset-2 outline-green-500 transition-colors dark:bg-green-500 dark:text-zinc-800 dark:outline-green-500">
-							{{ count }}
-						</span>
-						<div class="relative flex flex-none flex-col">
-							<div class="font-bold text-zinc-700 dark:text-zinc-200">{{ title | strip_tags:p }}</div>
-							<div class="text-zinc-600 dark:text-zinc-400">{{ description }}</div>
-						</div>
+					<div class="h-full w-1 bg-purple-500 last:bg-green-500 xl:h-1 xl:w-full"></div>
+				{{ /steps }}
+			</div>
+			<div class="inset-0 z-10 order-last flex flex-col justify-end xl:absolute xl:flex-row xl:items-center">
+				<div class="w-fit flex-none rounded-full border-white bg-green-500 px-2 py-1 text-xs text-zinc-800 dark:border-zinc-900 xl:border-4">You&rsquo;re live 🎉</div>
+			</div>
+			<ol class="scroll_timeline flex flex-col justify-around xl:mx-auto xl:flex-row xl:items-center">
+				{{ steps }}
+					<li class="{{ switch between=' xl:pb-2 xl:mb-14 | xl:pt-2 xl:mt-14' }} relative border-l border-green-800 pl-8 text-sm dark:border-green-800 max-xl:pb-4 max-xl:last:border-l-0 xl:border-green-800 xl:last:mt-20 xl:last:pt-8 dark:xl:border-green-500">
+						<span class="{{ switch between=' | xl:bottom-0' }} absolute flex size-6 flex-none -translate-x-11 transform items-center justify-center rounded-full bg-green-500 font-bold text-zinc-800 outline outline-2 outline-offset-2 outline-green-500 transition-colors dark:bg-green-500 dark:text-zinc-800 dark:outline-green-500">{{ count }}</span>
+						<div class="relative mt-1 font-bold text-zinc-700 dark:text-zinc-200">{{ title | strip_tags:p }}</div>
+						<div class="relative text-zinc-600 dark:text-zinc-400">{{ description }}</div>
 					</li>
 				{{ /steps }}
 			</ol>
-			<div class="relative hidden items-center xl:flex">
-				<div class="w-full translate-x-3">
-					<div class="line relative mb-2 hidden h-[3px] overflow-clip rounded-full bg-zinc-300 dark:bg-zinc-700 xl:flex">
-						<span class=""></span>
-						<span class=""></span>
-					</div>
-					<div class="flex text-right text-sm text-zinc-800 dark:text-zinc-200">
-						<div class="w-[53%]">10 min</div>
-						<div class="w-[47%]">+5 min</div>
-					</div>
-				</div>
-			</div>
 		</div>
-
 		{{ partial:components/buttons type='' class='hidden xl:block' }}
 	</div>
 </section>
