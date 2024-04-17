@@ -21,7 +21,7 @@
 			</div>
 			<ol class="scroll_timeline flex flex-col justify-around xl:mx-auto xl:flex-row xl:items-center">
 				{{ steps }}
-					<li class="{{ switch between=' xl:pb-2 xl:mb-14 | xl:pt-2 xl:mt-14' }} relative border-l border-green-800 pl-8 text-sm dark:border-green-800 max-xl:pb-4 max-xl:last:border-l-0 xl:border-green-800 xl:last:mt-20 xl:last:pt-8 dark:xl:border-green-500">
+					<li class="{{ switch between=' xl:pb-2 xl:mb-14 xl:last:mb-20 xl:last:pb-8 | xl:pt-2 xl:mt-14 xl:last:mt-20 xl:last:pt-8' }} relative border-l border-green-800 pl-8 text-sm dark:border-green-800 max-xl:pb-4 max-xl:last:border-l-0 xl:border-green-800 dark:xl:border-green-500">
 						<span class="{{ switch between=' | xl:bottom-0' }} absolute flex size-6 flex-none -translate-x-11 transform items-center justify-center rounded-full bg-green-500 font-bold text-zinc-800 outline outline-2 outline-offset-2 outline-green-500 transition-colors dark:bg-green-500 dark:text-zinc-800 dark:outline-green-500">{{ count }}</span>
 						<div class="relative mt-1 font-bold text-zinc-700 dark:text-zinc-200">{{ title | strip_tags:p }}</div>
 						<div class="relative text-zinc-600 dark:text-zinc-400">{{ description }}</div>
