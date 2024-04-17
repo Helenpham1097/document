@@ -46,8 +46,8 @@ top_section:
     shape: triangle
     image: illustrations/container-cover-1710730424.png
 title: Containers
-updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1711083421
+updated_by: ef9ed893-3cea-4050-91d5-b333e8f9ad02
+updated_at: 1713330744
 page_builder:
   -
     id: lrftv1b6
@@ -501,28 +501,21 @@ page_builder:
         enabled: true
       -
         id: luw8jbbn
-        title: 'Create a container'
-        description: 'Choose an image and go'
-        url: '#'
-        type: step
-        enabled: true
-      -
-        id: luw8jr0b
-        title: 'Access the container'
-        description: 'SSH in'
+        title: 'Choose a container'
+        description: 'Pick from 50+ images'
         url: '#'
         type: step
         enabled: true
       -
         id: luw8jz43
         title: 'Upload your files'
-        description: 'Copy your site in'
+        description: 'SSH, SFTP, or GIT'
         type: step
         enabled: true
       -
         id: luw8kb0b
-        title: 'Deploy your website'
-        description: 'Update your DNS'
+        title: 'Get your domain ready'
+        description: 'Update your DNS to the container'
         type: step
         enabled: true
     buttons:
