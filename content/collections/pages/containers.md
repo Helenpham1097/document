@@ -477,121 +477,6 @@ page_builder:
     enabled: true
     title: 'Get your first site live today'
     description: "Try Webslice Containers for seven days, and if it’s not for you don't worry - it's on us."
-    start_type:
-      -
-        id: lro5rfps
-        title: 'Build your infrastructure (10 mins).'
-        description: 'Set up your Webslice account, server(s) and containers.'
-        content:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Joining Webslice is quick, easy, and risk-free. See how quickly you can set up a new stack by following these three steps:'
-          -
-            type: set
-            attrs:
-              id: lrzg1m7b
-              values:
-                type: step_list
-                steps:
-                  -
-                    id: lrzg1qcg
-                    text: 'Create a Webslice account.'
-                    type: step
-                    enabled: true
-                  -
-                    id: lrzg1rb3
-                    text: 'Provision your server for as little as $10/mo.'
-                    type: step
-                    enabled: true
-                  -
-                    id: lrzg1s4x
-                    text: 'Add your first container, choosing from our ready-to-go images.'
-                    type: step
-                    enabled: true
-          -
-            type: set
-            attrs:
-              id: lrzfjvmo
-              values:
-                type: buttons
-                buttons:
-                  -
-                    id: lrzfjxyk
-                    template_global: /components/buttons
-                    label: ' Create Account Now'
-                    link_type: url
-                    target_blank: false
-                    url: 'https://console.webslice.com/register'
-                    button_type: button
-                    attr_title: ' Create account now'
-                    iconamic: chevrons-right
-        type: start
-        enabled: true
-        template_global: /global/iconamic
-        iconamic: server-crash
-      -
-        id: lro5rs47
-        title: 'Upload your files via SSH/SFTP (5 mins).'
-        description: "You'll be ready to go in a just a few minutes."
-        type: start
-        enabled: true
-        template_global: /global/iconamic
-        iconamic: upload-cloud
-        content:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: "The fastest way to try to your new Webslice Containers is by copying an existing site into a web container. Here's how."
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: ' '
-          -
-            type: set
-            attrs:
-              id: lrzg6p9y
-              values:
-                type: step_list
-                steps:
-                  -
-                    id: lrzg6qra
-                    type: step
-                    enabled: true
-                    text: 'SSH/SFTP into your web container’s /public directory.'
-                  -
-                    id: lrzg6sd7
-                    type: step
-                    enabled: true
-                    text: 'Upload your website files.'
-                  -
-                    id: lrzg6sy9
-                    type: step
-                    enabled: true
-                    text: 'Want to go live to the world? Update your DNS, and that’s it!'
-          -
-            type: set
-            attrs:
-              id: lrzg6uqf
-              values:
-                type: buttons
-                buttons:
-                  -
-                    id: lrzg6wod
-                    template_global: /components/buttons
-                    label: 'Create Account Now'
-                    link_type: url
-                    target_blank: false
-                    url: 'https://console.webslice.com/register'
-                    button_type: button
-                    attr_title: 'Create account now'
-                    iconamic: chevrons-right
     rows:
       -
         buttons:
@@ -599,6 +484,58 @@ page_builder:
       -
         buttons:
           - {  }
+    steps:
+      -
+        id: luw8iatb
+        title: 'Create your account'
+        description: 'Email, credit card, done'
+        url: '#'
+        type: step
+        enabled: true
+      -
+        id: luw8j00o
+        title: 'Provision a server'
+        description: 'Start from $10'
+        url: '#'
+        type: step
+        enabled: true
+      -
+        id: luw8jbbn
+        title: 'Create a container'
+        description: 'Choose an image and go'
+        url: '#'
+        type: step
+        enabled: true
+      -
+        id: luw8jr0b
+        title: 'Access the container'
+        description: 'SSH in'
+        url: '#'
+        type: step
+        enabled: true
+      -
+        id: luw8jz43
+        title: 'Upload your files'
+        description: 'Copy your site in'
+        type: step
+        enabled: true
+      -
+        id: luw8kb0b
+        title: 'Deploy your website'
+        description: 'Update your DNS'
+        type: step
+        enabled: true
+    buttons:
+      -
+        id: luw8qc8b
+        template_global: /components/buttons
+        label: 'Create Account Now'
+        iconamic: chevron-right
+        link_type: url
+        target_blank: false
+        url: 'https://console.webslice.com/register'
+        button_type: button
+        attr_title: 'Create Account Now'
   -
     id: lthz8oal
     template: /general_content/bento_highlight

@@ -35,7 +35,7 @@ fields:
       replicator_preview: true
       hide_display: false
   -
-    handle: start_type
+    handle: steps
     field:
       collapse: false
       previews: true
@@ -46,13 +46,11 @@ fields:
           instructions: null
           icon: null
           sets:
-            start:
-              display: 'Tab Item'
+            step:
+              display: Step
               instructions: null
-              icon: favorite-star
+              icon: null
               fields:
-                -
-                  import: icon
                 -
                   handle: title
                   field:
@@ -68,8 +66,9 @@ fields:
                 -
                   handle: description
                   field:
+                    input_type: text
                     antlers: false
-                    type: textarea
+                    type: text
                     display: Description
                     listable: hidden
                     instructions_position: above
@@ -77,103 +76,21 @@ fields:
                     replicator_preview: true
                     hide_display: false
                 -
-                  handle: content
+                  handle: url
                   field:
-                    buttons:
-                      - bold
-                      - italic
-                      - unorderedlist
-                      - orderedlist
-                      - removeformat
-                      - anchor
-                      - image
-                      - underline
-                      - strikethrough
-                    smart_typography: false
-                    save_html: false
-                    inline: false
-                    toolbar_mode: fixed
-                    reading_time: false
-                    word_count: false
-                    fullscreen: true
-                    allow_source: true
-                    enable_input_rules: true
-                    enable_paste_rules: true
-                    remove_empty_nodes: false
-                    antlers: false
-                    link_noopener: false
-                    link_noreferrer: false
-                    target_blank: false
-                    always_show_set_button: false
-                    collapse: false
-                    previews: true
-                    type: bard
-                    display: Content
+                    type: link
+                    display: url
                     listable: hidden
                     instructions_position: above
                     visibility: visible
                     replicator_preview: true
                     hide_display: false
-                    sets:
-                      steps:
-                        display: Steps
-                        instructions: null
-                        icon: arrow-roadmap-path-flow
-                        sets:
-                          step_list:
-                            display: 'Step List'
-                            instructions: null
-                            icon: null
-                            fields:
-                              -
-                                handle: steps
-                                field:
-                                  collapse: false
-                                  previews: true
-                                  fullscreen: true
-                                  sets:
-                                    new_set_group:
-                                      display: 'New Set Group'
-                                      instructions: null
-                                      icon: null
-                                      sets:
-                                        step:
-                                          display: Step
-                                          instructions: null
-                                          icon: null
-                                          fields:
-                                            -
-                                              handle: text
-                                              field:
-                                                input_type: text
-                                                antlers: false
-                                                type: text
-                                                display: Text
-                                                icon: text
-                                                listable: hidden
-                                                instructions_position: above
-                                                visibility: visible
-                                                replicator_preview: true
-                                                hide_display: false
-                                  type: replicator
-                                  display: steps
-                                  icon: replicator
-                                  listable: hidden
-                                  instructions_position: above
-                                  visibility: visible
-                                  replicator_preview: true
-                                  hide_display: false
-                          buttons:
-                            display: Buttons
-                            instructions: null
-                            icon: align-object-bottom
-                            fields:
-                              -
-                                import: buttons
       type: replicator
-      display: 'Start Tabs'
+      display: Steps
       listable: hidden
       instructions_position: above
       visibility: visible
       replicator_preview: true
       hide_display: false
+  -
+    import: buttons
