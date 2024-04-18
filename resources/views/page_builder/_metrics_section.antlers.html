@@ -1,6 +1,6 @@
 <section class="relative overflow-hidden pb-12 xl:pb-24">
 	{{ if bg_pattern }}
-		<div class="absolute inset-0 -z-10 rotate-180 rounded-2xl bg-[repeating-linear-gradient(-45deg,_rgba(10,10,10,_0.15),_rgba(10,10,10,_0.15)_1px,_transparent_1px,_transparent_6px)] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] [background-size:8px_8px] dark:bg-[repeating-linear-gradient(-45deg,_rgba(255,255,255,_0.15),_rgba(255,255,255,_0.15)_1px,_transparent_1px,_transparent_6px)]"></div>
+		<div class="absolute inset-0 -z-10 rotate-180 rounded-2xl bg-[repeating-linear-gradient(-45deg,_rgba(10,10,10,_0.15),_rgba(10,10,10,_0.15)_1px,_transparent_1px,_transparent_6px)] [background-size:8px_8px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] dark:bg-[repeating-linear-gradient(-45deg,_rgba(255,255,255,_0.15),_rgba(255,255,255,_0.15)_1px,_transparent_1px,_transparent_6px)]"></div>
 	{{ /if }}
 	<div class="container relative mx-auto flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-24">
 		<div class="flex-none lg:w-1/3">
@@ -8,16 +8,47 @@
 				{{ title | strip_tags:p }}
 			</h3>
 		</div>
-		<div class="grid md:gap-6 gap-6 w-full md:grid-cols-{{ metric_items | count }}">
+		<div class="md:grid-cols-{{ metric_items | count }} grid w-full gap-6 md:gap-6">
 			{{ metric_items }}
-				<div class="rounded-2xl border bg-zinc-50 p-2 dark:border-zinc-700 text-zinc-800 dark:text-zinc-50 dark:bg-zinc-800">
-					<figure class="relative flex h-full flex-col justify-between rounded-lg border bg-white p-6 shadow-lg dark:border-zinc-700 dark:bg-zinc-800">
-						{{ svg src="{{config:iconamic:path}}/{{iconamic}}.svg" class='size-6 lg:size-8 mb-3 lg:mb-6' }}
-						<div class="flex flex-col gap-2">
-							<div class="font-mono text-2xl lg:text-4xl font-black">{{ title }}</div>
-							<div class="lg:text-xs text-zinc-600 dark:text-zinc-400 [&>strong]:text-zinc-800 dark:[&>strong]:text-white">{{ description | strip_tags:p }}</div>
+				<div class="rounded-2xl border bg-zinc-50 p-2 text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-50">
+					<span class="relative flex h-full flex-col justify-between gap-4 rounded-lg border bg-white p-6 shadow-lg dark:border-zinc-700 dark:bg-zinc-800">
+						{{ svg src="{{config:iconamic:path}}/{{iconamic}}.svg" class='size-6 lg:size-6 ' }}
+						<div x-data="{ current: 0,  target: {{ title }},  time: 750, startCounting: false }" x-init="() => {
+							{{# Function to start counter #}}
+							const startCounter = () => {
+								let start = current; 
+								const interval = Math.max(time / (target - start), 5); 
+								const step = (target - start) / (time / interval);  
+								const handle = setInterval(() => {
+									if(current < target) 
+									current += step;
+									else {
+									clearInterval(handle);
+									current = target;
+									}   
+								}, interval);
+								};
+								{{# Detect when the element enters the viewport #}}
+								const observer = new IntersectionObserver(entries => {
+								entries.forEach(entry => {
+									if (entry.isIntersecting && !startCounting) {
+									startCounter();
+									startCounting = true;
+									}
+								});
+								});
+								{{# Observe this element #}}
+								observer.observe($refs.counter);
+							}"
+							x-ref="counter">
+							<div class="flex flex-col gap-2">
+								<div class="flex items-center gap-2 lg:text-4xl font-bold text-zinc-800 dark:text-zinc-100">
+									<div x-text="Math.round(current)"></div> {{ quantity_type }}
+								</div>
+								<div class="text-zinc-600 dark:text-zinc-400 lg:text-xs [&>strong]:text-zinc-800 dark:[&>strong]:text-white">{{ description | strip_tags:p }}</div>
+							</div>
 						</div>
-					</figure>
+					</span>
 				</div>
 			{{ /metric_items }}
 		</div>

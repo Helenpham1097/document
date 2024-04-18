@@ -23,8 +23,8 @@ top_section:
     pre: 'About Us'
     iconamic: users-round
 title: 'About Us'
-updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1711077724
+updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
+updated_at: 1712536826
 page_builder:
   -
     id: lstu1l0i
@@ -109,7 +109,7 @@ page_builder:
         id: ltmoooc0
         template_global: /global/iconamic
         iconamic: calendar
-        title: 20+
+        title: '20'
         description:
           -
             type: paragraph
@@ -119,11 +119,12 @@ page_builder:
                 text: 'years in business'
         type: item
         enabled: true
+        quantity_type: +
       -
         id: ltmophsn
         template_global: /global/iconamic
         iconamic: thumbs-up
-        title: 97%
+        title: '97'
         description:
           -
             type: paragraph
@@ -133,11 +134,12 @@ page_builder:
                 text: 'customer satisfaction rate'
         type: item
         enabled: true
+        quantity_type: '%'
       -
         id: ltmoqe0b
         template_global: /global/iconamic
         iconamic: boxes
-        title: '16,000+'
+        title: '16000'
         description:
           -
             type: paragraph
@@ -147,6 +149,7 @@ page_builder:
                 text: 'containers hosted'
         type: item
         enabled: true
+        quantity_type: +
     type: metrics_section
     enabled: true
     title:

@@ -86,6 +86,20 @@ fields:
                     visibility: visible
                     replicator_preview: true
                     hide_display: false
+                    width: 66
+                -
+                  handle: quantity_type
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: 'Quantity Type'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    width: 33
                 -
                   handle: description
                   field:
