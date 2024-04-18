@@ -235,3 +235,36 @@
 		}
 	}
 } */
+
+.triangle_overlap * {
+	animation: Triangle_FadeIn 1s ease-in-out;
+	animation-fill-mode: both;
+	animation-duration: ;
+}
+.triangle_overlap *:nth-child(0) {
+	animation-delay: 0ms;
+}
+.triangle_overlap *:nth-child(1) {
+	animation-delay: 1s;
+}
+.triangle_overlap *:nth-child(2) {
+	animation-delay: 2s;
+}
+.triangle_overlap *:nth-child(3) {
+	animation-delay: 3s;
+}
+.triangle_overlap *:nth-child(4) {
+	animation-delay: 4s;
+}
+.triangle_overlap *:nth-child(5) {
+	animation-delay: 5s;
+}
+@keyframes Triangle_FadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}

@@ -16,8 +16,21 @@
 <!-- /page_builder/_bento_features.antlers.html -->
 <section class="bento_features container">
 	<div class="relative space-y-6 lg:space-y-12">
-		<div class="absolute hidden lg:right-0 lg:top-1/4 xl:block">
-			{{ partial:illustration/gradient_stripes class='absolute lg:-translate-y-1/2 xl:translate-x-1/2 xl:right-0' }}
+		{{#
+    <div class="absolute hidden lg:right-0 lg:top-1/4 xl:block">
+    {{ partial:illustration/gradient_stripes class='absolute lg:-translate-y-1/2 xl:translate-x-1/2 xl:right-0' }}
+    </div>
+  #}}
+		<div class="scroll_watcher absolute flex w-full translate-x-1/2 skew-x-[45deg] scale-x-[-1] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_10%,transparent_100%)]">
+			<div class="h-[420px] w-[640px] bg-gradient-to-r from-zinc-600/20 to-transparent dark:from-white/10"></div>
+			<div class="h-[420px] w-[640px] bg-gradient-to-r from-zinc-600/20 to-transparent dark:from-white/10"></div>
+			<div class="h-[420px] w-[640px] bg-gradient-to-r from-zinc-600/20 to-transparent dark:from-white/10"></div>
+			<div class="h-[420px] w-[640px] bg-gradient-to-r from-zinc-600/20 to-transparent dark:from-white/10"></div>
+			<div class="h-[420px] w-[640px] bg-gradient-to-r from-zinc-600/20 to-transparent dark:from-white/10"></div>
+			<div class="hidden h-[420px] w-[640px] bg-gradient-to-r from-zinc-600/20 to-transparent dark:from-white/10 lg:block"></div>
+			<div class="hidden h-[420px] w-[640px] bg-gradient-to-r from-zinc-600/20 to-transparent dark:from-white/10 lg:block"></div>
+			<div class="hidden h-[420px] w-[640px] bg-gradient-to-r from-zinc-600/20 to-transparent dark:from-white/10 lg:block"></div>
+			<div class="hidden h-[420px] w-[640px] bg-gradient-to-r from-zinc-600/20 to-transparent dark:from-white/10 lg:block"></div>
 		</div>
 		<div class="-space-y-6 lg:-space-y-12">
 			{{# Header section #}}
