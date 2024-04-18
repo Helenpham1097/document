@@ -53,7 +53,7 @@
 							</div>
 						{{ /if }}
 					</div>
-					{{ partial:components/button label="Get Started" link_type="url" class="w-fit" url="{{url ?? site_information:login}}" iconamic="" }}
+					{{ partial:components/button label="Get Started" link_type="url" button_type="primary" class="w-fit" url="{{url ?? site_information:login}}" iconamic="" }}
 				</div>
 			{{ /pricing_header }}
 		</div>
@@ -110,7 +110,7 @@
 						{{ /if }}
 					</div>
 					<div class="flex gap-4">
-						{{ partial:components/button label="Get Started" link_type="url" class="w-fit" url="{{url ?? site_information:login}}" }}
+						{{ partial:components/button label="Get Started" link_type="url" button_type="primary" url="{{url ?? site_information:login}}" }}
 					</div>
 				</div>
 			{{ /pricing_header }}

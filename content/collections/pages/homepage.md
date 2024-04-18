@@ -40,7 +40,7 @@ top_section:
         link_type: url
         target_blank: false
         url: 'https://console.webslice.com/register'
-        button_type: button
+        button_type: primary
     grid_features:
       -
         id: lrfrhuc3

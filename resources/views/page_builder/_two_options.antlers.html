@@ -49,10 +49,11 @@
 									{{ partial:typography/p :content='description | strip_tags:p' class='[text-wrap:pretty]' }}
 								</div>
 								{{ if first }}
-								{{ partial:components/button label="{{ text_link }}" link_type="url" button_type="custom" iconamic='chevron-right'  class="w-fit " url="{{ url }}" }}
+								{{ partial:components/button label="{{ text_link }}" link_type="url" button_type="primary" iconamic='chevron-right' url="{{ url }}" }}
 								{{ else }}
-								{{ partial:components/button label="{{ text_link }}" link_type="url" button_type="custom" iconamic='chevron-right'
-									class="w-fit !from-green-500 !to-green-600 hover:from-green-400 hover:to-green-600 dark:from-green-500 dark:to-green-700 text-zinc-800 hover:text-zinc-900" url="{{ url }}" }}
+								{{# {{ partial:components/button label="{{ text_link }}" link_type="url" button_type="custom" iconamic='chevron-right'
+									class="w-fit !from-green-500 !to-green-600 hover:from-green-400 hover:to-green-600 dark:from-green-500 dark:to-green-700 text-zinc-800 hover:text-zinc-900" url="{{ url }}" }} #}}
+								{{ partial:components/button label="{{ text_link }}" button_type='custom' iconamic='chevron-right' link_type="url" class="flex space-x-2 bg-gradient-to-b shadow-md dark:shadow-black/90 text-zinc-800 rounded-lg px-4 py-2 via-10% from-green-300 via-green-500 to-green-600 " url="{{url ?? site_information:login}}" }}
 								{{/if }}
 							</div>
 						</div>

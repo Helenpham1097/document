@@ -30,7 +30,7 @@ top_section:
         iconamic: chevrons-right
         link_type: url
         target_blank: false
-        button_type: button
+        button_type: primary
         attr_title: 'Start risk-free for 7 days'
         url: 'https://console.webslice.com/register'
       -
@@ -47,7 +47,7 @@ top_section:
     image: illustrations/container-cover-1710730424.png
 title: Containers
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1713397043
+updated_at: 1713413858
 page_builder:
   -
     id: lrftv1b6
@@ -529,7 +529,7 @@ page_builder:
         link_type: url
         target_blank: false
         url: 'https://console.webslice.com/register'
-        button_type: button
+        button_type: primary
         attr_title: 'Create Account Now'
   -
     id: lthz8oal

@@ -63,15 +63,17 @@
 						</div>
 					{{ /if }}
 				</div>
-				<div>
-					{{ partial:components/button label="Get Started" link_type="url" class="{{ if highligh }} from-white to-white text-zinc-800 dark:text-white  dark:from-black dark:to-black {{ /if }}" url="{{url ?? site_information:login}}" iconamic="" }}
-				</div>
+				{{ if highligh }}
+					{{ partial:components/button label="Get Started" button_type='custom' iconamic='' link_type="url" class="flex space-x-2 bg-gradient-to-t shadow-md shadow-black/30 primary-action-button text-zinc-800 rounded-lg px-4 py-3 from-white to-white " url="{{url ?? site_information:login}}" }}
+				{{ else }}
+					{{ partial:components/button label="Get Started" button_type='primary' iconamic='' link_type="url" url="{{url ?? site_information:login}}" }}
+				{{ /if }}
 			</div>
 
 			<div class="{{ if highligh }} prose-li:text-white marker:text-white {{ /if}} prose prose-sm relative flex flex-col gap-2 dark:prose-invert prose-ul:text-sm">
 				<ul class="list-none">
 					{{ features }}
-						<li class="list before:absolute before:size-4 before:mt-0.5 before:content-[''] before:bg-[url(/assets/check-circle.svg)] before:-translate-x-full before:-ml-2.5 before:transform before:bg-no-repeat before:bg-center before:dark:invert before:bg-cover {{ if highligh }} before:invert {{/if}} ">{{ value }}</li>
+						<li class="list {{ if highligh }} before:invert {{/if}} before:absolute before:-ml-2.5 before:mt-0.5 before:size-4 before:-translate-x-full before:transform before:bg-[url(/assets/check-circle.svg)] before:bg-cover before:bg-center before:bg-no-repeat before:content-[''] before:dark:invert">{{ value }}</li>
 					{{ /features }}
 				</ul>
 			</div>
@@ -83,5 +85,3 @@
 		{{ /if }}
 	</div>
 {{ /if }}
-
-

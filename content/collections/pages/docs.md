@@ -34,7 +34,7 @@ article:
             link_type: url
             target_blank: false
             url: '#'
-            button_type: button
+            button_type: primary
   -
     type: paragraph
     content:
