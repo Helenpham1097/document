@@ -46,8 +46,8 @@ top_section:
     shape: triangle
     image: illustrations/container-cover-1710730424.png
 title: Containers
-updated_by: ef9ed893-3cea-4050-91d5-b333e8f9ad02
-updated_at: 1713330744
+updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
+updated_at: 1713397043
 page_builder:
   -
     id: lrftv1b6
@@ -266,7 +266,7 @@ page_builder:
         id: ltmdykxt
         template_global: /global/iconamic
         iconamic: monitor-smartphone
-        title: '16,000+'
+        title: '16000'
         description:
           -
             type: paragraph
@@ -276,11 +276,12 @@ page_builder:
                 text: 'websites hosted'
         type: item
         enabled: true
+        quantity_type: +
       -
         id: ltmdykns
         template_global: /global/iconamic
         iconamic: terminal-square
-        title: 50+
+        title: '50'
         description:
           -
             type: paragraph
@@ -290,6 +291,7 @@ page_builder:
                 text: 'pre-built container images'
         type: item
         enabled: true
+        quantity_type: +
       -
         id: ltmdyjvr
         template_global: /global/iconamic

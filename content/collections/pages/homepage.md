@@ -4,7 +4,7 @@ blueprint: home
 template: general_content/index
 title: Homepage
 updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1713216531
+updated_at: 1713396897
 top_section:
   -
     id: RzzOzBfN
@@ -158,7 +158,7 @@ page_builder:
         id: ltmbmntf
         template_global: /global/iconamic
         iconamic: monitor-smartphone
-        title: 16k
+        title: '16000'
         description:
           -
             type: paragraph
@@ -168,11 +168,12 @@ page_builder:
                 text: 'websites hosted'
         type: item
         enabled: true
+        quantity_type: +
       -
         id: ltmbmzi8
         template_global: /global/iconamic
         iconamic: thumbs-up
-        title: 97%
+        title: '97'
         description:
           -
             type: paragraph
@@ -182,11 +183,12 @@ page_builder:
                 text: 'customer satisfaction'
         type: item
         enabled: true
+        quantity_type: '%'
       -
         id: ltmbncl1
         template_global: /global/iconamic
         iconamic: users-round
-        title: 20+
+        title: '20'
         description:
           -
             type: paragraph
@@ -196,6 +198,7 @@ page_builder:
                 text: "years' experience"
         type: item
         enabled: true
+        quantity_type: +
       -
         id: ltmbrxue
         template_global: /global/iconamic
