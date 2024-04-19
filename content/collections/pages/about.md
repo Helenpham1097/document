@@ -613,7 +613,7 @@ page_builder:
             link_type: entry
             target_blank: false
             entry: 1e33d247-bf25-42a4-b455-b47eb8dcf557
-            button_type: button
+            button_type: primary
         type: highlight-item
         enabled: false
         border: false

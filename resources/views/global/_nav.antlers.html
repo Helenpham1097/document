@@ -119,12 +119,12 @@
                 <div class="lg:flex items-center space-x-6  hidden xl:pl-6">
                     {{ partial:global/theme_toggle }}
                     {{ partial:components/button label="Login" button_type='inline' link_type="url" url="{{ site_information:login }}" }}
-                    {{ partial:components/button label="Sign up" class="!py-1.5 !pl-3 !pr-1.5" button_type='secondary' link_type="url" url="{{ site_information:sign_up }}" iconamic="chevron-right" }}
+                    {{ partial:components/button label="Sign up" class="text-white flex space-x-2 primary-action-button rounded-lg bg-gradient-to-b py-2 pl-4 pr-2 shadow-md shadow-black/30 from-purple-500 to-purple-600" button_type='custom' link_type="url" url="{{ site_information:sign_up }}" iconamic="chevron-right" }}
                 </div>
                 {{# modal mobile menu #}}
                 <div id="Modal" x-data="{ open: false }" @open-me="open=true" class="block lg:hidden" @close-me="open=false">
                     <div class="flex items-center gap-6">
-                        {{ partial:components/button label="Sign up" class="flex-none !py-2 !px-4" button_type='secondary' link_type="url" url="{{ site_information:sign_up }}" }}
+                        {{ partial:components/button label="Sign up" class="text-white flex space-x-2 primary-action-button rounded-lg bg-gradient-to-b py-2 pl-4 pr-2 shadow-md shadow-black/30 from-purple-500 to-purple-600" button_type='custom' link_type="url" url="{{ site_information:sign_up }}" iconamic="chevron-right" }}
                         <button
                             type="button"
                             aria-label="menu"
@@ -251,7 +251,7 @@
                                         </li>
                                         {{ /if }} {{ /nav:main_menu }}
                                     </ul>
-                                    {{ partial:components/button label="Login" class="" button_type='inline' link_type="url" url="{{ site_information:login }}" }}
+                                    {{ partial:components/button label="Login" button_type='inline' link_type="url" url="{{ site_information:login }}" }}
                                     <div class="flex items-center">
                                         <button
                                             aria-label="Theme toggle"

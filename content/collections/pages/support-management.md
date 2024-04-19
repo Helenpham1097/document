@@ -118,7 +118,7 @@ page_builder:
     Items:
       -
         id: ltxqadj8
-        highligh: false
+        highlight: false
         title: 'Standard tier'
         description: 'Platform support for every customer, every container, and every server.'
         price: 0
@@ -138,8 +138,8 @@ page_builder:
           - 'SLA: Standard'
       -
         id: ltxpqrz4
-        highligh: true
-        highligh_text: 'Most popular'
+        highlight: true
+        highlight_text: 'Most popular'
         title: 'Business tier'
         description: 'More proactive services, broader support, and advanced platform features.'
         price: 50
@@ -163,7 +163,7 @@ page_builder:
           - 'Container Feature: One-Click Backup Restore'
       -
         id: ltxpm8fq
-        highligh: false
+        highlight: false
         title: 'Premium tier'
         description: 'Get all Business tier services and developer tools, plus the highest level of 24/7 support.'
         price: 350
@@ -195,7 +195,7 @@ page_builder:
     pricing_header:
       -
         id: luklb5n0
-        highligh: false
+        highlight: false
         title: Standard
         description: 'Platform support for every customer, every container, and every server.'
         price: '0'
@@ -211,8 +211,8 @@ page_builder:
         url: 'https://console.webslice.com/login'
       -
         id: luklggyf
-        highligh: true
-        highligh_text: Recommended
+        highlight: true
+        highlight_text: Recommended
         title: Business
         description: 'More proactive services, broader support, and advanced platform features.'
         price: '50'
@@ -228,7 +228,7 @@ page_builder:
         url: 'https://console.webslice.com/login'
       -
         id: luklgn1z
-        highligh: false
+        highlight: false
         title: Premium
         description: 'Get all Business tier services and developer tools, plus the highest level of 24/7 support'
         price: '350'

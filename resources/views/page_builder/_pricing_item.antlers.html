@@ -36,9 +36,9 @@
 {{ else }}
 	{{# Item Style #}}
 	<div>
-		<div class="dark:ring-zinc-700{{ if highligh }} text-white {{ /if}} relative isolate flex flex-col gap-6 rounded-lg p-6 ring-1 ring-zinc-300">
-			{{ if highligh }}
-				<div class="absolute right-6 top-0 -translate-y-1/2 bg-white px-4 py-2 text-sm font-bold text-purple-500 ring-2 ring-purple-400 dark:bg-zinc-900 dark:text-purple-100">{{ highligh_text }}</div>
+		<div class="dark:ring-zinc-700{{ if highlight }} text-white {{ /if}} relative isolate flex flex-col gap-6 rounded-lg p-6 ring-1 ring-zinc-300">
+			{{ if highlight }}
+				<div class="absolute right-6 top-0 -translate-y-1/2 bg-white px-4 py-2 text-sm font-bold text-purple-500 ring-2 ring-purple-400 dark:bg-zinc-900 dark:text-purple-100">{{ highlight_text }}</div>
 				<div class="absolute inset-0 -z-10 rounded-lg bg-gradient-to-t from-purple-500 via-purple-500 to-purple-400"></div>
 			{{ /if }}
 			<div class="flex flex-col gap-4">
@@ -63,25 +63,25 @@
 						</div>
 					{{ /if }}
 				</div>
-				<div>
-					{{ partial:components/button label="Get Started" link_type="url" class="{{ if highligh }} from-white to-white text-zinc-800 dark:text-white  dark:from-black dark:to-black {{ /if }}" url="{{url ?? site_information:login}}" iconamic="" }}
-				</div>
+				{{ if highlight }}
+					{{ partial:components/button label="Get Started" button_type='custom' iconamic='' link_type="url" class="flex space-x-2 bg-gradient-to-t shadow-md shadow-black/30 primary-action-button text-zinc-800 rounded-lg px-4 py-3 from-white to-white " url="{{url ?? site_information:login}}" }}
+				{{ else }}
+					{{ partial:components/button label="Get Started" button_type='primary' iconamic='' link_type="url" url="{{url ?? site_information:login}}" }}
+				{{ /if }}
 			</div>
 
-			<div class="{{ if highligh }} prose-li:text-white marker:text-white {{ /if}} prose prose-sm relative flex flex-col gap-2 dark:prose-invert prose-ul:text-sm">
+			<div class="{{ if highlight }} prose-li:text-white marker:text-white {{ /if}} prose prose-sm relative flex flex-col gap-2 dark:prose-invert prose-ul:text-sm">
 				<ul class="list-none">
 					{{ features }}
-						<li class="list before:absolute before:size-4 before:mt-0.5 before:content-[''] before:bg-[url(/assets/check-circle.svg)] before:-translate-x-full before:-ml-2.5 before:transform before:bg-no-repeat before:bg-center before:dark:invert before:bg-cover {{ if highligh }} before:invert {{/if}} ">{{ value }}</li>
+						<li class="list {{ if highlight }} before:invert {{/if}} before:absolute before:-ml-2.5 before:mt-0.5 before:size-4 before:-translate-x-full before:transform before:bg-[url(/assets/check-circle.svg)] before:bg-cover before:bg-center before:bg-no-repeat before:content-[''] before:dark:invert">{{ value }}</li>
 					{{ /features }}
 				</ul>
 			</div>
 		</div>
-		{{ if highligh }}
+		{{ if highlight }}
 			<div class="mx-auto h-2 w-11/12 rounded-b bg-purple-300 opacity-75 dark:bg-purple-700"></div>
 			<div class="mx-auto h-2 w-10/12 rounded-b bg-purple-300 opacity-50 dark:bg-purple-700"></div>
 			<div class="mx-auto h-2 w-9/12 rounded-b bg-purple-300 opacity-25 dark:bg-purple-700"></div>
 		{{ /if }}
 	</div>
 {{ /if }}
-
-

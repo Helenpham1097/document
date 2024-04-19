@@ -44,7 +44,7 @@ tabs:
                       link_type: url
                       target_blank: false
                       url: "#"
-                      button_type: button
+                      button_type: primary
                     - id: lrzodymc
                       template_global: /components/buttons
                       label: "Learn more"

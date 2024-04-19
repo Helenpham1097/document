@@ -26,7 +26,7 @@ top_section:
         link_type: url
         target_blank: false
         url: '#publicbeta'
-        button_type: button
+        button_type: primary
         iconamic: chevrons-right
       -
         id: lrzodymc
