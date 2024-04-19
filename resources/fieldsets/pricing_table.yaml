@@ -75,11 +75,11 @@ fields:
                     type: hidden
                     listable: hidden
                 -
-                  handle: highligh
+                  handle: highlight
                   field:
                     default: false
                     type: toggle
-                    display: Highligh
+                    display: Highlight
                     instructions: 'Most popular'
                     listable: hidden
                     instructions_position: above
@@ -88,13 +88,13 @@ fields:
                     hide_display: false
                     width: 50
                 -
-                  handle: highligh_text
+                  handle: highlight_text
                   field:
                     input_type: text
                     default: 'Most popular'
                     antlers: false
                     type: text
-                    display: 'Highligh text'
+                    display: 'highlight text'
                     listable: hidden
                     instructions_position: above
                     visibility: visible
@@ -102,7 +102,7 @@ fields:
                     hide_display: false
                     width: 50
                     if:
-                      highligh: 'equals true'
+                      highlight: 'equals true'
                 -
                   handle: title
                   field:

@@ -23,14 +23,14 @@
 				</div>
 			</div>
 			{{ pricing_header }}
-				<div class="{{ if highligh }} ring-purple-500 -m-0.5 z-10 shadow-2xl rounded-lg ring {{ /if }} bg-white dark:bg-zinc-900"></div>
+				<div class="{{ if highlight }} ring-purple-500 -m-0.5 z-10 shadow-2xl rounded-lg ring {{ /if }} bg-white dark:bg-zinc-900"></div>
 			{{ /pricing_header }}
 		</div>
 		<div class="grid-cols-{{ pricing_header | count }} col-span-{{ pricing_header | count }} relative z-10 grid lg:col-start-2">
 			{{ pricing_header }}
 				<div class="{{ if pricing_header | count > 4 }} p-4 {{ else }} p-8 {{ /if }} relative flex flex-col justify-between gap-4">
-					{{ if highligh }}
-						<div class="absolute -top-1 right-6 -translate-y-1/2 bg-purple-500 px-2 py-0.5 text-sm font-bold text-purple-100 ring ring-purple-500 dark:bg-zinc-900 dark:text-purple-100">{{ highligh_text }}</div>
+					{{ if highlight }}
+						<div class="absolute -top-1 right-6 -translate-y-1/2 bg-purple-500 px-2 py-0.5 text-sm font-bold text-purple-100 ring ring-purple-500 dark:bg-zinc-900 dark:text-purple-100">{{ highlight_text }}</div>
 					{{ /if }}
 					<div class="relative">
 						<div class="text-xl font-bold text-purple-500 dark:text-green-500">{{ title }}</div>
@@ -84,10 +84,10 @@
 		<div class="{{ if pricing_header | count < 4 }} md:grid-cols-{{ pricing_header | count }} {{else}} sm:grid-cols-2 {{ /if }} grid gap-8">
 			{{# The mobile version move the title, button, price and price descriptions from the table prices. #}}
 			{{ pricing_header }}
-				<div class="{{ if highligh }} border-purple-500 -m-4 p-4 rounded-lg border-2 {{ /if }} flex flex-col justify-between gap-4">
+				<div class="{{ if highlight }} border-purple-500 -m-4 p-4 rounded-lg border-2 {{ /if }} flex flex-col justify-between gap-4">
 					<div class="relative flex flex-col gap-2">
-						{{ if highligh }}
-							<div class="absolute -right-2 -mt-2 w-fit -translate-y-full bg-white px-3 text-sm font-bold text-purple-500 dark:bg-zinc-900 dark:text-white">{{ highligh_text }}</div>
+						{{ if highlight }}
+							<div class="absolute -right-2 -mt-2 w-fit -translate-y-full bg-white px-3 text-sm font-bold text-purple-500 dark:bg-zinc-900 dark:text-white">{{ highlight_text }}</div>
 						{{ /if }}
 						<div class="font-bold text-purple-500 dark:text-green-500">{{ title }}</div>
 						<div class="text-base">{{ description }}</div>

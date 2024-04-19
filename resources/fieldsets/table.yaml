@@ -30,13 +30,13 @@ fields:
                     replicator_preview: true
                     hide_display: false
                 -
-                  handle: highligh_text
+                  handle: highlight_text
                   field:
                     input_type: text
                     default: 'Most popular'
                     antlers: false
                     type: text
-                    display: 'Highligh text'
+                    display: 'highlight text'
                     width: 50
                     listable: hidden
                     instructions_position: above
@@ -44,7 +44,7 @@ fields:
                     replicator_preview: true
                     hide_display: false
                     if:
-                      highligh: 'equals true'
+                      highlight: 'equals true'
                 -
                   handle: title
                   field:

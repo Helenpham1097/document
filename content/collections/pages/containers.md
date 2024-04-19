@@ -375,7 +375,7 @@ page_builder:
     Items:
       -
         id: lthtyp4v
-        highligh: false
+        highlight: false
         title: 1GB
         description: 'Test the platform or run a static site.'
         price: 10
@@ -390,7 +390,7 @@ page_builder:
         enabled: true
       -
         id: lthtzuj0
-        highligh: false
+        highlight: false
         title: 2GB
         description: 'Suits one or two small projects.'
         price: 23
@@ -405,7 +405,7 @@ page_builder:
         enabled: true
       -
         id: lthtztjh
-        highligh: true
+        highlight: true
         title: 4GB
         description: 'Entry-level for serious agencies.'
         price: 43
@@ -418,10 +418,10 @@ page_builder:
           - 'Free SSL'
         type: column
         enabled: true
-        highligh_text: 'Most popular'
+        highlight_text: 'Most popular'
       -
         id: lthtzsji
-        highligh: false
+        highlight: false
         title: 8GB
         price: 82
         features:
@@ -436,7 +436,7 @@ page_builder:
         description: 'Four cores for higher performance.'
       -
         id: lthtzrk6
-        highligh: false
+        highlight: false
         title: 16GB
         description: 'Large agencies running busy sites.'
         price: 153
@@ -451,7 +451,7 @@ page_builder:
         enabled: true
       -
         id: lthtzqex
-        highligh: false
+        highlight: false
         title: 32GB
         description: 'For big sites with big demands.'
         price: 288
