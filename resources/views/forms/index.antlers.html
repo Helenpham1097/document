@@ -1,61 +1,82 @@
 {{# Template for Contact page #}}
-<div class="relative flex flex-col justify-center">
-	{{#
-   <div class="container relative mx-auto hidden xl:block">
-   {{ partial:global/diagonal gradient_style='absolute top-0 mx-auto w-full xl:translate-x-1/2 -translate-y-1/2' }}
-   </div>
- #}}
-	<div class="container mx-auto space-y-4 lg:space-y-0">
-		<div class="relative flex rounded-xl bg-gradient-to-t from-zinc-200 to-white p-0.5 dark:from-zinc-700 dark:to-zinc-900">
-			<div class="absolute inset-0.5 rounded-[0.6rem] bg-white dark:bg-zinc-900"></div>
-			<div class="absolute inset-0.5 rotate-180 rounded-2xl bg-[repeating-linear-gradient(-45deg,_rgba(10,10,10,_0.15),_rgba(10,10,10,_0.15)_1px,_transparent_1px,_transparent_6px)] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] [background-size:8px_8px] dark:bg-[repeating-linear-gradient(-45deg,_rgba(255,255,255,_0.15),_rgba(255,255,255,_0.15)_1px,_transparent_1px,_transparent_6px)]"></div>
-			<div class="relative w-full">
-				<div class="max-w-2xl space-y-6 p-4 xl:p-12">
-					<div class="flex flex-col items-start space-y-6 xl:flex-grow">
-						{{ partial:typography/h1 :content="title | strip_tags:p" }}
-						{{ partial:typography/excerpt :excerpt="description | strip_tags:p" }}
+<div class="relative">
+	<div class="pointer-events-none absolute inset-0 mx-auto flex w-screen max-w-screen-2xl items-center justify-center overflow-hidden [mask-image:radial-gradient(transparent_15%,white)]">
+		<svg class="absolute left-0 top-0 h-full w-full stroke-white/10 stroke-[2] [mask-image:linear-gradient(transparent_15%,white,transparent_85%)]" data-n-ids='{"1a4MN34vH0:0":"1a4MN34vH0:0"}'>
+			<rect width="100%" height="100%" stroke-width="0" fill="url(#grid-pattern-1a4MN34vH0:0)"></rect>
+			<svg>
+				<rect stroke-width="0" width="95" height="95" x="97" y="97" class="pointer-events-auto fill-white/5 transition duration-500 hover:fill-white/10"></rect>
+				<rect stroke-width="0" width="95" height="95" x="385" y="193" class="pointer-events-auto fill-white/5 transition duration-500 hover:fill-white/10"></rect>
+				<rect stroke-width="0" width="95" height="95" x="193" y="289" class="pointer-events-auto fill-white/5 transition duration-500 hover:fill-white/10"></rect>
+				<rect stroke-width="0" width="95" height="95" x="673" y="289" class="pointer-events-auto fill-white/5 transition duration-500 hover:fill-white/10"></rect>
+				<rect stroke-width="0" width="95" height="95" x="481" y="385" class="pointer-events-auto fill-white/5 transition duration-500 hover:fill-white/10"></rect>
+				<rect stroke-width="0" width="95" height="95" x="1249" y="97" class="pointer-events-auto fill-white/5 transition duration-500 hover:fill-white/10"></rect>
+				<rect stroke-width="0" width="95" height="95" x="1" y="481" class="pointer-events-auto fill-white/5 transition duration-500 hover:fill-white/10"></rect>
+				<rect stroke-width="0" width="95" height="95" x="577" y="481" class="pointer-events-auto fill-white/5 transition duration-500 hover:fill-white/10"></rect>
+				<rect stroke-width="0" width="95" height="95" x="1441" y="385" class="pointer-events-auto fill-white/5 transition duration-500 hover:fill-white/10"></rect>
+				<rect stroke-width="0" width="95" height="95" x="1057" y="289" class="pointer-events-auto fill-white/5 transition duration-500 hover:fill-white/10"></rect>
+				<rect stroke-width="0" width="95" height="95" x="961" y="481" class="pointer-events-auto fill-white/5 transition duration-500 hover:fill-white/10"></rect>
+				<rect stroke-width="0" width="95" height="95" x="1249" y="577" class="pointer-events-auto fill-white/5 transition duration-500 hover:fill-white/10"></rect>
+			</svg>
+			<defs>
+				<pattern id="grid-pattern-1a4MN34vH0:0" viewBox="0 0 64 64" width="96" height="96" patternUnits="userSpaceOnUse"><path d="M64 0H0V64" fill="none"></path></pattern>
+			</defs>
+		</svg>
+		<div class="pointer-events-none absolute inset-0 bg-[url(https://lunarui.dev/twitter/noise.png)] bg-[size:128px] bg-repeat opacity-[0.055] [mask-image:linear-gradient(transparent_15%,white,transparent_85%)]"></div>
+	</div>
+	<div class="container relative mx-auto">
+		<div class="absolute right-0 h-[500px] w-[800px] -translate-y-1/3 translate-x-1/3 -skew-y-[15deg] rounded-full bg-gradient-to-r from-transparent to-green-500/50 blur-[128px] dark:to-purple-500/50 dark:blur-[128px]"></div>
+		<div class="absolute right-0 h-[500px] w-[800px] -translate-y-1/2 translate-x-1/2 -skew-y-[15deg] rounded-full bg-gradient-to-r from-transparent to-purple-200/90 blur-[128px] dark:to-green-500/50 dark:blur-[128px]"></div>
+		<div class="relative mx-auto grid w-full max-w-none grid-cols-1 items-center gap-6 py-12 lg:grid-cols-4 lg:gap-12 lg:py-24">
+			<div class="col-span-1 space-y-16 md:col-span-2 md:space-y-12">
+				<div class="flex flex-col items-start space-y-6 lg:flex-grow">
+					{{ partial:typography/h1 :content="title | strip_tags:p" class='text-4xl dot lg:text-6xl [text-wrap:balance]' }}
+					<div class="space-y-3 text-xl text-zinc-500 dark:text-zinc-300 lg:space-y-6">
+						{{ partial:typography/excerpt :excerpt="description | strip_tags:p" class='text-pretty' }}
+						<ul class="flex max-w-2xl flex-wrap gap-2 text-base lg:gap-4">
+							{{ grid_features }}
+								<li class="flex items-center gap-2">
+									{{ svg src="{{config:iconamic:path}}/{{iconamic}}.svg" class="size-4" }}
+									{{ text }}
+								</li>
+							{{ /grid_features }}
+						</ul>
 					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="flex flex-col gap-8 lg:flex-row xl:p-12">
-			<div class="flex flex-col gap-4 lg:gap-8">
-				{{ cards }}
-				{{ if active }}
-				<a href="{{ url }}" target="_blank" class="group cursor-pointer">
-					<div class="rounded-3xl border bg-zinc-50/50 p-2 dark:border-zinc-700 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-50">
-						<div class="relative flex h-full flex-col justify-between rounded-2xl border bg-white p-6 shadow-lg dark:border-zinc-700 dark:bg-zinc-800">
-							{{ svg src="{{config:iconamic:path}}/{{iconamic}}.svg" class='lg:size-8 size-6 mb-6' }}
-							<div class="flex flex-col gap-2">
-								<div class="text-2xl font-black lg:text-4xl">{{ title }}</div>
-								<div class="text-sm text-zinc-600 dark:text-zinc-400 [&>strong]:text-zinc-800 dark:[&>strong]:text-white">{{ description }}</div>
-								<div class="flex items-center gap-1 text-purple-500 group-hover:text-purple-700 dark:text-green-500 dark:group-hover:text-green-700">
-									<span>{{ link_text }}</span>
-									{{ svg src="{{config:iconamic:path}}/chevron-right.svg" class='size-4 transition-all duration-200 ease-in-out group-hover:translate-x-1 mt-0.5' }}
+					<div class="flex flex-col gap-4 md:flex-row">
+						{{ cards }}
+							{{ if active }}
+								<a href="{{ url }}" target="_blank" class="group relative isolate cursor-pointer overflow-hidden rounded-lg">
+									<span class="absolute -inset-1 origin-right -skew-x-6 scale-x-0 bg-purple-500/5 transition duration-500 group-hover:origin-left group-hover:scale-x-100 dark:bg-purple-100/5"></span>
+									<div class="pointer-events-none flex flex-col gap-1 rounded-lg border bg-purple-50/90 p-4 text-zinc-700 dark:border-purple-700 dark:bg-purple-800 dark:text-purple-300">
+										<div class="flex items-center gap-2">
+											<div class="text-xl">{{ title }}</div>
+											<span class="z-10 inline-flex items-center gap-1 rounded-full bg-green-200 px-2.5 py-1 text-xs font-medium text-green-900 dark:bg-green-500 dark:text-green-900">
+												{{ link_text }}
+												{{ svg src="{{config:iconamic:path}}/chevron-right.svg" class='size-4 transition-all duration-200 ease-in-out group-hover:translate-x-1 mt-0.5' }}
+											</span>
+										</div>
+										<div class="text-sm [&>strong]:text-purple-800 dark:[&>strong]:text-white">{{ description | strip_tags:p }}</div>
+									</div>
+								</a>
+							{{ else }}
+								<div class="flex cursor-not-allowed flex-col gap-1 rounded-lg border bg-zinc-50/50 p-4 text-zinc-700 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-300">
+									<div class="flex items-center gap-2">
+										<div class="text-xl">{{ title }}</div>
+										<span class="inline-flex items-center gap-1 rounded-full bg-zinc-100 px-2.5 py-1 text-xs font-medium text-zinc-800 dark:bg-zinc-900 dark:text-zinc-300">
+											<span class="h-2 w-2 animate-pulse rounded-full bg-zinc-500"></span>
+											{{ link_text }}
+										</span>
+									</div>
+									<div class="text-sm text-zinc-600 dark:text-zinc-400 [&>strong]:text-zinc-800 dark:[&>strong]:text-white">{{ description | strip_tags:p }}</div>
 								</div>
-							</div>
-						</div>
-					</div>
-				</a>
-				{{ else }}
-				<div class="rounded-3xl border pointer-events-none bg-zinc-50/50 p-2 dark:border-zinc-700 text-zinc-500 dark:text-zinc-500 dark:bg-zinc-800">
-					<div class="relative flex h-full flex-col justify-between rounded-2xl border bg-white p-6 shadow-lg dark:border-zinc-700 dark:bg-zinc-800">
-						{{ svg src="{{config:iconamic:path}}/{{iconamic}}.svg" class='lg:size-8 size-6 mb-6' }}
-						<div class="flex flex-col gap-2">
-							<div class="text-2xl font-black lg:text-4xl ">{{ title }}</div>
-							<div class="text-sm  [&>strong]:text-zinc-800 dark:[&>strong]:text-white">{{ description }}</div>
-							<div class="flex items-center gap-1 text-purple-500 dark:text-green-700 ">
-								<span>{{ link_text }}</span>
-							</div>
-						</div>
+							{{ /if }}
+						{{ /cards }}
 					</div>
 				</div>
-				{{ /if }}
-				{{ /cards }}
 			</div>
-			<div class="flex w-full max-w-4xl flex-col space-y-8 lg:mx-auto">
-				{{ partial:forms/contact_us }}
+			<div class="hiddens col-span-1 md:col-span-2 md:space-y-2 lg:block">
+				<div class="relative z-0 w-full">
+					{{ partial:forms/contact_us }}
+				</div>
 			</div>
 		</div>
 	</div>
