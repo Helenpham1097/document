@@ -1,4 +1,5 @@
-const colors = require('tailwindcss/colors')
+const colors = require('tailwindcss/colors');
+const plugin = require('tailwindcss/plugin');
 
 module.exports = {
     darkMode: 'class',
@@ -7,7 +8,6 @@ module.exports = {
         './resources/**/*.blade.php',
         './content/**/*.md'
     ],
-  // Classes generated according to the number of elements in the view and that are not generated automatically because they are dynamic content.
     safelist: [
         'grid-cols-1',
         'grid-cols-2',
@@ -30,9 +30,9 @@ module.exports = {
         'lg:grid-cols-7',
         'col-span-5',
         'col-span-6',
-        'col-span-7',
         'row-span-2',
-        'space-x-reverse'
+        'space-x-reverse',
+        'animate-ripple', // Agregado del segundo archivo
     ],
     theme: {
         container: {
@@ -84,13 +84,34 @@ module.exports = {
                     },
                 },
             }),
+            animation: {
+                ripple: 'ripple var(--duration, 1.5s) ease calc(var(--i, 0) * 0.1s) infinite',
+            },
+            keyframes: {
+                ripple: {
+                    '50%': {
+                        transform: 'scale(var(--scale, 1.25))',
+                    },
+                },
+            },
         },
     },
     plugins: [
         require('@tailwindcss/typography')({
-        modifiers: [],
+            modifiers: [],
         }),
         require('@tailwindcss/forms'),
         require('@tailwindcss/aspect-ratio'),
+        plugin(function ({ addComponents, theme }) {
+            addComponents({
+                '.ripple': {
+                    '--size': 'calc(var(--baseSize, 80px) + var(--sizeStep, 64px) * var(--i, 0))',
+                    width: 'var(--size)',
+                    height: 'var(--size)',
+                    opacity: 'calc(var(--baseOpacity, 0.25) - var(--opacityStep, 0.05) * var(--i, 0))',
+                    animation: theme('animation.ripple'),
+                },
+            })
+        }),
     ],
-}
+};
