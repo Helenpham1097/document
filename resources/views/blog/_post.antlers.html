@@ -21,9 +21,8 @@
 	</a>
 {{ else }}
 	<div class="{{ if feature }} order-first {{ /if }} group relative isolate">
-		
 		{{ if feature }}
-			<div class="absolute z-10 left-2 -top-4 flex gap-1 items-center -translate-y-1/2 text-sm font-bold text-purple-500 dark:bg-zinc-900 dark:text-green-500">
+			<div class="absolute z-10 left-4 -top-4 flex gap-1 items-center -translate-y-1/2  text-purple-500 dark:bg-zinc-900 dark:text-green-500">
 				{{ svg src="{{config:iconamic:path}}/sparkles.svg" class='size-4 animate-pulse flex-none' }}
 				<span>Featured</span>
 			</div>
@@ -53,7 +52,7 @@
 					<span class="absolute inset-0 z-10"></span>
 				</a>
 			</h2>
-			<p class="mb-auto mt-3 line-clamp-2 text-zinc-700 dark:text-zinc-400">{{ excerpt }}</p>
+			<p class="mb-auto mt-1 line-clamp-2 text-zinc-700 dark:text-zinc-400">{{ excerpt }}</p>
 			<dl class="order-first">
 				<dt class="sr-only">Published</dt>
 				<dd class="text-sm text-zinc-950 dark:text-zinc-50"><time datetime="{{ date iso_format="DD MMMM, YYYY" }}">{{ date iso_format="DD MMMM, YYYY" }}</time></dd>
