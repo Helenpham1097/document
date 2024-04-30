@@ -16,32 +16,37 @@
             {{# The normal and retina version is generated for each screen size with dpr='2' and 2x #}}
             {{# Source for large screens uses maxwidth #}}
                 <source media="(min-width: 1280px)"
-                    srcset="{{ glide:image fit='crop_focal' format='webp' {{ if maxheight }} height='{{ maxheight }}' {{ /if }} width='{{ maxwidth ?? width }}' quality='{{ quality ?? '80' }}'}},
-                            {{ glide:image fit='crop_focal' dpr='2' format='webp' {{ if maxheight }} height='{{ maxheight }}' {{ /if }} width='{{ maxwidth ?? width }}' quality='{{ quality ?? '80' }}'}} 2x"
+                    srcset="{{ glide:image fit='crop_focal' format='webp' {{ if maxheight }} height='{{ maxheight }}' {{ /if }} width='{{ maxwidth ?? width }}' quality='{{ quality ?? '90' }}'}},
+                            {{ glide:image fit='crop_focal' dpr='1.5' format='webp' {{ if maxheight }} height='{{ maxheight }}' {{ /if }} width='{{ maxwidth ?? width }}' quality='{{ quality ?? '90' }}'}} 1.5x,
+                            {{ glide:image fit='crop_focal' dpr='2' format='webp' {{ if maxheight }} height='{{ maxheight }}' {{ /if }} width='{{ maxwidth ?? width }}' quality='{{ quality ?? '90' }}'}} 2x"
                     width="{{ maxwidth ?? width }}"
                     height="{{ maxheight }}">
             {{# Source for medium screens #}}
                 <source media="(min-width: 640px)"
-                    srcset="{{ glide:image fit='crop_focal' format='webp' width='560' quality='{{ quality ?? '80' }}'}},
-                            {{ glide:image fit='crop_focal' dpr='2' format='webp' width='560' quality='{{ quality ?? '80' }}'}} 2x"
+                    srcset="{{ glide:image fit='crop_focal' format='webp' width='560' quality='{{ quality ?? '90' }}'}},
+                            {{ glide:image fit='crop_focal' dpr='1.5' format='webp' width='560' quality='{{ quality ?? '90' }}'}} 1.5x,
+                            {{ glide:image fit='crop_focal' dpr='2' format='webp' width='560' quality='{{ quality ?? '90' }}'}} 2x"
                     width="{{ width }}"
                     height="{{ height }}">
             {{# Source for Small screens #}}
                 <source 
-                    srcset="{{ glide:image fit='crop_focal' format='webp' width='480' quality='{{ quality ?? '80' }}'}},
-                            {{ glide:image fit='crop_focal' dpr='2' format='webp' width='480' quality='{{ quality ?? '80' }}'}} 2x"
+                    srcset="{{ glide:image fit='crop_focal' format='webp' width='480' quality='{{ quality ?? '90' }}'}},
+                            {{ glide:image fit='crop_focal' dpr='1.5' format='webp' width='480' quality='{{ quality ?? '90' }}'}} 1.5x,
+                            {{ glide:image fit='crop_focal' dpr='2' format='webp' width='480' quality='{{ quality ?? '90' }}'}} 2x"
                     width="{{ width }}"
                     height="{{ height }}">
             {{ else }}
             {{# If the image does not need to be responsive, for example testimonial pictures or preview articles #}}
                 <source
-                srcset="{{ glide:image fit='crop_focal' format='webp' {{ if maxheight }} height='{{ maxheight ?? height }}' {{ /if }} width='{{ maxwidth ?? width }}' quality='{{ quality ?? '80' }}'}},
-                        {{ glide:image fit='crop_focal' dpr='2' format='webp' {{ if maxheight }} height='{{ maxheight ?? height }}' {{ /if }} width='{{ maxwidth ?? width }}' quality='{{ quality ?? '80' }}'}} 2x"
+                srcset="{{ glide:image fit='crop_focal' format='webp' {{ if maxheight }} height='{{ maxheight ?? height }}' {{ /if }} width='{{ maxwidth ?? width }}' quality='{{ quality ?? '90' }}'}},
+                        {{ glide:image fit='crop_focal' dpr='1.5' format='webp' {{ if maxheight }} height='{{ maxheight ?? height }}' {{ /if }} width='{{ maxwidth ?? width }}' quality='{{ quality ?? '90' }}'}} 1.5x,
+                        {{ glide:image fit='crop_focal' dpr='2' format='webp' {{ if maxheight }} height='{{ maxheight ?? height }}' {{ /if }} width='{{ maxwidth ?? width }}' quality='{{ quality ?? '90' }}'}} 2x"
                 width="{{ width }}"
                 height="{{ height }}">
             {{ /if }}
-        <img src="{{ glide:image fit='crop_focal' format='webp' {{ if maxheight }} height='{{ maxheight ?? height }}' {{ /if }} width='{{ maxwidth ?? width }}' quality='{{ quality ?? '80' }}'}},
-                {{ glide:image fit='crop_focal' dpr='2' format='webp' {{ if maxheight }} height='{{ maxheight ?? height }}' {{ /if }} width='{{ maxwidth ?? width }}' quality='{{ quality ?? '80' }}'}} 2x"
+        <img src="{{ glide:image fit='crop_focal' format='webp' {{ if maxheight }} height='{{ maxheight ?? height }}' {{ /if }} width='{{ maxwidth ?? width }}' quality='{{ quality ?? '90' }}'}},
+                {{ glide:image fit='crop_focal' dpr='1.5' format='webp' {{ if maxheight }} height='{{ maxheight ?? height }}' {{ /if }} width='{{ maxwidth ?? width }}' quality='{{ quality ?? '90' }}'}} 1.5x,
+                {{ glide:image fit='crop_focal' dpr='2' format='webp' {{ if maxheight }} height='{{ maxheight ?? height }}' {{ /if }} width='{{ maxwidth ?? width }}' quality='{{ quality ?? '90' }}'}} 2x"
             {{ if cover }}
                 class="object-cover  w-full h-full {{ class }}"
                 style="object-position: {{ focus | background_position }}"
@@ -59,3 +64,6 @@
 </picture>
 {{ /if }}
 {{# End: /global/_picture.antlers.html #}}
+
+
+
