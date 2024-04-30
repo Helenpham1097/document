@@ -31,15 +31,16 @@
 	{{ collection:blog limit="12" team_member:contains="{id}" paginate="true" as='posts' sort="date:desc" }}
 		<ul role="list" class="relative mt-20">
 			{{ posts }}
-			
-				<li class="group/post relative flex md:flex-row flex-col justify-between border-t border-dashed py-6 dark:border-zinc-700">
-					<a href="{{ url }}">
-						<h2 class="flex-auto text-pretty text-base font-medium transition-colors text-zinc-950 group-hover/post:text-zinc-600 dark:text-white group-hover/post:dark:text-green-500 ">
-								{{ title }}
-						</h2>
-					</a>
-					<dl class=" text-zinc-600 dark:text-zinc-200 inset-x-0 left-0 top-[1.125rem] mt-0.5 flex gap-2 text-sm sm:static">
-						<div class=" sm:left-0 sm:top-[1.125rem] sm:w-28 sm:flex-none md:static">
+				<li class="group/post relative flex border-t border-dashed py-6 dark:border-zinc-700">
+					{{# <div class="absolute inset-x-0 -top-px h-px opacity-30" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 4 1\'%3E%3Crect width=\'1\' height=\'1\' fill=\'%23212126\'/%3E%3C/svg%3E'); margin-left: 0rem; margin-right: 0rem"></div> #}}
+					<h2 class="flex-auto text-pretty pr-6 text-base font-medium text-zinc-950 transition-colors group-hover/post:text-zinc-600 dark:group-hover/post:text-zinc-300">
+						<a href="/blog/create-custom-user-menu-radix-pt-2">
+							{{ title }}
+							<span class="absolute inset-0 z-10"></span>
+						</a>
+					</h2>
+					<dl class="absolute inset-x-0 left-0 top-[1.125rem] mt-0.5 flex text-sm sm:static">
+						<div class="text-zinc-600 sm:absolute sm:left-0 sm:top-[1.125rem] sm:w-28 sm:flex-none md:static">
 							<dt class="sr-only">Category</dt>
 							<dd>
 								{{ if categories }}
@@ -51,23 +52,23 @@
 								{{ /if }}
 							</dd>
 						</div>
-						<div class="flex-auto  sm:flex-none sm:text-right ">
+						<div class="flex-auto text-zinc-400 sm:w-24 sm:flex-none sm:text-right lg:w-32">
 							<dt class="sr-only">Published</dt>
-							<dd class="flex md:block">
-								<time datetime="{{ date iso_format='DD MMMM, YYYY' }}">{{ date iso_format="DD MMMM, YYYY" }}</time>
+							<dd class="flex sm:block">
+								<svg viewBox="0 0 10 10" fill="none" aria-hidden="true" class="mx-1.5 h-6 w-2.5 flex-none text-zinc-300 dark:text-red-500 sm:hidden"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m6.25 1.75-2.5 6.5"></path></svg>
+								<time datetime="{{ date iso_format="DD MMMM, YYYY" }}">{{ date iso_format="DD MMMM, YYYY" }}</time>
 							</dd>
 						</div>
 						<div class="flex w-20 flex-none flex-row-reverse lg:w-[calc(136/16*1rem)]">
 							<dt class="sr-only">Authors</dt>
 							<dd class="-mr-2 first-of-type:mr-0">
 								<figure class="size-6 overflow-hidden rounded-full">
-									{{ partial:global/picture :image="team_member:default_image" cover="true" lazy="false" maxheight="50" maxwidth="50" quality='70' }}
+									{{ partial:global/picture :image="team_member:default_image" cover="true" lazy="false" maxheight="150" maxwidth="150" quality='70' }}
 								</figure>
 							</dd>
 						</div>
 					</dl>
 				</li>
-				
 			{{ /posts }}
 		</ul>
 		<div class="lg:col-span-12">

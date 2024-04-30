@@ -7,29 +7,35 @@
   - Link or info button for links
 #}}
 
-<div class="flex items-center space-x-2 text-xs text-zinc-700 dark:text-zinc-400">
-	<figure class="h-8 w-8 overflow-hidden rounded-full border border-zinc-100 object-cover grayscale dark:border-zinc-500">
+<div class="flex gap-2 text-base text-zinc-800 dark:text-zinc-400 lg:flex-col">
+	<div class="flex gap-2 lg:items-center lg:gap-2">
 		{{ if team_member }}
-			{{ partial:global/picture :image="team_member:default_image" cover="true" lazy="false" maxheight="56" maxwidth="56" quality='95' }}
+			<figure class="h-6 w-6 overflow-hidden rounded-full border border-gray-100 object-cover grayscale">
+				{{ partial:global/picture :image="team_member:default_image" cover="true" lazy="false" maxheight="44" maxwidth="44" quality='90' }}
+			</figure>
 		{{ else }}
-			{{ partial:global/picture :image="author:avatar" cover="true" lazy="false" maxheight="56" maxwidth="56" quality='95' }}
+			<figure class="h-6 w-6 overflow-hidden rounded-full border border-gray-100 object-cover grayscale">
+				{{ partial:global/picture :image="author:avatar" cover="true" lazy="false" maxheight="44" maxwidth="44" quality='90' }}
+			</figure>
 		{{ /if }}
-	</figure>
-	<div class="flex items-center gap-6">
 		{{ if team_member }}
-			{{ if link }}
-				<a class="underline" href="{{ team_member:url }}">
-					<span class="truncate md:w-auto">{{ team_member:title | safe_truncate:10:'...' }}</span>
-				</a>
-			{{ else }}
-				<span class="truncate md:w-auto">{{ team_member:title | safe_truncate:10:'...' }}</span>
-			{{ /if }}
+			<a rel="author" class="truncate text-purple-500 hover:underline dark:text-green-500 md:w-auto" href="{{ team_member:url }}">{{ team_member:title }}</a>
 		{{ else }}
-			<span class="truncate md:w-auto">{{ author:name }}</span>
+			<span rel="author" class="truncate md:w-auto md:overflow-hidden md:text-clip">{{ author:name }}</span>
 		{{ /if }}
-		<div class="flex items-center gap-2">
-			{{ svg src="{{config:iconamic:path}}/calendar-fold.svg" class='size-4 text-zinc-800 dark:text-zinc-50 flex-none' }}
-			<time>{{ date iso_format="DD MMMM, YYYY" }}</time>
-		</div>
+	</div>
+	<div class="flex gap-2">
+		{{ svg src="{{config:iconamic:path}}/calendar-fold.svg" class='size-5 flex-none' }}
+		<time datetime="{{ date iso_format='DD-MM-YYYY' }}">
+			{{ date iso_format="DD MMMM, YYYY" }}
+		</time>
+	</div>
+	<div class="flex gap-2">
+		{{ if categories }}
+			{{ svg src="{{config:iconamic:path}}/tag.svg" class='size-5 flex-none' }}
+			{{ categories limit="1" }}
+				<a class="hover:text-purple-700 dark:hover:text-green-700" href="{{ url }}">{{ title }}</a>
+			{{ /categories }}
+		{{ /if }}
 	</div>
 </div>

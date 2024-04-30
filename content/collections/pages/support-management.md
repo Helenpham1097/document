@@ -21,10 +21,18 @@ top_section:
         id: lrzodymc
         template_global: /components/buttons
         label: 'Join Webslice'
+        link_type: url
+        target_blank: false
+        url: 'https://console.webslice.com/register'
+        button_type: button
       -
         id: ltxslzeb
         template_global: /components/buttons
         label: 'Login to Add Services now'
+        link_type: url
+        target_blank: false
+        url: 'https://console.webslice.com/login'
+        button_type: secondary
     type: hero
     enabled: true
     dark_image: illustrations/expand.png
@@ -35,7 +43,7 @@ page_description: 'Monitoring, incident response, time-saving tools, broader 24/
 meta_title: 'Managed Services - Webslice web hosting'
 meta_description: 'Add Managed Services to Webslice hosting for time-saving developer tools, broader 24/7 technical support, and server management including incident response.'
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1712198646
+updated_at: 1713482347
 page_builder:
   -
     id: ltginaij
