@@ -81,10 +81,10 @@
 		{{ if default_image }}
 			<div class="relative {{ if border }}space-y-8{{ /if }}">
 				{{ if default_image_dark && default_image }}
-					{{ partial:components/figure cover="true" maxwidth="704" lazy="true" :image="default_image_dark" class="hidden dark:block {{ if border }} border-2 shadow-2xl {{ if segment_1 == "serverless" }} shadow-green-500/30 ring-green-500/30 border-green-600 {{else}} shadow-purple-500/30 ring-purple-500/30 border-purple-600 {{/if}} ring-[8px]  rounded-xl {{ /if }}" }}
-					{{ partial:components/figure cover="true" maxwidth="704" lazy="true" :image="default_image" class="dark:hidden block  {{ if border }} border-2 shadow-2xl {{ if segment_1 == "serverless" }} border-green-500/50  ring-green-500/70 {{ else }}border-purple-600/40  ring-purple-500/30 {{ /if }} ring-[8px] rounded-xl {{ /if }}" }}
+					{{ partial:components/figure cover="true" maxwidth="704" lazy="true" responsive="true" :image="default_image_dark" class="hidden dark:block {{ if border }} border-2 shadow-2xl {{ if segment_1 == "serverless" }} shadow-green-500/30 ring-green-500/30 border-green-600 {{else}} shadow-purple-500/30 ring-purple-500/30 border-purple-600 {{/if}} ring-[8px]  rounded-xl {{ /if }}" }}
+					{{ partial:components/figure cover="true" maxwidth="704" lazy="true" responsive="true" :image="default_image" class="dark:hidden block  {{ if border }} border-2 shadow-2xl {{ if segment_1 == "serverless" }} border-green-500/50  ring-green-500/70 {{ else }}border-purple-600/40  ring-purple-500/30 {{ /if }} ring-[8px] rounded-xl {{ /if }}" }}
 				{{ else }}
-					{{ partial:components/figure cover="true" maxwidth="704" lazy="true" :image="default_image" class="rounded-lg aspect-[6/4] border ring-[8px] shadow-2xl dark:border-zinc-700/50 ring-zinc-500/10 dark:ring-zinc-800 {{ if border }} shadow-xl ring-[8px] {{ if segment_1 == "serverless" }} border-green-600/50 ring-green-500/30 {{ else }} border-purple-600/50  ring-purple-500/30 {{ /if }} rounded-xl {{ /if }}" }}
+					{{ partial:components/figure cover="true" maxwidth="704" lazy="true" responsive="true" :image="default_image" class="rounded-lg aspect-[6/4] border ring-[8px] shadow-2xl dark:border-zinc-700/50 ring-zinc-500/10 dark:ring-zinc-800 {{ if border }} shadow-xl ring-[8px] {{ if segment_1 == "serverless" }} border-green-600/50 ring-green-500/30 {{ else }} border-purple-600/50  ring-purple-500/30 {{ /if }} rounded-xl {{ /if }}" }}
 				{{ /if }}
 				{{ partial:typography/caption caption="{{highlight_textcaption}}" }}
 			</div>
