@@ -27,7 +27,7 @@
 				{{ partial:global/grid_lines grid="true" diagonal_lines="false" grid_number='4' }}
 			{{ /if }}
 			{{ if background_select:value === 'stripe_background' }}
-				<div class="absolute top-1/2 left-1/2 -z-10 h-full w-[180%] -translate-y-1/2 -translate-x-1/2 rotate-6 transform bg-gradient-to-r from-purple-500 to-green-400 opacity-20 md:w-[120%]"></div>
+				<div class="absolute left-1/2 top-1/2 -z-10 h-full w-[180%] -translate-x-1/2 -translate-y-1/2 rotate-6 transform bg-gradient-to-r from-purple-500 to-green-400 opacity-20 md:w-[120%]"></div>
 				<div class="absolute inset-0 -z-10 mx-auto h-full max-w-screen-2xl">
 					<svg class="relative -translate-x-full -translate-y-1/2 text-green-300 dark:text-green-900" width="273" height="269" viewBox="0 0 273 269" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<mask id="mask0_1430_25914" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0" y="1" width="272" height="268">
@@ -118,13 +118,13 @@
 				{{ features }}
 					<div class="col-span-8 space-y-4 rounded-lg border border-zinc-100 bg-white p-4 shadow-xl shadow-zinc-500/10 dark:border-zinc-700 dark:bg-zinc-800 dark:shadow-black/10 sm:col-span-4 lg:col-span-2">
 						{{ if default_image }}
-							{{ partial:components/figure :image="default_image" remove_prose="true" cover="true" maxheight="512" lazy="false" maxwidth="768" quality='70' }}
+							{{ partial:components/figure :image="default_image" remove_prose="true" cover="true" maxheight="512" lazy="false" maxwidth="768" }}
 						{{ /if }}
 						{{ if iconamic }}
 							{{ svg src="{{config:iconamic:path}}/{{iconamic}}.svg" class=" {{iconamic}} w-8 h-8 text-purple-500 stroke-current aspect-square" }}
 						{{ /if }}
 						{{ partial:typography/h5 :content="title" color='text-black dark:text-zinc-200' }}
-						<div class="prose prose-p:text-base dark:prose-invert">
+						<div class="prose dark:prose-invert prose-p:text-base">
 							{{ description }}
 						</div>
 					</div>
