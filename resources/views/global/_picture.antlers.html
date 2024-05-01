@@ -1,39 +1,69 @@
 {{#
-    https://1{{quality ?? '80'}}'}}2.studio/journal/responsive-images-with-statamic-tailwind-and-glide
+    Global Image view
 #}}
 
 {{# /global/_picture.antlers.html #}}
 {{ if image }}
-    <picture>
-        {{ asset :url="image" }}
-            {{ if extension == 'svg' || extension == 'gif' }}
-                <img class="{{ class }}" src="{{ url }}" alt="{{ alt }}" height='{{ height }}' width='{{ width }}'  />
-            {{ else }}
-                <img
-                    {{ if cover }}
-                        class="object-cover  w-full h-full {{ class }}"
-                        style="object-position: {{ focus | background_position }}"
-                    {{ else }}
-                        class="{{ class }}"
-                    {{ /if }}
-                    {{ if (environment !== 'production') }} data-img="w-{{ maxwidth ?? width }} h-{{ maxheight ?? height }} q-{{quality ?? '80'}}" {{ /if }}
-                    src="{{ glide:image fit='crop_focal' format='webp' {{ if maxheight }} height='{{ maxheight ?? height }}' {{ /if }} width='{{ maxwidth ?? width }}' quality='{{ quality ?? '80' }}'}}"
-                    srcset="
-                    {{ glide:image width='280' quality='{{quality ?? '80'}}'}}' format='webp' }} 280w,
-                    {{ glide:image width='480' quality='{{quality ?? '80'}}'}}' format='webp' }} 480w,
-                    {{ glide:image width='560' quality='{{quality ?? '80'}}'}}' format='webp' }} 560w,
-                    {{ glide:image width='840' quality='{{quality ?? '80'}}'}}' format='webp' }} 840w,
-                    {{ glide:image width='960' quality='{{quality ?? '80'}}'}}' format='webp' }} 960w,
-                    "
-                    sizes="(min-width: 768px) 840px, 87.5vw"
-                    alt="{{ alt ?? title }}"
+<picture>
+    {{ asset :url="image" }}
+        {{# Check if the image extension is SVG or GIF #}}
+        {{ if extension == 'svg' || extension == 'gif' }}
+            <img class="{{ class }}" src="{{ url }}" alt="{{ alt }}" height='{{  height ?? maxheight }}' width='{{ width ?? maxwidth }}'  />
+        {{ else }}
+            {{ if responsive }}
+            {{# To define whether an image will have a responsive version or not, it must be defined in the partial's call as responsive='true' #}}
+            {{# Just if maximum desktop size is defined ( maxheight and maxwidth ) crop the image #}}
+            {{# The normal and retina version is generated for each screen size with dpr='2' and 2x #}}
+            {{# Source for large screens uses maxwidth #}}
+                <source media="(min-width: 1280px)"
+                    srcset="{{ glide:image fit='crop_focal' format='webp' {{ if maxheight }} height='{{ maxheight }}' {{ /if }} width='{{ maxwidth ?? width }}' quality='{{ quality ?? '90' }}'}},
+                            {{ glide:image fit='crop_focal' dpr='1.5' format='webp' {{ if maxheight }} height='{{ maxheight }}' {{ /if }} width='{{ maxwidth ?? width }}' quality='{{ quality ?? '90' }}'}} 1.5x,
+                            {{ glide:image fit='crop_focal' dpr='2' format='webp' {{ if maxheight }} height='{{ maxheight }}' {{ /if }} width='{{ maxwidth ?? width }}' quality='{{ quality ?? '90' }}'}} 2x"
                     width="{{ maxwidth ?? width }}"
-                    height="{{ maxheight ?? height }}"
-                    {{ if lazy }} loading="lazy" {{ /if }}
-                    {{ if fetchpriority }} fetchpriority="high" {{ /if }}
-                >
+                    height="{{ maxheight }}">
+            {{# Source for medium screens #}}
+                <source media="(min-width: 640px)"
+                    srcset="{{ glide:image fit='crop_focal' format='webp' width='560' quality='{{ quality ?? '90' }}'}},
+                            {{ glide:image fit='crop_focal' dpr='1.5' format='webp' width='560' quality='{{ quality ?? '90' }}'}} 1.5x,
+                            {{ glide:image fit='crop_focal' dpr='2' format='webp' width='560' quality='{{ quality ?? '90' }}'}} 2x"
+                    width="{{ width }}"
+                    height="{{ height }}">
+            {{# Source for Small screens #}}
+                <source 
+                    srcset="{{ glide:image fit='crop_focal' format='webp' width='480' quality='{{ quality ?? '90' }}'}},
+                            {{ glide:image fit='crop_focal' dpr='1.5' format='webp' width='480' quality='{{ quality ?? '90' }}'}} 1.5x,
+                            {{ glide:image fit='crop_focal' dpr='2' format='webp' width='480' quality='{{ quality ?? '90' }}'}} 2x"
+                    width="{{ width }}"
+                    height="{{ height }}">
+            {{ else }}
+            {{# If the image does not need to be responsive, for example testimonial pictures or preview articles #}}
+                <source
+                srcset="{{ glide:image fit='crop_focal' format='webp' {{ if maxheight }} height='{{ maxheight ?? height }}' {{ /if }} width='{{ maxwidth ?? width }}' quality='{{ quality ?? '90' }}'}},
+                        {{ glide:image fit='crop_focal' dpr='1.5' format='webp' {{ if maxheight }} height='{{ maxheight ?? height }}' {{ /if }} width='{{ maxwidth ?? width }}' quality='{{ quality ?? '90' }}'}} 1.5x,
+                        {{ glide:image fit='crop_focal' dpr='2' format='webp' {{ if maxheight }} height='{{ maxheight ?? height }}' {{ /if }} width='{{ maxwidth ?? width }}' quality='{{ quality ?? '90' }}'}} 2x"
+                width="{{ width }}"
+                height="{{ height }}">
             {{ /if }}
-        {{ /asset }}
-    </picture>
+        <img src="{{ glide:image fit='crop_focal' format='webp' {{ if maxheight }} height='{{ maxheight ?? height }}' {{ /if }} width='{{ maxwidth ?? width }}' quality='{{ quality ?? '90' }}'}},
+                {{ glide:image fit='crop_focal' dpr='1.5' format='webp' {{ if maxheight }} height='{{ maxheight ?? height }}' {{ /if }} width='{{ maxwidth ?? width }}' quality='{{ quality ?? '90' }}'}} 1.5x,
+                {{ glide:image fit='crop_focal' dpr='2' format='webp' {{ if maxheight }} height='{{ maxheight ?? height }}' {{ /if }} width='{{ maxwidth ?? width }}' quality='{{ quality ?? '90' }}'}} 2x"
+            {{ if cover }}
+                class="object-cover  w-full h-full {{ class }}"
+                style="object-position: {{ focus | background_position }}"
+            {{ else }}
+                class="{{ class }}"
+            {{ /if }}
+            width="{{ maxwidth ?? width }}"
+            height="{{ maxheight ?? height }}"
+            alt="{{ alt ?? title }}"
+            {{ if lazy }} loading="lazy" {{ /if }}
+            {{ if fetchpriority }} fetchpriority="high" {{ /if }}
+        >
+        {{ /if }}
+    {{ /asset }}
+</picture>
 {{ /if }}
 {{# End: /global/_picture.antlers.html #}}
+
+
+
