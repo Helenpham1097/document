@@ -3,3 +3,13 @@ super: true
 avatar: max-profile-1614911683.jpg
 id: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
 password_hash: $2y$10$i/u7um2xgwcbLUGPm2RhCONeBdNRVDParCFeyRD/YH5EMEuN8Kkz6
+preferences:
+  collections:
+    blog:
+      columns:
+        - title
+        - slug
+        - date
+        - author
+        - status
+        - categories
