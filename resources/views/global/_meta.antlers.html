@@ -20,10 +20,10 @@
 <meta name="twitter:site" content="@Webslice" />
 <meta name="twitter:creator" content="@Webslice" />
 {{ if (environment == 'production') }}
-	<!-- Google Verification -->
+	{{# google site verification #}}
 	<meta name="google-site-verification" content="qALkWo9WTJ-lNQhfLEF4cMhuqlGIufj27cQ9QNYFEpY" />
 
-	<!-- Google Tag Manager -->
+	{{# google tag manager #}}
 	<script>
 		(function (w, d, s, l, i) {
 			w[l] = w[l] || [];
@@ -36,7 +36,6 @@
 			f.parentNode.insertBefore(j, f);
 		})(window, document, "script", "dataLayer", "GTM-KZJJ5BFW");
 	</script>
-	<!-- / Google Tag Manager -->
 {{ /if }}
 {{# Page and articles og image #}}
 {{ if top_section }}
