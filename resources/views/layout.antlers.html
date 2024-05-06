@@ -6,27 +6,14 @@
 		<link fetchpriority="high" href="/css/main.css?{{ config:app:cache_timestamp }}" rel="stylesheet" />
 	</head>
 	<body class="scroll-smooth dark:bg-zinc-900">
+
+		{{ if environment == "production" }}
+			{{# google tag manager #}}
+			<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZJJ5BFW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		{{ /if }}
+		
 		{{ partial:global/nav }}
 		{{ template_content }}
 		{{ partial:global/footer }}
-		{{ if (environment == 'production') }}
-			{{# google tag manager #}}
-			<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BX4772" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
-
-			{{# tawk.to live chat #}}
-			<script async type="text/javascript">
-				var Tawk_API = Tawk_API || {},
-					Tawk_LoadStart = new Date();
-				(function () {
-					var s1 = document.createElement("script"),
-						s0 = document.getElementsByTagName("script")[0];
-					s1.async = true;
-					s1.src = "https://embed.tawk.to/635b07e1b0d6371309cbf1ad/1ggdpdj4s";
-					s1.charset = "UTF-8";
-					s1.setAttribute("crossorigin", "*");
-					s0.parentNode.insertBefore(s1, s0);
-				})();
-			</script>
-		{{ /if }}
 	</body>
 </html>
