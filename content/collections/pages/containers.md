@@ -27,27 +27,16 @@ top_section:
         id: 2SEK87kA
         template_global: /global/buttons
         label: 'Start Risk-Free'
-        iconamic: chevrons-right
-        link_type: url
-        target_blank: false
-        button_type: primary
-        attr_title: 'Start risk-free for 7 days'
-        url: 'https://console.webslice.com/register'
       -
         id: lro57zsk
         template_global: /components/buttons
         label: 'Read Documentation'
-        link_type: url
-        target_blank: false
-        url: /docs/containers/getting-started/
-        button_type: secondary
-        iconamic: file
     pre: 'Webslice Containers'
     shape: triangle
     image: illustrations/container-cover-1710730424.png
 title: Containers
-updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1713413858
+updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
+updated_at: 1715568230
 page_builder:
   -
     id: lrftv1b6
@@ -151,10 +140,6 @@ page_builder:
         enabled: true
         link: '#'
         label: 'Awesome link'
-        link_type: url
-        target_blank: true
-        url: /docs/containers/features/creating-a-container/
-        image: illustrations/container-images.png
       -
         id: lrfvew4y
         text:
@@ -175,10 +160,6 @@ page_builder:
                 text: ' on your own server without interference.'
         type: box
         enabled: true
-        link_type: url
-        target_blank: false
-        url: /docs/containers/getting-started/
-        image: illustrations/enviroments.png
       -
         id: lrfvf41q
         text:
@@ -199,9 +180,6 @@ page_builder:
                 text: ' and databases through the Webslice Console.'
         type: box
         enabled: true
-        link_type: url
-        target_blank: false
-        url: /docs/containers/databases/overview/
       -
         id: lrfvfdga
         text:
@@ -222,9 +200,6 @@ page_builder:
                 text: .
         type: box
         enabled: true
-        link_type: url
-        target_blank: false
-        url: /docs/containers/servers/locations
     bento_type: boxes
     template_global: /global/iconamic
     iconamic: lightbulb
@@ -388,6 +363,7 @@ page_builder:
           - 'Free SSL'
         type: column
         enabled: true
+        url: 'https://console.webslice.com/register?GB=1'
       -
         id: lthtzuj0
         highlight: false
@@ -403,6 +379,7 @@ page_builder:
           - 'Free SSL'
         type: column
         enabled: true
+        url: 'https://console.webslice.com/register?GB=2'
       -
         id: lthtztjh
         highlight: true
@@ -419,6 +396,7 @@ page_builder:
         type: column
         enabled: true
         highlight_text: 'Most popular'
+        url: 'https://console.webslice.com/register?GB=4'
       -
         id: lthtzsji
         highlight: false
@@ -434,6 +412,7 @@ page_builder:
         type: column
         enabled: true
         description: 'Four cores for higher performance.'
+        url: 'https://console.webslice.com/register?GB=8'
       -
         id: lthtzrk6
         highlight: false
@@ -449,6 +428,7 @@ page_builder:
           - 'Free SSL'
         type: column
         enabled: true
+        url: 'https://console.webslice.com/register?GB=16'
       -
         id: lthtzqex
         highlight: false
@@ -464,6 +444,7 @@ page_builder:
           - 'Free SSL'
         type: column
         enabled: true
+        url: 'https://console.webslice.com/register?GB=32'
     type: pricing_table
     enabled: true
     start_type:
@@ -525,12 +506,6 @@ page_builder:
         id: luw8qc8b
         template_global: /components/buttons
         label: 'Create Account Now'
-        iconamic: chevron-right
-        link_type: url
-        target_blank: false
-        url: 'https://console.webslice.com/register'
-        button_type: primary
-        attr_title: 'Create Account Now'
   -
     id: lthz8oal
     template: /general_content/bento_highlight
@@ -549,11 +524,6 @@ page_builder:
             id: lru3n35l
             template_global: /components/buttons
             label: 'See Support & Management'
-            link_type: entry
-            target_blank: false
-            button_type: secondary
-            iconamic: chevron-right
-            entry: c983d54d-1d7e-434f-b789-ea74e7737653
         bentos:
           -
             id: lru3nbaf
