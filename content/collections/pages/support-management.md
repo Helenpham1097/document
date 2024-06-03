@@ -24,7 +24,8 @@ top_section:
         link_type: url
         target_blank: false
         url: 'https://console.webslice.com/register'
-        button_type: button
+        button_type: primary
+        iconamic: chevrons-right
       -
         id: ltxslzeb
         template_global: /components/buttons
@@ -43,7 +44,7 @@ page_description: 'Monitoring, incident response, time-saving tools, broader 24/
 meta_title: 'Managed Services - Webslice web hosting'
 meta_description: 'Add Managed Services to Webslice hosting for time-saving developer tools, broader 24/7 technical support, and server management including incident response.'
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1713482347
+updated_at: 1717455868
 page_builder:
   -
     id: ltginaij
@@ -217,6 +218,7 @@ page_builder:
         type: price
         enabled: true
         url: 'https://console.webslice.com/login'
+        highligh: false
       -
         id: luklggyf
         highlight: true
@@ -234,6 +236,7 @@ page_builder:
         type: price
         enabled: true
         url: 'https://console.webslice.com/login'
+        highligh: false
       -
         id: luklgn1z
         highlight: false
@@ -250,6 +253,7 @@ page_builder:
         type: price
         enabled: true
         url: 'https://console.webslice.com/login'
+        highligh: false
     table:
       -
         cells:

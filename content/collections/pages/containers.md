@@ -27,16 +27,26 @@ top_section:
         id: 2SEK87kA
         template_global: /global/buttons
         label: 'Start Risk-Free'
+        iconamic: chevrons-right
+        link_type: url
+        target_blank: true
+        url: 'https://console.webslice.com/register'
+        button_type: primary
       -
         id: lro57zsk
         template_global: /components/buttons
         label: 'Read Documentation'
+        iconamic: file
+        link_type: entry
+        target_blank: false
+        entry: 5f3ec833-66d3-43ef-9f35-97f1b4b0afc5
+        button_type: button
     pre: 'Webslice Containers'
     shape: triangle
     image: illustrations/container-cover-1710730424.png
 title: Containers
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1715568230
+updated_at: 1717455335
 page_builder:
   -
     id: lrftv1b6
@@ -140,6 +150,8 @@ page_builder:
         enabled: true
         link: '#'
         label: 'Awesome link'
+        link_type: entry
+        target_blank: false
       -
         id: lrfvew4y
         text:
@@ -160,6 +172,8 @@ page_builder:
                 text: ' on your own server without interference.'
         type: box
         enabled: true
+        link_type: entry
+        target_blank: false
       -
         id: lrfvf41q
         text:
@@ -180,6 +194,8 @@ page_builder:
                 text: ' and databases through the Webslice Console.'
         type: box
         enabled: true
+        link_type: entry
+        target_blank: false
       -
         id: lrfvfdga
         text:
@@ -200,6 +216,8 @@ page_builder:
                 text: .
         type: box
         enabled: true
+        link_type: entry
+        target_blank: false
     bento_type: boxes
     template_global: /global/iconamic
     iconamic: lightbulb
@@ -506,6 +524,11 @@ page_builder:
         id: luw8qc8b
         template_global: /components/buttons
         label: 'Create Account Now'
+        iconamic: chevrons-right
+        link_type: url
+        target_blank: false
+        url: 'https://console.webslice.com/register'
+        button_type: button
   -
     id: lthz8oal
     template: /general_content/bento_highlight
@@ -524,6 +547,10 @@ page_builder:
             id: lru3n35l
             template_global: /components/buttons
             label: 'See Support & Management'
+            link_type: entry
+            target_blank: false
+            entry: c983d54d-1d7e-434f-b789-ea74e7737653
+            button_type: button
         bentos:
           -
             id: lru3nbaf
