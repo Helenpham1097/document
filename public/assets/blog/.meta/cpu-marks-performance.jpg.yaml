@@ -1,6 +1,7 @@
-data: {  }
+data:
+  alt: 'Graph of CPU models, listed by year of release, showing growing CPU Marks over time'
 size: 152921
-last_modified: 1714696919
+last_modified: 1714703496
 width: 864
 height: 597
 mime_type: image/jpeg
