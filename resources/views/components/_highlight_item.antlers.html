@@ -33,7 +33,7 @@
         {{ else }}
             {{ switch between=' | lg:space-x-reverse' }}
         {{ /if }}
-    {{ /if }}  mx-auto flex flex-col gap-6 space-y-reverse sm:space-y-0 lg:flex-row lg:items-center lg:gap-24">
+    {{ /if }} mx-auto flex flex-col gap-6 space-y-reverse sm:space-y-0 lg:flex-row lg:items-center lg:gap-24">
 	<div class="space-y-6 lg:w-1/2">
 		<div class="space-y-6">
 			{{ if highlight_title }}
@@ -79,18 +79,16 @@
 			</div>
 		{{ /if }}
 		{{ if default_image }}
-			<div class="relative {{ if border }}space-y-8{{ /if }}">
+			<div class="{{ if border }}space-y-8 relative {{ /if }} relative">
 				{{ if default_image_dark && default_image }}
-					{{ partial:global/picture :image="default_image_dark" fetchpriority='true' maxwidth="704" responsive="true" cover="true" class="hidden dark:block {{ if border }} shadow-2xl {{ if segment_1 == "serverless" }} shadow-green-500/30 ring-green-500/30 {{else}} shadow-purple-500/30 ring-purple-500/30  {{/if}} ring-[8px]  rounded-xl {{ /if }}" lazy="true" }}
-
-					{{ partial:global/picture :image="default_image" fetchpriority='true' maxwidth="704" responsive="true" cover="true" class="dark:hidden block  {{ if border }} shadow-2xl {{ if segment_1 == "serverless" }} border-green-500/50  ring-green-500/70 {{ else }}border-purple-600/40  ring-purple-500/30 {{ /if }} ring-[8px] rounded-xl {{ /if }}" lazy="true" }}
-
+					<div class="{{ if segment_1 == "serverless" }} ring-green-500/50 from-green-500 to-green-400 shadow-green-500/30 {{else}} ring-purple-500/50 from-purple-500 to-purple-400 shadow-purple-500/30 {{ /if }} absolute -inset-2 rounded-[1.25rem] bg-gradient-to-t opacity-50 shadow-2xl ring-1"></div>
+					{{# Dark #}}
+					{{ partial:global/picture :image="default_image_dark" fetchpriority='true' maxwidth="704" responsive="true" cover="true" class="rounded-xl relative hidden dark:block" lazy="true" }}
+					{{# Light #}}
+					{{ partial:global/picture :image="default_image" fetchpriority='true' maxwidth="704" responsive="true" cover="true" class="rounded-xl relative dark:hidden block  " lazy="true" }}
 				{{ else }}
-					{{ partial:global/picture :image="default_image" fetchpriority='true' maxwidth="704" responsive="true" cover="true" class="rounded-lg aspect-[6/4]  ring-[8px] shadow-2xl dark:border-zinc-700/50 ring-zinc-500/10 dark:ring-zinc-800 {{ if border }} shadow-xl ring-[8px] {{ if segment_1 == "serverless" }}  ring-green-500/30 {{ else }}   ring-purple-500/30 {{ /if }} rounded-xl {{ /if }}" lazy="true" }}
-
-
-
-					{{# {{ partial:components/figure cover="true" maxwidth="704" lazy="true" responsive="true" :image="default_image" class="rounded-lg aspect-[6/4]  ring-[8px] shadow-2xl dark:border-zinc-700/50 ring-zinc-500/10 dark:ring-zinc-800 {{ if border }} shadow-xl ring-[8px] {{ if segment_1 == "serverless" }}  ring-green-500/30 {{ else }}   ring-purple-500/30 {{ /if }} rounded-xl {{ /if }}" }} #}}
+					<div class="absolute -inset-2 rounded-[1.25rem] bg-zinc-50 opacity-50 shadow-2xl ring-1 ring-zinc-500/50 dark:bg-zinc-800"></div>
+					{{ partial:global/picture :image="default_image" fetchpriority='true' maxwidth="704" responsive="true" cover="true" class="rounded-xl aspect-[6/4] relative" lazy="true" }}
 				{{ /if }}
 				{{ partial:typography/caption caption="{{highlight_textcaption}}" }}
 			</div>
