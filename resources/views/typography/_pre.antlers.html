@@ -11,7 +11,7 @@
 <{{ as or 'span' }} class="{{ color or 'text-purple-500' }} {{ class }} text-sm">
 	<div class="flex items-center gap-3 rounded-full border border-zinc-200 dark:border-zinc-700  bg-white/10 p-0.5 pr-4 text-zinc-800 dark:text-zinc-50 dark:bg-zinc-500/10">
 		<span class="size-7 rounded-2xl {{ if segment_1 == "serverless" }} bg-green-500 text-zinc-800 {{ else }} bg-purple-500 text-white {{ /if }} p-1.5 py-0.5 align-middle ">
-			{{ svg src="{{ config:iconamic:path }}/{{iconamic}}.svg" class="aspect-square {{ if medium_icon }} w-6 {{else}} w-4 {{ /if }} stroke-current" }}
+			{{ svg src="{{ config:iconamic:path }}/{{iconamic}}.svg" class="aspect-square w-4 stroke-current" }}
 		</span>
 		<div class="flex items-center">{{ pre }}</div>
 	</div>

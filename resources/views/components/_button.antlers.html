@@ -24,7 +24,7 @@
 				{{/if}}
 				
 				{{ if button_type !== 'inline' }}
-					primary-action-button py-2 relative rounded-lg
+					primary-action-button py-2 relative rounded-lg dark:bg-zinc-800 bg-white
 					{{ if iconamic }}
 						pr-4 pl-5
 						{{ else }}
@@ -66,7 +66,7 @@
 			{{ if iconamic }}
 			{{# The animation of the hover transition is inside the button view applied from the group class. #}}
 				<div class="transition-transform duration-500 ease-in-out transform ">
-					{{ svg src="{{ config:iconamic:path }}/{{iconamic}}.svg" class="aspect-square {{ if medium_icon }} w-4 {{else}} w-4 {{ /if }} stroke-current" }}
+					{{ svg src="{{ config:iconamic:path }}/{{iconamic}}.svg" class="aspect-square w-4 stroke-current" }}
 				</div>
 			{{ /if }}
     </{{ as or 'a' }}>
