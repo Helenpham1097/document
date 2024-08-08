@@ -52,7 +52,7 @@ return [
         |
         */
 
-        'cache' => true,
+        'cache' => false,
         'cache_path' => public_path('glide-cache'),
 
         /*
@@ -67,20 +67,20 @@ return [
         */
 
         'presets' => [
-            'xs-webp' => ['w' => 320, 'h' => 10000, 'q' => 85, 'fit' => 'contain', 'fm' => 'webp'],
-            'sm-webp' => ['w' => 480, 'h' => 10000, 'q' => 85, 'fit' => 'contain', 'fm' => 'webp'],
-            'md-webp' => ['w' => 768, 'h' => 10000, 'q' => 85, 'fit' => 'contain', 'fm' => 'webp'],
-            'lg-webp' => ['w' => 1280, 'h' => 10000, 'q' => 85, 'fit' => 'contain', 'fm' => 'webp'],
-            'xl-webp' => ['w' => 1440, 'h' => 10000, 'q' => 95, 'fit' => 'contain', 'fm' => 'webp'],
-            '2xl-webp' => ['w' => 1680, 'h' => 10000, 'q' => 95, 'fit' => 'contain', 'fm' => 'webp'],
-            'xs' => ['w' => 320, 'h' => 10000, 'q' => 85, 'fit' => 'contain'],
-            'sm' => ['w' => 480, 'h' => 10000, 'q' => 85, 'fit' => 'contain'],
-            'md' => ['w' => 768, 'h' => 10000, 'q' => 85, 'fit' => 'contain'],
-            'lg' => ['w' => 1280, 'h' => 10000, 'q' => 85, 'fit' => 'contain'],
-            'xl' => ['w' => 1440, 'h' => 10000, 'q' => 95, 'fit' => 'contain'],
-            '2xl' => ['w' => 1680, 'h' => 10000, 'q' => 95, 'fit' => 'contain'],
-        ],
+            'webp-xs' => ['w' => 320, 'h' => 10000, 'q' => 90, 'fit' => 'contain', 'fm' => 'webp'],
+            'webp-sm' => ['w' => 480, 'h' => 10000, 'q' => 90, 'fit' => 'contain', 'fm' => 'webp'],
+            'webp-md' => ['w' => 768, 'h' => 10000, 'q' => 90, 'fit' => 'contain', 'fm' => 'webp'],
+            'webp-lg' => ['w' => 1280, 'h' => 10000, 'q' => 90, 'fit' => 'contain', 'fm' => 'webp'],
+            'webp-xl' => ['w' => 1440, 'h' => 10000, 'q' => 90, 'fit' => 'contain', 'fm' => 'webp'],
+            'webp-2xl' => ['w' => 1680, 'h' => 10000, 'q' => 90, 'fit' => 'contain', 'fm' => 'webp'],
 
+            'xs' => ['w' => 320, 'h' => 10000, 'q' => 90, 'fit' => 'contain'],
+            'sm' => ['w' => 480, 'h' => 10000, 'q' => 90, 'fit' => 'contain'],
+            'md' => ['w' => 768, 'h' => 10000, 'q' => 90, 'fit' => 'contain'],
+            'lg' => ['w' => 1280, 'h' => 10000, 'q' => 90, 'fit' => 'contain'],
+            'xl' => ['w' => 1440, 'h' => 10000, 'q' => 90, 'fit' => 'contain'],
+            '2xl' => ['w' => 1680, 'h' => 10000, 'q' => 90, 'fit' => 'contain'],
+        ],
     ],
 
     /*
