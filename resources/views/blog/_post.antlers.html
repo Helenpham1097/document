@@ -33,9 +33,9 @@
 				<div class="absolute inset-[1px] -z-10 bg-white dark:bg-zinc-900/90 lg:rounded-[0.4rem]"></div>
 			{{ /if }}
 			{{ if feature }}
-				{{ partial:global/picture :image="default_image" cover="true" lazy="false" class="absolute inset-0 rounded-lg p-0.5 size-full object-cover" maxwidth="768" quality='70' }}
+				{{ partial:global/picture :image="default_image" lazy="false" class="absolute inset-0 rounded-lg p-0.5 size-full object-cover" }}
 			{{ else }}
-				{{ partial:global/picture :image="default_image" cover="true" lazy="false" class="absolute inset-0 rounded-lg size-full object-cover" maxwidth="768" quality='70' }}
+				{{ partial:global/picture :image="default_image" lazy="false" class="absolute inset-0 rounded-lg size-full object-cover" }}
 			{{ /if }}
 			<div class="relative z-10 h-48 w-full opacity-0 transition-opacity duration-500 group-hover:opacity-90">
 				<div class="absolute -top-1/2 h-full w-full">

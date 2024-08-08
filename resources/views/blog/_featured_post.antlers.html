@@ -4,7 +4,7 @@
 		<div class="group group grid gap-x-8 rounded-xl lg:grid-cols-3 lg:place-items-end">
 			{{ if default_image }}
 				<figure class="relative overflow-hidden rounded-lg md:rounded-xl lg:col-span-2">
-					{{ partial:global/picture :image="default_image" cover="false" maxheight="512" lazy="false" maxwidth="768" }}
+					{{ partial:global/picture :image="default_image" lazy="false" }}
 				</figure>
 			{{ /if }}
 			<div class="mt-3 space-y-4 lg:mt-0">
@@ -27,12 +27,12 @@
 					<span class="mr-3 inline-flex items-center space-x-2 py-1 pr-3 text-sm leading-none text-zinc-400">
 						{{ if team_member }}
 							<figure class="h-8 w-8 overflow-hidden rounded-full border border-zinc-200 object-cover dark:border-zinc-700">
-								{{ partial:global/picture :image="team_member:default_image" cover="true" maxheight="44" lazy="false" maxwidth="44" }}
+								{{ partial:global/picture :image="team_member:default_image" lazy="false" }}
 							</figure>
 							<span class="truncate md:w-auto md:overflow-hidden md:text-clip">{{ team_member:title }}</span>
 						{{ else }}
 							<figure class="h-8 w-8 overflow-hidden rounded-full border border-zinc-200 object-cover dark:border-zinc-700">
-								{{ partial:global/picture :image="author:avatar" cover="true" maxheight="44" lazy="false" maxwidth="44" }}
+								{{ partial:global/picture :image="author:avatar" lazy="false" }}
 							</figure>
 							<span class="truncate md:w-auto md:overflow-hidden md:text-clip">{{ author:name }}</span>
 						{{ /if }}

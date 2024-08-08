@@ -118,7 +118,7 @@
 				{{ features }}
 					<div class="col-span-8 space-y-4 rounded-lg border border-zinc-100 bg-white p-4 shadow-xl shadow-zinc-500/10 dark:border-zinc-700 dark:bg-zinc-800 dark:shadow-black/10 sm:col-span-4 lg:col-span-2">
 						{{ if default_image }}
-							{{ partial:components/figure :image="default_image" remove_prose="true" cover="true" maxheight="512" lazy="false" maxwidth="768" }}
+							{{ partial:components/figure :image="default_image" lazy="false" preset+"md-webp" }}
 						{{ /if }}
 						{{ if iconamic }}
 							{{ svg src="{{config:iconamic:path}}/{{iconamic}}.svg" class=" {{iconamic}} w-8 h-8 text-purple-500 stroke-current aspect-square" }}

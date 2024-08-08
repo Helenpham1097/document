@@ -83,12 +83,12 @@
 				{{ if default_image_dark && default_image }}
 					<div class="{{ if segment_1 == "serverless" }} ring-green-500/50 from-green-500 to-green-400 shadow-green-500/30 {{else}} ring-purple-500/50 from-purple-500 to-purple-400 shadow-purple-500/30 {{ /if }} absolute -inset-2 rounded-[1.25rem] bg-gradient-to-t opacity-50 shadow-2xl ring-1"></div>
 					{{# Dark #}}
-					{{ partial:global/picture :image="default_image_dark" fetchpriority='true' maxwidth="704" responsive="true" cover="true" class="rounded-xl relative hidden dark:block" lazy="true" }}
+					{{ partial:global/picture :image="default_image_dark" class="rounded-xl relative hidden dark:block" lazy="true" }}
 					{{# Light #}}
-					{{ partial:global/picture :image="default_image" fetchpriority='true' maxwidth="704" responsive="true" cover="true" class="rounded-xl relative dark:hidden block  " lazy="true" }}
+					{{ partial:global/picture :image="default_image" class="rounded-xl relative dark:hidden block  " lazy="true" }}
 				{{ else }}
 					<div class="absolute -inset-2 rounded-[1.25rem] bg-zinc-50 opacity-50 shadow-2xl ring-1 ring-zinc-500/50 dark:bg-zinc-800"></div>
-					{{ partial:global/picture :image="default_image" fetchpriority='true' maxwidth="704" responsive="true" cover="true" class="rounded-xl aspect-[6/4] relative" lazy="true" }}
+					{{ partial:global/picture :image="default_image" class="rounded-xl relative" lazy="true" }}
 				{{ /if }}
 				{{ partial:typography/caption caption="{{highlight_textcaption}}" }}
 			</div>

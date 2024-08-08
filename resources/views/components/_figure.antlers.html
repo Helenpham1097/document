@@ -6,7 +6,7 @@
 
 <!-- /components/_figure.antlers.html -->
 <figure>
-	{{ partial:global/picture responsive='true' maxwidth="736" cover="true" }}
+  {{ partial:global/picture :image="image" lazy="true" }}
 	{{ partial:typography/caption as="figcaption" }}
 </figure>
 <!-- End: /components/_figure.antlers.html -->
