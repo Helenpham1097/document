@@ -42,6 +42,7 @@ jobs:
           php artisan route:clear
           php artisan route:cache
           php please stache:refresh
+          php artisan optimize:clear
 
       - name: Rsync files
         run: >
