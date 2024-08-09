@@ -8,7 +8,7 @@ nav:
       items:
         "content::collections::blog":
           action: "@alias"
-          display: "Blog articles"
+          display: "Blog Articles"
         "content::collections::pages": "@alias"
         "tools::utilities::cache": "@alias"
 collections:

@@ -18,7 +18,7 @@
 						</svg>
 					</div>
 					<div class="space-y-6 overflow-hidden rounded-lg text-xl text-zinc-800" x-show="tab === {{ count }}" x-transition:enter="transition delay-100 duration-500 transform ease-in" x-transition:enter-start="opacity-0">
-						{{ partial:global/picture :image="default_image" cover="true" maxheight="512" lazy="false" maxwidth="768" quality='70' }}
+						{{ partial:global/picture :image="default_image" lazy="false" preset+"md-webp" }}
 					</div>
 				</div>
 			{{ /posts }}

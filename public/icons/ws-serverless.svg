@@ -1,19 +1,12 @@
-<svg class="size-12" viewBox="0 0 94 93" fill="none" xmlns="http://www.w3.org/2000/svg">
-<!-- vetice -->
-	<path class="path" d="M85.6826 23.9779L46.9052 46.3312M46.9052 46.3312L46.9035 91.1453M46.9052 46.3312L8.09766 23.9258" stroke="currentColor" fill="none" stroke-width="3" stroke-dasharray="1000" stroke-dashoffset="8">
-		<animate attributeName="stroke-dashoffset" begin="1s" dur="3s" values="0;0" />
-	</path>
-
-<!-- penta-1 -->
-	<path class="path " d="M8.10057 23.6787L46.9897 1.22599L85.8789 23.6787V68.584L46.9897 91.0367L8.10057 68.584V23.6787Z" stroke="currentColor" stroke-width="3" stroke-dasharray="1000" stroke-dashoffset="8">
-		<animate attributeName="stroke-dashoffset" begin="2s" dur="2s" values="1000;0" />
-	</path>
-
-<!-- penta-inner -->
-	<path class="fill_invert_ico" fill="currentColor" d="M20.0651 30.653L46.9901 15.1078L73.9151 30.653V61.7433L46.9901 77.2884L20.0651 61.7433V30.653Z" stroke="currentColor" stroke-width="3" stroke-dasharray="1000" stroke-dashoffset="8">
-		<animate attributeName="stroke-dashoffset" begin="1s" dur="2s" values="1000;0" />
-	</path>
-
-<!-- infinite -->
-	<path class="path_invert_ico" stroke="currentColor" fill="none" stroke-width="3" d="M46.99 46.06c-3.15-4.205-6.3-6.3-9.45-6.3a6.3 6.3 0 1 0 0 12.6c3.15 0 6.3-2.094 9.45-6.3Zm0 0c3.15 4.206 6.3 6.3 9.45 6.3a6.3 6.3 0 0 0 0-12.6c-3.15 0-6.3 2.095-9.45 6.3Z" stroke-width="3"/>
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" class="size-12" viewBox="0 0 94 93">
+  <path stroke="currentColor" stroke-dasharray="1000" stroke-dashoffset="8" stroke-width="3" d="M85.683 23.978 46.905 46.33m0 0-.002 44.814m.002-44.814L8.098 23.926" class="path">
+    <animate attributeName="stroke-dashoffset" begin="1s" dur="3s" values="0;0"/>
+  </path>
+  <path stroke="currentColor" stroke-dasharray="1000" stroke-dashoffset="8" stroke-width="3" d="M8.1 23.679 46.99 1.226l38.889 22.453v44.905l-38.89 22.453L8.102 68.584V23.679Z" class="path">
+    <animate attributeName="stroke-dashoffset" begin="2s" dur="2s" values="1000;0"/>
+  </path>
+  <path fill="currentColor" stroke="currentColor" stroke-dasharray="1000" stroke-dashoffset="8" stroke-width="3" d="M20.065 30.653 46.99 15.108l26.925 15.545v31.09L46.99 77.288 20.065 61.743v-31.09Z" class="fill_invert_ico">
+    <animate attributeName="stroke-dashoffset" begin="1s" dur="2s" values="1000;0"/>
+  </path>
+  <path stroke="currentColor" stroke-width="3" d="M46.99 46.06c-3.15-4.205-6.3-6.3-9.45-6.3a6.3 6.3 0 1 0 0 12.6c3.15 0 6.3-2.094 9.45-6.3Zm0 0c3.15 4.206 6.3 6.3 9.45 6.3a6.3 6.3 0 0 0 0-12.6c-3.15 0-6.3 2.095-9.45 6.3Z" class="path_invert_ico"/>
 </svg>

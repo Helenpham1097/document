@@ -48,7 +48,7 @@
 {{ items }}
     <a @click="$dispatch('img-modal', {  imgModalSrc: '{{ default_image }}', imgModalDesc: '{{ default_image | get:alt }}' })">
         <figure class="w-full overflow-hidden transition duration-500 bg-purple-500 rounded-lg shadow-2xl cursor-pointer shadow-purple-500/20 hover:opacity-50 hover:shadow-xl">
-            {{ partial:global/picture :image="default_image" cover="true" maxheight="512" lazy="false" maxwidth="768" quality='70' }}
+            {{ partial:global/picture :image="default_image" lazy="false" }}
         </figure>
     </a>
 {{ /items }}

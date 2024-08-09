@@ -20,9 +20,7 @@
 				<div class="flex h-full w-full flex-col justify-between overflow-hidden bg-white shadow-none ring-1 ring-zinc-200 hover:bg-white hover:ring-2 dark:bg-zinc-900/50 dark:ring-zinc-800 hover:dark:bg-zinc-900 sm:rounded-xl">
 					<div class="flex items-center justify-center border-b border-none border-zinc-200 bg-zinc-800 px-4 pt-5 sm:px-6">
 						{{ if default_image }}
-							<figure>
-								{{ partial:global/picture :image="default_image" :class='hidden h-full rounded-md dark:block' cover="true" maxheight="512" lazy="false" maxwidth="768" quality='70' }}
-							</figure>
+							{{ partial:global/picture :image="default_image" :class="hidden h-full rounded-md dark:block" lazy="true" }}
 						{{ /if }}
 					</div>
 					<div class="px-4 pt-4 pb-5 sm:p-6">

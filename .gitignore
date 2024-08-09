@@ -21,3 +21,4 @@ yarn-error.log
 public/js/main.min.js
 public/css/main.css
 public/glide-cache/
+.vscode/settings.json

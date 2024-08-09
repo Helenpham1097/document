@@ -1,7 +1,7 @@
 {{# Two columns of markdown text, divided into equal parts. #}}
 <section class="container space-y-6 lg:space-y-12">
 	{{ display_title_section }}
-	<h2 class="dot max-w-xl h2 ">{{ partial:components/section_title ?? center_title_title }}</h2>
+	<h2 class="dot max-w-xl h2 ">{{ center_title_title }}</h2>
 	{{ /display_title_section}}
 
 	{{ if columns | count >= 4 }}

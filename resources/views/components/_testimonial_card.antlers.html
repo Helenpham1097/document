@@ -9,8 +9,10 @@
 				<div class="mt-1 text-sm text-zinc-600 dark:text-zinc-300">{{ position }}</div>
 			</div>
 			
-			<div class="overflow-hidden size-[56px]">
-				{{ partial:global/picture :image="default_image" class="overflow-hidden rounded-full" cover="true" lazy="true" maxwidth="56" maxheight="56" quality='70' }}
+			<div class="overflow-hidden rounded-full object-cover size-[56px]">
+				{{ glide :src='default_image' w='56' h="56" format='webp' dpr='2' sharpen='2' }}
+					<img src="{{ url }}" height="{{ height }}" width="{{ width }}" alt="{{ alt }}">
+				{{ /glide }}
 			</div>
 			
 		</figcaption>

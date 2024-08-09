@@ -4,7 +4,7 @@
 			<div>
 				<div class="{{ switch between='bg-purple-100 | bg-green-100 mt-24' }} group mx-auto flex max-w-sm flex-1 transform flex-col flex-wrap space-y-8 rounded-xl p-6 shadow-xl shadow-zinc-500/10 duration-500 hover:-translate-y-4 md:p-12">
 					{{ if default_image }}
-						{{ partial:components/figure :image="default_image" remove_prose="true" cover="true" maxheight="512" lazy="false" maxwidth="768" quality='70' }}
+						{{ partial:components/figure :image="default_image" lazy="false" }}
 					{{ /if }}
 					<div class="h2">0{{ count }}.</div>
 					<div class="space-y-4">

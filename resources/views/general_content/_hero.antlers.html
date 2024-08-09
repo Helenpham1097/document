@@ -15,7 +15,7 @@
 			</div>
 			{{ if image }}
 				<div class="relative order-first lg:order-last">
-					{{ partial:global/picture :image="image" fetchpriority='true' maxwidth="736" responsive='true' maxheight="552" quality="90" cover="true" class="aspect-[4/3]" lazy="false" }}
+					{{ partial:global/picture :image="image" fetchpriority='true' class="object-cover  w-full h-full aspect-[4/3]" lazy="false" }}
 				</div>
 			{{ /if }}
 		</div>
