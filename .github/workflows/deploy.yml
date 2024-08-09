@@ -40,7 +40,6 @@ jobs:
         # https://laravel.com/docs/11.x/deployment#optimization
         run: |
           php artisan optimize:clear
-          php artisan optimize
           php artisan statamic:stache:refresh
 
       - name: Rsync all built files to production server
@@ -53,4 +52,4 @@ jobs:
         run: >
           ssh -o StrictHostKeyChecking=no "${{ vars.PROD_SSH_USER }}"@${{ vars.PROD_SERVER }}
           "cd /container/application &&
-          sed -i "s/CACHE_TIMESTAMP=.*/CACHE_TIMESTAMP=${{ github.sha }}/g" .env && php artisan statamic:static:warm"
+          sed -i "s/CACHE_TIMESTAMP=.*/CACHE_TIMESTAMP=${{ github.sha }}/g" .env && php artisan optimize && php please static:warm"
