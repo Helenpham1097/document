@@ -94,6 +94,39 @@ return [
     |
     */
 
+    /*
+    |--------------------------------------------------------------------------
+    | Theme
+    |--------------------------------------------------------------------------
+    |
+    | Optionally spice up the login and other outside-the-control-panel
+    | screens. You may choose between "rad" or "business" themes.
+    |
+    */
+
+    'theme' => env('STATAMIC_THEME', 'rad'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | White Labeling
+    |--------------------------------------------------------------------------
+    |
+    | When in Pro Mode you may replace the Statamic name, logo, favicon,
+    | and add your own CSS to the control panel to match your
+    | company or client's brand.
+    |
+    */
+
     'link_to_docs' => true,
+
+    'custom_logo_url' => [
+        'nav' => '/assets/cp/ws-nav-light.svg',
+        'outside' => '/assets/cp/ws-icon-light.svg'
+    ],
+
+    'custom_dark_logo_url' => [
+        'nav' => '/assets/cp/ws-nav-dark.svg',
+        'outside' => '/assets/cp/ws-icon-dark.svg'
+    ],
 
 ];
