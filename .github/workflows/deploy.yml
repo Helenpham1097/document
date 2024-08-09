@@ -33,25 +33,24 @@ jobs:
       - name: Install NPM dependencies
         run: npm ci --cache .npm --prefer-offline
 
-      - name: Build Statamic site
+      - name: Build production css/javascript
         run: npm run build:prod
 
-      - name: Clear artisan cache and cache route
+      - name: Clear Laravel caches, and refresh Statamic content cache
+        # https://laravel.com/docs/11.x/deployment#optimization
         run: |
-          php artisan cache:clear
-          php artisan route:clear
-          php artisan route:cache
-          php please stache:refresh
+          php artisan optimize
+          php artisan statamic:stache:refresh
 
-      - name: Rsync files
+      - name: Rsync all built files to production server
         run: >
           rsync -avrc --delete --exclude-from=ci-exclude.txt
           -e 'ssh -o StrictHostKeyChecking=no'
           ./ "${{ vars.PROD_SSH_USER }}"@${{ vars.PROD_SERVER }}:"${{ vars.DEPLOY_PATH }}"
 
-      - name: Warn the cache
+      - name: Set new cache busting ENV timestamp and warm static cache
         run: >
           ssh -o StrictHostKeyChecking=no "${{ vars.PROD_SSH_USER }}"@${{ vars.PROD_SERVER }}
           "cd /container/application &&
           sed -i "s/CACHE_TIMESTAMP=.*/CACHE_TIMESTAMP=${{ github.sha }}/g" .env &&
-          php please static:warm"
+          php artisan statamic:static:warm"
