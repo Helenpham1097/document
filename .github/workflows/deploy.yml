@@ -39,6 +39,7 @@ jobs:
       - name: Clear Laravel caches, and refresh Statamic content cache
         # https://laravel.com/docs/11.x/deployment#optimization
         run: |
+          php artisan optimize:clear
           php artisan optimize
           php artisan statamic:stache:refresh
 
@@ -52,5 +53,4 @@ jobs:
         run: >
           ssh -o StrictHostKeyChecking=no "${{ vars.PROD_SSH_USER }}"@${{ vars.PROD_SERVER }}
           "cd /container/application &&
-          sed -i "s/CACHE_TIMESTAMP=.*/CACHE_TIMESTAMP=${{ github.sha }}/g" .env &&
-          php artisan statamic:static:warm"
+          sed -i "s/CACHE_TIMESTAMP=.*/CACHE_TIMESTAMP=${{ github.sha }}/g" .env && php artisan statamic:static:warm"
