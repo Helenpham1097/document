@@ -36,20 +36,19 @@ jobs:
       - name: Build production css/javascript
         run: npm run build:prod
 
-      - name: Clear Laravel caches, and refresh Statamic content cache
-        # https://laravel.com/docs/11.x/deployment#optimization
-        run: |
-          php artisan optimize:clear
-          php artisan statamic:stache:refresh
-
       - name: Rsync all built files to production server
         run: >
           rsync -avrc --delete --exclude-from=ci-exclude.txt
           -e 'ssh -o StrictHostKeyChecking=no'
           ./ "${{ vars.PROD_SSH_USER }}"@${{ vars.PROD_SERVER }}:"${{ vars.DEPLOY_PATH }}"
 
-      - name: Set new cache busting ENV timestamp and warm static cache
+      - name: Set new cache busting ENV timestamp, clear Laravel caches, and generate static cache
+        # https://laravel.com/docs/11.x/deployment#optimization
         run: >
           ssh -o StrictHostKeyChecking=no "${{ vars.PROD_SSH_USER }}"@${{ vars.PROD_SERVER }}
           "cd /container/application &&
-          sed -i "s/CACHE_TIMESTAMP=.*/CACHE_TIMESTAMP=${{ github.sha }}/g" .env && php artisan optimize && php please static:warm"
+          sed -i "s/CACHE_TIMESTAMP=.*/CACHE_TIMESTAMP=${{ github.sha }}/g" .env && 
+          php artisan optimize:clear && 
+          php artisan optimize && 
+          php please stache:refresh && 
+          php please static:warm"
