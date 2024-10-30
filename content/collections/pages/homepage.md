@@ -3,8 +3,8 @@ id: cf7040f4-473b-4c14-897d-5de59ce6d833
 blueprint: home
 template: general_content/index
 title: Homepage
-updated_by: bdf0548e-f14e-4b7d-9abd-d2223cb02cec
-updated_at: 1713396897
+updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
+updated_at: 1730330581
 top_section:
   -
     id: RzzOzBfN
