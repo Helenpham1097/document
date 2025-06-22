@@ -13,3 +13,9 @@ preferences:
         - author
         - status
         - categories
+    pages:
+      columns:
+        - title
+        - slug
+        - template
+        - status

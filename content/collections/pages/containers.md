@@ -46,7 +46,7 @@ top_section:
     image: illustrations/container-cover-1710730424.png
 title: Containers
 updated_by: fa61bd1a-7054-4dd6-974f-a1764a47c4ec
-updated_at: 1717455335
+updated_at: 1750632673
 page_builder:
   -
     id: lrftv1b6
@@ -216,8 +216,11 @@ page_builder:
                 text: .
         type: box
         enabled: true
-        link_type: entry
-        target_blank: false
+        link_type: url
+        target_blank: true
+        url: 'https://webslice.com/docs/containers/servers/locations/'
+        attr_title: Locations
+        attr_aria: Locations
     bento_type: boxes
     template_global: /global/iconamic
     iconamic: lightbulb
