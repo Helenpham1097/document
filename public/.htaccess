@@ -41,12 +41,6 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{QUERY_STRING} live-preview
     RewriteRule ^ index.php [L]
-
-    # Redirect directory browsing attempts in /docs to 404
-    RewriteCond %{REQUEST_URI} ^/docs/.*/$
-    RewriteCond %{REQUEST_FILENAME} -d
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^(.*)$ /docs/404/ [R=302,L]
 </IfModule>
 
 
