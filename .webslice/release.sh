@@ -7,9 +7,6 @@ set -e
 echo "Clearing Config/Cache & Warming"
 
 # Warm the static file cache
-php artisan optimize:clear && 
-php artisan optimize && 
-php please stache:refresh && 
-php please static:warm"
+php artisan optimize:clear && php artisan optimize && php please stache:refresh && php please static:warm
 
-echo "Done warming"
+echo "Warming Cache Complete"
