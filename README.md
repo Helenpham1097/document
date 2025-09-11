@@ -22,22 +22,6 @@ To conviently run locally use [Valet][valet] or [Homestead][homestead] and use [
 
 This [project ticket](https://gitlab.wsihq.net/serverless/serverless/-/issues/163) might contain useful information, discussions and decisions we made.
 
-### SSG Config
-- XML for the RSS feed was not generating properly due to the content-header being set to html rather than xml. 
-  Since the production site is going to live in S3 initially, we had to change the file extension from .html to .xml. 
-We used a post generation call back to rename blog/feed/index.html to blog/feed/index.xml. 
-  See SSG readme https://github.com/statamic/ssg. Once hosted on Webslice, htaccess could be used to change content-header.
-
-
-- We excluded blog category urls from being generated while there are no templates for these yet. If needed in future these will need to be removed from the exclude array.
-
-### Templates
-- We had to create separate partial templates to use while the main website pages are not included. 
-  When the rest of the pages are added, _main_nav and _main_footer will need to be implemented into the layout.
-  
-### Pagination
-- Pagination is currently disabled in blog/index.antlers.html while it's not supported by SSG https://github.com/statamic/ssg/issues/10. 
-
 ### Helpful commands
 - Have found these useful when encountering a variety of different errors:
     ```
